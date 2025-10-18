@@ -4,6 +4,7 @@
 
 ### **Complete GitHub Workflow Automation Toolkit**
 
+[![npm version](https://img.shields.io/npm/v/leo-workflow-kit.svg?style=flat-square&color=blue&logo=npm)](https://www.npmjs.com/package/leo-workflow-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-16%2B-green?style=flat-square&logo=node.js)](https://nodejs.org)
 [![GitHub Stars](https://img.shields.io/github/stars/leonpagotto/leo-kit?style=flat-square&color=yellow&logo=github)](https://github.com/leonpagotto/leo-kit/stargazers)
@@ -41,7 +42,7 @@ Get started in 3 simple steps:
 
 ```bash
 # 1. Install globally
-npm install -g @leo-workflow/kit
+npm install -g leo-workflow-kit
 
 # 2. Navigate to your project
 cd your-project
@@ -57,30 +58,30 @@ That's it! Your project now has:
 - ✅ VS Code configuration with Copilot instructions
 - ✅ Spec-driven development workflow
 
-> **Note:** Package not yet published to npm. For now, use: `npx github:leonpagotto/leo-kit init`
-
 ---
 
 ## 📦 Installation
 
-### Option 1: Direct from GitHub (Current Method)
+### Option 1: Global Installation (Recommended)
 
 ```bash
-# One-time use
-npx github:leonpagotto/leo-kit init
+npm install -g leo-workflow-kit
+leo init
+```
 
-# Or clone and link locally
+### Option 2: One-Time Use with npx
+
+```bash
+npx leo-workflow-kit init
+```
+
+### Option 3: From GitHub Source
+
+```bash
 git clone https://github.com/leonpagotto/leo-kit.git
 cd leo-kit
 npm install
 npm link
-leo init
-```
-
-### Option 2: Global Installation (After npm publish)
-
-```bash
-npm install -g @leo-workflow/kit
 leo init
 ```
 
@@ -286,8 +287,6 @@ leo labels --clean
 [![GitHub Stars](https://img.shields.io/github/stars/leonpagotto/leo-kit?style=social&logo=github)](https://github.com/leonpagotto/leo-kit/stargazers)
 
 ---
-
-**📝 Note:** Once published to npm, install with: `npm install -g @leo-workflow/kit`
 
 [⬆ Back to Top](#-leo-workflow-kit)
 
