@@ -100,7 +100,7 @@ program
   .action(() => {
     const { exec } = require('child_process');
     console.log(chalk.cyan('\n📚 Opening documentation...\n'));
-    exec('open https://github.com/osp-group/leo-workflow-kit#readme');
+    exec('open https://github.com/leonpagotto/leo-kit#readme');
   });
 
 // Show banner on no command

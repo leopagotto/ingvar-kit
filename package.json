@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/osp-group/leo-workflow-kit.git"
+    "url": "https://github.com/leonpagotto/leo-kit.git"
   },
   "bugs": {
-    "url": "https://github.com/osp-group/leo-workflow-kit/issues"
+    "url": "https://github.com/leonpagotto/leo-kit/issues"
   },
-  "homepage": "https://github.com/osp-group/leo-workflow-kit#readme",
+  "homepage": "https://github.com/leonpagotto/leo-kit#readme",
   "engines": {
     "node": ">=16.0.0"
   },
