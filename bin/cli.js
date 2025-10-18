@@ -25,6 +25,7 @@ program
   .description('Initialize LEO workflow in current project')
   .option('-o, --org <organization>', 'GitHub organization name (optional for personal repos)')
   .option('-p, --project <number>', 'GitHub project number (optional)')
+  .option('--skip-project', 'Skip GitHub Project setup entirely')
   .option('--skip-labels', 'Skip label setup')
   .option('--skip-vscode', 'Skip VS Code configuration')
   .action((options) => {

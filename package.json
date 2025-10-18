@@ -1,7 +1,7 @@
 {
   "name": "leo-workflow-kit",
-  "version": "1.3.0",
-  "description": "LEO Workflow Kit - CLI tool for setting up GitHub Projects workflow with spec-driven development",
+  "version": "2.0.0",
+  "description": "LEO Workflow Kit - Advanced CLI tool for spec-driven development with component-first best practices, SEO optimization, performance guidelines, and automated GitHub Projects integration",
   "main": "dist/index.js",
   "bin": {
     "leo-workflow": "./bin/cli.js",
@@ -20,7 +20,14 @@
     "templates",
     "spec-driven",
     "development",
-    "project-management"
+    "project-management",
+    "component-first",
+    "best-practices",
+    "seo-optimization",
+    "performance",
+    "frontend",
+    "code-quality",
+    "automation"
   ],
   "author": "Leo de Souza",
   "license": "MIT",
