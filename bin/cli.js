@@ -3,13 +3,21 @@
 const { program } = require('commander');
 const chalk = require('chalk');
 const packageJson = require('../package.json');
-const { getBanner } = require('../lib/banner');
+const { getBanner, welcomeMessage } = require('../lib/banner');
+const { isFirstRun, markFirstRunComplete } = require('../lib/utils/first-run');
 
 // Import commands
 const initCommand = require('../lib/commands/init');
 const issueCommand = require('../lib/commands/issue');
 const labelsCommand = require('../lib/commands/labels');
 const vscodeCommand = require('../lib/commands/vscode');
+
+// Check if this is the first run and show welcome message
+if (isFirstRun()) {
+  console.log(welcomeMessage);
+  markFirstRunComplete();
+  console.log(chalk.gray('\n───────────────────────────────────────────────────────────────\n'));
+}
 
 program
   .name('leo-workflow')
