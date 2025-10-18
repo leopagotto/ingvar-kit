@@ -1,0 +1,46 @@
+{
+  "name": "@osp-group/workflow-cli",
+  "version": "1.0.0",
+  "description": "CLI tool for setting up GitHub Projects workflow with spec-driven development",
+  "main": "dist/index.js",
+  "bin": {
+    "osp-workflow": "./bin/cli.js",
+    "osp": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "github",
+    "projects",
+    "workflow",
+    "cli",
+    "templates",
+    "spec-driven",
+    "development",
+    "project-management"
+  ],
+  "author": "OSP Group",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/osp-group/workflow-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/osp-group/workflow-cli/issues"
+  },
+  "homepage": "https://github.com/osp-group/workflow-cli#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1",
+    "execa": "^5.1.1",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {}
+}
