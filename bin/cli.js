@@ -3,6 +3,7 @@
 const { program } = require('commander');
 const chalk = require('chalk');
 const packageJson = require('../package.json');
+const { getBanner } = require('../lib/banner');
 
 // Import commands
 const initCommand = require('../lib/commands/init');
@@ -15,15 +16,8 @@ program
   .description('LEO Workflow Kit - CLI tool for setting up GitHub Projects workflow with spec-driven development')
   .version(packageJson.version);
 
-// ASCII Art Banner
-const banner = `
-╔══════════════════════════════════════════════════════════════╗
-║                                                              ║
-║   ${chalk.cyan.bold('LEO Workflow Kit')}                                        ║
-║   ${chalk.gray('Spec-Driven Development Made Easy')}                    ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
-`;
+// Get responsive banner
+const banner = getBanner();
 
 // Init command - Set up complete workflow in current project
 program
