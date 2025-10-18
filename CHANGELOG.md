@@ -5,6 +5,19 @@ All notable changes to LEO Workflow Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.3] - 2025-10-18
+
+### Changed
+- **Brand Refresh**: Updated banner from "LEO WORKFLOW KIT" to "LEO-KIT" for cleaner, more memorable branding
+- **Visual Enhancement**: Redesigned ASCII art banner with bold block letters for outstanding visual appeal
+- **Compact Design**: Simplified compact banner for better readability on smaller terminals
+
+### Design Details
+- Full banner now uses modern block characters (`█╗║╝═╔╚`) for professional appearance
+- Maintained golden yellow color scheme (#FFD700) for consistency with lion branding
+- All three banner variants updated: full, compact, and welcome message
+- Terminal width responsive behavior preserved
+
 ## [2.0.0] - 2025-10-18
 
 ### 🎉 Major Release: Development Best Practices & Enhanced Project Management
