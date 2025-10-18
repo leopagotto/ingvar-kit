@@ -1,6 +1,6 @@
 {
   "name": "leo-workflow-kit",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "LEO Workflow Kit - CLI tool for setting up GitHub Projects workflow with spec-driven development",
   "main": "dist/index.js",
   "bin": {
