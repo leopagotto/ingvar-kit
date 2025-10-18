@@ -1,4 +1,4 @@
-# OSP Workflow CLI
+# LEO Workflow Kit
 
 **A CLI tool for setting up GitHub Projects workflow with spec-driven development.**
 
@@ -12,20 +12,20 @@ Install once, use anywhere. Set up standardized workflow in any project in minut
 
 ```bash
 # Via npm
-npm install -g @osp-group/workflow-cli
+npm install -g @leo-workflow/kit
 
 # Via npx (no installation)
-npx @osp-group/workflow-cli init
+npx @leo-workflow/kit init
 ```
 
 ### Initialize Workflow in Your Project
 
 ```bash
 cd your-project
-osp init
+leo init
 
 # Or use the full command name
-osp-workflow init
+leo-workflow init
 ```
 
 That's it! Your project now has:
@@ -79,16 +79,16 @@ The CLI automatically configures your project with:
 
 ## 🎯 Commands
 
-### `osp init`
+### `leo init`
 
-Initialize OSP workflow in current project.
+Initialize LEO workflow in current project.
 
 ```bash
-osp init
+leo init
 
 # With options
-osp init --org myorg --project 1
-osp init --skip-labels --skip-vscode
+leo init --org myorg --project 1
+leo init --skip-labels --skip-vscode
 ```
 
 **Options:**
@@ -97,17 +97,17 @@ osp init --skip-labels --skip-vscode
 - `--skip-labels` - Skip label setup
 - `--skip-vscode` - Skip VS Code configuration
 
-### `osp issue` (alias: `osp i`)
+### `leo issue` (alias: `leo i`)
 
 Create a new issue from template (spec-driven).
 
 ```bash
 # Interactive mode
-osp issue
+leo issue
 
 # With options
-osp issue -t bug -T "Fix login error" -p P1 -a @me
-osp issue --template feature --title "Add dark mode"
+leo issue -t bug -T "Fix login error" -p P1 -a @me
+leo issue --template feature --title "Add dark mode"
 ```
 
 **Options:**
@@ -123,15 +123,15 @@ osp issue --template feature --title "Add dark mode"
 - Acceptance criteria
 - Best practices
 
-### `osp labels` (alias: `osp l`)
+### `leo labels` (alias: `leo l`)
 
 Set up GitHub labels for workflow.
 
 ```bash
-osp labels
+leo labels
 
 # Remove default GitHub labels
-osp labels --clean
+leo labels --clean
 ```
 
 Creates 22+ labels:
@@ -140,16 +140,16 @@ Creates 22+ labels:
 - 5 Status labels
 - 5 Component labels
 
-### `osp vscode` (alias: `osp vs`)
+### `leo vscode` (alias: `leo vs`)
 
 Set up VS Code with Copilot instructions.
 
 ```bash
 # Install globally (all projects)
-osp vscode --global
+leo vscode --global
 
 # Install for current project only
-osp vscode --project
+leo vscode --project
 ```
 
 Installs:
@@ -158,12 +158,12 @@ Installs:
 - Editor settings
 - Debug configurations
 
-### `osp status` (alias: `osp s`)
+### `leo status` (alias: `leo s`)
 
 Check workflow setup status.
 
 ```bash
-osp status
+leo status
 ```
 
 Checks:
@@ -173,12 +173,12 @@ Checks:
 - ✓ Labels configured
 - ✓ VS Code setup
 
-### `osp docs`
+### `leo docs`
 
 Open documentation.
 
 ```bash
-osp docs
+leo docs
 ```
 
 ---
@@ -207,11 +207,11 @@ osp docs
 
 ```bash
 # Morning: Check what to work on
-osp status
+leo status
 gh project view 1 --owner myorg
 
 # Before coding: Create issue
-osp issue
+leo issue
 # Select template → Fill details → Created!
 
 # During work: Reference issue
@@ -230,7 +230,7 @@ gh issue close 123 --comment "✅ Completed"
 
 ```bash
 # Create feature issue
-osp issue -t feature -T "Add user authentication"
+leo issue -t feature -T "Add user authentication"
 
 # Outputs:
 # ✅ Issue created: https://github.com/org/repo/issues/45
@@ -251,7 +251,7 @@ gh pr create --title "Add authentication" --body "Fixes #45"
 
 ```bash
 # Create bug issue
-osp issue
+leo issue
 
 # Interactive prompts:
 # ? Select issue type: 🐛 Bug Report
@@ -272,7 +272,7 @@ osp issue
 
 ```bash
 # Quick docs issue
-osp issue -t docs -T "Document API endpoints" -p P2
+leo issue -t docs -T "Document API endpoints" -p P2
 
 # Opens editor with template including:
 # - Documentation type checkboxes
@@ -330,7 +330,7 @@ git commit -m "changes"
 
 ### Global Configuration
 
-Create `~/.osp-workflow/config.json`:
+Create `~/.leo-workflow/config.json`:
 
 ```json
 {
@@ -343,7 +343,7 @@ Create `~/.osp-workflow/config.json`:
 
 ### Project Configuration
 
-Create `.osp-workflow.json` in project root:
+Create `.leo-workflow.json` in project root:
 
 ```json
 {
@@ -360,7 +360,7 @@ Create `.osp-workflow.json` in project root:
 
 ## 📊 Success Metrics
 
-Projects using OSP Workflow CLI see:
+Projects using LEO Workflow Kit see:
 
 - **60-75% faster** project setup
 - **80% faster** team onboarding
@@ -399,7 +399,7 @@ Contributions welcome!
 
 ```bash
 # Clone repository
-git clone https://github.com/osp-group/workflow-cli.git
+git clone https://github.com/osp-group/leo-workflow-kit.git
 cd workflow-cli
 
 # Install dependencies
@@ -410,7 +410,7 @@ npm link
 
 # Test commands
 osp --version
-osp init --help
+leo init --help
 ```
 
 ### Adding New Templates
@@ -418,7 +418,7 @@ osp init --help
 1. Add template to `templates/github-workflow/issue-templates/`
 2. Update `lib/commands/issue.js` TEMPLATES object
 3. Add template content to `getTemplateContent()`
-4. Test: `osp issue -t your-new-template`
+4. Test: `leo issue -t your-new-template`
 
 ---
 
@@ -450,9 +450,9 @@ Complete → Close issue → Documentation complete
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/osp-group/workflow-cli/issues)
+- **Issues:** [GitHub Issues](https://github.com/osp-group/leo-workflow-kit/issues)
 - **Documentation:** [Full Docs](https://github.com/osp-group/docs/tree/main/templates)
-- **Community:** [Discussions](https://github.com/osp-group/workflow-cli/discussions)
+- **Community:** [Discussions](https://github.com/osp-group/leo-workflow-kit/discussions)
 
 ---
 
@@ -466,7 +466,7 @@ osp i
 osp s
 
 # Set up workflow in new project
-cd new-project && osp init
+cd new-project && leo init
 
 # Install VS Code config globally
 osp vs --global
@@ -495,4 +495,4 @@ osp i -t bug -T "Button broken" -p P1
 
 ---
 
-**Install now:** `npm install -g @osp-group/workflow-cli` or `npx @osp-group/workflow-cli init`
+**Install now:** `npm install -g @leo-workflow/kit` or `npx @leo-workflow/kit init`

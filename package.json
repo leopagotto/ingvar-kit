@@ -1,11 +1,11 @@
 {
-  "name": "@osp-group/workflow-cli",
+  "name": "@leo-workflow/kit",
   "version": "1.0.0",
-  "description": "CLI tool for setting up GitHub Projects workflow with spec-driven development",
+  "description": "LEO Workflow Kit - CLI tool for setting up GitHub Projects workflow with spec-driven development",
   "main": "dist/index.js",
   "bin": {
-    "osp-workflow": "./bin/cli.js",
-    "osp": "./bin/cli.js"
+    "leo-workflow": "./bin/cli.js",
+    "leo": "./bin/cli.js"
   },
   "scripts": {
     "start": "node bin/cli.js",
@@ -21,16 +21,16 @@
     "development",
     "project-management"
   ],
-  "author": "OSP Group",
+  "author": "Leo de Souza",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/osp-group/workflow-cli.git"
+    "url": "https://github.com/osp-group/leo-workflow-kit.git"
   },
   "bugs": {
-    "url": "https://github.com/osp-group/workflow-cli/issues"
+    "url": "https://github.com/osp-group/leo-workflow-kit/issues"
   },
-  "homepage": "https://github.com/osp-group/workflow-cli#readme",
+  "homepage": "https://github.com/osp-group/leo-workflow-kit#readme",
   "engines": {
     "node": ">=16.0.0"
   },

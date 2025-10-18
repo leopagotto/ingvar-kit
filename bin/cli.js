@@ -11,15 +11,15 @@ const labelsCommand = require('../lib/commands/labels');
 const vscodeCommand = require('../lib/commands/vscode');
 
 program
-  .name('osp-workflow')
-  .description('CLI tool for setting up GitHub Projects workflow with spec-driven development')
+  .name('leo-workflow')
+  .description('LEO Workflow Kit - CLI tool for setting up GitHub Projects workflow with spec-driven development')
   .version(packageJson.version);
 
 // ASCII Art Banner
 const banner = `
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║   ${chalk.cyan.bold('OSP Workflow CLI')}                                        ║
+║   ${chalk.cyan.bold('LEO Workflow Kit')}                                        ║
 ║   ${chalk.gray('Spec-Driven Development Made Easy')}                    ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
@@ -28,9 +28,9 @@ const banner = `
 // Init command - Set up complete workflow in current project
 program
   .command('init')
-  .description('Initialize OSP workflow in current project')
-  .option('-o, --org <organization>', 'GitHub organization name')
-  .option('-p, --project <number>', 'GitHub project number')
+  .description('Initialize LEO workflow in current project')
+  .option('-o, --org <organization>', 'GitHub organization name (optional for personal repos)')
+  .option('-p, --project <number>', 'GitHub project number (optional)')
   .option('--skip-labels', 'Skip label setup')
   .option('--skip-vscode', 'Skip VS Code configuration')
   .action((options) => {
@@ -106,7 +106,7 @@ program
   .action(() => {
     const { exec } = require('child_process');
     console.log(chalk.cyan('\n📚 Opening documentation...\n'));
-    exec('open https://github.com/osp-group/workflow-cli#readme');
+    exec('open https://github.com/osp-group/leo-workflow-kit#readme');
   });
 
 // Show banner on no command
