@@ -6,12 +6,13 @@
 
 LEO Workflow Kit is a powerful CLI tool that revolutionizes software development project management through:
 
-- **🤖 AI-Powered Automation**: GitHub Copilot automatically creates and manages issues
+- **� Intelligent Spec-First AI**: Automatically decides when to create specs vs direct issues
+- **�🤖 AI-Powered Automation**: GitHub Copilot automatically creates and manages issues
 - **📊 Intelligent Project Management**: Auto-sync with GitHub Projects with smart status updates
 - **🎯 Spec-Driven Development**: Enforce best practices and documentation-first approach
 - **🔧 Zero Configuration**: Works out-of-the-box with sensible defaults
 
-**Current Version:** 2.3.0  
+**Current Version:** 2.4.0  
 **Released:** October 19, 2025
 
 ---
@@ -24,6 +25,7 @@ LEO Workflow Kit is a powerful CLI tool that revolutionizes software development
 - [Configuration](./Configuration) - Customize LEO for your workflow
 
 ### Core Features
+- [Intelligent Spec-First Decision Making](./Spec-First-Decision-Making) - AI chooses spec vs direct issue ⭐ NEW
 - [Automatic Issue Creation](./Automatic-Issue-Creation) - Let Copilot handle your issues
 - [GitHub Projects Integration](./GitHub-Projects-Integration) - Automated project management
 - [Status Management](./Status-Management) - Smart status updates based on work
@@ -48,7 +50,9 @@ LEO Workflow Kit is a powerful CLI tool that revolutionizes software development
 
 ---
 
-## 🚀 Quick Example
+## 🚀 Quick Examples
+
+### Example 1: Simple Task (Direct Issue)
 
 ```bash
 # Install LEO
@@ -58,30 +62,53 @@ npm install -g leo-workflow-kit
 cd your-project
 leo init
 
-# Now just describe work to Copilot:
-# "We need to add dark mode support"
+# Describe a simple bug fix to Copilot:
+# "Fix the login button not working on mobile"
 
 # Copilot automatically:
-# ✅ Creates issue #5 with proper labels
+# ✅ Analyzes: This is a simple bug fix
+# ✅ Creates issue #42 directly
 # ✅ Adds to GitHub Project (status: Todo)
 # ✅ Updates status as you work
 # ✅ Closes issue when PR merges
+```
+
+### Example 2: Complex Feature (Spec First)
+
+```bash
+# Describe a complex feature to Copilot:
+# "Add OAuth2 authentication system with Google and GitHub providers"
+
+# Copilot automatically:
+# ✅ Analyzes: This is complex, needs planning
+# ✅ Creates docs/specs/oauth2-authentication.md
+# ✅ Asks you to review the spec
+# ✅ After approval, breaks into 5 focused issues:
+#    - #43: Setup OAuth2 providers
+#    - #44: Implement auth routes
+#    - #45: Create sessions table
+#    - #46: Add frontend login buttons
+#    - #47: Write tests
+# ✅ All added to project board
 ```
 
 ---
 
 ## 📊 Current Status
 
-### Latest Release: v2.3.0 (October 19, 2025)
+### Latest Release: v2.4.0 (October 19, 2025) ⭐ NEW
 
 **Major Features:**
+- ✅ **Intelligent Spec-First Decision Making** - AI analyzes work complexity
+- ✅ Automatic spec creation for complex features in `docs/specs/`
+- ✅ User review workflow before breaking into issues
+- ✅ Smart breakdown of specs into focused issues
 - ✅ Automatic GitHub Projects integration
 - ✅ Intelligent status management (Todo → In Progress → Done)
 - ✅ GraphQL API for reliable updates
-- ✅ Comprehensive documentation and guides
 
 **Stats:**
-- 📦 Package Size: 47 KB
+- 📦 Package Size: 53 KB
 - ⭐ GitHub Stars: Growing!
 - 🐛 Open Issues: Actively maintained
 - 🔄 Active Development: Yes
@@ -90,7 +117,13 @@ leo init
 
 ## 🗺️ Roadmap
 
-### v2.4.0 (Q4 2025) - Planned
+### v2.4.0 (October 2025) - ✅ Released
+- ✅ **Intelligent spec-first decision making**
+- ✅ Automatic spec creation for complex features
+- ✅ User review workflow
+- ✅ Smart issue breakdown from specs
+
+### v2.5.0 (Q4 2025) - Planned
 - [ ] Auto-create projects during `leo init`
 - [ ] Multiple project support
 - [ ] Custom status field names
@@ -110,11 +143,16 @@ See [Roadmap](./Roadmap) for detailed plans.
 
 ## 💡 Key Concepts
 
+### Intelligent Decision Making ⭐ NEW
+AI analyzes work complexity to choose the right approach:
+- **Simple work** (bugs, quick fixes) → Direct issue creation
+- **Complex work** (architecture, multi-component) → Create spec → Review → Break into issues
+
 ### Spec-Driven Development
-Write specifications before code. Specs live in `docs/specs/`, issues track execution.
+Write specifications before code. Specs live in `docs/specs/`, issues track execution. Complex features automatically get specs created for review.
 
 ### Automatic Issue Creation
-Copilot detects when you describe work and creates issues automatically using `gh issue create`.
+Copilot detects when you describe work and creates issues automatically using `gh issue create`. Smart enough to know when a spec is needed first.
 
 ### Status Management
 Issues transition through states (Todo → In Progress → Done) based on commits, branches, and PR actions.

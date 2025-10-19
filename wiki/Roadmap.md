@@ -10,6 +10,29 @@ To create the most intelligent, automated, and developer-friendly project manage
 
 ## 📊 Release History
 
+### ✅ v2.4.0 - Intelligent Spec-First Decision Making (October 19, 2025)
+**Status:** ✅ Released
+
+**Major Features:**
+- Intelligent work complexity analysis
+- Automatic spec creation for complex features in `docs/specs/`
+- User review workflow before implementation
+- Smart breakdown of specs into multiple focused issues
+- Decision tree logic (simple vs complex work)
+- Enhanced workflow diagram with ANALYZE node
+- Comprehensive examples (OAuth2 vs button fix)
+
+**Impact:**
+- Right process for right complexity
+- No overhead for simple tasks
+- Proper planning for complex features
+- Better team collaboration through spec review
+- Clearer scope and acceptance criteria
+
+**Decision Logic:**
+- **Complex** (architecture, multi-component, >1 week) → Spec first
+- **Simple** (bugs, quick fixes, <1 day) → Direct issue
+
 ### ✅ v2.3.0 - GitHub Projects Integration (October 19, 2025)
 **Status:** ✅ Released
 
@@ -64,26 +87,26 @@ To create the most intelligent, automated, and developer-friendly project manage
 
 ## 🚧 In Progress
 
-### v2.3.1 - Polish & Fixes (November 2025)
+### v2.4.1 - Polish & Bug Fixes (November 2025)
 **Status:** 🟡 Planning
 
 **Goals:**
-- Bug fixes from v2.3.0 feedback
-- Documentation improvements
+- Bug fixes from v2.4.0 feedback
+- Spec template improvements
+- Documentation enhancements
 - Performance optimizations
-- Additional examples and guides
 
 **Planned Improvements:**
-- [ ] Better error messages
-- [ ] More detailed logging
-- [ ] Enhanced installation experience
-- [ ] Video tutorials
+- [ ] Spec validation (check for missing sections)
+- [ ] Better decision logic explanations
+- [ ] More spec examples
+- [ ] Video tutorials for spec workflow
 
 ---
 
 ## 📅 Upcoming Releases
 
-### v2.4.0 - Enhanced Automation (Q4 2025)
+### v2.5.0 - Enhanced Automation (Q4 2025)
 **Status:** 🔵 Planned
 
 **Theme:** Making automation even smarter
@@ -117,11 +140,11 @@ To create the most intelligent, automated, and developer-friendly project manage
 - Sprint retrospective templates
 
 **Estimated Effort:** 3-4 weeks  
-**Target Release:** December 2025
+**Target Release:** January 2026
 
 ---
 
-### v2.5.0 - Team Collaboration (Q1 2026)
+### v2.6.0 - Team Collaboration (Q1 2026)
 **Status:** 🔵 Planned
 
 **Theme:** Better team workflows
