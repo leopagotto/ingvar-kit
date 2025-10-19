@@ -76,7 +76,7 @@ program
     vscodeCommand(options);
   });
 
-// Status command - Check workflow setup status
+// Status command - Check workflow setup status (simple)
 program
   .command('status')
   .alias('s')
@@ -100,6 +100,27 @@ program
     });
     
     console.log();
+    console.log(chalk.gray('💡 Run `leo health` for comprehensive health check\n'));
+  });
+
+// Health command - Comprehensive workflow health check
+program
+  .command('health')
+  .alias('h')
+  .description('Run comprehensive workflow health check with scoring')
+  .action(async () => {
+    console.log(banner);
+    const healthCheck = require('../lib/commands/health');
+    await healthCheck();
+  });
+
+// Welcome command - Show welcome message again
+program
+  .command('welcome')
+  .alias('w')
+  .description('Show welcome message and quick start guide')
+  .action(() => {
+    console.log(welcomeMessage);
   });
 
 // Docs command - Open documentation
