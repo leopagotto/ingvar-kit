@@ -22,7 +22,7 @@ ${chalk.yellow('║')}  ${chalk.yellow('███████╗█████�
 ${chalk.yellow('║')}  ${chalk.yellow('╚══════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   ')}  ${chalk.yellow('║')}
 ${chalk.yellow('║')}                                                                   ${chalk.yellow('║')}
 ${chalk.yellow('║')}         ${chalk.cyan('🦁  GitHub Workflow Automation Toolkit  🦁')}         ${chalk.yellow('║')}
-${chalk.yellow('║')}                    ${chalk.gray('Version 2.0.3')}                            ${chalk.yellow('║')}
+${chalk.yellow('║')}                    ${chalk.gray('Version 2.1.0')}                            ${chalk.yellow('║')}
 ${chalk.yellow('║')}                                                                   ${chalk.yellow('║')}
 ${chalk.yellow('╚═══════════════════════════════════════════════════════════════════╝')}
 
