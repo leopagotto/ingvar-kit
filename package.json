@@ -10,7 +10,8 @@
   "scripts": {
     "start": "node bin/cli.js",
     "test": "echo \"No tests yet\" && exit 0",
-    "postinstall": "node scripts/postinstall.js"
+    "postinstall": "node scripts/postinstall.js",
+    "deploy:wiki": "bash scripts/deploy-wiki.sh"
   },
   "keywords": [
     "github",
