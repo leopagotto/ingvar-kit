@@ -24,7 +24,7 @@ const isGitRepo = () => {
 
 // Check if LEO is already initialized
 const isLeoInitialized = () => {
-  return fs.existsSync('.github/ISSUE_TEMPLATE') || 
+  return fs.existsSync('.github/ISSUE_TEMPLATE') ||
          fs.existsSync('docs/specs') ||
          fs.existsSync('.github/copilot-instructions.md');
 };
@@ -40,7 +40,7 @@ ${chalk.yellow('║')}  ${chalk.yellow('███████╗█████�
 ${chalk.yellow('║')}  ${chalk.yellow('╚══════╝╚══════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝   ')}  ${chalk.yellow('║')}
 ${chalk.yellow('║')}                                                                   ${chalk.yellow('║')}
 ${chalk.yellow('║')}         ${chalk.cyan('🦁  GitHub Workflow Automation Toolkit  🦁')}         ${chalk.yellow('║')}
-${chalk.yellow('║')}                    ${chalk.gray('Version 2.1.0')}                            ${chalk.yellow('║')}
+${chalk.yellow('║')}                    ${chalk.gray('Version 2.2.0')}                            ${chalk.yellow('║')}
 ${chalk.yellow('║')}                                                                   ${chalk.yellow('║')}
 ${chalk.yellow('╚═══════════════════════════════════════════════════════════════════╝')}
 
@@ -70,26 +70,26 @@ ${chalk.gray('📚 Documentation:')} ${chalk.blue.underline('https://github.com/
 try {
   // Always show installation message
   console.log(simpleMessage);
-  
+
   const isGlobal = isGlobalInstall();
   const inGitRepo = isGitRepo();
   const alreadyInitialized = isLeoInitialized();
-  
+
   // Create a marker file to indicate successful installation
   const homeDir = require('os').homedir();
   const configDir = path.join(homeDir, '.leo-workflow');
-  
+
   if (!fs.existsSync(configDir)) {
     fs.mkdirSync(configDir, { recursive: true });
   }
-  
+
   const installFile = path.join(configDir, '.last-install');
   fs.writeFileSync(installFile, JSON.stringify({
-    version: '2.1.0',
+    version: '2.2.0',
     installedAt: new Date().toISOString(),
     installType: isGlobal ? 'global' : 'local'
   }, null, 2));
-  
+
   // Handle local install in a git repository
   if (!isGlobal && inGitRepo && !alreadyInitialized) {
     console.log(chalk.cyan.bold('\n🎯 Quick Setup Available!\n'));
@@ -113,7 +113,7 @@ try {
     console.log(chalk.yellow('\n⚠️  Not in a git repository'));
     console.log(chalk.gray('Navigate to your project and run: ') + chalk.cyan('leo init\n'));
   }
-  
+
 } catch (error) {
   // Silently fail if there are issues (e.g., during npm publish)
   console.error(chalk.yellow('Note: Could not complete post-install setup, but the CLI should still work.'));

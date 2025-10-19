@@ -12,7 +12,17 @@ smoke-test.sh
 test-banner.js
 test-prompts.js
 
-# Documentation (keep only essential)
+# GitHub directories (not needed in package)
+.github/
+docs/
+
+# All internal documentation (keep only essential in files field)
+*.md
+!README.md
+!LICENSE
+!CHANGELOG.md
+
+# Specific docs to exclude
 BANNER_REDESIGN_V2.0.3.md
 BUG_ASCII_BANNER.md
 COMPLETE_ENHANCEMENTS_SUMMARY.md
@@ -23,6 +33,8 @@ DEPLOYMENT_V2.0.3.md
 ENHANCEMENTS_V2.0.3.md
 IMPLEMENTATION_SUMMARY.md
 INSTALLATION_FIX.md
+INSTALLATION_FIX_V2.1.1.md
+DEPLOYMENT_V2.1.1.md
 PROPOSED_ASCII_BANNER.md
 RELEASE_NOTES_V2.1.0.md
 SMOKE_TEST_RESULTS.md
@@ -33,6 +45,7 @@ VERSION_2_RELEASE_NOTES.md
 WELCOME_BANNER_FIX.md
 FUTURE_VISION_V3.0.md
 QUICK_WINS_PLAN.md
+BEST_PRACTICES.md
 
 # IDE files
 .vscode/
@@ -41,8 +54,6 @@ QUICK_WINS_PLAN.md
 # OS files
 Thumbs.db
 
-# Keep these essential files (override)
-!README.md
-!LICENSE
-!CHANGELOG.md
-!BEST_PRACTICES.md
+# Package files
+*.tgz
+leo-workflow-kit-*.tgz

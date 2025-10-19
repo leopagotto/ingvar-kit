@@ -1,5 +1,91 @@
+````instructions
 ```instructions
 # GitHub Copilot Instructions - LEO Workflow Kit
+
+## 🤖 Automatic Issue Creation (CRITICAL)
+
+### When User Describes Work/Tasks/Bugs
+**AUTOMATICALLY create GitHub issues without asking the user to fill out forms manually.**
+
+When the user describes:
+- "We need to fix [problem]"
+- "Let's add [feature]"
+- "There's a bug with [component]"
+- "Create a task to [action]"
+- "We should improve [thing]"
+
+**YOU MUST:**
+1. **Detect the intent** - User is describing work to be done
+2. **Extract key information** from their description:
+   - Problem/feature summary
+   - Component/area affected
+   - Priority (infer from language: "critical", "urgent" = P0/P1, default = P2)
+   - Type (bug, feature, enhancement, documentation, etc.)
+3. **Use the run_in_terminal tool** to create the issue:
+   ```bash
+   leo issue
+   ```
+4. **Fill the interactive prompts automatically** based on extracted info
+5. **Confirm to user** with issue number and link
+
+### Example User Requests → Auto Issue Creation
+
+**User says:** "We need to fix the login button not working on mobile"
+
+**Copilot should:**
+```bash
+# Run leo issue and auto-fill:
+# Type: Bug
+# Title: Login button not working on mobile
+# Component: Frontend/Mobile
+# Priority: P1 (critical user flow)
+# Description: The login button is unresponsive on mobile devices
+```
+
+**User says:** "Let's add dark mode support"
+
+**Copilot should:**
+```bash
+# Run leo issue and auto-fill:
+# Type: Feature
+# Title: Add dark mode support
+# Priority: P2 (enhancement)
+# Description: Implement dark mode theme toggle for the application
+```
+
+**User says:** "The search is too slow, we should optimize it"
+
+**Copilot should:**
+```bash
+# Run leo issue and auto-fill:
+# Type: Enhancement
+# Title: Optimize search performance
+# Component: Backend/Search
+# Priority: P1 (performance issue)
+# Description: Search queries are taking too long, need optimization
+```
+
+### Key Rules for Auto Issue Creation
+✅ **DO:**
+- Create issues immediately when user describes work
+- Infer priority, type, and component from context
+- Use smart defaults if info is unclear
+- Confirm issue creation with number and link
+- Reference the issue number in any related code changes
+
+❌ **DON'T:**
+- Ask user to manually run `leo issue` and fill out forms
+- Create markdown files for tasks in the repo
+- Skip issue creation for described work
+- Wait for explicit "create an issue" command
+
+### GitHub Authentication Required
+Before creating issues, ensure GitHub CLI is authenticated:
+```bash
+gh auth status
+# If not authenticated:
+gh auth login
+```
 
 ## Core Principles
 
@@ -30,12 +116,12 @@ This is optimized spec-driven development (like spec-kit) with integrated GitHub
    - Location: `docs/specs/[feature-name].md`
    - Include: Problem statement, solution approach, technical details, acceptance criteria
    - Format: Use issue template structure (from `leo issue`)
-   
+
 2. **Review & Discussion**
    - Team reviews the spec file
    - Discuss approach, risks, alternatives
    - Make changes to spec file as needed
-   
+
 3. **Approval**
    - Spec is approved and finalized
    - Ready to move to execution phase
@@ -83,19 +169,19 @@ All documentation files must be organized within the `docs/` folder structure. *
 
 - **`docs/specs/`** - Specification files (planning artifacts)
   - Feature specifications, technical proposals, architecture decisions (PRE-DEVELOPMENT)
-  
+
 - **`docs/guides/`** - User guides and tutorials
   - Feature guides, user instructions, how-to documents, user manuals
-  
+
 - **`docs/setup/`** - Installation and configuration
   - Installation guides, environment setup, deployment checklists, configuration references
-  
+
 - **`docs/development/`** - Development documentation
   - API documentation, technical specifications, active development notes, architecture
-  
+
 - **`docs/archive/`** - Completed/historical work
   - Implementation completion reports, old schemas, deprecated features, historical decisions
-  
+
 - **GitHub Issues** - All tasks, bugs, features (execution artifacts)
 
 ### Rules:
@@ -196,13 +282,13 @@ interface ButtonProps {
   children: React.ReactNode;
 }
 
-const Button = ({ 
-  variant = 'primary', 
+const Button = ({
+  variant = 'primary',
   size = 'md',
   disabled = false,
   loading = false,
   onClick,
-  children 
+  children
 }: ButtonProps) => { /* ... */ }
 
 // ❌ Bad: Unclear, untyped, no defaults
@@ -220,7 +306,7 @@ Every reusable component should have:
 ```typescript
 /**
  * Primary button component for user actions
- * 
+ *
  * @example
  * <Button variant="primary" onClick={handleSave}>
  *   Save Changes
@@ -261,7 +347,7 @@ const handleCommentClick = () => {
 const useRequireAuth = () => {
   const { user } = useAuth();
   const router = useRouter();
-  
+
   const requireAuth = (callback: () => void) => {
     if (!user) {
       toast.error('Please log in');
@@ -270,7 +356,7 @@ const useRequireAuth = () => {
     }
     callback();
   };
-  
+
   return { requireAuth };
 };
 
@@ -285,14 +371,14 @@ Extract repeated calculations, validations, formatters:
 
 ```typescript
 // utils/formatters.ts
-export const formatCurrency = (value: number) => 
+export const formatCurrency = (value: number) =>
   new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
 
-export const formatDate = (date: Date) => 
+export const formatDate = (date: Date) =>
   new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(date);
 
 // utils/validators.ts
-export const isValidEmail = (email: string) => 
+export const isValidEmail = (email: string) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 export const isValidPhone = (phone: string) =>
@@ -309,23 +395,23 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
     const stored = localStorage.getItem(key);
     return stored ? JSON.parse(stored) : initialValue;
   });
-  
+
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(value));
   }, [key, value]);
-  
+
   return [value, setValue] as const;
 };
 
 // hooks/useDebounce.ts
 export const useDebounce = <T>(value: T, delay: number = 500) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
-  
+
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedValue(value), delay);
     return () => clearTimeout(timer);
   }, [value, delay]);
-  
+
   return debouncedValue;
 };
 ```
@@ -396,17 +482,17 @@ export const useDebounce = <T>(value: T, delay: number = 500) => {
 <!-- ✅ Perfect: WebP with fallback, lazy loading, alt text, dimensions -->
 <picture>
   <source srcset="image.webp" type="image/webp">
-  <img 
-    src="image.jpg" 
+  <img
+    src="image.jpg"
     alt="Descriptive alt text for SEO and accessibility"
-    width="800" 
+    width="800"
     height="600"
     loading="lazy"
   >
 </picture>
 
 <!-- ✅ Good: Next.js Image component (auto-optimizes) -->
-<Image 
+<Image
   src="/image.jpg"
   alt="Descriptive alt text"
   width={800}
@@ -740,3 +826,4 @@ Always provide sensible defaults and avoid requiring unnecessary configuration.
 **Remember**: Specifications are FILES. Tasks are GITHUB ISSUES.
 
 ```
+````

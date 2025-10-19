@@ -5,6 +5,42 @@ All notable changes to LEO Workflow Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2025-10-19
+
+### 🚀 Major Feature: Automatic Issue Creation via GitHub Copilot
+
+This release enables GitHub Copilot to automatically create issues when you describe work in conversation - no more manual form filling!
+
+### Added
+- **Automatic Issue Creation Instructions**: Added comprehensive Copilot instructions for detecting when users describe work and automatically creating GitHub issues
+- **GitHub Authentication Flow**: Added interactive GitHub CLI authentication during `leo init` setup
+- **Smart Intent Detection**: Copilot now recognizes patterns like "We need to fix...", "Let's add...", "There's a bug..." and creates issues automatically
+- **Context Extraction**: Automatically extracts priority, type, component from user descriptions
+
+### Changed
+- **Copilot Instructions Enhanced**: Added detailed examples and rules for automatic issue creation at the top of instructions (CRITICAL section)
+- **Init Command**: Now checks GitHub authentication and offers to authenticate interactively if not logged in
+- **Package Optimization**: Further reduced package size by excluding more unnecessary files via improved .npmignore
+
+### Improved
+- **User Experience**: Users can now describe issues in conversation and Copilot creates them automatically
+- **Authentication UX**: Clear prompts and guidance for GitHub authentication during setup
+- **Package Size**: Maintained lean package size (46.8 KB) while adding new features
+
+### How It Works
+When you say to Copilot:
+- "We need to fix the login button not working on mobile"
+- "Let's add dark mode support"
+- "The search is too slow"
+
+Copilot will automatically:
+1. Detect you're describing work
+2. Extract key details (priority, type, component)
+3. Run `leo issue` with smart defaults
+4. Confirm issue creation with link
+
+No more interrupting your flow to fill out forms!
+
 ## [2.1.1] - 2025-10-19
 
 ### Fixed

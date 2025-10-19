@@ -1,6 +1,6 @@
 {
   "name": "leo-workflow-kit",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "LEO Workflow Kit - Advanced CLI tool for spec-driven development with component-first best practices, SEO optimization, performance guidelines, and automated GitHub Projects integration",
   "main": "dist/index.js",
   "bin": {
