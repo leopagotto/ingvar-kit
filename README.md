@@ -2,7 +2,7 @@
 
 # 🦁 LEO Workflow Kit
 
-### **Complete GitHub Workflow Automation Toolkit**
+### **Complete GitHub Workflow Automation with Intelligent Project Management**
 
 [![npm version](https://img.shields.io/npm/v/leo-workflow-kit.svg?style=flat-square&color=blue&logo=npm)](https://www.npmjs.com/package/leo-workflow-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
@@ -11,7 +11,9 @@
 [![GitHub Issues](https://img.shields.io/github/issues/leonpagotto/leo-kit?style=flat-square&color=red&logo=github)](https://github.com/leonpagotto/leo-kit/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
-**Transform your development process with spec-driven workflows, automated GitHub integration, and professional project management tools—all from your terminal.**
+**Transform your development process with AI-powered issue creation, automated GitHub Projects integration, intelligent status management, and zero-configuration workflow automation—all from your terminal.**
+
+✨ **New in v2.3.0:** Automatic GitHub Projects integration with intelligent status updates!
 
 [🚀 Quick Start](#-quick-start) • [📦 Installation](#-installation) • [✨ Features](#-features) • [🎯 Commands](#-commands) • [📚 Documentation](#-documentation)
 
@@ -25,8 +27,10 @@
 
 ### Why LEO?
 
+- **🤖 AI-Powered Issue Creation**: Copilot automatically creates issues when you describe work—no forms to fill!
+- **📊 Intelligent Status Management**: Issues automatically update status based on your work (Todo → In Progress → Done)
+- **🔄 GitHub Projects Integration**: Auto-add issues to project boards with real-time status synchronization
 - **🎯 Spec-Driven Development**: Enforce best practices by creating detailed specifications before coding
-- **🤖 Automated GitHub Integration**: Seamlessly sync with GitHub Projects, issues, and labels
 - **🧩 Component-First Architecture**: Built-in best practices for creating reusable, maintainable components
 - **⚡ Performance Optimized**: Guidelines for lazy loading, code splitting, and Core Web Vitals
 - **🔍 SEO Ready**: Comprehensive SEO optimization practices baked into development workflow
@@ -36,7 +40,6 @@
 - **⏱️ Lightning Fast**: Set up complete workflow in 30-45 minutes vs 2-4 hours manually
 - **🔧 Zero Configuration**: Works out-of-the-box with sensible defaults
 - **🌍 Universal**: Compatible with personal repos and organization projects
-- **✨ Project Creation**: Create new GitHub Projects or connect to existing ones seamlessly
 
 ---
 
