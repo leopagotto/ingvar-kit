@@ -23,9 +23,9 @@ When the user describes:
    - Type (bug, feature, enhancement, documentation, etc.)
 3. **Use the run_in_terminal tool** to create the issue:
    ```bash
-   leo issue
+   gh issue create --title "..." --body "..." --label "bug,p1,component"
    ```
-4. **Fill the interactive prompts automatically** based on extracted info
+4. **Construct detailed body** with acceptance criteria and technical details
 5. **Confirm to user** with issue number and link
 
 ### Example User Requests → Auto Issue Creation
