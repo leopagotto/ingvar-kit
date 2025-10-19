@@ -1,7 +1,7 @@
 # v2.3.0 Release Summary - GitHub Projects Integration
 
-**Release Date:** October 19, 2025  
-**Version:** 2.3.0  
+**Release Date:** October 19, 2025
+**Version:** 2.3.0
 **Focus:** Automatic GitHub Projects Integration & Intelligent Status Management
 
 ---
@@ -11,6 +11,7 @@
 ### Automatic GitHub Projects Integration
 
 When Copilot creates an issue from your description, it now:
+
 1. ✅ **Automatically adds the issue to your GitHub Project**
 2. ✅ **Sets initial status to "Todo"**
 3. ✅ **Updates status as work progresses** (Todo → In Progress → Done)
@@ -21,18 +22,21 @@ When Copilot creates an issue from your description, it now:
 Copilot monitors your work and updates issue status based on clear indicators:
 
 **Todo → In Progress:**
+
 - First commit: `git commit -m "feat: implement feature #42"`
 - New branch: `git checkout -b feature/issue-42`
-- User statement: *"Let's work on issue #42"*
+- User statement: _"Let's work on issue #42"_
 
 **In Progress → Done:**
-- PR merged with: *"Closes #42"*
+
+- PR merged with: _"Closes #42"_
 - Issue closed: `gh issue close 42`
-- User statement: *"Issue #42 is complete"*
+- User statement: _"Issue #42 is complete"_
 
 ### Project View Configuration
 
 Projects are configured with essential fields:
+
 - **Status** (Todo, In Progress, Done)
 - **Title**
 - **Assignees**
@@ -45,6 +49,7 @@ Board view automatically shows work organized by status.
 ## 📊 Example Workflow
 
 ### Before (v2.2.0)
+
 ```
 You: "We need to add user authentication"
 → Issue created manually or via Copilot
@@ -53,6 +58,7 @@ You: "We need to add user authentication"
 ```
 
 ### After (v2.3.0)
+
 ```
 You: "We need to add user authentication"
 → ✓ Issue #7 created automatically
@@ -70,7 +76,9 @@ You: "We need to add user authentication"
 ## 🚀 Key Features
 
 ### 1. Intelligent Work Detection
+
 Copilot monitors:
+
 - Git commits with issue references
 - Branch names with issue numbers
 - Pull request actions (created, merged)
@@ -78,15 +86,18 @@ Copilot monitors:
 - Issue state changes (opened, closed)
 
 ### 2. GraphQL API Integration
+
 - Uses GitHub's powerful Projects V2 API
 - Reliable status field updates
 - Supports custom field configurations
 - Works with any project structure
 
-### 3. Zero Configuration*
+### 3. Zero Configuration\*
+
 \* If you already have a GitHub Project configured
 
 Just tell Copilot your project number once, and it handles everything:
+
 ```bash
 # Copilot asks once during setup
 "Which project number? (Run: gh project list --owner USERNAME)"
@@ -95,7 +106,9 @@ Just tell Copilot your project number once, and it handles everything:
 ```
 
 ### 4. Comprehensive Documentation
+
 New guide: `docs/guides/github-projects-integration.md`
+
 - Complete setup walkthrough
 - Manual configuration examples
 - Troubleshooting tips
@@ -107,6 +120,7 @@ New guide: `docs/guides/github-projects-integration.md`
 ## 🔧 Technical Implementation
 
 ### Issue Creation with Project Addition
+
 ```bash
 # Copilot automatically runs:
 gh issue create \
@@ -119,6 +133,7 @@ gh project item-add 4 --owner leonpagotto --url ISSUE_URL
 ```
 
 ### Status Updates via GraphQL
+
 ```bash
 # When work starts:
 gh api graphql -f query='
@@ -139,18 +154,21 @@ gh api graphql -f query='
 ## 📈 Impact
 
 ### For Developers
+
 - ✅ No manual project board updates
 - ✅ Always up-to-date project visibility
 - ✅ Focus on coding, not task management
 - ✅ Clear work status for entire team
 
 ### For Teams
+
 - ✅ Real-time project visibility
 - ✅ Accurate status tracking
 - ✅ Better sprint planning
 - ✅ Reduced project management overhead
 
 ### For Project Managers
+
 - ✅ Automatic progress tracking
 - ✅ No more "update your tasks" reminders
 - ✅ Accurate burndown charts
@@ -161,16 +179,19 @@ gh api graphql -f query='
 ## 🎓 Getting Started
 
 ### 1. Update to v2.3.0
+
 ```bash
 npm install -g leo-workflow-kit@latest
 ```
 
 ### 2. Check Your Projects
+
 ```bash
 gh project list --owner YOUR_USERNAME
 ```
 
 ### 3. Note Your Project Number
+
 ```bash
 # Example output:
 # NUMBER  TITLE                STATE
@@ -178,6 +199,7 @@ gh project list --owner YOUR_USERNAME
 ```
 
 ### 4. Use LEO as Normal
+
 ```bash
 # In your project
 leo init
@@ -197,6 +219,7 @@ leo init
 ## 🧪 Testing
 
 Tested with:
+
 - ✅ GitHub Projects v2 (new projects)
 - ✅ Multiple status configurations
 - ✅ Custom field layouts
@@ -205,6 +228,7 @@ Tested with:
 - ✅ Project permissions
 
 Verified:
+
 - ✅ Issues added successfully
 - ✅ Status updates reliably
 - ✅ Works with existing projects
@@ -215,12 +239,15 @@ Verified:
 ## 🐛 Known Limitations
 
 1. **Requires GitHub CLI authentication**
+
    - Solution: `gh auth login --scopes "project,repo"`
 
 2. **Project must exist before use**
+
    - Solution: Create project first via `gh project create`
 
 3. **Status field must be named "Status"**
+
    - Solution: Rename field or customize in Copilot instructions
 
 4. **Needs project number for automation**
@@ -253,6 +280,7 @@ Verified:
 ## 🙏 Acknowledgments
 
 This release completes the core automation loop:
+
 1. ✅ v2.1.0: Package installation fixes
 2. ✅ v2.2.0: Automatic issue creation
 3. ✅ **v2.3.0: GitHub Projects integration** ← You are here

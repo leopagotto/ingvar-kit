@@ -59,6 +59,7 @@ leo init
 ```
 
 That's it! Your project now has:
+
 - ✅ Documentation structure (`docs/` with organized folders)
 - ✅ 8 professional issue templates
 - ✅ 22+ GitHub labels (priorities, types, statuses)
@@ -109,6 +110,7 @@ Enforce a proven methodology where every feature, bug fix, or task starts with a
 ### 🧩 Component-First Development
 
 Built-in best practices for creating reusable, maintainable components:
+
 - **Atomic Design Hierarchy**: Organized component structure (atoms, molecules, organisms)
 - **DRY Principle**: Guidelines to eliminate code duplication
 - **Composition Patterns**: Best practices for component composition and reusability
@@ -118,6 +120,7 @@ Built-in best practices for creating reusable, maintainable components:
 ### ⚡ Performance Optimization
 
 Comprehensive performance guidelines built into the workflow:
+
 - **Lazy Loading**: Route-based and component-based code splitting
 - **Image Optimization**: WebP format, responsive images, lazy loading strategies
 - **Bundle Optimization**: Tree shaking, code splitting, and vendor chunk strategies
@@ -128,6 +131,7 @@ Comprehensive performance guidelines built into the workflow:
 ### 🔍 SEO Optimization
 
 SEO best practices integrated into development:
+
 - **Semantic HTML**: Proper HTML5 structure and accessibility
 - **Meta Tags**: Comprehensive Open Graph, Twitter Cards, and meta data
 - **Structured Data**: Schema.org implementation guidelines
@@ -137,20 +141,21 @@ SEO best practices integrated into development:
 
 ### 📋 8 Professional Issue Templates
 
-| Template | Use Case |
-|----------|----------|
-| 🐛 Bug Report | Report and track bugs with environment details |
+| Template           | Use Case                                               |
+| ------------------ | ------------------------------------------------------ |
+| 🐛 Bug Report      | Report and track bugs with environment details         |
 | ✨ Feature Request | New features with user stories and acceptance criteria |
-| 📚 Documentation | Documentation improvements and guides |
-| 🚀 Deployment | Deployment tasks with checklists and rollback plans |
-| 🔗 Integration | Third-party integrations and API connections |
-| ♻️ Refactoring | Code improvements and technical debt |
-| 🧪 Testing | Test suite expansion and coverage goals |
-| 🔬 Research Spike | Time-boxed investigation tasks |
+| 📚 Documentation   | Documentation improvements and guides                  |
+| 🚀 Deployment      | Deployment tasks with checklists and rollback plans    |
+| 🔗 Integration     | Third-party integrations and API connections           |
+| ♻️ Refactoring     | Code improvements and technical debt                   |
+| 🧪 Testing         | Test suite expansion and coverage goals                |
+| 🔬 Research Spike  | Time-boxed investigation tasks                         |
 
 ### 🏷️ 22+ Intelligent Labels
 
 Auto-configured across 4 categories:
+
 - **Priority**: P0 (Critical) → P3 (Low)
 - **Type**: bug, enhancement, documentation, deployment, etc.
 - **Status**: blocked, in-progress, needs-review, etc.
@@ -218,6 +223,7 @@ Repository: yourusername/your-repo
 ```
 
 **Option 1: Use Existing GitHub Project**
+
 ```bash
 ? GitHub Project setup: 📋 Use existing GitHub Project (enter project number)
 ? Enter GitHub Project number: 42
@@ -226,6 +232,7 @@ Repository: yourusername/your-repo
 ```
 
 **Option 2: Create New GitHub Project**
+
 ```bash
 ? GitHub Project setup: ✨ Create new GitHub Project
 ? Enter new project name: My Awesome Project
@@ -236,6 +243,7 @@ Repository: yourusername/your-repo
 ```
 
 **Option 3: Skip for Now**
+
 ```bash
 ? GitHub Project setup: ⏭️  Skip project setup (I'll do it later)
 
@@ -250,6 +258,7 @@ Repository: yourusername/your-repo
 #### **✅ What Gets Installed**
 
 The tool automatically configures your project with:
+
 - ✅ **Documentation structure** with `docs/specs/` folder for specifications
 - ✅ **8 professional issue templates** (bug, feature, docs, deployment, integration, refactoring, testing, research)
 - ✅ **22+ GitHub labels** (P0-P3 priorities, type labels, status labels, component labels)
@@ -327,12 +336,14 @@ leo docs
 ### Best Practices
 
 **Commit Messages:**
+
 ```bash
 git commit -m "feat: add dark mode (#42)"
 git commit -m "fix: resolve login bug (#23)"
 ```
 
 **Pull Requests:**
+
 - Reference issue: "Closes #42" or "Fixes #23"
 - Include screenshots for UI changes
 - List breaking changes
@@ -342,6 +353,7 @@ git commit -m "fix: resolve login bug (#23)"
 LEO Workflow Kit includes comprehensive Copilot instructions that enforce best practices:
 
 #### Component-First Development
+
 - **Atomic Design**: Organize components into atoms, molecules, organisms, templates, and pages
 - **Single Responsibility**: Each component does one thing well
 - **Reusability**: Build once, use everywhere - no code duplication
@@ -349,6 +361,7 @@ LEO Workflow Kit includes comprehensive Copilot instructions that enforce best p
 - **Smart Extraction**: Guidelines on when to extract vs. keep components local
 
 #### Code Quality Standards
+
 - **DRY Principle**: Extract repeated logic into hooks, utilities, or components
 - **Type Safety**: TypeScript patterns for props, state, and API contracts
 - **Error Handling**: Graceful error handling with user-friendly messages
@@ -356,6 +369,7 @@ LEO Workflow Kit includes comprehensive Copilot instructions that enforce best p
 - **Documentation**: JSDoc comments and inline guidance
 
 #### Performance Optimization
+
 - **Lazy Loading**: Route and component-based code splitting
 - **Image Optimization**: WebP format, responsive images, lazy loading
 - **Bundle Size**: Tree shaking, vendor chunk splitting, dynamic imports
@@ -364,6 +378,7 @@ LEO Workflow Kit includes comprehensive Copilot instructions that enforce best p
 - **Debouncing/Throttling**: Optimize expensive operations
 
 #### SEO Excellence
+
 - **Semantic HTML**: Proper HTML5 structure for accessibility and SEO
 - **Meta Tags**: Comprehensive Open Graph, Twitter Cards, meta descriptions
 - **Structured Data**: Schema.org markup for rich snippets
@@ -372,6 +387,7 @@ LEO Workflow Kit includes comprehensive Copilot instructions that enforce best p
 - **Performance**: Fast loading times for better rankings
 
 #### Accessibility (WCAG 2.1 AA)
+
 - **Color Contrast**: Proper contrast ratios for text and UI elements
 - **Keyboard Navigation**: Full keyboard support (Tab, Enter, Escape, Arrow keys)
 - **Screen Readers**: ARIA roles, labels, and meaningful alt text
@@ -399,6 +415,7 @@ gh pr create
 ## 📈 Roadmap
 
 ### Version 2.0 (Current) ✅
+
 - [x] Component-first development guidelines
 - [x] Comprehensive SEO optimization practices
 - [x] Performance optimization strategies
@@ -408,6 +425,7 @@ gh pr create
 - [x] Enhanced Copilot instructions
 
 ### Coming Soon
+
 - [ ] Storybook integration for component documentation
 - [ ] Performance monitoring and reporting
 - [ ] Automated SEO audit tools
@@ -419,6 +437,7 @@ gh pr create
 - [ ] Analytics dashboard
 
 ### Version 1.x Completed ✅
+
 - [x] Core CLI framework
 - [x] GitHub integration
 - [x] 8 Issue templates

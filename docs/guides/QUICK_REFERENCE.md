@@ -18,6 +18,7 @@ gh project list --owner YOUR_USERNAME
 ## 📋 Common Commands
 
 ### Project Management
+
 ```bash
 # List projects
 gh project list --owner USERNAME
@@ -33,6 +34,7 @@ gh project item-list PROJECT_NUMBER --owner USERNAME
 ```
 
 ### Issue Management
+
 ```bash
 # Create issue (Copilot does this automatically)
 gh issue create --title "..." --body "..." --label "..."
@@ -45,6 +47,7 @@ gh issue close ISSUE_NUMBER --reason completed
 ```
 
 ### Status Updates
+
 ```bash
 # Get project IDs (needed for GraphQL)
 gh project list --owner USERNAME --format json | jq '.projects[] | {number, id}'
@@ -61,17 +64,22 @@ gh project field-list PROJECT_NUMBER --owner USERNAME --format json | jq '.field
 ## 🤖 Copilot Automation
 
 ### Automatic Issue Creation
+
 **You say:**
+
 > "We need to fix the login bug"
 
 **Copilot does:**
+
 - ✅ Creates issue with proper labels
 - ✅ Adds to your project
 - ✅ Sets status: Todo
 - ✅ Confirms with issue number
 
 ### Automatic Status Updates
+
 **When you work:**
+
 ```bash
 git commit -m "feat: implement login fix #42"
 # ✓ Copilot detects → Status: In Progress
@@ -87,14 +95,16 @@ git commit -m "feat: implement login fix #42"
 ## 🎯 Work Indicators for Status Updates
 
 ### Todo → In Progress
+
 - ✅ `git commit -m "feat: start work #42"`
 - ✅ `git checkout -b feature/issue-42`
-- ✅ User says: *"Let's work on #42"*
+- ✅ User says: _"Let's work on #42"_
 
 ### In Progress → Done
-- ✅ PR merged with *"Closes #42"*
+
+- ✅ PR merged with _"Closes #42"_
 - ✅ `gh issue close 42`
-- ✅ User says: *"Issue #42 is complete"*
+- ✅ User says: _"Issue #42 is complete"_
 
 ---
 
@@ -125,13 +135,16 @@ gh api graphql -f query='
 ## 📊 Project Configuration
 
 ### Required Fields
+
 - **Status** (Single select: Todo, In Progress, Done)
 - **Title** (Default)
 - **Assignees** (Default)
 - **Labels** (Default)
 
 ### Recommended Views
+
 **Board View:**
+
 - Group by: Status
 - Columns: Todo | In Progress | Done
 - Show: Title, Assignees, Labels
@@ -141,6 +154,7 @@ gh api graphql -f query='
 ## 🐛 Troubleshooting
 
 ### Issue not added to project
+
 ```bash
 # Check authentication
 gh auth status
@@ -153,6 +167,7 @@ gh project item-add PROJECT_NUMBER --owner OWNER --url ISSUE_URL
 ```
 
 ### Status not updating
+
 ```bash
 # Verify project configuration
 gh project field-list PROJECT_NUMBER --owner OWNER
@@ -161,6 +176,7 @@ gh project field-list PROJECT_NUMBER --owner OWNER
 ```
 
 ### Permission denied
+
 ```bash
 # Re-authenticate with correct scopes
 gh auth login --scopes "project,repo,workflow"
@@ -174,24 +190,29 @@ gh auth status
 ## 💡 Best Practices
 
 1. **Always reference issue numbers in commits**
+
    ```bash
    git commit -m "feat: implement feature #42"
    ```
 
 2. **Create branches with issue numbers**
+
    ```bash
    git checkout -b feature/login-42
    ```
 
 3. **Use "Closes #42" in PR descriptions**
+
    ```markdown
    ## Changes
+
    Implemented user authentication
-   
+
    Closes #42
    ```
 
 4. **Tell Copilot when starting work**
+
    > "Let's work on issue #42"
 
 5. **Review project board regularly**
@@ -210,5 +231,5 @@ gh auth status
 
 ---
 
-**Version:** 2.3.0  
+**Version:** 2.3.0
 **Updated:** October 19, 2025

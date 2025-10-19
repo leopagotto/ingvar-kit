@@ -7,3 +7,15 @@ dist/
 *.swp
 *.swo
 *~
+
+# Test and verification scripts (development only)
+smoke-test.sh
+test-*.js
+verify-*.sh
+
+# Backup files
+*.backup
+*~
+
+# IDE files
+.idea/
