@@ -4,8 +4,8 @@
   "description": "LEO Workflow Kit - AI-powered CLI tool with intelligent spec-first development, automatic GitHub Projects integration, smart issue creation, and zero-configuration workflow automation",
   "main": "dist/index.js",
   "bin": {
-    "leo-workflow": "./bin/cli.js",
-    "leo": "./bin/cli.js"
+    "leo-workflow": "bin/cli.js",
+    "leo": "bin/cli.js"
   },
   "scripts": {
     "start": "node bin/cli.js",
@@ -33,7 +33,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/leonpagotto/leo-kit.git"
+    "url": "git+https://github.com/leonpagotto/leo-kit.git"
   },
   "bugs": {
     "url": "https://github.com/leonpagotto/leo-kit/issues"
