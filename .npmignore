@@ -1,0 +1,48 @@
+# Development files
+.git
+.gitignore
+.DS_Store
+*.log
+node_modules
+
+# Test files
+test/
+*.test.js
+smoke-test.sh
+test-banner.js
+test-prompts.js
+
+# Documentation (keep only essential)
+BANNER_REDESIGN_V2.0.3.md
+BUG_ASCII_BANNER.md
+COMPLETE_ENHANCEMENTS_SUMMARY.md
+COMPLETE_V2.0.3.md
+DEPLOYMENT_COMPLETE.md
+DEPLOYMENT_SUCCESS_V2.1.0.md
+DEPLOYMENT_V2.0.3.md
+ENHANCEMENTS_V2.0.3.md
+IMPLEMENTATION_SUMMARY.md
+INSTALLATION_FIX.md
+PROPOSED_ASCII_BANNER.md
+RELEASE_NOTES_V2.1.0.md
+SMOKE_TEST_RESULTS.md
+TESTING_GUIDE.md
+UX_DESIGNER_FEATURES.md
+VERIFICATION_REPORT.md
+VERSION_2_RELEASE_NOTES.md
+WELCOME_BANNER_FIX.md
+FUTURE_VISION_V3.0.md
+QUICK_WINS_PLAN.md
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+
+# Keep these essential files (override)
+!README.md
+!LICENSE
+!CHANGELOG.md
+!BEST_PRACTICES.md

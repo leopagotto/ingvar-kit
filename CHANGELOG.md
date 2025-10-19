@@ -5,6 +5,23 @@ All notable changes to LEO Workflow Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.1] - 2025-10-19
+
+### Fixed
+- **Package Publishing**: Added explicit `files` field to package.json to ensure all templates are included in npm package
+- **Installation Flow**: Enhanced postinstall.js to detect local vs global installs and guide users accordingly
+- **Smart Setup**: Postinstall now detects if you're in a git repo and prompts to run `leo init` for quick setup
+- **Package Size**: Reduced package size from 94.1 KB to 45.3 KB by excluding unnecessary documentation files via .npmignore
+
+### Added
+- `.npmignore` file to exclude development documentation and keep package lean
+- Auto-detection of existing LEO setup to avoid duplicate initialization
+- Context-aware installation messages based on install type (global/local) and repository status
+
+### Changed
+- Improved postinstall messaging to clearly guide users on next steps
+- Updated version references to 2.1.1 across banner and scripts
+
 ## [2.0.3] - 2025-10-18
 
 ### Changed
