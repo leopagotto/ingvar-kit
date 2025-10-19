@@ -11,9 +11,9 @@
 [![GitHub Issues](https://img.shields.io/github/issues/leonpagotto/leo-kit?style=flat-square&color=red&logo=github)](https://github.com/leonpagotto/leo-kit/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
-**Transform your development process with AI-powered issue creation, automated GitHub Projects integration, intelligent status management, and zero-configuration workflow automation—all from your terminal.**
+**Transform your development process with AI-powered spec-first development, intelligent issue creation, automated GitHub Projects integration, and zero-configuration workflow automation—all from your terminal.**
 
-✨ **New in v2.3.0:** Automatic GitHub Projects integration with intelligent status updates!
+✨ **New in v2.4.0:** Intelligent spec-first decision making! Copilot automatically creates specs for complex features or goes straight to issues for simple tasks.
 
 [🚀 Quick Start](#-quick-start) • [📦 Installation](#-installation) • [✨ Features](#-features) • [🎯 Commands](#-commands) • [📚 Documentation](#-documentation)
 
@@ -27,10 +27,12 @@
 
 ### Why LEO?
 
-- **🤖 AI-Powered Issue Creation**: Copilot automatically creates issues when you describe work—no forms to fill!
+- **� Intelligent Spec-First AI**: Copilot decides when to create specs vs direct issues based on complexity
+- **📝 Automatic Spec Creation**: Complex features get structured specs for review before implementation
+- **🤖 Smart Issue Generation**: Simple tasks go straight to issues; complex features break into multiple focused issues
 - **📊 Intelligent Status Management**: Issues automatically update status based on your work (Todo → In Progress → Done)
 - **🔄 GitHub Projects Integration**: Auto-add issues to project boards with real-time status synchronization
-- **🎯 Spec-Driven Development**: Enforce best practices by creating detailed specifications before coding
+- **🎯 True Spec-Driven Development**: Large features require planning; small tasks move fast
 - **🧩 Component-First Architecture**: Built-in best practices for creating reusable, maintainable components
 - **⚡ Performance Optimized**: Guidelines for lazy loading, code splitting, and Core Web Vitals
 - **🔍 SEO Ready**: Comprehensive SEO optimization practices baked into development workflow
@@ -95,34 +97,60 @@ graph TB
 
 > **View Full Architecture:** See [`diagrams/architecture.mmd`](./diagrams/architecture.mmd) for the complete system architecture with all components and data flows.
 
-### Developer Workflow
+### Intelligent Workflow with Spec-First Decision Making
 
 ```mermaid
-graph LR
-    A[Describe Work<br/>to Copilot] --> B[Auto Create<br/>Issue]
-    B --> C[Add to<br/>Project: Todo]
-    C --> D[Start Work]
-    D --> E[Commit Code]
-    E --> F[Status:<br/>In Progress]
-    F --> G[Create PR]
-    G --> H[Review & Merge]
-    H --> I[Status:<br/>Done]
+graph TB
+    A[Describe Work] --> B{AI Analyzes<br/>Complexity}
+    B -->|Simple| C[Create Issue<br/>Directly]
+    B -->|Complex| D[Create Spec<br/>First]
+    D --> E[User Reviews<br/>Spec]
+    E --> F[Break into<br/>Multiple Issues]
+    C --> G[Add to Project:<br/>Todo]
+    F --> G
+    G --> H[Start Work]
+    H --> I[Status:<br/>In Progress]
+    I --> J[Merge PR]
+    J --> K[Status:<br/>Done]
     
     style A fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
-    style B fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
-    style C fill:#FFC107,stroke:#F57F17,stroke-width:2px,color:#000
-    style F fill:#2196F3,stroke:#0D47A1,stroke-width:2px,color:#fff
-    style I fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style B fill:#9C27B0,stroke:#4A148C,stroke-width:3px,color:#fff
+    style D fill:#FF9800,stroke:#E65100,stroke-width:2px,color:#fff
+    style C fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style G fill:#FFC107,stroke:#F57F17,stroke-width:2px,color:#000
+    style I fill:#2196F3,stroke:#0D47A1,stroke-width:2px,color:#fff
+    style K fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
 ```
 
-> **View Full Workflow:** See [`diagrams/workflow.mmd`](./diagrams/workflow.mmd) for the complete development workflow including CI/CD pipeline.
+> **View Full Workflow:** See [`diagrams/workflow.mmd`](./diagrams/workflow.mmd) for the complete development workflow including spec creation and CI/CD pipeline.
 
 **Key Points:**
-- 🤖 **Copilot detects** when you describe work in natural language
-- 📝 **Automatically creates** issues with proper labels and structure
-- 📊 **Auto-adds** to your GitHub Project board
-- 🔄 **Smart status updates** based on commits, PRs, and merges
-- ✅ **Zero manual tracking** - focus on coding, not project management
+- � **AI decides:** Spec first for complex features, direct issues for simple tasks
+- 📝 **Spec creation:** Complex work gets structured planning document
+- � **User review:** Approve specs before implementation begins
+- 🔄 **Smart breakdown:** Approved specs become multiple focused issues
+- 📊 **Auto-tracking:** All issues sync with GitHub Projects
+- ✅ **Zero overhead:** Right process for the right complexity
+
+**Examples:**
+
+**Simple (Direct Issue):**
+```
+You: "Fix the login button on mobile"
+→ Copilot: Creates issue #42 immediately
+→ Added to project board (Todo)
+→ Ready to work!
+```
+
+**Complex (Spec First):**
+```
+You: "Add OAuth2 authentication system"
+→ Copilot: Creates docs/specs/oauth2-auth.md
+→ You: Review and approve the spec
+→ Copilot: Creates 5 focused issues (#43-#47)
+→ All added to project board (Todo)
+→ Team can start on different parts!
+```
 
 ---
 

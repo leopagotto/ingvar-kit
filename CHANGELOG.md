@@ -5,6 +5,71 @@ All notable changes to LEO Workflow Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.0] - 2025-10-19
+
+### 🚀 Major Feature: Intelligent Spec-First Decision Making
+
+Copilot now intelligently decides whether to create a specification first or go directly to issues!
+
+### Added
+
+- **Intelligent Work Analysis**: AI analyzes complexity before creating issues
+- **Automatic Spec Creation**: For complex features, creates specification files in `docs/specs/`
+- **Spec Review Workflow**: Asks user to review specs before breaking down into issues
+- **Decision Tree Logic**: Clear rules for when to create specs vs direct issues
+- **Enhanced Workflow Diagram**: Updated to show spec-first decision flow
+- **Comprehensive Documentation**: Issue #4 resolved with complete guides
+
+### Decision Rules
+
+**Create SPEC First:**
+- New features requiring architecture decisions
+- Significant system changes (multiple components)
+- Features needing design/planning (> 1 week)
+- Work requiring team discussion
+- Features generating multiple issues
+
+**Direct ISSUE:**
+- Bug fixes (clear problem/solution)
+- Documentation updates
+- Small enhancements (< 1 day)
+- Adding tests
+- UI polish/tweaks
+- Single component refactoring
+
+### Workflow Changes
+
+**Complex Feature Example:**
+```
+User: "Add OAuth2 authentication"
+→ Copilot creates docs/specs/oauth2-authentication.md
+→ Asks user to review
+→ After approval, breaks into 5 focused issues
+→ Each issue added to project with Todo status
+```
+
+**Simple Task Example:**
+```
+User: "Fix login button on mobile"
+→ Copilot creates issue directly
+→ Adds to project with Todo status
+→ Ready to work immediately
+```
+
+### Improved
+
+- **Copilot Instructions**: Major enhancement with spec-first decision tree
+- **Workflow Diagram**: Now shows spec creation path vs direct issue path
+- **Documentation**: Updated README with new workflow
+- **Issue Quality**: Specs ensure better planning for complex work
+
+### Technical Details
+
+- Spec files created in `docs/specs/` with structured format
+- Includes: Problem Statement, Solution, Technical Approach, Architecture, Criteria
+- User review required before issue breakdown
+- Multiple focused issues generated from approved specs
+
 ## [2.3.0] - 2025-10-19
 
 ### 🚀 Major Feature: GitHub Projects Integration & Automated Status Management

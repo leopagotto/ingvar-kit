@@ -1,28 +1,41 @@
 ```mermaid
 graph TB
-    START([Developer Starts Work])
-    DESCRIBE[Describe Work to Copilot<br/>"We need to add dark mode"]
+    START([Developer Describes Work])
+    DESCRIBE[Copilot Analyzes Request]
     
-    subgraph "Automatic Issue Creation"
-        DETECT[Copilot Detects Intent]
-        EXTRACT[Extract Priority, Type, Component]
+    subgraph "AI Decision: Spec or Issue?"
+        ANALYZE{Is it a complex<br/>feature/architecture?}
+        SIMPLE[Simple Task/Bug<br/>Quick Fix]
+        COMPLEX[Complex Feature<br/>Needs Design]
+    end
+    
+    subgraph "Spec Creation Path"
+        CREATE_SPEC[Create Spec File<br/>docs/specs/feature-name.md]
+        SPEC_CONTENT[Include: Problem, Solution,<br/>Technical Details, Criteria]
+        ASK_REVIEW[Ask User to Review Spec]
+        USER_REVIEWS[User Reviews & Approves]
+        BREAK_DOWN[Break Down into Issues]
+    end
+    
+    subgraph "Direct Issue Creation"
+        DETECT[Extract Info]
         CREATE[gh issue create --title --body --label]
         ADD_PROJECT[gh project item-add]
         SET_STATUS[Set Status: Todo]
-        CONFIRM[✓ Issue Created & Added to Project]
+        CONFIRM[✓ Issue Created]
     end
     
     subgraph "Development Workflow"
-        START_WORK[Start Working<br/>"Let's work on #42"]
-        BRANCH[git checkout -b feature/issue-42]
-        COMMIT[git commit -m "feat: implement #42"]
-        AUTO_STATUS_IP[Copilot Updates Status<br/>→ In Progress]
-        PUSH[git push origin feature/issue-42]
-        PR[Create Pull Request<br/>"Closes #42"]
+        START_WORK[Start Working]
+        BRANCH[Create Branch]
+        COMMIT[Commit Code]
+        AUTO_STATUS_IP[Status: In Progress]
+        PUSH[Push Changes]
+        PR[Create PR]
         REVIEW[Code Review]
         MERGE[Merge PR]
-        AUTO_STATUS_DONE[Copilot Updates Status<br/>→ Done]
-        CLOSE[Issue Auto-Closes]
+        AUTO_STATUS_DONE[Status: Done]
+        CLOSE[Auto-Close Issue]
     end
     
     subgraph "GitHub Projects Board"
@@ -31,21 +44,25 @@ graph TB
         DONE[✅ Done]
     end
     
-    subgraph "CI/CD Pipeline"
-        TESTS[Run Tests]
-        LINT[Linting]
-        BUILD[Build Check]
-        DEPLOY[Deploy<br/>if main branch]
-    end
-    
     START --> DESCRIBE
-    DESCRIBE --> DETECT
-    DETECT --> EXTRACT
-    EXTRACT --> CREATE
+    DESCRIBE --> ANALYZE
+    
+    ANALYZE -->|Simple: Bug, Task,<br/>Quick Fix| SIMPLE
+    ANALYZE -->|Complex: Feature,<br/>Architecture| COMPLEX
+    
+    SIMPLE --> DETECT
+    DETECT --> CREATE
     CREATE --> ADD_PROJECT
     ADD_PROJECT --> SET_STATUS
     SET_STATUS --> TODO
     SET_STATUS --> CONFIRM
+    
+    COMPLEX --> CREATE_SPEC
+    CREATE_SPEC --> SPEC_CONTENT
+    SPEC_CONTENT --> ASK_REVIEW
+    ASK_REVIEW --> USER_REVIEWS
+    USER_REVIEWS --> BREAK_DOWN
+    BREAK_DOWN --> CREATE
     
     CONFIRM --> START_WORK
     START_WORK --> BRANCH
@@ -54,25 +71,21 @@ graph TB
     AUTO_STATUS_IP --> INPROGRESS
     COMMIT --> PUSH
     PUSH --> PR
-    PR --> TESTS
-    PR --> LINT
-    PR --> BUILD
-    TESTS --> REVIEW
-    LINT --> REVIEW
-    BUILD --> REVIEW
+    PR --> REVIEW
     REVIEW --> MERGE
     MERGE --> AUTO_STATUS_DONE
     AUTO_STATUS_DONE --> DONE
     MERGE --> CLOSE
-    MERGE --> DEPLOY
     
     style START fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style ANALYZE fill:#9C27B0,stroke:#4A148C,stroke-width:3px,color:#fff
+    style CREATE_SPEC fill:#FF9800,stroke:#E65100,stroke-width:2px,color:#fff
+    style ASK_REVIEW fill:#FF9800,stroke:#E65100,stroke-width:2px,color:#fff
     style DETECT fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
     style CREATE fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
-    style AUTO_STATUS_IP fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
-    style AUTO_STATUS_DONE fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style AUTO_STATUS_IP fill:#2196F3,stroke:#0D47A1,stroke-width:2px,color:#fff
+    style AUTO_STATUS_DONE fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
     style TODO fill:#FFC107,stroke:#F57F17,stroke-width:2px,color:#000
     style INPROGRESS fill:#2196F3,stroke:#0D47A1,stroke-width:2px,color:#fff
     style DONE fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
-    style MERGE fill:#9C27B0,stroke:#4A148C,stroke-width:2px,color:#fff
 ```
