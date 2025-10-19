@@ -1,8 +1,7 @@
-````instructions
 ```instructions
 # GitHub Copilot Instructions - LEO Workflow Kit
 
-## 🤖 Automatic Issue Creation (CRITICAL)
+## 🤖 Automatic Issue Creation & Project Management (CRITICAL)
 
 ### When User Describes Work/Tasks/Bugs
 **AUTOMATICALLY create GitHub issues without asking the user to fill out forms manually.**
@@ -21,12 +20,18 @@ When the user describes:
    - Component/area affected
    - Priority (infer from language: "critical", "urgent" = P0/P1, default = P2)
    - Type (bug, feature, enhancement, documentation, etc.)
-3. **Use the run_in_terminal tool** to create the issue:
+3. **Create the issue:**
    ```bash
    gh issue create --title "..." --body "..." --label "bug,p1,component"
    ```
-4. **Construct detailed body** with acceptance criteria and technical details
-5. **Confirm to user** with issue number and link
+4. **Add to GitHub Project (if configured):**
+   ```bash
+   # Get the issue URL from the output above
+   gh project item-add PROJECT_NUMBER --owner OWNER --url ISSUE_URL
+   # Set initial status to "Todo"
+   gh project item-edit --project-id PROJECT_ID --id ITEM_ID --field-id STATUS_FIELD_ID --text "Todo"
+   ```
+5. **Confirm to user** with issue number, link, and project status
 
 ### Example User Requests → Auto Issue Creation
 
@@ -34,50 +39,83 @@ When the user describes:
 
 **Copilot should:**
 ```bash
-# Run leo issue and auto-fill:
-# Type: Bug
-# Title: Login button not working on mobile
-# Component: Frontend/Mobile
-# Priority: P1 (critical user flow)
-# Description: The login button is unresponsive on mobile devices
+gh issue create \
+  --title "Fix login button not working on mobile" \
+  --body "The login button is unresponsive on mobile devices.
+
+**Type:** Bug
+**Priority:** P1 (critical user flow)
+**Component:** Frontend/Mobile
+
+## Acceptance Criteria
+- [ ] Button responds to touch events
+- [ ] Test on iOS and Android devices
+- [ ] Add touch target padding (44x44px minimum)
+- [ ] Verify in production" \
+  --label "bug,p1,frontend,mobile"
 ```
 
 **User says:** "Let's add dark mode support"
 
 **Copilot should:**
 ```bash
-# Run leo issue and auto-fill:
-# Type: Feature
-# Title: Add dark mode support
-# Priority: P2 (enhancement)
-# Description: Implement dark mode theme toggle for the application
+gh issue create \
+  --title "Add dark mode support" \
+  --body "Implement dark mode theme toggle for the application.
+
+**Type:** Feature
+**Priority:** P2 (enhancement)
+**Component:** Frontend/UI
+
+## Acceptance Criteria
+- [ ] Design dark mode theme
+- [ ] Add theme toggle component
+- [ ] Persist user preference
+- [ ] Test across all pages
+- [ ] Ensure WCAG contrast compliance" \
+  --label "feature,p2,frontend,ui,enhancement"
 ```
 
 **User says:** "The search is too slow, we should optimize it"
 
 **Copilot should:**
 ```bash
-# Run leo issue and auto-fill:
-# Type: Enhancement
-# Title: Optimize search performance
-# Component: Backend/Search
-# Priority: P1 (performance issue)
-# Description: Search queries are taking too long, need optimization
+gh issue create \
+  --title "Optimize search performance" \
+  --body "Search queries are taking too long, need optimization.
+
+**Type:** Enhancement
+**Priority:** P1 (performance issue)
+**Component:** Backend/Search
+
+## Acceptance Criteria
+- [ ] Profile current performance bottlenecks
+- [ ] Implement query optimization
+- [ ] Add database indexing
+- [ ] Achieve < 200ms response time
+- [ ] Add performance monitoring" \
+  --label "enhancement,p1,performance,backend,search"
 ```
 
 ### Key Rules for Auto Issue Creation
 ✅ **DO:**
 - Create issues immediately when user describes work
+- Use `gh issue create` command (not `leo issue`)
 - Infer priority, type, and component from context
-- Use smart defaults if info is unclear
-- Confirm issue creation with number and link
+- Include detailed acceptance criteria in body
+- Use appropriate labels (type, priority, component)
+- Add issues to GitHub Project (if configured)
+- Set initial status to "Todo" when adding to project
+- Confirm issue creation with number, link, and project status
 - Reference the issue number in any related code changes
 
 ❌ **DON'T:**
-- Ask user to manually run `leo issue` and fill out forms
-- Create markdown files for tasks in the repo
+- Ask user to manually run commands and fill out forms
+- Create markdown files for tasks in the repo (use GitHub issues!)
 - Skip issue creation for described work
 - Wait for explicit "create an issue" command
+- Use `leo issue` (it's interactive, use `gh issue create` instead)
+- Forget to add issue to project if one is configured
 
 ### GitHub Authentication Required
 Before creating issues, ensure GitHub CLI is authenticated:
@@ -86,6 +124,139 @@ gh auth status
 # If not authenticated:
 gh auth login
 ```
+
+### Project Configuration
+Check if user has a GitHub Project configured:
+```bash
+# List available projects
+gh project list --owner USERNAME
+
+# Add issue to project after creation
+gh project item-add PROJECT_NUMBER --owner OWNER --url ISSUE_URL
+```
+
+## 📊 Automatic Status Updates (CRITICAL)
+
+### Update Issue Status as Work Progresses
+**AUTOMATICALLY update issue status in GitHub Projects based on work indicators.**
+
+### Status Values
+- **Todo**: Issue created, not started (DEFAULT)
+- **In Progress**: Work has begun (commits, branches, user indication)
+- **Done**: Work completed (PR merged, issue closed)
+
+### Status Transition Rules
+
+**When work starts (Todo → In Progress):**
+- User explicitly says: "Let's work on #42" or "Starting #42"
+- First commit referencing issue: `git commit -m "feat: start work on #42"`
+- Branch created for issue: `git checkout -b feature/issue-42`
+
+**Action:**
+```bash
+# Find the project item ID
+gh project item-list PROJECT_NUMBER --owner OWNER --format json | jq -r '.items[] | select(.content.number==ISSUE_NUMBER) | .id'
+
+# Update status to "In Progress" 
+# Note: Use project-specific IDs from `gh project field-list`
+gh api graphql -f query='
+  mutation {
+    updateProjectV2ItemFieldValue(
+      input: {
+        projectId: "PROJECT_ID"
+        itemId: "ITEM_ID"
+        fieldId: "STATUS_FIELD_ID"
+        value: { singleSelectOptionId: "IN_PROGRESS_OPTION_ID" }
+      }
+    ) {
+      projectV2Item {
+        id
+      }
+    }
+  }'
+```
+
+**When work completes (In Progress → Done):**
+- PR merged with "Closes #42"
+- Issue manually closed: `gh issue close 42`
+- User says: "Issue #42 is done" or "Completed #42"
+
+**Action:**
+```bash
+# Update status to "Done"
+gh api graphql -f query='
+  mutation {
+    updateProjectV2ItemFieldValue(
+      input: {
+        projectId: "PROJECT_ID"
+        itemId: "ITEM_ID"
+        fieldId: "STATUS_FIELD_ID"
+        value: { singleSelectOptionId: "DONE_OPTION_ID" }
+      }
+    ) {
+      projectV2Item {
+        id
+      }
+    }
+  }'
+```
+
+### Status Update Examples
+
+**Example 1: User starts work**
+```bash
+# User: "Let's start working on issue #5"
+# Copilot detects intent → Update to "In Progress"
+
+echo "✓ Moving issue #5 to In Progress..."
+# Execute GraphQL mutation to update status
+```
+
+**Example 2: Issue completed**
+```bash
+# After merging PR that closes #5
+# Copilot detects merge → Update to "Done"
+
+echo "✓ Issue #5 completed, moving to Done"
+# Execute GraphQL mutation to update status
+```
+
+### Key Rules for Status Updates
+✅ **DO:**
+- Monitor for work progress indicators (commits, branches, user statements)
+- Update status automatically when state changes
+- Confirm status updates with user ("✓ Issue #42 → In Progress")
+- Keep project board synchronized with actual work state
+- Use GraphQL API for reliable status updates
+
+❌ **DON'T:**
+- Wait for manual status updates
+- Update status without clear work indicators
+- Leave issues in wrong status when closed
+- Forget to update status when work starts
+
+## 📋 GitHub Project View Configuration
+
+### Required Project Fields
+When creating or configuring GitHub Projects, ensure these fields are visible:
+- **Status** (Single select: Todo, In Progress, Done)
+- **Title** (Default field)
+- **Assignees** (Default field)
+- **Labels** (Default field)
+
+### Board View Setup
+```bash
+# Projects should have Board view with columns by Status:
+# - Todo (leftmost)
+# - In Progress (middle)
+# - Done (rightmost)
+```
+
+### Recommended Project Configuration
+1. **Create project:** `gh project create --owner OWNER --title "Project Name"`
+2. **Add Status field** with options: Todo, In Progress, Done
+3. **Add Board view** grouped by Status
+4. **Set default status** to "Todo" for new items
 
 ## Core Principles
 
@@ -826,4 +997,4 @@ Always provide sensible defaults and avoid requiring unnecessary configuration.
 **Remember**: Specifications are FILES. Tasks are GITHUB ISSUES.
 
 ```
-````
+

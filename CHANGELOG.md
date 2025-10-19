@@ -5,6 +5,44 @@ All notable changes to LEO Workflow Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2025-10-19
+
+### 🚀 Major Feature: GitHub Projects Integration & Automated Status Management
+
+This release adds full GitHub Projects integration with automatic status tracking - issues are automatically added to your project board and status updates as work progresses!
+
+### Added
+
+- **Automatic Project Integration**: Issues are automatically added to GitHub Projects when created by Copilot
+- **Intelligent Status Management**: Status automatically updates based on work indicators:
+  - **Todo** (default for new issues)
+  - **In Progress** (when commits/branches reference issue or user starts work)
+  - **Done** (when PR merged or issue closed)
+- **Project View Configuration**: Copilot instructions for setting up project views with Status, Title, Assignees, and Labels columns
+- **Status Transition Detection**: Monitors commits, branches, PRs, and user statements to detect work progress
+- **GraphQL API Integration**: Uses GitHub's GraphQL API for reliable status updates
+- **Comprehensive Project Guide**: Added detailed documentation for GitHub Projects setup and configuration (`docs/guides/github-projects-integration.md`)
+
+### Changed
+
+- **Copilot Instructions**: Major expansion with automatic status update rules and project management workflows
+- **Issue Creation Flow**: Now includes project addition and status setting when project is configured
+- **Template Updates**: Enhanced `lib/copilot-instructions-template.js` with project integration patterns
+
+### Improved
+
+- **Workflow Automation**: Complete automation from issue creation → project addition → status tracking → completion
+- **Project Visibility**: All work visible on project board with real-time status updates
+- **Developer Experience**: No manual status updates needed - Copilot handles it based on your work
+- **Documentation**: Comprehensive guide with examples, troubleshooting, and best practices
+
+### Technical Details
+
+- Uses `gh project item-add` for adding issues to projects
+- Uses GraphQL mutations for status field updates
+- Detects work indicators: commit messages, branch names, PR actions, user statements
+- Supports custom project configurations with configurable field IDs
+
 ## [2.2.0] - 2025-10-19
 
 ### 🚀 Major Feature: Automatic Issue Creation via GitHub Copilot
