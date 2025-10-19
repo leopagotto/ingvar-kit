@@ -43,7 +43,90 @@
 
 ---
 
-## 🚀 Quick Start
+## � Architecture & Workflow
+
+### System Architecture
+
+```mermaid
+graph TB
+    subgraph "LEO Workflow Kit Architecture"
+        CLI[CLI Entry Point<br/>bin/cli.js]
+        
+        subgraph "Core Commands"
+            INIT[leo init<br/>Project Setup]
+            ISSUE[leo issue<br/>Interactive Issue Creator]
+            LABELS[leo labels<br/>Label Management]
+            VSCODE[leo vscode<br/>VS Code Integration]
+        end
+        
+        subgraph "GitHub Copilot Integration"
+            COPILOT_INST[Copilot Instructions<br/>AI Behavior Rules]
+            AUTO_ISSUE[Auto Issue Creation<br/>Detects Work Intent]
+            AUTO_PROJECT[Project Integration<br/>Auto-add to Boards]
+            AUTO_STATUS[Status Management<br/>Todo → In Progress → Done]
+        end
+        
+        subgraph "External Services"
+            GH[GitHub CLI]
+            GHAPI[GitHub API]
+            GHPROJECTS[GitHub Projects v2]
+        end
+    end
+    
+    CLI --> INIT
+    CLI --> ISSUE
+    CLI --> LABELS
+    CLI --> VSCODE
+    
+    INIT --> COPILOT_INST
+    COPILOT_INST --> AUTO_ISSUE
+    AUTO_ISSUE --> AUTO_PROJECT
+    AUTO_PROJECT --> AUTO_STATUS
+    
+    LABELS --> GH
+    GH --> GHAPI
+    GHAPI --> GHPROJECTS
+    
+    style CLI fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#fff
+    style AUTO_ISSUE fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style AUTO_PROJECT fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style AUTO_STATUS fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+```
+
+> **View Full Architecture:** See [`diagrams/architecture.mmd`](./diagrams/architecture.mmd) for the complete system architecture with all components and data flows.
+
+### Developer Workflow
+
+```mermaid
+graph LR
+    A[Describe Work<br/>to Copilot] --> B[Auto Create<br/>Issue]
+    B --> C[Add to<br/>Project: Todo]
+    C --> D[Start Work]
+    D --> E[Commit Code]
+    E --> F[Status:<br/>In Progress]
+    F --> G[Create PR]
+    G --> H[Review & Merge]
+    H --> I[Status:<br/>Done]
+    
+    style A fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style B fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style C fill:#FFC107,stroke:#F57F17,stroke-width:2px,color:#000
+    style F fill:#2196F3,stroke:#0D47A1,stroke-width:2px,color:#fff
+    style I fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+```
+
+> **View Full Workflow:** See [`diagrams/workflow.mmd`](./diagrams/workflow.mmd) for the complete development workflow including CI/CD pipeline.
+
+**Key Points:**
+- 🤖 **Copilot detects** when you describe work in natural language
+- 📝 **Automatically creates** issues with proper labels and structure
+- 📊 **Auto-adds** to your GitHub Project board
+- 🔄 **Smart status updates** based on commits, PRs, and merges
+- ✅ **Zero manual tracking** - focus on coding, not project management
+
+---
+
+## �🚀 Quick Start
 
 Get started in 3 simple steps:
 

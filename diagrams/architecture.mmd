@@ -1,0 +1,84 @@
+```mermaid
+graph TB
+    subgraph "LEO Workflow Kit Architecture"
+        CLI[CLI Entry Point<br/>bin/cli.js]
+        
+        subgraph "Core Commands"
+            INIT[leo init<br/>Project Setup]
+            ISSUE[leo issue<br/>Interactive Issue Creator]
+            LABELS[leo labels<br/>Label Management]
+            VSCODE[leo vscode<br/>VS Code Integration]
+            STATUS[leo status<br/>Workflow Status]
+            HEALTH[leo health<br/>System Health Check]
+        end
+        
+        subgraph "Core Libraries"
+            BANNER[banner.js<br/>Welcome Banner]
+            COPILOT[copilot-instructions-template.js<br/>AI Instructions Generator]
+            CHECKS[utils/checks.js<br/>Prerequisites Validation]
+            FIRSTRUN[utils/first-run.js<br/>First-Time Setup]
+        end
+        
+        subgraph "Templates"
+            ISSUES[Issue Templates<br/>8 Types]
+            WORKFLOWS[GitHub Workflows<br/>CI/CD Templates]
+            DOCS[Documentation<br/>Templates]
+        end
+        
+        subgraph "External Dependencies"
+            GH[GitHub CLI<br/>gh]
+            GHAPI[GitHub API<br/>REST & GraphQL]
+            GHPROJECTS[GitHub Projects v2<br/>Project Boards]
+            NODE[Node.js ≥16<br/>Runtime]
+            NPM[npm Registry<br/>Package Distribution]
+        end
+        
+        subgraph "GitHub Copilot Integration"
+            COPILOT_INST[.github/copilot-instructions.md<br/>AI Behavior Rules]
+            AUTO_ISSUE[Automatic Issue Creation<br/>Detects Work Intent]
+            AUTO_PROJECT[Project Integration<br/>Auto-add to Boards]
+            AUTO_STATUS[Status Management<br/>Todo → In Progress → Done]
+        end
+    end
+    
+    CLI --> INIT
+    CLI --> ISSUE
+    CLI --> LABELS
+    CLI --> VSCODE
+    CLI --> STATUS
+    CLI --> HEALTH
+    
+    INIT --> BANNER
+    INIT --> COPILOT
+    INIT --> CHECKS
+    INIT --> FIRSTRUN
+    INIT --> TEMPLATES
+    
+    VSCODE --> COPILOT
+    LABELS --> GH
+    ISSUE --> GH
+    
+    COPILOT --> COPILOT_INST
+    COPILOT_INST --> AUTO_ISSUE
+    AUTO_ISSUE --> AUTO_PROJECT
+    AUTO_PROJECT --> AUTO_STATUS
+    
+    INIT --> GH
+    GH --> GHAPI
+    GHAPI --> GHPROJECTS
+    
+    TEMPLATES --> ISSUES
+    TEMPLATES --> WORKFLOWS
+    TEMPLATES --> DOCS
+    
+    CLI -.-> NODE
+    NPM -.-> NODE
+    
+    style CLI fill:#4CAF50,stroke:#2E7D32,stroke-width:3px,color:#fff
+    style COPILOT_INST fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style AUTO_ISSUE fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style AUTO_PROJECT fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style AUTO_STATUS fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style GHPROJECTS fill:#1976D2,stroke:#0D47A1,stroke-width:2px,color:#fff
+    style GH fill:#1976D2,stroke:#0D47A1,stroke-width:2px,color:#fff
+```

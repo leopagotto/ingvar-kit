@@ -1,0 +1,78 @@
+```mermaid
+graph TB
+    START([Developer Starts Work])
+    DESCRIBE[Describe Work to Copilot<br/>"We need to add dark mode"]
+    
+    subgraph "Automatic Issue Creation"
+        DETECT[Copilot Detects Intent]
+        EXTRACT[Extract Priority, Type, Component]
+        CREATE[gh issue create --title --body --label]
+        ADD_PROJECT[gh project item-add]
+        SET_STATUS[Set Status: Todo]
+        CONFIRM[✓ Issue Created & Added to Project]
+    end
+    
+    subgraph "Development Workflow"
+        START_WORK[Start Working<br/>"Let's work on #42"]
+        BRANCH[git checkout -b feature/issue-42]
+        COMMIT[git commit -m "feat: implement #42"]
+        AUTO_STATUS_IP[Copilot Updates Status<br/>→ In Progress]
+        PUSH[git push origin feature/issue-42]
+        PR[Create Pull Request<br/>"Closes #42"]
+        REVIEW[Code Review]
+        MERGE[Merge PR]
+        AUTO_STATUS_DONE[Copilot Updates Status<br/>→ Done]
+        CLOSE[Issue Auto-Closes]
+    end
+    
+    subgraph "GitHub Projects Board"
+        TODO[📋 Todo]
+        INPROGRESS[🚧 In Progress]
+        DONE[✅ Done]
+    end
+    
+    subgraph "CI/CD Pipeline"
+        TESTS[Run Tests]
+        LINT[Linting]
+        BUILD[Build Check]
+        DEPLOY[Deploy<br/>if main branch]
+    end
+    
+    START --> DESCRIBE
+    DESCRIBE --> DETECT
+    DETECT --> EXTRACT
+    EXTRACT --> CREATE
+    CREATE --> ADD_PROJECT
+    ADD_PROJECT --> SET_STATUS
+    SET_STATUS --> TODO
+    SET_STATUS --> CONFIRM
+    
+    CONFIRM --> START_WORK
+    START_WORK --> BRANCH
+    BRANCH --> COMMIT
+    COMMIT --> AUTO_STATUS_IP
+    AUTO_STATUS_IP --> INPROGRESS
+    COMMIT --> PUSH
+    PUSH --> PR
+    PR --> TESTS
+    PR --> LINT
+    PR --> BUILD
+    TESTS --> REVIEW
+    LINT --> REVIEW
+    BUILD --> REVIEW
+    REVIEW --> MERGE
+    MERGE --> AUTO_STATUS_DONE
+    AUTO_STATUS_DONE --> DONE
+    MERGE --> CLOSE
+    MERGE --> DEPLOY
+    
+    style START fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style DETECT fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style CREATE fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style AUTO_STATUS_IP fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style AUTO_STATUS_DONE fill:#FF6B6B,stroke:#C92A2A,stroke-width:2px,color:#fff
+    style TODO fill:#FFC107,stroke:#F57F17,stroke-width:2px,color:#000
+    style INPROGRESS fill:#2196F3,stroke:#0D47A1,stroke-width:2px,color:#fff
+    style DONE fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
+    style MERGE fill:#9C27B0,stroke:#4A148C,stroke-width:2px,color:#fff
+```
