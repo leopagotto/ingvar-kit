@@ -1,0 +1,67 @@
+{
+  "name": "ingvar-workflow-kit",
+  "version": "1.0.0",
+  "description": "Ingvar Workflow Kit - AI-powered CLI tool with multi-agent orchestration following Ingka Way of Working. Named after Ingvar Kamprad (IKEA founder), supports 4 AI assistants (Copilot, Cursor, Cline, Codeium), features intelligent task routing, specialized agents (Frontend, Backend, DevOps, Testing, Documentation), spec-first development, and automatic GitHub Projects integration",
+  "main": "dist/index.js",
+  "bin": {
+    "ingvar-workflow": "bin/cli.js",
+    "ingvar": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "echo \"No tests yet\" && exit 0",
+    "postinstall": "node scripts/postinstall.js",
+    "deploy:wiki": "bash scripts/deploy-wiki.sh"
+  },
+  "keywords": [
+    "ingka",
+    "ikea",
+    "ingvar-kamprad",
+    "github",
+    "projects",
+    "workflow",
+    "cli",
+    "templates",
+    "spec-driven",
+    "development",
+    "project-management",
+    "component-first",
+    "best-practices",
+    "seo-optimization",
+    "performance",
+    "frontend",
+    "code-quality",
+    "automation"
+  ],
+  "author": "Ingka Digital",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingka-group/ingvar-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ingka-group/ingvar-kit/issues"
+  },
+  "homepage": "https://github.com/ingka-group/ingvar-kit#readme",
+  "files": [
+    "bin/",
+    "lib/",
+    "templates/",
+    "scripts/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.0.0",
+    "inquirer": "^8.2.5",
+    "ora": "^5.4.1",
+    "execa": "^5.1.1",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {}
+}
