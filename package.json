@@ -1,6 +1,6 @@
 {
   "name": "ingvar-workflow-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ingvar Workflow Kit - AI-powered CLI tool with multi-agent orchestration following Ingka Way of Working. Named after Ingvar Kamprad (IKEA founder), supports 4 AI assistants (Copilot, Cursor, Cline, Codeium), features intelligent task routing, specialized agents (Frontend, Backend, DevOps, Testing, Documentation), spec-first development, and automatic GitHub Projects integration",
   "main": "dist/index.js",
   "bin": {
