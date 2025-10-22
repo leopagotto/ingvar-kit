@@ -1,4 +1,4 @@
-# 🎨 LEO Workflow Kit for UX Designers
+# 🎨 Ingvar Workflow Kit for UX Designers
 ## Voice-Powered Design Workflow with AI
 
 **Target:** UX Designers, Product Designers, Design Leaders  
@@ -673,7 +673,7 @@ Voice: "Color contrast too low here"
 
 ```bash
 # Install
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 
 # Setup voice
 leo voice setup

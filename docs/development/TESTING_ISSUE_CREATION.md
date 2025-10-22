@@ -7,14 +7,14 @@
 ### Setup Verification
 
 - ✅ GitHub CLI authenticated (`leonpagotto`)
-- ✅ Repository: `leonpagotto/leo-kit`
+- ✅ Repository: `leopagotto/ingvar-kit`
 - ✅ Can create issues via `gh issue create`
 - ✅ Issues visible in GitHub
 
 ### Test Issue Created
 
 **Issue #3:** Test: Verify automatic issue creation works
-**URL:** https://github.com/leonpagotto/leo-kit/issues/3
+**URL:** https://github.com/leopagotto/ingvar-kit/issues/3
 **Status:** ✅ Created successfully
 
 ## How Copilot Should Create Issues
@@ -59,9 +59,9 @@ gh issue create \
 **Result:**
 
 ```
-Creating issue in leonpagotto/leo-kit
+Creating issue in leopagotto/ingvar-kit
 
-https://github.com/leonpagotto/leo-kit/issues/4
+https://github.com/leopagotto/ingvar-kit/issues/4
 ```
 
 ## Why `gh issue create` Instead of `leo issue`
@@ -127,7 +127,7 @@ gh issue create \
 
 ```
 ✅ Issue #5 created: Add dark mode support
-🔗 https://github.com/leonpagotto/leo-kit/issues/5
+🔗 https://github.com/leopagotto/ingvar-kit/issues/5
 ```
 
 ## Testing Commands
@@ -202,7 +202,7 @@ gh issue view 3
 ### 3. Check on GitHub:
 
 ```
-https://github.com/leonpagotto/leo-kit/issues
+https://github.com/leopagotto/ingvar-kit/issues
 ```
 
 ## Current Issues in Repository

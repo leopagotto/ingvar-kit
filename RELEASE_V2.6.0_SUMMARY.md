@@ -1,7 +1,7 @@
 # 🎉 v2.6.0 Release Summary
 
 **Release Date:** October 19, 2025
-**Package:** leo-workflow-kit@2.6.0
+**Package:** ingvar-workflow-kit@2.6.0
 **Status:** Ready for Testing & Deployment
 
 ---
@@ -96,7 +96,7 @@ git commit -m "feat(auth): add OAuth2 support (#42)" -m "Implements authenticati
 
 #### Impact
 
-- ✅ Prevents pipeline delays for all LEO kit users
+- ✅ Prevents pipeline delays for all Ingvar Kit users
 - ✅ Saves processing time (no more stuck commits!)
 - ✅ Improves commit history readability
 - ✅ Enforces better Git practices
@@ -237,7 +237,7 @@ npm version 2.6.0
 npm pack
 
 # 3. Test package installation
-npm install -g ./leo-workflow-kit-2.6.0.tgz
+npm install -g ./ingvar-workflow-kit-2.6.0.tgz
 
 # 4. Publish to npm
 npm publish
@@ -246,7 +246,7 @@ npm publish
 gh release create v2.6.0 \
   --title "v2.6.0 - Configuration System & Commit Guidelines" \
   --notes-file RELEASE_NOTES_V2.6.0.md \
-  leo-workflow-kit-2.6.0.tgz
+  ingvar-workflow-kit-2.6.0.tgz
 
 # 6. Update wiki (if needed)
 npm run deploy:wiki

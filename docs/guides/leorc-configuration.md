@@ -1,6 +1,6 @@
 # `.leorc.json` Configuration Guide
 
-The `.leorc.json` file configures LEO Workflow Kit for your project. This file is automatically created by `leo init` and can be manually edited.
+The `.leorc.json` file configures Ingvar Workflow Kit for your project. This file is automatically created by `leo init` and can be manually edited.
 
 ## File Location
 
@@ -722,7 +722,7 @@ cp .github/leo-config-template.json .leorc.json
 **Automatic migration:**
 
 ```bash
-# LEO Kit will automatically migrate on first run
+# Ingvar Kit will automatically migrate on first run
 leo status  # Triggers migration if needed
 ```
 
@@ -854,7 +854,7 @@ RAILWAY_TOKEN=secret123
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "LEO Workflow Kit Configuration",
+  "title": "Ingvar Workflow Kit Configuration",
   "type": "object",
   "properties": {
     "auto-resolve": {

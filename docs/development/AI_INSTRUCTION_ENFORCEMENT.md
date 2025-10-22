@@ -359,7 +359,7 @@ Expected AI Commits:
 
 ## 💡 Best Practices
 
-### For LEO Kit Developers
+### For Ingvar Kit Developers
 
 1. **Always Use Strong Language**
 
@@ -399,7 +399,7 @@ Expected AI Commits:
 3. **Report Non-Compliance**
    - If AI doesn't follow rules
    - Document exact behavior
-   - Share with LEO Kit team
+   - Share with Ingvar Kit team
 
 ---
 

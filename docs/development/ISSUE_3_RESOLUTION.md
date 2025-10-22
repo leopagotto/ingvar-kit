@@ -11,7 +11,7 @@
 
 You correctly observed:
 
-> "I just wanna make sure again that the issues are being created automatically whenever I request something. Since I have the Leo kit installed here, I would expect that my last request that I made on making the automatic initiating that you would create at least an issue on the GitHub. And why didn't that happen?"
+> "I just wanna make sure again that the issues are being created automatically whenever I request something. Since I have the Ingvar Kit installed here, I would expect that my last request that I made on making the automatic initiating that you would create at least an issue on the GitHub. And why didn't that happen?"
 
 **You were 100% right!** When you requested the "automatic initialization feature," I should have immediately created a GitHub issue, but I didn't.
 
@@ -112,7 +112,7 @@ The Copilot instructions had the rules, but they were:
 3. ✅ **Created issue immediately:** Used `gh issue create`
 4. ✅ **Confirmed:** "Created issue #5 - [title]"
 
-**Issue #5:** https://github.com/leonpagotto/leo-kit/issues/5
+**Issue #5:** https://github.com/leopagotto/ingvar-kit/issues/5
 
 ### Closed Test Issue
 
@@ -205,7 +205,7 @@ You describe work in natural language:
 Your requirements:
 
 - ✅ "Issues are being created automatically whenever I request something"
-- ✅ "If the user has LEO kit installed, that will happen"
+- ✅ "If the user has Ingvar Kit installed, that will happen"
 - ✅ "Add those criteria and rules to the templates for VS Code"
 
 **All requirements satisfied!**
@@ -229,7 +229,7 @@ You: "We should add unit tests for the postinstall script"
 Me: "Creating issue for unit tests..."
     [runs gh issue create]
     "✓ Issue #6 created: Add unit tests for postinstall script"
-    "https://github.com/leonpagotto/leo-kit/issues/6"
+    "https://github.com/leopagotto/ingvar-kit/issues/6"
 ```
 
 ---

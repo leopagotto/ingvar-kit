@@ -1,4 +1,4 @@
-# Testing LEO Workflow Kit v2.0 Installation
+# Testing Ingvar Workflow Kit v2.0 Installation
 
 This guide helps you test the new v2.0 features before publishing to npm.
 
@@ -334,8 +334,8 @@ npm version patch
 npm publish
 
 # Major issues - deprecate and rollback
-npm deprecate leo-workflow-kit@2.0.0 "Issue found, use v1.3.0"
-npm unpublish leo-workflow-kit@2.0.0 --force (within 72 hours only)
+npm deprecate ingvar-workflow-kit@2.0.0 "Issue found, use v1.3.0"
+npm unpublish ingvar-workflow-kit@2.0.0 --force (within 72 hours only)
 ```
 
 ---
@@ -352,7 +352,7 @@ cd /path/to/test-project
 leo init
 
 # Unlink when done
-npm unlink -g leo-workflow-kit
+npm unlink -g ingvar-workflow-kit
 ```
 
 ---
@@ -378,7 +378,7 @@ What actually happened
 **Environment**:
 - OS: [macOS/Linux/Windows]
 - Node version: [x.x.x]
-- leo-workflow-kit version: [2.0.0]
+- ingvar-workflow-kit version: [2.0.0]
 - GitHub CLI version: [x.x.x]
 
 **Additional Context**:

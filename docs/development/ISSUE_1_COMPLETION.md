@@ -1,7 +1,7 @@
 # Issue #1 Completion & Wiki Creation Summary
 
 **Date:** October 19, 2025  
-**Issue:** [#1 - Add architecture and workflow diagrams to README](https://github.com/leonpagotto/leo-kit/issues/1)  
+**Issue:** [#1 - Add architecture and workflow diagrams to README](https://github.com/leopagotto/ingvar-kit/issues/1)  
 **Status:** ✅ **CLOSED** (Moved to Done)
 
 ---
@@ -227,7 +227,7 @@
 ### Immediate (You Need To Do)
 
 1. **Enable GitHub Wiki**
-   - Go to: https://github.com/leonpagotto/leo-kit/settings
+   - Go to: https://github.com/leopagotto/ingvar-kit/settings
    - Enable "Wikis" feature
    - Save changes
 

@@ -1,4 +1,4 @@
-# LEO Workflow Kit - Session Summary
+# Ingvar Workflow Kit - Session Summary
 **Date:** October 21, 2025  
 **Session Focus:** Automation Improvements & AI Model Updates
 
@@ -80,7 +80,7 @@
 
 ### Installation
 ```bash
-npm install -g leo-workflow-kit@4.0.3
+npm install -g ingvar-workflow-kit@4.0.3
 leo --version  # 4.0.3
 leo health     # 88/100 (Grade B)
 ```
@@ -128,5 +128,5 @@ All work complete. Repository ready for next development session.
 ---
 
 **Generated:** 2025-10-21  
-**LEO Workflow Kit:** v4.0.3  
+**Ingvar Workflow Kit:** v4.0.3  
 **Status:** ✅ All systems operational

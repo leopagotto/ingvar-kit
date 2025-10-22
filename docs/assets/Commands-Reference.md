@@ -1,4 +1,4 @@
-﻿# 📖 Commands Reference
+# 📖 Commands Reference
 
 > **Complete reference for all Ingvar Workflow Kit commands**
 
@@ -6,33 +6,33 @@
 
 | Command         | Purpose                              | Interactive | Version |
 | --------------- | ------------------------------------ | ----------- | ------- |
-| `Ingvar init`      | Initialize Ingvar in project            | ✅ Yes      | v1.0.0  |
-| `Ingvar agent`     | Manage specialized agents 🎉 NEW     | ✅ Yes      | v4.0.0  |
-| `Ingvar github`    | Configure repository settings 🎉 NEW | ✅ Yes      | v4.0.0  |
-| `Ingvar ai`        | Manage AI assistants                 | ✅ Yes      | v3.0.0  |
-| `Ingvar issue`     | Create issue interactively           | ✅ Yes      | v1.0.0  |
-| `Ingvar labels`    | Configure GitHub labels              | ✅ Yes      | v1.0.0  |
-| `Ingvar vscode`    | Setup VS Code integration            | ✅ Yes      | v1.0.0  |
-| `Ingvar config`    | Manage configuration                 | ✅ Yes      | v2.6.0  |
-| `Ingvar status`    | Show project workflow status         | ❌ No       | v1.0.0  |
-| `Ingvar health`    | System health check                  | ❌ No       | v2.0.0  |
-| `Ingvar welcome`   | Show welcome banner                  | ❌ No       | v1.0.0  |
-| `Ingvar docs`      | Open documentation                   | ❌ No       | v1.0.0  |
-| `Ingvar --version` | Show version                         | ❌ No       | v1.0.0  |
-| `Ingvar --help`    | Show help                            | ❌ No       | v1.0.0  |
+| `leo init`      | Initialize LEO in project            | ✅ Yes      | v1.0.0  |
+| `leo agent`     | Manage specialized agents 🎉 NEW     | ✅ Yes      | v4.0.0  |
+| `leo github`    | Configure repository settings 🎉 NEW | ✅ Yes      | v4.0.0  |
+| `leo ai`        | Manage AI assistants                 | ✅ Yes      | v3.0.0  |
+| `leo issue`     | Create issue interactively           | ✅ Yes      | v1.0.0  |
+| `leo labels`    | Configure GitHub labels              | ✅ Yes      | v1.0.0  |
+| `leo vscode`    | Setup VS Code integration            | ✅ Yes      | v1.0.0  |
+| `leo config`    | Manage configuration                 | ✅ Yes      | v2.6.0  |
+| `leo status`    | Show project workflow status         | ❌ No       | v1.0.0  |
+| `leo health`    | System health check                  | ❌ No       | v2.0.0  |
+| `leo welcome`   | Show welcome banner                  | ❌ No       | v1.0.0  |
+| `leo docs`      | Open documentation                   | ❌ No       | v1.0.0  |
+| `leo --version` | Show version                         | ❌ No       | v1.0.0  |
+| `leo --help`    | Show help                            | ❌ No       | v1.0.0  |
 
 ---
 
 ## 📋 Detailed Command Reference
 
-### `Ingvar init`
+### `leo init`
 
-Initialize Ingvar Workflow in your project.
+Initialize LEO Workflow in your project.
 
 **Usage:**
 
 ```bash
-Ingvar init [options]
+leo init [options]
 ```
 
 **What It Does:**
@@ -52,16 +52,16 @@ Ingvar init [options]
 **Options:**
 
 ```bash
-Ingvar init --skip-labels    # Skip label configuration
-Ingvar init --force          # Overwrite existing files
-Ingvar init --help           # Show help for init command
+leo init --skip-labels    # Skip label configuration
+leo init --force          # Overwrite existing files
+leo init --help           # Show help for init command
 ```
 
 **Example:**
 
 ```bash
 cd my-project
-Ingvar init
+leo init
 ```
 
 **Output Structure:**
@@ -87,24 +87,24 @@ your-project/
 
 ---
 
-### `Ingvar ai` 🎉 NEW in v3.0.0
+### `leo ai` 🎉 NEW in v3.0.0
 
 Manage AI assistant configurations and instruction files.
 
 **Usage:**
 
 ```bash
-Ingvar ai [subcommand] [args...]
+leo ai [subcommand] [args...]
 ```
 
 **Subcommands:**
 
-#### `Ingvar ai list` (alias: `Ingvar ai ls`)
+#### `leo ai list` (alias: `leo ai ls`)
 
 List configured AI assistants with file paths and status.
 
 ```bash
-Ingvar ai list
+leo ai list
 ```
 
 **Example Output:**
@@ -124,14 +124,14 @@ Ingvar ai list
   Primary AI: copilot
 ```
 
-#### `Ingvar ai add <ai-name>`
+#### `leo ai add <ai-name>`
 
 Add a new AI assistant and generate its instruction file.
 
 ```bash
-Ingvar ai add cursor      # Add Cursor (Claude-powered IDE)
-Ingvar ai add cline       # Add Cline (autonomous coding)
-Ingvar ai add codeium     # Add Codeium (free alternative)
+leo ai add cursor      # Add Cursor (Claude-powered IDE)
+leo ai add cline       # Add Cline (autonomous coding)
+leo ai add codeium     # Add Codeium (free alternative)
 ```
 
 **Available AIs:**
@@ -145,7 +145,7 @@ Ingvar ai add codeium     # Add Codeium (free alternative)
 
 1. Validates AI name
 2. Generates ~40KB instruction file
-3. Updates `.Ingvarrc.json` configuration
+3. Updates `.leorc.json` configuration
 4. Sets as primary if it's the first AI
 
 **Example Output:**
@@ -155,13 +155,13 @@ Ingvar ai add codeium     # Add Codeium (free alternative)
   Generated: .cursorrules
 ```
 
-#### `Ingvar ai remove <ai-name>` (alias: `Ingvar ai rm`)
+#### `leo ai remove <ai-name>` (alias: `leo ai rm`)
 
 Remove an AI assistant and delete its instruction file.
 
 ```bash
-Ingvar ai remove cursor
-Ingvar ai rm cursor
+leo ai remove cursor
+leo ai rm cursor
 ```
 
 **What It Does:**
@@ -170,12 +170,12 @@ Ingvar ai rm cursor
 2. Removes from configuration
 3. Updates primary AI if needed
 
-#### `Ingvar ai sync`
+#### `leo ai sync`
 
 Regenerate all AI instruction files for configured assistants.
 
 ```bash
-Ingvar ai sync
+leo ai sync
 ```
 
 **When to Use:**
@@ -199,35 +199,35 @@ Ingvar ai sync
   ✓ Success: 4
 ```
 
-#### `Ingvar ai diff <ai1> <ai2>` (coming soon)
+#### `leo ai diff <ai1> <ai2>` (coming soon)
 
 Compare two AI configurations (planned feature).
 
 ```bash
-Ingvar ai diff copilot cursor
+leo ai diff copilot cursor
 ```
 
 **Examples:**
 
 ```bash
 # List what's configured
-Ingvar ai list
+leo ai list
 
 # Add Cursor for complex refactoring
-Ingvar ai add cursor
+leo ai add cursor
 
 # Add Codeium as free alternative
-Ingvar ai add codeium
+leo ai add codeium
 
 # Update all instruction files
-Ingvar ai sync
+leo ai sync
 
 # Remove an AI you no longer use
-Ingvar ai remove cline
+leo ai remove cline
 ```
 
 **Configuration:**
-AI settings are stored in `.Ingvarrc.json`:
+AI settings are stored in `.leorc.json`:
 
 ```json
 {
@@ -246,32 +246,32 @@ AI settings are stored in `.Ingvarrc.json`:
 
 ---
 
-### `Ingvar agent` 🎉 NEW in v4.0.0
+### `leo agent` 🎉 NEW in v4.0.0
 
 Manage specialized AI agents for multi-agent orchestration.
 
 **Usage:**
 
 ```bash
-Ingvar agent <subcommand> [agent] [options]
+leo agent <subcommand> [agent] [options]
 ```
 
 **Subcommands:**
 
-#### `Ingvar agent list`
+#### `leo agent list`
 
 Show all agents and their current status.
 
 **Usage:**
 
 ```bash
-Ingvar agent list
+leo agent list
 ```
 
 **Output:**
 
 ```
-🎯 Ingvar Multi-Agent System
+🎯 LEO Multi-Agent System
 
 Project Type: fullstack
 
@@ -288,24 +288,24 @@ Project Type: fullstack
 Total: 2 agents enabled
 ```
 
-#### `Ingvar agent enable <agent>`
+#### `leo agent enable <agent>`
 
 Enable a specialized agent.
 
 **Usage:**
 
 ```bash
-Ingvar agent enable frontend
-Ingvar agent enable backend
-Ingvar agent enable devops
-Ingvar agent enable testing
-Ingvar agent enable documentation
+leo agent enable frontend
+leo agent enable backend
+leo agent enable devops
+leo agent enable testing
+leo agent enable documentation
 ```
 
 **Example:**
 
 ```bash
-Ingvar agent enable frontend
+leo agent enable frontend
 # Output:
 # ✔ frontend agent enabled
 # ? Regenerate AI instruction files with new agent? (Y/n)
@@ -315,27 +315,27 @@ Ingvar agent enable frontend
 
 - `--no-sync` - Skip AI file regeneration prompt
 
-#### `Ingvar agent disable <agent>`
+#### `leo agent disable <agent>`
 
 Disable a specialized agent.
 
 **Usage:**
 
 ```bash
-Ingvar agent disable devops
+leo agent disable devops
 ```
 
 **Note:** Cannot disable the Orchestrator agent (core routing layer).
 
-#### `Ingvar agent info <agent>`
+#### `leo agent info <agent>`
 
 Show detailed information about a specific agent.
 
 **Usage:**
 
 ```bash
-Ingvar agent info frontend
-Ingvar agent info orchestrator
+leo agent info frontend
+leo agent info orchestrator
 ```
 
 **Output:**
@@ -361,19 +361,19 @@ Routing Triggers:
   • Files: *.jsx, *.tsx, *.vue, *.css, *.scss
 ```
 
-#### `Ingvar agent sync`
+#### `leo agent sync`
 
 Regenerate AI instruction files with current agent configuration.
 
 **Usage:**
 
 ```bash
-Ingvar agent sync
+leo agent sync
 ```
 
 **When to Use:**
 
-- After manually editing `.Ingvarrc.json`
+- After manually editing `.leorc.json`
 - After enabling/disabling agents (if you skipped auto-sync)
 - After updating Ingvar Workflow Kit version
 
@@ -388,7 +388,7 @@ Ingvar agent sync
 
 **Configuration:**
 
-Agents are configured in `.Ingvarrc.json`:
+Agents are configured in `.leorc.json`:
 
 ```json
 {
@@ -410,26 +410,26 @@ Agents are configured in `.Ingvarrc.json`:
 
 ---
 
-### `Ingvar github` 🎉 NEW in v4.0.0
+### `leo github` 🎉 NEW in v4.0.0
 
-Configure GitHub repository settings with Ingvar recommended best practices.
+Configure GitHub repository settings with LEO recommended best practices.
 
 **Usage:**
 
 ```bash
-Ingvar github <subcommand> [options]
+leo github <subcommand> [options]
 ```
 
 **Subcommands:**
 
-#### `Ingvar github status`
+#### `leo github status`
 
 Show current GitHub repository settings.
 
 **Usage:**
 
 ```bash
-Ingvar github status
+leo github status
 ```
 
 **Output:**
@@ -437,8 +437,8 @@ Ingvar github status
 ```
 📊 GitHub Repository Settings
 
-Repository: Ingvarnpagotto/Ingvar-kit
-URL: https://github.com/Ingvarnpagotto/Ingvar-kit
+Repository: leopagotto/ingvar-kit
+URL: https://github.com/leopagotto/ingvar-kit
 
 ⚙️  Repository Settings:
 
@@ -460,15 +460,15 @@ Merge Settings:
   Allow rebase merge:  ✓ Enabled
 ```
 
-#### `Ingvar github setup`
+#### `leo github setup`
 
 Configure repository with recommended settings.
 
 **Usage:**
 
 ```bash
-Ingvar github setup          # Interactive (asks for confirmation)
-Ingvar github setup --yes    # Non-interactive (applies without asking)
+leo github setup          # Interactive (asks for confirmation)
+leo github setup --yes    # Non-interactive (applies without asking)
 ```
 
 **Recommended Settings:**
@@ -498,7 +498,7 @@ Ingvar github setup --yes    # Non-interactive (applies without asking)
 **Example:**
 
 ```bash
-Ingvar github setup
+leo github setup
 
 # Output:
 # ⚙️  GitHub Repository Settings Setup
@@ -530,14 +530,14 @@ Ingvar github setup
 
 ---
 
-### `Ingvar issue`
+### `leo issue`
 
 Create a GitHub issue interactively.
 
 **Usage:**
 
 ```bash
-Ingvar issue
+leo issue
 ```
 
 **Interactive Flow:**
@@ -580,7 +580,7 @@ Ingvar issue
 **Example:**
 
 ```bash
-Ingvar issue
+leo issue
 # Follow prompts...
 # → Issue #42 created: "Add dark mode support"
 ```
@@ -594,14 +594,14 @@ Ingvar issue
 
 ---
 
-### `Ingvar labels`
+### `leo labels`
 
 Configure GitHub repository labels.
 
 **Usage:**
 
 ```bash
-Ingvar labels [options]
+leo labels [options]
 ```
 
 **What It Does:**
@@ -617,9 +617,9 @@ Ingvar labels [options]
 **Options:**
 
 ```bash
-Ingvar labels --force        # Overwrite existing labels
-Ingvar labels --dry-run      # Preview without creating
-Ingvar labels --help         # Show help
+leo labels --force        # Overwrite existing labels
+leo labels --dry-run      # Preview without creating
+leo labels --help         # Show help
 ```
 
 **Label Categories:**
@@ -661,20 +661,20 @@ Ingvar labels --help         # Show help
 **Example:**
 
 ```bash
-Ingvar labels
+leo labels
 # Creates all 22+ labels with colors and descriptions
 ```
 
 ---
 
-### `Ingvar vscode`
+### `leo vscode`
 
 Setup VS Code integration with Copilot instructions.
 
 **Usage:**
 
 ```bash
-Ingvar vscode
+leo vscode
 ```
 
 **What It Does:**
@@ -697,9 +697,9 @@ Ingvar vscode
 **Example:**
 
 ```bash
-Ingvar vscode
+leo vscode
 # ✓ Created .github/copilot-instructions.md
-# ✓ Copilot will now follow Ingvar workflow
+# ✓ Copilot will now follow LEO workflow
 ```
 
 **Verify:**
@@ -711,14 +711,14 @@ Ingvar vscode
 
 ---
 
-### `Ingvar status`
+### `leo status`
 
 Show current project workflow status.
 
 **Usage:**
 
 ```bash
-Ingvar status
+leo status
 ```
 
 **Displays:**
@@ -728,12 +728,12 @@ Ingvar status
 - Last commit
 - Open issues count
 - GitHub Projects status
-- Ingvar configuration status
+- LEO configuration status
 
 **Example Output:**
 
 ```
-🦁 Ingvar Workflow Status
+🦁 LEO Workflow Status
 
 Project: my-awesome-app
 Branch: main
@@ -745,7 +745,7 @@ GitHub Status:
   ✓ Open Issues: 5
   ✓ Projects: 2 active
 
-Ingvar Configuration:
+LEO Configuration:
   ✓ Documentation structure
   ✓ Issue templates (8)
   ✓ Labels configured (22)
@@ -757,14 +757,14 @@ All systems operational! 🚀
 
 ---
 
-### `Ingvar health`
+### `leo health`
 
 Run system health check.
 
 **Usage:**
 
 ```bash
-Ingvar health
+leo health
 ```
 
 **Checks:**
@@ -775,13 +775,13 @@ Ingvar health
 4. ✅ GitHub CLI (`gh`) installation
 5. ✅ GitHub authentication status
 6. ✅ GitHub CLI scopes (repo, project, workflow)
-7. ✅ Ingvar installation version
+7. ✅ LEO installation version
 8. ✅ Project git repository
 
 **Example Output:**
 
 ```
-🔍 Ingvar Health Check
+🔍 LEO Health Check
 
 System Requirements:
   ✓ Node.js v20.10.0 (✓ ≥16.0.0)
@@ -794,7 +794,7 @@ GitHub:
   ✓ Scopes: repo, project, workflow
   ✓ API access: OK
 
-Ingvar:
+LEO:
   ✓ Version: 2.3.0
   ✓ Installation: global
 
@@ -808,14 +808,14 @@ All checks passed! ✅
 
 ---
 
-### `Ingvar welcome`
+### `leo welcome`
 
-Display Ingvar welcome banner.
+Display LEO welcome banner.
 
 **Usage:**
 
 ```bash
-Ingvar welcome
+leo welcome
 ```
 
 **Shows:**
@@ -827,23 +827,23 @@ Ingvar welcome
 
 ---
 
-### `Ingvar docs`
+### `leo docs`
 
 Open documentation.
 
 **Usage:**
 
 ```bash
-Ingvar docs [topic]
+leo docs [topic]
 ```
 
 **Topics:**
 
 ```bash
-Ingvar docs                  # Open main docs
-Ingvar docs guides           # Open guides folder
-Ingvar docs specs            # Open specs folder
-Ingvar docs readme           # Open README
+leo docs                  # Open main docs
+leo docs guides           # Open guides folder
+leo docs specs            # Open specs folder
+leo docs readme           # Open README
 ```
 
 ---
@@ -854,7 +854,7 @@ Available for all commands:
 
 ```bash
 --help, -h        # Show help for command
---version, -v     # Show Ingvar version
+--version, -v     # Show LEO version
 --verbose         # Verbose output
 --quiet, -q       # Suppress output
 --no-color        # Disable colors
@@ -863,9 +863,9 @@ Available for all commands:
 **Examples:**
 
 ```bash
-Ingvar init --help
-Ingvar status --verbose
-Ingvar labels --quiet
+leo init --help
+leo status --verbose
+leo labels --quiet
 ```
 
 ---
@@ -876,13 +876,13 @@ Some commands can be chained:
 
 ```bash
 # Initialize and configure labels
-Ingvar init && Ingvar labels
+leo init && leo labels
 
 # Health check before status
-Ingvar health && Ingvar status
+leo health && leo status
 
 # Full setup
-Ingvar init && Ingvar labels && Ingvar vscode
+leo init && leo labels && leo vscode
 ```
 
 ---
@@ -893,31 +893,31 @@ Ingvar init && Ingvar labels && Ingvar vscode
 
 ```bash
 cd new-project
-Ingvar init              # Initialize Ingvar
-Ingvar labels            # Configure labels
+leo init              # Initialize LEO
+leo labels            # Configure labels
 # Start coding - Copilot handles the rest!
 ```
 
-### Add Ingvar to Existing Project
+### Add LEO to Existing Project
 
 ```bash
 cd existing-project
-Ingvar init --skip-labels  # Keep existing labels
-Ingvar vscode             # Add Copilot instructions
+leo init --skip-labels  # Keep existing labels
+leo vscode             # Add Copilot instructions
 ```
 
 ### Create Issue Manually
 
 ```bash
-Ingvar issue
+leo issue
 # Follow prompts to create structured issue
 ```
 
 ### Check Everything is OK
 
 ```bash
-Ingvar health    # System check
-Ingvar status    # Project status
+leo health    # System check
+leo status    # Project status
 ```
 
 ---
@@ -935,23 +935,23 @@ gh issue create --title "..." --body "..." --label "bug,p1"
 
 ```bash
 # Add to ~/.bashrc or ~/.zshrc
-alias li="Ingvar init"
-alias ls="Ingvar status"
-alias lh="Ingvar health"
+alias li="leo init"
+alias ls="leo status"
+alias lh="leo health"
 ```
 
 ### 3. CI/CD Usage
 
 ```bash
 # Use npx for one-time setup in CI
-npx Ingvar-workflow-kit init --skip-labels --force
+npx ingvar-workflow-kit init --skip-labels --force
 ```
 
 ### 4. Quick Health Check
 
 ```bash
-Ingvar health | grep "✓"    # Show only passed checks
-Ingvar health | grep "✗"    # Show only failed checks
+leo health | grep "✓"    # Show only passed checks
+leo health | grep "✗"    # Show only failed checks
 ```
 
 ---
@@ -962,10 +962,10 @@ Ingvar health | grep "✗"    # Show only failed checks
 
 ```bash
 # Check if installed
-npm list -g Ingvar-workflow-kit
+npm list -g ingvar-workflow-kit
 
 # Reinstall
-npm install -g Ingvar-workflow-kit
+npm install -g ingvar-workflow-kit
 ```
 
 ### Permission Errors

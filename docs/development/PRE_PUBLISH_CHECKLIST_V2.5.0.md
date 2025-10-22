@@ -1,4 +1,4 @@
-# LEO Workflow Kit v2.5.0 - Pre-Publish Checklist
+# Ingvar Workflow Kit v2.5.0 - Pre-Publish Checklist
 
 **Date**: October 19, 2025
 **Version**: 2.5.0
@@ -96,10 +96,10 @@
 npm pack
 
 # Output should be:
-# leo-workflow-kit-2.5.0.tgz
+# ingvar-workflow-kit-2.5.0.tgz
 
 # Inspect package contents
-tar -tzf leo-workflow-kit-2.5.0.tgz
+tar -tzf ingvar-workflow-kit-2.5.0.tgz
 
 # Verify critical files included:
 # - bin/cli.js
@@ -117,7 +117,7 @@ mkdir -p /tmp/leo-test && cd /tmp/leo-test
 git init
 
 # Test 1: Manual installation
-npm install /path/to/leo-workflow-kit-2.5.0.tgz
+npm install /path/to/ingvar-workflow-kit-2.5.0.tgz
 npx leo init
 # ✅ Should prompt for configuration
 # ✅ Should create all templates
@@ -126,7 +126,7 @@ npx leo init
 # Test 2: Auto-initialization
 cd /tmp && mkdir leo-test-auto && cd leo-test-auto
 git init
-LEO_AUTO_INIT=true npm install /path/to/leo-workflow-kit-2.5.0.tgz
+LEO_AUTO_INIT=true npm install /path/to/ingvar-workflow-kit-2.5.0.tgz
 # ✅ Should auto-initialize without prompts
 # ✅ Should create docs/specs/
 # ✅ Should install templates
@@ -160,7 +160,7 @@ npm whoami
 npm publish --dry-run
 
 # Review output - verify:
-# - package name: leo-workflow-kit
+# - package name: ingvar-workflow-kit
 # - version: 2.5.0
 # - files included are correct
 
@@ -168,13 +168,13 @@ npm publish --dry-run
 npm publish
 
 # 4. Verify on npm
-open https://www.npmjs.com/package/leo-workflow-kit
+open https://www.npmjs.com/package/ingvar-workflow-kit
 ```
 
 ### Post-Publish
 
 - [ ] Verify package on npm website
-- [ ] Test installation from npm: `npm install -g leo-workflow-kit@2.5.0`
+- [ ] Test installation from npm: `npm install -g ingvar-workflow-kit@2.5.0`
 - [ ] Create GitHub release (v2.5.0)
 - [ ] Add release notes from CHANGELOG
 - [ ] Deploy wiki: `npm run deploy:wiki`
@@ -187,7 +187,7 @@ open https://www.npmjs.com/package/leo-workflow-kit
 
 ### GitHub Release
 
-**Title**: LEO Workflow Kit v2.5.0 - Automatic Initialization & Smart Project Types
+**Title**: Ingvar Workflow Kit v2.5.0 - Automatic Initialization & Smart Project Types
 
 **Description**:
 
@@ -232,12 +232,12 @@ open https://www.npmjs.com/package/leo-workflow-kit
 
 **Automatic (Recommended):**
 \`\`\`bash
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 \`\`\`
 
 **Traditional:**
 \`\`\`bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 leo init
 \`\`\`
 

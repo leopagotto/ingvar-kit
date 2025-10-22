@@ -1,6 +1,6 @@
-# LEO Workflow Kit - Diagrams
+# Ingvar Workflow Kit - Diagrams
 
-This directory contains architecture and workflow diagrams for the LEO Workflow Kit.
+This directory contains architecture and workflow diagrams for the Ingvar Workflow Kit.
 
 ## 📊 Available Diagrams
 

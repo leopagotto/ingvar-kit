@@ -1,14 +1,14 @@
 # Ingvar Kit Rebranding Summary
 
 **Date**: October 22, 2025  
-**Project**: Rebranding LEO Kit → Ingvar Kit  
+**Project**: Rebranding Ingvar Kit → Ingvar Kit  
 **Purpose**: Create Ingka-branded version aligned with Ingvar Kamprad's philosophy and Ingka Way of Working
 
 ---
 
 ## 🎯 Overview
 
-This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit**, a GitHub workflow automation toolkit inspired by **Ingvar Kamprad** (IKEA founder) and aligned with **Ingka Digital's** development standards.
+This document summarizes the complete rebranding of **Ingvar Kit** to **Ingvar Kit**, a GitHub workflow automation toolkit inspired by **Ingvar Kamprad** (IKEA founder) and aligned with **Ingka Digital's** development standards.
 
 ---
 
@@ -23,7 +23,7 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 - ✅ Changed tagline: "Made with ❤️ by Leo Pagotto" → "Inspired by Ingvar Kamprad & Ingka Way of Working"
 - ✅ Updated welcome message with Ingka branding
 - ✅ Changed all command references: `leo` → `ingvar`
-- ✅ Updated documentation links: `leonpagotto/leo-kit` → `ingka-group/ingvar-kit`
+- ✅ Updated documentation links: `leopagotto/ingvar-kit` → `ingka-group/ingvar-kit`
 
 **Colors Used**:
 - IKEA Blue: `#0051BA`, `#0058D6`, `#0066FF`
@@ -34,12 +34,12 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 ### 2. **Package Information** (`package.json`)
 
 **Changed**:
-- ✅ Name: `leo-workflow-kit` → `ingvar-workflow-kit`
+- ✅ Name: `ingvar-workflow-kit` → `ingvar-workflow-kit`
 - ✅ Version: `4.0.3` → `1.0.0` (fresh start)
 - ✅ Description: Added "Ingka Way of Working", "Ingvar Kamprad", IKEA references
 - ✅ Keywords: Added `ingka`, `ikea`, `ingvar-kamprad`
 - ✅ Author: "Leo de Souza" → "Ingka Digital"
-- ✅ Repository: `leonpagotto/leo-kit` → `ingka-group/ingvar-kit`
+- ✅ Repository: `leopagotto/ingvar-kit` → `ingka-group/ingvar-kit`
 - ✅ Homepage: Updated to Ingka organization
 - ✅ Bin commands: `leo` → `ingvar`, `leo-workflow` → `ingvar-workflow`
 
@@ -52,7 +52,7 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 - ✅ Description: Added "following Ingka Way of Working"
 - ✅ Init command description: "Initialize LEO workflow" → "Initialize Ingvar workflow"
 - ✅ Health check message: `leo health` → `ingvar health`
-- ✅ Docs URL: `leonpagotto/leo-kit` → `ingka-group/ingvar-kit`
+- ✅ Docs URL: `leopagotto/ingvar-kit` → `ingka-group/ingvar-kit`
 
 ---
 
@@ -133,10 +133,10 @@ Check each command file in `lib/commands/` for:
 
 ```bash
 # Case-sensitive replacements
-LEO Kit → Ingvar Kit
-LEO Workflow Kit → Ingvar Workflow Kit
+Ingvar Kit → Ingvar Kit
+Ingvar Workflow Kit → Ingvar Workflow Kit
 leo-kit → ingvar-kit
-leo-workflow-kit → ingvar-workflow-kit
+ingvar-workflow-kit → ingvar-workflow-kit
 
 # Command replacements
 `leo → `ingvar
@@ -158,7 +158,7 @@ leo health → ingvar health
 leorc-configuration → ingvarrc-configuration
 
 # Repository replacements
-leonpagotto/leo-kit → ingka-group/ingvar-kit
+leopagotto/ingvar-kit → ingka-group/ingvar-kit
 leonpagotto → ingka-group (where appropriate)
 github.com/leonpagotto → github.com/ingka-group
 
@@ -174,7 +174,7 @@ Made with ❤️ by Leo Pagotto → Made with 🪑 by Ingka Digital
 
 ```markdown
 # OLD
-# GitHub Copilot Instructions - LEO Workflow Kit
+# GitHub Copilot Instructions - Ingvar Workflow Kit
 > **Purpose:** Follow LEO's workflow standards
 You are the guardian of LEO standards.
 
@@ -188,7 +188,7 @@ You are the guardian of Ingvar standards.
 
 ```json
 // OLD
-"leo-workflow-kit": "^4.0.3"
+"ingvar-workflow-kit": "^4.0.3"
 
 // NEW  
 "ingvar-workflow-kit": "^1.0.0"
@@ -468,10 +468,10 @@ ingvar init
 
 ## 📞 Support & Resources
 
-**Original LEO Kit**:
-- Repository: https://github.com/leonpagotto/leo-kit
+**Original Ingvar Kit**:
+- Repository: https://github.com/leopagotto/ingvar-kit
 - Author: Leo Pagotto (Leo de Souza)
-- NPM: https://www.npmjs.com/package/leo-workflow-kit
+- NPM: https://www.npmjs.com/package/ingvar-workflow-kit
 
 **New Ingvar Kit**:
 - Repository: https://github.com/ingka-group/ingvar-kit
@@ -483,7 +483,7 @@ ingvar init
 
 ## 🙏 Credits
 
-**Based on**: LEO Workflow Kit by Leo Pagotto  
+**Based on**: Ingvar Workflow Kit by Leo Pagotto  
 **Inspired by**: Ingvar Kamprad (IKEA Founder)  
 **For**: Ingka Digital & the developer community  
 **Philosophy**: Swedish design - Simple, Quality, Efficient  

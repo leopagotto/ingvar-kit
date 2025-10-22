@@ -1,4 +1,4 @@
-# 🦁 LEO Workflow Kit - Self-Hosting Setup Complete
+# 🦁 Ingvar Workflow Kit - Self-Hosting Setup Complete
 
 **Date:** October 19, 2025
 **Status:** ✅ Initialized and Ready
@@ -7,7 +7,7 @@
 
 ## 🎯 What Just Happened
 
-You've successfully initialized LEO Workflow Kit v2.4.0 to manage **its own development**! This means the LEO project now uses LEO to manage itself. 🔄
+You've successfully initialized Ingvar Workflow Kit v2.4.0 to manage **its own development**! This means the LEO project now uses LEO to manage itself. 🔄
 
 ### The Issue You Raised
 
@@ -15,7 +15,7 @@ You correctly observed that when I created the security policy, **I should have 
 
 **Why it didn't happen:**
 
-- LEO was installed globally (`npm install -g leo-workflow-kit@2.4.0`) ✅
+- LEO was installed globally (`npm install -g ingvar-workflow-kit@2.4.0`) ✅
 - BUT: LEO was **not initialized** in this project yet ❌
 - The Copilot instructions exist, but GitHub Copilot (the AI assistant) **doesn't automatically create issues** - it needs explicit direction or workflow integration
 
@@ -79,7 +79,7 @@ graph TB
 
 **Organization:** leonpagotto
 **Project:** #4
-**Repository:** leonpagotto/leo-kit
+**Repository:** leopagotto/ingvar-kit
 
 **GitHub Labels Created (17 new):**
 
@@ -202,7 +202,7 @@ leo health
 gh project view 4 --owner leonpagotto
 
 # List issues
-gh issue list --repo leonpagotto/leo-kit
+gh issue list --repo leopagotto/ingvar-kit
 ```
 
 ---
@@ -301,7 +301,7 @@ Use GitHub Copilot Chat:
 
    ```bash
    gh issue create \
-     --repo leonpagotto/leo-kit \
+     --repo leopagotto/ingvar-kit \
      --title "Add comprehensive security policy" \
      --body "Create SECURITY.md with:
    - Supported versions
@@ -367,7 +367,7 @@ Completed in commit 0183ee5
 ### Current Setup
 
 ```
-Project: leonpagotto/leo-kit
+Project: leopagotto/ingvar-kit
 GitHub Project: #4
 LEO Version: 2.4.0
 Status: ✅ Initialized and ready to use
@@ -456,13 +456,13 @@ leo health
 gh project view 4 --owner leonpagotto
 
 # List issues
-gh issue list --repo leonpagotto/leo-kit
+gh issue list --repo leopagotto/ingvar-kit
 
 # Create issue via CLI
 gh issue create --title "..." --body "..." --label "..." --project "4"
 
 # View labels
-gh label list --repo leonpagotto/leo-kit
+gh label list --repo leopagotto/ingvar-kit
 
 # Check LEO version
 leo --version
@@ -479,7 +479,7 @@ leo --version
 
 **LEO is now self-hosting itself! 🦁**
 
-The LEO Workflow Kit project is now using LEO to manage its own development with:
+The Ingvar Workflow Kit project is now using LEO to manage its own development with:
 
 - Spec-first decision making
 - Automatic issue creation

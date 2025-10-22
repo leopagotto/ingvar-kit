@@ -301,7 +301,7 @@ Acceptance Criteria:
 
 **Enable for your team:**
 
-1. Install/update: `npm install -g leo-workflow-kit@2.2.0`
+1. Install/update: `npm install -g ingvar-workflow-kit@2.2.0`
 2. Authenticate: `gh auth login`
 3. Initialize project: `leo init` (auth check included)
 4. Start describing work to Copilot!
@@ -342,7 +342,7 @@ Acceptance Criteria:
 ### Published to npm ✅
 
 ```
-Package: leo-workflow-kit@2.2.0
+Package: ingvar-workflow-kit@2.2.0
 Size: 47.4 kB (compressed)
 Unpacked: 154.7 kB
 Files: 24
@@ -355,16 +355,16 @@ Status: ✅ Live on npm registry
 Commit: eb65037
 Branch: main
 Status: ✅ Pushed
-Repository: leonpagotto/leo-kit
+Repository: leopagotto/ingvar-kit
 ```
 
 ### Verification ✅
 
 ```bash
-$ npm view leo-workflow-kit version
+$ npm view ingvar-workflow-kit version
 2.2.0 ✅
 
-$ npm install -g leo-workflow-kit@2.2.0
+$ npm install -g ingvar-workflow-kit@2.2.0
 ✅ Installs successfully
 
 $ leo --version
@@ -377,7 +377,7 @@ $ leo --version
 
 ### Immediate (Ready to Use)
 
-✅ Install v2.2.0: `npm install -g leo-workflow-kit@2.2.0`
+✅ Install v2.2.0: `npm install -g ingvar-workflow-kit@2.2.0`
 ✅ Authenticate: `gh auth login`
 ✅ Talk to Copilot about work → issues created automatically!
 
@@ -405,7 +405,7 @@ $ leo --version
 ```
 ✅ Issue #XX created: Optimize postinstall script
    Priority: P2, Type: Enhancement
-   🔗 https://github.com/leonpagotto/leo-kit/issues/XX
+   🔗 https://github.com/leopagotto/ingvar-kit/issues/XX
 ```
 
 ---

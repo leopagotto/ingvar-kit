@@ -1,8 +1,8 @@
 # Security Policy
 
-## 🔒 Security at LEO Workflow Kit
+## 🔒 Security at Ingvar Workflow Kit
 
-We take the security of LEO Workflow Kit seriously. This document outlines our security policies, supported versions, and how to report vulnerabilities.
+We take the security of Ingvar Workflow Kit seriously. This document outlines our security policies, supported versions, and how to report vulnerabilities.
 
 ---
 
@@ -35,15 +35,15 @@ Instead, please report them privately using one of these methods:
 
 #### 1. GitHub Security Advisories (Preferred)
 
-1. Go to https://github.com/leonpagotto/leo-kit/security/advisories
+1. Go to https://github.com/Ingvarnpagotto/Ingvar-kit/security/advisories
 2. Click "Report a vulnerability"
 3. Fill out the form with details
 
 #### 2. Email
 
-Send an email to: **leonpagotto@hotmail.com**
+Send an email to: **Ingvarnpagotto@hotmail.com**
 
-**Subject:** `[SECURITY] LEO Workflow Kit - <Brief Description>`
+**Subject:** `[SECURITY] Ingvar Workflow Kit - <Brief Description>`
 
 **Include:**
 - Description of the vulnerability
@@ -63,7 +63,7 @@ Please provide as much information as possible:
 - Impact: (e.g., code execution, data exposure, denial of service)
 - Severity Assessment: (critical, high, medium, low)
 - Proof of Concept: (code snippet or steps to reproduce)
-- Environment: (OS, Node.js version, leo-workflow-kit version)
+- Environment: (OS, Node.js version, Ingvar-workflow-kit version)
 - Any workarounds or mitigations you've identified
 ```
 
@@ -96,13 +96,13 @@ We are committed to responding promptly:
 **Installation:**
 ```bash
 # Always install from official npm registry
-npm install -g leo-workflow-kit
+npm install -g Ingvar-workflow-kit
 
 # Verify package integrity
-npm audit leo-workflow-kit
+npm audit Ingvar-workflow-kit
 
 # Check installed version
-leo --version
+Ingvar --version
 ```
 
 **Configuration:**
@@ -133,7 +133,7 @@ gh auth status
 **Project Security:**
 ```bash
 # Regularly update dependencies
-npm update -g leo-workflow-kit
+npm update -g Ingvar-workflow-kit
 
 # Check for vulnerabilities
 npm audit
@@ -199,7 +199,7 @@ git secrets --install  # (optional security tool)
 
 **5. Authentication**
 - Delegates to GitHub CLI for authentication
-- No credential storage in LEO
+- No credential storage in Ingvar
 - Token scopes checked before operations
 - Support for SSO and 2FA
 
@@ -218,12 +218,12 @@ We perform regular security reviews:
 ### Low Risk (Informational)
 
 **1. GitHub CLI Dependency**
-- **Risk:** LEO depends on `gh` CLI being installed and authenticated
+- **Risk:** Ingvar depends on `gh` CLI being installed and authenticated
 - **Mitigation:** Clear error messages guide users to authenticate
 - **Impact:** Cannot create issues/projects without authentication
 
 **2. File System Access**
-- **Risk:** LEO creates/modifies files in project directory
+- **Risk:** Ingvar creates/modifies files in project directory
 - **Mitigation:** User consent required, files only in project scope
 - **Impact:** Users should review generated files before committing
 
@@ -264,7 +264,7 @@ After a fix is released:
 
 ## 🏆 Security Hall of Fame
 
-We appreciate security researchers who help keep LEO secure:
+We appreciate security researchers who help keep Ingvar secure:
 
 **Contributors:**
 - *No vulnerabilities reported yet*
@@ -280,7 +280,7 @@ We appreciate security researchers who help keep LEO secure:
 Stay informed about security updates:
 
 1. **Watch the Repository:**
-   - Go to https://github.com/leonpagotto/leo-kit
+   - Go to https://github.com/Ingvarnpagotto/Ingvar-kit
    - Click "Watch" → "Custom" → Check "Security alerts"
 
 2. **GitHub Advisory Database:**
@@ -308,7 +308,7 @@ Stay informed about security updates:
 
 ## 🔍 Security Checklist for Users
 
-Before using LEO Workflow Kit:
+Before using Ingvar Workflow Kit:
 
 - [ ] Install from official npm registry only
 - [ ] Verify package integrity with `npm audit`
@@ -325,11 +325,11 @@ Before using LEO Workflow Kit:
 
 ## 📞 Contact
 
-**Security Team:** leonpagotto@hotmail.com
+**Security Team:** Ingvarnpagotto@hotmail.com
 
 **General Support:**
-- Issues: https://github.com/leonpagotto/leo-kit/issues
-- Discussions: https://github.com/leonpagotto/leo-kit/discussions
+- Issues: https://github.com/Ingvarnpagotto/Ingvar-kit/issues
+- Discussions: https://github.com/Ingvarnpagotto/Ingvar-kit/discussions
 
 **Emergency Contact:**
 For critical security issues requiring immediate attention, email with subject `[URGENT SECURITY]`
@@ -340,7 +340,7 @@ For critical security issues requiring immediate attention, email with subject `
 
 ### Standards
 
-LEO Workflow Kit follows:
+Ingvar Workflow Kit follows:
 - OWASP Top 10 security practices
 - npm security best practices
 - GitHub security guidelines
@@ -348,7 +348,7 @@ LEO Workflow Kit follows:
 
 ### Licenses
 
-- **LEO Workflow Kit:** MIT License
+- **Ingvar Workflow Kit:** MIT License
 - **Dependencies:** All MIT or compatible licenses
 - **No GPL or restrictive licenses**
 
@@ -378,12 +378,12 @@ This security policy is reviewed and updated:
 Verify this security policy is legitimate:
 
 **Official Location:**
-- https://github.com/leonpagotto/leo-kit/security/policy
+- https://github.com/Ingvarnpagotto/Ingvar-kit/security/policy
 
 **Signature:**
-- Maintained by @leonpagotto
-- Official LEO Workflow Kit repository
+- Maintained by @Ingvarnpagotto
+- Official Ingvar Workflow Kit repository
 
 ---
 
-**Thank you for helping keep LEO Workflow Kit secure!** 🦁🔒
+**Thank you for helping keep Ingvar Workflow Kit secure!** 🦁🔒

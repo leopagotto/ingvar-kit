@@ -1,20 +1,20 @@
 # 🎉 v2.5.0 Release Summary
 
 **Release Date:** October 19, 2025
-**Package:** leo-workflow-kit@2.5.0
+**Package:** ingvar-workflow-kit@2.5.0
 **Status:** ✅ Published and Live
 
 ## 📦 Published Locations
 
-- **npm Registry:** https://www.npmjs.com/package/leo-workflow-kit
-- **GitHub Release:** https://github.com/leonpagotto/leo-kit/releases/tag/v2.5.0
-- **Repository:** https://github.com/leonpagotto/leo-kit
+- **npm Registry:** https://www.npmjs.com/package/ingvar-workflow-kit
+- **GitHub Release:** https://github.com/leopagotto/ingvar-kit/releases/tag/v2.5.0
+- **Repository:** https://github.com/leopagotto/ingvar-kit
 
 ## 🚀 Major Features
 
 ### 1. Automatic Initialization
 
-- **One-command setup:** `LEO_AUTO_INIT=true npm install leo-workflow-kit`
+- **One-command setup:** `LEO_AUTO_INIT=true npm install ingvar-workflow-kit`
 - Zero configuration required
 - Perfect for CI/CD pipelines
 - Setup time: < 30 seconds (vs 5 minutes manual)
@@ -85,10 +85,10 @@
 
 ## 🔗 Quick Links
 
-- **Installation Guide:** https://github.com/leonpagotto/leo-kit/wiki/Installation-Guide
-- **Full Changelog:** https://github.com/leonpagotto/leo-kit/blob/main/CHANGELOG.md
-- **Issue Tracker:** https://github.com/leonpagotto/leo-kit/issues
-- **Wiki:** https://github.com/leonpagotto/leo-kit/wiki
+- **Installation Guide:** https://github.com/leopagotto/ingvar-kit/wiki/Installation-Guide
+- **Full Changelog:** https://github.com/leopagotto/ingvar-kit/blob/main/CHANGELOG.md
+- **Issue Tracker:** https://github.com/leopagotto/ingvar-kit/issues
+- **Wiki:** https://github.com/leopagotto/ingvar-kit/wiki
 
 ## 🎯 Next Steps
 
@@ -122,20 +122,20 @@
 ### Automatic (Recommended)
 
 ```bash
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 ```
 
 ### Global Installation
 
 ```bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 leo init
 ```
 
 ### npx (One-Time)
 
 ```bash
-npx leo-workflow-kit init
+npx ingvar-workflow-kit init
 ```
 
 ## 🙏 Acknowledgments

@@ -120,7 +120,7 @@
 ### 1. Automatic Initialization ✅
 
 ```bash
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 ```
 
 - Non-interactive mode for CI/CD

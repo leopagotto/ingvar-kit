@@ -73,7 +73,7 @@ After understanding the distinction, we now have the CORRECT setup:
 
 | Aspect            | `.github/copilot-instructions.md` | `lib/copilot-instructions-template.js` |
 | ----------------- | --------------------------------- | -------------------------------------- |
-| **Audience**      | LEO CLI developers                | LEO Kit users                          |
+| **Audience**      | LEO CLI developers                | Ingvar Kit users                          |
 | **Context**       | Developing the CLI tool           | Any project type                       |
 | **Size**          | 242 lines (focused)               | 1,143 lines (comprehensive)            |
 | **UI Standards**  | ❌ Not needed                     | ✅ Included                            |

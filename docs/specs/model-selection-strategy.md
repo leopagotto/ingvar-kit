@@ -1,4 +1,4 @@
-# Model Selection Strategy - LEO Workflow Kit
+# Model Selection Strategy - Ingvar Workflow Kit
 
 > **Specification Document** > **Feature:** Intelligent Model Selection for Multi-Agent Workflows
 > **Issue:** #40

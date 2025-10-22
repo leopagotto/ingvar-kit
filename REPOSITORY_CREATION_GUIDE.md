@@ -240,7 +240,7 @@ git add CHANGELOG.md
 ```powershell
 git commit -m "feat: initial release of Ingvar Kit v1.0.0
 
-- Rebranded from LEO Kit to Ingvar Kit
+- Rebranded from Ingvar Kit to Ingvar Kit
 - Named after Ingvar Kamprad (IKEA founder)
 - Aligned with Ingka Way of Working
 - IKEA Blue & Yellow branding

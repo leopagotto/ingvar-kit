@@ -8,7 +8,7 @@
 
 ### Multi-AI Assistant Support 🤖
 
-v3.0.0 expands LEO Kit beyond GitHub Copilot to support **4 AI coding assistants**:
+v3.0.0 expands Ingvar Kit beyond GitHub Copilot to support **4 AI coding assistants**:
 
 1. **GitHub Copilot** - Original supported AI (.github/copilot-instructions.md)
 2. **Cursor (Claude)** - Claude-powered IDE with Composer Mode (.cursorrules)
@@ -32,7 +32,7 @@ v3.0.0 expands LEO Kit beyond GitHub Copilot to support **4 AI coding assistants
 
 ```bash
 # Update to v3.0.0
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 
 # Add additional AI assistants (optional)
 cd your-project
@@ -154,7 +154,7 @@ leo ai list
 
 Run `leo ai sync` after:
 
-- Updating LEO Kit to a new version
+- Updating Ingvar Kit to a new version
 - Modifying your project's workflow standards
 - Adding new team members who need consistent AI instructions
 
@@ -237,7 +237,7 @@ Or select during `leo init` when prompted:
 
 ### Can I Use Multiple AIs Together?
 
-**Yes!** LEO Kit generates separate instruction files for each AI:
+**Yes!** Ingvar Kit generates separate instruction files for each AI:
 
 ```
 project/
@@ -321,10 +321,10 @@ v3.0.0 just extends this workflow to more AI assistants.
 
 ## 📚 Additional Resources
 
-- **Full Documentation:** https://github.com/leonpagotto/leo-kit/wiki
+- **Full Documentation:** https://github.com/leopagotto/ingvar-kit/wiki
 - **v3.0.0 Release Notes:** [CHANGELOG.md](../CHANGELOG.md)
 - **Multi-AI Specification:** [docs/specs/multi-ai-support.md](specs/multi-ai-support.md)
-- **Issue #14:** https://github.com/leonpagotto/leo-kit/issues/14
+- **Issue #14:** https://github.com/leopagotto/ingvar-kit/issues/14
 
 ---
 
@@ -332,7 +332,7 @@ v3.0.0 just extends this workflow to more AI assistants.
 
 ### For Package Developers
 
-If you're building on top of LEO Kit:
+If you're building on top of Ingvar Kit:
 
 **Changed:**
 
@@ -354,7 +354,7 @@ If you're building on top of LEO Kit:
 
 ## ✅ Migration Checklist
 
-- [ ] Update to v3.0.0: `npm install -g leo-workflow-kit@latest`
+- [ ] Update to v3.0.0: `npm install -g ingvar-workflow-kit@latest`
 - [ ] Verify existing Copilot instructions still exist: `ls .github/copilot-instructions.md`
 - [ ] Add AI assistants you use: `leo ai add <name>`
 - [ ] Test new commands: `leo ai list`, `leo ai sync`
@@ -365,6 +365,6 @@ If you're building on top of LEO Kit:
 
 ---
 
-**Questions or issues?** Open an issue: https://github.com/leonpagotto/leo-kit/issues
+**Questions or issues?** Open an issue: https://github.com/leopagotto/ingvar-kit/issues
 
 **v3.0.0 Status:** ✅ Phase 1 Complete - All 4 AI assistants supported!

@@ -341,7 +341,7 @@ After updating to v2.2.0:
 
 ```bash
 # Update
-npm update -g leo-workflow-kit
+npm update -g ingvar-workflow-kit
 
 # Try it out
 cd your-project

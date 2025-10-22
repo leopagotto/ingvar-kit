@@ -12,15 +12,15 @@
 
 | Issue                                                   | Title                               | Priority | Status  | Completed  |
 | ------------------------------------------------------- | ----------------------------------- | -------- | ------- | ---------- |
-| [#26](https://github.com/leonpagotto/leo-kit/issues/26) | Create Orchestrator Agent Template  | P0       | ✅ Done | 2025-10-20 |
-| [#32](https://github.com/leonpagotto/leo-kit/issues/32) | Update Multi-Agent Config Schema    | P0       | ✅ Done | 2025-10-20 |
-| [#27](https://github.com/leonpagotto/leo-kit/issues/27) | Create Frontend Agent Template      | P1       | ✅ Done | 2025-10-20 |
-| [#28](https://github.com/leonpagotto/leo-kit/issues/28) | Create Backend Agent Template       | P1       | ✅ Done | 2025-10-20 |
-| [#29](https://github.com/leonpagotto/leo-kit/issues/29) | Create DevOps Agent Template        | P1       | ✅ Done | 2025-10-20 |
-| [#30](https://github.com/leonpagotto/leo-kit/issues/30) | Create Testing Agent Template       | P1       | ✅ Done | 2025-10-20 |
-| [#31](https://github.com/leonpagotto/leo-kit/issues/31) | Create Documentation Agent Template | P1       | ✅ Done | 2025-10-20 |
-| [#33](https://github.com/leonpagotto/leo-kit/issues/33) | Update AI Adapters Multi-Agent      | P1       | ✅ Done | 2025-10-20 |
-| [#34](https://github.com/leonpagotto/leo-kit/issues/34) | Add Agent Selection to Init Command | P1       | ✅ Done | 2025-10-20 |
+| [#26](https://github.com/leopagotto/ingvar-kit/issues/26) | Create Orchestrator Agent Template  | P0       | ✅ Done | 2025-10-20 |
+| [#32](https://github.com/leopagotto/ingvar-kit/issues/32) | Update Multi-Agent Config Schema    | P0       | ✅ Done | 2025-10-20 |
+| [#27](https://github.com/leopagotto/ingvar-kit/issues/27) | Create Frontend Agent Template      | P1       | ✅ Done | 2025-10-20 |
+| [#28](https://github.com/leopagotto/ingvar-kit/issues/28) | Create Backend Agent Template       | P1       | ✅ Done | 2025-10-20 |
+| [#29](https://github.com/leopagotto/ingvar-kit/issues/29) | Create DevOps Agent Template        | P1       | ✅ Done | 2025-10-20 |
+| [#30](https://github.com/leopagotto/ingvar-kit/issues/30) | Create Testing Agent Template       | P1       | ✅ Done | 2025-10-20 |
+| [#31](https://github.com/leopagotto/ingvar-kit/issues/31) | Create Documentation Agent Template | P1       | ✅ Done | 2025-10-20 |
+| [#33](https://github.com/leopagotto/ingvar-kit/issues/33) | Update AI Adapters Multi-Agent      | P1       | ✅ Done | 2025-10-20 |
+| [#34](https://github.com/leopagotto/ingvar-kit/issues/34) | Add Agent Selection to Init Command | P1       | ✅ Done | 2025-10-20 |
 
 ### 🚧 In Progress Issues
 
@@ -46,27 +46,27 @@ All Phase 3 issues completed!
 
 | Issue                                                   | Title                                              | Priority | Estimated | Dependencies |
 | ------------------------------------------------------- | -------------------------------------------------- | -------- | --------- | ------------ |
-| [#33](https://github.com/leonpagotto/leo-kit/issues/33) | Update AI Adapters for Multi-Agent File Generation | P1       | 2 days    | #27-31       |
-| [#34](https://github.com/leonpagotto/leo-kit/issues/34) | Add Agent Selection to leo init Command            | P1       | 2 days    | #32, #33     |
+| [#33](https://github.com/leopagotto/ingvar-kit/issues/33) | Update AI Adapters for Multi-Agent File Generation | P1       | 2 days    | #27-31       |
+| [#34](https://github.com/leopagotto/ingvar-kit/issues/34) | Add Agent Selection to leo init Command            | P1       | 2 days    | #32, #33     |
 
 #### Phase 4: CLI Management (1 issue)
 
 | Issue                                                   | Title                             | Priority | Estimated | Dependencies |
 | ------------------------------------------------------- | --------------------------------- | -------- | --------- | ------------ |
-| [#35](https://github.com/leonpagotto/leo-kit/issues/35) | Implement leo agent Command Suite | P1       | 3 days    | #32, #33     |
+| [#35](https://github.com/leopagotto/ingvar-kit/issues/35) | Implement leo agent Command Suite | P1       | 3 days    | #32, #33     |
 
 #### Phase 5: Documentation & Testing (2 issues)
 
 | Issue                                                   | Title                                     | Priority | Estimated | Dependencies |
 | ------------------------------------------------------- | ----------------------------------------- | -------- | --------- | ------------ |
-| [#36](https://github.com/leonpagotto/leo-kit/issues/36) | Create Multi-Agent System Documentation   | P1       | 2 days    | #27-35       |
-| [#37](https://github.com/leonpagotto/leo-kit/issues/37) | End-to-End Testing for Multi-Agent System | P1       | 2 days    | #27-35       |
+| [#36](https://github.com/leopagotto/ingvar-kit/issues/36) | Create Multi-Agent System Documentation   | P1       | 2 days    | #27-35       |
+| [#37](https://github.com/leopagotto/ingvar-kit/issues/37) | End-to-End Testing for Multi-Agent System | P1       | 2 days    | #27-35       |
 
 #### Phase 6: Release (1 issue)
 
 | Issue                                                   | Title                                             | Priority | Estimated | Dependencies |
 | ------------------------------------------------------- | ------------------------------------------------- | -------- | --------- | ------------ |
-| [#38](https://github.com/leonpagotto/leo-kit/issues/38) | Release v4.0.0 - Multi-Agent Orchestration System | P2       | 1 day     | #26-37       |
+| [#38](https://github.com/leopagotto/ingvar-kit/issues/38) | Release v4.0.0 - Multi-Agent Orchestration System | P2       | 1 day     | #26-37       |
 
 ---
 
@@ -235,8 +235,8 @@ All Phase 3 issues completed!
 
 - **Specification**: [Multi-Agent Orchestration Spec](../specs/multi-agent-orchestration.md)
 - **GitHub Project**: https://github.com/users/leonpagotto/projects/4
-- **Repository**: https://github.com/leonpagotto/leo-kit
-- **Issues**: [#26](https://github.com/leonpagotto/leo-kit/issues/26) - [#38](https://github.com/leonpagotto/leo-kit/issues/38)
+- **Repository**: https://github.com/leopagotto/ingvar-kit
+- **Issues**: [#26](https://github.com/leopagotto/ingvar-kit/issues/26) - [#38](https://github.com/leopagotto/ingvar-kit/issues/38)
 
 ---
 

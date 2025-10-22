@@ -1,4 +1,4 @@
-# LEO Workflow Kit v4.0.0 - Release Summary
+# Ingvar Workflow Kit v4.0.0 - Release Summary
 
 > **Release Date**: 2025-10-20
 > **Major Version**: Multi-Agent Orchestration System
@@ -8,7 +8,7 @@
 
 ## 🎉 Major Announcement
 
-**LEO Workflow Kit v4.0.0** introduces a revolutionary **Multi-Agent Orchestration System** that transforms how AI assistants help you code. Instead of a single generic AI, you now get **specialized domain experts** that automatically route and coordinate based on your task type.
+**Ingvar Workflow Kit v4.0.0** introduces a revolutionary **Multi-Agent Orchestration System** that transforms how AI assistants help you code. Instead of a single generic AI, you now get **specialized domain experts** that automatically route and coordinate based on your task type.
 
 ---
 
@@ -281,7 +281,7 @@ Orchestrator:
 **Step 1**: Update LEO
 
 ```bash
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 ```
 
 **Step 2**: Backup config
@@ -517,7 +517,7 @@ leo agent sync
 
 ## 🙏 Acknowledgments
 
-Thank you to all LEO Workflow Kit users for your feedback and support. The multi-agent system architecture was inspired by real-world usage patterns and developer needs.
+Thank you to all Ingvar Workflow Kit users for your feedback and support. The multi-agent system architecture was inspired by real-world usage patterns and developer needs.
 
 Special thanks to the AI community for advancing the field of AI-assisted development.
 
@@ -529,7 +529,7 @@ Special thanks to the AI community for advancing the field of AI-assisted develo
 
 ```bash
 # Install
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 
 # Initialize project with agent selection
 leo init
@@ -541,7 +541,7 @@ leo init
 
 ```bash
 # Update to v4.0.0
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 
 # Re-initialize to enable agents
 leo init
@@ -556,16 +556,16 @@ leo agent sync
 
 ## 📞 Support
 
-- **Documentation**: [GitHub Wiki](https://github.com/leonpagotto/leo-kit/wiki)
-- **Issues**: [GitHub Issues](https://github.com/leonpagotto/leo-kit/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/leonpagotto/leo-kit/discussions)
+- **Documentation**: [GitHub Wiki](https://github.com/leopagotto/ingvar-kit/wiki)
+- **Issues**: [GitHub Issues](https://github.com/leopagotto/ingvar-kit/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/leopagotto/ingvar-kit/discussions)
 - **Multi-Agent Guide**: [docs/guides/multi-agent-system.md](docs/guides/multi-agent-system.md)
 
 ---
 
 ## 🎉 Conclusion
 
-LEO Workflow Kit v4.0.0 represents a **fundamental transformation** in how AI assistants help you code. By introducing specialized agents with domain expertise and intelligent routing, we're delivering:
+Ingvar Workflow Kit v4.0.0 represents a **fundamental transformation** in how AI assistants help you code. By introducing specialized agents with domain expertise and intelligent routing, we're delivering:
 
 - ✅ **Higher quality** code from domain specialists
 - ✅ **Faster responses** with smaller instruction sets
@@ -583,4 +583,4 @@ LEO Workflow Kit v4.0.0 represents a **fundamental transformation** in how AI as
 **Breaking Changes**: Yes (AI file structure, see migration guide)
 **Backward Compatible**: Mostly (v3.x configs work)
 
-**🎯 Upgrade now**: `npm install -g leo-workflow-kit@latest`
+**🎯 Upgrade now**: `npm install -g ingvar-workflow-kit@latest`

@@ -1,6 +1,6 @@
 # Ingvar Kit - Quick Start Guide
 
-🪑 **Rebranding LEO Kit → Ingvar Kit** 🇸🇪
+🪑 **Rebranding Ingvar Kit → Ingvar Kit** 🇸🇪
 
 **Created**: October 22, 2025  
 **Status**: Core rebranding complete, ready for file updates  
@@ -105,8 +105,8 @@ grep -r "leo" --exclude-dir=node_modules .
 grep -r "leorc" --exclude-dir=node_modules .
 
 # Common replacements needed:
-"LEO Kit" → "Ingvar Kit"
-"LEO Workflow Kit" → "Ingvar Workflow Kit"
+"Ingvar Kit" → "Ingvar Kit"
+"Ingvar Workflow Kit" → "Ingvar Workflow Kit"
 "leo-kit" → "ingvar-kit"
 "`leo " → "`ingvar "
 ".leorc" → ".ingvarrc"
@@ -265,9 +265,9 @@ When ready to publish:
 - New README: `README_INGVAR.md`
 - This quick start: `INGVAR_KIT_QUICKSTART.md`
 
-**Original LEO Kit**:
-- Repo: https://github.com/leonpagotto/leo-kit
-- NPM: https://www.npmjs.com/package/leo-workflow-kit
+**Original Ingvar Kit**:
+- Repo: https://github.com/leopagotto/ingvar-kit
+- NPM: https://www.npmjs.com/package/ingvar-workflow-kit
 
 **New Ingvar Kit** (target):
 - Repo: https://github.com/ingka-group/ingvar-kit

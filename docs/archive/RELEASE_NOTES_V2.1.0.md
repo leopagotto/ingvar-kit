@@ -1,9 +1,9 @@
-# 🎉 LEO Workflow Kit v2.1.0 - Release Notes
+# 🎉 Ingvar Workflow Kit v2.1.0 - Release Notes
 
 **Release Date:** October 19, 2025  
-**Package:** leo-workflow-kit  
-**NPM:** https://www.npmjs.com/package/leo-workflow-kit  
-**GitHub:** https://github.com/leonpagotto/leo-kit
+**Package:** ingvar-workflow-kit  
+**NPM:** https://www.npmjs.com/package/ingvar-workflow-kit  
+**GitHub:** https://github.com/leopagotto/ingvar-kit
 
 ---
 
@@ -20,7 +20,7 @@
 
 ```bash
 # Install globally
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 
 # Verify installation
 leo --version  # Should show 2.1.0
@@ -123,7 +123,7 @@ leo w         # Alias for welcome
 
 ### Example 1: Install and Initialize
 ```bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 cd my-project
 leo init
 ```
@@ -197,7 +197,7 @@ leo welcome
 
 ```bash
 # 1. Update package
-npm update -g leo-workflow-kit
+npm update -g ingvar-workflow-kit
 
 # 2. Verify version
 leo --version  # Should show 2.1.0
@@ -260,9 +260,9 @@ All existing, no new dependencies added:
 
 ## 📚 Documentation
 
-- **README:** https://github.com/leonpagotto/leo-kit#readme
-- **NPM Page:** https://www.npmjs.com/package/leo-workflow-kit
-- **Issues:** https://github.com/leonpagotto/leo-kit/issues
+- **README:** https://github.com/leopagotto/ingvar-kit#readme
+- **NPM Page:** https://www.npmjs.com/package/ingvar-workflow-kit
+- **Issues:** https://github.com/leopagotto/ingvar-kit/issues
 
 ### New Documentation Files
 - `ENHANCEMENTS_V2.0.3.md` - Detailed feature documentation
@@ -297,15 +297,15 @@ Future enhancements being considered:
 
 We'd love to hear from you!
 
-- **Report Issues:** https://github.com/leonpagotto/leo-kit/issues
-- **Discussions:** https://github.com/leonpagotto/leo-kit/discussions
+- **Report Issues:** https://github.com/leopagotto/ingvar-kit/issues
+- **Discussions:** https://github.com/leopagotto/ingvar-kit/discussions
 - **Email:** leonpagotto@hotmail.com
 
 ---
 
 ## 🎉 Thank You!
 
-Thank you for using LEO Workflow Kit! This release represents a significant enhancement in making your development workflow:
+Thank you for using Ingvar Workflow Kit! This release represents a significant enhancement in making your development workflow:
 
 - **Smarter** - Project-aware and context-sensitive
 - **More Integrated** - Deep GitHub automation
@@ -324,10 +324,10 @@ Thank you for using LEO Workflow Kit! This release represents a significant enha
 
 ## 🔗 Quick Links
 
-- 📦 [NPM Package](https://www.npmjs.com/package/leo-workflow-kit)
-- 📚 [Documentation](https://github.com/leonpagotto/leo-kit#readme)
-- 🐛 [Report Issue](https://github.com/leonpagotto/leo-kit/issues/new)
-- ⭐ [Star on GitHub](https://github.com/leonpagotto/leo-kit)
+- 📦 [NPM Package](https://www.npmjs.com/package/ingvar-workflow-kit)
+- 📚 [Documentation](https://github.com/leopagotto/ingvar-kit#readme)
+- 🐛 [Report Issue](https://github.com/leopagotto/ingvar-kit/issues/new)
+- ⭐ [Star on GitHub](https://github.com/leopagotto/ingvar-kit)
 
 ---
 

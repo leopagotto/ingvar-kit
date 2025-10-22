@@ -9,13 +9,13 @@
 
 ## 📋 Overview
 
-This feature enables automatic initialization of LEO Workflow Kit immediately after package installation, eliminating manual setup steps and providing seamless onboarding for new users.
+This feature enables automatic initialization of Ingvar Workflow Kit immediately after package installation, eliminating manual setup steps and providing seamless onboarding for new users.
 
 ### The Problem
 
 **Before this feature:**
 
-1. User installs package: `npm install leo-workflow-kit`
+1. User installs package: `npm install ingvar-workflow-kit`
 2. User must remember to run: `npx leo init`
 3. User answers 5-10 interactive prompts
 4. Configuration can be intimidating for new users
@@ -27,7 +27,7 @@ This feature enables automatic initialization of LEO Workflow Kit immediately af
 
 **With auto-initialization:**
 
-1. User installs with flag: `LEO_AUTO_INIT=true npm install leo-workflow-kit`
+1. User installs with flag: `LEO_AUTO_INIT=true npm install ingvar-workflow-kit`
 2. LEO automatically initializes with sensible defaults
 3. Zero prompts, zero friction
 4. Complete setup in 30 seconds
@@ -172,7 +172,7 @@ if (isNonInteractive) {
 ### Installation Flow
 
 ```
-User runs: LEO_AUTO_INIT=true npm install leo-workflow-kit
+User runs: LEO_AUTO_INIT=true npm install ingvar-workflow-kit
     ↓
 npm installs package
     ↓
@@ -257,7 +257,7 @@ Users can run `npx leo init` again to:
 ```bash
 mkdir my-app && cd my-app
 git init
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 # ✅ Complete setup in 30 seconds
 ```
 
@@ -265,7 +265,7 @@ LEO_AUTO_INIT=true npm install leo-workflow-kit
 
 ```bash
 cd existing-project
-LEO_AUTO_INIT=true npm install leo-workflow-kit --save-dev
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit --save-dev
 git commit -am "chore: initialize LEO Workflow"
 ```
 

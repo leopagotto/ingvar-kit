@@ -3,7 +3,7 @@
 
 ## Problem Identified
 
-User reported that when installing `leo-workflow-kit` via npm, the necessary files (GitHub Copilot instructions, JSON configs, templates) were not being installed automatically. The postinstall script was not setting up the files in the project.
+User reported that when installing `ingvar-workflow-kit` via npm, the necessary files (GitHub Copilot instructions, JSON configs, templates) were not being installed automatically. The postinstall script was not setting up the files in the project.
 
 ### Root Causes
 
@@ -111,7 +111,7 @@ Files: 24 (only essentials)
 
 ### Global Installation
 ```bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 
 # You get:
 - ✅ CLI tool accessible as `leo` command
@@ -126,7 +126,7 @@ leo init  # This installs files
 ### Local Installation
 ```bash
 cd your-project
-npm install leo-workflow-kit
+npm install ingvar-workflow-kit
 
 # Postinstall detects:
 - ✅ You're in a git repo
@@ -195,7 +195,7 @@ npm pack --dry-run
 ### Test 2: Local Installation ✅
 ```bash
 cd /tmp/leo-test && git init
-npm install ./leo-workflow-kit-2.1.1.tgz
+npm install ./ingvar-workflow-kit-2.1.1.tgz
 
 ✅ Postinstall ran
 ✅ Banner displayed
@@ -205,7 +205,7 @@ npm install ./leo-workflow-kit-2.1.1.tgz
 
 ### Test 3: Template Availability ✅
 ```bash
-ls node_modules/leo-workflow-kit/templates/
+ls node_modules/ingvar-workflow-kit/templates/
 
 ✅ github-workflow/issue-templates/ (4 files)
 ✅ github-workflow/workflows/ (3 files)
@@ -226,7 +226,7 @@ ls node_modules/leo-workflow-kit/templates/
 
 ### Before
 ```
-User: npm install -g leo-workflow-kit
+User: npm install -g ingvar-workflow-kit
 System: *Shows banner*
 User: *Confused* "Where are my files?"
 User: *Doesn't know to run `leo init`*
@@ -234,7 +234,7 @@ User: *Doesn't know to run `leo init`*
 
 ### After
 ```
-User: npm install leo-workflow-kit
+User: npm install ingvar-workflow-kit
 System: 
   ✨ Installation Complete!
   
@@ -289,8 +289,8 @@ npm publish
 
 3. **Verify:**
 ```bash
-npm view leo-workflow-kit version  # Should show 2.1.1
-npm view leo-workflow-kit dist.unpackedSize  # Should show ~149KB
+npm view ingvar-workflow-kit version  # Should show 2.1.1
+npm view ingvar-workflow-kit dist.unpackedSize  # Should show ~149KB
 ```
 
 4. **Test in fresh project:**
@@ -298,7 +298,7 @@ npm view leo-workflow-kit dist.unpackedSize  # Should show ~149KB
 mkdir test-install
 cd test-install
 git init
-npm install leo-workflow-kit
+npm install ingvar-workflow-kit
 npx leo init
 ```
 

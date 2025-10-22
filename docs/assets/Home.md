@@ -1,4 +1,4 @@
-﻿# Welcome to the Ingvar Workflow Kit Wiki! 🦁
+# Welcome to the Ingvar Workflow Kit Wiki! 🦁
 
 > **Your comprehensive guide to mastering AI-powered workflow automation with multi-agent orchestration**
 
@@ -8,7 +8,7 @@ Ingvar Workflow Kit is a powerful CLI tool that revolutionizes software developm
 
 - **🎛️ Multi-Agent Orchestration**: Intelligent routing to specialized AI agents (v4.0.0) 🎉 NEW
 - **🤖 Multi-AI Support**: Works with Copilot, Cursor, Cline, and Codeium
-- **🚀 Automatic Initialization**: Zero-config setup with `INGVAR_AUTO_INIT=true`
+- **🚀 Automatic Initialization**: Zero-config setup with `LEO_AUTO_INIT=true`
 - **🎯 Domain Expertise**: 6 specialized agents (Frontend, Backend, DevOps, Testing, Documentation, Orchestrator)
 - **⚙️ GitHub Settings Automation**: Configure repository best practices automatically
 - **🧠 Intelligent Spec-First AI**: Automatically decides when to create specs vs direct issues
@@ -26,8 +26,8 @@ Ingvar Workflow Kit is a powerful CLI tool that revolutionizes software developm
 - 🎯 **Domain Expertise**: Each agent expert in its field (~13-17KB specialized instructions)
 - ⚡ **Enable What You Need**: Configure agents based on your project type
 - 🔄 **Multi-Agent Coordination**: Complex tasks automatically coordinated across agents
-- 🛠️ **New `Ingvar agent` Command**: Manage agents (list, enable, disable, info, sync)
-- ⚙️ **New `Ingvar github` Command**: Configure repository settings with best practices
+- 🛠️ **New `leo agent` Command**: Manage agents (list, enable, disable, info, sync)
+- ⚙️ **New `leo github` Command**: Configure repository settings with best practices
 - ✨ **Backward Compatible**: v3.x configurations continue working
 
 **v3.0.1 Features:**
@@ -40,7 +40,7 @@ Ingvar Workflow Kit is a powerful CLI tool that revolutionizes software developm
 **v3.0.0 Features:**
 
 - 🤖 **Multi-AI Support**: 4 AI assistants (Copilot, Cursor, Cline, Codeium)
-- ⚡ **New `Ingvar ai` Command**: Manage AI assistants (list, add, remove, sync)
+- ⚡ **New `leo ai` Command**: Manage AI assistants (list, add, remove, sync)
 - 🎯 **AI Selection During Init**: Choose your AI tools during setup
 - 📝 **AI-Specific Instructions**: Optimized for each tool's strengths
 - 🔄 **Backward Compatible**: Existing Copilot setups continue working
@@ -52,16 +52,16 @@ Ingvar Workflow Kit is a powerful CLI tool that revolutionizes software developm
 ### Getting Started
 
 - [Installation Guide](./Installation-Guide) - Get up and running in 5 minutes
-- [Quick Start Tutorial](./Quick-Start) - Your first Ingvar project
-- [Configuration](./Configuration) - Customize Ingvar for your workflow
+- [Quick Start Tutorial](./Quick-Start) - Your first LEO project
+- [Configuration](./Configuration) - Customize LEO for your workflow
 
 ### Core Features
 
 - [Multi-Agent Orchestration](./Multi-Agent-System) - Intelligent routing to specialized agents 🎉 NEW v4.0.0
-- [Agent Management](./Agent-Commands) - `Ingvar agent` command reference 🎉 NEW v4.0.0
-- [GitHub Settings Automation](./GitHub-Commands) - `Ingvar github` command reference 🎉 NEW v4.0.0
+- [Agent Management](./Agent-Commands) - `leo agent` command reference 🎉 NEW v4.0.0
+- [GitHub Settings Automation](./GitHub-Commands) - `leo github` command reference 🎉 NEW v4.0.0
 - [Multi-AI Support](./Multi-AI-Support) - Use Copilot, Cursor, Cline, or Codeium
-- [AI Assistant Management](./AI-Commands) - `Ingvar ai` command reference
+- [AI Assistant Management](./AI-Commands) - `leo ai` command reference
 - [Automatic Initialization](./Automatic-Initialization) - Zero-config setup
 - [Smart Project Types](./Smart-Project-Types) - Optimized instructions per project type
 - [Workflow Configuration](./Configuration) - Control auto-resolution & behavior
@@ -87,7 +87,7 @@ Ingvar Workflow Kit is a powerful CLI tool that revolutionizes software developm
 
 ### Contributing
 
-- [Development Guide](./Development-Guide) - Contributing to Ingvar
+- [Development Guide](./Development-Guide) - Contributing to LEO
 - [Release Process](./Release-Process) - How releases are made
 - [Roadmap](./Roadmap) - Future plans and features
 
@@ -99,7 +99,7 @@ Ingvar Workflow Kit is a powerful CLI tool that revolutionizes software developm
 
 ```bash
 # One command - complete setup!
-INGVAR_AUTO_INIT=true npm install Ingvar-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 
 # That's it! Your project now has:
 # ✅ Documentation structure (docs/specs/)
@@ -115,7 +115,7 @@ INGVAR_AUTO_INIT=true npm install Ingvar-workflow-kit
 
 ```bash
 # For teams - disable auto-resolution for review workflow
-Ingvar config set auto-resolve false
+leo config set auto-resolve false
 
 # Now when Copilot creates issues:
 # ✅ Issue #42 created
@@ -124,19 +124,19 @@ Ingvar config set auto-resolve false
 # ✅ Copilot proceeds with implementation
 
 # Check current config
-Ingvar config list
+leo config list
 
 # Re-enable for solo fast-paced work
-Ingvar config set auto-resolve true
+leo config set auto-resolve true
 ```
 
 ### Example 3: Simple Task (Direct Issue)
 
 ```bash
 # Traditional manual setup
-npm install -g Ingvar-workflow-kit
+npm install -g ingvar-workflow-kit
 cd your-project
-Ingvar init
+leo init
 
 # Describe a simple bug fix to Copilot:
 # "Fix the login button not working on mobile"
@@ -178,15 +178,15 @@ Ingvar init
 **Major Features:**
 
 - ✅ **Multi-Agent Orchestration** - Intelligent routing to 6 specialized agents
-- ✅ **New `Ingvar agent` Command** - Manage agents (list, enable, disable, info, sync)
-- ✅ **New `Ingvar github` Command** - Automated repository settings configuration
+- ✅ **New `leo agent` Command** - Manage agents (list, enable, disable, info, sync)
+- ✅ **New `leo github` Command** - Automated repository settings configuration
 - ✅ **Domain Expertise** - Each agent specialized in its field (~13-17KB instructions)
 - ✅ **Flexible Configuration** - Enable only agents you need
 - ✅ **Multi-AI Support** - Copilot, Cursor, Cline, Codeium (v3.0.0)
 - ✅ **Enhanced Status Management** - Critical status update enforcement (v3.0.1)
 - ✅ **Intelligent Spec-First AI** - Auto-decides spec vs direct issue
 - ✅ **GitHub Projects Integration** - Auto-sync with smart status updates
-- ✅ **Zero Configuration** - Auto-init with `INGVAR_AUTO_INIT=true`
+- ✅ **Zero Configuration** - Auto-init with `LEO_AUTO_INIT=true`
 
 **Stats:**
 
@@ -210,7 +210,7 @@ Ingvar init
 
 ### v2.5.0 (Q4 2025) - Planned
 
-- [ ] Auto-create projects during `Ingvar init`
+- [ ] Auto-create projects during `leo init`
 - [ ] Multiple project support
 - [ ] Custom status field names
 - [ ] Milestone integration
@@ -257,7 +257,7 @@ Issues are automatically added to GitHub Projects and kept in sync throughout th
 
 ## 🤝 Community
 
-- **Issues:** [Report bugs or request features](https://github.com/Ingvarnpagotto/Ingvar-kit/issues)
+- **Issues:** [Report bugs or request features](https://github.com/leopagotto/ingvar-kit/issues)
 - **Discussions:** Share ideas and ask questions
 - **Contributing:** [Read our contribution guidelines](./Development-Guide)
 - **License:** MIT (free and open source)
@@ -266,8 +266,8 @@ Issues are automatically added to GitHub Projects and kept in sync throughout th
 
 ## 📖 Documentation
 
-- **README:** [Main documentation](https://github.com/Ingvarnpagotto/Ingvar-kit)
-- **Guides:** [In-depth tutorials](https://github.com/Ingvarnpagotto/Ingvar-kit/tree/main/docs/guides)
+- **README:** [Main documentation](https://github.com/leopagotto/ingvar-kit)
+- **Guides:** [In-depth tutorials](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)
 - **API Reference:** [Command-line reference](./Commands-Reference)
 - **Examples:** Real-world usage patterns
 
@@ -284,13 +284,13 @@ Issues are automatically added to GitHub Projects and kept in sync throughout th
 
 **Last Updated:** October 20, 2025
 **Wiki Version:** 2.0
-**Maintainer:** [@Ingvarnpagotto](https://github.com/Ingvarnpagotto)
+**Maintainer:** [@leonpagotto](https://github.com/leonpagotto)
 
 ---
 
 <div align="center">
 
-**[⬆ Back to Top](#welcome-to-the-Ingvar-workflow-kit-wiki-)**
+**[⬆ Back to Top](#welcome-to-the-ingvar-workflow-kit-wiki-)**
 
 Made with ❤️ by the Ingvar Workflow Kit team
 

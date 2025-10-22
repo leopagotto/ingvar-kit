@@ -604,7 +604,7 @@ Each AI assistant gets agent-specific files:
 ## File Structure
 
 ```
-leo-workflow-kit/
+ingvar-workflow-kit/
 ├── lib/
 │   ├── agents/
 │   │   ├── orchestrator-template.js
@@ -650,7 +650,7 @@ leo-workflow-kit/
 ```bash
 $ leo init
 
-🦁 LEO Workflow Kit - Project Initialization
+🦁 Ingvar Workflow Kit - Project Initialization
 
 ✓ Detected project type: fullstack (React + Express)
 
@@ -1002,7 +1002,7 @@ Summary:
 
 ### External Dependencies
 
-None - This is a self-contained enhancement to existing LEO Kit architecture
+None - This is a self-contained enhancement to existing Ingvar Kit architecture
 
 ---
 
@@ -1039,7 +1039,7 @@ None - This is a self-contained enhancement to existing LEO Kit architecture
 
 ```bash
 # Update to v4.0.0
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 
 # Re-run init to configure agents
 cd your-project
@@ -1089,7 +1089,7 @@ leo agent sync
 ### Migration Checklist
 
 - [ ] Backup existing AI instruction files
-- [ ] Update LEO Kit to v4.0.0
+- [ ] Update Ingvar Kit to v4.0.0
 - [ ] Choose migration strategy (full, legacy, or gradual)
 - [ ] Run `leo init --migrate` or manually configure agents
 - [ ] Test agent routing with sample tasks
@@ -1177,7 +1177,7 @@ leo agent sync
 
 ## Conclusion
 
-The **Multi-Agent Orchestration System** transforms LEO Workflow Kit from a monolithic AI instruction platform into a **distributed, specialized agent architecture** that provides:
+The **Multi-Agent Orchestration System** transforms Ingvar Workflow Kit from a monolithic AI instruction platform into a **distributed, specialized agent architecture** that provides:
 
 - **Better Focus**: Each agent is an expert in their domain
 - **Shorter Instructions**: 300-400 lines per agent vs 1000+ monolithic

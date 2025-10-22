@@ -1,7 +1,7 @@
 ````markdown
 # Changelog
 
-All notable changes to LEO Workflow Kit will be documented in this file.
+All notable changes to Ingvar Workflow Kit will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -344,7 +344,7 @@ Each agent activates based on:
 #### Step 1: Update LEO
 
 ```bash
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 ```
 
 #### Step 2: Backup Existing Config
@@ -513,7 +513,7 @@ No action required! This is a bug fix and enhancement release.
 
 ```bash
 # Update to latest version
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 
 # Regenerate AI instruction files (optional, recommended)
 cd your-project
@@ -594,7 +594,7 @@ leo ai sync
 
 ### 🎉 Major Release: Multi-AI Assistant Support
 
-LEO Workflow Kit now supports **4 AI coding assistants** beyond GitHub Copilot! This major release enables teams to use their preferred AI tools while maintaining consistent LEO workflow standards.
+Ingvar Workflow Kit now supports **4 AI coding assistants** beyond GitHub Copilot! This major release enables teams to use their preferred AI tools while maintaining consistent LEO workflow standards.
 
 ### Added
 
@@ -792,7 +792,7 @@ See [Migration Guide](docs/MIGRATION_V3.md) for detailed instructions.
 - **Auto-init on install**: Set `LEO_AUTO_INIT=true` to automatically initialize projects on install
 - **Non-interactive mode**: `leo init --non-interactive` for CI/CD and automated setups
 - **Smart detection**: Automatically detects if in git repo and not already initialized
-- **Zero-configuration**: Works with `npm install leo-workflow-kit` - no manual steps needed
+- **Zero-configuration**: Works with `npm install ingvar-workflow-kit` - no manual steps needed
 
 #### Smart Project-Type Based Copilot Instructions (Foundation)
 
@@ -868,7 +868,7 @@ No action required! However, to take advantage of new features:
 # In your project or CI/CD
 
 export LEO_AUTO_INIT=true
-npm install leo-workflow-kit
+npm install ingvar-workflow-kit
 \`\`\`
 
 **Or in package.json:**
@@ -1070,7 +1070,7 @@ No more interrupting your flow to fill out forms!
 
 ### Changed
 
-- **Brand Refresh**: Updated banner from "LEO WORKFLOW KIT" to "LEO-KIT" for cleaner, more memorable branding
+- **Brand Refresh**: Updated banner from "Ingvar Workflow Kit" to "LEO-KIT" for cleaner, more memorable branding
 - **Visual Enhancement**: Redesigned ASCII art banner with bold block letters for outstanding visual appeal
 - **Compact Design**: Simplified compact banner for better readability on smaller terminals
 
@@ -1085,7 +1085,7 @@ No more interrupting your flow to fill out forms!
 
 ### 🎉 Major Release: Development Best Practices & Enhanced Project Management
 
-This major release transforms LEO Workflow Kit from a simple setup tool into a comprehensive development best practices platform.
+This major release transforms Ingvar Workflow Kit from a simple setup tool into a comprehensive development best practices platform.
 
 ### Added
 
@@ -1167,7 +1167,7 @@ This major release transforms LEO Workflow Kit from a simple setup tool into a c
 
 ### Added
 
-- Initial release of LEO Workflow Kit
+- Initial release of Ingvar Workflow Kit
 - Core CLI framework with 4 main commands
 - 8 professional issue templates
 - 22+ GitHub labels configuration
@@ -1199,7 +1199,7 @@ If you're upgrading from version 1.x:
 
 ```bash
 # Update to latest version
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 
 # Re-run init to update Copilot instructions (optional)
 cd your-project
@@ -1214,6 +1214,6 @@ Your existing setup will remain intact, and new best practices will be available
 
 For issues, questions, or suggestions:
 
-- GitHub Issues: https://github.com/leonpagotto/leo-kit/issues
-- Documentation: https://github.com/leonpagotto/leo-kit#readme
+- GitHub Issues: https://github.com/leopagotto/ingvar-kit/issues
+- Documentation: https://github.com/leopagotto/ingvar-kit#readme
 ````

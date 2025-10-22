@@ -8,7 +8,7 @@
 
 ## Test Overview
 
-This document covers end-to-end testing of the Multi-Agent Orchestration System introduced in LEO Workflow Kit v4.0.0.
+This document covers end-to-end testing of the Multi-Agent Orchestration System introduced in Ingvar Workflow Kit v4.0.0.
 
 ### Test Scope
 
@@ -28,7 +28,7 @@ This document covers end-to-end testing of the Multi-Agent Orchestration System 
 - **npm**: 10.9.2
 - **OS**: macOS
 - **GitHub CLI**: Installed and authenticated
-- **Test Repository**: `/Users/leo.de.souza1/leo-workflow-kit`
+- **Test Repository**: `/Users/leo.de.souza1/ingvar-workflow-kit`
 
 ---
 
@@ -67,7 +67,7 @@ This document covers end-to-end testing of the Multi-Agent Orchestration System 
 
 **Steps:**
 
-1. Run `leo agent list` on LEO Kit project
+1. Run `leo agent list` on Ingvar Kit project
 2. Verify orchestrator shows as "ENABLED"
 3. Verify other agents show correct status
 4. Check for proper formatting and colors

@@ -181,7 +181,7 @@ gh api graphql -f query='
 ### 1. Update to v2.3.0
 
 ```bash
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 ```
 
 ### 2. Check Your Projects
@@ -290,7 +290,7 @@ This release completes the core automation loop:
 
 ## 📞 Support
 
-- **GitHub Issues:** https://github.com/leonpagotto/leo-kit/issues
+- **GitHub Issues:** https://github.com/leopagotto/ingvar-kit/issues
 - **Documentation:** `docs/` directory
 - **Examples:** `docs/guides/github-projects-integration.md`
 
@@ -298,4 +298,4 @@ This release completes the core automation loop:
 
 **Happy Automating! 🚀**
 
-The LEO Workflow Kit Team
+The Ingvar Workflow Kit Team

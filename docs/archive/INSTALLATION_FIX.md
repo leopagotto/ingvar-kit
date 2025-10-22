@@ -93,12 +93,12 @@ leo --help
 
 ### Installation (First Time)
 ```bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 ```
 **Output:**
 ```
 ╔═══════════════════════════════════════════════════════════════╗
-║              🦁  LEO Workflow Kit Installed!  🦁              ║
+║              🦁  Ingvar Workflow Kit Installed!  🦁              ║
 ║   GitHub Workflow Automation Toolkit - Version 2.0.3         ║
 ╚═══════════════════════════════════════════════════════════════╝
 
@@ -165,4 +165,4 @@ leo welcome
 
 ## Version
 
-This fix is included in version **2.0.3** of LEO Workflow Kit.
+This fix is included in version **2.0.3** of Ingvar Workflow Kit.

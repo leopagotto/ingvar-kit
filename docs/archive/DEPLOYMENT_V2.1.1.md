@@ -44,7 +44,7 @@
 ```bash
 $ npm publish
 
-+ leo-workflow-kit@2.1.1
++ ingvar-workflow-kit@2.1.1
 ```
 
 **Package Details:**
@@ -57,13 +57,13 @@ $ npm publish
 
 #### Test 1: Version Check ✅
 ```bash
-$ npm view leo-workflow-kit version
+$ npm view ingvar-workflow-kit version
 2.1.1
 ```
 
 #### Test 2: Package Size ✅
 ```bash
-$ npm view leo-workflow-kit dist.unpackedSize
+$ npm view ingvar-workflow-kit dist.unpackedSize
 149327  # ~149 KB (was 314 KB before)
 ```
 
@@ -71,7 +71,7 @@ $ npm view leo-workflow-kit dist.unpackedSize
 ```bash
 $ mkdir test-npm-install && cd test-npm-install
 $ git init
-$ npm install leo-workflow-kit
+$ npm install ingvar-workflow-kit
 
 ✅ Installed successfully
 ✅ 69 packages added
@@ -80,7 +80,7 @@ $ npm install leo-workflow-kit
 
 #### Test 4: Templates Included ✅
 ```bash
-$ ls node_modules/leo-workflow-kit/templates/github-workflow/
+$ ls node_modules/ingvar-workflow-kit/templates/github-workflow/
 
 ✅ issue-templates/ (4 templates)
 ✅ workflows/ (3 workflows)
@@ -98,7 +98,7 @@ $ npx leo --version
 ### During `npm install`:
 The package includes all templates in `node_modules/`:
 ```
-node_modules/leo-workflow-kit/
+node_modules/ingvar-workflow-kit/
   ├── bin/cli.js                    ✅
   ├── lib/                          ✅
   │   ├── commands/                 ✅
@@ -133,7 +133,7 @@ your-project/
 ### Global Installation
 ```bash
 # User runs:
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 
 # They get:
 ✅ CLI command available globally: `leo`
@@ -149,7 +149,7 @@ leo init  # ← Copies files from global package to project
 ```bash
 # User runs:
 cd my-project
-npm install leo-workflow-kit
+npm install ingvar-workflow-kit
 
 # Postinstall detects and suggests:
 🎯 Quick Setup Available!
@@ -180,7 +180,7 @@ npx leo init
 
 ### GitHub Repository ✅
 ```
-Repository: leonpagotto/leo-kit
+Repository: leopagotto/ingvar-kit
 Branch: main
 Commit: 1371a03
 Message: "fix: ensure templates are included in npm package..."
@@ -189,18 +189,18 @@ Status: Pushed ✅
 
 ### npm Registry ✅
 ```
-Package: leo-workflow-kit
+Package: ingvar-workflow-kit
 Version: 2.1.1
 Published: ✅
 Registry: https://registry.npmjs.org/
-Tarball: leo-workflow-kit-2.1.1.tgz
+Tarball: ingvar-workflow-kit-2.1.1.tgz
 ```
 
 ## User Experience Verification
 
 ### Scenario 1: Global Install → Use in Project ✅
 ```bash
-$ npm install -g leo-workflow-kit
+$ npm install -g ingvar-workflow-kit
 # Banner shows, explains next steps
 
 $ cd my-project
@@ -211,7 +211,7 @@ $ leo init
 ### Scenario 2: Local Install in Git Repo ✅
 ```bash
 $ cd my-project
-$ npm install leo-workflow-kit
+$ npm install ingvar-workflow-kit
 # Postinstall suggests: npx leo init
 
 $ npx leo init
@@ -220,7 +220,7 @@ $ npx leo init
 
 ### Scenario 3: Check What's Available ✅
 ```bash
-$ npm view leo-workflow-kit
+$ npm view ingvar-workflow-kit
 # Shows version 2.1.1
 # Shows package size: 45.6 KB
 # All metadata correct ✅
@@ -239,13 +239,13 @@ Users can now install the package with confidence:
 
 ```bash
 # Option 1: Global install
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 cd your-project
 leo init
 
 # Option 2: Local install  
 cd your-project
-npm install leo-workflow-kit
+npm install ingvar-workflow-kit
 npx leo init
 
 # Both work perfectly! ✅

@@ -9,7 +9,7 @@
 
 ## 🎯 Executive Summary
 
-Expand LEO Workflow Kit beyond GitHub Copilot to support multiple AI coding assistants, enabling developers to use LEO's workflow standards with their preferred AI tools (Cursor, AWS CodeWhisperer, Codeium, etc.).
+Expand Ingvar Workflow Kit beyond GitHub Copilot to support multiple AI coding assistants, enabling developers to use LEO's workflow standards with their preferred AI tools (Cursor, AWS CodeWhisperer, Codeium, etc.).
 
 ---
 
@@ -17,7 +17,7 @@ Expand LEO Workflow Kit beyond GitHub Copilot to support multiple AI coding assi
 
 ### Current Limitations
 
-1. **Single AI Lock-In**: LEO Kit only supports GitHub Copilot
+1. **Single AI Lock-In**: Ingvar Kit only supports GitHub Copilot
 2. **Market Reality**: Developers use various AI assistants:
    - Cursor (Claude-powered) - Very popular
    - AWS CodeWhisperer - Enterprise teams
@@ -30,7 +30,7 @@ Expand LEO Workflow Kit beyond GitHub Copilot to support multiple AI coding assi
 
 ### User Impact
 
-- **Developers** can't use LEO Kit if they use non-Copilot AIs
+- **Developers** can't use Ingvar Kit if they use non-Copilot AIs
 - **Teams** with mixed AI preferences can't standardize on LEO
 - **Enterprise** customers may require specific AI vendors (AWS, Google)
 
@@ -168,7 +168,7 @@ class AIAdapter {
 ```bash
 $ leo init
 
-🦁 LEO Workflow Kit - Initialization
+🦁 Ingvar Workflow Kit - Initialization
 
 ✓ Project detected: Next.js (TypeScript)
 ✓ Git repository found

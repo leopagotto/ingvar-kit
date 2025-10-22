@@ -1,7 +1,7 @@
 # 🐛 Bug Report: Copilot Instructions File Not Generated During `leo init`
 
 **Date:** October 20, 2025
-**LEO Kit Version:** 3.0.2
+**Ingvar Kit Version:** 3.0.2
 **Reporter:** Leo de Souza (leonpagotto)
 
 ---
@@ -279,7 +279,7 @@ This will generate the missing `.github/copilot-instructions.md` file.
 - Git version: 2.39.5
 - Node.js version: 24.5.0
 - OS: macOS
-- Installation method: Global (`npm install -g leo-workflow-kit`)
+- Installation method: Global (`npm install -g ingvar-workflow-kit`)
 
 ---
 
@@ -291,4 +291,4 @@ This will generate the missing `.github/copilot-instructions.md` file.
 
 ---
 
-**Thank you for building LEO Kit! This is a minor bug but worth fixing for the best user experience. 🦁**
+**Thank you for building Ingvar Kit! This is a minor bug but worth fixing for the best user experience. 🦁**

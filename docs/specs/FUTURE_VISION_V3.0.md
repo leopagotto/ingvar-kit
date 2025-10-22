@@ -1,4 +1,4 @@
-# 🚀 LEO Workflow Kit - Next Evolution Proposal
+# 🚀 Ingvar Workflow Kit - Next Evolution Proposal
 ## Making Developers' Lives Significantly Better
 
 **Current Version:** 2.1.0  
@@ -9,7 +9,7 @@
 
 ## 🎯 Vision
 
-Transform LEO Workflow Kit from a **setup tool** into a **daily companion** that developers use throughout their entire workflow - from coding to deployment.
+Transform Ingvar Workflow Kit from a **setup tool** into a **daily companion** that developers use throughout their entire workflow - from coding to deployment.
 
 ---
 
@@ -23,7 +23,7 @@ Transform LEO Workflow Kit from a **setup tool** into a **daily companion** that
 - Repetitive git commands and workflows
 
 **Our Solution:**
-Make LEO Workflow Kit the **single command center** for all development workflow needs.
+Make Ingvar Workflow Kit the **single command center** for all development workflow needs.
 
 ---
 

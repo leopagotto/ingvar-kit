@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/leo_kit_logo.png" alt="LEO Kit Logo" width="600" />
+<img src="docs/assets/leo_kit_logo.png" alt="Ingvar Kit Logo" width="600" />
 
 <h3 style="color: #FF9933; font-weight: 600;">
   <span style="color: #FF9933;">GitHub Workflow Automation with Multi-Agent AI Orchestration</span>
@@ -8,14 +8,14 @@
 
 <p><strong>Transform your development workflow with intelligent task routing, spec-first development, and automated GitHub Projects integration—all from your terminal.</strong></p>
 
-[![npm version](https://img.shields.io/npm/v/leo-workflow-kit.svg?style=flat-square&color=blue&logo=npm)](https://www.npmjs.com/package/leo-workflow-kit)
+[![npm version](https://img.shields.io/npm/v/ingvar-workflow-kit.svg?style=flat-square&color=blue&logo=npm)](https://www.npmjs.com/package/ingvar-workflow-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-16%2B-green?style=flat-square&logo=node.js)](https://nodejs.org)
-[![GitHub Stars](https://img.shields.io/github/stars/leonpagotto/leo-kit?style=flat-square&color=yellow&logo=github)](https://github.com/leonpagotto/leo-kit/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/leonpagotto/leo-kit?style=flat-square&color=red&logo=github)](https://github.com/leonpagotto/leo-kit/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/leopagotto/ingvar-kit?style=flat-square&color=yellow&logo=github)](https://github.com/leopagotto/ingvar-kit/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/leopagotto/ingvar-kit?style=flat-square&color=red&logo=github)](https://github.com/leopagotto/ingvar-kit/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
-[🚀 Quick Start](#-quick-start) • [📖 What is LEO?](#-what-is-leo-workflow-kit) • [✨ Features](#-core-features) • [🤖 Multi-Agent System](#-multi-agent-orchestration-system) • [📦 Installation](#-installation) • [🎯 Commands](#-command-reference)
+[🚀 Quick Start](#-quick-start) • [📖 What is LEO?](#-what-is-ingvar-workflow-kit) • [✨ Features](#-core-features) • [🤖 Multi-Agent System](#-multi-agent-orchestration-system) • [📦 Installation](#-installation) • [🎯 Commands](#-command-reference)
 
 ---
 
@@ -31,9 +31,9 @@
 
 </div>
 
-## 📖 What is LEO Workflow Kit?
+## 📖 What is Ingvar Workflow Kit?
 
-**LEO Workflow Kit** is an intelligent CLI tool that revolutionizes software development workflow management. Born from real-world development challenges, LEO combines **multi-agent AI orchestration**, **spec-driven development**, **automated GitHub Projects integration**, and **intelligent workflow automation** into a single, powerful command-line interface.
+**Ingvar Workflow Kit** is an intelligent CLI tool that revolutionizes software development workflow management. Born from real-world development challenges, LEO combines **multi-agent AI orchestration**, **spec-driven development**, **automated GitHub Projects integration**, and **intelligent workflow automation** into a single, powerful command-line interface.
 
 ### 🎯 The Problem We Solve
 
@@ -243,7 +243,7 @@ Get your entire workflow up and running in **5 minutes**:
 
 ```bash
 # Step 1: Install LEO globally
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 
 # Step 2: Navigate to your project
 cd your-project
@@ -510,7 +510,7 @@ leo ai sync
 ### Quick Install (Recommended)
 
 ```bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 ```
 
 **Requirements:**
@@ -526,7 +526,7 @@ npm install -g leo-workflow-kit
 
 ```bash
 # Install globally
-npm install -g leo-workflow-kit
+npm install -g ingvar-workflow-kit
 
 # Verify installation
 leo --version
@@ -545,7 +545,7 @@ leo init
 
 ```bash
 # Install in project
-npm install --save-dev leo-workflow-kit
+npm install --save-dev ingvar-workflow-kit
 
 # Use with npx
 npx leo init
@@ -570,7 +570,7 @@ npm run leo init
 
 ```bash
 # Auto-initialize on install
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 ```
 
 This automatically runs `leo init` after installation:
@@ -592,7 +592,7 @@ This automatically runs `leo init` after installation:
 
 ```bash
 # Clone repository
-git clone https://github.com/leonpagotto/leo-kit.git
+git clone https://github.com/leopagotto/ingvar-kit.git
 cd leo-kit
 
 # Install dependencies
@@ -1236,7 +1236,7 @@ function App() {
 
 ## 📈 Success Metrics & Impact
 
-Teams using LEO Workflow Kit report significant improvements:
+Teams using Ingvar Workflow Kit report significant improvements:
 
 | Metric                  | Improvement                 | Impact                |
 | ----------------------- | --------------------------- | --------------------- |
@@ -1485,13 +1485,13 @@ leo ai sync
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! LEO Workflow Kit is open-source and thrives on collaboration.
+We welcome contributions from the community! Ingvar Workflow Kit is open-source and thrives on collaboration.
 
 ### How to Contribute
 
 ```bash
 # 1. Fork and clone the repository
-gh repo fork leonpagotto/leo-kit --clone
+gh repo fork leopagotto/ingvar-kit --clone
 cd leo-kit
 
 # 2. Create a feature branch
@@ -1581,18 +1581,18 @@ SOFTWARE.
 
 ### Get Help
 
-- 📖 **Documentation**: [github.com/leonpagotto/leo-kit](https://github.com/leonpagotto/leo-kit)
-- 🐛 **Report Issues**: [github.com/leonpagotto/leo-kit/issues](https://github.com/leonpagotto/leo-kit/issues)
-- 💬 **Discussions**: [github.com/leonpagotto/leo-kit/discussions](https://github.com/leonpagotto/leo-kit/discussions)
+- 📖 **Documentation**: [github.com/leopagotto/ingvar-kit](https://github.com/leopagotto/ingvar-kit)
+- 🐛 **Report Issues**: [github.com/leopagotto/ingvar-kit/issues](https://github.com/leopagotto/ingvar-kit/issues)
+- 💬 **Discussions**: [github.com/leopagotto/ingvar-kit/discussions](https://github.com/leopagotto/ingvar-kit/discussions)
 - 📧 **Email**: Create an issue for support requests
 
 ### Quick Links
 
 - 🦁 **GitHub**: [@leonpagotto](https://github.com/leonpagotto)
-- 📦 **npm Package**: [leo-workflow-kit](https://www.npmjs.com/package/leo-workflow-kit)
-- 🌟 **Star this repo**: [github.com/leonpagotto/leo-kit/stargazers](https://github.com/leonpagotto/leo-kit/stargazers)
-- 🐛 **Report Bug**: [Create Issue](https://github.com/leonpagotto/leo-kit/issues/new?template=bug_report.md)
-- ✨ **Request Feature**: [Create Issue](https://github.com/leonpagotto/leo-kit/issues/new?template=feature_request.md)
+- 📦 **npm Package**: [ingvar-workflow-kit](https://www.npmjs.com/package/ingvar-workflow-kit)
+- 🌟 **Star this repo**: [github.com/leopagotto/ingvar-kit/stargazers](https://github.com/leopagotto/ingvar-kit/stargazers)
+- 🐛 **Report Bug**: [Create Issue](https://github.com/leopagotto/ingvar-kit/issues/new?template=bug_report.md)
+- ✨ **Request Feature**: [Create Issue](https://github.com/leopagotto/ingvar-kit/issues/new?template=feature_request.md)
 
 ### Stay Updated
 
@@ -1606,16 +1606,16 @@ SOFTWARE.
 
 ## 🦁 Made with ❤️ by Leo Pagotto
 
-**Star this repo if LEO Workflow Kit helps your team!** ⭐
+**Star this repo if Ingvar Workflow Kit helps your team!** ⭐
 
-[![GitHub Stars](https://img.shields.io/github/stars/leonpagotto/leo-kit?style=social&logo=github)](https://github.com/leonpagotto/leo-kit/stargazers)
-[![npm Downloads](https://img.shields.io/npm/dm/leo-workflow-kit?style=flat-square&color=blue&logo=npm)](https://www.npmjs.com/package/leo-workflow-kit)
+[![GitHub Stars](https://img.shields.io/github/stars/leopagotto/ingvar-kit?style=social&logo=github)](https://github.com/leopagotto/ingvar-kit/stargazers)
+[![npm Downloads](https://img.shields.io/npm/dm/ingvar-workflow-kit?style=flat-square&color=blue&logo=npm)](https://www.npmjs.com/package/ingvar-workflow-kit)
 
 ---
 
 **Transform your workflow** • **Boost productivity** • **Build better software**
 
-[🚀 Get Started](#-quick-start) • [📖 Read Docs](#-what-is-leo-workflow-kit) • [⭐ Star on GitHub](https://github.com/leonpagotto/leo-kit)
+[🚀 Get Started](#-quick-start) • [📖 Read Docs](#-what-is-ingvar-workflow-kit) • [⭐ Star on GitHub](https://github.com/leopagotto/ingvar-kit)
 
 ---
 

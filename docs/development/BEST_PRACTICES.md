@@ -1,4 +1,4 @@
-# LEO Workflow Kit - Best Practices Quick Reference
+# Ingvar Workflow Kit - Best Practices Quick Reference
 
 > **Version 2.0** - Comprehensive guide to component-first development, performance optimization, and SEO excellence
 
@@ -451,7 +451,7 @@ const getData = async (f: any) => {
 
 ## 🚀 Quick Start
 
-1. **Install**: `npm install -g leo-workflow-kit`
+1. **Install**: `npm install -g ingvar-workflow-kit`
 2. **Initialize**: `leo init` (choose to create new or use existing GitHub Project)
 3. **Create issues**: `leo issue`
 4. **Follow best practices**: Check `.github/copilot-instructions.md` for comprehensive guidelines
@@ -460,7 +460,7 @@ const getData = async (f: any) => {
 
 ## 📚 Additional Resources
 
-- **Full Documentation**: [GitHub Repository](https://github.com/leonpagotto/leo-kit)
+- **Full Documentation**: [GitHub Repository](https://github.com/leopagotto/ingvar-kit)
 - **Issue Templates**: `.github/ISSUE_TEMPLATE/`
 - **Copilot Instructions**: `.github/copilot-instructions.md`
 - **Component Examples**: Embedded in Copilot instructions
@@ -469,4 +469,4 @@ const getData = async (f: any) => {
 
 **Made with 🦁 by Leo Pagotto**
 
-*LEO Workflow Kit v2.0 - Component-First Development with Spec-Driven Methodology*
+*Ingvar Workflow Kit v2.0 - Component-First Development with Spec-Driven Methodology*

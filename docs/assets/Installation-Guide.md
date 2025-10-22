@@ -1,4 +1,4 @@
-﻿# 📦 Installation Guide
+# 📦 Installation Guide
 
 > **Get Ingvar Workflow Kit up and running in < 30 seconds**
 
@@ -27,7 +27,7 @@ Before installing Ingvar Workflow Kit, ensure you have:
 **One command - complete setup!**
 
 ```bash
-INGVAR_AUTO_INIT=true npm install Ingvar-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 ```
 
 **What this does:**
@@ -55,25 +55,25 @@ INGVAR_AUTO_INIT=true npm install Ingvar-workflow-kit
 
 ### Method 2: Global Installation (Traditional)
 
-Install Ingvar globally to use across all projects:
+Install LEO globally to use across all projects:
 
 ```bash
-npm install -g Ingvar-workflow-kit
+npm install -g ingvar-workflow-kit
 ```
 
 **Verify installation:**
 
 ```bash
-Ingvar --version
+leo --version
 # Should show: 2.5.0 (or later)
 
-Ingvar --help
+leo --help
 # Shows all available commands
 ```
 
 **Benefits:**
 
-- ✅ Available everywhere via `Ingvar` command
+- ✅ Available everywhere via `leo` command
 - ✅ Easy to update
 - ✅ Single installation for all projects
 - ✅ Manual control over initialization
@@ -82,15 +82,15 @@ Ingvar --help
 
 ### Method 3: npx (One-Time Use)
 
-Use Ingvar without installing:
+Use LEO without installing:
 
 ```bash
-npx Ingvar-workflow-kit init
+npx ingvar-workflow-kit init
 ```
 
 **When to use:**
 
-- 🎯 Testing Ingvar before committing
+- 🎯 Testing LEO before committing
 - 🎯 One-time project setup
 - 🎯 CI/CD pipelines
 
@@ -107,8 +107,8 @@ For contributors or cutting-edge features:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Ingvarnpagotto/Ingvar-kit.git
-cd Ingvar-kit
+git clone https://github.com/leopagotto/ingvar-kit.git
+cd leo-kit
 
 # Install dependencies
 npm install
@@ -117,12 +117,12 @@ npm install
 npm link
 
 # Verify
-Ingvar --version
+leo --version
 ```
 
 **When to use:**
 
-- 🔧 Contributing to Ingvar development
+- 🔧 Contributing to LEO development
 - 🔧 Testing unreleased features
 - 🔧 Customizing for your needs
 
@@ -130,7 +130,7 @@ Ingvar --version
 
 ## ⚙️ Setup GitHub CLI
 
-Ingvar requires GitHub CLI for GitHub operations.
+LEO requires GitHub CLI for GitHub operations.
 
 ### Install GitHub CLI
 
@@ -193,21 +193,21 @@ gh auth status
 
 ## 🎬 First-Time Setup
 
-### Initialize Ingvar in Your Project
+### Initialize LEO in Your Project
 
 ```bash
 # Navigate to your project
 cd your-project
 
-# Initialize Ingvar
-Ingvar init
+# Initialize LEO
+leo init
 ```
 
-### What Happens During `Ingvar init`
+### What Happens During `leo init`
 
 1. **Welcome Banner** 🦁
 
-   - Shows Ingvar ASCII art
+   - Shows LEO ASCII art
    - Displays current version
 
 2. **Prerequisites Check** ✅
@@ -255,10 +255,10 @@ Ingvar init
 
 ```bash
 # Show version
-Ingvar --version
+leo --version
 
 # Show all commands
-Ingvar --help
+leo --help
 
 # Check GitHub auth
 gh auth status
@@ -271,13 +271,13 @@ node --version
 
 ```bash
 # Check project status
-Ingvar status
+leo status
 
 # System health check
-Ingvar health
+leo health
 
 # View documentation structure
-Ingvar docs
+leo docs
 ```
 
 ---
@@ -289,17 +289,17 @@ Ingvar docs
 **Error:**
 
 ```
-zsh: command not found: Ingvar
+zsh: command not found: leo
 ```
 
 **Solution:**
 
 ```bash
 # Check if installed globally
-npm list -g Ingvar-workflow-kit
+npm list -g ingvar-workflow-kit
 
 # If not, install again
-npm install -g Ingvar-workflow-kit
+npm install -g ingvar-workflow-kit
 
 # Check npm global path
 npm config get prefix
@@ -320,14 +320,14 @@ EACCES: permission denied
 
 ```bash
 # Option 1: Use sudo (not recommended)
-sudo npm install -g Ingvar-workflow-kit
+sudo npm install -g ingvar-workflow-kit
 
 # Option 2: Fix npm permissions (recommended)
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-npm install -g Ingvar-workflow-kit
+npm install -g ingvar-workflow-kit
 ```
 
 ---
@@ -360,7 +360,7 @@ gh auth status
 **Error:**
 
 ```
-Error: Ingvar requires Node.js 16.0.0 or higher
+Error: LEO requires Node.js 16.0.0 or higher
 ```
 
 **Solution:**
@@ -379,25 +379,25 @@ nvm use 20
 
 ---
 
-## 🔄 Updating Ingvar
+## 🔄 Updating LEO
 
 ### Update to Latest Version
 
 ```bash
 # Check current version
-Ingvar --version
+leo --version
 
 # Update globally
-npm update -g Ingvar-workflow-kit
+npm update -g ingvar-workflow-kit
 
 # Verify new version
-Ingvar --version
+leo --version
 ```
 
 ### Update from Source
 
 ```bash
-cd Ingvar-kit
+cd leo-kit
 git pull origin main
 npm install
 npm link
@@ -410,13 +410,13 @@ npm link
 ### Remove Global Installation
 
 ```bash
-npm uninstall -g Ingvar-workflow-kit
+npm uninstall -g ingvar-workflow-kit
 ```
 
 ### Clean Up Project Files
 
 ```bash
-# Remove Ingvar-generated files (optional)
+# Remove LEO-generated files (optional)
 rm -rf .github/copilot-instructions.md
 rm -rf .github/ISSUE_TEMPLATE/
 rm -rf docs/
@@ -430,11 +430,11 @@ rm -rf docs/
 
 After installation, verify everything works:
 
-- [ ] `Ingvar --version` shows correct version
+- [ ] `leo --version` shows correct version
 - [ ] `gh auth status` shows authenticated
-- [ ] `Ingvar init` completes successfully
-- [ ] `Ingvar status` shows project info
-- [ ] `Ingvar health` passes all checks
+- [ ] `leo init` completes successfully
+- [ ] `leo status` shows project info
+- [ ] `leo health` passes all checks
 - [ ] GitHub Copilot is enabled in VS Code
 
 ---
@@ -443,8 +443,8 @@ After installation, verify everything works:
 
 After installation:
 
-1. **[Quick Start Tutorial](./Quick-Start)** - Create your first Ingvar project
-2. **[Configuration](./Configuration)** - Customize Ingvar for your workflow
+1. **[Quick Start Tutorial](./Quick-Start)** - Create your first LEO project
+2. **[Configuration](./Configuration)** - Customize LEO for your workflow
 3. **[Commands Reference](./Commands-Reference)** - Learn all available commands
 4. **[Automatic Issue Creation](./Automatic-Issue-Creation)** - Let Copilot handle issues
 
@@ -452,8 +452,8 @@ After installation:
 
 ## 💬 Need Help?
 
-- **Issues:** [Report installation problems](https://github.com/Ingvarnpagotto/Ingvar-kit/issues)
-- **Discussions:** [Ask questions](https://github.com/Ingvarnpagotto/Ingvar-kit/discussions)
+- **Issues:** [Report installation problems](https://github.com/leopagotto/ingvar-kit/issues)
+- **Discussions:** [Ask questions](https://github.com/leopagotto/ingvar-kit/discussions)
 - **Troubleshooting:** [Common issues](./Troubleshooting)
 
 ---

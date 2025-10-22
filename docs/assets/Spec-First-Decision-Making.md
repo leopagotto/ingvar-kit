@@ -1,4 +1,4 @@
-﻿# 🧠 Intelligent Spec-First Decision Making
+# 🧠 Intelligent Spec-First Decision Making
 
 > **New in v2.4.0** - AI automatically decides when to create specs vs direct issues
 
@@ -435,7 +435,7 @@ How to measure if the decision logic is working:
 
 **Last Updated:** October 19, 2025  
 **Feature Version:** v2.4.0  
-**Maintainer:** [@Ingvarnpagotto](https://github.com/Ingvarnpagotto)
+**Maintainer:** [@leonpagotto](https://github.com/leonpagotto)
 
 ---
 
@@ -443,6 +443,6 @@ How to measure if the decision logic is working:
 
 **[⬆ Back to Top](#-intelligent-spec-first-decision-making)**
 
-Questions? [Open a Discussion](https://github.com/Ingvarnpagotto/Ingvar-kit/discussions)
+Questions? [Open a Discussion](https://github.com/leopagotto/ingvar-kit/discussions)
 
 </div>

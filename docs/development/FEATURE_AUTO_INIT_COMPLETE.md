@@ -9,7 +9,7 @@
 
 ## 🎉 What Was Built
 
-You asked: _"I want to make sure that whenever a user is installing the LEO kit that we automatically initiate, so that doesn't happen with the user as well. So they get the installation and the initiation automatically right after adding the package."_
+You asked: _"I want to make sure that whenever a user is installing the Ingvar Kit that we automatically initiate, so that doesn't happen with the user as well. So they get the installation and the initiation automatically right after adding the package."_
 
 **We delivered exactly that!** 🚀
 
@@ -20,7 +20,7 @@ You asked: _"I want to make sure that whenever a user is installing the LEO kit 
 ### Before (Manual Setup)
 
 ```bash
-npm install leo-workflow-kit
+npm install ingvar-workflow-kit
 npx leo init
 # ... answer 5-10 prompts
 # ... wait 5-10 minutes
@@ -29,7 +29,7 @@ npx leo init
 ### After (Automatic Setup) ✨
 
 ```bash
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 # ✅ Done! Complete setup in 30 seconds
 ```
 
@@ -98,7 +98,7 @@ LEO_AUTO_INIT=true npm install leo-workflow-kit
 
 ## ✅ What Gets Auto-Initialized
 
-When a user runs `LEO_AUTO_INIT=true npm install leo-workflow-kit`:
+When a user runs `LEO_AUTO_INIT=true npm install ingvar-workflow-kit`:
 
 ### Created Automatically
 
@@ -151,7 +151,7 @@ When a user runs `LEO_AUTO_INIT=true npm install leo-workflow-kit`:
 ```bash
 mkdir my-app && cd my-app
 git init
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 # ✅ Complete setup in 30 seconds!
 ```
 
@@ -159,8 +159,8 @@ LEO_AUTO_INIT=true npm install leo-workflow-kit
 
 ```bash
 cd existing-project
-LEO_AUTO_INIT=true npm install leo-workflow-kit --save-dev
-git commit -am "chore: initialize LEO Workflow Kit"
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit --save-dev
+git commit -am "chore: initialize Ingvar Workflow Kit"
 ```
 
 ### Example 3: Team Onboarding
@@ -392,7 +392,7 @@ npx leo init  # Re-run to configure project, sync labels, etc.
 
 ### What You Asked For
 
-> "I want now to make sure that whenever user is installing the LEO kit that we automatically initiate and so that doesn't happen with the user as well. So they get the starting the installation and the initiate automatically right after adding the package."
+> "I want now to make sure that whenever user is installing the Ingvar Kit that we automatically initiate and so that doesn't happen with the user as well. So they get the starting the installation and the initiate automatically right after adding the package."
 
 ### What We Delivered ✅
 
@@ -411,7 +411,7 @@ npx leo init  # Re-run to configure project, sync labels, etc.
 **Users can now install and initialize LEO with a single command:**
 
 ```bash
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+LEO_AUTO_INIT=true npm install ingvar-workflow-kit
 ```
 
 **That's it! No prompts, no waiting, no friction. Just works.** ✨

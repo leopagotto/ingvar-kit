@@ -350,7 +350,7 @@ const { generate, getProjectTypes, getSections } = require('../copilot-instructi
 
 program
 .command('config')
-.description('Configure LEO Kit settings')
+.description('Configure Ingvar Kit settings')
 .option('--project-type <type>', 'Change project type')
 .option('--add-section <section>', 'Add a Copilot instruction section')
 .option('--remove-section <section>', 'Remove a Copilot instruction section')

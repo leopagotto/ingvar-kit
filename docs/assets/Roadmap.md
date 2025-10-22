@@ -1,4 +1,4 @@
-﻿# 🗺️ Ingvar Workflow Kit Roadmap
+# 🗺️ Ingvar Workflow Kit Roadmap
 
 > **Our vision for the future of AI-powered workflow automation**
 
@@ -29,7 +29,7 @@ To create the most intelligent, automated, and developer-friendly project manage
 **Major Features:**
 
 - Support for 4 AI assistants (Copilot, Cursor, Cline, Codeium)
-- New `Ingvar ai` command (list, add, remove, sync)
+- New `leo ai` command (list, add, remove, sync)
 - AI selection during initialization
 - AI-specific optimized instructions (~40KB each)
 - Backward compatible with v2.x Copilot setups
@@ -143,8 +143,8 @@ To create the most intelligent, automated, and developer-friendly project manage
 
 - Detect existing AI instruction files
 - Parse and preserve user's custom content
-- Merge Ingvar standards with existing instructions
-- Add clear section markers (Ingvar vs Project-specific)
+- Merge LEO standards with existing instructions
+- Add clear section markers (LEO vs Project-specific)
 - Create backup before merging
 - Prompt for user confirmation
 
@@ -152,7 +152,7 @@ To create the most intelligent, automated, and developer-friendly project manage
 
 - Better onboarding for projects with existing instructions
 - Preserve project-specific conventions
-- Enable Ingvar adoption in mature projects
+- Enable LEO adoption in mature projects
 
 See issue #15 for details
 
@@ -188,7 +188,7 @@ See issue #15 for details
 
 #### 1. Auto-Create Projects
 
-- Automatically create GitHub Project during `Ingvar init` if none exists
+- Automatically create GitHub Project during `leo init` if none exists
 - Pre-configure with standard fields (Status, Priority, Assignees, Labels)
 - Setup Board, Table, and Timeline views
 
@@ -251,7 +251,7 @@ See issue #15 for details
 #### 4. Team Dashboard
 
 - Terminal-based team activity dashboard
-- `Ingvar team` command for team insights
+- `leo team` command for team insights
 - Real-time collaboration status
 
 **Estimated Effort:** 4-5 weeks
@@ -336,7 +336,7 @@ See issue #15 for details
 - [ ] Desktop notifications
 - [ ] Mobile companion app
 
-**Want to vote or suggest features?** [Open an issue!](https://github.com/Ingvarnpagotto/Ingvar-kit/issues/new?template=feature-request.md)
+**Want to vote or suggest features?** [Open an issue!](https://github.com/leopagotto/ingvar-kit/issues/new?template=feature-request.md)
 
 ---
 
@@ -406,7 +406,7 @@ See issue #15 for details
 
 **2. Propose New Features**
 
-- Open a [feature request](https://github.com/Ingvarnpagotto/Ingvar-kit/issues/new?template=feature-request.md)
+- Open a [feature request](https://github.com/leopagotto/ingvar-kit/issues/new?template=feature-request.md)
 - Discuss in GitHub Discussions
 - Share your workflow challenges
 
@@ -450,13 +450,13 @@ See issue #15 for details
 
 **Roadmap Last Updated:** October 19, 2025
 **Next Review:** November 15, 2025
-**Maintainer:** [@Ingvarnpagotto](https://github.com/Ingvarnpagotto)
+**Maintainer:** [@leonpagotto](https://github.com/leonpagotto)
 
 ---
 
 <div align="center">
 
-**Have questions about the roadmap?** [Ask in Discussions](https://github.com/Ingvarnpagotto/Ingvar-kit/discussions)
+**Have questions about the roadmap?** [Ask in Discussions](https://github.com/leopagotto/ingvar-kit/discussions)
 
 **Want to contribute?** [See Development Guide](./Development-Guide)
 

@@ -44,11 +44,11 @@ $ gh auth status
 ✓ Logged in to github.com account leonpagotto
 
 $ leo init
-🦁 Initializing LEO Workflow Kit 🦁
+🦁 Initializing Ingvar Workflow Kit 🦁
 
 ✔ Prerequisites check passed
 ✔ GitHub authentication verified   # ← Just confirms, no prompt!
-Repository: leonpagotto/leo-kit
+Repository: leopagotto/ingvar-kit
 
 ? GitHub organization name: ...
 ```
@@ -62,7 +62,7 @@ $ gh auth status
 You are not logged into any GitHub hosts.
 
 $ leo init
-🦁 Initializing LEO Workflow Kit 🦁
+🦁 Initializing Ingvar Workflow Kit 🦁
 
 ✔ Prerequisites check passed
 ⚠ GitHub CLI not authenticated

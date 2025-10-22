@@ -1,6 +1,6 @@
 # Multi-Agent Orchestration System
 
-> **LEO Workflow Kit v4.0.0+**
+> **Ingvar Workflow Kit v4.0.0+**
 >
 > Intelligent task routing with specialized AI agents
 
@@ -26,7 +26,7 @@
 
 ### What is the Multi-Agent System?
 
-LEO Workflow Kit v4.0.0 introduces an **intelligent orchestration layer** that routes your requests to specialized AI agents based on task type. Instead of a single generic AI assistant, you get experts for frontend, backend, DevOps, testing, and documentation.
+Ingvar Workflow Kit v4.0.0 introduces an **intelligent orchestration layer** that routes your requests to specialized AI agents based on task type. Instead of a single generic AI assistant, you get experts for frontend, backend, DevOps, testing, and documentation.
 
 ### Why Multi-Agent?
 
@@ -550,7 +550,7 @@ leo agent sync
 
 - After enabling/disabling agents (if you skipped auto-sync)
 - After manually editing `.leorc.json`
-- After updating LEO Workflow Kit version
+- After updating Ingvar Workflow Kit version
 
 **Output:**
 
@@ -770,7 +770,7 @@ function routeTask(userRequest) {
 Always run `leo agent sync` after:
 
 - Enabling/disabling agents manually in `.leorc.json`
-- Updating LEO Workflow Kit version
+- Updating Ingvar Workflow Kit version
 - Changing project-type
 
 ```bash
@@ -937,10 +937,10 @@ Helps you understand:
 
 ### Migration Steps
 
-#### 1. Update LEO Workflow Kit
+#### 1. Update Ingvar Workflow Kit
 
 ```bash
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-workflow-kit@latest
 ```
 
 #### 2. Re-initialize Your Project
@@ -1034,9 +1034,9 @@ Coming in v4.2.0:
 
 ### Getting Help
 
-- **Documentation**: [LEO Workflow Kit Wiki](https://github.com/leonpagotto/leo-kit/wiki)
-- **Issues**: [GitHub Issues](https://github.com/leonpagotto/leo-kit/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/leonpagotto/leo-kit/discussions)
+- **Documentation**: [Ingvar Workflow Kit Wiki](https://github.com/leopagotto/ingvar-kit/wiki)
+- **Issues**: [GitHub Issues](https://github.com/leopagotto/ingvar-kit/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/leopagotto/ingvar-kit/discussions)
 
 ### Next Steps
 

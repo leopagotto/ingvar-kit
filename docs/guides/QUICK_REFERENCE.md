@@ -1,6 +1,6 @@
 # GitHub Projects Quick Reference
 
-> **Fast reference for LEO Workflow Kit v2.3.0 GitHub Projects integration**
+> **Fast reference for Ingvar Workflow Kit v2.3.0 GitHub Projects integration**
 
 ## 🚀 Quick Start
 
