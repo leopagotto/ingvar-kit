@@ -8,18 +8,70 @@
  * @see https://npm.m2.blue.cdtapps.com (IKEA Ingka Skapa registry)
  */
 
-// Components
+// === BUTTON COMPONENTS ===
 export { Button } from './Button/Button';
-export type { ButtonProps } from './Button/Button';
+export type { ButtonProps, ButtonVariant, ButtonSize, ButtonState } from './Button/Button';
 
+// === CARD COMPONENTS ===
 export { Card } from './Card/Card';
 export type { CardProps } from './Card/Card';
 
+// === FORM COMPONENTS ===
 export { Input } from './Input/Input';
 export type { InputProps } from './Input/Input';
 
-// Re-export all Button types
-export type { ButtonVariant, ButtonSize, ButtonState } from './Button/Button.types';
+export { TextArea } from './TextArea';
+export type { TextAreaProps } from './TextArea';
+
+export { Checkbox, CheckboxGroup } from './Checkbox';
+export type { CheckboxProps, CheckboxGroupProps } from './Checkbox';
+
+export { RadioButton, RadioButtonGroup } from './RadioButton';
+export type { RadioButtonProps, RadioButtonGroupProps } from './RadioButton';
+
+export { Select } from './Select';
+export type { SelectProps, SelectOption } from './Select';
+
+export { Switch } from './Switch';
+export type { SwitchProps } from './Switch';
+
+export { Slider } from './Slider';
+export type { SliderProps } from './Slider';
+
+// === FEEDBACK COMPONENTS ===
+export { Badge } from './Badge';
+export type { BadgeProps } from './Badge';
+
+export { Banner } from './Banner';
+export type { BannerProps } from './Banner';
+
+export { Toast } from './Toast';
+export type { ToastProps } from './Toast';
+
+export { Loading } from './Loading';
+export type { LoadingProps } from './Loading';
+
+// === LAYOUT COMPONENTS ===
+export { Divider } from './Divider';
+export type { DividerProps } from './Divider';
+
+export { Accordion } from './Accordion';
+export type { AccordionProps } from './Accordion';
+
+// === NAVIGATION COMPONENTS ===
+export { Tabs } from './Tabs';
+export type { TabsProps, Tab } from './Tabs';
+
+// === OVERLAY COMPONENTS ===
+export { Modal } from './Modal';
+export type { ModalProps } from './Modal';
+
+export { Tooltip } from './Tooltip';
+export type { TooltipProps } from './Tooltip';
+
+// === DISPLAY COMPONENTS ===
+export { Avatar } from './Avatar';
+export type { AvatarProps } from './Avatar';
 
 /**
  * Component Categories
@@ -103,7 +155,20 @@ export const ComponentDocs = {
 /**
  * Development Status
  *
- * ✅ Ready: Button, Card, Input
- * 🚧 In Development: Checkbox, Select, Modal
- * 📋 Planned: Badge, Tooltip, Progress, Table
+ * ✅ Production Ready (19 components):
+ *    - Button, Card, Input, TextArea
+ *    - Checkbox, RadioButton, Select, Switch, Slider
+ *    - Badge, Banner, Toast, Loading
+ *    - Divider, Accordion
+ *    - Tabs
+ *    - Modal, Tooltip
+ *    - Avatar
+ *
+ * 📋 Planned for future releases:
+ *    - Grid, AspectRatioBox
+ *    - IconButton, Pill, JumboButton
+ *    - Text, Image, List, Table
+ *    - Price, Tag, Rating
+ *    - ProgressIndicator, Status
+ *    - Carousel, Video
  */
