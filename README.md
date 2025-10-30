@@ -1,25 +1,29 @@
 <div align="center">
 
-![Ingvar Kit](docs/assets/leo.png)
+![Ingvar Kit](docs/assets/ingvar_kit_logo.png)
 
-<h3>Intelligent GitHub Workflow Automation</h3>
+<h1>🇸🇪 Ingvar Kit</h1>
 
-**Transform your development workflow with AI-powered task routing, rapid app generation, spec-first development, and automated GitHub Projects—all from your terminal.**
+<h3>AI-Powered Workflow Automation with IKEA Ingka Design System</h3>
 
-[![npm version](https://img.shields.io/npm/v/ingvar-kit.svg?style=flat-square&color=blue&logo=npm)](https://www.npmjs.com/package/ingvar-kit)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/Node.js-16%2B-green?style=flat-square&logo=node.js)](https://nodejs.org)
-[![Tests](https://img.shields.io/badge/tests-487%2F521%20passing-green?style=flat-square)](https://github.com/leopagotto/ingvar-kit)
+**Transform your development with multi-agent AI, rapid app generation, spec-first development, and the official IKEA design system—all from your terminal.**
 
-[Quick Start](#-quick-start) • [Features](#-features) • [Spark Guide](docs/SPARK.md) • [Visual Guide](docs/WORKFLOW_DIAGRAMS.md) • [Contributing](CONTRIBUTING.md)
+[![npm version](https://img.shields.io/npm/v/ingvar-kit.svg?style=flat-square&color=0051BA&logo=npm)](https://www.npmjs.com/package/ingvar-kit)
+[![License: MIT](https://img.shields.io/badge/License-MIT-FFDA1A.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green?style=flat-square&logo=node.js)](https://nodejs.org)
+[![IKEA Design](https://img.shields.io/badge/IKEA-Ingka_Skapa-0051BA?style=flat-square&logo=ikea)](https://github.com/leopagotto/ingvar-kit)
+
+[Quick Start](#-quick-start) • [Features](#-features) • [IKEA Design System](#-ikea-ingka-design-system) • [Spark Generator](docs/SPARK.md) • [Documentation](docs/README.md)
 
 ---
 
-### 🎉 **v5.4.0** - IKEA Ingka Skapa Design System
+### 🎉 **v5.4.0** - IKEA Ingka Skapa Design System Integration
 
-🇸🇪 **75+ Official IKEA Components** • � **Swedish Design** • 🤖 **AI-Powered** • ♿ **WCAG 2.1 AA** • � **1,300+ Lines of Specs**
+🇸🇪 **75+ Official IKEA Components** • 🎨 **Swedish Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📦 **83 Component Specifications**
 
-**[View Release Notes](CHANGELOG.md#540)** • **[Ingka Guide](docs/guides/INGKA_IMPLEMENTATION_GUIDE.md)**
+Generate production-ready apps with official IKEA design tokens, components, and accessibility standards built-in.
+
+**[Release Notes](CHANGELOG.md#540)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)**
 
 ---
 
@@ -27,7 +31,18 @@
 
 ## What is Ingvar?
 
-**Ingvar Kit** is an intelligent CLI that automates your GitHub workflow. It combines multi-agent AI orchestration, spec-driven development, and seamless GitHub Projects integration into one powerful tool.
+**Ingvar Kit** is an AI-powered CLI that combines multi-agent orchestration, rapid app generation with IKEA design system, spec-driven development, and GitHub Projects automation—all in one powerful tool.
+
+Named after IKEA founder **Ingvar Kamprad**, this toolkit brings Swedish design excellence and AI automation together to transform your development workflow.
+
+### 🎯 Core Capabilities
+
+1. **🇸🇪 IKEA Design System Integration** - Generate apps with official Ingka Skapa components
+2. **🤖 Multi-Agent AI** - 6 specialized agents (Frontend, Backend, DevOps, Testing, Docs, Orchestrator)
+3. **⚡ Spark Generator** - Create full-stack React apps from natural language prompts
+4. **📋 Spec-First Development** - GitHub-native specifications with evolution tracking
+5. **🎯 GitHub Projects** - Automated project board setup and issue management
+6. **🎨 AI Instructions** - 1,300+ lines of component specs for Copilot/Claude
 
 ### 🆚 Ingvar vs GitHub Spec Kit
 
@@ -97,60 +112,115 @@ Your Request → Orchestrator → Routes to Specialist(s)
 
 **[See Visual Diagrams →](docs/WORKFLOW_DIAGRAMS.md#diagram-1-how-the-orchestrator-routes-tasks)**
 
-### 🚀 Rapid App Generation (NEW!)
+### 🚀 Rapid App Generation
 
-Generate complete React apps from a single prompt using Ingvar Spark:
+Generate complete React apps from a single prompt using Ingvar Spark with optional IKEA design system:
 
 ```bash
 # Generate a complete app from a prompt
-ingvar spark --prompt "Create a todo app with dark mode"
+ingvar spark "Create a todo app with dark mode"
+
+# With IKEA design system
+ingvar spark "Create a todo app" --style ingka
+
+# Natural language IKEA detection
+ingvar spark "Build a shopping cart that looks like IKEA"
 
 # Advanced dashboard with charts
-ingvar spark --prompt "Build analytics dashboard with charts and tables"
+ingvar spark "Build analytics dashboard with charts and tables"
 
 # E-commerce catalog
-ingvar spark --prompt "Create product catalog with search and filters"
+ingvar spark "Create product catalog with search and filters"
 ```
 
 **What you get:**
 
 - ✅ **Complete React 19 + TypeScript setup** with Vite
-- ✅ **40+ shadcn/ui components** pre-configured
+- ✅ **40+ shadcn/ui components** pre-configured (or 75+ Ingka components)
 - ✅ **Modern stack**: Tailwind CSS v4, Framer Motion, React Query
 - ✅ **AI-generated components** using Claude 3.5 Sonnet
 - ✅ **Production-ready** with forms, validation, routing
+- ✅ **IKEA Design System** optional with `--style ingka` flag
 
 **[Complete Spark Guide →](docs/SPARK.md)**
 
-### 🇸🇪 IKEA Ingka Skapa Design System (NEW!)
+### 🇸🇪 IKEA Ingka Design System
 
-Built-in support for official IKEA design system with 75+ production-ready components:
+Built-in support for the official IKEA design system with 75+ production-ready components and complete AI-readable specifications.
 
 ```bash
 # Generate app with official IKEA design
-ingvar spark my-app --style ingka
+ingvar spark "todo app" --style ingka
 
-# Configure Ingka registry (one-time)
+# Or use natural language detection
+ingvar spark "Create a shopping cart that looks like IKEA"
+
+# Configure Ingka registry (one-time setup)
 npm set --location project @ingka:registry="https://npm.m2.blue.cdtapps.com"
 ```
 
-**What you get:**
+**What's Included:**
 
-- ✅ **Official IKEA Components**: 75+ `@ingka/*` packages
+- ✅ **75+ Official Components**: Buttons, Cards, Forms, Modals, Tables, Navigation
 - ✅ **Swedish Design**: Official IKEA Blue (#0051BA) and Yellow (#FFDA1A)
-- ✅ **Production-Ready**: Used across all IKEA digital products
-- ✅ **AI-Powered**: GitHub Copilot knows all Ingka specifications
-- ✅ **Design Foundations**: Colors, spacing, typography, elevation
-- ✅ **WCAG 2.1 AA**: Accessibility built-in
+- ✅ **Design Tokens**: 8px grid system, Noto Sans typography, elevation system
+- ✅ **Production-Ready**: Used across all IKEA digital products worldwide
+- ✅ **AI-Powered**: 1,300+ lines of specs for GitHub Copilot and Claude
+- ✅ **WCAG 2.1 AA**: Accessibility built into every component
+- ✅ **83 PDF Specs**: Complete documentation (60 components + 23 foundations)
+
+**Available Component Categories:**
+
+- **Layout & Structure**: Grid, Aspect Ratio, Divider, Expander
+- **Display & Content**: Card, Image, Text, List, Table, Tabs
+- **Buttons & Actions**: Button, Icon Button, Dual Button, Hyperlink
+- **Form Inputs**: Input Field, Text Area, Checkbox, Radio, Select, Switch
+- **Feedback & Status**: Badge, Toast, Banner, Loading, Progress
+- **Modals & Overlays**: Modal Prompt, Modal Sheets, Modal Theatre, Tooltip
+- **Media**: Carousel, Simple Video, Shoppable Image, Rating
+- **E-commerce**: Price, Product ID, Commercial Messages, Tag
 
 **Documentation Structure:**
 
-- **AI Instructions:** `lib/ai-instructions/frontend-agent-ingka.instructions.md` (complete guide)
-- **Component Index:** `docs/guides/SKAPA_COMPONENT_INDEX.md` (quick lookup)
-- **Implementation Guide:** `docs/guides/INGKA_IMPLEMENTATION_GUIDE.md` (setup & workflow)
-- **PDF Specifications:** `docs/guides/Skapa-components/` (60+ specs), `docs/guides/Skapa-foundations/` (23 specs)
+- **AI Instructions**: `lib/ai-instructions/frontend-agent-ingka.instructions.md` (26KB, complete guide)
+- **Quick Reference**: `docs/INGKA_QUICK_REFERENCE.md` (component overview)
+- **Design System Guide**: `docs/guides/INGKA_DESIGN_SYSTEM.md` (developer guide)
+- **Component Specs**: `docs/guides/Skapa-components/*.pdf` (60+ component PDFs)
+- **Foundation Specs**: `docs/guides/Skapa-foundations/*.pdf` (23 design token PDFs)
+- **Component Index**: `docs/guides/SKAPA_COMPONENT_INDEX.md` (searchable reference)
 
-**[Complete Ingka Guide →](docs/guides/INGKA_IMPLEMENTATION_GUIDE.md)**
+**Example Usage:**
+
+```tsx
+import { Button } from "@ingka/button";
+import { Card } from "@ingka/card";
+import { colors } from "@ingka/colours";
+
+function ProductCard({ product }) {
+  return (
+    <Card elevation={1} style={{ borderRadius: "8px" }}>
+      <Card.Media src={product.image} alt={product.name} aspectRatio="4:3" />
+      <Card.Content>
+        <Card.Title>{product.name}</Card.Title>
+        <Card.Description>{product.description}</Card.Description>
+        <Price value={product.price} currency="USD" />
+      </Card.Content>
+      <Card.Actions>
+        <Button variant="primary" onClick={handleAddToCart}>
+          Add to Cart
+        </Button>
+      </Card.Actions>
+    </Card>
+  );
+}
+```
+
+**Learn More:**
+
+- **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** - Component overview
+- **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)** - Setup and implementation
+- **[Component Index](docs/guides/SKAPA_COMPONENT_INDEX.md)** - Searchable component list
+- **[AI Instructions](lib/ai-instructions/frontend-agent-ingka.instructions.md)** - Complete specs
 
 ### 📋 Spec-First Development
 

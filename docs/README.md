@@ -1,14 +1,8 @@
 # Ingvar Kit Documentation# Project Documentation
 
-
-
 > **AI-powered workflow automation tool with IKEA Ingka Design System integration**All project documentation is organized here.
 
-
-
 ---## Structure
-
-
 
 ## 📚 Documentation Index- **specs/** - Specification files (planning phase - write detailed specs here)
 
@@ -24,8 +18,6 @@
 
 - **[IKEA Ingka Quick Reference](INGKA_QUICK_REFERENCE.md)** - IKEA design system overview## Ingvar workflow
 
-
-
 ### 🎨 Design System Integration### Phase 1: Specification
 
 Write detailed specification files in `specs/` folder. Include problem statement, solution approach, technical details, and acceptance criteria.
@@ -35,8 +27,6 @@ Write detailed specification files in `specs/` folder. Include problem statement
 ### Phase 2: Execution
 
 Ingvar Kit includes complete documentation for the official IKEA design system:Convert approved specs into GitHub issues. Track all work in GitHub Projects. Reference issues in all commits.
-
-
 
 - **[Component Specifications](guides/Skapa-components/)** - 60+ PDF specifications**Remember: Specifications are FILES. Tasks are GITHUB ISSUES.**
 
@@ -49,6 +39,7 @@ Ingvar Kit includes complete documentation for the official IKEA design system:C
 Keep documentation up to date as the project evolves.
 
 - **[Design Foundations](guides/Skapa-foundations/)** - 23 PDF specifications
+
   - Color system (brand palette, tokens)
   - Typography (Noto Sans typeface)
   - Spacing (8px grid system)
@@ -56,6 +47,7 @@ Keep documentation up to date as the project evolves.
   - Motion design and iconography
 
 - **[Frontend Agent Instructions](../lib/ai-instructions/frontend-agent-ingka.instructions.md)**
+
   - 26KB of AI-readable component specs
   - Complete implementation patterns
   - Accessibility requirements (WCAG 2.1 AA)
@@ -132,16 +124,16 @@ ingvar init
 
 ## 🔍 Finding Information
 
-| Topic | Location |
-|-------|----------|
-| Installation & Setup | [README.md](../README.md) |
-| Spark Generator Usage | [SPARK.md](SPARK.md) |
-| IKEA Component Specs | [guides/Skapa-components/](guides/Skapa-components/) |
-| Design Foundations | [guides/Skapa-foundations/](guides/Skapa-foundations/) |
-| API Documentation | [guides/API_REFERENCE.md](guides/API_REFERENCE.md) |
-| Architecture Details | [guides/DESIGN_FIRST_ARCHITECTURE_V5.0.0.md](guides/DESIGN_FIRST_ARCHITECTURE_V5.0.0.md) |
-| Contributing | [../CONTRIBUTING.md](../CONTRIBUTING.md) |
-| Version History | [../CHANGELOG.md](../CHANGELOG.md) |
+| Topic                 | Location                                                                                 |
+| --------------------- | ---------------------------------------------------------------------------------------- |
+| Installation & Setup  | [README.md](../README.md)                                                                |
+| Spark Generator Usage | [SPARK.md](SPARK.md)                                                                     |
+| IKEA Component Specs  | [guides/Skapa-components/](guides/Skapa-components/)                                     |
+| Design Foundations    | [guides/Skapa-foundations/](guides/Skapa-foundations/)                                   |
+| API Documentation     | [guides/API_REFERENCE.md](guides/API_REFERENCE.md)                                       |
+| Architecture Details  | [guides/DESIGN_FIRST_ARCHITECTURE_V5.0.0.md](guides/DESIGN_FIRST_ARCHITECTURE_V5.0.0.md) |
+| Contributing          | [../CONTRIBUTING.md](../CONTRIBUTING.md)                                                 |
+| Version History       | [../CHANGELOG.md](../CHANGELOG.md)                                                       |
 
 ---
 
