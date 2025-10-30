@@ -38,6 +38,12 @@ export type { SwitchProps } from './Switch';
 export { Slider } from './Slider';
 export type { SliderProps } from './Slider';
 
+export { QuantityStepper } from './QuantityStepper';
+export type { QuantityStepperProps } from './QuantityStepper';
+
+export { Search } from './Search';
+export type { SearchProps } from './Search';
+
 // === FEEDBACK COMPONENTS ===
 export { Badge } from './Badge';
 export type { BadgeProps } from './Badge';
@@ -51,12 +57,24 @@ export type { ToastProps } from './Toast';
 export { Loading } from './Loading';
 export type { LoadingProps } from './Loading';
 
+export { ProgressIndicator } from './ProgressIndicator';
+export type { ProgressIndicatorProps } from './ProgressIndicator';
+
+export { Status } from './Status';
+export type { StatusProps } from './Status';
+
 // === LAYOUT COMPONENTS ===
 export { Divider } from './Divider';
 export type { DividerProps } from './Divider';
 
 export { Accordion } from './Accordion';
 export type { AccordionProps } from './Accordion';
+
+export { Grid } from './Grid';
+export type { GridProps } from './Grid';
+
+export { AspectRatioBox } from './AspectRatioBox';
+export type { AspectRatioBoxProps } from './AspectRatioBox';
 
 // === NAVIGATION COMPONENTS ===
 export { Tabs } from './Tabs';
@@ -72,6 +90,13 @@ export type { TooltipProps } from './Tooltip';
 // === DISPLAY COMPONENTS ===
 export { Avatar } from './Avatar';
 export type { AvatarProps } from './Avatar';
+
+// === BUTTON VARIANTS ===
+export { IconButton } from './IconButton';
+export type { IconButtonProps } from './IconButton';
+
+export { Pill } from './Pill';
+export type { PillProps } from './Pill';
 
 /**
  * Component Categories
@@ -155,20 +180,18 @@ export const ComponentDocs = {
 /**
  * Development Status
  *
- * ✅ Production Ready (19 components):
- *    - Button, Card, Input, TextArea
- *    - Checkbox, RadioButton, Select, Switch, Slider
- *    - Badge, Banner, Toast, Loading
- *    - Divider, Accordion
- *    - Tabs
- *    - Modal, Tooltip
- *    - Avatar
+ * ✅ Production Ready (27 components):
+ *    - Buttons (3): Button, IconButton, Pill
+ *    - Display (2): Card, Avatar
+ *    - Forms (9): Input, TextArea, Checkbox, RadioButton, Select, Switch, Slider, QuantityStepper, Search
+ *    - Feedback (6): Badge, Banner, Toast, Loading, ProgressIndicator, Status
+ *    - Layout (4): Divider, Accordion, Grid, AspectRatioBox
+ *    - Navigation (1): Tabs
+ *    - Overlays (2): Modal, Tooltip
  *
  * 📋 Planned for future releases:
- *    - Grid, AspectRatioBox
- *    - IconButton, Pill, JumboButton
  *    - Text, Image, List, Table
  *    - Price, Tag, Rating
- *    - ProgressIndicator, Status
  *    - Carousel, Video
+ *    - Breadcrumbs, Stepper
  */
