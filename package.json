@@ -45,6 +45,7 @@
     "bin/",
     "lib/",
     "templates/",
+    "docs/guides/",
     "scripts/",
     "README.md",
     "LICENSE",

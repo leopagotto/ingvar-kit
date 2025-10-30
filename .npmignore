@@ -14,7 +14,10 @@ test-prompts.js
 
 # GitHub directories (not needed in package)
 .github/
+
+# Documentation (except guides)
 docs/
+!docs/guides/
 
 # All internal documentation (keep only essential in files field)
 *.md
