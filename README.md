@@ -19,7 +19,7 @@
 
 ### 🎉 **v5.4.0** - IKEA Ingka Skapa Design System Integration
 
-� **75+ Official IKEA Components** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📦 **83 Component Specifications**
+📦 **75+ Official IKEA Components** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • � **[83 PDF Specifications](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)**
 
 Generate production-ready apps with official IKEA design tokens, components, and accessibility standards built-in.
 

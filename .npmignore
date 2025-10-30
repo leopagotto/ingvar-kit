@@ -17,7 +17,10 @@ test-prompts.js
 
 # Documentation (except guides)
 docs/
-!docs/guides/
+# Exclude large IKEA PDFs from npm package (available on GitHub)
+docs/guides/Skapa-components/
+docs/guides/Skapa-foundations/
+*.pdf
 
 # All internal documentation (keep only essential in files field)
 *.md

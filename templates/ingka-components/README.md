@@ -152,15 +152,14 @@ const breakpoints = {
 };
 ```
 
-## 📚 Component Documentation
+## 📚 Full IKEA Documentation
 
-Each component includes comprehensive documentation:
+**Complete PDF specifications are available on GitHub:**
 
-- **Props API** - All available properties and types
-- **Usage Examples** - Common implementation patterns
-- **Accessibility Guide** - WCAG compliance details
-- **Design Specs** - Visual guidelines and measurements
-- **Best Practices** - Do's and don'ts
+👉 **[IKEA Component PDFs (83 files)](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides/Skapa-components)**
+👉 **[IKEA Foundation PDFs (23 files)](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides/Skapa-foundations)**
+
+These include:
 
 ## 🔗 Related Resources
 
