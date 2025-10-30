@@ -1,6 +1,6 @@
 # Ingvar Kit - Quick Start Guide
 
-🪑 **Rebranding LEO Kit → Ingvar Kit** 🇸🇪
+🪑 **Rebranding Ingvar Kit → Ingvar Kit** 🇸🇪
 
 **Created**: October 22, 2025  
 **Status**: Core rebranding complete, ready for file updates  
@@ -54,17 +54,17 @@
    - [ ] `.cursorrules`
    - [ ] `.clinerules`
    - [ ] `.codeium/instructions.md`
-   - **Action**: Replace "LEO" with "Ingvar", update workflow references
+   - **Action**: Replace "Ingvar" with "Ingvar", update workflow references
 
 2. **Configuration Files**
-   - [ ] Rename: `.leorc.json.example` → `.ingvarrc.json.example`
-   - [ ] Update: `.gitignore` (`.leorc.json` → `.ingvarrc.json`)
+   - [ ] Rename: `.ingvarrc.json.example` → `.ingvarrc.json.example`
+   - [ ] Update: `.gitignore` (`.ingvarrc.json` → `.ingvarrc.json`)
    - [ ] Update all code references: `.leorc` → `.ingvarrc`
 
 3. **Source Code** (`lib/commands/`)
    - [ ] `init.js`, `issue.js`, `labels.js`, `vscode.js`
    - [ ] `config.js`, `ai.js`, `agent.js`, `github.js`, `health.js`
-   - **Action**: Search for "leo", "LEO", ".leorc" and replace
+   - **Action**: Search for "leo", "Ingvar", ".leorc" and replace
 
 4. **Documentation**
    - [ ] `docs/guides/leorc-configuration.md` → `ingvarrc-configuration.md`
@@ -79,7 +79,7 @@
 ### Medium Priority
 
 6. **Templates** (`templates/`)
-   - [ ] Check for LEO branding
+   - [ ] Check for Ingvar branding
    - [ ] Update issue templates if needed
 
 7. **Diagrams** (`diagrams/`)
@@ -89,7 +89,7 @@
 ### Low Priority
 
 8. **Archive Files** (optional)
-   - [ ] Decide what to keep from LEO version history
+   - [ ] Decide what to keep from Ingvar version history
    - [ ] Archive or remove `RELEASE_V*.md`, `SESSION_SUMMARY_*.md`
 
 ---
@@ -99,16 +99,16 @@
 ### Search & Replace Patterns
 
 ```bash
-# Find all LEO references
-grep -r "LEO" --exclude-dir=node_modules .
+# Find all Ingvar references
+grep -r "Ingvar" --exclude-dir=node_modules .
 grep -r "leo" --exclude-dir=node_modules .
 grep -r "leorc" --exclude-dir=node_modules .
 
 # Common replacements needed:
-"LEO Kit" → "Ingvar Kit"
-"LEO Workflow Kit" → "Ingvar Workflow Kit"
+"Ingvar Kit" → "Ingvar Kit"
+"Ingvar Kit" → "Ingvar Workflow Kit"
 "leo-kit" → "ingvar-kit"
-"`leo " → "`ingvar "
+"`ingvar " → "`ingvar "
 ".leorc" → ".ingvarrc"
 "leonpagotto" → "ingka-group"
 "Leo Pagotto" → "Ingka Digital"
@@ -118,7 +118,7 @@ grep -r "leorc" --exclude-dir=node_modules .
 
 ```powershell
 # PowerShell (Windows)
-Rename-Item ".leorc.json.example" ".ingvarrc.json.example"
+Rename-Item ".ingvarrc.json.example" ".ingvarrc.json.example"
 Rename-Item "docs\guides\leorc-configuration.md" "docs\guides\ingvarrc-configuration.md"
 ```
 
@@ -147,7 +147,7 @@ node bin/cli.js init --help
 - `.cursorrules` ⏳
 - `.clinerules` ⏳
 - `.codeium/instructions.md` ⏳
-- `.leorc.json.example` ⏳ (rename)
+- `.ingvarrc.json.example` ⏳ (rename)
 - `.gitignore` ⏳
 - `lib/commands/*.js` ⏳ (all command files)
 - `lib/utils/*.js` ⏳
@@ -209,7 +209,7 @@ Before final release:
 When ready to publish:
 
 1. **Final Code Review**
-   - [ ] All LEO references removed
+   - [ ] All Ingvar references removed
    - [ ] All tests pass
    - [ ] Documentation complete
 
@@ -240,7 +240,7 @@ When ready to publish:
 
 ### Immediate (Do Now)
 1. Update AI instruction files (4 files)
-2. Rename `.leorc.json.example` → `.ingvarrc.json.example`
+2. Rename `.ingvarrc.json.example` → `.ingvarrc.json.example`
 3. Update `.gitignore`
 4. Search & replace in `lib/commands/` files
 
@@ -248,7 +248,7 @@ When ready to publish:
 1. Update all documentation files
 2. Update wiki pages
 3. Run full test suite
-4. Create migration guide for LEO users
+4. Create migration guide for Ingvar users
 
 ### Later (Before Release)
 1. Create new GitHub repository
@@ -265,9 +265,9 @@ When ready to publish:
 - New README: `README_INGVAR.md`
 - This quick start: `INGVAR_KIT_QUICKSTART.md`
 
-**Original LEO Kit**:
-- Repo: https://github.com/leonpagotto/leo-kit
-- NPM: https://www.npmjs.com/package/leo-workflow-kit
+**Original Ingvar Kit**:
+- Repo: https://github.com/leopagotto/ingvar-kit
+- NPM: https://www.npmjs.com/package/ingvar-kit
 
 **New Ingvar Kit** (target):
 - Repo: https://github.com/ingka-group/ingvar-kit
@@ -278,7 +278,7 @@ When ready to publish:
 ## 🎯 Success Criteria
 
 **Rebranding is complete when**:
-- ✅ No "LEO" references in code (except archives/changelog)
+- ✅ No "Ingvar" references in code (except archives/changelog)
 - ✅ All commands use `ingvar`
 - ✅ All config files use `.ingvarrc`
 - ✅ All AI instructions reference "Ingvar"

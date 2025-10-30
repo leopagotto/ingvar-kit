@@ -121,7 +121,7 @@ Added `---` horizontal rules between major sections for better visual separation
 Added at the top:
 
 ```markdown
-> **Purpose**: This file guides GitHub Copilot to follow LEO's workflow standards,
+> **Purpose**: This file guides GitHub Copilot to follow Ingvar's workflow standards,
 > ensuring consistent development practices, automatic issue creation, and high-quality code.
 ```
 
@@ -213,8 +213,8 @@ Added at the top:
 
 ## 🧪 Testing Checklist
 
-- [ ] Install LEO Kit in a test project: `npm install leo-workflow-kit`
-- [ ] Run initialization: `leo init`
+- [ ] Install Ingvar Kit in a test project: `npm install ingvar-kit`
+- [ ] Run initialization: `ingvar init`
 - [ ] Verify Copilot instructions file created correctly
 - [ ] Check table of contents links work
 - [ ] Verify all sections present (SEO, UI, Components, etc.)
@@ -249,8 +249,8 @@ Added at the top:
 ### What This Template Is
 
 - **Location**: `lib/copilot-instructions-template.js`
-- **Purpose**: Gets installed into user projects when they run `leo init`
-- **Audience**: Developers using LEO Kit in their projects + GitHub Copilot AI
+- **Purpose**: Gets installed into user projects when they run `ingvar init`
+- **Audience**: Developers using Ingvar Kit in their projects + GitHub Copilot AI
 - **Usage**: Guides development practices, automatic issue creation, code quality
 
 ### What This Template Is NOT
@@ -265,7 +265,7 @@ Added at the top:
 ## 🚀 Next Steps
 
 1. **Test the template** in a real user project
-2. **Gather feedback** from developers using LEO Kit
+2. **Gather feedback** from developers using Ingvar Kit
 3. **Monitor AI behavior** - Does Copilot auto-create issues correctly?
 4. **Iterate if needed** - Add more examples if sections are unclear
 5. **Update wiki** with template best practices

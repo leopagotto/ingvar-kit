@@ -21,7 +21,7 @@ You correctly observed:
 
 ### What Was Happening
 
-1. **LEO was initialized** ✅ (Project connected, templates installed)
+1. **Ingvar was initialized** ✅ (Project connected, templates installed)
 2. **Copilot instructions existed** ✅ (Rules were documented)
 3. **But Copilot wasn't following them** ❌ (No automatic issue creation)
 
@@ -112,7 +112,7 @@ The Copilot instructions had the rules, but they were:
 3. ✅ **Created issue immediately:** Used `gh issue create`
 4. ✅ **Confirmed:** "Created issue #5 - [title]"
 
-**Issue #5:** https://github.com/leonpagotto/leo-kit/issues/5
+**Issue #5:** https://github.com/leopagotto/ingvar-kit/issues/5
 
 ### Closed Test Issue
 
@@ -205,7 +205,7 @@ You describe work in natural language:
 Your requirements:
 
 - ✅ "Issues are being created automatically whenever I request something"
-- ✅ "If the user has LEO kit installed, that will happen"
+- ✅ "If the user has Ingvar kit installed, that will happen"
 - ✅ "Add those criteria and rules to the templates for VS Code"
 
 **All requirements satisfied!**
@@ -229,7 +229,7 @@ You: "We should add unit tests for the postinstall script"
 Me: "Creating issue for unit tests..."
     [runs gh issue create]
     "✓ Issue #6 created: Add unit tests for postinstall script"
-    "https://github.com/leonpagotto/leo-kit/issues/6"
+    "https://github.com/leopagotto/ingvar-kit/issues/6"
 ```
 
 ---
@@ -258,7 +258,7 @@ Me: "Creating issue for unit tests..."
 
 You identified a fundamental flaw in the workflow:
 
-1. LEO was installed ✅
+1. Ingvar was installed ✅
 2. Instructions existed ✅
 3. **But AI wasn't following them** ❌
 

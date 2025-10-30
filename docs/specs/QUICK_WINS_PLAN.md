@@ -9,13 +9,13 @@
 
 ## 🎯 Features to Implement NOW
 
-### 1. `leo commit` - Smart Commit Helper (Day 1-2)
+### 1. `ingvar commit` - Smart Commit Helper (Day 1-2)
 
 **Problem:** Developers spend 5-10 minutes crafting good commit messages
 
 **Solution:**
 ```bash
-leo commit
+ingvar commit
 
 # Analyzes staged changes
 # Shows: Files changed, lines added/removed
@@ -34,13 +34,13 @@ leo commit
 
 ---
 
-### 2. `leo start <issue>` - Start Work (Day 2)
+### 2. `ingvar start <issue>` - Start Work (Day 2)
 
 **Problem:** Starting work involves 5-6 manual steps
 
 **Solution:**
 ```bash
-leo start 123
+ingvar start 123
 
 # ✓ Creates branch: feat/issue-123-user-profile
 # ✓ Checks out branch
@@ -61,13 +61,13 @@ leo start 123
 
 ---
 
-### 3. `leo sync` - Smart Branch Sync (Day 3)
+### 3. `ingvar sync` - Smart Branch Sync (Day 3)
 
 **Problem:** Syncing with main is error-prone
 
 **Solution:**
 ```bash
-leo sync
+ingvar sync
 
 # ✓ Stashes changes if needed
 # ✓ Fetches latest main
@@ -87,13 +87,13 @@ leo sync
 
 ---
 
-### 4. `leo pr` - Quick PR Creation (Day 3-4)
+### 4. `ingvar pr` - Quick PR Creation (Day 3-4)
 
 **Problem:** Creating PRs takes 10-15 minutes
 
 **Solution:**
 ```bash
-leo pr
+ingvar pr
 
 # → Analyzes commits since main
 # → Generates PR description:
@@ -117,13 +117,13 @@ leo pr
 
 ---
 
-### 5. `leo stats` - Quick Stats View (Day 4-5)
+### 5. `ingvar stats` - Quick Stats View (Day 4-5)
 
 **Problem:** No visibility into productivity
 
 **Solution:**
 ```bash
-leo stats
+ingvar stats
 
 Your Activity (Last 7 Days):
   📝 Commits: 23
@@ -195,7 +195,7 @@ lib/
 ### Example 1: Complete Feature Workflow
 ```bash
 # Start work
-$ leo start 123
+$ ingvar start 123
 ✓ Created branch: feat/issue-123-add-user-profile
 ✓ Issue moved to "In Progress"
 
@@ -210,13 +210,13 @@ Ready to code! 🚀
 # ... code code code ...
 
 # Sync with main
-$ leo sync
+$ ingvar sync
 ✓ Fetched latest main
 ✓ Rebased onto main (3 commits ahead)
 ✓ No conflicts!
 
 # Commit changes
-$ leo commit
+$ ingvar commit
 
 📝 Staged Changes:
   M  src/pages/Profile.tsx (+234/-12)
@@ -238,7 +238,7 @@ Suggested commit message:
 ✓ Commit created!
 
 # Create PR
-$ leo pr
+$ ingvar pr
 ✓ Analyzing changes...
 ✓ Generating PR description...
 ✓ Creating pull request...
@@ -329,7 +329,7 @@ Total time: 2 minutes
 - **Measure:** User feedback and ratings
 
 ### Usage Patterns
-- Most used: `leo commit`, `leo pr`, `leo sync`
+- Most used: `ingvar commit`, `ingvar pr`, `ingvar sync`
 - Least used: Identify for improvement
 - Feature requests: Prioritize next features
 
@@ -341,19 +341,19 @@ After updating to v2.2.0:
 
 ```bash
 # Update
-npm update -g leo-workflow-kit
+npm update -g ingvar-kit
 
 # Try it out
 cd your-project
-leo stats          # See your activity
-leo start 123      # Start new work
+ingvar stats          # See your activity
+ingvar start 123      # Start new work
 # ... make changes ...
-leo commit         # Smart commit
-leo sync          # Sync with main
-leo pr            # Create PR
+ingvar commit         # Smart commit
+ingvar sync          # Sync with main
+ingvar pr            # Create PR
 
 # Get help
-leo <command> --help
+ingvar <command> --help
 ```
 
 ---
@@ -362,7 +362,7 @@ leo <command> --help
 
 1. **GitHub Token:** For API access
    ```bash
-   leo config set github-token <your-token>
+   ingvar config set github-token <your-token>
    ```
 
 2. **Repository Context:** Must be in git repo
@@ -378,8 +378,8 @@ leo <command> --help
 Once these 5 commands are solid:
 
 1. **AI Integration:** Use OpenAI/Anthropic for better suggestions
-2. **Dashboard:** `leo dash` with project overview
-3. **Code Review:** `leo review` with AI suggestions
+2. **Dashboard:** `ingvar dash` with project overview
+3. **Code Review:** `ingvar review` with AI suggestions
 4. **Integrations:** Slack, Jira, Linear
 5. **Analytics:** Team velocity and metrics
 

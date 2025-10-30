@@ -1,4 +1,4 @@
-# 🚀 LEO Workflow Kit - Next Evolution Proposal
+# 🚀 Ingvar Kit - Next Evolution Proposal
 ## Making Developers' Lives Significantly Better
 
 **Current Version:** 2.1.0  
@@ -9,7 +9,7 @@
 
 ## 🎯 Vision
 
-Transform LEO Workflow Kit from a **setup tool** into a **daily companion** that developers use throughout their entire workflow - from coding to deployment.
+Transform Ingvar Kit from a **setup tool** into a **daily companion** that developers use throughout their entire workflow - from coding to deployment.
 
 ---
 
@@ -23,7 +23,7 @@ Transform LEO Workflow Kit from a **setup tool** into a **daily companion** that
 - Repetitive git commands and workflows
 
 **Our Solution:**
-Make LEO Workflow Kit the **single command center** for all development workflow needs.
+Make Ingvar Kit the **single command center** for all development workflow needs.
 
 ---
 
@@ -31,14 +31,14 @@ Make LEO Workflow Kit the **single command center** for all development workflow
 
 ### 1. 🤖 AI-Powered Smart Commands (HIGHEST IMPACT)
 
-#### `leo commit` - AI Commit Message Generation
+#### `ingvar commit` - AI Commit Message Generation
 ```bash
 # Current workflow (manual):
 git add .
 git commit -m "update user profile component"  # Vague, not conventional
 
-# With leo commit (AI-powered):
-leo commit
+# With ingvar commit (AI-powered):
+ingvar commit
 # → Analyzes staged changes
 # → Generates: "feat(profile): add avatar upload with image preview
 #               
@@ -54,14 +54,14 @@ leo commit
 
 **Value:** Saves 5-10 minutes per commit, ensures conventional commits, better git history
 
-#### `leo pr` - AI PR Description Generation
+#### `ingvar pr` - AI PR Description Generation
 ```bash
 # Current workflow:
 git push
 # Go to GitHub, click "Create PR", write description manually
 
-# With leo pr:
-leo pr
+# With ingvar pr:
+ingvar pr
 # → Analyzes all commits since main
 # → Generates comprehensive PR description
 # → Includes: summary, changes, breaking changes, testing notes
@@ -71,9 +71,9 @@ leo pr
 
 **Value:** Saves 10-15 minutes per PR, comprehensive descriptions, better reviews
 
-#### `leo review` - AI Code Review Assistant
+#### `ingvar review` - AI Code Review Assistant
 ```bash
-leo review
+ingvar review
 # → Analyzes current branch changes
 # → Suggests improvements (performance, security, best practices)
 # → Checks for common bugs
@@ -87,9 +87,9 @@ leo review
 
 ### 2. ⚡ Quick Workflow Commands (DAILY USE)
 
-#### `leo start` - Start Work on Issue
+#### `ingvar start` - Start Work on Issue
 ```bash
-leo start 123
+ingvar start 123
 # → Checks out new branch: feat/issue-123-add-user-profile
 # → Moves issue to "In Progress" on project board
 # → Starts time tracking (optional)
@@ -97,9 +97,9 @@ leo start 123
 # → Creates draft PR (optional)
 ```
 
-#### `leo done` - Complete Current Work
+#### `ingvar done` - Complete Current Work
 ```bash
-leo done
+ingvar done
 # → AI generates commit message from staged changes
 # → Commits changes
 # → Pushes branch
@@ -109,9 +109,9 @@ leo done
 # → Notifies reviewers
 ```
 
-#### `leo sync` - Sync with Main Branch
+#### `ingvar sync` - Sync with Main Branch
 ```bash
-leo sync
+ingvar sync
 # → Fetches latest main
 # → Rebases current branch
 # → Resolves simple conflicts automatically
@@ -119,9 +119,9 @@ leo sync
 # → Shows summary of changes
 ```
 
-#### `leo release` - Create Release
+#### `ingvar release` - Create Release
 ```bash
-leo release
+ingvar release
 # → Analyzes commits since last release
 # → Generates changelog automatically
 # → Suggests version bump (semver)
@@ -136,9 +136,9 @@ leo release
 
 ### 3. 📊 Developer Insights Dashboard (VISIBILITY)
 
-#### `leo dash` - Project Dashboard
+#### `ingvar dash` - Project Dashboard
 ```bash
-leo dash
+ingvar dash
 
 ╔════════════════════════════════════════════════════════════════╗
 ║  📊 Project Dashboard - my-app                                ║
@@ -172,9 +172,9 @@ leo dash
   • 🔄 PR #246 in review (refactor: api client)
 ```
 
-#### `leo stats` - Personal Statistics
+#### `ingvar stats` - Personal Statistics
 ```bash
-leo stats --week
+ingvar stats --week
 
 Your Stats (This Week):
   📝 Commits: 23
@@ -201,9 +201,9 @@ Most Active Files:
 
 ### 4. 🔍 Smart Code Analysis (CODE QUALITY)
 
-#### `leo scan` - Comprehensive Code Scan
+#### `ingvar scan` - Comprehensive Code Scan
 ```bash
-leo scan
+ingvar scan
 
 Running comprehensive scan...
 
@@ -225,12 +225,12 @@ Dependency Updates:
   • next: 14.0.0 → 14.2.0 (minor, test recommended)
   • typescript: 5.2.0 → 5.3.2 (minor, safe)
 
-Run 'leo fix' to apply automated fixes
+Run 'ingvar fix' to apply automated fixes
 ```
 
-#### `leo fix` - Auto-Fix Issues
+#### `ingvar fix` - Auto-Fix Issues
 ```bash
-leo fix
+ingvar fix
 # → Applies safe automated fixes
 # → Formats code
 # → Fixes linting errors
@@ -247,7 +247,7 @@ leo fix
 
 #### Slack/Discord Integration
 ```bash
-leo integrate slack
+ingvar integrate slack
 # → Daily standup summaries posted automatically
 # → PR notifications to team channels
 # → Issue assignments notifications
@@ -256,7 +256,7 @@ leo integrate slack
 
 #### Time Tracking
 ```bash
-leo time
+ingvar time
 # → Shows time spent on current issue
 # → Weekly/monthly time reports
 # → Export to timesheet formats
@@ -265,7 +265,7 @@ leo time
 
 #### Meeting Notes
 ```bash
-leo meeting
+ingvar meeting
 # → Creates meeting notes from template
 # → Links to current sprint/issues
 # → Auto-generates action items
@@ -278,18 +278,18 @@ leo meeting
 
 ### 6. 🎓 Learning & Onboarding (TEAM VALUE)
 
-#### `leo learn` - Interactive Tutorials
+#### `ingvar learn` - Interactive Tutorials
 ```bash
-leo learn
+ingvar learn
 # → Shows project-specific tutorials
 # → Interactive git workflow training
 # → Best practices guides
 # → Framework-specific tips
 ```
 
-#### `leo onboard` - New Team Member Setup
+#### `ingvar onboard` - New Team Member Setup
 ```bash
-leo onboard "John Doe"
+ingvar onboard "John Doe"
 # → Creates onboarding checklist
 # → Sets up local environment
 # → Grants repo access
@@ -306,7 +306,7 @@ leo onboard "John Doe"
 
 #### Intelligent Notifications
 ```bash
-leo notify
+ingvar notify
 # → "PR #234 ready for your review"
 # → "Issue #456 assigned to you"
 # → "Your PR #245 has merge conflicts"
@@ -316,7 +316,7 @@ leo notify
 
 #### Daily Digest
 ```bash
-leo digest
+ingvar digest
 # → Morning: Today's goals, assigned issues, PR reviews needed
 # → Evening: Summary of what you accomplished, what's pending
 ```
@@ -327,9 +327,9 @@ leo digest
 
 ### 8. 🤝 Team Collaboration Features (TEAMWORK)
 
-#### `leo assign` - Smart Reviewer Assignment
+#### `ingvar assign` - Smart Reviewer Assignment
 ```bash
-leo assign
+ingvar assign
 # → Analyzes changed files
 # → Suggests best reviewers based on:
 #   - File ownership (git blame)
@@ -339,9 +339,9 @@ leo assign
 # → Auto-assigns reviewers
 ```
 
-#### `leo retro` - Retrospective Helper
+#### `ingvar retro` - Retrospective Helper
 ```bash
-leo retro
+ingvar retro
 # → Generates sprint metrics
 # → Lists completed work
 # → Identifies blockers
@@ -355,9 +355,9 @@ leo retro
 
 ### 9. 🔐 Security & Compliance (ENTERPRISE VALUE)
 
-#### `leo audit` - Security Audit
+#### `ingvar audit` - Security Audit
 ```bash
-leo audit
+ingvar audit
 # → Scans dependencies for vulnerabilities
 # → Checks for exposed secrets
 # → Validates security best practices
@@ -365,9 +365,9 @@ leo audit
 # → Creates security scorecard
 ```
 
-#### `leo secrets` - Secrets Management
+#### `ingvar secrets` - Secrets Management
 ```bash
-leo secrets check
+ingvar secrets check
 # → Scans for hardcoded secrets
 # → Checks .env files not committed
 # → Validates secret rotation
@@ -392,7 +392,7 @@ leo
 
 #### Customization
 ```bash
-leo config
+ingvar config
 # → Customize workflows
 # → Set preferences
 # → Configure integrations
@@ -402,9 +402,9 @@ leo config
 
 #### Plugins System
 ```bash
-leo plugin install @leo/jira
-leo plugin install @leo/notion
-leo plugin install @community/slack-enhanced
+ingvar plugin install @leo/jira
+ingvar plugin install @leo/notion
+ingvar plugin install @community/slack-enhanced
 ```
 
 **Value:** Personalized experience, extensibility, community contributions
@@ -415,19 +415,19 @@ leo plugin install @community/slack-enhanced
 
 ### Phase 1: Quick Wins (v2.2.0) - 2 weeks
 **Focus:** Most requested, easy to implement
-1. ✅ `leo commit` - AI commit messages
-2. ✅ `leo pr` - AI PR descriptions
-3. ✅ `leo start <issue>` - Start work on issue
-4. ✅ `leo done` - Complete work workflow
-5. ✅ `leo sync` - Smart branch sync
+1. ✅ `ingvar commit` - AI commit messages
+2. ✅ `ingvar pr` - AI PR descriptions
+3. ✅ `ingvar start <issue>` - Start work on issue
+4. ✅ `ingvar done` - Complete work workflow
+5. ✅ `ingvar sync` - Smart branch sync
 
 **Impact:** Save 30-45 min daily per developer
 
 ### Phase 2: Insights & Analytics (v2.3.0) - 3 weeks
 **Focus:** Visibility and metrics
-1. ✅ `leo dash` - Project dashboard
-2. ✅ `leo stats` - Personal statistics
-3. ✅ `leo scan` - Code quality scanning
+1. ✅ `ingvar dash` - Project dashboard
+2. ✅ `ingvar stats` - Personal statistics
+3. ✅ `ingvar scan` - Code quality scanning
 4. ✅ Activity tracking
 5. ✅ Team velocity metrics
 
@@ -435,10 +435,10 @@ leo plugin install @community/slack-enhanced
 
 ### Phase 3: Automation & Intelligence (v2.4.0) - 4 weeks
 **Focus:** Smart automation
-1. ✅ `leo review` - AI code review
-2. ✅ `leo fix` - Auto-fix issues
-3. ✅ `leo assign` - Smart reviewer assignment
-4. ✅ `leo release` - Automated releases
+1. ✅ `ingvar review` - AI code review
+2. ✅ `ingvar fix` - Auto-fix issues
+3. ✅ `ingvar assign` - Smart reviewer assignment
+4. ✅ `ingvar release` - Automated releases
 5. ✅ Pre-commit hooks setup
 
 **Impact:** Maintain code quality, reduce manual work
@@ -547,7 +547,7 @@ leo plugin install @community/slack-enhanced
 1. ✅ Gather user feedback on proposed features
 2. ✅ Create technical design docs for Phase 1
 3. ✅ Set up development environment for AI features
-4. ✅ Create proof-of-concept for `leo commit`
+4. ✅ Create proof-of-concept for `ingvar commit`
 
 ### This Month
 1. ✅ Implement Phase 1 features (v2.2.0)

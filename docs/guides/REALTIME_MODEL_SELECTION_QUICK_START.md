@@ -9,7 +9,7 @@
 ```
 VS Code Status Bar Updates As Task Progresses:
 
-   ⊘ LEO Ready
+   ⊘ Ingvar Ready
    ↓ (task starts)
    ↻ 🎨 designer → Claude-S          (45 minutes of design)
    ✓ 🎨 designer complete
@@ -21,7 +21,7 @@ VS Code Status Bar Updates As Task Progresses:
    ✓ 🧪 testing complete
    ↻ 📚 documentation → GPT-3.5       (cheapest!)
    ✓ 📚 documentation complete
-   ⊘ LEO Ready                        (done)
+   ⊘ Ingvar Ready                        (done)
 ```
 
 ---
@@ -39,7 +39,7 @@ cp -r lib/vscode-extension/* ~/.vscode/extensions/leo-model-selector/
 After restart, you'll see in status bar:
 
 ```
-⊘ LEO Ready
+⊘ Ingvar Ready
 ```
 
 ---
@@ -107,7 +107,7 @@ async function buildFeature(featureName) {
 
     // Complete
     await orchestrator.completeTask({ success: true });
-    // ↑ VS Code shows: ⊘ LEO Ready
+    // ↑ VS Code shows: ⊘ Ingvar Ready
 
     console.log("✓ Feature build complete!");
   } catch (error) {
@@ -125,7 +125,7 @@ module.exports = buildFeature;
 ## 3️⃣ Run Your Command
 
 ```bash
-leo build-feature "checkout form"
+ingvar build-feature "checkout form"
 
 # Output:
 # 🎨 Starting design phase...
@@ -135,7 +135,7 @@ leo build-feature "checkout form"
 # [45 minutes later...]
 #
 # ✓ Feature build complete!
-# (Status bar: ⊘ LEO Ready)
+# (Status bar: ⊘ Ingvar Ready)
 ```
 
 ---
@@ -148,7 +148,7 @@ leo build-feature "checkout form"
 4. **VS Code watches** → Status bar updated every 100ms
 5. **Agent completes** → Extension shows completion checkmark
 6. **Next agent** → Status bar switches to new agent
-7. **Task ends** → Status returns to "LEO Ready"
+7. **Task ends** → Status returns to "Ingvar Ready"
 
 ---
 
@@ -157,7 +157,7 @@ leo build-feature "checkout form"
 ### Terminal Output:
 
 ```
-$ leo build "checkout feature"
+$ ingvar build "checkout feature"
 🎨 Starting design phase...
 Designer selected: claude-3-sonnet
 ✓ Design complete (2m 15s)
@@ -185,7 +185,7 @@ Documentation selected: gpt-3.5-turbo  ← Cheapest model!
 
 ```
 Right side of status bar shows:
-⊘ LEO Ready                                    (initial)
+⊘ Ingvar Ready                                    (initial)
 ↻ 🎨 designer → Claude-S                      (2m 15s later)
 ✓ 🎨 designer complete                        (design done)
 ↻ 💻 frontend → Claude-S                      (start frontend)
@@ -196,7 +196,7 @@ Right side of status bar shows:
 ✓ 🧪 testing complete                         (1h 5m later)
 ↻ 📚 documentation → GPT-3.5                   (cheapest!)
 ✓ 📚 documentation complete                   (45m later)
-⊘ LEO Ready                                    (all done!)
+⊘ Ingvar Ready                                    (all done!)
 ```
 
 ---
@@ -242,7 +242,7 @@ Right side of status bar shows:
 Click the status bar to see detailed info:
 
 ```
-LEO Model Status
+Ingvar Model Status
 
 Agent: backend
 Model: claude-3-opus
@@ -265,15 +265,15 @@ After installing, you can use:
 
 ```bash
 # Show current model information (in VS Code Command Palette)
-Command: LEO: Show Current Model Info
+Command: Ingvar: Show Current Model Info
 → Shows which agent/model currently active
 
 # Select model preference
-Command: LEO: Select Model Preference
+Command: Ingvar: Select Model Preference
 → Choose your preferred model for next task
 
 # Show model history
-Command: LEO: Show Model History
+Command: Ingvar: Show Model History
 → See all model selections in last 50 tasks
 ```
 
@@ -283,7 +283,7 @@ Command: LEO: Show Model History
 
 - [ ] VS Code extension files copied to `~/.vscode/extensions/leo-model-selector/`
 - [ ] VS Code restarted
-- [ ] Status bar shows `⊘ LEO Ready`
+- [ ] Status bar shows `⊘ Ingvar Ready`
 - [ ] CLI updated with `ModelSelectionOrchestrator`
 - [ ] CLI uses `selectModelWithTracking()` method
 - [ ] Task runs and status bar updates
@@ -304,7 +304,7 @@ VS Code Command Palette → "Developer: Show Logs..." → Extension Host
 Command Palette → "Developer: Reload Window"
 ```
 
-### Status bar shows "LEO Ready" but doesn't update
+### Status bar shows "Ingvar Ready" but doesn't update
 
 ```bash
 # Check if orchestrator is being used in your code

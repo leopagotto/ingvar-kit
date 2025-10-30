@@ -38,7 +38,7 @@ Comprehensive documentation update across all files to reflect **v4.1.1 release*
 
 (was: Intelligent Model Selection (v4.1.0+))
 
-LEO v4.1.1 includes an intelligent orchestration system with real-time
+Ingvar v4.1.1 includes an intelligent orchestration system with real-time
 model selection...
 ```
 
@@ -71,27 +71,27 @@ model selection...
 
 ```bash
 # Before:
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+Ingvar_AUTO_INIT=true npm install ingvar-kit
 
 # After:
-LEO_AUTO_INIT=true npm install -g leo-workflow-kit@4.1.1
+Ingvar_AUTO_INIT=true npm install -g ingvar-kit@4.1.1
 ```
 
 ### 4. **wiki/Commands-Reference.md** (Command Documentation)
 
 **Changes:**
 
-- ✅ Added **NEW `leo model` command section** (143 lines!)
+- ✅ Added **NEW `ingvar model` command section** (143 lines!)
 - ✅ Updated command table with v4.1.1 version info
 - ✅ Documented all model subcommands:
-  - `leo model status` - Show configuration
-  - `leo model list` - List available models
-  - `leo model enable` - Enable feature
-  - `leo model disable` - Disable feature
-  - `leo model budget` - Configure budgets
-  - `leo model usage` - Check usage
-  - `leo model reset` - Reset counters
-  - `leo model test` - Test selection
+  - `ingvar model status` - Show configuration
+  - `ingvar model list` - List available models
+  - `ingvar model enable` - Enable feature
+  - `ingvar model disable` - Disable feature
+  - `ingvar model budget` - Configure budgets
+  - `ingvar model usage` - Check usage
+  - `ingvar model reset` - Reset counters
+  - `ingvar model test` - Test selection
 - ✅ Added real-time display examples
 - ✅ Added configuration examples
 - ✅ Added links to related documentation
@@ -99,7 +99,7 @@ LEO_AUTO_INIT=true npm install -g leo-workflow-kit@4.1.1
 **New Command Section:**
 
 ```markdown
-### `leo model` 🎉 NEW in v4.1.1
+### `ingvar model` 🎉 NEW in v4.1.1
 
 Manage AI model selection for intelligent task routing and cost optimization.
 
@@ -133,7 +133,7 @@ Manage AI model selection for intelligent task routing and cost optimization.
 
 ### New Content Added
 
-- ✅ 143-line `leo model` command documentation
+- ✅ 143-line `ingvar model` command documentation
 - ✅ Real-time model selection examples
 - ✅ Configuration examples
 - ✅ Feature highlights throughout
@@ -147,7 +147,7 @@ All documentation now emphasizes:
 ### Real-Time Model Selection
 
 ```
-⊘ LEO Ready                    (idle)
+⊘ Ingvar Ready                    (idle)
 ↻ 🎨 designer → Claude-S       (designer working)
 ✓ 🎨 designer complete         (designer done)
 ↻ 💻 frontend → Claude-S       (frontend working)
@@ -191,7 +191,7 @@ All documentation now emphasizes:
 
 - [x] All version references updated to v4.1.1
 - [x] Real-time model selection features highlighted
-- [x] New `leo model` command documented
+- [x] New `ingvar model` command documented
 - [x] Installation instructions updated
 - [x] Architecture sections updated
 - [x] Release history reorganized
@@ -214,7 +214,7 @@ All documentation now emphasizes:
 | Files Updated              | 5                     |
 | Lines Added                | 400+                  |
 | Version References Changed | 21+                   |
-| New Sections               | 1 (leo model command) |
+| New Sections               | 1 (ingvar model command) |
 | Examples Added             | 8+                    |
 | Code Samples               | 12+                   |
 
@@ -234,7 +234,7 @@ All documentation now emphasizes:
 
 1. Find accurate v4.1.1 information everywhere
 2. Understand real-time model selection
-3. Use new `leo model` commands
+3. Use new `ingvar model` commands
 4. Install correct version
 5. See feature examples
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-GitHub Projects v2 can be **user-scoped** or **organization-scoped**, and this affects how auto-assignment works in LEO Workflow Kit.
+GitHub Projects v2 can be **user-scoped** or **organization-scoped**, and this affects how auto-assignment works in Ingvar Kit.
 
 ## The Difference
 
@@ -10,13 +10,13 @@ GitHub Projects v2 can be **user-scoped** or **organization-scoped**, and this a
 - **Scope:** Organization-wide
 - **URL Format:** `https://github.com/orgs/YOUR_ORG/projects/NUMBER`
 - **Token:** Built-in `GITHUB_TOKEN` works automatically
-- **Setup:** Run `leo project setup` → Works immediately
+- **Setup:** Run `ingvar project setup` → Works immediately
 
 ### User Projects ⚠️
 - **Scope:** Personal user account
 - **URL Format:** `https://github.com/users/YOUR_USERNAME/projects/NUMBER`
 - **Token:** Requires **Personal Access Token (PAT)** with `project` scope
-- **Setup:** Run `leo project setup` → Follow PAT creation steps
+- **Setup:** Run `ingvar project setup` → Follow PAT creation steps
 
 ## Why Does This Matter?
 
@@ -34,7 +34,7 @@ This is a security limitation - the automatic token doesn't have permission to m
 Run the project setup command:
 
 ```bash
-leo project setup
+ingvar project setup
 ```
 
 The command will:
@@ -51,7 +51,7 @@ If you prefer to set it up manually:
 #### Step 1: Create Personal Access Token
 
 1. Go to: https://github.com/settings/tokens/new
-2. Token name: `LEO Kit - Project Access`
+2. Token name: `Ingvar Kit - Project Access`
 3. Expiration: 90 days (recommended) or custom
 4. Select scopes:
    - ☑ **project** (read & write)
@@ -69,7 +69,7 @@ gh secret set GH_PROJECT_TOKEN --body "YOUR_TOKEN_HERE"
 
 ```bash
 # Test the integration
-leo project test
+ingvar project test
 
 # Or check secrets directly
 gh secret list
@@ -93,7 +93,7 @@ github-token: ${{ github.token }}  # Built-in token
 github-token: ${{ secrets.GH_PROJECT_TOKEN }}  # Your PAT
 ```
 
-The `leo project setup` command detects your project type and configures this automatically.
+The `ingvar project setup` command detects your project type and configures this automatically.
 
 ## Security Considerations
 
@@ -115,7 +115,7 @@ For security best practices:
 
 If the token is compromised:
 1. Go to: https://github.com/settings/tokens
-2. Find "LEO Kit - Project Access"
+2. Find "Ingvar Kit - Project Access"
 3. Click **Revoke**
 4. Create a new token and update the secret
 
@@ -127,7 +127,7 @@ If the token is compromised:
 
 **Solution:** 
 ```bash
-leo project setup  # Follow PAT setup steps
+ingvar project setup  # Follow PAT setup steps
 ```
 
 ### "Input required and not supplied: github-token"
@@ -153,19 +153,19 @@ gh secret set GH_PROJECT_TOKEN --body "YOUR_TOKEN_HERE"
 
 3. Verify token has `project` scope:
    - Go to: https://github.com/settings/tokens
-   - Check "LEO Kit - Project Access" has ☑ project
+   - Check "Ingvar Kit - Project Access" has ☑ project
 
 4. Re-run setup to reconfigure:
    ```bash
-   leo project setup
+   ingvar project setup
    ```
 
 ## Quick Reference
 
 | Project Type | Token Needed | Setup Command | Works Immediately? |
 |--------------|--------------|---------------|-------------------|
-| Organization | `GITHUB_TOKEN` (built-in) | `leo project setup` | ✅ Yes |
-| User | `GH_PROJECT_TOKEN` (PAT) | `leo project setup` + PAT creation | ⚠️ After PAT setup |
+| Organization | `GITHUB_TOKEN` (built-in) | `ingvar project setup` | ✅ Yes |
+| User | `GH_PROJECT_TOKEN` (PAT) | `ingvar project setup` + PAT creation | ⚠️ After PAT setup |
 
 ## Related Documentation
 
@@ -176,6 +176,6 @@ gh secret set GH_PROJECT_TOKEN --body "YOUR_TOKEN_HERE"
 ## Support
 
 If you continue to experience issues:
-1. Check [Issue #39](https://github.com/leonpagotto/leo-kit/issues/39) for updates
-2. Run `leo project test` for diagnostic information
+1. Check [Issue #39](https://github.com/leopagotto/ingvar-kit/issues/39) for updates
+2. Run `ingvar project test` for diagnostic information
 3. Review GitHub Actions logs: `gh run list --workflow="Auto Assign to Project"`

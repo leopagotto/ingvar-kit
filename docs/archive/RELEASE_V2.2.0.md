@@ -33,7 +33,7 @@ When you describe work to GitHub Copilot, it automatically creates properly form
 
 1. ✅ Detects you're describing work to be done
 2. ✅ Extracts key information (type, priority, component)
-3. ✅ Runs `leo issue` command with smart defaults
+3. ✅ Runs `ingvar issue` command with smart defaults
 4. ✅ Creates issue with proper labels and description
 5. ✅ Confirms with issue number and link
 
@@ -67,14 +67,14 @@ When the user describes:
 
 1. Detect the intent
 2. Extract key information (priority, type, component)
-3. Use run_in_terminal tool: leo issue
+3. Use run_in_terminal tool: ingvar issue
 4. Fill prompts automatically based on extracted info
 5. Confirm to user with issue number and link
 ```
 
 ### 3. Interactive GitHub Authentication 🔐
 
-Added to `leo init` command:
+Added to `ingvar init` command:
 
 ```bash
 🔐 GitHub authentication required for full functionality
@@ -117,7 +117,7 @@ This enables automatic issue creation and GitHub API access
 ```
 User: "We need to fix the login button"
 User: *Opens terminal*
-User: leo issue
+User: ingvar issue
 Terminal: ? What type of issue?
 User: Bug
 Terminal: ? Title?
@@ -140,7 +140,7 @@ User: "We need to fix the login button not working on mobile"
 
 Copilot: *Detects intent*
 Copilot: *Extracts details*
-Copilot: *Runs leo issue automatically*
+Copilot: *Runs ingvar issue automatically*
 Copilot: ✅ Issue #42 created: Login button not working on mobile
          Priority: P1, Type: Bug, Component: Frontend/Mobile
          🔗 https://github.com/user/repo/issues/42
@@ -267,14 +267,14 @@ Acceptance Criteria:
 
 **Copilot uses:**
 
-1. `run_in_terminal` tool to execute `leo issue`
+1. `run_in_terminal` tool to execute `ingvar issue`
 2. Intent detection from user's natural language
 3. Context extraction for smart defaults
 4. Issue confirmation with link
 
-**LEO CLI provides:**
+**Ingvar CLI provides:**
 
-1. `leo issue` command for issue creation
+1. `ingvar issue` command for issue creation
 2. GitHub CLI integration (`gh auth`)
 3. Interactive prompts with defaults
 4. Proper labeling and formatting
@@ -301,9 +301,9 @@ Acceptance Criteria:
 
 **Enable for your team:**
 
-1. Install/update: `npm install -g leo-workflow-kit@2.2.0`
+1. Install/update: `npm install -g ingvar-kit@2.2.0`
 2. Authenticate: `gh auth login`
-3. Initialize project: `leo init` (auth check included)
+3. Initialize project: `ingvar init` (auth check included)
 4. Start describing work to Copilot!
 
 **Team benefits:**
@@ -342,7 +342,7 @@ Acceptance Criteria:
 ### Published to npm ✅
 
 ```
-Package: leo-workflow-kit@2.2.0
+Package: ingvar-kit@2.2.0
 Size: 47.4 kB (compressed)
 Unpacked: 154.7 kB
 Files: 24
@@ -355,19 +355,19 @@ Status: ✅ Live on npm registry
 Commit: eb65037
 Branch: main
 Status: ✅ Pushed
-Repository: leonpagotto/leo-kit
+Repository: leopagotto/ingvar-kit
 ```
 
 ### Verification ✅
 
 ```bash
-$ npm view leo-workflow-kit version
+$ npm view ingvar-kit version
 2.2.0 ✅
 
-$ npm install -g leo-workflow-kit@2.2.0
+$ npm install -g ingvar-kit@2.2.0
 ✅ Installs successfully
 
-$ leo --version
+$ ingvar --version
 2.2.0 ✅
 ```
 
@@ -377,15 +377,15 @@ $ leo --version
 
 ### Immediate (Ready to Use)
 
-✅ Install v2.2.0: `npm install -g leo-workflow-kit@2.2.0`
+✅ Install v2.2.0: `npm install -g ingvar-kit@2.2.0`
 ✅ Authenticate: `gh auth login`
 ✅ Talk to Copilot about work → issues created automatically!
 
 ### Coming Soon (Planned)
 
 - Voice command integration for hands-free issue creation
-- AI-powered commit message generation (`leo commit`)
-- Smart PR descriptions (`leo pr`)
+- AI-powered commit message generation (`ingvar commit`)
+- Smart PR descriptions (`ingvar pr`)
 - Design tool integrations (Figma, Sketch)
 - User research documentation helpers
 
@@ -405,7 +405,7 @@ $ leo --version
 ```
 ✅ Issue #XX created: Optimize postinstall script
    Priority: P2, Type: Enhancement
-   🔗 https://github.com/leonpagotto/leo-kit/issues/XX
+   🔗 https://github.com/leopagotto/ingvar-kit/issues/XX
 ```
 
 ---

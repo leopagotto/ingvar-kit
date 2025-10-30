@@ -87,11 +87,11 @@ APIServer
 
 **Commands Implemented:**
 
-- ✅ `leo dashboard start` - Launch API server
-- ✅ `leo dashboard stop` - Stop server (signals)
-- ✅ `leo dashboard status` - Check server health
-- ✅ `leo dashboard open` - Open browser
-- ✅ `leo dashboard docs` - Show API documentation
+- ✅ `ingvar dashboard start` - Launch API server
+- ✅ `ingvar dashboard stop` - Stop server (signals)
+- ✅ `ingvar dashboard status` - Check server health
+- ✅ `ingvar dashboard open` - Open browser
+- ✅ `ingvar dashboard docs` - Show API documentation
 
 **Features:**
 
@@ -104,8 +104,8 @@ APIServer
 **Example Usage:**
 
 ```bash
-$ leo dashboard start
-🚀 LEO Dashboard API Server
+$ ingvar dashboard start
+🚀 Ingvar Dashboard API Server
 
 ✅ Dashboard API Server Started!
 
@@ -192,13 +192,13 @@ Plus:
 
 **Plugin Commands:**
 
-- ✅ `leo plugin list` - List all plugins
-- ✅ `leo plugin info <name>` - Get plugin info
-- ✅ `leo plugin install <package>` - Install from npm
-- ✅ `leo plugin start <name>` - Start plugin
-- ✅ `leo plugin stop <name>` - Stop plugin
-- ✅ `leo plugin uninstall <package>` - Remove plugin
-- ✅ `leo plugin create <name>` - Generate template
+- ✅ `ingvar plugin list` - List all plugins
+- ✅ `ingvar plugin info <name>` - Get plugin info
+- ✅ `ingvar plugin install <package>` - Install from npm
+- ✅ `ingvar plugin start <name>` - Start plugin
+- ✅ `ingvar plugin stop <name>` - Stop plugin
+- ✅ `ingvar plugin uninstall <package>` - Remove plugin
+- ✅ `ingvar plugin create <name>` - Generate template
 
 **Plugin Interface:**
 
@@ -274,7 +274,7 @@ Total:       406 packages maintained
 ## 🗂️ File Structure Changes
 
 ```
-leo-workflow-kit/
+ingvar-kit/
 ├── lib/
 │   ├── commands/
 │   │   ├── dashboard.js          ✅ NEW (CLI commands)
@@ -302,7 +302,7 @@ leo-workflow-kit/
 ### Old Approach (❌ Rejected)
 
 ```
-leo-workflow-kit (monolithic)
+ingvar-kit (monolithic)
 ├── Hunt/Team CLI commands
 ├── GitHub integration
 ├── Slack integration
@@ -324,7 +324,7 @@ leo-workflow-kit (monolithic)
 ### New Architecture (✅ Adopted)
 
 ```
-leo-workflow-kit (lean core)
+ingvar-kit (lean core)
 ├── Hunt/Team CLI commands ✅
 ├── GitHub integration ✅
 ├── Slack integration ✅
@@ -355,29 +355,29 @@ leo-workflow-kit (lean core)
 ### Start API Server
 
 ```bash
-leo dashboard start
+ingvar dashboard start
 # API running on http://localhost:3000
 ```
 
 ### List Available Plugins
 
 ```bash
-leo plugin list
+ingvar plugin list
 # Shows all available plugins
 ```
 
 ### Create Custom Frontend
 
 ```bash
-leo plugin create my-dashboard
+ingvar plugin create my-dashboard
 # Generates plugin template with examples
 ```
 
 ### Install Web Dashboard (Future)
 
 ```bash
-leo plugin install leo-dashboard-web
-leo plugin start leo-web-dashboard
+ingvar plugin install leo-dashboard-web
+ingvar plugin start leo-web-dashboard
 # Web dashboard running on http://localhost:3001
 ```
 
@@ -418,32 +418,32 @@ The optional **leo-dashboard-web** plugin will demonstrate:
 ### With Hunt CLI
 
 ```bash
-leo hunt start              # Start hunt
-leo dashboard start         # API server running
+ingvar hunt start              # Start hunt
+ingvar dashboard start         # API server running
 # Hunt events broadcast via WebSocket
 ```
 
 ### With Team CLI
 
 ```bash
-leo team init               # Initialize team
-leo dashboard start         # API server running
+ingvar team init               # Initialize team
+ingvar dashboard start         # API server running
 # Team updates broadcast via WebSocket
 ```
 
 ### With GitHub Integration
 
 ```bash
-leo github auth             # GitHub authentication
-leo hunt start              # Create hunt + GitHub issue
-leo dashboard start         # Real-time GitHub updates
+ingvar github auth             # GitHub authentication
+ingvar hunt start              # Create hunt + GitHub issue
+ingvar dashboard start         # Real-time GitHub updates
 ```
 
 ### With Slack Integration
 
 ```bash
-leo slack auth              # Slack authentication
-leo hunt complete           # Hunt completion
+ingvar slack auth              # Slack authentication
+ingvar hunt complete           # Hunt completion
 # Notification sent via WebSocket → Slack plugin
 ```
 
@@ -691,7 +691,7 @@ With 100 events/sec: ~55MB
 ### Days 9-10: Create Example Web Plugin
 
 ```bash
-leo plugin create leo-dashboard-web
+ingvar plugin create leo-dashboard-web
 # Create reference implementation showing:
 # - Express server setup
 # - Frontend HTML/CSS/JS

@@ -1,4 +1,4 @@
-# LEO Kit 5.0.0 - Multi-Model AI & Enhanced Styling Implementation Complete
+# Ingvar Kit 5.0.0 - Multi-Model AI & Enhanced Styling Implementation Complete
 
 **Date:** October 24, 2025
 **Version:** 5.0.0
@@ -28,7 +28,7 @@ Successfully implemented **Claude 4.5 + Haiku multi-model support** and **ASCII 
 - **Model Selection Methods:**
 
   - CLI parameter: `--model opus-4-5`
-  - Environment variable: `LEO_MODEL=opus-4-5`
+  - Environment variable: `Ingvar_MODEL=opus-4-5`
   - Programmatic: `new MultiModelCodeGenerator({ model: 'opus-4-5' })`
   - Auto-selection: `new MultiModelCodeGenerator({ autoSelect: true })`
 
@@ -236,32 +236,32 @@ Successfully implemented **Claude 4.5 + Haiku multi-model support** and **ASCII 
 ### Example 1: Basic Generation (Defaults to Sonnet)
 
 ```bash
-leo spec generate
+ingvar spec generate
 ```
 
 ### Example 2: Use Claude 4.5 for Complex Project
 
 ```bash
-leo spec generate --model opus-4-5
+ingvar spec generate --model opus-4-5
 ```
 
 ### Example 3: Auto-Select Based on Complexity
 
 ```bash
-leo spec generate --auto-select
+ingvar spec generate --auto-select
 ```
 
 ### Example 4: Use Haiku for Quick Prototype
 
 ```bash
-leo spec generate --model haiku-3
+ingvar spec generate --model haiku-3
 ```
 
 ### Example 5: Set Default Model via Environment
 
 ```bash
-export LEO_MODEL=opus-4-5
-leo spec generate  # Uses Claude 4.5
+export Ingvar_MODEL=opus-4-5
+ingvar spec generate  # Uses Claude 4.5
 ```
 
 ### Example 6: Programmatic Usage (with v5.0.0 enhancements)
@@ -438,7 +438,7 @@ new AICodeGenerator({
 
 ## 🎉 Conclusion
 
-LEO Kit v5.0.0 successfully delivers:
+Ingvar Kit v5.0.0 successfully delivers:
 
 1. **Multi-model Claude AI integration** with Sonnet, 4, 4.5, and Haiku
 2. **Beautiful ASCII gradient styling** throughout the CLI

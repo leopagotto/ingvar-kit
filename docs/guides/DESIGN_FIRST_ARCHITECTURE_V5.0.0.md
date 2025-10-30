@@ -188,7 +188,7 @@ See `docs/guides/rapid-prototyping-standards.md` for detailed component patterns
 - Routing rules (single-agent, multi-agent)
 - Available agents overview
 - Multi-agent coordination patterns
-- LEO workflow enforcement
+- Ingvar workflow enforcement
 - Response structure templates
 
 **Who reads it:** All agents, to understand the overall system
@@ -206,7 +206,7 @@ See `docs/guides/rapid-prototyping-standards.md` for detailed component patterns
 - Component design blueprint (Avatar, Button examples)
 - Output standards (design spec template)
 - Handoff to Frontend (what to pass, format)
-- LEO workflow rules (issues, commits, status updates)
+- Ingvar workflow rules (issues, commits, status updates)
 
 **Who reads it:** Designer Agent, when handling UI/design work
 
@@ -224,7 +224,7 @@ See `docs/guides/rapid-prototyping-standards.md` for detailed component patterns
 - Accessibility standards (semantic HTML, ARIA, keyboard nav)
 - Performance guidelines (code splitting, memoization, images)
 - Handoff to Backend (API contract format)
-- LEO workflow rules
+- Ingvar workflow rules
 
 **Who reads it:** Frontend Agent, when implementing components
 
@@ -242,7 +242,7 @@ See `docs/guides/rapid-prototyping-standards.md` for detailed component patterns
 - Business logic implementation
 - Authentication & security
 - Performance & scaling
-- LEO workflow rules
+- Ingvar workflow rules
 
 **Who reads it:** Backend Agent, when implementing APIs
 
@@ -468,7 +468,7 @@ See `docs/guides/rapid-prototyping-standards.md` for detailed component patterns
 
 **End of Design-First Architecture v5.0.0 Summary**
 
-> **This is the future of development at LEO Workflow Kit:**
+> **This is the future of development at Ingvar Kit:**
 >
 > - Design-driven development
 > - Spec-driven development

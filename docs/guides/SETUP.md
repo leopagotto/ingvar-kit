@@ -1,4 +1,4 @@
-# LEO Kit 5.0.0 - Setup Guide
+# Ingvar Kit 5.0.0 - Setup Guide
 
 **Version:** 5.0.0
 **Released:** October 25, 2025
@@ -60,8 +60,8 @@ npm install -g @leo/kit
 **Verify installation:**
 
 ```bash
-leo --version
-leo spec init --help
+ingvar --version
+ingvar spec init --help
 ```
 
 **Update to latest version:**
@@ -82,7 +82,7 @@ cd my-project
 npm install --save-dev @leo/kit
 
 # Run with npx
-npx leo spec init my-feature
+npx ingvar spec init my-feature
 ```
 
 **Or add to package.json:**
@@ -93,7 +93,7 @@ npx leo spec init my-feature
     "@leo/kit": "^5.0.0"
   },
   "scripts": {
-    "spec": "leo spec"
+    "spec": "ingvar spec"
   }
 }
 ```
@@ -110,7 +110,7 @@ npm run spec init my-feature
 
 ```bash
 # Clone repository
-git clone https://github.com/leonpagotto/leo-kit.git
+git clone https://github.com/leopagotto/ingvar-kit.git
 cd leo-kit
 
 # Install dependencies
@@ -120,7 +120,7 @@ npm install
 npm link
 
 # Verify
-leo --version
+ingvar --version
 ```
 
 **Update from source:**
@@ -139,13 +139,13 @@ npm link
 ```dockerfile
 FROM node:18-alpine
 
-# Install LEO Kit
+# Install Ingvar Kit
 RUN npm install -g @leo/kit
 
 WORKDIR /workspace
 
 # Initialize
-RUN leo spec init my-feature
+RUN ingvar spec init my-feature
 
 CMD ["leo", "dashboard", "start"]
 ```
@@ -179,7 +179,7 @@ npm --version
 - Windows: Download from https://nodejs.org
 - Linux: `apt-get install nodejs npm` (Ubuntu/Debian)
 
-### Step 2: Install LEO Kit
+### Step 2: Install Ingvar Kit
 
 ```bash
 npm install -g @leo/kit
@@ -214,7 +214,7 @@ ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-xxxxxxxx"
-leo spec implement
+ingvar spec implement
 ```
 
 **Get your API Key:**
@@ -242,7 +242,7 @@ touch .gitignore
 ### Step 5: Initialize First Specification
 
 ```bash
-leo spec init my-first-feature
+ingvar spec init my-first-feature
 ```
 
 You should see:
@@ -297,20 +297,20 @@ Create `.env` file:
 ```bash
 # API Configuration
 ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
-LEO_API_PORT=3000
-LEO_API_HOST=localhost
+Ingvar_API_PORT=3000
+Ingvar_API_HOST=localhost
 
 # Project Configuration
-LEO_PROJECT_NAME="My Project"
-LEO_OUTPUT_DIR=".leo/generated"
+Ingvar_PROJECT_NAME="My Project"
+Ingvar_OUTPUT_DIR=".leo/generated"
 
 # Development
-LEO_DEBUG=false
-LEO_LOG_LEVEL=info
+Ingvar_DEBUG=false
+Ingvar_LOG_LEVEL=info
 
 # Advanced
-LEO_TIMEOUT=30000
-LEO_MAX_RETRIES=3
+Ingvar_TIMEOUT=30000
+Ingvar_MAX_RETRIES=3
 ```
 
 ### Directory Structure
@@ -319,7 +319,7 @@ Recommended project layout:
 
 ```
 my-project/
-├── .leo/                       # LEO Kit workspace
+├── .leo/                       # Ingvar Kit workspace
 │   ├── generated/              # Generated code output
 │   ├── templates/              # Custom templates
 │   └── cache/                  # Cache files
@@ -335,7 +335,7 @@ my-project/
 ├── tests/                      # Test files
 ├── docs/                       # Documentation
 ├── .env                        # Environment variables
-├── leo.config.json             # LEO configuration
+├── leo.config.json             # Ingvar configuration
 ├── package.json                # NPM configuration
 └── README.md                   # Project README
 ```
@@ -355,7 +355,7 @@ yarn.lock
 .env.local
 .env.*.local
 
-# LEO Kit
+# Ingvar Kit
 .leo/generated/*
 .leo/cache/
 *.log
@@ -386,26 +386,26 @@ Run through these steps to verify everything works:
 #### Step 1: Check Installation
 
 ```bash
-leo --version
+ingvar --version
 
 # Expected output:
-# LEO Kit v5.0.0
+# Ingvar Kit v5.0.0
 # Ready to go! 🚀
 ```
 
 #### Step 2: Check Commands
 
 ```bash
-leo spec --help
+ingvar spec --help
 
 # Should show all spec commands
-# leo spec <command>
+# ingvar spec <command>
 ```
 
 #### Step 3: Create Test Project
 
 ```bash
-leo spec init test-project
+ingvar spec init test-project
 
 # Expected output:
 # ✅ Specification initialized for test-project
@@ -415,7 +415,7 @@ leo spec init test-project
 #### Step 4: Verify API Server
 
 ```bash
-leo dashboard start
+ingvar dashboard start
 
 # Expected output:
 # 🚀 Dashboard server started
@@ -437,11 +437,11 @@ If you configured ANTHROPIC_API_KEY:
 
 ```bash
 # Create specification
-leo spec specify
+ingvar spec specify
 
 # Add simple requirement to specification.md
 # Then generate code:
-leo spec implement
+ingvar spec implement
 
 # Should see:
 # ✨ Generating with Claude 3.5 Sonnet...
@@ -466,7 +466,7 @@ Create `verify.sh`:
 ```bash
 #!/bin/bash
 
-echo "🔍 LEO Kit Verification"
+echo "🔍 Ingvar Kit Verification"
 echo ""
 
 # 1. Check Node
@@ -474,10 +474,10 @@ echo "1. Checking Node.js..."
 node --version
 if [ $? -eq 0 ]; then echo "✅ Node.js OK"; else echo "❌ Node.js FAILED"; exit 1; fi
 
-# 2. Check LEO
-echo "2. Checking LEO Kit..."
-leo --version
-if [ $? -eq 0 ]; then echo "✅ LEO Kit OK"; else echo "❌ LEO Kit FAILED"; exit 1; fi
+# 2. Check Ingvar
+echo "2. Checking Ingvar Kit..."
+ingvar --version
+if [ $? -eq 0 ]; then echo "✅ Ingvar Kit OK"; else echo "❌ Ingvar Kit FAILED"; exit 1; fi
 
 # 3. Check API Key
 echo "3. Checking API Key..."
@@ -489,20 +489,20 @@ fi
 
 # 4. Create test spec
 echo "4. Creating test specification..."
-leo spec init verify-test
+ingvar spec init verify-test
 if [ $? -eq 0 ]; then echo "✅ Spec creation OK"; else echo "❌ Spec creation FAILED"; exit 1; fi
 
 # 5. Test API server
 echo "5. Testing API server..."
-leo dashboard start &
+ingvar dashboard start &
 sleep 2
 curl -s http://localhost:3000/api/specs > /dev/null
 if [ $? -eq 0 ]; then echo "✅ API server OK"; else echo "❌ API server FAILED"; exit 1; fi
-leo dashboard stop
+ingvar dashboard stop
 
 echo ""
 echo "✅ All verification checks passed!"
-echo "You're ready to start building with LEO Kit!"
+echo "You're ready to start building with Ingvar Kit!"
 ```
 
 Run verification:
@@ -518,19 +518,19 @@ Quick 2-minute verification:
 
 ```bash
 # 1. Version
-leo --version
+ingvar --version
 
 # 2. Initialize
-leo spec init quick-test
+ingvar spec init quick-test
 
 # 3. Check files created
 ls quick-test/
 
 # 4. Status
-leo spec status
+ingvar spec status
 
 # 5. You're done!
-echo "✅ LEO Kit is working!"
+echo "✅ Ingvar Kit is working!"
 ```
 
 ---
@@ -539,7 +539,7 @@ echo "✅ LEO Kit is working!"
 
 ### Problem: "leo: command not found"
 
-**Cause:** LEO Kit not installed or not in PATH
+**Cause:** Ingvar Kit not installed or not in PATH
 
 **Solutions:**
 
@@ -571,7 +571,7 @@ export PATH=~/.npm-global/bin:$PATH
 
 # Option 3: Use local install
 npm install --save-dev @leo/kit
-npx leo spec init my-feature
+npx ingvar spec init my-feature
 ```
 
 ### Problem: "Module not found"
@@ -597,7 +597,7 @@ npm update
 
 ```bash
 # Use different port
-leo dashboard start --port 3001
+ingvar dashboard start --port 3001
 
 # Or kill process on port 3000
 lsof -ti :3000 | xargs kill -9
@@ -636,10 +636,10 @@ cat .env | grep ANTHROPIC_API_KEY
 pwd
 
 # List existing specs
-leo spec status
+ingvar spec status
 
 # Initialize if needed
-leo spec init my-feature
+ingvar spec init my-feature
 ```
 
 ### Problem: "Node version too old"
@@ -706,7 +706,7 @@ npm test -- --verbose --bail
 # Create .env in project root
 cat > .env << EOF
 ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
-LEO_API_PORT=3000
+Ingvar_API_PORT=3000
 EOF
 
 # Or set environment variables directly
@@ -725,7 +725,7 @@ export ANTHROPIC_API_KEY="sk-ant-xxxxxxxx"
 # Install Node if not present
 brew install node
 
-# Install LEO Kit
+# Install Ingvar Kit
 npm install -g @leo/kit
 
 # Set API key (in ~/.zshrc or ~/.bash_profile)
@@ -735,7 +735,7 @@ source ~/.zshrc
 
 **Apple Silicon (M1/M2/M3):**
 
-LEO Kit works natively on Apple Silicon. No special setup needed.
+Ingvar Kit works natively on Apple Silicon. No special setup needed.
 
 ### Windows Setup
 
@@ -745,7 +745,7 @@ LEO Kit works natively on Apple Silicon. No special setup needed.
 # Install Node if not present
 winget install OpenJS.NodeJS
 
-# Install LEO Kit
+# Install Ingvar Kit
 npm install -g @leo/kit
 
 # Set API key permanently
@@ -774,7 +774,7 @@ npm install -g @leo/kit
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-# Install LEO Kit
+# Install Ingvar Kit
 npm install -g @leo/kit
 
 # Set API key (add to ~/.bashrc)
@@ -789,7 +789,7 @@ source ~/.bashrc
 curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
 sudo yum install -y nodejs
 
-# Install LEO Kit
+# Install Ingvar Kit
 npm install -g @leo/kit
 ```
 
@@ -797,9 +797,9 @@ npm install -g @leo/kit
 
 ## Next Steps
 
-1. ✅ **Install LEO Kit** - `npm install -g @leo/kit`
+1. ✅ **Install Ingvar Kit** - `npm install -g @leo/kit`
 2. ✅ **Configure API Key** - Set `ANTHROPIC_API_KEY`
-3. ✅ **Create First Project** - `leo spec init my-project`
+3. ✅ **Create First Project** - `ingvar spec init my-project`
 4. ✅ **Read User Guide** - See `USER_GUIDE.md`
 5. ✅ **Try Examples** - See `docs/tutorials/`
 
@@ -807,9 +807,9 @@ npm install -g @leo/kit
 
 ## Getting Help
 
-- **Documentation:** https://github.com/leonpagotto/leo-kit/tree/main/docs
-- **Issues:** https://github.com/leonpagotto/leo-kit/issues
-- **Discussions:** https://github.com/leonpagotto/leo-kit/discussions
+- **Documentation:** https://github.com/leopagotto/ingvar-kit/tree/main/docs
+- **Issues:** https://github.com/leopagotto/ingvar-kit/issues
+- **Discussions:** https://github.com/leopagotto/ingvar-kit/discussions
 - **Email:** support@leokit.dev
 
 ---

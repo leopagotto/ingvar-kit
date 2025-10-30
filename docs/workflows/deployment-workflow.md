@@ -14,11 +14,11 @@ gh issue create --title "Deploy [Component] to [Platform]" \
 
 **NO EXCEPTIONS.** Even for "quick deploys" - create the issue first!
 
-### 2. Check for `.leorc.json` Configuration
+### 2. Check for `.ingvarrc.json` Configuration
 
 ```bash
 # Check if auto-resolve is enabled
-cat .leorc.json | grep "auto-resolve"
+cat .ingvarrc.json | grep "auto-resolve"
 ```
 
 - If `auto-resolve: false` → Wait for user review before working
@@ -271,7 +271,7 @@ Copy this checklist to your deployment issue:
 
 - [ ] GitHub issue created (#XXX)
 - [ ] Deployment spec created (if complex)
-- [ ] `.leorc.json` checked for auto-resolve setting
+- [ ] `.ingvarrc.json` checked for auto-resolve setting
 - [ ] Environment variables documented
 - [ ] Build directory identified
 - [ ] Required files identified

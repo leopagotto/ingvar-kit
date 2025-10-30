@@ -143,20 +143,104 @@ program
     modelCommand(subcommand, ...args);
   });
 
-// Spark command - Rapid app generation from prompts
+// Natural Language Command Handler - Intelligent detection for app creation
+program
+  .command('detect [input...]')
+  .alias('d')
+  .description('🤖 Intelligent natural language command detection')
+  .option('--dry-run', 'Show detected intent without executing')
+  .option('--style <style>', 'Design style (ikea, default)', 'ikea')
+  .action(async (input, options) => {
+    const inputText = input.join(' ');
+    if (!inputText) {
+      console.log(chalk.yellow('\n💬 Natural Language Command Detection\n'));
+      console.log('Examples:');
+      console.log(chalk.cyan('  ingvar detect "create an app"'));
+      console.log(chalk.cyan('  ingvar detect "build a task management app"'));
+      console.log(chalk.cyan('  ingvar detect "make a dashboard with charts"'));
+      console.log(chalk.cyan('  ingvar detect "generate a landing page"'));
+      console.log(chalk.gray('\nOr just say what you want naturally!\n'));
+      return;
+    }
+
+    console.log(banner);
+    const { NaturalLanguageDetector } = require('../lib/ai/natural-language-detector');
+    const detector = new NaturalLanguageDetector();
+
+    try {
+      console.log(chalk.cyan(`\n🤖 Analyzing: "${inputText}"\n`));
+
+      const result = await detector.detectIntent(inputText);
+
+      console.log(chalk.blue('� Detection Results:'));
+      console.log(`   Intent: ${chalk.bold(result.intent)}`);
+      console.log(`   Confidence: ${result.confidence * 100}%`);
+      console.log(`   Action: ${result.action || 'none'}`);
+
+      if (result.parameters && Object.keys(result.parameters).length > 0) {
+        console.log(`   Parameters:`);
+        Object.entries(result.parameters).forEach(([key, value]) => {
+          console.log(`     ${key}: ${JSON.stringify(value)}`);
+        });
+      }
+
+      if (options.dryRun) {
+        console.log(chalk.gray('\n(Dry run - no action taken)\n'));
+        return;
+      }
+
+      // Execute detected action
+      if (result.intent === 'create_app' && result.action === 'spark_generate') {
+        console.log(chalk.green('\n✨ Creating app with IKEA design system...\n'));
+
+        const SparkGenerator = require('../lib/commands/spark-generator');
+        const generator = new SparkGenerator();
+
+        await generator.create({
+          prompt: result.parameters.prompt,
+          name: result.parameters.name,
+          style: options.style,
+          dir: './spark-apps'
+        });
+      } else if (result.confidence < 0.5) {
+        console.log(chalk.yellow('\n⚠️  Low confidence detection. Try being more specific:'));
+        console.log(chalk.gray('  - "create a dashboard app"'));
+        console.log(chalk.gray('  - "build a todo list application"'));
+        console.log(chalk.gray('  - "generate a landing page"\n'));
+      } else {
+        console.log(chalk.yellow(`\n⚠️  Action "${result.action}" not yet implemented\n`));
+      }
+
+    } catch (error) {
+      console.error(chalk.red(`\n❌ Error detecting intent: ${error.message}\n`));
+      if (process.env.DEBUG) console.error(error);
+    }
+  });
+
+// Spark command - Enhanced with IKEA Ingka Skapa Design System
 program
   .command('spark')
-  .description('🚀 Generate complete React apps from prompts using Spark template + Ingvar AI')
+  .description('🚀 Generate complete React apps with official IKEA Ingka design system')
   .option('-p, --prompt <text>', 'Describe the app you want to build')
   .option('-n, --name <name>', 'App name (will be slugified)')
   .option('-d, --dir <directory>', 'Output directory', './spark-apps')
+  .option('-s, --style <style>', 'Design style: ingka (official IKEA), ikea (custom), default', 'default')
   .option('--no-install', 'Skip npm install')
   .option('--no-start', 'Skip starting dev server')
   .action(async (options) => {
     console.log(banner);
+
+    // Import the spark generator with Ingka support
     const SparkGenerator = require('../lib/commands/spark-generator');
     const generator = new SparkGenerator();
-    await generator.create(options);
+
+    try {
+      await generator.create(options);
+    } catch (error) {
+      console.error(chalk.red('❌ Error creating Spark app:'), error.message);
+      if (process.env.DEBUG) console.error(error);
+      process.exit(1);
+    }
   });// Status command - Check workflow setup status (simple)
 program
   .command('status')

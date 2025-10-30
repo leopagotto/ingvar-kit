@@ -140,19 +140,19 @@ gh repo create <your-org>/ingvar-kit \
 ```powershell
 cd c:\ingvar-kit\leo-kit
 
-# Remove old LEO-specific files (optional - move to archive)
+# Remove old Ingvar-specific files (optional - move to archive)
 # Don't delete these yet - just note them:
-# - .leorc.json.example (we have .ingvarrc.json.example)
-# - RELEASE_V*.md (LEO version history)
-# - SESSION_SUMMARY_*.md (LEO dev logs)
-# - LEO_KIT_BUG_REPORT.md
+# - .ingvarrc.json.example (we have .ingvarrc.json.example)
+# - RELEASE_V*.md (Ingvar version history)
+# - SESSION_SUMMARY_*.md (Ingvar dev logs)
+# - Ingvar_KIT_BUG_REPORT.md
 ```
 
 ### Step 2: Rename README
 
 ```powershell
 # Backup current README
-Move-Item README.md README_LEO_ORIGINAL.md
+Move-Item README.md README_Ingvar_ORIGINAL.md
 
 # Use Ingvar README
 Move-Item README_INGVAR.md README.md
@@ -185,7 +185,7 @@ These files can be updated later or removed:
 - `wiki/` - Wiki pages (can update separately)
 - `CHANGELOG.md` - Add v1.0.0 entry
 - `CONTRIBUTING.md` - Add Ingka contribution guidelines
-- `templates/` - Review for LEO references
+- `templates/` - Review for Ingvar references
 
 ---
 
@@ -240,7 +240,7 @@ git add CHANGELOG.md
 ```powershell
 git commit -m "feat: initial release of Ingvar Kit v1.0.0
 
-- Rebranded from LEO Kit to Ingvar Kit
+- Rebranded from Ingvar Kit to Ingvar Kit
 - Named after Ingvar Kamprad (IKEA founder)
 - Aligned with Ingka Way of Working
 - IKEA Blue & Yellow branding

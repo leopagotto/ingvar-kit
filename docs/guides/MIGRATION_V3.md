@@ -8,7 +8,7 @@
 
 ### Multi-AI Assistant Support 🤖
 
-v3.0.0 expands LEO Kit beyond GitHub Copilot to support **4 AI coding assistants**:
+v3.0.0 expands Ingvar Kit beyond GitHub Copilot to support **4 AI coding assistants**:
 
 1. **GitHub Copilot** - Original supported AI (.github/copilot-instructions.md)
 2. **Cursor (Claude)** - Claude-powered IDE with Composer Mode (.cursorrules)
@@ -17,10 +17,10 @@ v3.0.0 expands LEO Kit beyond GitHub Copilot to support **4 AI coding assistants
 
 ### New Commands
 
-- `leo ai list` - Show configured AI assistants
-- `leo ai add <name>` - Add new AI assistant
-- `leo ai remove <name>` - Remove AI assistant
-- `leo ai sync` - Regenerate all AI instruction files
+- `ingvar ai list` - Show configured AI assistants
+- `ingvar ai add <name>` - Add new AI assistant
+- `ingvar ai remove <name>` - Remove AI assistant
+- `ingvar ai sync` - Regenerate all AI instruction files
 
 ---
 
@@ -32,16 +32,16 @@ v3.0.0 expands LEO Kit beyond GitHub Copilot to support **4 AI coding assistants
 
 ```bash
 # Update to v3.0.0
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-kit@latest
 
 # Add additional AI assistants (optional)
 cd your-project
-leo ai add cursor    # If you use Cursor IDE
-leo ai add cline     # If you use Cline extension
-leo ai add codeium   # If you use Codeium
+ingvar ai add cursor    # If you use Cursor IDE
+ingvar ai add cline     # If you use Cline extension
+ingvar ai add codeium   # If you use Codeium
 
 # List configured AIs
-leo ai list
+ingvar ai list
 ```
 
 **Your existing `.github/copilot-instructions.md` remains unchanged and continues working!**
@@ -55,7 +55,7 @@ If you want to reconfigure from scratch:
 mv .github/copilot-instructions.md .github/copilot-instructions.md.backup
 
 # Re-run init with multi-AI selection
-leo init
+ingvar init
 
 # Select your AI assistants during setup
 # Choose all that you use (Copilot, Cursor, Cline, Codeium)
@@ -73,7 +73,7 @@ leo init
 
 ### New Configuration File
 
-v3.0.0 adds an `ai-assistants` section to `.leorc.json`:
+v3.0.0 adds an `ai-assistants` section to `.ingvarrc.json`:
 
 ```json
 {
@@ -85,7 +85,7 @@ v3.0.0 adds an `ai-assistants` section to `.leorc.json`:
 }
 ```
 
-**This is created automatically when you run `leo ai add <name>`.**
+**This is created automatically when you run `ingvar ai add <name>`.**
 
 ---
 
@@ -93,10 +93,10 @@ v3.0.0 adds an `ai-assistants` section to `.leorc.json`:
 
 ### Example: Adding Cursor Support
 
-If you use **Cursor IDE** (Claude-powered), generate LEO workflow instructions for it:
+If you use **Cursor IDE** (Claude-powered), generate Ingvar workflow instructions for it:
 
 ```bash
-leo ai add cursor
+ingvar ai add cursor
 ```
 
 **Output:**
@@ -108,7 +108,7 @@ leo ai add cursor
 
 This creates a **41KB `.cursorrules` file** with:
 
-- Full LEO workflow standards
+- Full Ingvar workflow standards
 - Cursor-specific tips (Composer Mode, @filename, Cmd+K shortcuts)
 - Claude's strengths (contextual understanding, refactoring)
 - Best practices for Cursor/Claude workflow
@@ -117,16 +117,16 @@ This creates a **41KB `.cursorrules` file** with:
 
 ```bash
 # Add Cursor for Claude-powered IDE
-leo ai add cursor
+ingvar ai add cursor
 
 # Add Cline for autonomous coding tasks
-leo ai add cline
+ingvar ai add cline
 
 # Add Codeium for free AI completion
-leo ai add codeium
+ingvar ai add codeium
 
 # Check what's configured
-leo ai list
+ingvar ai list
 ```
 
 **Output:**
@@ -152,14 +152,14 @@ leo ai list
 
 ### When to Sync
 
-Run `leo ai sync` after:
+Run `ingvar ai sync` after:
 
-- Updating LEO Kit to a new version
+- Updating Ingvar Kit to a new version
 - Modifying your project's workflow standards
 - Adding new team members who need consistent AI instructions
 
 ```bash
-leo ai sync
+ingvar ai sync
 ```
 
 **Output:**
@@ -178,7 +178,7 @@ leo ai sync
   ✓ Success: 4
 ```
 
-This **regenerates all AI instruction files** with the latest LEO workflow standards.
+This **regenerates all AI instruction files** with the latest Ingvar workflow standards.
 
 ---
 
@@ -187,13 +187,13 @@ This **regenerates all AI instruction files** with the latest LEO workflow stand
 If you stop using an AI assistant:
 
 ```bash
-leo ai remove cursor
+ingvar ai remove cursor
 ```
 
 **This will:**
 
 1. Delete the `.cursorrules` file
-2. Remove `cursor` from your `.leorc.json` config
+2. Remove `cursor` from your `.ingvarrc.json` config
 3. Update primary AI if needed
 
 ---
@@ -203,7 +203,7 @@ leo ai remove cursor
 If you use multiple AI assistants, set your **primary** (most-used) AI:
 
 ```bash
-# Edit .leorc.json manually
+# Edit .ingvarrc.json manually
 {
   "ai-assistants": {
     "enabled": ["copilot", "cursor", "cline"],
@@ -213,7 +213,7 @@ If you use multiple AI assistants, set your **primary** (most-used) AI:
 }
 ```
 
-Or select during `leo init` when prompted:
+Or select during `ingvar init` when prompted:
 
 ```
 ? Which AI assistant do you use most often? (Sets as primary)
@@ -237,7 +237,7 @@ Or select during `leo init` when prompted:
 
 ### Can I Use Multiple AIs Together?
 
-**Yes!** LEO Kit generates separate instruction files for each AI:
+**Yes!** Ingvar Kit generates separate instruction files for each AI:
 
 ```
 project/
@@ -273,7 +273,7 @@ ls -la .github/copilot-instructions.md
 If missing, regenerate:
 
 ```bash
-leo ai add copilot
+ingvar ai add copilot
 ```
 
 ### Q: Which AI should I use?
@@ -281,9 +281,9 @@ leo ai add copilot
 **A:** Start with your current AI and add more as needed:
 
 - Already use Copilot? Keep using it!
-- Use Cursor IDE? Run `leo ai add cursor`
-- Want autonomous coding? Try `leo ai add cline`
-- Budget-conscious? Try `leo ai add codeium`
+- Use Cursor IDE? Run `ingvar ai add cursor`
+- Want autonomous coding? Try `ingvar ai add cline`
+- Budget-conscious? Try `ingvar ai add codeium`
 
 ### Q: Do I have to use all 4 AIs?
 
@@ -298,17 +298,17 @@ leo ai add copilot
 
 ```bash
 # Remove other AIs
-leo ai remove cursor
-leo ai remove cline
-leo ai remove codeium
+ingvar ai remove cursor
+ingvar ai remove cline
+ingvar ai remove codeium
 
 # Verify only Copilot remains
-leo ai list
+ingvar ai list
 ```
 
 ### Q: Does this affect my existing workflow?
 
-**No!** The core LEO workflow remains the same:
+**No!** The core Ingvar workflow remains the same:
 
 1. Write specs in `docs/specs/`
 2. Create GitHub issues
@@ -321,10 +321,10 @@ v3.0.0 just extends this workflow to more AI assistants.
 
 ## 📚 Additional Resources
 
-- **Full Documentation:** https://github.com/leonpagotto/leo-kit/wiki
+- **Full Documentation:** https://github.com/leopagotto/ingvar-kit/wiki
 - **v3.0.0 Release Notes:** [CHANGELOG.md](../CHANGELOG.md)
 - **Multi-AI Specification:** [docs/specs/multi-ai-support.md](specs/multi-ai-support.md)
-- **Issue #14:** https://github.com/leonpagotto/leo-kit/issues/14
+- **Issue #14:** https://github.com/leopagotto/ingvar-kit/issues/14
 
 ---
 
@@ -332,17 +332,17 @@ v3.0.0 just extends this workflow to more AI assistants.
 
 ### For Package Developers
 
-If you're building on top of LEO Kit:
+If you're building on top of Ingvar Kit:
 
 **Changed:**
 
 - `copilot-instructions-template.js` is now used as a **universal base template**
 - New adapter system in `lib/ai-instructions/`
-- `leo init` now prompts for AI selection (can be skipped with `--non-interactive`)
+- `ingvar init` now prompts for AI selection (can be skipped with `--non-interactive`)
 
 **Added:**
 
-- New `leo ai` command with subcommands
+- New `ingvar ai` command with subcommands
 - New `ai-assistants` config section
 - New adapter classes: `BaseAIAdapter`, `CopilotAdapter`, `CursorAdapter`, etc.
 
@@ -354,17 +354,17 @@ If you're building on top of LEO Kit:
 
 ## ✅ Migration Checklist
 
-- [ ] Update to v3.0.0: `npm install -g leo-workflow-kit@latest`
+- [ ] Update to v3.0.0: `npm install -g ingvar-kit@latest`
 - [ ] Verify existing Copilot instructions still exist: `ls .github/copilot-instructions.md`
-- [ ] Add AI assistants you use: `leo ai add <name>`
-- [ ] Test new commands: `leo ai list`, `leo ai sync`
+- [ ] Add AI assistants you use: `ingvar ai add <name>`
+- [ ] Test new commands: `ingvar ai list`, `ingvar ai sync`
 - [ ] Update team documentation about multi-AI support
 - [ ] Consider which AI assistant is best for different tasks
-- [ ] Configure `.leorc.json` with your primary AI
+- [ ] Configure `.ingvarrc.json` with your primary AI
 - [ ] Share migration guide with team members
 
 ---
 
-**Questions or issues?** Open an issue: https://github.com/leonpagotto/leo-kit/issues
+**Questions or issues?** Open an issue: https://github.com/leopagotto/ingvar-kit/issues
 
 **v3.0.0 Status:** ✅ Phase 1 Complete - All 4 AI assistants supported!

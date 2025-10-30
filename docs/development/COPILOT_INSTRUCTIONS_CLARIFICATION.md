@@ -15,9 +15,9 @@ Initially, we optimized **`.github/copilot-instructions.md`** (this project's ow
 
 After understanding the distinction, we now have the CORRECT setup:
 
-### 1. `.github/copilot-instructions.md` (THIS PROJECT - LEO CLI Kit)
+### 1. `.github/copilot-instructions.md` (THIS PROJECT - Ingvar CLI Kit)
 
-**Purpose**: Guide GitHub Copilot when developing the LEO CLI kit itself
+**Purpose**: Guide GitHub Copilot when developing the Ingvar CLI kit itself
 **Size**: 242 lines (workflow-focused)
 **Content**:
 
@@ -43,7 +43,7 @@ After understanding the distinction, we now have the CORRECT setup:
 
 ### 2. `lib/copilot-instructions-template.js` (USER PROJECTS)
 
-**Purpose**: Template that gets installed into user projects when they run `leo init`
+**Purpose**: Template that gets installed into user projects when they run `ingvar init`
 **Size**: 1,143 lines (comprehensive)
 **Content**:
 
@@ -73,7 +73,7 @@ After understanding the distinction, we now have the CORRECT setup:
 
 | Aspect            | `.github/copilot-instructions.md` | `lib/copilot-instructions-template.js` |
 | ----------------- | --------------------------------- | -------------------------------------- |
-| **Audience**      | LEO CLI developers                | LEO Kit users                          |
+| **Audience**      | Ingvar CLI developers                | Ingvar Kit users                          |
 | **Context**       | Developing the CLI tool           | Any project type                       |
 | **Size**          | 242 lines (focused)               | 1,143 lines (comprehensive)            |
 | **UI Standards**  | ❌ Not needed                     | ✅ Included                            |
@@ -144,7 +144,7 @@ workflow-cli/
 - [x] Workflow-focused (242 lines)
 - [x] Automatic issue creation prominent
 - [x] No UI/SEO content (not needed for CLI)
-- [x] Perfect for developing the LEO CLI kit
+- [x] Perfect for developing the Ingvar CLI kit
 - [x] "Eating our own dog food" - using the workflow we teach
 
 ### `lib/copilot-instructions-template.js` (User Template)

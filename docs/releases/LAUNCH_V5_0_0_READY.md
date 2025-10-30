@@ -1,4 +1,4 @@
-# 🚀 LEO Kit 5.0.0 - LAUNCH READY
+# 🚀 Ingvar Kit 5.0.0 - LAUNCH READY
 
 **Date:** October 24, 2025  
 **Status:** ✅ PRODUCTION READY  
@@ -9,7 +9,7 @@
 
 ## 🎯 Executive Summary
 
-LEO Kit v5.0.0 is **production-ready** and fully deployed with:
+Ingvar Kit v5.0.0 is **production-ready** and fully deployed with:
 
 ✅ **Multi-Model Claude AI** (Sonnet • 4 • 4.5 • Haiku)  
 ✅ **Beautiful ASCII Gradients** (Fire, Ocean, Forest, Purple, Rainbow)  
@@ -26,19 +26,19 @@ LEO Kit v5.0.0 is **production-ready** and fully deployed with:
 
 ```bash
 # Default (Claude 3.5 Sonnet - balanced)
-leo spec generate
+ingvar spec generate
 
 # Use Claude 4 (advanced reasoning)
-leo spec generate --model opus-4
+ingvar spec generate --model opus-4
 
 # Use Claude 4.5 (maximum capabilities)
-leo spec generate --model opus-4-5
+ingvar spec generate --model opus-4-5
 
 # Use Claude Haiku (fast & lightweight)
-leo spec generate --model haiku-3
+ingvar spec generate --model haiku-3
 
 # Auto-select best model
-leo spec generate --auto-select
+ingvar spec generate --auto-select
 ```
 
 ### 2. Model Comparison

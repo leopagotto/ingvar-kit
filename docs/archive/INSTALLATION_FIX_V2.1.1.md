@@ -3,7 +3,7 @@
 
 ## Problem Identified
 
-User reported that when installing `leo-workflow-kit` via npm, the necessary files (GitHub Copilot instructions, JSON configs, templates) were not being installed automatically. The postinstall script was not setting up the files in the project.
+User reported that when installing `ingvar-kit` via npm, the necessary files (GitHub Copilot instructions, JSON configs, templates) were not being installed automatically. The postinstall script was not setting up the files in the project.
 
 ### Root Causes
 
@@ -13,7 +13,7 @@ User reported that when installing `leo-workflow-kit` via npm, the necessary fil
 
 3. **Missing .npmignore** - All development documentation was being published unnecessarily (94 KB package size)
 
-4. **Unclear installation flow** - Users didn't understand that files are installed via `leo init`, not during `npm install`
+4. **Unclear installation flow** - Users didn't understand that files are installed via `ingvar init`, not during `npm install`
 
 ## Solutions Implemented
 
@@ -66,24 +66,24 @@ UX_DESIGNER_FEATURES.md
 // Detects:
 - isGlobalInstall() // Global vs local installation
 - isGitRepo()       // If user is in a git repository
-- isLeoInitialized() // If LEO is already set up
+- isLeoInitialized() // If Ingvar is already set up
 ```
 
 #### Context-Aware Messaging
 
 **Global Install:**
 - Shows standard welcome banner
-- Explains to navigate to a project and run `leo init`
+- Explains to navigate to a project and run `ingvar init`
 
 **Local Install in Git Repo (Not Initialized):**
 - Shows welcome banner
-- **NEW:** Suggests running `npx leo init` for quick setup
+- **NEW:** Suggests running `npx ingvar init` for quick setup
 - Lists what will be installed
-- Mentions `LEO_AUTO_INIT=true` option for future
+- Mentions `Ingvar_AUTO_INIT=true` option for future
 
 **Local Install in Git Repo (Already Initialized):**
 - Shows success message
-- Suggests `npx leo status` to check workflow
+- Suggests `npx ingvar status` to check workflow
 
 **Local Install (Not in Git Repo):**
 - Shows warning
@@ -111,7 +111,7 @@ Files: 24 (only essentials)
 
 ### Global Installation
 ```bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 
 # You get:
 - ✅ CLI tool accessible as `leo` command
@@ -120,26 +120,26 @@ npm install -g leo-workflow-kit
 
 # To set up in a project:
 cd your-project
-leo init  # This installs files
+ingvar init  # This installs files
 ```
 
 ### Local Installation
 ```bash
 cd your-project
-npm install leo-workflow-kit
+npm install ingvar-kit
 
 # Postinstall detects:
 - ✅ You're in a git repo
-- ✅ LEO not yet initialized
-- 💡 Suggests: npx leo init
+- ✅ Ingvar not yet initialized
+- 💡 Suggests: npx ingvar init
 
 # Then run:
-npx leo init  # Installs all files in your project
+npx ingvar init  # Installs all files in your project
 ```
 
-## Files Installed by `leo init`
+## Files Installed by `ingvar init`
 
-The postinstall **does not** install these - `leo init` does:
+The postinstall **does not** install these - `ingvar init` does:
 
 ### 1. Documentation Structure
 ```
@@ -195,7 +195,7 @@ npm pack --dry-run
 ### Test 2: Local Installation ✅
 ```bash
 cd /tmp/leo-test && git init
-npm install ./leo-workflow-kit-2.1.1.tgz
+npm install ./ingvar-kit-2.1.1.tgz
 
 ✅ Postinstall ran
 ✅ Banner displayed
@@ -205,7 +205,7 @@ npm install ./leo-workflow-kit-2.1.1.tgz
 
 ### Test 3: Template Availability ✅
 ```bash
-ls node_modules/leo-workflow-kit/templates/
+ls node_modules/ingvar-kit/templates/
 
 ✅ github-workflow/issue-templates/ (4 files)
 ✅ github-workflow/workflows/ (3 files)
@@ -226,25 +226,25 @@ ls node_modules/leo-workflow-kit/templates/
 
 ### Before
 ```
-User: npm install -g leo-workflow-kit
+User: npm install -g ingvar-kit
 System: *Shows banner*
 User: *Confused* "Where are my files?"
-User: *Doesn't know to run `leo init`*
+User: *Doesn't know to run `ingvar init`*
 ```
 
 ### After
 ```
-User: npm install leo-workflow-kit
+User: npm install ingvar-kit
 System: 
   ✨ Installation Complete!
   
   🎯 Quick Setup Available!
-  You installed LEO locally in a git repository.
+  You installed Ingvar locally in a git repository.
   Would you like to initialize the workflow now?
   
-  Run: npx leo init
+  Run: npx ingvar init
   
-User: npx leo init
+User: npx ingvar init
 System: *Installs all files with clear progress*
 User: ✅ All set up!
 ```
@@ -289,8 +289,8 @@ npm publish
 
 3. **Verify:**
 ```bash
-npm view leo-workflow-kit version  # Should show 2.1.1
-npm view leo-workflow-kit dist.unpackedSize  # Should show ~149KB
+npm view ingvar-kit version  # Should show 2.1.1
+npm view ingvar-kit dist.unpackedSize  # Should show ~149KB
 ```
 
 4. **Test in fresh project:**
@@ -298,8 +298,8 @@ npm view leo-workflow-kit dist.unpackedSize  # Should show ~149KB
 mkdir test-install
 cd test-install
 git init
-npm install leo-workflow-kit
-npx leo init
+npm install ingvar-kit
+npx ingvar init
 ```
 
 ## Summary
@@ -309,4 +309,4 @@ npx leo init
 ✅ **Enhanced:** Smart postinstall guides users  
 ✅ **Clear:** Installation flow is obvious  
 
-**The issue is resolved!** Users will now get all templates and know exactly how to set up LEO in their projects.
+**The issue is resolved!** Users will now get all templates and know exactly how to set up Ingvar in their projects.

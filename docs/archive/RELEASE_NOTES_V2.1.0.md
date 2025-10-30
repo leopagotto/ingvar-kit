@@ -1,9 +1,9 @@
-# 🎉 LEO Workflow Kit v2.1.0 - Release Notes
+# 🎉 Ingvar Kit v2.1.0 - Release Notes
 
 **Release Date:** October 19, 2025  
-**Package:** leo-workflow-kit  
-**NPM:** https://www.npmjs.com/package/leo-workflow-kit  
-**GitHub:** https://github.com/leonpagotto/leo-kit
+**Package:** ingvar-kit  
+**NPM:** https://www.npmjs.com/package/ingvar-kit  
+**GitHub:** https://github.com/leopagotto/ingvar-kit
 
 ---
 
@@ -20,17 +20,17 @@
 
 ```bash
 # Install globally
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 
 # Verify installation
-leo --version  # Should show 2.1.0
+ingvar --version  # Should show 2.1.0
 
 # View welcome guide
-leo welcome
+ingvar welcome
 
 # Initialize in your project
 cd your-project
-leo init
+ingvar init
 ```
 
 ---
@@ -67,14 +67,14 @@ leo init
 - Enhanced developer guidance
 
 ### 🏥 Comprehensive Health Check
-- **New command:** `leo health` (alias: `leo h`)
+- **New command:** `ingvar health` (alias: `ingvar h`)
 - 100-point scoring system with grades (A-F)
 - 8 categories: Git, GitHub, Documentation, Templates, VS Code, Automation, Project
 - Visual indicators and actionable recommendations
 - Complete project analysis
 
 ### 📚 Welcome Command
-- **New command:** `leo welcome` (alias: `leo w`)
+- **New command:** `ingvar welcome` (alias: `ingvar w`)
 - View full welcome guide anytime
 - Perfect for team onboarding
 - Quick reference to all features
@@ -84,28 +84,28 @@ leo init
 ## 🎯 New Commands
 
 ```bash
-leo health    # Comprehensive health check with scoring
-leo h         # Alias for health
+ingvar health    # Comprehensive health check with scoring
+ingvar h         # Alias for health
 
-leo welcome   # Show complete welcome guide
-leo w         # Alias for welcome
+ingvar welcome   # Show complete welcome guide
+ingvar w         # Alias for welcome
 ```
 
 ---
 
 ## 🔧 Enhanced Commands
 
-### `leo init` - Enhanced
+### `ingvar init` - Enhanced
 - Installs PR template automatically
 - Optional GitHub Actions workflows
 - Project-aware Copilot instructions
 - Shows detected framework
 - Enhanced success summary
 
-### `leo status` - Improved  
+### `ingvar status` - Improved  
 - Faster execution
 - Cleaner output
-- Suggests `leo health` for detailed analysis
+- Suggests `ingvar health` for detailed analysis
 
 ---
 
@@ -123,14 +123,14 @@ leo w         # Alias for welcome
 
 ### Example 1: Install and Initialize
 ```bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 cd my-project
-leo init
+ingvar init
 ```
 
 ### Example 2: Check Health
 ```bash
-leo health
+ingvar health
 
 # Output:
 Overall Score: 98/100 (98%) - Grade A
@@ -139,7 +139,7 @@ Excellent! Your workflow is fully optimized! 🎉
 
 ### Example 3: View Guide
 ```bash
-leo welcome
+ingvar welcome
 # Shows complete welcome message with all features
 ```
 
@@ -197,18 +197,18 @@ leo welcome
 
 ```bash
 # 1. Update package
-npm update -g leo-workflow-kit
+npm update -g ingvar-kit
 
 # 2. Verify version
-leo --version  # Should show 2.1.0
+ingvar --version  # Should show 2.1.0
 
 # 3. Add new features (optional)
 cd your-project
-leo init  # Answer 'yes' to GitHub Actions
-leo health  # Check what you're missing
+ingvar init  # Answer 'yes' to GitHub Actions
+ingvar health  # Check what you're missing
 
 # 4. Update Copilot instructions
-leo vscode --project
+ingvar vscode --project
 ```
 
 ### Breaking Changes
@@ -260,9 +260,9 @@ All existing, no new dependencies added:
 
 ## 📚 Documentation
 
-- **README:** https://github.com/leonpagotto/leo-kit#readme
-- **NPM Page:** https://www.npmjs.com/package/leo-workflow-kit
-- **Issues:** https://github.com/leonpagotto/leo-kit/issues
+- **README:** https://github.com/leopagotto/ingvar-kit#readme
+- **NPM Page:** https://www.npmjs.com/package/ingvar-kit
+- **Issues:** https://github.com/leopagotto/ingvar-kit/issues
 
 ### New Documentation Files
 - `ENHANCEMENTS_V2.0.3.md` - Detailed feature documentation
@@ -297,15 +297,15 @@ Future enhancements being considered:
 
 We'd love to hear from you!
 
-- **Report Issues:** https://github.com/leonpagotto/leo-kit/issues
-- **Discussions:** https://github.com/leonpagotto/leo-kit/discussions
+- **Report Issues:** https://github.com/leopagotto/ingvar-kit/issues
+- **Discussions:** https://github.com/leopagotto/ingvar-kit/discussions
 - **Email:** leonpagotto@hotmail.com
 
 ---
 
 ## 🎉 Thank You!
 
-Thank you for using LEO Workflow Kit! This release represents a significant enhancement in making your development workflow:
+Thank you for using Ingvar Kit! This release represents a significant enhancement in making your development workflow:
 
 - **Smarter** - Project-aware and context-sensitive
 - **More Integrated** - Deep GitHub automation
@@ -324,10 +324,10 @@ Thank you for using LEO Workflow Kit! This release represents a significant enha
 
 ## 🔗 Quick Links
 
-- 📦 [NPM Package](https://www.npmjs.com/package/leo-workflow-kit)
-- 📚 [Documentation](https://github.com/leonpagotto/leo-kit#readme)
-- 🐛 [Report Issue](https://github.com/leonpagotto/leo-kit/issues/new)
-- ⭐ [Star on GitHub](https://github.com/leonpagotto/leo-kit)
+- 📦 [NPM Package](https://www.npmjs.com/package/ingvar-kit)
+- 📚 [Documentation](https://github.com/leopagotto/ingvar-kit#readme)
+- 🐛 [Report Issue](https://github.com/leopagotto/ingvar-kit/issues/new)
+- ⭐ [Star on GitHub](https://github.com/leopagotto/ingvar-kit)
 
 ---
 

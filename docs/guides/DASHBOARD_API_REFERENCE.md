@@ -1,6 +1,6 @@
 # Dashboard API & WebSocket Quick Reference
 
-> **Quick Start Guide** for using the LEO Web Dashboard API and real-time WebSocket events
+> **Quick Start Guide** for using the Ingvar Web Dashboard API and real-time WebSocket events
 
 ## 🚀 Starting the Dashboard Server
 

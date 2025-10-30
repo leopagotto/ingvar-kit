@@ -1,6 +1,6 @@
-# LEO Kit 5.0.0 - Quick Start (5 Minutes)
+# Ingvar Kit 5.0.0 - Quick Start (5 Minutes)
 
-**Get started with LEO Kit in 5 minutes. No prior experience needed.**
+**Get started with Ingvar Kit in 5 minutes. No prior experience needed.**
 
 ---
 
@@ -10,17 +10,17 @@
 
 ```bash
 npm install -g @leo/kit
-leo --version
+ingvar --version
 ```
 
-✅ **LEO Kit is installed!**
+✅ **Ingvar Kit is installed!**
 
 ---
 
 ### Minute 2: Create Your First Project
 
 ```bash
-leo spec init my-first-app
+ingvar spec init my-first-app
 cd my-first-app
 ```
 
@@ -40,7 +40,7 @@ You now have:
 ### Minute 3: Write What You Want to Build
 
 ```bash
-leo spec specify
+ingvar spec specify
 ```
 
 A text editor opens. Replace the template with your idea:
@@ -74,10 +74,10 @@ Save and close the editor.
 ### Minute 4: Generate Implementation Plan
 
 ```bash
-leo spec plan
+ingvar spec plan
 ```
 
-LEO Kit automatically creates:
+Ingvar Kit automatically creates:
 
 - Phase breakdown
 - Implementation steps
@@ -106,7 +106,7 @@ Get a free API key at: https://console.anthropic.com
 **Then generate:**
 
 ```bash
-leo spec implement
+ingvar spec implement
 ```
 
 Watch Claude 3.5 Sonnet generate your code:
@@ -132,7 +132,7 @@ Generated Files:
 
 ## What You Just Did
 
-1. ✅ Installed LEO Kit
+1. ✅ Installed Ingvar Kit
 2. ✅ Created a project structure
 3. ✅ Wrote what you want to build
 4. ✅ Generated an implementation plan
@@ -189,14 +189,14 @@ Your code is ready to use! You can:
 Generate code for another feature:
 
 ```bash
-# Back to main LEO Kit directory
-leo spec init user-dashboard
+# Back to main Ingvar Kit directory
+ingvar spec init user-dashboard
 
 # Write specification
-leo spec specify
+ingvar spec specify
 
 # Generate
-leo spec implement
+ingvar spec implement
 ```
 
 Repeat as many times as you want!
@@ -208,7 +208,7 @@ Repeat as many times as you want!
 ### See Generated Tasks
 
 ```bash
-leo spec tasks
+ingvar spec tasks
 ```
 
 Shows all tasks generated from your specification.
@@ -216,7 +216,7 @@ Shows all tasks generated from your specification.
 ### Check Project Status
 
 ```bash
-leo spec status
+ingvar spec status
 ```
 
 Shows progress: Constitution → Specification → Plan → Tasks
@@ -224,7 +224,7 @@ Shows progress: Constitution → Specification → Plan → Tasks
 ### Start Local API Server
 
 ```bash
-leo dashboard start
+ingvar dashboard start
 
 # In browser: http://localhost:3000
 # WebSocket: ws://localhost:3000
@@ -233,10 +233,10 @@ leo dashboard start
 ### Create a Plugin
 
 ```bash
-leo plugin create my-plugin
+ingvar plugin create my-plugin
 ```
 
-Extend LEO Kit with custom functionality.
+Extend Ingvar Kit with custom functionality.
 
 ---
 
@@ -245,10 +245,10 @@ Extend LEO Kit with custom functionality.
 ### Available Commands
 
 ```bash
-leo --help                # Overall help
-leo spec --help          # Spec commands
-leo plugin --help        # Plugin commands
-leo dashboard --help     # Dashboard commands
+ingvar --help                # Overall help
+ingvar spec --help          # Spec commands
+ingvar plugin --help        # Plugin commands
+ingvar dashboard --help     # Dashboard commands
 ```
 
 ### Read Full Documentation
@@ -260,8 +260,8 @@ leo dashboard --help     # Dashboard commands
 
 ### Report Issues
 
-- GitHub Issues: https://github.com/leonpagotto/leo-kit/issues
-- Discussions: https://github.com/leonpagotto/leo-kit/discussions
+- GitHub Issues: https://github.com/leopagotto/ingvar-kit/issues
+- Discussions: https://github.com/leopagotto/ingvar-kit/discussions
 
 ---
 
@@ -269,7 +269,7 @@ leo dashboard --help     # Dashboard commands
 
 You now know how to:
 
-1. Install LEO Kit
+1. Install Ingvar Kit
 2. Create specifications
 3. Generate code with AI
 4. Use your generated code
@@ -283,7 +283,7 @@ You now know how to:
 
 ---
 
-**Welcome to LEO Kit! Happy building! 🚀**
+**Welcome to Ingvar Kit! Happy building! 🚀**
 
 ---
 
@@ -294,16 +294,16 @@ You now know how to:
 npm install -g @leo/kit
 
 # Setup
-leo spec init <name>
-leo spec specify
-leo spec plan
-leo spec implement
+ingvar spec init <name>
+ingvar spec specify
+ingvar spec plan
+ingvar spec implement
 
 # Commands
-leo spec status          # Check progress
-leo spec tasks          # View task list
-leo dashboard start     # Start API server
-leo plugin create <name> # Create plugin
+ingvar spec status          # Check progress
+ingvar spec tasks          # View task list
+ingvar dashboard start     # Start API server
+ingvar plugin create <name> # Create plugin
 
 # API Server
 curl http://localhost:3000/api/specs

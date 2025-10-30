@@ -333,7 +333,7 @@ describe('E2E: Specification-Driven Development Workflow', () => {
   });
 
   describe('Compatibility Tests', () => {
-    test('should be compatible with existing LEO kit', () => {
+    test('should be compatible with existing Ingvar kit', () => {
       // Test that new spec system doesn't break existing functionality
       expect(manager).toBeDefined();
       expect(typeof manager.init).toBe('function');
@@ -349,13 +349,13 @@ describe('E2E: Specification-Driven Development Workflow', () => {
   });
 });
 
-describe('Integration: Spec System with LEO Kit', () => {
+describe('Integration: Spec System with Ingvar Kit', () => {
   test('should integrate with existing commands', () => {
     // Verify SpecCommands are properly exported
     expect(typeof SpecCommands).toBe('function');
   });
 
-  test('should support leo spec commands', () => {
+  test('should support ingvar spec commands', () => {
     const commands = Object.getOwnPropertyNames(SpecCommands);
 
     expect(commands).toContain('init');

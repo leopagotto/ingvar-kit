@@ -1,12 +1,12 @@
 # 📦 Installation Guide
 
-> **Get LEO Workflow Kit v5.0.0 up and running in < 30 seconds**
+> **Get Ingvar Kit v5.0.0 up and running in < 30 seconds**
 >
 > **✨ NEW in v5.0.0:** All 6 agents enabled by default! No manual setup needed.
 
 ## 🎯 Prerequisites
 
-Before installing LEO Workflow Kit, ensure you have:
+Before installing Ingvar Kit, ensure you have:
 
 ### Required
 
@@ -29,12 +29,12 @@ Before installing LEO Workflow Kit, ensure you have:
 **One command - complete setup with v5.0.0 features!**
 
 ```bash
-LEO_AUTO_INIT=true npm install -g leo-workflow-kit@5.0.0
+Ingvar_AUTO_INIT=true npm install -g ingvar-kit@5.0.0
 ```
 
 **What this does:**
 
-- ✅ Installs LEO Workflow Kit v5.0.0
+- ✅ Installs Ingvar Kit v5.0.0
 - ✅ Automatically initializes your project
 - ✅ **Enables all 6 agents by default** ✨ (NEW!)
 - ✅ Creates documentation structure (`docs/specs/`)
@@ -59,19 +59,19 @@ LEO_AUTO_INIT=true npm install -g leo-workflow-kit@5.0.0
 
 ### Method 2: Global Installation (Traditional)
 
-Install LEO globally to use across all projects:
+Install Ingvar globally to use across all projects:
 
 ```bash
-npm install -g leo-workflow-kit@5.0.0
+npm install -g ingvar-kit@5.0.0
 ```
 
 **Verify installation:**
 
 ```bash
-leo --version
+ingvar --version
 # Should show: 5.0.0 (or later)
 
-leo --help
+ingvar --help
 # Shows all available commands
 ```
 
@@ -87,15 +87,15 @@ leo --help
 
 ### Method 3: npx (One-Time Use)
 
-Use LEO without installing:
+Use Ingvar without installing:
 
 ```bash
-npx leo-workflow-kit init
+npx ingvar-kit init
 ```
 
 **When to use:**
 
-- 🎯 Testing LEO before committing
+- 🎯 Testing Ingvar before committing
 - 🎯 One-time project setup
 - 🎯 CI/CD pipelines
 
@@ -112,7 +112,7 @@ For contributors or cutting-edge features:
 
 ```bash
 # Clone the repository
-git clone https://github.com/leonpagotto/leo-kit.git
+git clone https://github.com/leopagotto/ingvar-kit.git
 cd leo-kit
 
 # Install dependencies
@@ -122,12 +122,12 @@ npm install
 npm link
 
 # Verify
-leo --version
+ingvar --version
 ```
 
 **When to use:**
 
-- 🔧 Contributing to LEO development
+- 🔧 Contributing to Ingvar development
 - 🔧 Testing unreleased features
 - 🔧 Customizing for your needs
 
@@ -135,7 +135,7 @@ leo --version
 
 ## ⚙️ Setup GitHub CLI
 
-LEO requires GitHub CLI for GitHub operations.
+Ingvar requires GitHub CLI for GitHub operations.
 
 ### Install GitHub CLI
 
@@ -198,21 +198,21 @@ gh auth status
 
 ## 🎬 First-Time Setup
 
-### Initialize LEO in Your Project
+### Initialize Ingvar in Your Project
 
 ```bash
 # Navigate to your project
 cd your-project
 
-# Initialize LEO
-leo init
+# Initialize Ingvar
+ingvar init
 ```
 
-### What Happens During `leo init`
+### What Happens During `ingvar init`
 
 1. **Welcome Banner** 🦁
 
-   - Shows LEO ASCII art
+   - Shows Ingvar ASCII art
    - Displays current version
 
 2. **Prerequisites Check** ✅
@@ -253,7 +253,7 @@ leo init
      - 📚 **Documentation Agent** - README, API docs, guides, comments
      - 🎯 **Orchestrator Agent** - Task routing and coordination
    - Unselect any agents you don't need for your project
-   - Can be customized later in `.leorc.json`
+   - Can be customized later in `.ingvarrc.json`
 
 8. **Labels Setup** 🏷️ (Optional)
 
@@ -272,10 +272,10 @@ leo init
 
 ```bash
 # Show version
-leo --version
+ingvar --version
 
 # Show all commands
-leo --help
+ingvar --help
 
 # Check GitHub auth
 gh auth status
@@ -288,13 +288,13 @@ node --version
 
 ```bash
 # Check project status
-leo status
+ingvar status
 
 # System health check
-leo health
+ingvar health
 
 # View documentation structure
-leo docs
+ingvar docs
 ```
 
 ---
@@ -303,7 +303,7 @@ leo docs
 
 ### Overview
 
-LEO Workflow Kit includes a powerful multi-agent system that routes tasks to specialized AI agents based on task type. **All 6 agents are enabled by default** - you can customize this during setup or later.
+Ingvar Kit includes a powerful multi-agent system that routes tasks to specialized AI agents based on task type. **All 6 agents are enabled by default** - you can customize this during setup or later.
 
 ### Available Agents
 
@@ -320,7 +320,7 @@ LEO Workflow Kit includes a powerful multi-agent system that routes tasks to spe
 
 #### Option 1: During Initialization
 
-During `leo init`, you'll see a prompt like this:
+During `ingvar init`, you'll see a prompt like this:
 
 ```
 🎯 Multi-Agent Configuration
@@ -343,7 +343,7 @@ Simply uncheck (spacebar) any agents you don't need:
 # When done: press Enter
 ```
 
-#### Option 2: Edit `.leorc.json` Later
+#### Option 2: Edit `.ingvarrc.json` Later
 
 ```json
 {
@@ -410,10 +410,10 @@ zsh: command not found: leo
 
 ```bash
 # Check if installed globally
-npm list -g leo-workflow-kit
+npm list -g ingvar-kit
 
 # If not, install again
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 
 # Check npm global path
 npm config get prefix
@@ -434,14 +434,14 @@ EACCES: permission denied
 
 ```bash
 # Option 1: Use sudo (not recommended)
-sudo npm install -g leo-workflow-kit
+sudo npm install -g ingvar-kit
 
 # Option 2: Fix npm permissions (recommended)
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 ```
 
 ---
@@ -474,7 +474,7 @@ gh auth status
 **Error:**
 
 ```
-Error: LEO requires Node.js 16.0.0 or higher
+Error: Ingvar requires Node.js 16.0.0 or higher
 ```
 
 **Solution:**
@@ -493,19 +493,19 @@ nvm use 20
 
 ---
 
-## 🔄 Updating LEO
+## 🔄 Updating Ingvar
 
 ### Update to Latest Version
 
 ```bash
 # Check current version
-leo --version
+ingvar --version
 
 # Update globally
-npm update -g leo-workflow-kit
+npm update -g ingvar-kit
 
 # Verify new version
-leo --version
+ingvar --version
 ```
 
 ### Update from Source
@@ -524,13 +524,13 @@ npm link
 ### Remove Global Installation
 
 ```bash
-npm uninstall -g leo-workflow-kit
+npm uninstall -g ingvar-kit
 ```
 
 ### Clean Up Project Files
 
 ```bash
-# Remove LEO-generated files (optional)
+# Remove Ingvar-generated files (optional)
 rm -rf .github/copilot-instructions.md
 rm -rf .github/ISSUE_TEMPLATE/
 rm -rf docs/
@@ -544,11 +544,11 @@ rm -rf docs/
 
 After installation, verify everything works:
 
-- [ ] `leo --version` shows correct version
+- [ ] `ingvar --version` shows correct version
 - [ ] `gh auth status` shows authenticated
-- [ ] `leo init` completes successfully
-- [ ] `leo status` shows project info
-- [ ] `leo health` passes all checks
+- [ ] `ingvar init` completes successfully
+- [ ] `ingvar status` shows project info
+- [ ] `ingvar health` passes all checks
 - [ ] GitHub Copilot is enabled in VS Code
 
 ---
@@ -557,8 +557,8 @@ After installation, verify everything works:
 
 After installation:
 
-1. **[Quick Start Tutorial](./Quick-Start)** - Create your first LEO project
-2. **[Configuration](./Configuration)** - Customize LEO for your workflow
+1. **[Quick Start Tutorial](./Quick-Start)** - Create your first Ingvar project
+2. **[Configuration](./Configuration)** - Customize Ingvar for your workflow
 3. **[Commands Reference](./Commands-Reference)** - Learn all available commands
 4. **[Automatic Issue Creation](./Automatic-Issue-Creation)** - Let Copilot handle issues
 
@@ -566,8 +566,8 @@ After installation:
 
 ## 💬 Need Help?
 
-- **Issues:** [Report installation problems](https://github.com/leonpagotto/leo-kit/issues)
-- **Discussions:** [Ask questions](https://github.com/leonpagotto/leo-kit/discussions)
+- **Issues:** [Report installation problems](https://github.com/leopagotto/ingvar-kit/issues)
+- **Discussions:** [Ask questions](https://github.com/leopagotto/ingvar-kit/discussions)
 - **Troubleshooting:** [Common issues](./Troubleshooting)
 
 ---

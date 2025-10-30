@@ -1,12 +1,12 @@
-# 🚀 ENHANCED LEO KIT: Adding Spec-Driven AI Code Generation
+# 🚀 ENHANCED Ingvar KIT: Adding Spec-Driven AI Code Generation
 
-**Proposal:** Integrate spec-kit's Spec-Driven Development (SDD) methodology into LEO kit for **automated code generation alongside workflow governance**.
+**Proposal:** Integrate spec-kit's Spec-Driven Development (SDD) methodology into Ingvar kit for **automated code generation alongside workflow governance**.
 
 ---
 
-## 📊 Comparison: LEO Kit vs Spec-Kit
+## 📊 Comparison: Ingvar Kit vs Spec-Kit
 
-| Feature                     | LEO Kit (Current) | Spec-Kit (GitHub) | **Enhanced LEO** |
+| Feature                     | Ingvar Kit (Current) | Spec-Kit (GitHub) | **Enhanced Ingvar** |
 | --------------------------- | ----------------- | ----------------- | ---------------- |
 | **Workflow Governance**     | ✅ Strong         | ❌ None           | ✅ Strong        |
 | **AI Code Generation**      | ❌ No             | ✅ Yes            | ✅ **YES**       |
@@ -21,12 +21,12 @@
 
 ---
 
-## 🎯 The Vision: Enhanced LEO Kit
+## 🎯 The Vision: Enhanced Ingvar Kit
 
 ```
 User Requirement
     ↓
-leo issue create (auto-create GitHub issue)
+ingvar issue create (auto-create GitHub issue)
     ↓
 /leo.constitution (define project principles - NEW!)
     ↓
@@ -45,9 +45,9 @@ Deploy
 
 ---
 
-## 🏗️ Architecture: Enhanced LEO Kit
+## 🏗️ Architecture: Enhanced Ingvar Kit
 
-### Layer 1: Governance (LEO Kit - Existing ✅)
+### Layer 1: Governance (Ingvar Kit - Existing ✅)
 
 - Issue creation & tracking
 - Multi-agent routing
@@ -70,49 +70,49 @@ Deploy
 
 ---
 
-## 🔧 Proposed Commands: Enhanced LEO Kit
+## 🔧 Proposed Commands: Enhanced Ingvar Kit
 
 ### Phase 1: Governance (Existing)
 
 ```bash
-leo issue create "Build user dashboard"
-leo status
-leo config
+ingvar issue create "Build user dashboard"
+ingvar status
+ingvar config
 ```
 
 ### Phase 2: Specification (NEW - Spec-Kit Integration)
 
 ```bash
-leo spec init my-feature                    # Initialize spec project
-leo spec constitution                       # Create project principles
-leo spec specify "what to build"            # Write spec
-leo spec plan "tech stack details"          # Plan implementation
-leo spec tasks                              # Break into tasks
-leo spec analyze                            # Validate spec
+ingvar spec init my-feature                    # Initialize spec project
+ingvar spec constitution                       # Create project principles
+ingvar spec specify "what to build"            # Write spec
+ingvar spec plan "tech stack details"          # Plan implementation
+ingvar spec tasks                              # Break into tasks
+ingvar spec analyze                            # Validate spec
 ```
 
 ### Phase 3: AI Code Generation (NEW - Hybrid)
 
 ```bash
-leo spec implement                          # Generate code from spec
-leo spec checklist                          # Create quality checklist
-leo spec review                             # Review generated code
+ingvar spec implement                          # Generate code from spec
+ingvar spec checklist                          # Create quality checklist
+ingvar spec review                             # Review generated code
 ```
 
 ### Phase 4: Deployment (Enhanced)
 
 ```bash
-leo spec deploy                             # Deploy generated code
-leo spec status                             # Show progress
-leo spec report                             # Generate report
+ingvar spec deploy                             # Deploy generated code
+ingvar spec status                             # Show progress
+ingvar spec report                             # Generate report
 ```
 
 ---
 
-## 📁 File Structure: Enhanced LEO Kit
+## 📁 File Structure: Enhanced Ingvar Kit
 
 ```
-leo-workflow-kit/
+ingvar-kit/
 ├── lib/
 │   ├── agents/                             (existing)
 │   ├── commands/
@@ -159,7 +159,7 @@ leo-workflow-kit/
 │   ├── specification-writing.md            (NEW)
 │   ├── ai-code-generation.md               (NEW)
 │   └── integration-guide.md                (NEW)
-├── .leorc.json                             (updated)
+├── .ingvarrc.json                             (updated)
 └── .specrc.json                            (NEW - spec config)
 ```
 
@@ -175,7 +175,7 @@ leo-workflow-kit/
 - [ ] Implement specification storage
 - [ ] Add spec commands to CLI
 
-**Output:** `leo spec init`, `leo spec constitution`
+**Output:** `ingvar spec init`, `ingvar spec constitution`
 
 ### Phase 2: Planning & Analysis (Week 2)
 
@@ -185,7 +185,7 @@ leo-workflow-kit/
 - [ ] Add validation logic
 - [ ] Create quality checklists
 
-**Output:** `leo spec plan`, `leo spec tasks`, `leo spec analyze`
+**Output:** `ingvar spec plan`, `ingvar spec tasks`, `ingvar spec analyze`
 
 ### Phase 3: AI Code Generation (Week 3-4)
 
@@ -195,23 +195,23 @@ leo-workflow-kit/
 - [ ] Create code formatters
 - [ ] Implement code review system
 
-**Output:** `leo spec implement`, `leo spec checklist`
+**Output:** `ingvar spec implement`, `ingvar spec checklist`
 
 ### Phase 4: Integration & Deployment (Week 5)
 
-- [ ] Connect to existing LEO agents
+- [ ] Connect to existing Ingvar agents
 - [ ] Update workflow orchestrator
 - [ ] Add deployment commands
 - [ ] Create monitoring/status
 - [ ] Comprehensive documentation
 
-**Output:** Complete enhanced LEO kit
+**Output:** Complete enhanced Ingvar kit
 
 ---
 
 ## 💻 Code Example: AI Code Generation
 
-### New Command: `leo spec implement`
+### New Command: `ingvar spec implement`
 
 ```javascript
 // lib/commands/spec/implement.js
@@ -228,7 +228,7 @@ class ImplementCommand {
       // 1. Load specification
       const spec = await Specification.load();
       if (!spec) {
-        throw new Error("No specification found. Run: leo spec specify");
+        throw new Error("No specification found. Run: ingvar spec specify");
       }
 
       // 2. Analyze spec
@@ -258,9 +258,9 @@ class ImplementCommand {
 
       console.log(chalk.green(`✅ Code generated successfully!\n`));
       console.log(chalk.cyan("Next steps:"));
-      console.log(`  1. Review generated code: leo spec review`);
-      console.log(`  2. Run checklist: leo spec checklist`);
-      console.log(`  3. Deploy: leo spec deploy\n`);
+      console.log(`  1. Review generated code: ingvar spec review`);
+      console.log(`  2. Run checklist: ingvar spec checklist`);
+      console.log(`  3. Deploy: ingvar spec deploy\n`);
     } catch (error) {
       console.error(chalk.red(`❌ Implementation failed: ${error.message}\n`));
     }
@@ -358,23 +358,23 @@ module.exports = ClaudeProvider;
 
 ---
 
-## 🎯 Key Features: Enhanced LEO Kit
+## 🎯 Key Features: Enhanced Ingvar Kit
 
 ### 1. Specification-Driven Development
 
 ```bash
-leo spec init my-feature
-leo spec constitution                    # Define principles
-leo spec specify "Build X"              # Write requirement
-leo spec plan "Use React + Node"        # Plan architecture
-leo spec tasks                          # Break into tasks
-leo spec analyze                        # Validate consistency
+ingvar spec init my-feature
+ingvar spec constitution                    # Define principles
+ingvar spec specify "Build X"              # Write requirement
+ingvar spec plan "Use React + Node"        # Plan architecture
+ingvar spec tasks                          # Break into tasks
+ingvar spec analyze                        # Validate consistency
 ```
 
 ### 2. Automated Code Generation
 
 ```bash
-leo spec implement                      # Claude generates code
+ingvar spec implement                      # Claude generates code
 # Generates:
 # - src/components/
 # - src/utils/
@@ -386,22 +386,22 @@ leo spec implement                      # Claude generates code
 ### 3. Quality Validation
 
 ```bash
-leo spec checklist                      # Generate quality checklist
-leo spec review                         # Review generated code
-leo spec analyze                        # Check consistency
+ingvar spec checklist                      # Generate quality checklist
+ingvar spec review                         # Review generated code
+ingvar spec analyze                        # Check consistency
 ```
 
 ### 4. Integrated Deployment
 
 ```bash
-leo spec deploy                         # Deploy to production
-leo spec status                         # Show progress
-leo spec report                         # Generate report
+ingvar spec deploy                         # Deploy to production
+ingvar spec status                         # Show progress
+ingvar spec report                         # Generate report
 ```
 
 ---
 
-## 📊 Benefits: Enhanced LEO Kit
+## 📊 Benefits: Enhanced Ingvar Kit
 
 ### For Teams
 
@@ -429,40 +429,40 @@ leo spec report                         # Generate report
 
 ---
 
-## 🔌 Installation: Enhanced LEO Kit
+## 🔌 Installation: Enhanced Ingvar Kit
 
 ### Current State
 
 ```bash
-npm install leo-workflow-kit
-leo config init
-leo issue create "My task"
+npm install ingvar-kit
+ingvar config init
+ingvar issue create "My task"
 ```
 
 ### Enhanced State (After Implementation)
 
 ```bash
-npm install leo-workflow-kit --latest
+npm install ingvar-kit --latest
 
 # New: Specification-driven workflow
-leo spec init my-feature
-leo spec constitution
-leo spec specify "Build user dashboard"
-leo spec plan "React + Express + MongoDB"
-leo spec tasks
-leo spec implement                      # ← AI generates code!
-leo spec checklist
-leo spec deploy
+ingvar spec init my-feature
+ingvar spec constitution
+ingvar spec specify "Build user dashboard"
+ingvar spec plan "React + Express + MongoDB"
+ingvar spec tasks
+ingvar spec implement                      # ← AI generates code!
+ingvar spec checklist
+ingvar spec deploy
 
 # Existing: Governance workflow
-leo issue create "Deploy to production"
-leo status
-leo config
+ingvar issue create "Deploy to production"
+ingvar status
+ingvar config
 ```
 
 ---
 
-## 📈 Timeline: Enhanced LEO Kit
+## 📈 Timeline: Enhanced Ingvar Kit
 
 ```
 Week 1: Spec Foundation
@@ -504,7 +504,7 @@ Target: Mid-November 2025
 4. **Quality Validation** - Built-in checklists and analysis
 5. **Multi-Agent Support** - Claude, Copilot, Gemini, etc.
 
-### What LEO Does Better ✅
+### What Ingvar Does Better ✅
 
 1. **Team Governance** - Multi-agent orchestration
 2. **Workflow Enforcement** - Process compliance
@@ -514,7 +514,7 @@ Target: Mid-November 2025
 
 ### Combination = Superset
 
-✅ LEO's governance
+✅ Ingvar's governance
 ✅ Spec-kit's AI generation
 ✅ Best of both worlds
 
@@ -524,15 +524,15 @@ Target: Mid-November 2025
 
 ### Option 1: Implement Now
 
-Start building enhanced LEO kit with spec-driven AI generation this week.
+Start building enhanced Ingvar kit with spec-driven AI generation this week.
 
 ### Option 2: Pilot Project
 
-Create `/leo spec` commands first as a pilot, measure results, then scale.
+Create `/ingvar spec` commands first as a pilot, measure results, then scale.
 
 ### Option 3: Contribute to Spec-Kit
 
-Propose LEO integration to spec-kit maintainers for official support.
+Propose Ingvar integration to spec-kit maintainers for official support.
 
 ---
 
@@ -540,11 +540,11 @@ Propose LEO integration to spec-kit maintainers for official support.
 
 **Would you like to:**
 
-1. **Build Enhanced LEO Kit** - Add spec-driven AI code generation to leo-workflow-kit
-2. **Integrate Spec-Kit** - Use spec-kit alongside leo-workflow-kit
+1. **Build Enhanced Ingvar Kit** - Add spec-driven AI code generation to ingvar-kit
+2. **Integrate Spec-Kit** - Use spec-kit alongside ingvar-kit
 3. **Fork & Enhance** - Create "leo-spec-kit" combining both
 4. **Something Else** - Different approach
 
 ---
 
-_Analysis Complete: Ready to implement enhanced LEO kit with Spec-Driven Development + AI Code Generation_
+_Analysis Complete: Ready to implement enhanced Ingvar kit with Spec-Driven Development + AI Code Generation_

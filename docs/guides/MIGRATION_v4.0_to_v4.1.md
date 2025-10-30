@@ -1,6 +1,6 @@
 # Migration Guide: v4.0.x → v4.1.0
 
-> **Upgrade to LEO v4.1.0** for intelligent AI model selection, budget control, and cost optimization.
+> **Upgrade to Ingvar v4.1.0** for intelligent AI model selection, budget control, and cost optimization.
 
 ---
 
@@ -23,7 +23,7 @@
 
 **Major Feature: Intelligent Model Selection**
 
-LEO v4.1.0 introduces automatic AI model selection that chooses the optimal model for each task based on:
+Ingvar v4.1.0 introduces automatic AI model selection that chooses the optimal model for each task based on:
 - Agent role (frontend, backend, devops, testing, documentation)
 - Task complexity (simple, moderate, complex)
 - Development phase (development, staging, production)
@@ -56,7 +56,7 @@ v4.1.0 is **100% backward compatible** with v4.0.x. All existing workflows, conf
 
 **What this means:**
 - No configuration changes required
-- Existing `.leorc.json` files work as-is
+- Existing `.ingvarrc.json` files work as-is
 - All CLI commands remain unchanged
 - Model selection is automatically enabled with sensible defaults
 
@@ -69,19 +69,19 @@ v4.1.0 is **100% backward compatible** with v4.0.x. All existing workflows, conf
 **Automatic Model Selection:**
 ```bash
 # No action needed - works automatically!
-# LEO selects the best model for each task
+# Ingvar selects the best model for each task
 ```
 
 **New CLI Commands:**
 ```bash
-leo model list              # View all available models
-leo model status            # Check usage and budgets
-leo model enable <model>    # Enable a specific model
-leo model disable <model>   # Disable a model
-leo model budget <type>     # Set budget limits
-leo model usage             # View usage statistics
-leo model usage reset       # Reset usage tracking
-leo model test <agent> <complexity>  # Test selection
+ingvar model list              # View all available models
+ingvar model status            # Check usage and budgets
+ingvar model enable <model>    # Enable a specific model
+ingvar model disable <model>   # Disable a model
+ingvar model budget <type>     # Set budget limits
+ingvar model usage             # View usage statistics
+ingvar model usage reset       # Reset usage tracking
+ingvar model test <agent> <complexity>  # Test selection
 ```
 
 ### 📊 Budget Management
@@ -108,17 +108,17 @@ leo model test <agent> <complexity>  # Test selection
 
 ## Migration Steps
 
-### Step 1: Update LEO
+### Step 1: Update Ingvar
 
 ```bash
 # Update globally
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-kit@latest
 
 # Or update in project
-npm install --save-dev leo-workflow-kit@latest
+npm install --save-dev ingvar-kit@latest
 
 # Verify version
-leo --version
+ingvar --version
 # Should show: 4.1.0
 ```
 
@@ -126,7 +126,7 @@ leo --version
 
 ```bash
 # Check model selection is available
-leo model list
+ingvar model list
 
 # Should output:
 # 📊 Available AI Models
@@ -141,7 +141,7 @@ Model selection is enabled by default with sensible settings. No configuration n
 
 ```bash
 # Check current status
-leo model status
+ingvar model status
 
 # Output shows:
 # - Enabled models (all 6 by default)
@@ -154,7 +154,7 @@ leo model status
 If you have existing AI instruction files, regenerate them to include model selection documentation:
 
 ```bash
-leo agent sync
+ingvar agent sync
 ```
 
 This updates:
@@ -169,9 +169,9 @@ This updates:
 
 ```bash
 # Test different scenarios
-leo model test frontend complex
-leo model test backend simple
-leo model test orchestrator complex
+ingvar model test frontend complex
+ingvar model test backend simple
+ingvar model test orchestrator complex
 
 # Each shows which model would be selected
 ```
@@ -184,9 +184,9 @@ That's it! Model selection is now active and working automatically.
 
 ## Configuration Changes
 
-### New `.leorc.json` Section
+### New `.ingvarrc.json` Section
 
-v4.1.0 adds an optional `model-selection` section. **This is completely optional** - LEO works with defaults if not specified.
+v4.1.0 adds an optional `model-selection` section. **This is completely optional** - Ingvar works with defaults if not specified.
 
 **Default configuration (automatically applied):**
 ```json
@@ -251,7 +251,7 @@ v4.1.0 adds an optional `model-selection` section. **This is completely optional
 **After making changes:**
 ```bash
 # Regenerate AI instructions to reflect config
-leo agent sync
+ingvar agent sync
 ```
 
 ---
@@ -264,26 +264,26 @@ All model-related commands are new in v4.1.0:
 
 ```bash
 # View models
-leo model list
+ingvar model list
 
 # Check status and usage
-leo model status
-leo model usage
+ingvar model status
+ingvar model usage
 
 # Configure models
-leo model enable <model>
-leo model disable <model>
+ingvar model enable <model>
+ingvar model disable <model>
 
 # Set budgets
-leo model budget daily <amount>
-leo model budget monthly <amount>
-leo model budget agent <amount>
+ingvar model budget daily <amount>
+ingvar model budget monthly <amount>
+ingvar model budget agent <amount>
 
 # Testing
-leo model test <agent> <complexity>
+ingvar model test <agent> <complexity>
 
 # Reset
-leo model usage reset
+ingvar model usage reset
 ```
 
 ### Existing Commands
@@ -291,11 +291,11 @@ leo model usage reset
 **No changes** to existing commands! All v4.0.x commands work identically:
 
 ```bash
-leo init                    # Unchanged
-leo issue <command>         # Unchanged
-leo agent <command>         # Unchanged
-leo project <command>       # Unchanged
-leo welcome                 # Unchanged
+ingvar init                    # Unchanged
+ingvar issue <command>         # Unchanged
+ingvar agent <command>         # Unchanged
+ingvar project <command>       # Unchanged
+ingvar welcome                 # Unchanged
 ```
 
 ---
@@ -308,33 +308,33 @@ If you need to rollback to v4.0.3:
 
 ```bash
 # Global installation
-npm uninstall -g leo-workflow-kit
+npm uninstall -g ingvar-kit
 
 # Project installation
-npm uninstall leo-workflow-kit
+npm uninstall ingvar-kit
 ```
 
 ### Step 2: Install v4.0.3
 
 ```bash
 # Global installation
-npm install -g leo-workflow-kit@4.0.3
+npm install -g ingvar-kit@4.0.3
 
 # Project installation
-npm install --save-dev leo-workflow-kit@4.0.3
+npm install --save-dev ingvar-kit@4.0.3
 ```
 
 ### Step 3: Verify
 
 ```bash
-leo --version
+ingvar --version
 # Should show: 4.0.3
 ```
 
 ### Step 4: Regenerate AI Instructions
 
 ```bash
-leo agent sync
+ingvar agent sync
 ```
 
 This removes model selection documentation from AI instruction files.
@@ -357,21 +357,21 @@ When rolling back:
 
 ## Troubleshooting
 
-### Issue: `leo model` command not found
+### Issue: `ingvar model` command not found
 
 **Symptom:**
 ```bash
-leo model list
+ingvar model list
 # Error: Unknown command 'model'
 ```
 
 **Solution:**
 ```bash
 # Verify you're on v4.1.0
-leo --version
+ingvar --version
 
 # If not, update
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-kit@latest
 ```
 
 ---
@@ -385,19 +385,19 @@ npm install -g leo-workflow-kit@latest
 
 **Solution 1: Increase budgets**
 ```bash
-leo model budget daily 10
-leo model budget monthly 100
+ingvar model budget daily 10
+ingvar model budget monthly 100
 ```
 
 **Solution 2: Disable expensive models**
 ```bash
-leo model disable gpt-4
-leo model disable claude-3-opus
+ingvar model disable gpt-4
+ingvar model disable claude-3-opus
 ```
 
 **Solution 3: Check usage patterns**
 ```bash
-leo model usage
+ingvar model usage
 
 # Review which agents/tasks use the most budget
 # Optimize or disable non-critical agents
@@ -412,17 +412,17 @@ leo model usage
 **Solution:**
 ```bash
 # 1. Check if enabled
-leo model status
+ingvar model status
 # Look for: Status: ✓ ENABLED
 
-# 2. Check .leorc.json
+# 2. Check .ingvarrc.json
 # Ensure: "model-selection": { "enabled": true }
 
 # 3. Regenerate AI instructions
-leo agent sync
+ingvar agent sync
 
 # 4. Test selection
-leo model test frontend complex
+ingvar model test frontend complex
 # Should show model selection logic
 ```
 
@@ -435,7 +435,7 @@ leo model test frontend complex
 **Solution:**
 ```bash
 # Regenerate all AI instruction files
-leo agent sync
+ingvar agent sync
 
 # Verify files updated:
 # - .github/copilot-instructions.md
@@ -464,10 +464,10 @@ ls -la .leo/
 mkdir -p .leo
 
 # 3. Reset usage tracking
-leo model usage reset
+ingvar model usage reset
 
 # 4. Verify working
-leo model status
+ingvar model status
 ```
 
 ---
@@ -494,7 +494,7 @@ npm run test:model
 
 ### Q: Is model selection required?
 
-**A:** No! It's enabled by default but completely optional. Disable it in `.leorc.json`:
+**A:** No! It's enabled by default but completely optional. Disable it in `.ingvarrc.json`:
 ```json
 { "model-selection": { "enabled": false } }
 ```
@@ -512,19 +512,19 @@ npm run test:model
 **A:** Yes! Disable unwanted models:
 ```bash
 # Only use OpenAI
-leo model disable claude-3-opus
-leo model disable claude-3-sonnet
-leo model disable claude-3-haiku
+ingvar model disable claude-3-opus
+ingvar model disable claude-3-sonnet
+ingvar model disable claude-3-haiku
 
 # Only use Anthropic  
-leo model disable gpt-4
-leo model disable gpt-4-turbo
-leo model disable gpt-3.5-turbo
+ingvar model disable gpt-4
+ingvar model disable gpt-4-turbo
+ingvar model disable gpt-3.5-turbo
 ```
 
 ### Q: What happens if all models are disabled?
 
-**A:** LEO falls back to gpt-3.5-turbo as the ultimate fallback. You cannot disable all models.
+**A:** Ingvar falls back to gpt-3.5-turbo as the ultimate fallback. You cannot disable all models.
 
 ### Q: Can I create custom selection strategies?
 
@@ -538,7 +538,7 @@ leo model disable gpt-3.5-turbo
 
 **A:** Currently via testing:
 ```bash
-leo model test <agent> <complexity>
+ingvar model test <agent> <complexity>
 ```
 
 Future versions will show selected model in real-time during task execution.
@@ -573,18 +573,18 @@ Future versions will show selected model in real-time during task execution.
 
 ### Getting Help
 
-- **GitHub Issues**: https://github.com/leonpagotto/leo-kit/issues
-- **Discussions**: https://github.com/leonpagotto/leo-kit/discussions
-- **Wiki**: https://github.com/leonpagotto/leo-kit/wiki
+- **GitHub Issues**: https://github.com/leopagotto/ingvar-kit/issues
+- **Discussions**: https://github.com/leopagotto/ingvar-kit/discussions
+- **Wiki**: https://github.com/leopagotto/ingvar-kit/wiki
 
 ### Reporting Bugs
 
 If you encounter issues after upgrading:
 
 1. Check this guide first
-2. Search [existing issues](https://github.com/leonpagotto/leo-kit/issues)
+2. Search [existing issues](https://github.com/leopagotto/ingvar-kit/issues)
 3. Create new issue with:
-   - LEO version: `leo --version`
+   - Ingvar version: `ingvar --version`
    - Node version: `node --version`
    - OS: Windows/macOS/Linux
    - Error message and steps to reproduce
@@ -601,7 +601,7 @@ If you encounter issues after upgrading:
 - Intelligent model selection system
 - Budget management (daily/monthly/per-agent)
 - 6 supported models (OpenAI + Anthropic)
-- 8 new CLI commands (`leo model ...`)
+- 8 new CLI commands (`ingvar model ...`)
 - Comprehensive documentation
 
 **🔧 Improvements:**
@@ -620,6 +620,6 @@ If you encounter issues after upgrading:
 
 ---
 
-**Welcome to LEO v4.1.0!** 🎉
+**Welcome to Ingvar v4.1.0!** 🎉
 
 Happy coding with intelligent model selection!

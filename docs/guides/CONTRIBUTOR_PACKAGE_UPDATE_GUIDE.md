@@ -1,13 +1,13 @@
 # 📦 Package Update Notice for Contributors
 
-## leo-workflow-kit Update Required
+## ingvar-kit Update Required
 
 **Date:** October 29, 2025
-**Action Required:** Update `leo-workflow-kit` after pulling latest changes
+**Action Required:** Update `ingvar-kit` after pulling latest changes
 
 ### Why This Update?
 
-The project has been updated to use `leo-workflow-kit v5.3.1` (from v4.1.1). If you pull the latest code, you'll need to update your local dependencies.
+The project has been updated to use `ingvar-kit v5.3.1` (from v4.1.1). If you pull the latest code, you'll need to update your local dependencies.
 
 ---
 
@@ -26,19 +26,19 @@ npm install
 ```
 
 **This will automatically:**
-- ✅ Install leo-workflow-kit v5.3.1
+- ✅ Install ingvar-kit v5.3.1
 - ✅ Install 41 new dependency packages
 - ✅ Update package-lock.json
 
 ### Step 3: Verify Installation
 ```bash
-npm list leo-workflow-kit
+npm list ingvar-kit
 ```
 
 **Expected output:**
 ```
 rest-express@1.0.0 /path/to/osp-contabilidade
-└── leo-workflow-kit@5.3.1
+└── ingvar-kit@5.3.1
 ```
 
 ---
@@ -46,7 +46,7 @@ rest-express@1.0.0 /path/to/osp-contabilidade
 ## ⚠️ Common Issues & Solutions
 
 ### Issue 1: "Package not found"
-**Problem:** leo-workflow-kit not installing
+**Problem:** ingvar-kit not installing
 
 **Solution:**
 ```bash
@@ -66,10 +66,10 @@ npm install
 **Solution:**
 ```bash
 # Force update
-npm update leo-workflow-kit
+npm update ingvar-kit
 
 # Or explicitly install
-npm install leo-workflow-kit@latest
+npm install ingvar-kit@latest
 ```
 
 ### Issue 3: Peer Dependency Warnings
@@ -104,8 +104,8 @@ npm install
 
 ### Step 4: Verify Setup
 ```bash
-# Check leo-workflow-kit
-npm list leo-workflow-kit
+# Check ingvar-kit
+npm list ingvar-kit
 
 # Test build
 npm run build
@@ -117,7 +117,7 @@ npm run build
 
 After running `npm install`, verify:
 
-- [ ] ✅ leo-workflow-kit@5.3.1 installed
+- [ ] ✅ ingvar-kit@5.3.1 installed
 - [ ] ✅ No critical errors during installation
 - [ ] ✅ Build succeeds: `cd next-migration && npm run build`
 - [ ] ✅ Development server starts: `npm run dev`
@@ -127,7 +127,7 @@ After running `npm install`, verify:
 
 ## 🔍 What Changed in v5.3.1?
 
-**Package:** leo-workflow-kit
+**Package:** ingvar-kit
 **Previous Version:** 4.1.1
 **New Version:** 5.3.1
 
@@ -160,7 +160,7 @@ npm install          # Next.js dependencies
 npm outdated
 
 # Update specific package
-npm update leo-workflow-kit
+npm update ingvar-kit
 ```
 
 ### Clean Install (If Issues):
@@ -199,7 +199,7 @@ npm --version
 git log -1 --oneline
 
 # Package info
-npm list leo-workflow-kit
+npm list ingvar-kit
 npm list --depth=0
 
 # Build test
@@ -211,13 +211,13 @@ cd next-migration && npm run build
 ## 📊 Summary
 
 **When you pull latest code:**
-1. ✅ Run `npm install` (automatically updates leo-workflow-kit)
-2. ✅ Verify version: `npm list leo-workflow-kit`
+1. ✅ Run `npm install` (automatically updates ingvar-kit)
+2. ✅ Verify version: `npm list ingvar-kit`
 3. ✅ Test build works
 4. ⚠️ Ignore peer dependency warnings (normal)
 
 **You do NOT need to:**
-- ❌ Manually run `npm update leo-workflow-kit`
+- ❌ Manually run `npm update ingvar-kit`
 - ❌ Delete node_modules (unless troubleshooting)
 - ❌ Worry about peer dependency warnings
 
@@ -226,5 +226,5 @@ cd next-migration && npm run build
 ---
 
 **Last Updated:** October 29, 2025
-**Package Version:** leo-workflow-kit v5.3.1
+**Package Version:** ingvar-kit v5.3.1
 **Status:** Ready for contributors ✅

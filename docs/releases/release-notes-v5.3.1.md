@@ -146,14 +146,14 @@ Upgraded to use **Claude 3.5 Sonnet** (Anthropic's latest) for moderate and comp
 
 ```bash
 # Update to v5.3.1
-npm install -g leo-workflow-kit@5.3.1
+npm install -g ingvar-kit@5.3.1
 
 # Verify version
-leo --version
+ingvar --version
 # Should show: 5.3.1
 
 # Check model status
-leo model status
+ingvar model status
 # Shows current model selection and budgets
 ```
 
@@ -223,19 +223,19 @@ Based on internal testing:
 
 ```bash
 # Check current model status
-leo model status
+ingvar model status
 
 # List all available models
-leo model list
+ingvar model list
 
 # Test model selection for a scenario
-leo model test designer complex
+ingvar model test designer complex
 # Should show: GPT-4o
 
-leo model test frontend moderate
+ingvar model test frontend moderate
 # Should show: Claude 3.5 Sonnet
 
-leo model test orchestrator simple
+ingvar model test orchestrator simple
 # Should show: Claude 3 Haiku
 ```
 
@@ -243,7 +243,7 @@ leo model test orchestrator simple
 
 ```bash
 # Designer agent will use GPT-4o exclusively
-leo issue new "Design user profile page"
+ingvar issue new "Design user profile page"
 # Agent: 🎨 Designer → GPT-4o
 ```
 
@@ -251,7 +251,7 @@ leo issue new "Design user profile page"
 
 ```bash
 # Frontend agent will use Claude 3.5 Sonnet for moderate/complex
-leo issue new "Implement authentication UI"
+ingvar issue new "Implement authentication UI"
 # Agent: 💻 Frontend → Claude 3.5 Sonnet
 ```
 
@@ -269,8 +269,8 @@ leo issue new "Implement authentication UI"
 
 Have feedback on the new model selection strategy? Let us know:
 
-- **GitHub Issues**: [Create an issue](https://github.com/leonpagotto/leo-kit/issues/new)
-- **Discussions**: [Join the conversation](https://github.com/leonpagotto/leo-kit/discussions)
+- **GitHub Issues**: [Create an issue](https://github.com/leopagotto/ingvar-kit/issues/new)
+- **Discussions**: [Join the conversation](https://github.com/leopagotto/ingvar-kit/discussions)
 
 ---
 
@@ -285,6 +285,6 @@ Looking ahead to **v5.4.0**:
 
 ---
 
-**Happy Building with LEO! 🦁**
+**Happy Building with Ingvar! 🦁**
 
-_Built with ❤️ by the LEO Workflow Kit team_
+_Built with ❤️ by the Ingvar Kit team_

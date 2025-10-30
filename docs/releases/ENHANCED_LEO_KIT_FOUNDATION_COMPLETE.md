@@ -1,4 +1,4 @@
-# 🚀 Enhanced LEO Kit: Specification-Driven Development Integration
+# 🚀 Enhanced Ingvar Kit: Specification-Driven Development Integration
 
 **Status:** ✅ Foundation Complete - Ready for AI Integration
 **Commit Ready:** Week 4 Enhancement
@@ -8,17 +8,17 @@
 
 ## 🎯 What's New
 
-### Enhanced LEO Kit Now Includes:
+### Enhanced Ingvar Kit Now Includes:
 
 ```bash
-leo spec init my-feature              # Initialize spec project
-leo spec constitution                 # Define project principles
-leo spec specify                      # Write specification
-leo spec plan                         # Create implementation plan
-leo spec tasks                        # Generate task list
-leo spec analyze                      # Validate specification
-leo spec implement                    # Generate code with AI
-leo spec status                       # Show progress
+ingvar spec init my-feature              # Initialize spec project
+ingvar spec constitution                 # Define project principles
+ingvar spec specify                      # Write specification
+ingvar spec plan                         # Create implementation plan
+ingvar spec tasks                        # Generate task list
+ingvar spec analyze                      # Validate specification
+ingvar spec implement                    # Generate code with AI
+ingvar spec status                       # Show progress
 ```
 
 ---
@@ -50,28 +50,28 @@ lib/
 ## 🔄 Workflow: Specification → Code
 
 ```
-1. leo spec init my-feature
+1. ingvar spec init my-feature
    └─ Create spec directory structure
 
-2. leo spec constitution
+2. ingvar spec constitution
    └─ Define project principles & standards
 
-3. leo spec specify
+3. ingvar spec specify
    └─ Write what you want to build
 
-4. leo spec plan
+4. ingvar spec plan
    └─ Choose technology stack & architecture
 
-5. leo spec tasks
+5. ingvar spec tasks
    └─ Auto-generate task list
 
-6. leo spec analyze
+6. ingvar spec analyze
    └─ Validate specification completeness
 
-7. leo spec implement (AI GENERATION!)
+7. ingvar spec implement (AI GENERATION!)
    └─ Generate production-ready code
 
-8. leo spec status
+8. ingvar spec status
    └─ Track progress
 ```
 
@@ -113,90 +113,90 @@ lib/
 ### Step 1: Initialize
 
 ```bash
-$ leo spec init dashboard
+$ ingvar spec init dashboard
 
-📋 Initializing LEO Spec
+📋 Initializing Ingvar Spec
 
 ✅ Spec initialized: dashboard
 
 Next steps:
 
-  leo spec constitution       # Define project principles
-  leo spec specify            # Write specification
-  leo spec plan               # Plan implementation
-  leo spec tasks              # Generate tasks
+  ingvar spec constitution       # Define project principles
+  ingvar spec specify            # Write specification
+  ingvar spec plan               # Plan implementation
+  ingvar spec tasks              # Generate tasks
 ```
 
 ### Step 2: Create Constitution
 
 ```bash
-$ leo spec constitution
+$ ingvar spec constitution
 
 📜 Create Project Constitution
 
 ✅ Constitution created
 
 Next: Write specification
-  leo spec specify
+  ingvar spec specify
 ```
 
 ### Step 3: Write Specification
 
 ```bash
-$ leo spec specify
+$ ingvar spec specify
 
 📝 Create Specification
 
 ✅ Specification created
 
 Next: Create implementation plan
-  leo spec plan
+  ingvar spec plan
 ```
 
 ### Step 4: Plan Implementation
 
 ```bash
-$ leo spec plan
+$ ingvar spec plan
 
 🏗️  Create Implementation Plan
 
 ✅ Implementation plan created
 
 Next: Generate tasks
-  leo spec tasks
+  ingvar spec tasks
 ```
 
 ### Step 5: Generate Tasks
 
 ```bash
-$ leo spec tasks
+$ ingvar spec tasks
 
 📋 Generating Task List
 
 ✅ Generated 8 tasks
 
 Next steps:
-  leo spec analyze        # Validate
-  leo spec implement      # Generate code
+  ingvar spec analyze        # Validate
+  ingvar spec implement      # Generate code
 ```
 
 ### Step 6: Validate
 
 ```bash
-$ leo spec analyze
+$ ingvar spec analyze
 
 🔍 Analyzing Specification
 
 ✅ Specification is complete and consistent
 
 Ready to proceed:
-  leo spec implement    # Generate code with AI
+  ingvar spec implement    # Generate code with AI
 ```
 
 ### Step 7: Generate Code (AI)
 
 ```bash
-$ leo spec implement --ai claude
+$ ingvar spec implement --ai claude
 
 🤖 Generating Code with AI
 
@@ -208,13 +208,13 @@ Generating code... (this may take a moment)
 Next steps:
   1. Review generated code: .leo/generated/dashboard/
   2. Run tests: npm test
-  3. Deploy: leo spec deploy
+  3. Deploy: ingvar spec deploy
 ```
 
 ### Step 8: Check Status
 
 ```bash
-$ leo spec status
+$ ingvar spec status
 
 📊 Specification Status
 
@@ -280,35 +280,35 @@ Requirements:
 
 ---
 
-## 📊 Integration with LEO Kit
+## 📊 Integration with Ingvar Kit
 
 ### Existing Governance + New Automation
 
 ```
-Traditional LEO Kit                  Enhanced LEO Kit
+Traditional Ingvar Kit                  Enhanced Ingvar Kit
 ──────────────────────────────────   ─────────────────────────────────
-leo issue create "Build X"           leo spec init feature
+ingvar issue create "Build X"           ingvar spec init feature
      ↓                                    ↓
-GitHub issue created                 leo spec constitution
+GitHub issue created                 ingvar spec constitution
      ↓                                    ↓
-Orchestrator routes                  leo spec specify
+Orchestrator routes                  ingvar spec specify
      ↓                                    ↓
-Agent assigned                        leo spec plan
+Agent assigned                        ingvar spec plan
      ↓                                    ↓
-Manual implementation                 leo spec implement (AI!)
+Manual implementation                 ingvar spec implement (AI!)
      ↓                                    ↓
 PR created                            Auto-generated code
      ↓                                    ↓
-Manual review                         leo spec analyze
+Manual review                         ingvar spec analyze
      ↓                                    ↓
 Merged                                Ready for testing
 ```
 
 ### Best of Both Worlds
 
-- ✅ Governance: LEO Kit's multi-agent orchestration
+- ✅ Governance: Ingvar Kit's multi-agent orchestration
 - ✅ Automation: Spec-Kit's AI-driven code generation
-- ✅ Consistency: LEO Kit's workflow enforcement
+- ✅ Consistency: Ingvar Kit's workflow enforcement
 - ✅ Speed: AI-generated implementations
 - ✅ Quality: Built-in validation & checklists
 
@@ -380,13 +380,13 @@ Merged                                Ready for testing
 ### Option 1: Try Manual Workflow
 
 ```bash
-leo spec init my-feature
-leo spec constitution
-leo spec specify
-leo spec plan
-leo spec tasks
-leo spec analyze
-leo spec status
+ingvar spec init my-feature
+ingvar spec constitution
+ingvar spec specify
+ingvar spec plan
+ingvar spec tasks
+ingvar spec analyze
+ingvar spec status
 ```
 
 ### Option 2: Wait for Full AI Integration
@@ -414,7 +414,7 @@ What we learned:
 - ✅ Quality validation first
 - ✅ Multiple AI agent support
 
-### LEO Kit Enhancement
+### Ingvar Kit Enhancement
 
 What we added:
 
@@ -455,7 +455,7 @@ What we added:
 
 ### Immediate
 
-- Use new `leo spec` commands for your next feature
+- Use new `ingvar spec` commands for your next feature
 - Provide feedback on workflow
 - Suggest improvements
 
@@ -488,7 +488,7 @@ What we added:
 
 ---
 
-**Enhanced LEO Kit: Foundation Complete. Ready for AI Code Generation.**
+**Enhanced Ingvar Kit: Foundation Complete. Ready for AI Code Generation.**
 
 _Next: Claude API integration and end-to-end testing_
 

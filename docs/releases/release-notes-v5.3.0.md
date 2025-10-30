@@ -36,10 +36,10 @@
 
 ```bash
 # Install latest version
-npm install -g leo-workflow-kit@5.3.0
+npm install -g ingvar-kit@5.3.0
 
 # Or update existing installation
-npm update -g leo-workflow-kit
+npm update -g ingvar-kit
 ```
 
 ## 🚀 New Workflow
@@ -103,7 +103,7 @@ User Request → Designer (30 min visual) → Frontend (2 hours code) → Done
 
 No breaking changes:
 
-1. Install: `npm install -g leo-workflow-kit@5.3.0`
+1. Install: `npm install -g ingvar-kit@5.3.0`
 2. Restart VS Code to see agent mode switching
 3. Try: "Add a login button" and watch the workflow
 
@@ -135,4 +135,4 @@ Thank you to everyone who made this release possible! 🦁
 
 ---
 
-**Full Changelog**: https://github.com/leonpagotto/leo-kit/compare/v5.2.2...v5.3.0
+**Full Changelog**: https://github.com/leopagotto/ingvar-kit/compare/v5.2.2...v5.3.0

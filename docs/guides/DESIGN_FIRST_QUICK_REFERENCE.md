@@ -55,7 +55,7 @@
 ## 📁 New File Structure
 
 ```
-leo-workflow-kit/
+ingvar-kit/
 ├── lib/
 │   └── ai-instructions/
 │       ├── orchestrator-main.md           ⭐ PRIMARY ROUTING

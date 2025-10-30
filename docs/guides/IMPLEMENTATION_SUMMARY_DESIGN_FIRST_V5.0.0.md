@@ -8,7 +8,7 @@
 
 ## 📌 Overview
 
-You requested a complete architectural redesign of the LEO Workflow Kit to enable:
+You requested a complete architectural redesign of the Ingvar Kit to enable:
 
 1. **Modular instruction files** (main + per-agent)
 2. **Designer-first sequencing** for rapid UI prototyping
@@ -34,7 +34,7 @@ You requested a complete architectural redesign of the LEO Workflow Kit to enabl
   - Routing rules (single-agent, multi-agent, parallel)
   - Available agents overview
   - Multi-agent coordination patterns
-  - LEO workflow enforcement
+  - Ingvar workflow enforcement
   - Response structure templates
 
 #### `lib/ai-instructions/designer-agent.md` ⭐ **NEW**
@@ -48,7 +48,7 @@ You requested a complete architectural redesign of the LEO Workflow Kit to enabl
   - Component design blueprints (Avatar, Button examples)
   - Output standards (design spec template)
   - Handoff to Frontend checklist
-  - LEO workflow rules (issues, commits, status)
+  - Ingvar workflow rules (issues, commits, status)
   - Quality gates and checkpoints
 
 #### `lib/ai-instructions/frontend-agent.md`
@@ -77,7 +77,7 @@ You requested a complete architectural redesign of the LEO Workflow Kit to enabl
   - Business logic implementation
   - Authentication & security
   - Performance & scaling strategies
-  - LEO workflow rules
+  - Ingvar workflow rules
 
 #### `docs/guides/design-first-workflow.md` ⭐ **NEW GUIDE**
 

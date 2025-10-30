@@ -23,12 +23,12 @@
 - Tracks version, timestamp, and install type (global/local)
 - Works for both global and local installs
 
-### 2. Added `leo welcome` Command
+### 2. Added `ingvar welcome` Command
 
 **New Command:**
 ```bash
-leo welcome      # Show full welcome guide
-leo w            # Alias for welcome
+ingvar welcome      # Show full welcome guide
+ingvar w            # Alias for welcome
 ```
 
 **Benefits:**
@@ -63,29 +63,29 @@ npm run postinstall
 
 ### ✅ Welcome Command Works
 ```bash
-leo welcome
+ingvar welcome
 # Shows full welcome guide with all features ✓
 
-leo w
+ingvar w
 # Alias works ✓
 ```
 
 ### ✅ First-Run Banner Works
 ```bash
 rm ~/.leo-workflow/.first-run-complete
-leo --version
+ingvar --version
 # Shows full welcome message on first use ✓
 ```
 
 ### ✅ Regular Commands Show Banner
 ```bash
-leo init
+ingvar init
 # Shows main banner + init process ✓
 ```
 
 ### ✅ Help System Works
 ```bash
-leo --help
+ingvar --help
 # Lists all commands including welcome ✓
 ```
 
@@ -93,28 +93,28 @@ leo --help
 
 ### Installation (First Time)
 ```bash
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 ```
 **Output:**
 ```
 ╔═══════════════════════════════════════════════════════════════╗
-║              🦁  LEO Workflow Kit Installed!  🦁              ║
+║              🦁  Ingvar Kit Installed!  🦁              ║
 ║   GitHub Workflow Automation Toolkit - Version 2.0.3         ║
 ╚═══════════════════════════════════════════════════════════════╝
 
 ✅ Installation Complete!
 
 Get started:
-  $ leo --version        (verify installation)
-  $ leo                  (show help and available commands)
-  $ leo init             (set up workflow in your project)
+  $ ingvar --version        (verify installation)
+  $ ingvar                  (show help and available commands)
+  $ ingvar init             (set up workflow in your project)
 
 💡 Tip: Run 'leo' in any project to see the full welcome guide
 ```
 
 ### First Command Run
 ```bash
-leo --version
+ingvar --version
 ```
 **Output:**
 - Full welcome message (comprehensive guide)
@@ -131,7 +131,7 @@ leo
 
 ### Re-reading Welcome Guide
 ```bash
-leo welcome
+ingvar welcome
 ```
 **Output:**
 - Full welcome message anytime
@@ -154,7 +154,7 @@ leo welcome
 2. **Persistent Documentation** - Welcome guide available anytime
 3. **Development Workflow** - Works well with npm link for development
 4. **User Confidence** - Clear success indicators at every step
-5. **Team Friendly** - New team members can run `leo welcome` anytime
+5. **Team Friendly** - New team members can run `ingvar welcome` anytime
 
 ## Next Steps (Optional Enhancements)
 
@@ -165,4 +165,4 @@ leo welcome
 
 ## Version
 
-This fix is included in version **2.0.3** of LEO Workflow Kit.
+This fix is included in version **2.0.3** of Ingvar Kit.

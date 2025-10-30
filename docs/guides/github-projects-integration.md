@@ -4,7 +4,7 @@
 
 ## Overview
 
-LEO Workflow Kit now automatically integrates with GitHub Projects, adding issues to your project board with proper status tracking. When Copilot creates an issue, it automatically:
+Ingvar Kit now automatically integrates with GitHub Projects, adding issues to your project board with proper status tracking. When Copilot creates an issue, it automatically:
 
 1. ✅ Adds the issue to your configured GitHub Project
 2. ✅ Sets initial status to **"Todo"**

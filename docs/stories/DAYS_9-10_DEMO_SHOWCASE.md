@@ -21,7 +21,7 @@
 ### Step 1: Generate a Web Plugin (< 1 second)
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 ```
 
 **Output:**
@@ -241,17 +241,17 @@ class WebPluginGenerator {
 
 ```bash
 # Create web plugin (new!)
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 
 # Create basic plugin (existing)
-leo plugin create my-plugin
-leo plugin create my-plugin --template=basic
+ingvar plugin create my-plugin
+ingvar plugin create my-plugin --template=basic
 
 # Manage plugins
-leo plugin list
-leo plugin info my-dashboard
-leo plugin start my-dashboard
-leo plugin stop my-dashboard
+ingvar plugin list
+ingvar plugin info my-dashboard
+ingvar plugin start my-dashboard
+ingvar plugin stop my-dashboard
 ```
 
 ---
@@ -261,7 +261,7 @@ leo plugin stop my-dashboard
 ### Example 1: Analytics Dashboard
 
 ```bash
-leo plugin create analytics-dashboard --template=web
+ingvar plugin create analytics-dashboard --template=web
 cd analytics-dashboard
 npm install && npm run dev
 # Automatic hunt statistics and trends
@@ -270,7 +270,7 @@ npm install && npm run dev
 ### Example 2: Team Dashboard
 
 ```bash
-leo plugin create team-dashboard --template=web
+ingvar plugin create team-dashboard --template=web
 cd team-dashboard
 npm install && npm run dev
 # Real-time team status and activity
@@ -279,7 +279,7 @@ npm install && npm run dev
 ### Example 3: Custom Dashboard
 
 ```bash
-leo plugin create custom-ui --template=web
+ingvar plugin create custom-ui --template=web
 cd custom-ui
 # Edit src/ui-generator.js to customize components
 npm run dev
@@ -292,7 +292,7 @@ npm run dev
 ```
 User Command
     ↓
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
     ↓
 PluginCommands.create(name, { template: 'web' })
     ↓
@@ -334,7 +334,7 @@ User can immediately:
 - ✅ Clear examples
 - ✅ Fast iteration
 
-### For LEO Ecosystem
+### For Ingvar Ecosystem
 
 - ✅ Professional plugins
 - ✅ Consistent quality
@@ -490,7 +490,7 @@ The automated web plugin generator is complete and production-ready. Next phase 
 Users can now generate, develop, build, and publish professional web dashboards with:
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 cd my-dashboard
 npm install && npm run dev
 ```

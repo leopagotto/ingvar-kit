@@ -1,7 +1,7 @@
 # Spec Kit Integration Summary
 
 **Date:** 2025-10-27
-**Issue:** #75 - Integrate Spec Kit principles into LEO Workflow Kit
+**Issue:** #75 - Integrate Spec Kit principles into Ingvar Kit
 **Status:** Spec Created ✅
 
 ---
@@ -13,22 +13,22 @@
 - Studied GitHub's Spec Kit (42.4k stars, active project)
 - Reviewed workflow: constitution → specify → clarify → plan → tasks → implement
 - Identified key strengths: templates, constitutional principles, contract-first thinking
-- Evaluated compatibility with LEO's GitHub-centric approach
+- Evaluated compatibility with Ingvar's GitHub-centric approach
 
 ### 2. Created Comprehensive Integration Spec
 
 - **GitHub Issue #75**: Complete roadmap for integration
 - **4 Phases**: Foundation → Task Management → Agent Integration → Execution Modes
 - **Key Innovation**: GitHub Issues as living specs (not file-based)
-- **Maintains LEO Philosophy**: Lightweight, adaptive, issue-centric
+- **Maintains Ingvar Philosophy**: Lightweight, adaptive, issue-centric
 
 ---
 
 ## 🗺️ Integration Strategy
 
-### What LEO Will Adopt from Spec Kit
+### What Ingvar Will Adopt from Spec Kit
 
-✅ **Constitutional Principles** → `.leorc.json` + `docs/CONSTITUTION.md`
+✅ **Constitutional Principles** → `.ingvarrc.json` + `docs/CONSTITUTION.md`
 
 - Project-wide development rules
 - TDD enforcement, API-first design, dependency limits
@@ -38,13 +38,13 @@
 - Spec template: Context, Requirements, User Stories, Acceptance Criteria
 - Clarification template: AI-driven Q&A before planning
 
-✅ **Clarification Workflow** → `leo clarify <issue>`
+✅ **Clarification Workflow** → `ingvar clarify <issue>`
 
 - AI analyzes spec for ambiguities
 - Posts structured questions as issue comment
 - Reduces "what did you mean?" back-and-forth
 
-✅ **Architecture Planning** → `leo plan <issue>`
+✅ **Architecture Planning** → `ingvar plan <issue>`
 
 - Generates tech stack, data model, API contracts
 - Posts as issue comment (not separate file)
@@ -65,7 +65,7 @@
 
 ---
 
-### What LEO Will NOT Adopt
+### What Ingvar Will NOT Adopt
 
 ❌ **File-based specs** (specs/001-feature/spec.md, plan.md, tasks.md)
 
@@ -74,7 +74,7 @@
 
 ❌ **Separate CLI tool** (`specify` command)
 
-- LEO already has its CLI
+- Ingvar already has its CLI
 - Commands integrate into existing `leo` tool
 
 ❌ **Feature numbering** (001-feature, 002-feature)
@@ -95,28 +95,28 @@
 
 **New Commands:**
 
-- `leo constitution init` - Create project principles
-- `leo spec new <description>` - Structured issue creation
-- `leo clarify <issue>` - AI-driven clarification
-- `leo plan <issue>` - Architecture planning
+- `ingvar constitution init` - Create project principles
+- `ingvar spec new <description>` - Structured issue creation
+- `ingvar clarify <issue>` - AI-driven clarification
+- `ingvar plan <issue>` - Architecture planning
 
 **Example Workflow:**
 
 ```bash
 # 1. Setup project principles
-leo constitution init
-# Creates .leorc.json + docs/CONSTITUTION.md
+ingvar constitution init
+# Creates .ingvarrc.json + docs/CONSTITUTION.md
 
 # 2. Create spec with structured template
-leo spec new "Add OAuth2 authentication with Google/GitHub"
+ingvar spec new "Add OAuth2 authentication with Google/GitHub"
 # → Creates issue #42 with sections: Context, Requirements, User Stories
 
 # 3. Clarify ambiguities
-leo clarify 42
+ingvar clarify 42
 # → AI posts: "Which OAuth2 flow? JWT or sessions? What user data?"
 
 # 4. Generate architecture plan
-leo plan 42
+ingvar plan 42
 # → Posts: Tech stack (Passport.js), Data model (SQL), API contracts, File structure
 ```
 
@@ -126,9 +126,9 @@ leo plan 42
 
 **New Commands:**
 
-- `leo tasks create <issue>` - Generate checklist in issue
-- `leo spec diff <issue>` - Show spec evolution
-- `leo spec extend <issue> <desc>` - Add extension/child issue
+- `ingvar tasks create <issue>` - Generate checklist in issue
+- `ingvar spec diff <issue>` - Show spec evolution
+- `ingvar spec extend <issue> <desc>` - Add extension/child issue
 
 **Task Checklist Format:**
 
@@ -163,7 +163,7 @@ leo plan 42
 
 **New Command:**
 
-- `leo orchestrate <issue>` - Multi-agent task execution
+- `ingvar orchestrate <issue>` - Multi-agent task execution
 
 **Spec-Aware Routing:**
 
@@ -175,7 +175,7 @@ leo plan 42
 **Orchestration Flow:**
 
 ```bash
-leo orchestrate 42
+ingvar orchestrate 42
 
 # Output:
 # 🎭 Orchestrating Issue #42
@@ -190,17 +190,17 @@ leo orchestrate 42
 
 ### Phase 4: Execution Modes 🟡 Medium-Low Priority
 
-**Fast Mode** (existing LEO):
+**Fast Mode** (existing Ingvar):
 
 ```bash
-leo issue "Add OAuth2 login"
+ingvar issue "Add OAuth2 login"
 # → Create + implement + commit + close (instant)
 ```
 
 **Spec Mode** (new structured workflow):
 
 ```bash
-leo spec new "Add OAuth2 login" --mode spec
+ingvar spec new "Add OAuth2 login" --mode spec
 # → Spec → Clarify → Plan → Tasks → Orchestrate (deliberate)
 ```
 
@@ -223,8 +223,8 @@ leo spec new "Add OAuth2 login" --mode spec
 
 **New Commands:**
 
-- `leo dashboard` - Show spec → plan → tasks flow
-- `leo feedback <issue>` - Post-completion analysis
+- `ingvar dashboard` - Show spec → plan → tasks flow
+- `ingvar feedback <issue>` - Post-completion analysis
 
 ---
 
@@ -242,7 +242,7 @@ specs/
     data-model.md     # Entities (static file)
 ```
 
-**LEO Kit Integration:**
+**Ingvar Kit Integration:**
 
 ```
 GitHub Issue #42: Add OAuth2 authentication
@@ -253,11 +253,11 @@ GitHub Issue #42: Add OAuth2 authentication
 - 👥 User Stories
 
 [Issue Comments]
-- 🤔 Clarification Q&A (leo clarify)
-- 🏗️ Architecture Plan (leo plan)
+- 🤔 Clarification Q&A (ingvar clarify)
+- 🏗️ Architecture Plan (ingvar plan)
 
 [Issue Checklist]
-- ✅ Implementation Tasks (leo tasks create)
+- ✅ Implementation Tasks (ingvar tasks create)
 
 [Issue History]
 - Version control via comment timeline
@@ -276,13 +276,13 @@ GitHub Issue #42: Add OAuth2 authentication
 
 ## 📊 Comparison Table
 
-| Aspect            | Spec Kit                   | LEO Kit Integration       |
+| Aspect            | Spec Kit                   | Ingvar Kit Integration       |
 | ----------------- | -------------------------- | ------------------------- |
 | **Spec Storage**  | Files (specs/001-feature/) | GitHub Issues             |
 | **Planning**      | plan.md file               | Issue comment             |
 | **Tasks**         | tasks.md file              | Issue checklist           |
-| **Constitution**  | memory/constitution.md     | .leorc.json + docs/       |
-| **Workflow**      | /speckit.\* commands       | leo \* commands           |
+| **Constitution**  | memory/constitution.md     | .ingvarrc.json + docs/       |
+| **Workflow**      | /speckit.\* commands       | ingvar \* commands           |
 | **Versioning**    | Git commits on files       | Issue comment history     |
 | **Collaboration** | File PRs                   | Issue comments            |
 | **Agent Support** | Not agent-aware            | Multi-agent orchestration |
@@ -330,20 +330,20 @@ GitHub Issue #42: Add OAuth2 authentication
 ### Week 1: Foundation (Phase 1)
 
 - Create `lib/constitution/` module
-- Implement `leo constitution init`
+- Implement `ingvar constitution init`
 - Create issue templates
-- Implement `leo spec new`, `leo clarify`, `leo plan`
+- Implement `ingvar spec new`, `ingvar clarify`, `ingvar plan`
 
 ### Week 2: Task Management (Phase 2)
 
-- Implement `leo tasks create`
+- Implement `ingvar tasks create`
 - Add dependency markers ([P], [S])
-- Implement `leo spec diff`, `leo spec extend`
+- Implement `ingvar spec diff`, `ingvar spec extend`
 
 ### Week 3: Agent Integration (Phase 3)
 
 - Update orchestrator for spec-aware routing
-- Implement `leo orchestrate`
+- Implement `ingvar orchestrate`
 - GitHub Projects integration
 
 ### Week 4: Modes & Polish (Phase 4-5)
@@ -359,8 +359,8 @@ GitHub Issue #42: Add OAuth2 authentication
 
 - **Spec Kit Repository**: https://github.com/github/spec-kit (42.4k stars)
 - **Spec-Driven Development Guide**: https://github.com/github/spec-kit/blob/main/spec-driven.md
-- **LEO Workflow Kit**: https://github.com/leonpagotto/leo-kit
-- **Integration Issue**: https://github.com/leonpagotto/leo-kit/issues/75
+- **Ingvar Kit**: https://github.com/leopagotto/ingvar-kit
+- **Integration Issue**: https://github.com/leopagotto/ingvar-kit/issues/75
 
 ---
 
@@ -375,12 +375,12 @@ GitHub Issue #42: Add OAuth2 authentication
 
 ## 🎉 Success Criteria
 
-- [ ] `leo constitution init` works and creates principles
-- [ ] `leo spec new` creates structured issues
-- [ ] `leo clarify` posts AI questions
-- [ ] `leo plan` generates architecture
-- [ ] `leo tasks create` builds checklists
-- [ ] `leo orchestrate` assigns to agents
+- [ ] `ingvar constitution init` works and creates principles
+- [ ] `ingvar spec new` creates structured issues
+- [ ] `ingvar clarify` posts AI questions
+- [ ] `ingvar plan` generates architecture
+- [ ] `ingvar tasks create` builds checklists
+- [ ] `ingvar orchestrate` assigns to agents
 - [ ] Fast Mode and Spec Mode coexist
 - [ ] Documentation complete
 - [ ] > 80% test coverage
@@ -396,4 +396,4 @@ GitHub Issue #42: Add OAuth2 authentication
 ---
 
 _Generated: 2025-10-27_
-_LEO Workflow Kit v5.0.1_
+_Ingvar Kit v5.0.1_

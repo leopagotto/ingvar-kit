@@ -1,4 +1,4 @@
-# 🦁 LEO Workflow Kit v5.0.0 Release
+# 🦁 Ingvar Kit v5.0.0 Release
 
 **Release Date**: October 25, 2025  
 **Status**: ✅ Production Ready  
@@ -59,28 +59,28 @@
 
 ### Code Generation
 ```bash
-leo spec init "Build user authentication"
-leo spec constitution      # Set governance rules
-leo spec specify           # Create detailed spec
-leo spec plan              # AI generates implementation plan
-leo spec implement         # Claude generates code!
+ingvar spec init "Build user authentication"
+ingvar spec constitution      # Set governance rules
+ingvar spec specify           # Create detailed spec
+ingvar spec plan              # AI generates implementation plan
+ingvar spec implement         # Claude generates code!
 ```
 
 ### Model Selection
 ```bash
-leo model list             # View configuration
-leo model set backend      # Configure backend agent
-leo model strategy complex # Switch strategies
-leo model costs            # Track spending
-leo model budget 100       # Set monthly budget
+ingvar model list             # View configuration
+ingvar model set backend      # Configure backend agent
+ingvar model strategy complex # Switch strategies
+ingvar model costs            # Track spending
+ingvar model budget 100       # Set monthly budget
 ```
 
 ### Team Collaboration
 ```bash
-leo team setupGitHub       # Setup GitHub integration
-leo hunt create            # Create new hunt
-leo hunt phase progress    # Update phase
-leo hunt assign            # Assign team members
+ingvar team setupGitHub       # Setup GitHub integration
+ingvar hunt create            # Create new hunt
+ingvar hunt phase progress    # Update phase
+ingvar hunt assign            # Assign team members
 ```
 
 ## 📊 Performance Improvements
@@ -94,7 +94,7 @@ leo hunt assign            # Assign team members
 
 ### From v4.x to v5.0.0
 - New specification system replaces legacy workflow
-- Model configuration format changed (.leorc.json)
+- Model configuration format changed (.ingvarrc.json)
 - Agent routing is now orchestrator-based
 - Constitutional governance required for specs
 
@@ -132,7 +132,7 @@ leo hunt assign            # Assign team members
 
 ## 🎓 Documentation
 
-- **User Guide**: How to use LEO Kit effectively
+- **User Guide**: How to use Ingvar Kit effectively
 - **API Reference**: Complete endpoint documentation
 - **Contributing Guide**: For developers
 - **Architecture Guide**: System design and components
@@ -146,7 +146,7 @@ leo hunt assign            # Assign team members
 
 ## 🔗 Resources
 
-- **GitHub**: https://github.com/leonpagotto/leo-kit
+- **GitHub**: https://github.com/leopagotto/ingvar-kit
 - **Documentation**: https://wiki.leo-kit.dev
 - **Issues**: Report bugs and feature requests
 - **Discussions**: Share ideas and ask questions
@@ -177,21 +177,21 @@ leo hunt assign            # Assign team members
 
 ## 🚀 Next Steps
 
-1. **Download**: `npm install leo-workflow-kit@latest`
-2. **Initialize**: `leo init` or `leo team init`
-3. **Explore**: `leo spec init "Your idea"`
-4. **Create**: `leo spec implement` (AI generates code!)
+1. **Download**: `npm install ingvar-kit@latest`
+2. **Initialize**: `ingvar init` or `ingvar team init`
+3. **Explore**: `ingvar spec init "Your idea"`
+4. **Create**: `ingvar spec implement` (AI generates code!)
 5. **Share**: Contribute back to the community
 
 ## 📧 Support
 
 For questions, issues, or feedback:
-- GitHub Issues: https://github.com/leonpagotto/leo-kit/issues
-- Discussions: https://github.com/leonpagotto/leo-kit/discussions
+- GitHub Issues: https://github.com/leopagotto/ingvar-kit/issues
+- Discussions: https://github.com/leopagotto/ingvar-kit/discussions
 - Email: leo@leonardo.dev
 
 ---
 
-**Thank you for using LEO Workflow Kit! 🦁**
+**Thank you for using Ingvar Kit! 🦁**
 
 *Making collaborative development faster, smarter, and more human.*

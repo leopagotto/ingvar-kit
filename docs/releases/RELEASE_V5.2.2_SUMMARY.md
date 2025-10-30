@@ -3,13 +3,13 @@
 > **Release Date:** October 29, 2025  
 > **Release Type:** Minor Release (Documentation & Improvements)  
 > **NPM Version:** 5.2.2  
-> **GitHub Release:** https://github.com/leonpagotto/leo-kit/releases/tag/v5.2.2
+> **GitHub Release:** https://github.com/leopagotto/ingvar-kit/releases/tag/v5.2.2
 
 ---
 
 ## 🎯 Release Highlights
 
-This release focuses on making LEO's workflows accessible to everyone through visual guides, fixing broken documentation links, and simplifying complex explanations.
+This release focuses on making Ingvar's workflows accessible to everyone through visual guides, fixing broken documentation links, and simplifying complex explanations.
 
 ### ✨ Key Achievements
 
@@ -45,16 +45,16 @@ This release focuses on making LEO's workflows accessible to everyone through vi
 
 **Diagram 4: Complete Spec Workflow**
 - 6-step process with real commands
-- `leo spec new` → `leo clarify` → `leo plan` → `leo tasks create` → `leo tasks status` → `leo spec-extend`
+- `ingvar spec new` → `ingvar clarify` → `ingvar plan` → `ingvar tasks create` → `ingvar tasks status` → `ingvar spec-extend`
 - Shows both checklist and child issue modes
 
-**Diagram 5: Complete LEO Journey**
+**Diagram 5: Complete Ingvar Journey**
 - End-to-end user experience
 - Install → Init → Describe Work → Orchestrator Routes → Issue Created → Work Starts → Done
 - Shows automatic workflow from start to finish
 
 #### Quick Command Reference Table
-- All essential LEO commands in one place
+- All essential Ingvar commands in one place
 - Clear descriptions of what each command does
 - Easy reference for new and experienced users
 
@@ -86,7 +86,7 @@ This release focuses on making LEO's workflows accessible to everyone through vi
 - Confusing architecture visualization
 
 **Added:**
-- "How LEO Works" section (5 simple steps)
+- "How Ingvar Works" section (5 simple steps)
 - "Spec-First Development" section with real command examples
 - Simplified "System Architecture" (3-layer explanation)
 - Links to visual workflow diagrams
@@ -104,28 +104,28 @@ This release focuses on making LEO's workflows accessible to everyone through vi
 
 ```bash
 # 1. Create spec
-leo spec new "Build authentication system"
+ingvar spec new "Build authentication system"
 ✅ Creates GitHub issue with spec template
 
 # 2. Clarify requirements
-leo clarify 42
+ingvar clarify 42
 ✅ AI generates clarifying questions
 
 # 3. Generate plan
-leo plan 42
+ingvar plan 42
 ✅ Creates implementation plan
 
 # 4. Create tasks
-leo tasks create 42                      # Checklist mode
-leo tasks create 42 --create-issues      # Child issues mode
+ingvar tasks create 42                      # Checklist mode
+ingvar tasks create 42 --create-issues      # Child issues mode
 ✅ Both modes working correctly
 
 # 5. Track progress
-leo tasks status 42
+ingvar tasks status 42
 ✅ Shows completion percentage
 
 # 6. Extend spec
-leo spec-extend 42 "Add OAuth2 support"
+ingvar spec-extend 42 "Add OAuth2 support"
 ✅ Merges new requirements
 ```
 
@@ -163,13 +163,13 @@ leo spec-extend 42 "Add OAuth2 support"
 ## 🎯 Key Benefits
 
 ### For New Users
-- **📚 Clear Visual Guides**: Understand LEO in 5 minutes with diagrams
+- **📚 Clear Visual Guides**: Understand Ingvar in 5 minutes with diagrams
 - **🎯 Simple Language**: Kid-friendly explanations make concepts accessible
 - **📖 No Broken Links**: All documentation paths work correctly
 - **✅ Working Examples**: See real commands with expected outputs
 
 ### For Existing Users
-- **📊 Workflow Reference**: Quick lookup for any LEO workflow
+- **📊 Workflow Reference**: Quick lookup for any Ingvar workflow
 - **🔗 Fixed Navigation**: Find documentation faster
 - **📖 Simplified Docs**: Less noise, clearer explanations
 - **✅ Verified Commands**: Confidence that spec workflow works
@@ -187,19 +187,19 @@ leo spec-extend 42 "Add OAuth2 support"
 ### New Installation
 
 ```bash
-npm install -g leo-workflow-kit@5.2.2
+npm install -g ingvar-kit@5.2.2
 ```
 
 ### Upgrade from Previous Version
 
 ```bash
-npm update -g leo-workflow-kit
+npm update -g ingvar-kit
 ```
 
 ### Verify Installation
 
 ```bash
-leo --version
+ingvar --version
 # Should show: 5.2.2
 ```
 
@@ -225,8 +225,8 @@ leo --version
 ## 🔗 Important Links
 
 ### Release Assets
-- **GitHub Release:** https://github.com/leonpagotto/leo-kit/releases/tag/v5.2.2
-- **NPM Package:** https://www.npmjs.com/package/leo-workflow-kit
+- **GitHub Release:** https://github.com/leopagotto/ingvar-kit/releases/tag/v5.2.2
+- **NPM Package:** https://www.npmjs.com/package/ingvar-kit
 - **Changelog:** [CHANGELOG.md](./CHANGELOG.md#522---2025-10-29)
 
 ### Documentation
@@ -235,8 +235,8 @@ leo --version
 - **Wiki:** [wiki/Home.md](./wiki/Home.md)
 
 ### Support
-- **Issues:** https://github.com/leonpagotto/leo-kit/issues
-- **Discussions:** https://github.com/leonpagotto/leo-kit/discussions
+- **Issues:** https://github.com/leopagotto/ingvar-kit/issues
+- **Discussions:** https://github.com/leopagotto/ingvar-kit/discussions
 
 ---
 
@@ -330,16 +330,16 @@ See [Roadmap](./wiki/Roadmap.md) for detailed plans.
 ### Get Help
 - **Documentation:** [docs/](./docs/)
 - **Wiki:** [wiki/Home.md](./wiki/Home.md)
-- **Issues:** https://github.com/leonpagotto/leo-kit/issues
+- **Issues:** https://github.com/leopagotto/ingvar-kit/issues
 
 ### Provide Feedback
 - Open an issue with suggestions
 - Star the repository if you find it useful
-- Share LEO with your team
+- Share Ingvar with your team
 
 ---
 
-**Made with ❤️ by the LEO Workflow Kit team**
+**Made with ❤️ by the Ingvar Kit team**
 
 **Last Updated:** October 29, 2025  
 **Release Manager:** Leo de Souza  

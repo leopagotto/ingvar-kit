@@ -100,7 +100,7 @@
 ### GitHub Integration Flow
 
 ```
-User runs: leo team setupBoard
+User runs: ingvar team setupBoard
     ↓
 Check GitHub token (github-auth.js)
     ↓
@@ -110,7 +110,7 @@ Create project board (github-api.js)
     ├─ Settings: Auto-add issues
     └─ Return: board_id, column_ids
     ↓
-Hunt created: leo hunt start
+Hunt created: ingvar hunt start
     ↓
 Create GitHub issue (github-api.js)
     ├─ Title: Hunt name
@@ -118,7 +118,7 @@ Create GitHub issue (github-api.js)
     ├─ Link to board
     └─ Return: issue_id
     ↓
-Hunt transitions: leo hunt nextPhase
+Hunt transitions: ingvar hunt nextPhase
     ↓
 Update GitHub issue & board
     ├─ Change label: "phase:requirements" → "phase:spec"
@@ -352,7 +352,7 @@ class TeamCommands {
    - Show success message with board URL
 
 2. **Integration with existing flow**
-   - After `leo team init`, offer GitHub setup
+   - After `ingvar team init`, offer GitHub setup
    - "Would you like to set up GitHub integration? (y/n)"
    - If yes, run setupGitHub() flow
    - Save board_id and column_ids
@@ -527,7 +527,7 @@ describe('GitHub Integration E2E', () => {
 ## Setup
 
 1. Get GitHub PAT token
-2. Run `leo team setupGitHub`
+2. Run `ingvar team setupGitHub`
 3. Authorize and create board
 
 ## Usage
@@ -716,9 +716,9 @@ Hunt creation → GitHub API → Project board → Issue created
 
 **By end of Week 1, users will be able to**:
 
-1. ✅ Run `leo team setupGitHub` and authorize GitHub
-2. ✅ Create hunts with `leo hunt start` → automatic GitHub issue creation
-3. ✅ Run `leo hunt nextPhase` → automatic GitHub status update + board sync
+1. ✅ Run `ingvar team setupGitHub` and authorize GitHub
+2. ✅ Create hunts with `ingvar hunt start` → automatic GitHub issue creation
+3. ✅ Run `ingvar hunt nextPhase` → automatic GitHub status update + board sync
 4. ✅ See their hunts on GitHub project board
 5. ✅ Have everything tracked in GitHub
 

@@ -1,6 +1,6 @@
 # GitHub Projects Quick Reference
 
-> **Fast reference for LEO Workflow Kit v2.3.0 GitHub Projects integration**
+> **Fast reference for Ingvar Kit v2.3.0 GitHub Projects integration**
 
 ## 🚀 Quick Start
 
@@ -10,7 +10,7 @@ gh project list --owner YOUR_USERNAME
 
 # 2. Note the project number (e.g., 4)
 
-# 3. Use LEO normally - Copilot handles the rest!
+# 3. Use Ingvar normally - Copilot handles the rest!
 ```
 
 ---

@@ -1,9 +1,9 @@
-# 🚀 LEO Kit v5.0.0 - DEPLOYMENT COMPLETE
+# 🚀 Ingvar Kit v5.0.0 - DEPLOYMENT COMPLETE
 
 **Date:** October 24, 2025  
 **Status:** ✅ SUCCESSFULLY DEPLOYED TO NPM  
-**Package:** `leo-workflow-kit@5.0.0`  
-**Registry:** https://www.npmjs.com/package/leo-workflow-kit
+**Package:** `ingvar-kit@5.0.0`  
+**Registry:** https://www.npmjs.com/package/ingvar-kit
 
 ---
 
@@ -20,10 +20,10 @@
 - ✅ Published with default access (public)
 
 ### Package Metadata
-- ✅ Name: leo-workflow-kit
+- ✅ Name: ingvar-kit
 - ✅ License: MIT
 - ✅ Maintainer: leopagotto <leonpagotto@hotmail.com>
-- ✅ Repository: https://github.com/leonpagotto/leo-kit.git
+- ✅ Repository: https://github.com/leopagotto/ingvar-kit.git
 - ✅ Dependencies: 11 packages (all pinned)
 - ✅ Keywords: Updated with relevant terms
 
@@ -39,7 +39,7 @@
 
 ### CLI Binaries
 - leo-workflow
-- leo (primary command)
+- ingvar (primary command)
 
 ### Core Libraries
 - lib/ai/multi-model-generator.js (NEW - 450+ lines)
@@ -73,27 +73,27 @@ Users can now install the new version with:
 
 ```bash
 # Global installation (recommended for CLI)
-npm install -g leo-workflow-kit@5.0.0
+npm install -g ingvar-kit@5.0.0
 
 # Or update existing installation
-npm update leo-workflow-kit
+npm update ingvar-kit
 
 # Local installation
-npm install leo-workflow-kit@5.0.0
+npm install ingvar-kit@5.0.0
 ```
 
 ### Verify Installation
 
 ```bash
 # Check version
-leo --version
+ingvar --version
 # Output: 5.0.0
 
 # View help
-leo --help
+ingvar --help
 
 # Start generating code with Claude 4.5
-leo spec generate --model opus-4-5
+ingvar spec generate --model opus-4-5
 ```
 
 ---
@@ -103,16 +103,16 @@ leo spec generate --model opus-4-5
 ### 1. Multi-Model Claude Support
 ```bash
 # Use different Claude models
-leo spec generate --model sonnet-3-5      # Balanced (default)
-leo spec generate --model opus-4          # Advanced
-leo spec generate --model opus-4-5        # Maximum
-leo spec generate --model haiku-3         # Fast & lightweight
+ingvar spec generate --model sonnet-3-5      # Balanced (default)
+ingvar spec generate --model opus-4          # Advanced
+ingvar spec generate --model opus-4-5        # Maximum
+ingvar spec generate --model haiku-3         # Fast & lightweight
 ```
 
 ### 2. Automatic Model Selection
 ```bash
-# Let LEO pick the best model
-leo spec generate --auto-select
+# Let Ingvar pick the best model
+ingvar spec generate --auto-select
 ```
 
 ### 3. Beautiful ASCII Styling
@@ -125,9 +125,9 @@ leo spec generate --auto-select
 ### 4. Enhanced Configuration
 ```bash
 # Set default model via environment
-export LEO_MODEL=opus-4-5
+export Ingvar_MODEL=opus-4-5
 export ANTHROPIC_MODEL=opus-4-5
-leo spec generate
+ingvar spec generate
 ```
 
 ---
@@ -136,7 +136,7 @@ leo spec generate
 
 | Metric | Value |
 |--------|-------|
-| Package Name | leo-workflow-kit |
+| Package Name | ingvar-kit |
 | Version | 5.0.0 |
 | Total Versions | 29 |
 | License | MIT |
@@ -146,19 +146,19 @@ leo spec generate
 | Total Files | 93 |
 | Downloads | Available on npmjs.com |
 | Registry URL | https://registry.npmjs.org/ |
-| Package Page | https://www.npmjs.com/package/leo-workflow-kit |
+| Package Page | https://www.npmjs.com/package/ingvar-kit |
 
 ---
 
 ## 🔗 IMPORTANT LINKS
 
 ### NPM
-- **Package Page:** https://www.npmjs.com/package/leo-workflow-kit
-- **Install Command:** `npm install -g leo-workflow-kit@5.0.0`
-- **Tarball:** https://registry.npmjs.org/leo-workflow-kit/-/leo-workflow-kit-5.0.0.tgz
+- **Package Page:** https://www.npmjs.com/package/ingvar-kit
+- **Install Command:** `npm install -g ingvar-kit@5.0.0`
+- **Tarball:** https://registry.npmjs.org/ingvar-kit/-/ingvar-kit-5.0.0.tgz
 
 ### GitHub
-- **Repository:** https://github.com/leonpagotto/leo-kit
+- **Repository:** https://github.com/leopagotto/ingvar-kit
 - **Git Tag:** v5.0.0
 - **Main Branch:** 46 commits ahead
 
@@ -233,10 +233,10 @@ leo spec generate
 ## 📞 SUPPORT & RESOURCES
 
 ### Getting Help
-1. **Documentation:** https://github.com/leonpagotto/leo-kit/tree/main/docs
-2. **Issues:** https://github.com/leonpagotto/leo-kit/issues
-3. **Discussions:** https://github.com/leonpagotto/leo-kit/discussions
-4. **README:** https://github.com/leonpagotto/leo-kit#readme
+1. **Documentation:** https://github.com/leopagotto/ingvar-kit/tree/main/docs
+2. **Issues:** https://github.com/leopagotto/ingvar-kit/issues
+3. **Discussions:** https://github.com/leopagotto/ingvar-kit/discussions
+4. **README:** https://github.com/leopagotto/ingvar-kit#readme
 
 ### Quick Links
 - **Multi-Model Guide:** docs/CLAUDE_MULTI_MODEL_GUIDE.md
@@ -248,7 +248,7 @@ leo spec generate
 For common issues and solutions, see:
 - **Troubleshooting Guide:** docs/CLAUDE_MULTI_MODEL_GUIDE.md#troubleshooting
 - **FAQ:** docs/CLAUDE_MULTI_MODEL_GUIDE.md#faq
-- **GitHub Issues:** https://github.com/leonpagotto/leo-kit/issues
+- **GitHub Issues:** https://github.com/leopagotto/ingvar-kit/issues
 
 ---
 
@@ -309,7 +309,7 @@ For common issues and solutions, see:
 
 ## ✨ CONCLUSION
 
-**LEO Kit v5.0.0 is now live on npm!**
+**Ingvar Kit v5.0.0 is now live on npm!**
 
 The package includes:
 - Multi-model Claude AI support with intelligent selection
@@ -320,15 +320,15 @@ The package includes:
 
 **Installation:**
 ```bash
-npm install -g leo-workflow-kit@5.0.0
+npm install -g ingvar-kit@5.0.0
 ```
 
 **Verification:**
 ```bash
-leo --version
+ingvar --version
 # Output: 5.0.0
 
-leo spec generate --model opus-4-5
+ingvar spec generate --model opus-4-5
 # Generate code with Claude 4.5
 ```
 
@@ -337,8 +337,8 @@ leo spec generate --model opus-4-5
 **Deployment Status:** 🚀 **COMPLETE & LIVE**  
 **Date:** October 24, 2025  
 **Version:** v5.0.0  
-**npm Package:** https://www.npmjs.com/package/leo-workflow-kit  
-**GitHub Repository:** https://github.com/leonpagotto/leo-kit
+**npm Package:** https://www.npmjs.com/package/ingvar-kit  
+**GitHub Repository:** https://github.com/leopagotto/ingvar-kit
 
 ---
 

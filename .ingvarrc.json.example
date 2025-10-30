@@ -1,0 +1,84 @@
+{
+  "version": "3.0.3",
+  "project-type": "fullstack",
+  "auto-resolve": true,
+
+  "github": {
+    "owner": "leopagotto",
+    "repo": "ingvar-kit",
+    "project": {
+      "number": 4,
+      "url": "https://github.com/users/leopagotto/projects/4",
+      "auto-add-issues": true
+    }
+  },
+
+  "ai-assistants": {
+    "enabled": [
+      "copilot",
+      "cursor",
+      "cline",
+      "codeium"
+    ],
+    "primary": "copilot",
+    "sync-on-update": true
+  },
+
+  "agents": {
+    "orchestrator": {
+      "enabled": true,
+      "_comment": "Orchestrator is always enabled (required)"
+    },
+    "frontend": {
+      "enabled": false,
+      "frameworks": ["react", "next.js"],
+      "ui-library": "tailwindcss",
+      "_comment": "Enable for UI/UX, components, styling work"
+    },
+    "backend": {
+      "enabled": false,
+      "framework": "express",
+      "database": "postgresql",
+      "orm": "prisma",
+      "_comment": "Enable for API, database, auth work"
+    },
+    "devops": {
+      "enabled": false,
+      "platform": "railway",
+      "ci-cd": "github-actions",
+      "_comment": "Enable for deployment, CI/CD, infrastructure"
+    },
+    "testing": {
+      "enabled": false,
+      "frameworks": ["jest", "playwright"],
+      "coverage-threshold": 80,
+      "_comment": "Enable for test creation and quality assurance"
+    },
+    "documentation": {
+      "enabled": false,
+      "style": "jsdoc",
+      "_comment": "Enable for README, API docs, guides"
+    }
+  },
+
+  "routing": {
+    "multi-agent-threshold": 3,
+    "auto-handoff": true,
+    "fallback-agent": "orchestrator"
+  },
+
+  "documentation": {
+    "enforce-organization": true,
+    "auto-organize": false,
+    "root-files-max": 6,
+    "allowed-root-files": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "LICENSE",
+      "SECURITY.md",
+      "CHANGELOG.md",
+      "INDEX.md"
+    ],
+    "_comment": "Documentation organization settings. enforce-organization enables pre-commit hook validation."
+  }
+}

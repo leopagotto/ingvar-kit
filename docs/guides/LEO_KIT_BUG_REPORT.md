@@ -1,17 +1,17 @@
-# 🐛 Bug Report: Copilot Instructions File Not Generated During `leo init`
+# 🐛 Bug Report: Copilot Instructions File Not Generated During `ingvar init`
 
 **Date:** October 20, 2025
-**LEO Kit Version:** 3.0.2
+**Ingvar Kit Version:** 3.0.2
 **Reporter:** Leo de Souza (leonpagotto)
 
 ---
 
 ## 📋 Summary
 
-During the `leo init` process, the GitHub Copilot instructions file (`.github/copilot-instructions.md`) was **not generated automatically**, even though:
+During the `ingvar init` process, the GitHub Copilot instructions file (`.github/copilot-instructions.md`) was **not generated automatically**, even though:
 
 - GitHub Copilot was selected as an AI assistant
-- The configuration was saved in `.leorc.json`
+- The configuration was saved in `.ingvarrc.json`
 - VS Code extensions were configured correctly
 - All other files were created successfully
 
@@ -19,12 +19,12 @@ During the `leo init` process, the GitHub Copilot instructions file (`.github/co
 
 ### Terminal Output Analysis
 
-Looking at the `leo init` output:
+Looking at the `ingvar init` output:
 
 ```
 🤖 AI Assistant Configuration
 
-LEO supports multiple AI coding assistants. Select the ones you use:
+Ingvar supports multiple AI coding assistants. Select the ones you use:
 
 ? Which AI assistants do you use? (Space to select, Enter to confirm) 🤖 GitHub Copilot - AI pair
 programmer from GitHub
@@ -43,7 +43,7 @@ programmer from GitHub
 - `.vscode/settings.json`
 - `.vscode/extensions.json` (with Copilot extensions)
 - `docs/specs/EXAMPLE_SPEC.md`
-- `.leorc.json` (with correct AI configuration)
+- `.ingvarrc.json` (with correct AI configuration)
 
 ❌ **Missing:**
 
@@ -51,7 +51,7 @@ programmer from GitHub
 
 ### Configuration State
 
-The `.leorc.json` was created correctly:
+The `.ingvarrc.json` was created correctly:
 
 ```json
 {
@@ -65,10 +65,10 @@ The `.leorc.json` was created correctly:
 
 ### Workaround That Works
 
-Running `leo ai sync` **manually** after init successfully generates the file:
+Running `ingvar ai sync` **manually** after init successfully generates the file:
 
 ```bash
-$ leo ai sync
+$ ingvar ai sync
 🔄 Syncing AI instruction files...
 
 🚀 Generating AI instruction files...
@@ -82,7 +82,7 @@ $ leo ai sync
 This confirms:
 
 - The template/generation logic **works correctly**
-- The issue is specifically in the **`leo init` flow**
+- The issue is specifically in the **`ingvar init` flow**
 - The file generation is being **skipped or failing silently** during init
 
 ---
@@ -101,7 +101,7 @@ Based on the terminal output and behavior, the likely issues are:
 
 ### Theory 2: Timing/Race Condition
 
-- The `.leorc.json` file might not have been written to disk yet when AI generation runs
+- The `.ingvarrc.json` file might not have been written to disk yet when AI generation runs
 - The AI generation step might be reading an empty or incomplete config
 
 ### Theory 3: Wrong Code Path
@@ -116,10 +116,10 @@ Based on the terminal output and behavior, the likely issues are:
 
 ## 🔧 Expected Behavior
 
-During `leo init`, when a user selects AI assistants:
+During `ingvar init`, when a user selects AI assistants:
 
 1. ✅ Prompt user to select AI assistants
-2. ✅ Save selection to `.leorc.json`
+2. ✅ Save selection to `.ingvarrc.json`
 3. ✅ Configure VS Code extensions
 4. ❌ **Generate AI instruction files** ← This should happen but doesn't
 5. ✅ Show success message
@@ -138,7 +138,7 @@ The terminal should show:
 1. Create a new directory: `mkdir test-leo-init`
 2. Initialize git: `cd test-leo-init && git init`
 3. Create GitHub repo: `gh repo create test-leo-init --private --source=. --remote=origin`
-4. Run: `leo init`
+4. Run: `ingvar init`
 5. Follow prompts:
    - Authenticate with GitHub
    - Choose "Create new GitHub Project" (or skip)
@@ -153,15 +153,15 @@ The terminal should show:
 
 ```bash
 # Check AI configuration
-leo ai list
+ingvar ai list
 # Output: "⚠ GitHub Copilot - .github/copilot-instructions.md (not generated)"
 
 # Check config file
-cat .leorc.json
+cat .ingvarrc.json
 # Output: Shows copilot is enabled
 
 # Manually sync (workaround)
-leo ai sync
+ingvar ai sync
 # Output: Successfully generates the file
 
 # Verify file exists now
@@ -175,9 +175,9 @@ ls -la .github/copilot-instructions.md
 
 ### Location to Investigate
 
-Look for the code in `leo init` that handles AI assistant configuration, specifically:
+Look for the code in `ingvar init` that handles AI assistant configuration, specifically:
 
-- The step after saving `.leorc.json`
+- The step after saving `.ingvarrc.json`
 - The AI instruction file generation logic
 - Error handling that might be swallowing exceptions
 
@@ -207,7 +207,7 @@ if (config.aiAssistants && config.aiAssistants.length > 0) {
 
 ```javascript
 // Config write might not be complete
-await fs.writeFile(".leorc.json", JSON.stringify(config));
+await fs.writeFile(".ingvarrc.json", JSON.stringify(config));
 // This might read old/empty config
 const instructions = await generateAIInstructions(); // ← Needs to wait
 ```
@@ -215,8 +215,8 @@ const instructions = await generateAIInstructions(); // ← Needs to wait
 ### Recommended Solution
 
 1. **Add error logging** - If generation fails, show the actual error
-2. **Verify config is saved** - Ensure `.leorc.json` is written before reading it
-3. **Call the same logic as `leo ai sync`** - Reuse the working code path
+2. **Verify config is saved** - Ensure `.ingvarrc.json` is written before reading it
+3. **Call the same logic as `ingvar ai sync`** - Reuse the working code path
 4. **Add explicit success confirmation** - Show which files were generated
 
 Example:
@@ -239,7 +239,7 @@ if (config["ai-assistants"]?.enabled?.length > 0) {
     }
   } catch (error) {
     console.error("✖ Failed to generate AI instruction files:", error.message);
-    console.log("💡 You can run `leo ai sync` later to generate them");
+    console.log("💡 You can run `ingvar ai sync` later to generate them");
   }
 }
 ```
@@ -249,24 +249,24 @@ if (config["ai-assistants"]?.enabled?.length > 0) {
 ## 🎯 Impact
 
 **Severity:** Medium
-**User Impact:** Users don't get the full LEO workflow automation during initial setup
+**User Impact:** Users don't get the full Ingvar workflow automation during initial setup
 
 **Why it matters:**
 
-- The copilot-instructions.md file is **critical** for the LEO workflow
-- It guides GitHub Copilot to follow LEO's standards
+- The copilot-instructions.md file is **critical** for the Ingvar workflow
+- It guides GitHub Copilot to follow Ingvar's standards
 - Users expect it to be set up automatically
-- The workaround (`leo ai sync`) works, but users shouldn't need to know about it
-- New users might not realize the file is missing until they wonder why Copilot isn't following LEO patterns
+- The workaround (`ingvar ai sync`) works, but users shouldn't need to know about it
+- New users might not realize the file is missing until they wonder why Copilot isn't following Ingvar patterns
 
 ---
 
 ## ✅ Workaround for Users
 
-Until fixed, users should run this after `leo init`:
+Until fixed, users should run this after `ingvar init`:
 
 ```bash
-leo ai sync
+ingvar ai sync
 ```
 
 This will generate the missing `.github/copilot-instructions.md` file.
@@ -279,16 +279,16 @@ This will generate the missing `.github/copilot-instructions.md` file.
 - Git version: 2.39.5
 - Node.js version: 24.5.0
 - OS: macOS
-- Installation method: Global (`npm install -g leo-workflow-kit`)
+- Installation method: Global (`npm install -g ingvar-kit`)
 
 ---
 
 ## 🔗 Related Files
 
-- **Config file:** `.leorc.json` (created correctly)
+- **Config file:** `.ingvarrc.json` (created correctly)
 - **Missing file:** `.github/copilot-instructions.md` (should be created, isn't)
-- **Working command:** `leo ai sync` (generates the file successfully)
+- **Working command:** `ingvar ai sync` (generates the file successfully)
 
 ---
 
-**Thank you for building LEO Kit! This is a minor bug but worth fixing for the best user experience. 🦁**
+**Thank you for building Ingvar Kit! This is a minor bug but worth fixing for the best user experience. 🦁**

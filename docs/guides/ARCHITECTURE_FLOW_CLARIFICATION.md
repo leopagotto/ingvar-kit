@@ -8,7 +8,7 @@
 
 ## 🚨 CRITICAL DISCOVERY: AI-Driven vs Code-Driven
 
-**The LEO Workflow Kit orchestration is AI-INSTRUCTION-BASED, NOT CODE-BASED.**
+**The Ingvar Kit orchestration is AI-INSTRUCTION-BASED, NOT CODE-BASED.**
 
 This is the most important finding from our investigation:
 
@@ -41,7 +41,7 @@ This is **BY DESIGN** and is actually a **FEATURE**, not a bug!---
 ### The Implementation Reality
 
 ```
-/Users/leo.de.souza1/leo-workflow-kit/
+/Users/leo.de.souza1/ingvar-kit/
 ├── lib/
 │   ├── agents/
 │   │   └── orchestrator-template.js  ← Generates INSTRUCTIONS
@@ -76,7 +76,7 @@ This is **BY DESIGN** and is actually a **FEATURE**, not a bug!---
 - ❌ Maintenance - More code to maintain
 - ❌ Less intelligent - Can't adapt
 
-**LEO chose the AI path intentionally!**
+**Ingvar chose the AI path intentionally!**
 
 ---
 
@@ -187,7 +187,7 @@ graph TB
 5. [Step 3] TASK_ROUTE - Route to appropriate specialist agent
    │                     (Frontend, Backend, DevOps, Testing, Docs)
    ↓
-6. [Step 4] AUTO_RESOLVE - Check .leorc.json config
+6. [Step 4] AUTO_RESOLVE - Check .ingvarrc.json config
    │
    ├─ auto-resolve: true → Start work immediately
    └─ auto-resolve: false → Wait for user review
@@ -310,7 +310,7 @@ graph TB
 ### Configuration File
 
 ```bash
-.leorc.json
+.ingvarrc.json
 ```
 
 **Controls:**
@@ -336,7 +336,7 @@ Orchestrator reads copilot-instructions.md
 ↓
 [Step 3] TASK_ROUTE: Keywords "button", "mobile" → Frontend Agent
 ↓
-[Step 4] AUTO_RESOLVE: Check .leorc.json → auto-resolve: true
+[Step 4] AUTO_RESOLVE: Check .ingvarrc.json → auto-resolve: true
 ↓
 [Step 5] AUTO_PROJECT: Add #127 to project board
 ↓
@@ -367,7 +367,7 @@ Orchestrator reads copilot-instructions.md
          → Frontend Agent (login UI)
          → Testing Agent (auth tests)
 ↓
-[Step 4] AUTO_RESOLVE: Check .leorc.json → auto-resolve: false
+[Step 4] AUTO_RESOLVE: Check .ingvarrc.json → auto-resolve: false
          → Wait for user to review issues before starting
 ↓
 User approves, agents start work

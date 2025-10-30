@@ -13,7 +13,7 @@ gh auth refresh -s project
 - Go to: https://github.com/users/leonpagotto/projects
 - Click "New Project"
 - Choose "Board" template
-- Name it: "LEO Workflow Board"
+- Name it: "Ingvar Workflow Board"
 
 ## Get Your Project Field IDs
 
@@ -124,7 +124,7 @@ export GH_PROJECT_NUMBER=42
 
 ```bash
 # Test issue creation
-leo issue --interactive
+ingvar issue --interactive
 
 # Should create issue with:
 # - Proper type (Bug/Enhancement/Task)

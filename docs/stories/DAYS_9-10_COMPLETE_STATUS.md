@@ -36,7 +36,7 @@ Automatically generates:
 New command:
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 ```
 
 ### 3. Generated Per Plugin (2,000+ lines auto-generated)
@@ -66,7 +66,7 @@ Every plugin gets:
 ### One Command. Everything Else Automatic.
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 ```
 
 **What Happens:**
@@ -182,7 +182,7 @@ Time:        5.095 s
 ### In 30 Seconds
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 cd my-dashboard
 npm install
 npm run dev
@@ -202,11 +202,11 @@ npm publish
 ### In < 5 Minutes
 
 ```bash
-leo plugin install leo-dashboard-my-dashboard
-leo plugin start my-dashboard
+ingvar plugin install leo-dashboard-my-dashboard
+ingvar plugin start my-dashboard
 ```
 
-**Result:** Running web dashboard integrated with LEO CLI
+**Result:** Running web dashboard integrated with Ingvar CLI
 
 ---
 
@@ -226,7 +226,7 @@ leo plugin start my-dashboard
 - ✅ Professional structure
 - ✅ Fast iteration
 
-### For LEO
+### For Ingvar
 
 - ✅ Plugin ecosystem
 - ✅ Professional quality
@@ -263,7 +263,7 @@ leo plugin start my-dashboard
 
 ### The Generator Pattern
 
-1. **Input:** User runs `leo plugin create my-dashboard --template=web`
+1. **Input:** User runs `ingvar plugin create my-dashboard --template=web`
 2. **Processing:**
    - Parse command options
    - Route to WebPluginGenerator
@@ -314,7 +314,7 @@ Users save **~3 hours** per plugin created.
 ### Example 1: Analytics Dashboard
 
 ```bash
-leo plugin create analytics --template=web
+ingvar plugin create analytics --template=web
 cd analytics
 npm install && npm run dev
 # Customized analytics dashboard in 2 minutes
@@ -323,7 +323,7 @@ npm install && npm run dev
 ### Example 2: Team Dashboard
 
 ```bash
-leo plugin create team --template=web
+ingvar plugin create team --template=web
 cd team
 npm install && npm run dev
 # Team status dashboard ready to go
@@ -332,7 +332,7 @@ npm install && npm run dev
 ### Example 3: Custom Business Logic
 
 ```bash
-leo plugin create custom --template=web
+ingvar plugin create custom --template=web
 cd custom
 # Edit src/main.js to add business logic
 npm run dev
@@ -423,7 +423,7 @@ You asked for **automated, not manual.**
 We delivered **100% automation.**
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 ```
 
 **Everything else happens automatically.**

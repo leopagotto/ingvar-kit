@@ -244,7 +244,7 @@ Coverage:
 1. **Setup GitHub Integration**
 
    ```bash
-   leo team setupGitHub
+   ingvar team setupGitHub
    ```
 
    - Interactive token entry
@@ -254,7 +254,7 @@ Coverage:
 2. **Check Connection Status**
 
    ```bash
-   leo team checkGitHub
+   ingvar team checkGitHub
    ```
 
    - Shows authentication status
@@ -264,27 +264,27 @@ Coverage:
 3. **Auto-Create Issues on Hunts**
 
    ```bash
-   leo hunt start
+   ingvar hunt start
    # Automatically creates GitHub issue
    ```
 
 4. **Sync Phase Transitions**
 
    ```bash
-   leo hunt nextPhase hunt-id
+   ingvar hunt nextPhase hunt-id
    # Automatically moves issue between columns
    ```
 
 5. **Auto-Close on Completion**
 
    ```bash
-   leo hunt complete hunt-id
+   ingvar hunt complete hunt-id
    # Automatically closes GitHub issue
    ```
 
 6. **Disconnect GitHub**
    ```bash
-   leo team disconnectGitHub
+   ingvar team disconnectGitHub
    ```
    - Secure token removal
 

@@ -8,7 +8,7 @@
 
 ## 🎯 Overview
 
-The LEO Spec System now integrates with **Claude 3.5 Sonnet** for automated code generation from specifications.
+The Ingvar Spec System now integrates with **Claude 3.5 Sonnet** for automated code generation from specifications.
 
 ### What's New
 
@@ -22,12 +22,12 @@ The LEO Spec System now integrates with **Claude 3.5 Sonnet** for automated code
 ✅ **AI-Powered Workflow**
 
 ```
-leo spec init feature
-leo spec constitution
-leo spec specify
-leo spec plan
-leo spec implement  ← Claude generates code here!
-leo spec status
+ingvar spec init feature
+ingvar spec constitution
+ingvar spec specify
+ingvar spec plan
+ingvar spec implement  ← Claude generates code here!
+ingvar spec status
 ```
 
 ---
@@ -58,15 +58,15 @@ npm list @anthropic-ai/sdk
 
 ```bash
 # Initialize a feature spec
-leo spec init my-feature
+ingvar spec init my-feature
 
 # Define your specification
-leo spec constitution
-leo spec specify
-leo spec plan
+ingvar spec constitution
+ingvar spec specify
+ingvar spec plan
 
 # Generate code with Claude!
-leo spec implement
+ingvar spec implement
 ```
 
 ---
@@ -77,7 +77,7 @@ leo spec implement
 
 ```bash
 export ANTHROPIC_API_KEY="your-key-here"
-leo spec implement
+ingvar spec implement
 ```
 
 ### Option 2: .env File
@@ -104,7 +104,7 @@ export ANTHROPIC_API_KEY="sk-ant-..."
 
 ```
 ┌──────────────────────┐
-│  leo spec implement  │
+│  ingvar spec implement  │
 └──────────┬───────────┘
            │
            ▼
@@ -165,15 +165,15 @@ The system builds a sophisticated prompt:
 ### Step 1: Initialize
 
 ```bash
-$ leo spec init user-dashboard
-📋 Initializing LEO Spec
+$ ingvar spec init user-dashboard
+📋 Initializing Ingvar Spec
 ✅ Spec initialized: user-dashboard
 ```
 
 ### Step 2: Define Constitution
 
 ```bash
-$ leo spec constitution
+$ ingvar spec constitution
 # Opens editor with template:
 # - Code Quality Standards
 # - Development Practices
@@ -210,7 +210,7 @@ $ leo spec constitution
 ### Step 3: Write Specification
 
 ```bash
-$ leo spec specify
+$ ingvar spec specify
 # Opens editor with template:
 # - Overview
 # - Requirements
@@ -249,7 +249,7 @@ So that I can verify my information is correct
 ### Step 4: Create Implementation Plan
 
 ```bash
-$ leo spec plan
+$ ingvar spec plan
 # Opens editor:
 # - Technology choices
 # - Architecture overview
@@ -287,7 +287,7 @@ $ leo spec plan
 ### Step 5: Generate Tasks
 
 ```bash
-$ leo spec tasks
+$ ingvar spec tasks
 📋 Generating Task List
 
 ✅ Generated 8 tasks:
@@ -304,7 +304,7 @@ $ leo spec tasks
 ### Step 6: Analyze Specification
 
 ```bash
-$ leo spec analyze
+$ ingvar spec analyze
 🔍 Analyzing Specification
 
 ✅ Specification is complete and consistent
@@ -316,7 +316,7 @@ $ leo spec analyze
 ### Step 7: Generate Code with Claude
 
 ```bash
-$ leo spec implement
+$ ingvar spec implement
 🤖 Generating Code with AI
 
 Using provider: claude
@@ -338,7 +338,7 @@ Generated files:
 ### Step 8: Check Progress
 
 ```bash
-$ leo spec status
+$ ingvar spec status
 📊 Specification Status
 
 Feature: user-dashboard
@@ -470,7 +470,7 @@ npm start
 
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-your-key-here"
-leo spec implement
+ingvar spec implement
 ```
 
 ### Issue: "Claude API error"
@@ -508,7 +508,7 @@ leo spec implement
 1. Review generated code quality
 2. Check Node version compatibility
 3. Install missing dependencies
-4. Run: `leo spec implement` again
+4. Run: `ingvar spec implement` again
 
 ---
 
@@ -529,7 +529,7 @@ leo spec implement
 ### Recommendations
 
 - Test specifications first
-- Use `leo spec analyze` before generation
+- Use `ingvar spec analyze` before generation
 - Review generated code carefully
 - Iterate with smaller specs first
 
@@ -600,17 +600,17 @@ leo spec implement
 1. **Check logs:**
 
    ```bash
-   leo spec status
+   ingvar spec status
    ```
 
 2. **Review documentation:**
 
-   - ENHANCED_LEO_KIT_PROPOSAL.md
-   - ENHANCED_LEO_KIT_FOUNDATION_COMPLETE.md
+   - ENHANCED_Ingvar_KIT_PROPOSAL.md
+   - ENHANCED_Ingvar_KIT_FOUNDATION_COMPLETE.md
 
 3. **Report issues:**
 
-   - GitHub: https://github.com/leonpagotto/leo-kit/issues
+   - GitHub: https://github.com/leopagotto/ingvar-kit/issues
    - Reference: Issue #58
 
 4. **Ask questions:**
@@ -622,7 +622,7 @@ leo spec implement
 ## 📚 Resources
 
 - **Claude API Docs:** https://docs.anthropic.com
-- **LEO Kit Repo:** https://github.com/leonpagotto/leo-kit
+- **Ingvar Kit Repo:** https://github.com/leopagotto/ingvar-kit
 - **Spec-Kit Reference:** https://github.com/github/spec-kit
 - **Prompt Engineering Guide:** https://docs.anthropic.com/claude/guide/prompt-engineering
 

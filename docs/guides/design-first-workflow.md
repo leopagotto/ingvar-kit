@@ -1,6 +1,6 @@
 # 🎨 Design-First Workflow Guide v5.0.0
 
-> **The LEO Design-First Development Process**
+> **The Ingvar Design-First Development Process**
 >
 > This guide explains how to use design-first development to ship products faster,
 > get stakeholder feedback earlier, and build more aligned teams.

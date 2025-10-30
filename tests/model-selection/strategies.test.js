@@ -1,9 +1,9 @@
 /**
  * Unit Tests for Selection Strategies
- * 
+ *
  * Tests all three selection strategies:
  * - ComplexityBasedStrategy
- * - AgentSpecificStrategy  
+ * - AgentSpecificStrategy
  * - PhaseBasedStrategy
  */
 
@@ -163,8 +163,8 @@ describe('PhaseBasedStrategy', () => {
   });
 
   describe('Phase Detection', () => {
-    test('should detect development phase from LEO_PHASE', () => {
-      process.env.LEO_PHASE = 'development';
+    test('should detect development phase from INGVAR_PHASE', () => {
+      process.env.INGVAR_PHASE = 'development';
       const phase = strategy.detectPhase();
       expect(phase).toBe('development');
     });
@@ -176,14 +176,14 @@ describe('PhaseBasedStrategy', () => {
     });
 
     test('should default to development', () => {
-      delete process.env.LEO_PHASE;
+      delete process.env.INGVAR_PHASE;
       delete process.env.NODE_ENV;
       const phase = strategy.detectPhase();
       expect(phase).toBe('development');
     });
 
-    test('should prioritize LEO_PHASE over NODE_ENV', () => {
-      process.env.LEO_PHASE = 'production';
+    test('should prioritize INGVAR_PHASE over NODE_ENV', () => {
+      process.env.INGVAR_PHASE = 'production';
       process.env.NODE_ENV = 'development';
       const phase = strategy.detectPhase();
       expect(phase).toBe('production');
@@ -192,7 +192,7 @@ describe('PhaseBasedStrategy', () => {
 
   describe('Development Phase', () => {
     beforeEach(() => {
-      process.env.LEO_PHASE = 'development';
+      process.env.INGVAR_PHASE = 'development';
     });
 
     test('should prefer cost-efficient models', () => {
@@ -209,7 +209,7 @@ describe('PhaseBasedStrategy', () => {
 
   describe('Staging Phase', () => {
     beforeEach(() => {
-      process.env.LEO_PHASE = 'staging';
+      process.env.INGVAR_PHASE = 'staging';
     });
 
     test('should use balanced approach', () => {
@@ -220,7 +220,7 @@ describe('PhaseBasedStrategy', () => {
 
   describe('Production Phase', () => {
     beforeEach(() => {
-      process.env.LEO_PHASE = 'production';
+      process.env.INGVAR_PHASE = 'production';
     });
 
     test('should prefer powerful models', () => {

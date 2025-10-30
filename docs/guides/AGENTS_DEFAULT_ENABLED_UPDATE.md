@@ -1,4 +1,4 @@
-# 🎯 LEO Kit v5.0.0 - Agents Enabled by Default
+# 🎯 Ingvar Kit v5.0.0 - Agents Enabled by Default
 
 **Date:** October 25, 2025
 **Status:** ✅ Ready for NPM Deployment
@@ -25,7 +25,7 @@ Improve the installation experience by enabling all 6 specialized agents by defa
 - Users can unselect agents they don't need during init
 - More intuitive: "keep these enabled" vs "select what you want"
 - Full multi-agent power available immediately after installation
-- Users can customize later in `.leorc.json`
+- Users can customize later in `.ingvarrc.json`
 
 ---
 
@@ -105,14 +105,14 @@ Transform your development workflow with spec-driven development:
 - ✅ Multi-Agent Configuration section explaining all agents
 - ✅ Table showing agent roles and enabled-by-default status
 - ✅ Instructions for customizing agents during init
-- ✅ Instructions for customizing agents in `.leorc.json`
+- ✅ Instructions for customizing agents in `.ingvarrc.json`
 - ✅ Examples of how tasks route to different agents
 - ✅ Clear "How It Works" explanation
 
 ### 5. Version Updates
 
 - ✅ `package.json`: 5.0.0
-- ✅ `.leorc.json`: 5.0.0
+- ✅ `.ingvarrc.json`: 5.0.0
 - ✅ `lib/utils/config-manager.js`: 5.0.0
 
 ---
@@ -197,23 +197,23 @@ npm test
 
 # 2. Test init command (interactive)
 cd /tmp/test-project && git init
-leo init
+ingvar init
 
 # 3. Test non-interactive init
 cd /tmp/test-project2 && git init
-LEO_AUTO_INIT=true npm install /Users/leo.de.souza1/leo-workflow-kit
+Ingvar_AUTO_INIT=true npm install /Users/leo.de.souza1/ingvar-kit
 
-# 4. Verify .leorc.json has all agents enabled
-cat /tmp/test-project/.leorc.json | jq '.agents'
+# 4. Verify .ingvarrc.json has all agents enabled
+cat /tmp/test-project/.ingvarrc.json | jq '.agents'
 
 # 5. Verify agents work during issue creation
-leo issue create "Test issue"
+ingvar issue create "Test issue"
 ```
 
 ### Verification Points
 
 - ✅ Agents appear pre-checked in interactive init
-- ✅ All agents enabled in generated .leorc.json
+- ✅ All agents enabled in generated .ingvarrc.json
 - ✅ Non-interactive mode enables all agents
 - ✅ Users can uncheck agents during init
 - ✅ Agents configuration saves correctly
@@ -229,7 +229,7 @@ leo issue create "Test issue"
 2. ✅ `lib/commands/init.js` - UI improvement
 3. ✅ `scripts/postinstall.js` - Installation message
 4. ✅ `wiki/Installation-Guide.md` - Added agent section
-5. ✅ `.leorc.json` - Version 5.0.0
+5. ✅ `.ingvarrc.json` - Version 5.0.0
 6. ✅ `package.json` - Version 5.0.0
 
 ### Additional Updates Needed
@@ -248,7 +248,7 @@ leo issue create "Test issue"
    - Run init command interactively
    - Verify agents are pre-checked
    - Verify unselecting agents works
-   - Verify .leorc.json is correct
+   - Verify .ingvarrc.json is correct
 
 2. **Commit Changes** (5 mins)
 
@@ -266,7 +266,7 @@ leo issue create "Test issue"
 
    - Tag: `git tag v5.0.0`
    - Publish: `npm publish`
-   - Verify: `npm view leo-workflow-kit`
+   - Verify: `npm view ingvar-kit`
 
 5. **Documentation Updates** (15 mins)
 
@@ -283,7 +283,7 @@ leo issue create "Test issue"
 
 ## 🎉 Summary
 
-This update makes LEO Kit v5.0.0 **more intuitive and powerful** by default:
+This update makes Ingvar Kit v5.0.0 **more intuitive and powerful** by default:
 
 ✅ **Agents enabled by default** - Full multi-agent power immediately
 ✅ **Improved UI** - "Unselect if not needed" is more intuitive
@@ -309,7 +309,7 @@ This update makes LEO Kit v5.0.0 **more intuitive and powerful** by default:
 ### For Existing Users
 
 - ✅ Can still disable agents they don't need
-- ✅ `.leorc.json` fully customizable
+- ✅ `.ingvarrc.json` fully customizable
 - ✅ No forced changes on existing projects
 - ✅ Better documentation for reference
 

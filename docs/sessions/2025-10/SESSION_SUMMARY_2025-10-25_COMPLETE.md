@@ -71,8 +71,8 @@ In a single session, we completed THREE major development initiatives:
 ### Release Achievements
 
 **Published Live** 🎉
-- GitHub Release: https://github.com/leonpagotto/leo-kit/releases/tag/v5.0.0
-- npm Package: Ready at leo-workflow-kit@5.0.0
+- GitHub Release: https://github.com/leopagotto/ingvar-kit/releases/tag/v5.0.0
+- npm Package: Ready at ingvar-kit@5.0.0
 - Version Bump: v4.1.0 → v5.0.0
 
 **Documentation** 📚
@@ -268,7 +268,7 @@ In a single session, we completed THREE major development initiatives:
 
 ## 💾 Configuration Notes
 
-### .leorc.json Changes
+### .ingvarrc.json Changes
 ```json
 {
   "agents": {

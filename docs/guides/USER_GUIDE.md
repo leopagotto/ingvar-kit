@@ -1,4 +1,4 @@
-# LEO Kit 5.0.0 - Complete User Guide
+# Ingvar Kit 5.0.0 - Complete User Guide
 
 **Version:** 5.0.0
 **Released:** October 25, 2025
@@ -26,9 +26,9 @@
 
 ## Introduction
 
-### What is LEO Kit?
+### What is Ingvar Kit?
 
-LEO Kit is an **enterprise-grade CLI framework** for building scalable, automated development workflows with **AI-powered code generation**. It combines:
+Ingvar Kit is an **enterprise-grade CLI framework** for building scalable, automated development workflows with **AI-powered code generation**. It combines:
 
 - **REST API** with WebSocket real-time events
 - **CLI Commands** for powerful automation
@@ -37,7 +37,7 @@ LEO Kit is an **enterprise-grade CLI framework** for building scalable, automate
 - **Claude 3.5 Sonnet AI** for automatic code generation
 - **Constitutional Governance** for team alignment
 
-### Why LEO Kit?
+### Why Ingvar Kit?
 
 ✅ **Reduce Manual Work** - Generate code from specifications
 ✅ **Automated Workflows** - CI/CD-ready development pipeline
@@ -66,7 +66,7 @@ LEO Kit is an **enterprise-grade CLI framework** for building scalable, automate
 - npm or yarn package manager
 - Basic command-line knowledge
 
-**Install LEO Kit:**
+**Install Ingvar Kit:**
 
 ```bash
 npm install @leo/kit
@@ -75,7 +75,7 @@ npm install @leo/kit
 Or install locally for development:
 
 ```bash
-git clone https://github.com/leonpagotto/leo-kit.git
+git clone https://github.com/leopagotto/ingvar-kit.git
 cd leo-kit
 npm install
 npm link
@@ -86,7 +86,7 @@ npm link
 After installation, verify everything works:
 
 ```bash
-leo spec init my-first-feature
+ingvar spec init my-first-feature
 ```
 
 You should see:
@@ -105,13 +105,13 @@ You should see:
 #### Step 1: Initialize a Project
 
 ```bash
-leo spec init user-auth
+ingvar spec init user-auth
 ```
 
 #### Step 2: Define the Constitution (Team Values)
 
 ```bash
-leo spec constitution
+ingvar spec constitution
 ```
 
 Edit the constitution.md file with your team's principles.
@@ -119,7 +119,7 @@ Edit the constitution.md file with your team's principles.
 #### Step 3: Write the Specification
 
 ```bash
-leo spec specify
+ingvar spec specify
 ```
 
 Describe what you want to build in specification.md.
@@ -127,15 +127,15 @@ Describe what you want to build in specification.md.
 #### Step 4: Generate a Plan
 
 ```bash
-leo spec plan
+ingvar spec plan
 ```
 
-LEO Kit analyzes your spec and creates a structured plan.
+Ingvar Kit analyzes your spec and creates a structured plan.
 
 #### Step 5: Generate Code
 
 ```bash
-leo spec implement
+ingvar spec implement
 ```
 
 Claude 3.5 Sonnet AI generates code from your specification!
@@ -159,12 +159,12 @@ Generated Files:
 
 ### 1. REST API Server
 
-LEO Kit includes a powerful REST API with 12 endpoints and WebSocket support:
+Ingvar Kit includes a powerful REST API with 12 endpoints and WebSocket support:
 
 **Starting the Server:**
 
 ```bash
-leo dashboard start
+ingvar dashboard start
 ```
 
 **Key Features:**
@@ -189,36 +189,36 @@ Full suite of commands for complete workflow management:
 **Specification Commands:**
 
 ```bash
-leo spec init <name>              # Initialize new specification
-leo spec constitution             # Define team principles
-leo spec specify                  # Write specification
-leo spec plan                      # Generate implementation plan
-leo spec tasks                     # View tasks
-leo spec analyze                   # Check consistency
-leo spec implement                 # Generate code with AI
-leo spec status                    # Show progress
+ingvar spec init <name>              # Initialize new specification
+ingvar spec constitution             # Define team principles
+ingvar spec specify                  # Write specification
+ingvar spec plan                      # Generate implementation plan
+ingvar spec tasks                     # View tasks
+ingvar spec analyze                   # Check consistency
+ingvar spec implement                 # Generate code with AI
+ingvar spec status                    # Show progress
 ```
 
 **Dashboard Commands:**
 
 ```bash
-leo dashboard start                # Start API server
-leo dashboard stop                 # Stop server
-leo dashboard status               # Check status
-leo dashboard open                 # Open in browser
-leo dashboard docs                 # View API docs
+ingvar dashboard start                # Start API server
+ingvar dashboard stop                 # Stop server
+ingvar dashboard status               # Check status
+ingvar dashboard open                 # Open in browser
+ingvar dashboard docs                 # View API docs
 ```
 
 **Plugin Commands:**
 
 ```bash
-leo plugin create <name>           # Create plugin
-leo plugin list                    # List plugins
-leo plugin info <name>             # Plugin details
-leo plugin install <name>          # Install plugin
-leo plugin start <name>            # Start plugin
-leo plugin stop <name>             # Stop plugin
-leo plugin uninstall <name>        # Remove plugin
+ingvar plugin create <name>           # Create plugin
+ingvar plugin list                    # List plugins
+ingvar plugin info <name>             # Plugin details
+ingvar plugin install <name>          # Install plugin
+ingvar plugin start <name>            # Start plugin
+ingvar plugin stop <name>             # Stop plugin
+ingvar plugin uninstall <name>        # Remove plugin
 ```
 
 ### 3. Plugin System
@@ -234,7 +234,7 @@ Extensible plugin architecture for custom functionality:
 **Creating a Plugin:**
 
 ```bash
-leo plugin create my-plugin
+ingvar plugin create my-plugin
 ```
 
 **Plugin Structure:**
@@ -363,7 +363,7 @@ Powered by Claude 3.5 Sonnet, automatically generate production code:
 **How It Works:**
 
 1. Write specification in Markdown
-2. LEO Kit parses requirements
+2. Ingvar Kit parses requirements
 3. Constructs detailed prompt for Claude
 4. Claude generates implementation code
 5. Code saved to `.leo/generated/`
@@ -447,7 +447,7 @@ Set your API key to enable AI code generation:
 export ANTHROPIC_API_KEY=your-api-key-here
 ```
 
-Without an API key, LEO Kit provides quality code templates.
+Without an API key, Ingvar Kit provides quality code templates.
 
 ---
 
@@ -455,7 +455,7 @@ Without an API key, LEO Kit provides quality code templates.
 
 ### Understanding the 4-Document Workflow
 
-LEO Kit's specification system uses four interconnected documents:
+Ingvar Kit's specification system uses four interconnected documents:
 
 ```
 Constitution (Principles)
@@ -642,7 +642,7 @@ High-level system design diagram.
 Auto-generated task list:
 
 ```bash
-leo spec tasks
+ingvar spec tasks
 ```
 
 **Output:**
@@ -695,13 +695,13 @@ ANTHROPIC_API_KEY=sk-ant-xxxxx
 **Step 3: Verify**
 
 ```bash
-leo spec init test-project
-leo spec implement
+ingvar spec init test-project
+ingvar spec implement
 ```
 
 ### Code Generation Process
 
-**When you run `leo spec implement`:**
+**When you run `ingvar spec implement`:**
 
 1. **Parse Specification** - Reads specification.md
 2. **Extract Requirements** - Identifies key requirements
@@ -759,7 +759,7 @@ Return code as a JSON object with filenames and content.
 
 ### Quality Assurance
 
-LEO Kit validates generated code:
+Ingvar Kit validates generated code:
 
 ✅ **Syntax Validation** - No syntax errors
 ✅ **Import Checks** - All imports resolvable
@@ -775,7 +775,7 @@ If issues detected:
   - Consider adding input validation
   - Add JSDoc comments to exports
 
-Run `leo spec implement --fix` to auto-correct
+Run `ingvar spec implement --fix` to auto-correct
 ```
 
 ---
@@ -784,12 +784,12 @@ Run `leo spec implement --fix` to auto-correct
 
 ### Spec Commands
 
-#### `leo spec init <name>`
+#### `ingvar spec init <name>`
 
 Initialize a new specification project.
 
 ```bash
-leo spec init user-dashboard
+ingvar spec init user-dashboard
 
 # Creates:
 # user-dashboard/
@@ -799,46 +799,46 @@ leo spec init user-dashboard
 # └── tasks.md
 ```
 
-#### `leo spec constitution`
+#### `ingvar spec constitution`
 
 Create/edit team constitution.
 
 ```bash
-leo spec constitution
+ingvar spec constitution
 
 # Opens editor for constitution.md
 # Define team principles and values
 ```
 
-#### `leo spec specify`
+#### `ingvar spec specify`
 
 Write the specification.
 
 ```bash
-leo spec specify
+ingvar spec specify
 
 # Opens editor for specification.md
 # Describe requirements in detail
 ```
 
-#### `leo spec plan`
+#### `ingvar spec plan`
 
 Generate implementation plan from specification.
 
 ```bash
-leo spec plan
+ingvar spec plan
 
 # Analyzes specification.md
 # Creates plan.md with implementation strategy
 # Generates phase breakdown
 ```
 
-#### `leo spec tasks`
+#### `ingvar spec tasks`
 
 View auto-generated task list.
 
 ```bash
-leo spec tasks
+ingvar spec tasks
 
 # Shows all generated tasks
 # Organized by phase
@@ -852,12 +852,12 @@ Generate Tasks (45 total):
     ...
 ```
 
-#### `leo spec analyze`
+#### `ingvar spec analyze`
 
 Check specification consistency.
 
 ```bash
-leo spec analyze
+ingvar spec analyze
 
 # Validates all 4 documents
 # Checks for gaps/conflicts
@@ -869,12 +869,12 @@ leo spec analyze
 ✅ Tasks: 45 tasks generated
 ```
 
-#### `leo spec implement`
+#### `ingvar spec implement`
 
 Generate code using Claude AI.
 
 ```bash
-leo spec implement
+ingvar spec implement
 
 # Analyzes specification
 # Calls Claude 3.5 Sonnet
@@ -886,12 +886,12 @@ leo spec implement
 ✅ Generated 12 files (2,450 lines)
 ```
 
-#### `leo spec status`
+#### `ingvar spec status`
 
 Show specification progress.
 
 ```bash
-leo spec status
+ingvar spec status
 
 Output:
 Specification Status: my-feature
@@ -904,12 +904,12 @@ Specification Status: my-feature
 
 ### Dashboard Commands
 
-#### `leo dashboard start`
+#### `ingvar dashboard start`
 
 Start the API server.
 
 ```bash
-leo dashboard start
+ingvar dashboard start
 
 # Starting dashboard server...
 # Listening on http://localhost:3000
@@ -917,23 +917,23 @@ leo dashboard start
 # Press Ctrl+C to stop
 ```
 
-#### `leo dashboard stop`
+#### `ingvar dashboard stop`
 
 Stop the running server.
 
 ```bash
-leo dashboard stop
+ingvar dashboard stop
 
 # Stopping server...
 # ✅ Server stopped
 ```
 
-#### `leo dashboard status`
+#### `ingvar dashboard status`
 
 Check server status.
 
 ```bash
-leo dashboard status
+ingvar dashboard status
 
 # Server Status:
 # ├─ Status:    Running
@@ -942,22 +942,22 @@ leo dashboard status
 # └─ Connections: 3 active
 ```
 
-#### `leo dashboard open`
+#### `ingvar dashboard open`
 
 Open dashboard in browser.
 
 ```bash
-leo dashboard open
+ingvar dashboard open
 
 # Opens http://localhost:3000 in default browser
 ```
 
-#### `leo dashboard docs`
+#### `ingvar dashboard docs`
 
 Show API documentation.
 
 ```bash
-leo dashboard docs
+ingvar dashboard docs
 
 # Displays OpenAPI 3.0 specification
 # Lists all 12 endpoints
@@ -966,12 +966,12 @@ leo dashboard docs
 
 ### Plugin Commands
 
-#### `leo plugin create <name>`
+#### `ingvar plugin create <name>`
 
 Create a new plugin.
 
 ```bash
-leo plugin create my-analyzer
+ingvar plugin create my-analyzer
 
 # Created plugin structure
 # my-analyzer/
@@ -981,12 +981,12 @@ leo plugin create my-analyzer
 # └── README.md
 ```
 
-#### `leo plugin list`
+#### `ingvar plugin list`
 
 List all installed plugins.
 
 ```bash
-leo plugin list
+ingvar plugin list
 
 # Installed Plugins:
 # ├─ web-dashboard (v1.0.0) - Visual project management
@@ -994,12 +994,12 @@ leo plugin list
 # └─ my-analyzer (v1.0.0) - Code analysis [custom]
 ```
 
-#### `leo plugin info <name>`
+#### `ingvar plugin info <name>`
 
 Show plugin details.
 
 ```bash
-leo plugin info web-dashboard
+ingvar plugin info web-dashboard
 
 # Plugin: web-dashboard
 # ├─ Version:     1.0.0
@@ -1009,34 +1009,34 @@ leo plugin info web-dashboard
 # └─ Description: Visual project management interface
 ```
 
-#### `leo plugin start <name>`
+#### `ingvar plugin start <name>`
 
 Start a plugin.
 
 ```bash
-leo plugin start web-dashboard
+ingvar plugin start web-dashboard
 
 # Starting plugin: web-dashboard
 # ✅ Plugin started on port 3001
 ```
 
-#### `leo plugin stop <name>`
+#### `ingvar plugin stop <name>`
 
 Stop a plugin.
 
 ```bash
-leo plugin stop web-dashboard
+ingvar plugin stop web-dashboard
 
 # Stopping plugin: web-dashboard
 # ✅ Plugin stopped
 ```
 
-#### `leo plugin uninstall <name>`
+#### `ingvar plugin uninstall <name>`
 
 Remove a plugin.
 
 ```bash
-leo plugin uninstall my-analyzer
+ingvar plugin uninstall my-analyzer
 
 # Removing plugin: my-analyzer
 # ✅ Plugin uninstalled
@@ -1169,7 +1169,7 @@ ws.addEventListener("message", (event) => {
 **Generate plugin scaffold:**
 
 ```bash
-leo plugin create my-plugin
+ingvar plugin create my-plugin
 ```
 
 **Plugin structure:**
@@ -1231,10 +1231,10 @@ module.exports = {
 npm publish
 ```
 
-3. **Install in LEO Kit:**
+3. **Install in Ingvar Kit:**
 
 ```bash
-leo plugin install @leo/plugin-myname
+ingvar plugin install @leo/plugin-myname
 ```
 
 ---
@@ -1250,13 +1250,13 @@ leo plugin install @leo/plugin-myname
 1. Initialize specification
 
 ```bash
-leo spec init user-profiles-api
+ingvar spec init user-profiles-api
 ```
 
 2. Write specification
 
 ```bash
-leo spec specify
+ingvar spec specify
 ```
 
 Content:
@@ -1293,13 +1293,13 @@ All endpoints return JSON with structure:
 3. Create plan
 
 ```bash
-leo spec plan
+ingvar spec plan
 ```
 
 4. Generate code
 
 ```bash
-leo spec implement
+ingvar spec implement
 ```
 
 5. Review generated code in `.leo/generated/`
@@ -1326,7 +1326,7 @@ npm test
 9. Start server
 
 ```bash
-leo dashboard start
+ingvar dashboard start
 ```
 
 10. Test endpoints
@@ -1344,7 +1344,7 @@ curl http://localhost:3000/api/profiles
 1. Create constitutional alignment
 
 ```bash
-leo spec constitution
+ingvar spec constitution
 ```
 
 Ensure feature aligns with team values.
@@ -1352,7 +1352,7 @@ Ensure feature aligns with team values.
 2. Write detailed specification
 
 ```bash
-leo spec specify
+ingvar spec specify
 ```
 
 Include examples, edge cases, constraints.
@@ -1360,20 +1360,20 @@ Include examples, edge cases, constraints.
 3. Generate plan
 
 ```bash
-leo spec plan
+ingvar spec plan
 ```
 
 4. Review generated plan
 
 ```bash
-leo spec status
+ingvar spec status
 ```
 
 5. Adjust as needed
 
 ```bash
-leo spec specify  # Update if needed
-leo spec plan     # Regenerate
+ingvar spec specify  # Update if needed
+ingvar spec plan     # Regenerate
 ```
 
 6. Share with team
@@ -1385,7 +1385,7 @@ leo spec plan     # Regenerate
 7. Generate code
 
 ```bash
-leo spec implement
+ingvar spec implement
 ```
 
 8. Team review
@@ -1403,8 +1403,8 @@ leo spec implement
 1. Document current behavior
 
 ```bash
-leo spec init refactor-auth
-leo spec specify
+ingvar spec init refactor-auth
+ingvar spec specify
 ```
 
 Describe what needs to change and why.
@@ -1412,7 +1412,7 @@ Describe what needs to change and why.
 2. Create migration plan
 
 ```bash
-leo spec plan
+ingvar spec plan
 ```
 
 Include breaking changes, migration path.
@@ -1420,7 +1420,7 @@ Include breaking changes, migration path.
 3. Generate new code
 
 ```bash
-leo spec implement
+ingvar spec implement
 ```
 
 4. Write migration guide
@@ -1561,7 +1561,7 @@ Build comprehensive user dashboard with analytics, settings, and notifications.
 Always begin with team constitutional alignment:
 
 ```bash
-leo spec constitution
+ingvar spec constitution
 ```
 
 Include:
@@ -1606,7 +1606,7 @@ Build login system.
 Always review AI-generated code before using:
 
 ```bash
-leo spec implement
+ingvar spec implement
 # Review files in .leo/generated/
 # Check for:
 # - Correct logic
@@ -1681,10 +1681,10 @@ echo "ANTHROPIC_API_KEY=sk-ant-xxxxx" > .env
 pwd
 
 # List specifications
-leo spec status
+ingvar spec status
 
 # Initialize if missing
-leo spec init my-feature
+ingvar spec init my-feature
 
 # Verify files exist
 ls -la
@@ -1729,7 +1729,7 @@ npm test -- --verbose 2>&1 | tail -20
 
 ```bash
 # Use different port
-leo dashboard start --port 3001
+ingvar dashboard start --port 3001
 
 # Or kill process
 lsof -ti :3000 | xargs kill -9
@@ -1743,7 +1743,7 @@ lsof -ti :3000 | xargs kill -9
 
 **A:** No, but code generation works better with one. Set `ANTHROPIC_API_KEY` environment variable for Claude 3.5 Sonnet integration.
 
-### Q: Can I use LEO Kit offline?
+### Q: Can I use Ingvar Kit offline?
 
 **A:** Yes! Core features work offline. Code generation requires internet connection.
 
@@ -1751,11 +1751,11 @@ lsof -ti :3000 | xargs kill -9
 
 **A:** Fork repository, make changes, submit PR. See CONTRIBUTING.md for details.
 
-### Q: Is LEO Kit free?
+### Q: Is Ingvar Kit free?
 
 **A:** Yes! MIT license. Open source. Use commercially.
 
-### Q: Can I extend LEO Kit?
+### Q: Can I extend Ingvar Kit?
 
 **A:** Yes! Plugin system allows custom functionality. See plugin documentation.
 
@@ -1801,8 +1801,8 @@ lsof -ti :3000 | xargs kill -9
 
 1. **Install:** `npm install @leo/kit`
 2. **Learn:** Read this guide
-3. **Try:** `leo spec init my-first-feature`
-4. **Build:** `leo spec implement`
+3. **Try:** `ingvar spec init my-first-feature`
+4. **Build:** `ingvar spec implement`
 5. **Contribute:** Share your specs!
 
 ---

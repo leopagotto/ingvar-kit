@@ -1,4 +1,4 @@
-# LEO Kit 5.0.0 - API Reference
+# Ingvar Kit 5.0.0 - API Reference
 
 **Complete REST API & CLI Command Reference**
 
@@ -492,15 +492,15 @@ curl http://localhost:3000/api/health
 
 ### Specification Commands
 
-#### `leo spec init <name>`
+#### `ingvar spec init <name>`
 
 Initialize a new specification project.
 
 **Usage:**
 
 ```bash
-leo spec init my-feature
-leo spec init "Complex Feature Name"
+ingvar spec init my-feature
+ingvar spec init "Complex Feature Name"
 ```
 
 **Output:**
@@ -517,53 +517,53 @@ leo spec init "Complex Feature Name"
 **Options:**
 
 ```bash
-leo spec init <name> --template <template>
-leo spec init <name> --description "Description"
+ingvar spec init <name> --template <template>
+ingvar spec init <name> --description "Description"
 ```
 
 ---
 
-#### `leo spec constitution`
+#### `ingvar spec constitution`
 
 Create or edit team constitution.
 
 **Usage:**
 
 ```bash
-leo spec constitution
-leo spec constitution edit
-leo spec constitution view
+ingvar spec constitution
+ingvar spec constitution edit
+ingvar spec constitution view
 ```
 
 **Output:** Opens editor to create/edit constitution.md
 
 ---
 
-#### `leo spec specify`
+#### `ingvar spec specify`
 
 Write the specification.
 
 **Usage:**
 
 ```bash
-leo spec specify
-leo spec specify edit
+ingvar spec specify
+ingvar spec specify edit
 ```
 
 **Output:** Opens editor for specification.md
 
 ---
 
-#### `leo spec plan`
+#### `ingvar spec plan`
 
 Generate implementation plan.
 
 **Usage:**
 
 ```bash
-leo spec plan
-leo spec plan generate
-leo spec plan view
+ingvar spec plan
+ingvar spec plan generate
+ingvar spec plan view
 ```
 
 **Output:**
@@ -578,18 +578,18 @@ leo spec plan view
 
 ---
 
-#### `leo spec tasks`
+#### `ingvar spec tasks`
 
 View task list.
 
 **Usage:**
 
 ```bash
-leo spec tasks
-leo spec tasks list
-leo spec tasks view
-leo spec tasks --completed
-leo spec tasks --pending
+ingvar spec tasks
+ingvar spec tasks list
+ingvar spec tasks view
+ingvar spec tasks --completed
+ingvar spec tasks --pending
 ```
 
 **Output:**
@@ -617,16 +617,16 @@ Phase 3: Polish (3 tasks)
 
 ---
 
-#### `leo spec analyze`
+#### `ingvar spec analyze`
 
 Analyze specification for consistency.
 
 **Usage:**
 
 ```bash
-leo spec analyze
-leo spec analyze check
-leo spec analyze validate
+ingvar spec analyze
+ingvar spec analyze check
+ingvar spec analyze validate
 ```
 
 **Output:**
@@ -647,16 +647,16 @@ Tasks:         ✅ Valid (20 tasks)
 
 ---
 
-#### `leo spec implement`
+#### `ingvar spec implement`
 
 Generate code using Claude AI.
 
 **Usage:**
 
 ```bash
-leo spec implement
-leo spec implement --provider claude
-leo spec implement --output ./generated
+ingvar spec implement
+ingvar spec implement --provider claude
+ingvar spec implement --output ./generated
 ```
 
 **Output:**
@@ -683,16 +683,16 @@ Generated Files:
 
 ---
 
-#### `leo spec status`
+#### `ingvar spec status`
 
 Show specification progress.
 
 **Usage:**
 
 ```bash
-leo spec status
-leo spec status <name>
-leo spec status --verbose
+ingvar spec status
+ingvar spec status <name>
+ingvar spec status --verbose
 ```
 
 **Output:**
@@ -718,16 +718,16 @@ Output Directory: .leo/generated/
 
 ### Dashboard Commands
 
-#### `leo dashboard start`
+#### `ingvar dashboard start`
 
 Start the API server.
 
 **Usage:**
 
 ```bash
-leo dashboard start
-leo dashboard start --port 3001
-leo dashboard start --no-open
+ingvar dashboard start
+ingvar dashboard start --port 3001
+ingvar dashboard start --no-open
 ```
 
 **Output:**
@@ -744,14 +744,14 @@ leo dashboard start --no-open
 
 ---
 
-#### `leo dashboard stop`
+#### `ingvar dashboard stop`
 
 Stop the running server.
 
 **Usage:**
 
 ```bash
-leo dashboard stop
+ingvar dashboard stop
 ```
 
 **Output:**
@@ -763,14 +763,14 @@ Stopping dashboard server...
 
 ---
 
-#### `leo dashboard status`
+#### `ingvar dashboard status`
 
 Check server status.
 
 **Usage:**
 
 ```bash
-leo dashboard status
+ingvar dashboard status
 ```
 
 **Output:**
@@ -787,29 +787,29 @@ Server Status:
 
 ---
 
-#### `leo dashboard open`
+#### `ingvar dashboard open`
 
 Open dashboard in browser.
 
 **Usage:**
 
 ```bash
-leo dashboard open
+ingvar dashboard open
 ```
 
 Opens `http://localhost:3000` in default browser.
 
 ---
 
-#### `leo dashboard docs`
+#### `ingvar dashboard docs`
 
 Show API documentation.
 
 **Usage:**
 
 ```bash
-leo dashboard docs
-leo dashboard docs --format json
+ingvar dashboard docs
+ingvar dashboard docs --format json
 ```
 
 **Output:** Displays OpenAPI 3.0 specification with all endpoints.
@@ -818,15 +818,15 @@ leo dashboard docs --format json
 
 ### Plugin Commands
 
-#### `leo plugin create <name>`
+#### `ingvar plugin create <name>`
 
 Create a new plugin.
 
 **Usage:**
 
 ```bash
-leo plugin create my-plugin
-leo plugin create my-plugin --description "Plugin description"
+ingvar plugin create my-plugin
+ingvar plugin create my-plugin --description "Plugin description"
 ```
 
 **Output:**
@@ -843,15 +843,15 @@ leo plugin create my-plugin --description "Plugin description"
 
 ---
 
-#### `leo plugin list`
+#### `ingvar plugin list`
 
 List all plugins.
 
 **Usage:**
 
 ```bash
-leo plugin list
-leo plugin list --details
+ingvar plugin list
+ingvar plugin list --details
 ```
 
 **Output:**
@@ -865,14 +865,14 @@ Installed Plugins (3):
 
 ---
 
-#### `leo plugin info <name>`
+#### `ingvar plugin info <name>`
 
 Show plugin details.
 
 **Usage:**
 
 ```bash
-leo plugin info web-dashboard
+ingvar plugin info web-dashboard
 ```
 
 **Output:**
@@ -890,14 +890,14 @@ Plugin: web-dashboard
 
 ---
 
-#### `leo plugin start <name>`
+#### `ingvar plugin start <name>`
 
 Start a plugin.
 
 **Usage:**
 
 ```bash
-leo plugin start web-dashboard
+ingvar plugin start web-dashboard
 ```
 
 **Output:**
@@ -909,14 +909,14 @@ Starting plugin: web-dashboard...
 
 ---
 
-#### `leo plugin stop <name>`
+#### `ingvar plugin stop <name>`
 
 Stop a plugin.
 
 **Usage:**
 
 ```bash
-leo plugin stop web-dashboard
+ingvar plugin stop web-dashboard
 ```
 
 **Output:**
@@ -928,15 +928,15 @@ Stopping plugin: web-dashboard...
 
 ---
 
-#### `leo plugin install <name>`
+#### `ingvar plugin install <name>`
 
 Install a plugin from npm.
 
 **Usage:**
 
 ```bash
-leo plugin install @leo/plugin-analytics
-leo plugin install my-local-plugin
+ingvar plugin install @leo/plugin-analytics
+ingvar plugin install my-local-plugin
 ```
 
 **Output:**
@@ -948,14 +948,14 @@ Installing plugin: @leo/plugin-analytics...
 
 ---
 
-#### `leo plugin uninstall <name>`
+#### `ingvar plugin uninstall <name>`
 
 Uninstall a plugin.
 
 **Usage:**
 
 ```bash
-leo plugin uninstall my-plugin
+ingvar plugin uninstall my-plugin
 ```
 
 **Output:**
@@ -1142,20 +1142,20 @@ ws.addEventListener("message", (event) => {
 ```bash
 # API Configuration
 ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
-LEO_API_PORT=3000
-LEO_API_HOST=localhost
+Ingvar_API_PORT=3000
+Ingvar_API_HOST=localhost
 
 # Project Configuration
-LEO_PROJECT_NAME="My Project"
-LEO_OUTPUT_DIR=".leo/generated"
+Ingvar_PROJECT_NAME="My Project"
+Ingvar_OUTPUT_DIR=".leo/generated"
 
 # Development
-LEO_DEBUG=false
-LEO_LOG_LEVEL=info
+Ingvar_DEBUG=false
+Ingvar_LOG_LEVEL=info
 
 # Advanced
-LEO_TIMEOUT=30000
-LEO_MAX_RETRIES=3
+Ingvar_TIMEOUT=30000
+Ingvar_MAX_RETRIES=3
 ```
 
 ### Configuration File (leo.config.json)
@@ -1188,7 +1188,7 @@ LEO_MAX_RETRIES=3
 
 | Code                | Meaning                     | Solution                        |
 | ------------------- | --------------------------- | ------------------------------- |
-| `SPEC_NOT_FOUND`    | Specification doesn't exist | Initialize with `leo spec init` |
+| `SPEC_NOT_FOUND`    | Specification doesn't exist | Initialize with `ingvar spec init` |
 | `API_KEY_MISSING`   | API key not configured      | Set `ANTHROPIC_API_KEY` env var |
 | `GENERATION_FAILED` | Code generation failed      | Check specification validity    |
 | `INVALID_REQUEST`   | Bad request format          | Check JSON syntax               |

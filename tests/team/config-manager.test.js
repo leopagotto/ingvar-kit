@@ -103,7 +103,7 @@ describe('ConfigurationManager', () => {
   });
 
   describe('Configuration Persistence', () => {
-    test('should save configuration to .leo.json', async () => {
+    test('should save configuration to .ingvar.json', async () => {
       const manager = new ConfigurationManager(tempDir);
       await manager.initialize({
         name: 'Test Project',

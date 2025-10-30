@@ -1,4 +1,4 @@
-# Model Selection Strategy - LEO Workflow Kit
+# Model Selection Strategy - Ingvar Kit
 
 > **Specification Document** > **Feature:** Intelligent Model Selection for Multi-Agent Workflows
 > **Issue:** #40
@@ -34,7 +34,7 @@ Implement intelligent model selection strategy that automatically chooses the op
 - **Agent Role** (orchestrator, frontend, backend, devops, testing, documentation)
 - **Cost Constraints** (budget limits per agent/task)
 
-This feature enhances LEO's multi-agent system by optimizing cost-to-performance ratio while maintaining quality.
+This feature enhances Ingvar's multi-agent system by optimizing cost-to-performance ratio while maintaining quality.
 
 ---
 
@@ -417,7 +417,7 @@ class CostTracker {
 
 ## Configuration Schema
 
-### `.leorc.json` Extension
+### `.ingvarrc.json` Extension
 
 ```json
 {
@@ -598,48 +598,48 @@ class CostTracker {
 
 ## CLI Commands
 
-### New Command: `leo model`
+### New Command: `ingvar model`
 
 ```bash
 # View current model configuration
-leo model list
+ingvar model list
 
 # Set model selection strategy
-leo model strategy <phase-based|complexity-based|agent-based>
+ingvar model strategy <phase-based|complexity-based|agent-based>
 
 # Configure agent model
-leo model set <agent> --model <model-name> --fallback <fallback-model> --limit <cost-limit>
+ingvar model set <agent> --model <model-name> --fallback <fallback-model> --limit <cost-limit>
 
 # View cost usage
-leo model costs
+ingvar model costs
 
 # Reset cost tracking
-leo model reset-costs
+ingvar model reset-costs
 
 # Test model selection
-leo model test <agent> <task-description>
+ingvar model test <agent> <task-description>
 
 # Set development phase
-leo model phase <development|testing|deployment>
+ingvar model phase <development|testing|deployment>
 
 # Enable/disable cost tracking
-leo model cost-tracking <on|off>
+ingvar model cost-tracking <on|off>
 
 # Set monthly budget
-leo model budget <amount>
+ingvar model budget <amount>
 ````
 
 ### Examples
 
 ```bash
 # Set frontend agent to use Claude Sonnet
-leo model set frontend --model claude-3-sonnet --fallback gpt-4-turbo --limit 5.00
+ingvar model set frontend --model claude-3-sonnet --fallback gpt-4-turbo --limit 5.00
 
 # Switch to development phase (uses cheaper models)
-leo model phase development
+ingvar model phase development
 
 # View current costs
-leo model costs
+ingvar model costs
 # Output:
 # Agent          Model              Cost     Limit    Remaining
 # orchestrator   gpt-4             $2.45    $10.00   $7.55
@@ -648,7 +648,7 @@ leo model costs
 # TOTAL                            $5.15    $50.00   $44.85
 
 # Test model selection
-leo model test frontend "Create a responsive navbar component"
+ingvar model test frontend "Create a responsive navbar component"
 # Output:
 # Agent: frontend
 # Selected Model: claude-3-sonnet
@@ -665,7 +665,7 @@ leo model test frontend "Create a responsive navbar component"
 - [ ] Create `lib/model-selection/` structure
 - [ ] Implement `ModelSelector` class
 - [ ] Implement `CostTracker` class
-- [ ] Add configuration schema to `.leorc.json`
+- [ ] Add configuration schema to `.ingvarrc.json`
 - [ ] Create provider wrappers (OpenAI, Anthropic)
 
 ### Phase 2: Strategy Implementation (Week 1-2)
@@ -678,12 +678,12 @@ leo model test frontend "Create a responsive navbar component"
 
 ### Phase 3: CLI Commands (Week 2)
 
-- [ ] Create `leo model` command
-- [ ] Implement `leo model list`
-- [ ] Implement `leo model set`
-- [ ] Implement `leo model costs`
-- [ ] Implement `leo model strategy`
-- [ ] Implement `leo model phase`
+- [ ] Create `ingvar model` command
+- [ ] Implement `ingvar model list`
+- [ ] Implement `ingvar model set`
+- [ ] Implement `ingvar model costs`
+- [ ] Implement `ingvar model strategy`
+- [ ] Implement `ingvar model phase`
 
 ### Phase 4: Integration (Week 2-3)
 

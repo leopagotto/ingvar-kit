@@ -9,7 +9,7 @@
 
 ## 🎯 Executive Summary
 
-Expand LEO Workflow Kit beyond GitHub Copilot to support multiple AI coding assistants, enabling developers to use LEO's workflow standards with their preferred AI tools (Cursor, AWS CodeWhisperer, Codeium, etc.).
+Expand Ingvar Kit beyond GitHub Copilot to support multiple AI coding assistants, enabling developers to use Ingvar's workflow standards with their preferred AI tools (Cursor, AWS CodeWhisperer, Codeium, etc.).
 
 ---
 
@@ -17,7 +17,7 @@ Expand LEO Workflow Kit beyond GitHub Copilot to support multiple AI coding assi
 
 ### Current Limitations
 
-1. **Single AI Lock-In**: LEO Kit only supports GitHub Copilot
+1. **Single AI Lock-In**: Ingvar Kit only supports GitHub Copilot
 2. **Market Reality**: Developers use various AI assistants:
    - Cursor (Claude-powered) - Very popular
    - AWS CodeWhisperer - Enterprise teams
@@ -25,13 +25,13 @@ Expand LEO Workflow Kit beyond GitHub Copilot to support multiple AI coding assi
    - Codeium - Free alternative
    - Tabnine - Privacy-focused teams
    - Replit AI - Web-based developers
-3. **Missed Opportunity**: LEO's workflow methodology is universal, but instructions are Copilot-only
+3. **Missed Opportunity**: Ingvar's workflow methodology is universal, but instructions are Copilot-only
 4. **User Requests**: Growing demand for multi-AI support
 
 ### User Impact
 
-- **Developers** can't use LEO Kit if they use non-Copilot AIs
-- **Teams** with mixed AI preferences can't standardize on LEO
+- **Developers** can't use Ingvar Kit if they use non-Copilot AIs
+- **Teams** with mixed AI preferences can't standardize on Ingvar
 - **Enterprise** customers may require specific AI vendors (AWS, Google)
 
 ---
@@ -42,7 +42,7 @@ Expand LEO Workflow Kit beyond GitHub Copilot to support multiple AI coding assi
 
 Create a **modular, AI-agnostic instruction system** that:
 
-1. Maintains LEO's workflow standards as a single source of truth
+1. Maintains Ingvar's workflow standards as a single source of truth
 2. Generates AI-specific instruction files from universal templates
 3. Allows users to select which AIs to configure during initialization
 4. Supports multiple AIs simultaneously in the same project
@@ -103,7 +103,7 @@ lib/
 
 ### 2. Configuration Schema
 
-Add to `.leorc.json`:
+Add to `.ingvarrc.json`:
 
 ```json
 {
@@ -163,12 +163,12 @@ class AIAdapter {
 
 ## 💻 User Experience Flow
 
-### During `leo init`
+### During `ingvar init`
 
 ```bash
-$ leo init
+$ ingvar init
 
-🦁 LEO Workflow Kit - Initialization
+🦁 Ingvar Kit - Initialization
 
 ✓ Project detected: Next.js (TypeScript)
 ✓ Git repository found
@@ -190,38 +190,38 @@ $ leo init
   ✓ .cursorrules
   ✓ .codeium/instructions.md
 
-✓ Configuration saved to .leorc.json
+✓ Configuration saved to .ingvarrc.json
 ```
 
-### New Command: `leo ai`
+### New Command: `ingvar ai`
 
 ```bash
 # List configured AIs
-$ leo ai list
+$ ingvar ai list
 Configured AI Assistants:
   ✓ GitHub Copilot (.github/copilot-instructions.md)
   ✓ Cursor (.cursorrules)
   ✓ Codeium (.codeium/instructions.md)
 
 # Add new AI
-$ leo ai add cursor
+$ ingvar ai add cursor
 ✓ Generated .cursorrules
-✓ Added to .leorc.json
+✓ Added to .ingvarrc.json
 
 # Remove AI
-$ leo ai remove codeium
+$ ingvar ai remove codeium
 ✓ Removed .codeium/instructions.md
-✓ Updated .leorc.json
+✓ Updated .ingvarrc.json
 
 # Regenerate all AI instructions
-$ leo ai sync
+$ ingvar ai sync
 🔄 Regenerating AI instruction files...
   ✓ .github/copilot-instructions.md (updated)
   ✓ .cursorrules (updated)
   ✓ .codeium/instructions.md (updated)
 
 # Show differences between AI configs
-$ leo ai diff copilot cursor
+$ ingvar ai diff copilot cursor
 Comparing Copilot vs Cursor instructions:
   ✓ Core workflow: Identical
   ✓ Git standards: Identical
@@ -244,18 +244,18 @@ Comparing Copilot vs Cursor instructions:
 .aws/
   codewhisperer/
     instructions.json            # NEW - AWS CodeWhisperer
-.leorc.json                      # UPDATED - AI config section
+.ingvarrc.json                      # UPDATED - AI config section
 ```
 
 ### Updated Commands
 
-- `leo init` - Multi-AI selection
-- `leo vscode` → `leo ai install` (deprecated alias supported)
-- NEW: `leo ai list`
-- NEW: `leo ai add <ai-name>`
-- NEW: `leo ai remove <ai-name>`
-- NEW: `leo ai sync`
-- NEW: `leo ai diff <ai1> <ai2>`
+- `ingvar init` - Multi-AI selection
+- `ingvar vscode` → `ingvar ai install` (deprecated alias supported)
+- NEW: `ingvar ai list`
+- NEW: `ingvar ai add <ai-name>`
+- NEW: `ingvar ai remove <ai-name>`
+- NEW: `ingvar ai sync`
+- NEW: `ingvar ai diff <ai1> <ai2>`
 
 ---
 
@@ -266,9 +266,9 @@ Comparing Copilot vs Cursor instructions:
 - [ ] Universal template system with modular sections
 - [ ] Support for 4 AI assistants: Copilot, Cursor, Cline, Codeium
 - [ ] AI adapter architecture implemented
-- [ ] `leo init` allows multi-AI selection
-- [ ] `leo ai` command with subcommands (list, add, remove, sync)
-- [ ] Configuration stored in `.leorc.json`
+- [ ] `ingvar init` allows multi-AI selection
+- [ ] `ingvar ai` command with subcommands (list, add, remove, sync)
+- [ ] Configuration stored in `.ingvarrc.json`
 - [ ] All AI instruction files properly formatted
 - [ ] Backward compatibility with existing Copilot-only projects
 - [ ] Documentation updated for multi-AI usage
@@ -276,7 +276,7 @@ Comparing Copilot vs Cursor instructions:
 
 ### Should Have (Phase 1)
 
-- [ ] `leo ai diff` command
+- [ ] `ingvar ai diff` command
 - [ ] Smart defaults based on detected tools (VSCode extensions, etc.)
 - [ ] Warning if AI tool not detected in project
 - [ ] Template sections optimized per AI (e.g., shorter for Cursor)
@@ -298,15 +298,15 @@ Comparing Copilot vs Cursor instructions:
 
 ```bash
 # Existing project with Copilot only
-$ leo ai list
+$ ingvar ai list
 Current configuration:
   ✓ GitHub Copilot (.github/copilot-instructions.md)
 
 # Add Cursor support
-$ leo ai add cursor
+$ ingvar ai add cursor
 ✓ Generated .cursorrules from existing Copilot instructions
 ✓ Maintained all custom sections
-✓ Updated .leorc.json
+✓ Updated .ingvarrc.json
 
 # No breaking changes - existing Copilot setup continues to work
 ```
@@ -314,13 +314,13 @@ $ leo ai add cursor
 ### Automatic Detection
 
 ```bash
-# LEO detects .cursorrules file
-$ leo init
+# Ingvar detects .cursorrules file
+$ ingvar init
 ⚠️  Found existing .cursorrules file
    Import Cursor configuration? (y/n): y
 
 ✓ Imported Cursor rules
-✓ Merged with LEO workflow standards
+✓ Merged with Ingvar workflow standards
 ✓ Generated unified configuration
 ```
 
@@ -337,9 +337,9 @@ $ leo init
 
 ### Integration Tests
 
-- [ ] `leo init` with multiple AI selections
-- [ ] `leo ai add/remove` commands
-- [ ] `leo ai sync` updates all files correctly
+- [ ] `ingvar init` with multiple AI selections
+- [ ] `ingvar ai add/remove` commands
+- [ ] `ingvar ai sync` updates all files correctly
 - [ ] Backward compatibility with Copilot-only projects
 
 ### Manual Testing Checklist
@@ -357,7 +357,7 @@ $ leo init
 ### Adoption Metrics
 
 - **Target**: 40% of users configure 2+ AI assistants
-- **Measure**: `.leorc.json` analysis in telemetry (opt-in)
+- **Measure**: `.ingvarrc.json` analysis in telemetry (opt-in)
 
 ### AI Distribution
 
@@ -386,8 +386,8 @@ $ leo init
 
 **Week 2: Commands & Polish**
 
-- [ ] Implement `leo ai` command
-- [ ] Update `leo init` for multi-AI
+- [ ] Implement `ingvar ai` command
+- [ ] Update `ingvar init` for multi-AI
 - [ ] Add Cline and Codeium adapters
 - [ ] Write documentation
 - [ ] Migration guide
@@ -401,7 +401,7 @@ $ leo init
 
 ### Phase 3: Advanced Features (v3.2.0) - 1 week
 
-- [ ] `leo ai diff` command
+- [ ] `ingvar ai diff` command
 - [ ] Auto-sync on changes
 - [ ] AI-specific optimizations
 - [ ] Performance improvements
@@ -413,7 +413,7 @@ $ leo init
 ### Value Proposition
 
 1. **Broader Market**: Support 80%+ of AI coding assistant users (not just Copilot)
-2. **Enterprise Appeal**: AWS/Google users can adopt LEO
+2. **Enterprise Appeal**: AWS/Google users can adopt Ingvar
 3. **Community Growth**: Multi-AI = more contributors
 4. **Competitive Edge**: No other workflow tool supports multiple AIs
 
@@ -427,7 +427,7 @@ $ leo init
 
 ## 🤔 Open Questions
 
-1. **Instruction Format Standards**: Should we define a LEO standard format that AIs adopt? Or adapt to each AI's preferences?
+1. **Instruction Format Standards**: Should we define a Ingvar standard format that AIs adopt? Or adapt to each AI's preferences?
 
 2. **Sync Strategy**: Auto-sync all AI files on change, or manual sync only?
 
@@ -461,4 +461,4 @@ $ leo init
 
 ---
 
-**Ready to proceed?** Let's make LEO the universal workflow standard for ALL AI coding assistants! 🚀
+**Ready to proceed?** Let's make Ingvar the universal workflow standard for ALL AI coding assistants! 🚀

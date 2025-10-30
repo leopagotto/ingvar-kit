@@ -1,6 +1,6 @@
 # 🎯 Dual-Mode Task Management Demo
 
-LEO Workflow Kit now supports **two modes** for task management, giving you flexibility based on your workflow needs.
+Ingvar Kit now supports **two modes** for task management, giving you flexibility based on your workflow needs.
 
 ---
 
@@ -12,13 +12,13 @@ LEO Workflow Kit now supports **two modes** for task management, giving you flex
 
 ```bash
 # Create spec
-leo spec new "Add user authentication"
+ingvar spec new "Add user authentication"
 
 # Generate plan
-leo plan 42
+ingvar plan 42
 
 # Create task checklist (default mode)
-leo tasks create 42
+ingvar tasks create 42
 ```
 
 **Result:** Markdown checklist posted to issue #42
@@ -46,7 +46,7 @@ leo tasks create 42
 - ✅ Lightweight - all tasks in one comment
 - ✅ Simple - check boxes as you complete tasks
 
-**Example:** [Issue #79](https://github.com/leonpagotto/leo-kit/issues/79)
+**Example:** [Issue #79](https://github.com/leopagotto/ingvar-kit/issues/79)
 
 ---
 
@@ -56,13 +56,13 @@ leo tasks create 42
 
 ```bash
 # Create spec
-leo spec new "Add payment processing with Stripe"
+ingvar spec new "Add payment processing with Stripe"
 
 # Generate plan
-leo plan 80
+ingvar plan 80
 
 # Create child issues for each task
-leo tasks create 80 --create-issues
+ingvar tasks create 80 --create-issues
 ```
 
 **Result:** 16 separate GitHub issues created (#81-#96)
@@ -83,15 +83,15 @@ leo tasks create 80 --create-issues
 - ✅ Granular tracking and progress metrics
 - ✅ Better for distributed teams
 
-**Example:** [Issue #80](https://github.com/leonpagotto/leo-kit/issues/80) (parent spec)
+**Example:** [Issue #80](https://github.com/leopagotto/ingvar-kit/issues/80) (parent spec)
 
-- Child issues: [#81](https://github.com/leonpagotto/leo-kit/issues/81) - [#96](https://github.com/leonpagotto/leo-kit/issues/96)
+- Child issues: [#81](https://github.com/leopagotto/ingvar-kit/issues/81) - [#96](https://github.com/leopagotto/ingvar-kit/issues/96)
 
 ---
 
 ## 🎨 Automatic Label Creation
 
-When using `--create-issues`, LEO automatically creates these labels:
+When using `--create-issues`, Ingvar automatically creates these labels:
 
 | Label        | Color      | Purpose                      |
 | ------------ | ---------- | ---------------------------- |
@@ -111,7 +111,7 @@ When using `--create-issues`, LEO automatically creates these labels:
 Both modes support progress tracking:
 
 ```bash
-leo tasks status 80
+ingvar tasks status 80
 ```
 
 **Output:**
@@ -194,10 +194,10 @@ You can use **both modes** on the same spec:
 
 ```bash
 # Start with simple checklist
-leo tasks create 42
+ingvar tasks create 42
 
 # Later, create child issues for specific phases
-leo tasks create 42 --create-issues --phase 2
+ingvar tasks create 42 --create-issues --phase 2
 ```
 
 _(Note: `--phase` flag coming in Phase 2 Days 12-13)_
@@ -210,9 +210,9 @@ _(Note: `--phase` flag coming in Phase 2 Days 12-13)_
 
 ```bash
 # Quick checklist for personal project
-leo spec new "Add search API endpoint"
-leo plan 97
-leo tasks create 97
+ingvar spec new "Add search API endpoint"
+ingvar plan 97
+ingvar tasks create 97
 
 # Check off tasks as you complete them
 # No extra GitHub issues cluttering your board
@@ -222,9 +222,9 @@ leo tasks create 97
 
 ```bash
 # Full GitHub tracking for team collaboration
-leo spec new "Integrate Stripe payment gateway"
-leo plan 98
-leo tasks create 98 --create-issues
+ingvar spec new "Integrate Stripe payment gateway"
+ingvar plan 98
+ingvar tasks create 98 --create-issues
 
 # Assign tasks to team members:
 # Alice → #99 (Frontend integration)
@@ -256,7 +256,7 @@ leo tasks create 98 --create-issues
 1. **Default to Mode 1** - Start simple, upgrade if needed
 2. **Use Mode 2 for Sprints** - Great for agile workflows
 3. **Combine Both** - Checklist for quick tasks, child issues for complex ones
-4. **Label Consistency** - LEO auto-creates labels, keep them clean
+4. **Label Consistency** - Ingvar auto-creates labels, keep them clean
 5. **Close Child Issues** - Progress tracking works when you close tasks
 
 ---
@@ -264,12 +264,12 @@ leo tasks create 98 --create-issues
 ## 🔮 Coming Soon (Phase 2 Days 12-13)
 
 - `--phase <number>` - Create child issues for specific phase only
-- `leo spec extend` - Add new tasks to existing specs
+- `ingvar spec extend` - Add new tasks to existing specs
 - Parent-child dependency automation
 - GitHub Projects board auto-creation
 
 ---
 
-**Dual-mode task management is available in LEO Workflow Kit v5.1.1+**
+**Dual-mode task management is available in Ingvar Kit v5.1.1+**
 
-Install: `npm install -g @leonpagotto/leo-kit`
+Install: `npm install -g @leopagotto/ingvar-kit`

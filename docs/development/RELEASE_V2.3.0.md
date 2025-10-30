@@ -181,7 +181,7 @@ gh api graphql -f query='
 ### 1. Update to v2.3.0
 
 ```bash
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-kit@latest
 ```
 
 ### 2. Check Your Projects
@@ -198,11 +198,11 @@ gh project list --owner YOUR_USERNAME
 # 4       My Project           open    ← Use this number
 ```
 
-### 4. Use LEO as Normal
+### 4. Use Ingvar as Normal
 
 ```bash
 # In your project
-leo init
+ingvar init
 
 # Just describe work to Copilot:
 "We need to fix the mobile navigation bug"
@@ -257,7 +257,7 @@ Verified:
 
 ## 🔮 Future Enhancements (v2.4.0 Ideas)
 
-- [ ] Auto-create project during `leo init` if none exists
+- [ ] Auto-create project during `ingvar init` if none exists
 - [ ] Support for custom status field names
 - [ ] Integration with GitHub milestones
 - [ ] Sprint planning automation
@@ -290,7 +290,7 @@ This release completes the core automation loop:
 
 ## 📞 Support
 
-- **GitHub Issues:** https://github.com/leonpagotto/leo-kit/issues
+- **GitHub Issues:** https://github.com/leopagotto/ingvar-kit/issues
 - **Documentation:** `docs/` directory
 - **Examples:** `docs/guides/github-projects-integration.md`
 
@@ -298,4 +298,4 @@ This release completes the core automation loop:
 
 **Happy Automating! 🚀**
 
-The LEO Workflow Kit Team
+The Ingvar Kit Team

@@ -1,15 +1,15 @@
-# Welcome to the LEO Workflow Kit Wiki! 🦁
+# Welcome to the Ingvar Kit Wiki! 🐺
 
 > **Your comprehensive guide to mastering AI-powered workflow automation with real-time model selection**
 
-## 🌟 What is LEO Workflow Kit?
+## 🌟 What is Ingvar Kit?
 
-LEO Workflow Kit is a powerful CLI tool that revolutionizes software development project management through:
+Ingvar Kit is a powerful CLI tool that revolutionizes software development project management through:
 
 - **🎛️ Multi-Agent Orchestration**: Intelligent routing to specialized AI agents (v4.1.1) 🎉 LATEST
 - **🔄 Real-Time Model Selection**: Live AI model display in VS Code status bar (v4.1.1) ✨ NEW
 - **🤖 Multi-AI Support**: Works with Copilot, Cursor, Cline, and Codeium
-- **🚀 Automatic Initialization**: Zero-config setup with `LEO_AUTO_INIT=true`
+- **🚀 Automatic Initialization**: Zero-config setup with `INGVAR_AUTO_INIT=true`
 - **🎯 Domain Expertise**: 6 specialized agents (Frontend, Backend, DevOps, Testing, Documentation, Orchestrator, Designer)
 - **⚙️ GitHub Settings Automation**: Configure repository best practices automatically
 - **🧠 Intelligent Spec-First AI**: Automatically decides when to create specs vs direct issues
@@ -27,7 +27,7 @@ LEO Workflow Kit is a powerful CLI tool that revolutionizes software development
   - Spec-First Decision - Simple vs complex work decision tree
   - Simple Issue Creation - 5-step workflow visualization
   - Complete Spec Workflow - 6-step process with real commands
-  - Complete LEO Journey - From install to done
+  - Complete Ingvar Journey - From install to done
 - � **Fixed All Broken Links**: 18 broken wiki references in README.md now working
 - 📖 **Simplified README**: Removed complex Mermaid diagrams, added clear explanations
 - ✅ **Verified Spec Workflow**: All 6 spec commands tested and documented
@@ -44,8 +44,8 @@ LEO Workflow Kit is a powerful CLI tool that revolutionizes software development
 - 🎯 **Domain Expertise**: Each agent expert in its field (~13-17KB specialized instructions)
 - ⚡ **Enable What You Need**: Configure agents based on your project type
 - 🔄 **Multi-Agent Coordination**: Complex tasks automatically coordinated across agents
-- 🛠️ **New `leo agent` Command**: Manage agents (list, enable, disable, info, sync)
-- ⚙️ **New `leo github` Command**: Configure repository settings with best practices
+- 🛠️ **New `ingvar agent` Command**: Manage agents (list, enable, disable, info, sync)
+- ⚙️ **New `ingvar github` Command**: Configure repository settings with best practices
 
 **What's New in 3.0.0:** 🎯 GitHub-Native Issue Creation
 
@@ -62,18 +62,18 @@ LEO Workflow Kit is a powerful CLI tool that revolutionizes software development
 
 ### Getting Started
 
-- [Visual Workflow Guide](../docs/WORKFLOW_DIAGRAMS.md) - Simple diagrams explaining LEO 🎉 NEW v5.2.2
+- [Visual Workflow Guide](../docs/WORKFLOW_DIAGRAMS.md) - Simple diagrams explaining Ingvar 🎉 NEW v5.2.2
 - [Installation Guide](./Installation-Guide) - Get up and running in 5 minutes
-- [Quick Start Tutorial](./Quick-Start) - Your first LEO project
-- [Configuration](./Configuration) - Customize LEO for your workflow
+- [Quick Start Tutorial](./Quick-Start) - Your first Ingvar project
+- [Configuration](./Configuration) - Customize Ingvar for your workflow
 
 ### Core Features
 
 - [Multi-Agent Orchestration](./Multi-Agent-System) - Intelligent routing to specialized agents 🎉 NEW v4.0.0
-- [Agent Management](./Agent-Commands) - `leo agent` command reference 🎉 NEW v4.0.0
-- [GitHub Settings Automation](./GitHub-Commands) - `leo github` command reference 🎉 NEW v4.0.0
+- [Agent Management](./Agent-Commands) - `ingvar agent` command reference 🎉 NEW v4.0.0
+- [GitHub Settings Automation](./GitHub-Commands) - `ingvar github` command reference 🎉 NEW v4.0.0
 - [Multi-AI Support](./Multi-AI-Support) - Use Copilot, Cursor, Cline, or Codeium
-- [AI Assistant Management](./AI-Commands) - `leo ai` command reference
+- [AI Assistant Management](./AI-Commands) - `ingvar ai` command reference
 - [Automatic Initialization](./Automatic-Initialization) - Zero-config setup
 - [Smart Project Types](./Smart-Project-Types) - Optimized instructions per project type
 - [Workflow Configuration](./Configuration) - Control auto-resolution & behavior
@@ -99,7 +99,7 @@ LEO Workflow Kit is a powerful CLI tool that revolutionizes software development
 
 ### Contributing
 
-- [Development Guide](./Development-Guide) - Contributing to LEO
+- [Development Guide](./Development-Guide) - Contributing to Ingvar
 - [Release Process](./Release-Process) - How releases are made
 - [Roadmap](./Roadmap) - Future plans and features
 
@@ -111,7 +111,7 @@ LEO Workflow Kit is a powerful CLI tool that revolutionizes software development
 
 ```bash
 # One command - complete setup!
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+INGVAR_AUTO_INIT=true npm install ingvar-kit
 
 # That's it! Your project now has:
 # ✅ Documentation structure (docs/specs/)
@@ -127,7 +127,7 @@ LEO_AUTO_INIT=true npm install leo-workflow-kit
 
 ```bash
 # For teams - disable auto-resolution for review workflow
-leo config set auto-resolve false
+ingvar config set auto-resolve false
 
 # Now when Copilot creates issues:
 # ✅ Issue #42 created
@@ -136,19 +136,19 @@ leo config set auto-resolve false
 # ✅ Copilot proceeds with implementation
 
 # Check current config
-leo config list
+ingvar config list
 
 # Re-enable for solo fast-paced work
-leo config set auto-resolve true
+ingvar config set auto-resolve true
 ```
 
 ### Example 3: Simple Task (Direct Issue)
 
 ```bash
 # Traditional manual setup
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 cd your-project
-leo init
+ingvar init
 
 # Describe a simple bug fix to Copilot:
 # "Fix the login button not working on mobile"
@@ -190,15 +190,15 @@ leo init
 **Major Features:**
 
 - ✅ **Multi-Agent Orchestration** - Intelligent routing to 6 specialized agents
-- ✅ **New `leo agent` Command** - Manage agents (list, enable, disable, info, sync)
-- ✅ **New `leo github` Command** - Automated repository settings configuration
+- ✅ **New `ingvar agent` Command** - Manage agents (list, enable, disable, info, sync)
+- ✅ **New `ingvar github` Command** - Automated repository settings configuration
 - ✅ **Domain Expertise** - Each agent specialized in its field (~13-17KB instructions)
 - ✅ **Flexible Configuration** - Enable only agents you need
 - ✅ **Multi-AI Support** - Copilot, Cursor, Cline, Codeium (v3.0.0)
 - ✅ **Enhanced Status Management** - Critical status update enforcement (v3.0.1)
 - ✅ **Intelligent Spec-First AI** - Auto-decides spec vs direct issue
 - ✅ **GitHub Projects Integration** - Auto-sync with smart status updates
-- ✅ **Zero Configuration** - Auto-init with `LEO_AUTO_INIT=true`
+- ✅ **Zero Configuration** - Auto-init with `INGVAR_AUTO_INIT=true`
 
 **Stats:**
 
@@ -222,7 +222,7 @@ leo init
 
 ### v2.5.0 (Q4 2025) - Planned
 
-- [ ] Auto-create projects during `leo init`
+- [ ] Auto-create projects during `ingvar init`
 - [ ] Multiple project support
 - [ ] Custom status field names
 - [ ] Milestone integration
@@ -269,7 +269,7 @@ Issues are automatically added to GitHub Projects and kept in sync throughout th
 
 ## 🤝 Community
 
-- **Issues:** [Report bugs or request features](https://github.com/leonpagotto/leo-kit/issues)
+- **Issues:** [Report bugs or request features](https://github.com/leopagotto/ingvar-kit/issues)
 - **Discussions:** Share ideas and ask questions
 - **Contributing:** [Read our contribution guidelines](./Development-Guide)
 - **License:** MIT (free and open source)
@@ -278,8 +278,8 @@ Issues are automatically added to GitHub Projects and kept in sync throughout th
 
 ## 📖 Documentation
 
-- **README:** [Main documentation](https://github.com/leonpagotto/leo-kit)
-- **Guides:** [In-depth tutorials](https://github.com/leonpagotto/leo-kit/tree/main/docs/guides)
+- **README:** [Main documentation](https://github.com/leopagotto/ingvar-kit)
+- **Guides:** [In-depth tutorials](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)
 - **API Reference:** [Command-line reference](./Commands-Reference)
 - **Examples:** Real-world usage patterns
 
@@ -302,8 +302,8 @@ Issues are automatically added to GitHub Projects and kept in sync throughout th
 
 <div align="center">
 
-**[⬆ Back to Top](#welcome-to-the-leo-workflow-kit-wiki-)**
+**[⬆ Back to Top](#welcome-to-the-ingvar-kit-wiki-)**
 
-Made with ❤️ by the LEO Workflow Kit team
+Made with ❤️ by the Ingvar Kit team
 
 </div>

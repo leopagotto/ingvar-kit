@@ -1,4 +1,4 @@
-# 🎨 LEO Workflow Kit for UX Designers
+# 🎨 Ingvar Kit for UX Designers
 ## Voice-Powered Design Workflow with AI
 
 **Target:** UX Designers, Product Designers, Design Leaders  
@@ -30,7 +30,7 @@
 #### 1. Quick Issue Creation
 ```bash
 # Start voice mode
-leo voice
+ingvar voice
 
 🎤 Voice mode active. Say your command...
 
@@ -62,7 +62,7 @@ leo voice
 
 #### 2. User Story Creation
 ```bash
-leo voice
+ingvar voice
 
 🎤 Voice: "Create user story: as a user I want to filter products by price 
            so I can find items within my budget"
@@ -95,7 +95,7 @@ leo voice
 
 #### 3. Design Feedback During User Testing
 ```bash
-leo voice --session "User Testing Round 3"
+ingvar voice --session "User Testing Round 3"
 
 🎤 Recording session: User Testing Round 3
 
@@ -126,7 +126,7 @@ Voice: "end session"
 
 #### 4. Accessibility Issue Logging
 ```bash
-leo voice --a11y
+ingvar voice --a11y
 
 🎤 Accessibility checking mode...
 
@@ -158,7 +158,7 @@ Voice: "Button has no focus indicator"
 
 #### 5. Design Review Notes
 ```bash
-leo voice --review "Dashboard Redesign"
+ingvar voice --review "Dashboard Redesign"
 
 🎤 Design review: Dashboard Redesign
 
@@ -187,9 +187,9 @@ Voice: "Consider mobile breakpoints"
 
 ## 🎨 UX Designer Specific Features
 
-### 1. `leo design` - Design Issue Creation
+### 1. `ingvar design` - Design Issue Creation
 ```bash
-leo design
+ingvar design
 
 ? What type of design work?
   ❯ UI Bug (visual issue)
@@ -214,16 +214,16 @@ leo design
 ✓ Screenshots section added
 ```
 
-### 2. `leo figma` - Figma Integration
+### 2. `ingvar figma` - Figma Integration
 ```bash
 # Link Figma file to project
-leo figma link https://figma.com/file/abc123
+ingvar figma link https://figma.com/file/abc123
 
 ✓ Figma file linked: Dashboard Design V3
 ✓ Added to project config
 
 # Create issue from Figma comment
-leo figma sync
+ingvar figma sync
 
 🔄 Syncing Figma comments...
 
@@ -238,13 +238,13 @@ Found 5 unresolved comments:
 ✓ Comments marked as "In Progress"
 
 # Auto-attach Figma links to issues
-leo figma attach 456
+ingvar figma attach 456
 ✓ Added Figma link to issue #456
 ```
 
-### 3. `leo a11y` - Accessibility Checker
+### 3. `ingvar a11y` - Accessibility Checker
 ```bash
-leo a11y check
+ingvar a11y check
 
 🔍 Running accessibility scan...
 
@@ -270,10 +270,10 @@ Issues found: 10 total
 ✓ Added to Accessibility project board
 ```
 
-### 4. `leo usertest` - User Testing Documentation
+### 4. `ingvar usertest` - User Testing Documentation
 ```bash
 # Start user testing session
-leo usertest start "Mobile App Navigation Test"
+ingvar usertest start "Mobile App Navigation Test"
 
 📱 Session: Mobile App Navigation Test
 👤 Participant: [Will prompt]
@@ -295,7 +295,7 @@ Voice: "Asked what the heart icon means"
 Voice: "Positive feedback on colors"
 
 # End session
-leo usertest end
+ingvar usertest end
 
 ✓ Session ended (Duration: 45 min)
 ✓ Created session report: docs/research/P001-nav-test.md
@@ -309,9 +309,9 @@ leo usertest end
    Positive Feedback: 2
 ```
 
-### 5. `leo prototype` - Prototype Testing
+### 5. `ingvar prototype` - Prototype Testing
 ```bash
-leo prototype test "Checkout Flow V2"
+ingvar prototype test "Checkout Flow V2"
 
 🔍 Testing prototype: Checkout Flow V2
 🔗 Link: https://figma.com/proto/xyz
@@ -326,7 +326,7 @@ leo prototype test "Checkout Flow V2"
 ✓ Feedback form generated
 
 # Collect feedback
-leo prototype feedback
+ingvar prototype feedback
 
 📊 Feedback received: 8 responses
 
@@ -344,9 +344,9 @@ Issues (3):
 ✓ Prioritized by mention count
 ```
 
-### 6. `leo handoff` - Design-to-Dev Handoff
+### 6. `ingvar handoff` - Design-to-Dev Handoff
 ```bash
-leo handoff create "User Profile Redesign"
+ingvar handoff create "User Profile Redesign"
 
 📦 Creating design handoff package...
 
@@ -377,10 +377,10 @@ Generating handoff documentation...
 ✓ Assigned to: @frontend-team
 ```
 
-### 7. `leo design-system` - Design System Tools
+### 7. `ingvar design-system` - Design System Tools
 ```bash
 # Check component usage
-leo design-system audit
+ingvar design-system audit
 
 🔍 Auditing design system usage...
 
@@ -404,7 +404,7 @@ Typography:
 ✓ Tagged: design-system, tech-debt
 
 # Create design system component
-leo design-system component Button
+ingvar design-system component Button
 
 ? Component name: Button
 ? Variants: Primary, Secondary, Danger, Ghost
@@ -416,9 +416,9 @@ leo design-system component Button
 ✓ Added to design system tracking
 ```
 
-### 8. `leo critique` - Design Critique Sessions
+### 8. `ingvar critique` - Design Critique Sessions
 ```bash
-leo critique start "Homepage Redesign"
+ingvar critique start "Homepage Redesign"
 
 🎨 Design Critique: Homepage Redesign
 👥 Participants: You + team
@@ -437,7 +437,7 @@ Voice: "Sarah suggests stronger CTAs"
 Voice: "Mike concerned about mobile layout"
 Voice: "Team agrees hero section needs work"
 
-leo critique end
+ingvar critique end
 
 ✓ Session ended
 📝 Notes saved: docs/critiques/homepage-redesign-critique.md
@@ -452,7 +452,7 @@ leo critique end
 ### 1. Smart Issue Classification
 ```bash
 # AI automatically categorizes issues
-leo voice
+ingvar voice
 
 Voice: "The button doesn't look clickable"
 
@@ -468,7 +468,7 @@ AI Analysis:
 
 ### 2. Design Debt Detection
 ```bash
-leo analyze design-debt
+ingvar analyze design-debt
 
 🔍 Analyzing design debt...
 
@@ -490,7 +490,7 @@ Priority: P2
 
 ### 3. User Flow Documentation
 ```bash
-leo flow document "Checkout Process"
+ingvar flow document "Checkout Process"
 
 🔄 Documenting user flow...
 
@@ -516,7 +516,7 @@ AI Analysis:
 ### 1. Mobile Companion App Concept
 ```bash
 # On phone during user testing
-leo mobile capture
+ingvar mobile capture
 
 📱 Mobile quick capture
 🎤 Tap to record observation
@@ -531,7 +531,7 @@ leo mobile capture
 
 ### 2. Screenshot Annotation
 ```bash
-leo screenshot annotate
+ingvar screenshot annotate
 
 📸 Take screenshot and annotate
 ✓ Screenshot captured
@@ -553,39 +553,39 @@ Voice: "Color contrast too low here"
 ```
 1. Research & Discovery
    ↓
-   leo usertest start
-   leo voice --session "Research"
+   ingvar usertest start
+   ingvar voice --session "Research"
    ↓
 2. Ideation & Design
    ↓
-   leo design create
-   leo figma link
+   ingvar design create
+   ingvar figma link
    ↓
 3. Critique & Iteration
    ↓
-   leo critique start
-   leo voice --review
+   ingvar critique start
+   ingvar voice --review
    ↓
 4. Accessibility Check
    ↓
-   leo a11y check
+   ingvar a11y check
    ↓
 5. User Testing
    ↓
-   leo prototype test
-   leo usertest start
+   ingvar prototype test
+   ingvar usertest start
    ↓
 6. Handoff to Dev
    ↓
-   leo handoff create
+   ingvar handoff create
    ↓
 7. Development
    ↓
-   Devs use: leo start, leo commit, leo pr
+   Devs use: ingvar start, ingvar commit, ingvar pr
    ↓
 8. QA & Design Review
    ↓
-   leo review
+   ingvar review
 ```
 
 ---
@@ -613,7 +613,7 @@ Voice: "Color contrast too low here"
 
 ### Voice Command Flow
 ```
-1. User: leo voice
+1. User: ingvar voice
 2. Start microphone recording
 3. Capture audio → Convert to text (STT)
 4. Send to AI (GPT-4) for intent recognition
@@ -634,9 +634,9 @@ Voice: "Color contrast too low here"
 - [x] Session recording
 
 ### Week 2: UX Designer Features
-- [x] `leo design` command
-- [x] `leo a11y` accessibility checker
-- [x] `leo usertest` documentation
+- [x] `ingvar design` command
+- [x] `ingvar a11y` accessibility checker
+- [x] `ingvar usertest` documentation
 - [x] Design templates
 
 ### Week 3: Integrations
@@ -673,25 +673,25 @@ Voice: "Color contrast too low here"
 
 ```bash
 # Install
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 
 # Setup voice
-leo voice setup
+ingvar voice setup
 # → Configures microphone
 # → Tests speech recognition
 # → Sets up AI API keys
 
 # Try it out!
-leo voice
+ingvar voice
 🎤 "Create issue: navigation menu needs better contrast"
 ✓ Issue #789 created!
 
 # Start user testing
-leo usertest start "Mobile Checkout"
+ingvar usertest start "Mobile Checkout"
 🎤 Record observations hands-free!
 
 # Check accessibility
-leo a11y check
+ingvar a11y check
 ✓ Get instant WCAG compliance report
 ```
 

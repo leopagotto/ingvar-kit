@@ -25,8 +25,8 @@ Updated both architecture and workflow diagrams to reflect the v4.0.0 multi-agen
 
 - ✅ Added new commands
 
-  - `leo agent` - Agent management (list, enable, disable, info, sync)
-  - `leo github` - Repository settings automation
+  - `ingvar agent` - Agent management (list, enable, disable, info, sync)
+  - `ingvar github` - Repository settings automation
 
 - ✅ Added AI Instructions System
 
@@ -37,7 +37,7 @@ Updated both architecture and workflow diagrams to reflect the v4.0.0 multi-agen
 
 - ✅ Enhanced Configuration System
 
-  - Agent configuration in `.leorc.json`
+  - Agent configuration in `.ingvarrc.json`
   - Project type detection
   - Agent enable/disable controls
 
@@ -161,7 +161,7 @@ Updated both architecture and workflow diagrams to reflect the v4.0.0 multi-agen
 - 6 specialized agents with routing logic
 - AI instructions builder with adapters
 - Enhanced configuration with agent management
-- 9 core commands (added `leo agent` and `leo github`)
+- 9 core commands (added `ingvar agent` and `ingvar github`)
 - Spec-first decision making integration
 
 ### Workflow Diagram
@@ -327,7 +327,7 @@ docs: update diagrams with v4.0.0 multi-agent system
 - Updated architecture diagram with multi-agent orchestration
 - Added 6 specialized agents (Orchestrator, Frontend, Backend, DevOps, Testing, Docs)
 - Added intelligent routing logic (keywords, files, intent)
-- Added leo agent and leo github commands
+- Added ingvar agent and ingvar github commands
 - Added AI instructions builder system
 - Enhanced workflow diagram with multi-agent flow
 - Added task classification and routing

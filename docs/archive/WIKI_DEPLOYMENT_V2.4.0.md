@@ -9,7 +9,7 @@
 ## 🎉 Deployment Summary
 
 All wiki pages have been successfully updated and deployed to:
-**https://github.com/leonpagotto/leo-kit/wiki**
+**https://github.com/leopagotto/ingvar-kit/wiki**
 
 ### 📊 Deployed Pages
 
@@ -110,12 +110,12 @@ All wiki pages have been successfully updated and deployed to:
 
 ## 🔗 Quick Links
 
-- **Wiki Homepage:** https://github.com/leonpagotto/leo-kit/wiki
-- **Home Page:** https://github.com/leonpagotto/leo-kit/wiki/Home
-- **Spec-First Guide:** https://github.com/leonpagotto/leo-kit/wiki/Spec-First-Decision-Making
-- **Roadmap:** https://github.com/leonpagotto/leo-kit/wiki/Roadmap
-- **Installation:** https://github.com/leonpagotto/leo-kit/wiki/Installation-Guide
-- **Commands:** https://github.com/leonpagotto/leo-kit/wiki/Commands-Reference
+- **Wiki Homepage:** https://github.com/leopagotto/ingvar-kit/wiki
+- **Home Page:** https://github.com/leopagotto/ingvar-kit/wiki/Home
+- **Spec-First Guide:** https://github.com/leopagotto/ingvar-kit/wiki/Spec-First-Decision-Making
+- **Roadmap:** https://github.com/leopagotto/ingvar-kit/wiki/Roadmap
+- **Installation:** https://github.com/leopagotto/ingvar-kit/wiki/Installation-Guide
+- **Commands:** https://github.com/leopagotto/ingvar-kit/wiki/Commands-Reference
 
 ---
 
@@ -177,7 +177,7 @@ All wiki pages have been successfully updated and deployed to:
 Share the wiki update:
 
 ```markdown
-📚 LEO Workflow Kit Wiki Updated for v2.4.0!
+📚 Ingvar Kit Wiki Updated for v2.4.0!
 
 New comprehensive guide: Intelligent Spec-First Decision Making
 - AI analyzes work complexity
@@ -185,7 +185,7 @@ New comprehensive guide: Intelligent Spec-First Decision Making
 - Direct issues for simple tasks
 - Complete with examples and diagrams
 
-Check it out: https://github.com/leonpagotto/leo-kit/wiki/Spec-First-Decision-Making
+Check it out: https://github.com/leopagotto/ingvar-kit/wiki/Spec-First-Decision-Making
 
 #opensource #automation #github #ai
 ```
@@ -248,7 +248,7 @@ Based on feedback:
 
 ## 🔍 Verification Checklist
 
-Verified on https://github.com/leonpagotto/leo-kit/wiki:
+Verified on https://github.com/leopagotto/ingvar-kit/wiki:
 
 - [x] Home page loads successfully
 - [x] Version shows 2.4.0
@@ -271,29 +271,29 @@ Verified on https://github.com/leonpagotto/leo-kit/wiki:
 ## 📞 Support
 
 If issues are found:
-1. Check the live wiki: https://github.com/leonpagotto/leo-kit/wiki
+1. Check the live wiki: https://github.com/leopagotto/ingvar-kit/wiki
 2. Review local source: `./wiki/` directory
 3. Re-deploy if needed: `npm run deploy:wiki`
-4. Open issue: https://github.com/leonpagotto/leo-kit/issues
+4. Open issue: https://github.com/leopagotto/ingvar-kit/issues
 
 ---
 
 ## 🎉 Conclusion
 
-**Wiki successfully updated for LEO Workflow Kit v2.4.0!**
+**Wiki successfully updated for Ingvar Kit v2.4.0!**
 
 - ✅ All content deployed
 - ✅ New feature fully documented
 - ✅ Professional presentation
 - ✅ Ready for users
 
-**Thank you for using LEO Workflow Kit!** 🦁
+**Thank you for using Ingvar Kit!** 🦁
 
 ---
 
 **Deployed by:** Automated deployment script  
 **Deployed at:** October 19, 2025  
-**Commit:** `ccef353` - "docs: update wiki for LEO Workflow Kit v2.4.0"  
+**Commit:** `ccef353` - "docs: update wiki for Ingvar Kit v2.4.0"  
 **Pages:** 6 total (1 new, 2 updated, 3 current)  
 **Documentation:** 2,086 lines total
 

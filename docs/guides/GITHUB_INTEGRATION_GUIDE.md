@@ -25,22 +25,22 @@ The GitHub integration feature enables seamless synchronization between LionPack
 
 - GitHub account with repository access
 - GitHub Personal Access Token (PAT) with `project` and `repo` scopes
-- LionPack team initialized (`leo team init`)
+- LionPack team initialized (`ingvar team init`)
 
 ### Quick Setup
 
 ```bash
 # 1. Initialize your team (if not done)
-leo team init
+ingvar team init
 
 # 2. Set up GitHub integration
-leo team setupGitHub
+ingvar team setupGitHub
 
 # 3. Enter your Personal Access Token when prompted
 # GitHub will create a project board automatically
 
 # 4. Start creating hunts with GitHub sync!
-leo hunt start
+ingvar hunt start
 ```
 
 ---
@@ -63,7 +63,7 @@ leo hunt start
 Run the setup command and paste your token:
 
 ```bash
-leo team setupGitHub
+ingvar team setupGitHub
 ```
 
 You'll be prompted for:
@@ -82,7 +82,7 @@ The setup process will:
 Check your GitHub integration status:
 
 ```bash
-leo team checkGitHub
+ingvar team checkGitHub
 
 # Output:
 # ✅ GitHub Connected
@@ -98,7 +98,7 @@ leo team checkGitHub
 
 ### 1. Automatic Project Board Creation
 
-When you run `leo team setupGitHub`, LionPack automatically creates a GitHub project board with columns matching your workflow:
+When you run `ingvar team setupGitHub`, LionPack automatically creates a GitHub project board with columns matching your workflow:
 
 - **Discovery** - Initial research and planning
 - **Design** - Architecture and design phase
@@ -110,7 +110,7 @@ When you run `leo team setupGitHub`, LionPack automatically creates a GitHub pro
 When you start a hunt:
 
 ```bash
-leo hunt start
+ingvar hunt start
 
 # Questions:
 # ? Hunt name: User Authentication Feature
@@ -131,7 +131,7 @@ The system automatically:
 As your hunt progresses through phases:
 
 ```bash
-leo hunt nextPhase hunt-1
+ingvar hunt nextPhase hunt-1
 
 # Transitions discovery → design
 # ✅ Moved to design phase
@@ -150,7 +150,7 @@ The system:
 When your hunt completes:
 
 ```bash
-leo hunt complete hunt-1
+ingvar hunt complete hunt-1
 
 # ✅ Hunt completed!
 # GitHub: Issue #42 closed
@@ -168,7 +168,7 @@ The system:
 LionPack tracks GitHub API rate limits:
 
 ```bash
-leo team checkGitHub
+ingvar team checkGitHub
 
 # Rate Limit: 4000/5000 remaining
 # Reset at: 2024-10-24 15:30:00 UTC
@@ -188,22 +188,22 @@ Operations automatically handle rate limits:
 
 ```bash
 # Step 1: Initialize team and GitHub
-leo team init
-leo team setupGitHub
+ingvar team init
+ingvar team setupGitHub
 
 # Step 2: Start a hunt with GitHub issue creation
-leo hunt start
+ingvar hunt start
 # ? Hunt name: Implement Dark Mode
 # ? Description: Add dark theme support across app
 # ✅ GitHub issue created: #73
 # ✅ Hunt created: hunt-a1b2c3d4
 
 # Step 3: Track progress as phases change
-leo hunt nextPhase hunt-a1b2c3d4
+ingvar hunt nextPhase hunt-a1b2c3d4
 # Transitions to next phase, updates GitHub board
 
 # Step 4: Complete the hunt
-leo hunt complete hunt-a1b2c3d4
+ingvar hunt complete hunt-a1b2c3d4
 # Issue #73 closed on GitHub
 # Hunt archived locally
 ```
@@ -211,7 +211,7 @@ leo hunt complete hunt-a1b2c3d4
 ### Example 2: Check GitHub Connection Status
 
 ```bash
-leo team checkGitHub
+ingvar team checkGitHub
 
 # Output:
 # ✅ GitHub Connected
@@ -236,7 +236,7 @@ leo team checkGitHub
 If you need to disconnect GitHub:
 
 ```bash
-leo team disconnectGitHub
+ingvar team disconnectGitHub
 
 # Confirmation prompt:
 # Are you sure? This will remove your GitHub token. (y/N): y
@@ -248,13 +248,13 @@ leo team disconnectGitHub
 Later, you can re-enable with:
 
 ```bash
-leo team setupGitHub
+ingvar team setupGitHub
 ```
 
 ### Example 4: View Hunt with GitHub Sync
 
 ```bash
-leo hunt list
+ingvar hunt list
 
 # Output:
 # 🦁 Hunts (Active)
@@ -287,7 +287,7 @@ leo hunt list
 3. Ensure you copied the full token
 
 ```bash
-leo team setupGitHub  # Re-enter token
+ingvar team setupGitHub  # Re-enter token
 ```
 
 ### Permission Denied Error
@@ -308,7 +308,7 @@ leo team setupGitHub  # Re-enter token
 
 1. Wait for rate limit reset (shown in message)
 2. LionPack automatically retries transient failures
-3. Check current status: `leo team checkGitHub`
+3. Check current status: `ingvar team checkGitHub`
 
 ### GitHub Issue Not Created
 
@@ -318,18 +318,18 @@ leo team setupGitHub  # Re-enter token
 
 ```bash
 # Check GitHub is enabled
-leo team checkGitHub
+ingvar team checkGitHub
 
 # Check recent hunt
-leo hunt list
+ingvar hunt list
 ```
 
 **Solutions:**
 
-1. Verify GitHub token is still valid: `leo team checkGitHub`
+1. Verify GitHub token is still valid: `ingvar team checkGitHub`
 2. Check rate limits aren't exceeded
 3. Try creating issue manually on GitHub
-4. Re-setup GitHub integration: `leo team setupGitHub`
+4. Re-setup GitHub integration: `ingvar team setupGitHub`
 
 ### Token Not Saved Securely
 
@@ -354,8 +354,8 @@ chmod 600 .lionpack/github-token
 **Solution:** Manually update project board columns on GitHub, or reset:
 
 ```bash
-leo team disconnectGitHub
-leo team setupGitHub  # Creates new board
+ingvar team disconnectGitHub
+ingvar team setupGitHub  # Creates new board
 ```
 
 ---
@@ -364,7 +364,7 @@ leo team setupGitHub  # Creates new board
 
 ### Team Commands
 
-#### `leo team setupGitHub`
+#### `ingvar team setupGitHub`
 
 Set up GitHub integration for your team.
 
@@ -389,7 +389,7 @@ Set up GitHub integration for your team.
 }
 ```
 
-#### `leo team checkGitHub`
+#### `ingvar team checkGitHub`
 
 Verify GitHub integration status.
 
@@ -408,7 +408,7 @@ Verify GitHub integration status.
 }
 ```
 
-#### `leo team disconnectGitHub`
+#### `ingvar team disconnectGitHub`
 
 Disconnect GitHub integration.
 
@@ -428,7 +428,7 @@ Disconnect GitHub integration.
 
 ### Hunt Commands
 
-#### `leo hunt start` (with GitHub enabled)
+#### `ingvar hunt start` (with GitHub enabled)
 
 Start a hunt and create GitHub issue.
 
@@ -453,7 +453,7 @@ Start a hunt and create GitHub issue.
 }
 ```
 
-#### `leo hunt nextPhase hunt-id` (with GitHub enabled)
+#### `ingvar hunt nextPhase hunt-id` (with GitHub enabled)
 
 Transition hunt to next phase, update GitHub.
 
@@ -472,7 +472,7 @@ Transition hunt to next phase, update GitHub.
 - Comment: "🔄 Moved to **design** phase"
 ```
 
-#### `leo hunt complete hunt-id` (with GitHub enabled)
+#### `ingvar hunt complete hunt-id` (with GitHub enabled)
 
 Complete hunt, close GitHub issue.
 
@@ -683,7 +683,7 @@ await api.moveIssueColumn("P1", 42, "C2");
 
 ### 4. Rate Limit Awareness
 
-- ✅ Check rate limits: `leo team checkGitHub`
+- ✅ Check rate limits: `ingvar team checkGitHub`
 - ✅ LionPack pauses automatically if limits are low
 - ✅ Rate limit resets hourly
 
@@ -701,16 +701,16 @@ await api.moveIssueColumn("P1", 42, "C2");
 
 ```bash
 # Start hunt for new feature
-leo hunt start
+ingvar hunt start
 # Creates GitHub issue with feature details
 
 # Track progress through phases
-leo hunt nextPhase hunt-1  # discovery → design
-leo hunt nextPhase hunt-1  # design → development
-leo hunt nextPhase hunt-1  # development → testing
+ingvar hunt nextPhase hunt-1  # discovery → design
+ingvar hunt nextPhase hunt-1  # design → development
+ingvar hunt nextPhase hunt-1  # development → testing
 
 # Complete when done
-leo hunt complete hunt-1
+ingvar hunt complete hunt-1
 # GitHub issue automatically closed
 ```
 
@@ -739,7 +739,7 @@ GitHub integration provides:
 
 For issues or feature requests:
 
-- **Documentation**: See [LEO Workflow Kit Wiki](../wiki)
+- **Documentation**: See [Ingvar Kit Wiki](../wiki)
 - **Issues**: [GitHub Issues](../../issues)
 - **Discussions**: [GitHub Discussions](../../discussions)
 

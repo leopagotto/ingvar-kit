@@ -1,9 +1,9 @@
-# 🎉 LEO Kit v5.0.0 - Deployment Complete ✅
+# 🎉 Ingvar Kit v5.0.0 - Deployment Complete ✅
 
 **Date:** October 25, 2025
 **Status:** ✅ **SUCCESSFULLY DEPLOYED TO NPM**
 **Version:** 5.0.0
-**npm Registry:** https://www.npmjs.com/package/leo-workflow-kit
+**npm Registry:** https://www.npmjs.com/package/ingvar-kit
 
 ---
 
@@ -11,10 +11,10 @@
 
 ### ✅ Deployment Completed Successfully
 
-LEO Kit v5.0.0 has been **successfully published to npm registry** with all the agents-enabled-by-default improvements.
+Ingvar Kit v5.0.0 has been **successfully published to npm registry** with all the agents-enabled-by-default improvements.
 
 ```bash
-npm install -g leo-workflow-kit@5.0.0
+npm install -g ingvar-kit@5.0.0
 ```
 
 ### Verification
@@ -86,16 +86,16 @@ npm install -g leo-workflow-kit@5.0.0
 ### Install v5.0.0 Globally
 
 ```bash
-npm install -g leo-workflow-kit@5.0.0
+npm install -g ingvar-kit@5.0.0
 ```
 
 ### Verify Installation
 
 ```bash
-leo --version
+ingvar --version
 # Output: 5.0.0
 
-leo --help
+ingvar --help
 # Shows all available commands
 ```
 
@@ -104,7 +104,7 @@ leo --help
 ```bash
 cd your-project
 git init  # If not already a git repo
-leo init
+ingvar init
 ```
 
 ### What You'll See
@@ -134,7 +134,7 @@ Keep these agents enabled (unselect to disable):
 - **wiki/Installation-Guide.md** - Comprehensive Multi-Agent Configuration section
 - **AGENTS_DEFAULT_ENABLED_UPDATE.md** - Technical details and implementation guide
 - **DEPLOYMENT_SUMMARY_V5.0.0.md** - Complete deployment checklist
-- **LEO_V5.0.0_COMPLETE.md** - Completion summary and benefits
+- **Ingvar_V5.0.0_COMPLETE.md** - Completion summary and benefits
 
 ### Configuration Reference
 
@@ -142,9 +142,9 @@ Users can still customize agents by:
 
 **Option 1: During initialization**
 
-- Use spacebar to uncheck agents during `leo init`
+- Use spacebar to uncheck agents during `ingvar init`
 
-**Option 2: Edit .leorc.json**
+**Option 2: Edit .ingvarrc.json**
 
 ```json
 {
@@ -186,13 +186,13 @@ Users can still customize agents by:
 
 ```bash
 # Option 1: Global installation
-npm install -g leo-workflow-kit@5.0.0
+npm install -g ingvar-kit@5.0.0
 
 # Option 2: Project-specific
-npm install leo-workflow-kit@5.0.0
+npm install ingvar-kit@5.0.0
 
 # Verify
-leo --version  # Should show: 5.0.0
+ingvar --version  # Should show: 5.0.0
 ```
 
 ### Initialize New Project with v5.0.0
@@ -200,7 +200,7 @@ leo --version  # Should show: 5.0.0
 ```bash
 cd your-new-project
 git init
-leo init
+ingvar init
 
 # You'll be greeted with all agents enabled by default!
 ```
@@ -234,9 +234,9 @@ leo init
 
 ## 🔗 Resources
 
-- **npm Package:** https://www.npmjs.com/package/leo-workflow-kit
-- **GitHub Repository:** https://github.com/leonpagotto/leo-kit
-- **Issue Tracking:** https://github.com/leonpagotto/leo-kit/issues/70
+- **npm Package:** https://www.npmjs.com/package/ingvar-kit
+- **GitHub Repository:** https://github.com/leopagotto/ingvar-kit
+- **Issue Tracking:** https://github.com/leopagotto/ingvar-kit/issues/70
 - **Installation Guide:** See wiki/Installation-Guide.md in repository
 
 ---
@@ -269,7 +269,7 @@ leo init
 
 ## 🎉 Success! 🎉
 
-**LEO Kit v5.0.0 is live on npm and ready for use!**
+**Ingvar Kit v5.0.0 is live on npm and ready for use!**
 
 Users can now install and experience:
 
@@ -278,21 +278,21 @@ Users can now install and experience:
 - ✅ Better onboarding experience
 - ✅ Full multi-agent power immediately
 
-**Thank you for using LEO Workflow Kit!** 🚀
+**Thank you for using Ingvar Kit!** 🚀
 
 ---
 
 **Installation Command:**
 
 ```bash
-npm install -g leo-workflow-kit@5.0.0
+npm install -g ingvar-kit@5.0.0
 ```
 
 **Verification:**
 
 ```bash
-leo --version  # Should show: 5.0.0
-leo init       # Initialize your first workflow
+ingvar --version  # Should show: 5.0.0
+ingvar init       # Initialize your first workflow
 ```
 
 Enjoy! 🎊

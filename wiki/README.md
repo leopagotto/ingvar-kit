@@ -1,6 +1,6 @@
-# LEO Workflow Kit Wiki Content
+# Ingvar Kit Wiki Content
 
-This directory contains markdown files for the LEO Workflow Kit GitHub Wiki.
+This directory contains markdown files for the Ingvar Kit GitHub Wiki.
 
 ## 📚 Wiki Pages
 
@@ -15,13 +15,13 @@ This directory contains markdown files for the LEO Workflow Kit GitHub Wiki.
 #### Option 1: Via GitHub Web Interface (Recommended)
 
 1. **Enable Wiki**
-   - Go to: https://github.com/leonpagotto/leo-kit/settings
+   - Go to: https://github.com/leopagotto/ingvar-kit/settings
    - Scroll to "Features"
    - Check ✅ "Wikis"
    - Click "Save changes"
 
 2. **Create Initial Page**
-   - Go to: https://github.com/leonpagotto/leo-kit/wiki
+   - Go to: https://github.com/leopagotto/ingvar-kit/wiki
    - Click "Create the first page"
    - Click "Save Page" (creates Home page)
 
@@ -44,7 +44,7 @@ This directory contains markdown files for the LEO Workflow Kit GitHub Wiki.
 
 1. **Clone the Wiki Repository**
    ```bash
-   git clone https://github.com/leonpagotto/leo-kit.wiki.git
+   git clone https://github.com/leopagotto/ingvar-kit.wiki.git
    cd leo-kit.wiki
    ```
 
@@ -68,7 +68,7 @@ Create a script to upload all pages:
 #!/bin/bash
 # upload-wiki.sh
 
-WIKI_REPO="https://github.com/leonpagotto/leo-kit.wiki.git"
+WIKI_REPO="https://github.com/leopagotto/ingvar-kit.wiki.git"
 TEMP_DIR="./temp-wiki"
 
 # Clone wiki
@@ -168,7 +168,7 @@ echo "✓ Wiki pages uploaded!"
 9. **Architecture.md** - System design and components
 10. **Troubleshooting.md** - Common issues and solutions
 11. **FAQ.md** - Frequently asked questions
-12. **Development-Guide.md** - Contributing to LEO
+12. **Development-Guide.md** - Contributing to Ingvar
 13. **Release-Process.md** - How releases are made
 
 ## 📋 Wiki Maintenance Checklist
@@ -226,13 +226,13 @@ echo "✓ Wiki pages uploaded!"
 
 ### Code Blocks
 \`\`\`bash
-leo init
+ingvar init
 \`\`\`
 
 ### Tables
 | Command | Purpose |
 |---------|---------|
-| `leo init` | Initialize |
+| `ingvar init` | Initialize |
 
 ### Callouts
 > **Note:** Important information

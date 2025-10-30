@@ -1,4 +1,4 @@
-# LEO Kit 5.0.0 - Multi-Model Claude Integration Guide
+# Ingvar Kit 5.0.0 - Multi-Model Claude Integration Guide
 
 **Latest Update:** October 24, 2025
 **Version:** 5.0.0
@@ -20,7 +20,7 @@
 
 ## Overview
 
-LEO Kit 5.0.0 introduces **multi-model Claude support**, enabling intelligent code generation with four distinct Claude models optimized for different use cases.
+Ingvar Kit 5.0.0 introduces **multi-model Claude support**, enabling intelligent code generation with four distinct Claude models optimized for different use cases.
 
 ### Key Features
 
@@ -54,7 +54,7 @@ LEO Kit 5.0.0 introduces **multi-model Claude support**, enabling intelligent co
 #### Example:
 
 ```bash
-leo spec generate --model sonnet-3-5
+ingvar spec generate --model sonnet-3-5
 ```
 
 ---
@@ -78,7 +78,7 @@ leo spec generate --model sonnet-3-5
 #### Example:
 
 ```bash
-leo spec generate --model opus-4
+ingvar spec generate --model opus-4
 ```
 
 ---
@@ -110,7 +110,7 @@ leo spec generate --model opus-4
 #### Example:
 
 ```bash
-leo spec generate --model opus-4-5
+ingvar spec generate --model opus-4-5
 ```
 
 ---
@@ -135,7 +135,7 @@ leo spec generate --model opus-4-5
 #### Example:
 
 ```bash
-leo spec generate --model haiku-3
+ingvar spec generate --model haiku-3
 ```
 
 ---
@@ -146,30 +146,30 @@ leo spec generate --model haiku-3
 
 ```bash
 # Use specific model
-leo spec generate --model opus-4-5
+ingvar spec generate --model opus-4-5
 
 # Use default (Sonnet)
-leo spec generate
+ingvar spec generate
 ```
 
 ### Method 2: Environment Variable
 
 ```bash
 # Set default model
-export LEO_MODEL=opus-4-5
+export Ingvar_MODEL=opus-4-5
 export ANTHROPIC_MODEL=opus-4-5
 
 # Now all generations use this model
-leo spec generate
+ingvar spec generate
 ```
 
 ### Method 3: Auto-Selection
 
-Let LEO automatically choose the best model based on specification complexity:
+Let Ingvar automatically choose the best model based on specification complexity:
 
 ```bash
 # Enable auto-selection
-leo spec generate --auto-select
+ingvar spec generate --auto-select
 
 # Or set in code:
 const generator = new AICodeGenerator({
@@ -188,7 +188,7 @@ const generator = new AICodeGenerator({
 
 ### Method 4: Configuration File
 
-Create `.leorc.json`:
+Create `.ingvarrc.json`:
 
 ```json
 {
@@ -211,13 +211,13 @@ Create `.leorc.json`:
 export ANTHROPIC_API_KEY=sk-ant-xxxxx
 
 # Default Model (Optional)
-export LEO_MODEL=opus-4-5
+export Ingvar_MODEL=opus-4-5
 
 # Alternative naming (Optional)
 export ANTHROPIC_MODEL=opus-4-5
 
 # Auto-Select (Optional)
-export LEO_AUTO_SELECT=true
+export Ingvar_AUTO_SELECT=true
 ```
 
 ### Code Configuration
@@ -247,11 +247,11 @@ const generator = new MultiModelCodeGenerator({
 ### Example 1: Generate Simple Component (Haiku)
 
 ```bash
-leo spec init my-component
-leo spec specify
-leo spec plan
-leo spec tasks
-leo spec generate --model haiku-3
+ingvar spec init my-component
+ingvar spec specify
+ingvar spec plan
+ingvar spec tasks
+ingvar spec generate --model haiku-3
 ```
 
 **Output:**
@@ -273,9 +273,9 @@ Generating code... (this may take a moment)
 ### Example 2: Enterprise System (Claude 4.5)
 
 ```bash
-leo spec init enterprise-system
+ingvar spec init enterprise-system
 # ... define comprehensive spec ...
-leo spec generate --model opus-4-5
+ingvar spec generate --model opus-4-5
 ```
 
 **Generated Output Includes:**
@@ -459,14 +459,14 @@ echo $ANTHROPIC_API_KEY
 
 ```bash
 # Valid models:
-leo spec generate --model sonnet-3-5    ✅
-leo spec generate --model opus-4        ✅
-leo spec generate --model opus-4-5      ✅
-leo spec generate --model haiku-3       ✅
+ingvar spec generate --model sonnet-3-5    ✅
+ingvar spec generate --model opus-4        ✅
+ingvar spec generate --model opus-4-5      ✅
+ingvar spec generate --model haiku-3       ✅
 
 # Invalid (won't work):
-leo spec generate --model claude-sonnet ❌
-leo spec generate --model gpt-4         ❌
+ingvar spec generate --model claude-sonnet ❌
+ingvar spec generate --model gpt-4         ❌
 ```
 
 ---
@@ -477,10 +477,10 @@ leo spec generate --model gpt-4         ❌
 
 ```bash
 # Haiku might timeout on large specs
-leo spec generate --model haiku-3
+ingvar spec generate --model haiku-3
 
 # Try Claude 4.5 instead
-leo spec generate --model opus-4-5
+ingvar spec generate --model opus-4-5
 ```
 
 Or break spec into smaller parts.
@@ -505,20 +505,20 @@ Or break spec into smaller parts.
 1. **Use Haiku for prototypes:**
 
    ```bash
-   leo spec generate --model haiku-3
+   ingvar spec generate --model haiku-3
    ```
 
 2. **Enable auto-selection:**
 
    ```bash
-   leo spec generate --auto-select
+   ingvar spec generate --auto-select
    ```
 
 3. **Simplify specifications** - Fewer tasks = faster generation
 
 4. **Use Sonnet for balance:**
    ```bash
-   leo spec generate --model sonnet-3-5
+   ingvar spec generate --model sonnet-3-5
    ```
 
 ---
@@ -541,7 +541,7 @@ if (isProduction) {
 ### 2. Use Auto-Selection for Mixed Workloads
 
 ```javascript
-// ✅ Good: Let LEO pick best model
+// ✅ Good: Let Ingvar pick best model
 const generator = new AICodeGenerator({
   autoSelect: true,
 });
@@ -623,7 +623,7 @@ Add to your `.env`:
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-xxxxx
-LEO_MODEL=sonnet-3-5
+Ingvar_MODEL=sonnet-3-5
 ```
 
 ---
@@ -746,8 +746,8 @@ Need help? Here's how to get support:
 
 1. **Documentation:** Check [docs/README.md](./README.md)
 2. **API Reference:** See [docs/API_REFERENCE.md](./API_REFERENCE.md)
-3. **Issues:** Report on [GitHub Issues](https://github.com/leonpagotto/leo-kit/issues)
-4. **Discussion:** Start [GitHub Discussion](https://github.com/leonpagotto/leo-kit/discussions)
+3. **Issues:** Report on [GitHub Issues](https://github.com/leopagotto/ingvar-kit/issues)
+4. **Discussion:** Start [GitHub Discussion](https://github.com/leopagotto/ingvar-kit/discussions)
 
 ---
 

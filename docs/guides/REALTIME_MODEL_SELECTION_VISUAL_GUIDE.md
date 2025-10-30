@@ -6,10 +6,10 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                         LEO WORKFLOW                              │
+│                         Ingvar WORKFLOW                              │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                   │
-│  User Command: leo build-feature "checkout"                     │
+│  User Command: ingvar build-feature "checkout"                     │
 │                    ↓                                              │
 │  ┌────────────────────────────────────────────────────────┐    │
 │  │ ModelSelectionOrchestrator                              │    │
@@ -196,7 +196,7 @@ TASK COMPLETE
 ┌────────────────────────────────────────────────────────────┐
 │ completeTask({ success: true })                            │
 │  ↓                                                          │
-│ Status Bar: ⊘ LEO Ready                                   │
+│ Status Bar: ⊘ Ingvar Ready                                   │
 │ (returns to idle state)                                    │
 └────────────────────────────────────────────────────────────┘
 ```
@@ -208,7 +208,7 @@ TASK COMPLETE
 ```
 TIME ─────────────────────────────────────────────────────────────→
 
-0s        ⊘ LEO Ready
+0s        ⊘ Ingvar Ready
           (Idle)
 
 0.5s      ↻ 🎨 designer → Claude-S
@@ -243,7 +243,7 @@ TIME ─────────────────────────
 5h 30m    ✓ 📚 documentation complete
           (Documentation finishes)
 
-5h 30.5m  ⊘ LEO Ready
+5h 30.5m  ⊘ Ingvar Ready
           (All done, back to idle)
 ```
 
@@ -426,11 +426,11 @@ Task: "Build Checkout Feature"
 
 **What happens automatically:**
 
-1. **Task starts** → Status shows `⊘ LEO Ready`
+1. **Task starts** → Status shows `⊘ Ingvar Ready`
 2. **Agent selected** → Status shows `↻ agent → model`
 3. **Agent completes** → Status shows `✓ agent complete`
 4. **Next agent** → Status automatically switches
 5. **Model upgrades** → Status shows `↻ agent → NewModel`
-6. **Task done** → Status shows `⊘ LEO Ready`
+6. **Task done** → Status shows `⊘ Ingvar Ready`
 
 **No manual intervention needed** - everything updates automatically! 🎉

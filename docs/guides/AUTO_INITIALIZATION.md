@@ -1,8 +1,8 @@
 # 🚀 Automatic Initialization Guide
 
-**LEO Workflow Kit v2.5.0+**
+**Ingvar Kit v2.5.0+**
 
-This guide explains how to automatically initialize LEO Workflow Kit when users install your package, eliminating manual setup steps and providing a seamless onboarding experience.
+This guide explains how to automatically initialize Ingvar Kit when users install your package, eliminating manual setup steps and providing a seamless onboarding experience.
 
 ---
 
@@ -24,8 +24,8 @@ This guide explains how to automatically initialize LEO Workflow Kit when users 
 
 Previously, users had to:
 
-1. Install LEO Workflow Kit: `npm install leo-workflow-kit`
-2. Manually run initialization: `npx leo init`
+1. Install Ingvar Kit: `npm install ingvar-kit`
+2. Manually run initialization: `npx ingvar init`
 3. Answer interactive prompts
 4. Configure settings
 
@@ -33,10 +33,10 @@ Previously, users had to:
 
 ### The Solution
 
-**Automatic initialization** triggers `leo init` automatically after installation with:
+**Automatic initialization** triggers `ingvar init` automatically after installation with:
 
 - ✅ Smart detection (only in git repos, local installs)
-- ✅ Environment variable control (`LEO_AUTO_INIT=true`)
+- ✅ Environment variable control (`Ingvar_AUTO_INIT=true`)
 - ✅ Non-interactive mode (uses sensible defaults)
 - ✅ Safe defaults (skips GitHub Project setup)
 - ✅ Clear feedback and instructions
@@ -49,18 +49,18 @@ Previously, users had to:
 
 ```mermaid
 graph TB
-    A[npm install leo-workflow-kit] --> B[postinstall.js runs]
+    A[npm install ingvar-kit] --> B[postinstall.js runs]
     B --> C{Check install type}
     C -->|Global install| D[Show welcome message]
     C -->|Local install| E{In git repo?}
     E -->|No| F[Show instructions]
     E -->|Yes| G{Already initialized?}
     G -->|Yes| H[Show status message]
-    G -->|No| I{LEO_AUTO_INIT=true?}
-    I -->|Yes| J[Run leo init --non-interactive]
+    G -->|No| I{Ingvar_AUTO_INIT=true?}
+    I -->|Yes| J[Run ingvar init --non-interactive]
     I -->|No| K[Show setup options]
     J --> L[Setup complete!]
-    K --> M[User runs npx leo init]
+    K --> M[User runs npx ingvar init]
 ```
 
 ### Detection Logic
@@ -69,15 +69,15 @@ graph TB
 
 1. ✅ Package installed locally (not globally)
 2. ✅ Inside a git repository
-3. ✅ LEO not already initialized
-4. ✅ `LEO_AUTO_INIT=true` environment variable set
+3. ✅ Ingvar not already initialized
+4. ✅ `Ingvar_AUTO_INIT=true` environment variable set
 
 **Skipped when:**
 
 - ❌ Global installation (`npm install -g`)
 - ❌ Not in a git repository
 - ❌ Already initialized
-- ❌ No `LEO_AUTO_INIT` flag (shows instructions instead)
+- ❌ No `Ingvar_AUTO_INIT` flag (shows instructions instead)
 
 ---
 
@@ -88,20 +88,20 @@ graph TB
 **One-time installation:**
 
 ```bash
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+Ingvar_AUTO_INIT=true npm install ingvar-kit
 ```
 
 **Permanent configuration (.npmrc):**
 
 ```ini
 # .npmrc
-LEO_AUTO_INIT=true
+Ingvar_AUTO_INIT=true
 ```
 
 Then install normally:
 
 ```bash
-npm install leo-workflow-kit
+npm install ingvar-kit
 ```
 
 ### Method 2: Package.json Scripts
@@ -111,8 +111,8 @@ npm install leo-workflow-kit
 ```json
 {
   "scripts": {
-    "setup": "LEO_AUTO_INIT=true npm install",
-    "postinstall": "if [ -n \"$LEO_AUTO_INIT\" ]; then npx leo init --non-interactive; fi"
+    "setup": "Ingvar_AUTO_INIT=true npm install",
+    "postinstall": "if [ -n \"$Ingvar_AUTO_INIT\" ]; then npx ingvar init --non-interactive; fi"
   }
 }
 ```
@@ -144,7 +144,7 @@ jobs:
 
       - name: Install dependencies with auto-init
         env:
-          LEO_AUTO_INIT: true
+          Ingvar_AUTO_INIT: true
         run: npm install
 ```
 
@@ -154,7 +154,7 @@ jobs:
 setup:
   stage: build
   script:
-    - export LEO_AUTO_INIT=true
+    - export Ingvar_AUTO_INIT=true
     - npm install
 ```
 
@@ -163,8 +163,8 @@ setup:
 **Without auto-init flag:**
 
 ```bash
-npm install leo-workflow-kit
-npx leo init
+npm install ingvar-kit
+npx ingvar init
 ```
 
 ---
@@ -175,21 +175,21 @@ npx leo init
 
 | Variable          | Values         | Default  | Description                        |
 | ----------------- | -------------- | -------- | ---------------------------------- |
-| `LEO_AUTO_INIT`   | `true`/`false` | `false`  | Enable automatic initialization    |
-| `LEO_POSTINSTALL` | `true`/`false` | Auto-set | Internal flag (set by postinstall) |
+| `Ingvar_AUTO_INIT`   | `true`/`false` | `false`  | Enable automatic initialization    |
+| `Ingvar_POSTINSTALL` | `true`/`false` | Auto-set | Internal flag (set by postinstall) |
 
 ### Command-Line Flags
 
 **Manual init with non-interactive mode:**
 
 ```bash
-npx leo init --non-interactive
+npx ingvar init --non-interactive
 ```
 
 **Full control:**
 
 ```bash
-npx leo init \
+npx ingvar init \
   --non-interactive \
   --skip-project \
   --skip-labels \
@@ -198,7 +198,7 @@ npx leo init \
 
 ### Non-Interactive Defaults
 
-When running in non-interactive mode (`--non-interactive` or via `LEO_AUTO_INIT`):
+When running in non-interactive mode (`--non-interactive` or via `Ingvar_AUTO_INIT`):
 
 | Setting             | Default Behavior                  |
 | ------------------- | --------------------------------- |
@@ -216,7 +216,7 @@ When running in non-interactive mode (`--non-interactive` or via `LEO_AUTO_INIT`
 
 ### Example 1: New Project Setup
 
-**Scenario:** Setting up a brand new project with LEO
+**Scenario:** Setting up a brand new project with Ingvar
 
 ```bash
 # Create new project
@@ -228,10 +228,10 @@ git init
 git remote add origin https://github.com/username/my-awesome-app.git
 
 # Install with auto-init
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+Ingvar_AUTO_INIT=true npm install ingvar-kit
 
 # Output:
-# ✅ LEO Workflow initialized successfully!
+# ✅ Ingvar Workflow initialized successfully!
 # • Documentation structure created
 # • Issue templates installed
 # • GitHub Actions workflows added
@@ -241,7 +241,7 @@ LEO_AUTO_INIT=true npm install leo-workflow-kit
 
 ### Example 2: Existing Project
 
-**Scenario:** Adding LEO to an existing project
+**Scenario:** Adding Ingvar to an existing project
 
 ```bash
 cd existing-project
@@ -250,11 +250,11 @@ cd existing-project
 git status
 
 # Install with auto-init
-LEO_AUTO_INIT=true npm install leo-workflow-kit --save-dev
+Ingvar_AUTO_INIT=true npm install ingvar-kit --save-dev
 
 # Commit the changes
 git add .
-git commit -m "chore: initialize LEO Workflow Kit"
+git commit -m "chore: initialize Ingvar Kit"
 git push
 ```
 
@@ -268,8 +268,8 @@ git push
 // package.json
 {
   "scripts": {
-    "setup": "npm install && npx leo init",
-    "setup:auto": "LEO_AUTO_INIT=true npm install"
+    "setup": "npm install && npx ingvar init",
+    "setup:auto": "Ingvar_AUTO_INIT=true npm install"
   }
 }
 ```
@@ -288,7 +288,7 @@ npm run setup:auto
 ```
 ````
 
-This automatically installs dependencies and initializes the LEO workflow.
+This automatically installs dependencies and initializes the Ingvar workflow.
 
 ````
 
@@ -302,8 +302,8 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# Auto-initialize LEO during build
-ENV LEO_AUTO_INIT=true
+# Auto-initialize Ingvar during build
+ENV Ingvar_AUTO_INIT=true
 RUN npm install
 
 COPY . .
@@ -320,7 +320,7 @@ CMD ["npm", "start"]
   "workspaces": ["packages/*"],
   "scripts": {
     "setup:workspace": "npm install && npm run init:all",
-    "init:all": "for dir in packages/*; do (cd $dir && npx leo init --non-interactive); done"
+    "init:all": "for dir in packages/*; do (cd $dir && npx ingvar init --non-interactive); done"
   }
 }
 ```
@@ -335,14 +335,14 @@ CMD ["npm", "start"]
 
 ```bash
 # .npmrc or CI/CD config
-LEO_AUTO_INIT=true
+Ingvar_AUTO_INIT=true
 ```
 
 **❌ Bad:**
 
 ```bash
 # Hardcoded in scripts (limits flexibility)
-npm install && npx leo init --non-interactive
+npm install && npx ingvar init --non-interactive
 ```
 
 ### 2. Document Setup Process
@@ -355,7 +355,7 @@ npm install && npx leo init --non-interactive
 ### Quick Start (Recommended)
 
 ```bash
-LEO_AUTO_INIT=true npm install
+Ingvar_AUTO_INIT=true npm install
 ```
 ````
 
@@ -363,7 +363,7 @@ LEO_AUTO_INIT=true npm install
 
 ```bash
 npm install
-npx leo init
+npx ingvar init
 ```
 
 ````
@@ -374,7 +374,7 @@ npx leo init
 ```yaml
 - name: Setup
   env:
-    LEO_AUTO_INIT: true
+    Ingvar_AUTO_INIT: true
   run: npm install
 ````
 
@@ -384,7 +384,7 @@ npx leo init
 - name: Setup
   run: |
     npm install
-    echo "yes" | npx leo init  # Brittle, assumes prompts
+    echo "yes" | npx ingvar init  # Brittle, assumes prompts
 ```
 
 ### 4. Verify After Auto-Init
@@ -392,8 +392,8 @@ npx leo init
 **Always check status after installation:**
 
 ```bash
-LEO_AUTO_INIT=true npm install
-npx leo status
+Ingvar_AUTO_INIT=true npm install
+npx ingvar status
 
 # Expected output:
 # ✓ GitHub CLI
@@ -409,13 +409,13 @@ npx leo status
 
 ```bash
 # Auto-initialize structure
-LEO_AUTO_INIT=true npm install
+Ingvar_AUTO_INIT=true npm install
 
 # Authenticate later
 gh auth login
 
 # Configure GitHub Project
-npx leo init  # Re-run to configure project only
+npx ingvar init  # Re-run to configure project only
 ```
 
 ---
@@ -428,14 +428,14 @@ npx leo init  # Re-run to configure project only
 
 1. ✅ Installed locally (not globally)
 2. ✅ Inside git repository (`git rev-parse --git-dir`)
-3. ✅ `LEO_AUTO_INIT=true` environment variable set
+3. ✅ `Ingvar_AUTO_INIT=true` environment variable set
 4. ✅ Not already initialized (check for `.github/ISSUE_TEMPLATE`)
 
 **Debug:**
 
 ```bash
 # Check install type
-npm list leo-workflow-kit
+npm list ingvar-kit
 
 # Check git repo
 git rev-parse --git-dir
@@ -454,7 +454,7 @@ Auto-init skips authentication in non-interactive mode.
 gh auth login
 
 # Re-run interactive init to configure project
-npx leo init
+npx ingvar init
 ```
 
 ### Issue: Postinstall hangs
@@ -468,7 +468,7 @@ npx leo init
 gh auth login
 
 # Then install with auto-init
-LEO_AUTO_INIT=true npm install
+Ingvar_AUTO_INIT=true npm install
 ```
 
 ### Issue: Permission errors during install
@@ -479,7 +479,7 @@ LEO_AUTO_INIT=true npm install
 
 ```bash
 # Use local install (not global)
-npm install leo-workflow-kit --save-dev
+npm install ingvar-kit --save-dev
 
 # Or fix npm permissions
 # https://docs.npmjs.com/resolving-eacces-permissions-errors
@@ -498,7 +498,7 @@ rm -rf docs/specs
 rm -f .github/copilot-instructions.md
 
 # Re-run initialization
-LEO_AUTO_INIT=true npm install --force
+Ingvar_AUTO_INIT=true npm install --force
 ```
 
 ### Issue: CI/CD environment not detected
@@ -510,11 +510,11 @@ LEO_AUTO_INIT=true npm install --force
 ```yaml
 # GitHub Actions
 env:
-  LEO_AUTO_INIT: "true" # Use quotes for boolean
+  Ingvar_AUTO_INIT: "true" # Use quotes for boolean
 
 # GitLab CI
 variables:
-  LEO_AUTO_INIT: "true"
+  Ingvar_AUTO_INIT: "true"
 ```
 
 ---
@@ -525,8 +525,8 @@ variables:
 
 **Steps:**
 
-1. `npm install leo-workflow-kit`
-2. `npx leo init`
+1. `npm install ingvar-kit`
+2. `npx ingvar init`
 3. Answer 5-10 interactive prompts
 4. Configure GitHub Project
 5. Authenticate if needed
@@ -539,7 +539,7 @@ variables:
 
 **Steps:**
 
-1. `LEO_AUTO_INIT=true npm install leo-workflow-kit`
+1. `Ingvar_AUTO_INIT=true npm install ingvar-kit`
 
 **Time:** ~30 seconds
 **User Input:** None
@@ -597,7 +597,7 @@ variables:
 
 ### 🔄 Re-configurable
 
-You can always re-run `npx leo init` to:
+You can always re-run `npx ingvar init` to:
 
 - Configure GitHub Project
 - Update labels
@@ -610,16 +610,16 @@ You can always re-run `npx leo init` to:
 
 ### Adding Auto-Init to Your Package
 
-**If you're creating a package that uses LEO:**
+**If you're creating a package that uses Ingvar:**
 
 ```json
 {
   "name": "your-package",
   "dependencies": {
-    "leo-workflow-kit": "^2.5.0"
+    "ingvar-kit": "^2.5.0"
   },
   "scripts": {
-    "postinstall": "if [ \"$LEO_AUTO_INIT\" = \"true\" ]; then npx leo init --non-interactive; fi"
+    "postinstall": "if [ \"$Ingvar_AUTO_INIT\" = \"true\" ]; then npx ingvar init --non-interactive; fi"
   }
 }
 ```
@@ -632,7 +632,7 @@ You can always re-run `npx leo init` to:
 ### Automatic (Recommended)
 
 ```bash
-LEO_AUTO_INIT=true npm install
+Ingvar_AUTO_INIT=true npm install
 ```
 ````
 
@@ -640,7 +640,7 @@ LEO_AUTO_INIT=true npm install
 
 ```bash
 npm install
-npx leo init
+npx ingvar init
 ```
 
 ````
@@ -651,7 +651,7 @@ npx leo init
 
 **Key Takeaways:**
 
-1. ✅ **Set `LEO_AUTO_INIT=true`** for automatic initialization
+1. ✅ **Set `Ingvar_AUTO_INIT=true`** for automatic initialization
 2. ✅ **Works only for local installs** in git repositories
 3. ✅ **Non-interactive mode** uses sensible defaults
 4. ✅ **Skips GitHub Project** by default (configure later)
@@ -662,18 +662,18 @@ npx leo init
 
 ```bash
 # Auto-initialize
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+Ingvar_AUTO_INIT=true npm install ingvar-kit
 
 # Check status
-npx leo status
+npx ingvar status
 
 # Configure GitHub Project (if needed)
-npx leo init
+npx ingvar init
 
 # View health
-npx leo health
+npx ingvar health
 ````
 
 ---
 
-**Need help?** Open an issue: https://github.com/leonpagotto/leo-kit/issues
+**Need help?** Open an issue: https://github.com/leopagotto/ingvar-kit/issues

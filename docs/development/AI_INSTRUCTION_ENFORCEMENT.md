@@ -2,18 +2,18 @@
 
 **Date:** October 20, 2025
 **Version:** 3.0.3
-**Purpose:** Ensure AI assistants ALWAYS follow LEO workflow standards from the first message
+**Purpose:** Ensure AI assistants ALWAYS follow Ingvar workflow standards from the first message
 
 ---
 
 ## 🎯 Problem Statement
 
 **Original Issue:**
-AI assistants (Copilot, Cursor, Cline, Codeium) were not consistently following LEO workflow standards, particularly:
+AI assistants (Copilot, Cursor, Cline, Codeium) were not consistently following Ingvar workflow standards, particularly:
 
 - Not creating GitHub issues automatically when user described work
 - Asking "should I create an issue?" instead of just doing it
-- Not checking `.leorc.json` for auto-resolve settings
+- Not checking `.ingvarrc.json` for auto-resolve settings
 - Not updating issue status when starting work
 - Violating commit message length guidelines
 
@@ -37,7 +37,7 @@ Added strong enforcement language at the TOP of every AI instruction file:
 >
 > - **Issue Creation:** When user describes ANY work → Create GitHub issue IMMEDIATELY
 > - **No Asking Permission:** NEVER ask "should I create an issue?" - JUST DO IT
-> - **Auto-Resolve Check:** Read `.leorc.json` for `auto-resolve` setting before working
+> - **Auto-Resolve Check:** Read `.ingvarrc.json` for `auto-resolve` setting before working
 > - **Status Updates:** Comment "🚀 Starting work..." when starting
 > - **Commit Messages:** Keep under 72 characters, reference issue number
 > - **Issue Comments:** Keep under 3-4 lines (200 chars max)
@@ -90,7 +90,7 @@ Added a checklist at the beginning of the main template:
 
 **Before responding to ANY user request, you MUST:**
 
-1. ✅ Check if `.leorc.json` exists and read `auto-resolve` setting
+1. ✅ Check if `.ingvarrc.json` exists and read `auto-resolve` setting
 2. ✅ Detect if user is describing work (features, bugs, deployments, docs)
 3. ✅ If work described → Create GitHub issue IMMEDIATELY (use `gh issue create`)
 4. ✅ Announce issue creation with number and link
@@ -116,7 +116,7 @@ Every time you interact with this repository:
 1. ✅ FIRST THING: Check if user described work
 2. ✅ IF YES: Create GitHub issue IMMEDIATELY with `gh issue create`
 3. ✅ NEVER ASK: "Should I create an issue?" - JUST DO IT
-4. ✅ CHECK CONFIG: Read `.leorc.json` for `auto-resolve` setting
+4. ✅ CHECK CONFIG: Read `.ingvarrc.json` for `auto-resolve` setting
 5. ✅ UPDATE STATUS: Comment and move to "In Progress" when starting
 6. ✅ KEEP SHORT: Commits < 72 chars, comments < 3-4 lines
 
@@ -267,7 +267,7 @@ Expected AI Response:
 ✅ "Creating issue for dark mode feature..."
 ✅ [Executes: gh issue create ...]
 ✅ "Issue #42 created: Add dark mode feature"
-✅ [Checks .leorc.json for auto-resolve]
+✅ [Checks .ingvarrc.json for auto-resolve]
 ✅ "Proceeding with implementation" OR "Waiting for your review"
 
 ❌ NOT: "Should I create an issue for this?"
@@ -280,7 +280,7 @@ Expected AI Response:
 User: "Fix the login button on mobile"
 
 Expected AI Actions:
-1. Reads .leorc.json
+1. Reads .ingvarrc.json
 2. Checks auto-resolve setting
 3. Creates issue immediately
 4. If auto-resolve=true → Starts work
@@ -359,7 +359,7 @@ Expected AI Commits:
 
 ## 💡 Best Practices
 
-### For LEO Kit Developers
+### For Ingvar Kit Developers
 
 1. **Always Use Strong Language**
 
@@ -399,7 +399,7 @@ Expected AI Commits:
 3. **Report Non-Compliance**
    - If AI doesn't follow rules
    - Document exact behavior
-   - Share with LEO Kit team
+   - Share with Ingvar Kit team
 
 ---
 
@@ -434,7 +434,7 @@ Expected AI Commits:
 
 ## 📚 Related Documentation
 
-- **Bug Report:** `LEO_KIT_BUG_REPORT.md`
+- **Bug Report:** `Ingvar_KIT_BUG_REPORT.md`
 - **Verification Guide:** `COPILOT_INSTRUCTIONS_VERIFICATION_AND_FIX.md`
 - **Implementation Summary:** `IMPLEMENTATION_V3.0.3.md`
 - **Deployment Workflow:** `docs/workflows/deployment-workflow.md`
@@ -475,6 +475,6 @@ Expected AI Commits:
 - ✅ Repetition of critical rules
 - ✅ Visual emphasis with emoji and formatting
 
-**Result:** AI assistants will now follow LEO workflow standards from the FIRST message, automatically creating issues when work is described, checking `.leorc.json` settings, and following all workflow rules without asking permission.
+**Result:** AI assistants will now follow Ingvar workflow standards from the FIRST message, automatically creating issues when work is described, checking `.ingvarrc.json` settings, and following all workflow rules without asking permission.
 
 **Status:** ✅ Ready for v3.0.3 release

@@ -72,7 +72,7 @@ Created comprehensive guide for contributors: `docs/guides/CONTRIBUTOR_PACKAGE_U
 
 **Contents:**
 
-- 🔄 How to update `leo-workflow-kit` after pulling changes
+- 🔄 How to update `ingvar-kit` after pulling changes
 - ⚠️ Common issues and solutions
 - ✅ Installation verification steps
 - 🔍 Troubleshooting guide
@@ -111,10 +111,10 @@ Created comprehensive guide for contributors: `docs/guides/CONTRIBUTOR_PACKAGE_U
 
 ```bash
 # Update to v5.3.2
-npm install -g leo-workflow-kit@5.3.2
+npm install -g ingvar-kit@5.3.2
 
 # Verify version
-leo --version
+ingvar --version
 # Should show: 5.3.2
 
 # Run tests to verify
@@ -141,7 +141,7 @@ npm test
 
 ```bash
 # List all models
-leo model list
+ingvar model list
 
 # Should show 10 models:
 # - gpt-4
@@ -196,7 +196,7 @@ Full changelog: [CHANGELOG.md](../../CHANGELOG.md#532)
 Simply update the package:
 
 ```bash
-npm install -g leo-workflow-kit@5.3.2
+npm install -g ingvar-kit@5.3.2
 ```
 
 Everything continues working exactly the same way.
@@ -209,11 +209,11 @@ Everything continues working exactly the same way.
 
 ```bash
 # Update to v5.3.2
-npm install -g leo-workflow-kit@5.3.2
+npm install -g ingvar-kit@5.3.2
 
 # Continue using as normal
-leo --version
-leo model list
+ingvar --version
+ingvar model list
 ```
 
 ### For Contributors:
@@ -237,7 +237,7 @@ cat docs/guides/CONTRIBUTOR_PACKAGE_UPDATE_GUIDE.md
 
 ## 🙏 Thank You
 
-Thank you for using LEO Workflow Kit! This patch release ensures a stable, well-tested foundation for future development.
+Thank you for using Ingvar Kit! This patch release ensures a stable, well-tested foundation for future development.
 
 If you encounter any issues, please:
 
@@ -247,6 +247,6 @@ If you encounter any issues, please:
 
 ---
 
-**Happy Building with LEO! 🦁**
+**Happy Building with Ingvar! 🦁**
 
-_Built with ❤️ by the LEO Workflow Kit team_
+_Built with ❤️ by the Ingvar Kit team_

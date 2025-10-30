@@ -95,8 +95,8 @@ Simulated task: **"Build a checkout form with payment integration"**
 ### 2. Status File Directory
 
 ```bash
-✅ mkdir -p ~/.leo-workflow-kit
-✅ Status file created: ~/.leo-workflow-kit/.leo-model-status.json
+✅ mkdir -p ~/.ingvar-kit
+✅ Status file created: ~/.ingvar-kit/.leo-model-status.json
 ```
 
 ### 3. Test Script Execution
@@ -140,7 +140,7 @@ $(check) 💻 frontend complete
 **Inactive State:**
 
 ```
-$(circle-slash) LEO Ready
+$(circle-slash) Ingvar Ready
 ```
 
 - Circle-slash icon
@@ -148,17 +148,17 @@ $(circle-slash) LEO Ready
 
 ### Available Commands
 
-1. **LEO: Show Current Model Info**
+1. **Ingvar: Show Current Model Info**
 
    - Command ID: `leo-model-selector.showModelInfo`
    - Shows current agent, model, status, and recent history
 
-2. **LEO: Select Model Preference**
+2. **Ingvar: Select Model Preference**
 
    - Command ID: `leo-model-selector.selectModel`
    - Quick picker for manual model selection
 
-3. **LEO: Show Model History**
+3. **Ingvar: Show Model History**
    - Command ID: `leo-model-selector.showHistory`
    - View recent model selection history
 
@@ -210,14 +210,14 @@ $(circle-slash) LEO Ready
 After restart, check the **bottom-right** of VS Code for:
 
 ```
-$(circle-slash) LEO Ready
+$(circle-slash) Ingvar Ready
 ```
 
 If you see this, the extension is active! ✅
 
 ### 3. Test Agent Mode Switching
 
-Run any LEO command that triggers an agent:
+Run any Ingvar command that triggers an agent:
 
 ```bash
 # This should show agent switching in VS Code status bar
@@ -235,9 +235,9 @@ Watch the status bar change:
 
 Open Command Palette (Cmd+Shift+P) and type:
 
-- "LEO: Show Current Model Info"
-- "LEO: Show Model History"
-- "LEO: Select Model Preference"
+- "Ingvar: Show Current Model Info"
+- "Ingvar: Show Model History"
+- "Ingvar: Select Model Preference"
 
 ---
 
@@ -291,7 +291,7 @@ ls -la ~/.vscode/extensions/leo-model-selector/
 **Check status file:**
 
 ```bash
-cat ~/.leo-workflow-kit/.leo-model-status.json | jq '.current'
+cat ~/.ingvar-kit/.leo-model-status.json | jq '.current'
 ```
 
 **Expected output:**
@@ -321,13 +321,13 @@ cat ~/.vscode/extensions/leo-model-selector/package.json | jq '.contributes.comm
 
 ---
 
-## 🎯 Integration with LEO Workflow
+## 🎯 Integration with Ingvar Workflow
 
 ### Automatic Agent Switching
 
-When you use LEO commands, the status bar automatically updates:
+When you use Ingvar commands, the status bar automatically updates:
 
-**Example: "leo issue create"**
+**Example: "ingvar issue create"**
 
 1. 🎯 Orchestrator analyzes request
 2. Status bar: `$(sync~spin) 🎯 orchestrator → GPT-4T`
@@ -346,7 +346,7 @@ When you use LEO commands, the status bar automatically updates:
 The extension monitors:
 
 ```
-~/.leo-workflow-kit/.leo-model-status.json
+~/.ingvar-kit/.leo-model-status.json
 ```
 
 This file is updated in real-time by:

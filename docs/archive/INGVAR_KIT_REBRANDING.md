@@ -1,14 +1,14 @@
 # Ingvar Kit Rebranding Summary
 
 **Date**: October 22, 2025  
-**Project**: Rebranding LEO Kit → Ingvar Kit  
+**Project**: Rebranding Ingvar Kit → Ingvar Kit  
 **Purpose**: Create Ingka-branded version aligned with Ingvar Kamprad's philosophy and Ingka Way of Working
 
 ---
 
 ## 🎯 Overview
 
-This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit**, a GitHub workflow automation toolkit inspired by **Ingvar Kamprad** (IKEA founder) and aligned with **Ingka Digital's** development standards.
+This document summarizes the complete rebranding of **Ingvar Kit** to **Ingvar Kit**, a GitHub workflow automation toolkit inspired by **Ingvar Kamprad** (IKEA founder) and aligned with **Ingka Digital's** development standards.
 
 ---
 
@@ -17,13 +17,13 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 ### 1. **ASCII Banner & Branding** (`lib/banner.js`)
 
 **Changed**:
-- ✅ Replaced golden LEO logo with IKEA blue/yellow Ingvar branding
+- ✅ Replaced golden Ingvar logo with IKEA blue/yellow Ingvar branding
 - ✅ Changed emojis: 🦁 (lion) → 🪑 (chair) + 🇸🇪 (Swedish flag)
 - ✅ Updated colors: Gold gradient → IKEA Blue (#0051BA) + Yellow (#FFDB00)
 - ✅ Changed tagline: "Made with ❤️ by Leo Pagotto" → "Inspired by Ingvar Kamprad & Ingka Way of Working"
 - ✅ Updated welcome message with Ingka branding
 - ✅ Changed all command references: `leo` → `ingvar`
-- ✅ Updated documentation links: `leonpagotto/leo-kit` → `ingka-group/ingvar-kit`
+- ✅ Updated documentation links: `leopagotto/ingvar-kit` → `ingka-group/ingvar-kit`
 
 **Colors Used**:
 - IKEA Blue: `#0051BA`, `#0058D6`, `#0066FF`
@@ -34,12 +34,12 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 ### 2. **Package Information** (`package.json`)
 
 **Changed**:
-- ✅ Name: `leo-workflow-kit` → `ingvar-workflow-kit`
+- ✅ Name: `ingvar-kit` → `ingvar-workflow-kit`
 - ✅ Version: `4.0.3` → `1.0.0` (fresh start)
 - ✅ Description: Added "Ingka Way of Working", "Ingvar Kamprad", IKEA references
 - ✅ Keywords: Added `ingka`, `ikea`, `ingvar-kamprad`
 - ✅ Author: "Leo de Souza" → "Ingka Digital"
-- ✅ Repository: `leonpagotto/leo-kit` → `ingka-group/ingvar-kit`
+- ✅ Repository: `leopagotto/ingvar-kit` → `ingka-group/ingvar-kit`
 - ✅ Homepage: Updated to Ingka organization
 - ✅ Bin commands: `leo` → `ingvar`, `leo-workflow` → `ingvar-workflow`
 
@@ -50,9 +50,9 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 **Changed**:
 - ✅ Program name: `leo-workflow` → `ingvar-workflow`
 - ✅ Description: Added "following Ingka Way of Working"
-- ✅ Init command description: "Initialize LEO workflow" → "Initialize Ingvar workflow"
-- ✅ Health check message: `leo health` → `ingvar health`
-- ✅ Docs URL: `leonpagotto/leo-kit` → `ingka-group/ingvar-kit`
+- ✅ Init command description: "Initialize Ingvar workflow" → "Initialize Ingvar workflow"
+- ✅ Health check message: `ingvar health` → `ingvar health`
+- ✅ Docs URL: `leopagotto/ingvar-kit` → `ingka-group/ingvar-kit`
 
 ---
 
@@ -76,15 +76,15 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 ### Core Files (TODO)
 
 #### Configuration Files
-- [ ] `.leorc.json.example` → `.ingvarrc.json.example`
-- [ ] Update `.gitignore`: `.leorc.json` → `.ingvarrc.json`
-- [ ] All documentation references to `.leorc.json` → `.ingvarrc.json`
+- [ ] `.ingvarrc.json.example` → `.ingvarrc.json.example`
+- [ ] Update `.gitignore`: `.ingvarrc.json` → `.ingvarrc.json`
+- [ ] All documentation references to `.ingvarrc.json` → `.ingvarrc.json`
 
 #### AI Assistant Instructions (TODO)
-- [ ] `.github/copilot-instructions.md` - Replace "LEO" with "Ingvar", update workflow references
-- [ ] `.cursorrules` - Replace "LEO" with "Ingvar"
-- [ ] `.clinerules` - Replace "LEO" with "Ingvar"
-- [ ] `.codeium/instructions.md` - Replace "LEO" with "Ingvar"
+- [ ] `.github/copilot-instructions.md` - Replace "Ingvar" with "Ingvar", update workflow references
+- [ ] `.cursorrules` - Replace "Ingvar" with "Ingvar"
+- [ ] `.clinerules` - Replace "Ingvar" with "Ingvar"
+- [ ] `.codeium/instructions.md` - Replace "Ingvar" with "Ingvar"
 
 #### Documentation Files (TODO)
 - [ ] `docs/guides/leorc-configuration.md` → `docs/guides/ingvarrc-configuration.md`
@@ -101,8 +101,8 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 - [ ] All other wiki pages
 
 #### Template Files (TODO)
-- [ ] Check `templates/` directory for LEO references
-- [ ] Update issue templates if they contain LEO branding
+- [ ] Check `templates/` directory for Ingvar references
+- [ ] Update issue templates if they contain Ingvar branding
 
 ---
 
@@ -110,7 +110,7 @@ This document summarizes the complete rebranding of **LEO Kit** to **Ingvar Kit*
 
 #### Commands (TODO)
 Check each command file in `lib/commands/` for:
-- [ ] `init.js` - Update LEO → Ingvar references
+- [ ] `init.js` - Update Ingvar → Ingvar references
 - [ ] `issue.js` - Update references
 - [ ] `labels.js` - Update references  
 - [ ] `vscode.js` - Update references
@@ -121,7 +121,7 @@ Check each command file in `lib/commands/` for:
 - [ ] `health.js` - Update references
 
 #### Utilities (TODO)
-- [ ] `lib/utils/*` - Check for LEO references
+- [ ] `lib/utils/*` - Check for Ingvar references
 - [ ] `lib/copilot-instructions-template.js` - Update template
 - [ ] Any other lib files
 
@@ -133,32 +133,32 @@ Check each command file in `lib/commands/` for:
 
 ```bash
 # Case-sensitive replacements
-LEO Kit → Ingvar Kit
-LEO Workflow Kit → Ingvar Workflow Kit
+Ingvar Kit → Ingvar Kit
+Ingvar Kit → Ingvar Workflow Kit
 leo-kit → ingvar-kit
-leo-workflow-kit → ingvar-workflow-kit
+ingvar-kit → ingvar-workflow-kit
 
 # Command replacements
-`leo → `ingvar
-leo init → ingvar init
-leo issue → ingvar issue
-leo labels → ingvar labels
-leo vscode → ingvar vscode
-leo config → ingvar config
-leo agent → ingvar agent
-leo ai → ingvar ai
-leo github → ingvar github
-leo status → ingvar status
-leo health → ingvar health
+`ingvar → `ingvar
+ingvar init → ingvar init
+ingvar issue → ingvar issue
+ingvar labels → ingvar labels
+ingvar vscode → ingvar vscode
+ingvar config → ingvar config
+ingvar agent → ingvar agent
+ingvar ai → ingvar ai
+ingvar github → ingvar github
+ingvar status → ingvar status
+ingvar health → ingvar health
 
 # Config file replacements
 .leorc → .ingvarrc
-.leorc.json → .ingvarrc.json
-~/.leorc.json → ~/.ingvarrc.json
+.ingvarrc.json → .ingvarrc.json
+~/.ingvarrc.json → ~/.ingvarrc.json
 leorc-configuration → ingvarrc-configuration
 
 # Repository replacements
-leonpagotto/leo-kit → ingka-group/ingvar-kit
+leopagotto/ingvar-kit → ingka-group/ingvar-kit
 leonpagotto → ingka-group (where appropriate)
 github.com/leonpagotto → github.com/ingka-group
 
@@ -174,9 +174,9 @@ Made with ❤️ by Leo Pagotto → Made with 🪑 by Ingka Digital
 
 ```markdown
 # OLD
-# GitHub Copilot Instructions - LEO Workflow Kit
-> **Purpose:** Follow LEO's workflow standards
-You are the guardian of LEO standards.
+# GitHub Copilot Instructions - Ingvar Kit
+> **Purpose:** Follow Ingvar's workflow standards
+You are the guardian of Ingvar standards.
 
 # NEW
 # GitHub Copilot Instructions - Ingvar Workflow Kit
@@ -188,7 +188,7 @@ You are the guardian of Ingvar standards.
 
 ```json
 // OLD
-"leo-workflow-kit": "^4.0.3"
+"ingvar-kit": "^4.0.3"
 
 // NEW  
 "ingvar-workflow-kit": "^1.0.0"
@@ -203,12 +203,12 @@ You are the guardian of Ingvar standards.
 **Logo/Icons**:
 - Primary: 🪑 (chair - IKEA furniture)
 - Secondary: 🇸🇪 (Swedish flag - origin)
-- Avoid: 🦁 (LEO's lion logo)
+- Avoid: 🦁 (Ingvar's lion logo)
 
 **Colors**:
 - Primary Blue: `#0051BA` (IKEA Blue)
 - Primary Yellow: `#FFDB00` (IKEA Yellow)
-- Avoid: Gold/Orange gradients (#FFD700, #FF9500 - LEO colors)
+- Avoid: Gold/Orange gradients (#FFD700, #FF9500 - Ingvar colors)
 
 **Tone of Voice**:
 - Simple, clear, efficient (Ingvar Kamprad's philosophy)
@@ -282,7 +282,7 @@ If using GitHub Pages/Wiki:
 ├── .codeium/
 │   └── instructions.md ⏳ (needs update)
 ├── .gitignore ⏳ (needs update)
-├── .ingvarrc.json.example ⏳ (rename from .leorc.json.example)
+├── .ingvarrc.json.example ⏳ (rename from .ingvarrc.json.example)
 ├── package.json ✅ (updated)
 ├── README.md ✅ (new Ingvar version created as README_INGVAR.md)
 ├── CHANGELOG.md ⏳ (needs v1.0.0 entry)
@@ -293,9 +293,9 @@ If using GitHub Pages/Wiki:
 ### Optional/Archive
 
 ```
-├── RELEASE_V*.md (LEO version history - keep as reference or archive)
-├── SESSION_SUMMARY_*.md (LEO development logs - optional)
-├── LEO_KIT_BUG_REPORT.md (archive)
+├── RELEASE_V*.md (Ingvar version history - keep as reference or archive)
+├── SESSION_SUMMARY_*.md (Ingvar development logs - optional)
+├── Ingvar_KIT_BUG_REPORT.md (archive)
 ├── leo-kit-improvements.md (archive or adapt)
 ```
 
@@ -365,10 +365,10 @@ gh repo create ingka-group/ingvar-kit --public --description "Ingvar Workflow Ki
 cp -r leo-kit ingvar-kit
 cd ingvar-kit
 
-# Remove LEO-specific files
+# Remove Ingvar-specific files
 rm README.md
 mv README_INGVAR.md README.md
-rm RELEASE_V*.md SESSION_SUMMARY_*.md LEO_KIT_BUG_REPORT.md
+rm RELEASE_V*.md SESSION_SUMMARY_*.md Ingvar_KIT_BUG_REPORT.md
 
 # Initialize git
 git init
@@ -468,10 +468,10 @@ ingvar init
 
 ## 📞 Support & Resources
 
-**Original LEO Kit**:
-- Repository: https://github.com/leonpagotto/leo-kit
+**Original Ingvar Kit**:
+- Repository: https://github.com/leopagotto/ingvar-kit
 - Author: Leo Pagotto (Leo de Souza)
-- NPM: https://www.npmjs.com/package/leo-workflow-kit
+- NPM: https://www.npmjs.com/package/ingvar-kit
 
 **New Ingvar Kit**:
 - Repository: https://github.com/ingka-group/ingvar-kit
@@ -483,7 +483,7 @@ ingvar init
 
 ## 🙏 Credits
 
-**Based on**: LEO Workflow Kit by Leo Pagotto  
+**Based on**: Ingvar Kit by Leo Pagotto  
 **Inspired by**: Ingvar Kamprad (IKEA Founder)  
 **For**: Ingka Digital & the developer community  
 **Philosophy**: Swedish design - Simple, Quality, Efficient  

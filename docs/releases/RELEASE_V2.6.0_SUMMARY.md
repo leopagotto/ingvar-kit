@@ -1,7 +1,7 @@
 # 🎉 v2.6.0 Release Summary
 
 **Release Date:** October 19, 2025
-**Package:** leo-workflow-kit@2.6.0
+**Package:** ingvar-kit@2.6.0
 **Status:** Ready for Testing & Deployment
 
 ---
@@ -12,26 +12,26 @@
 
 **Control your workflow behavior with flexible configuration management.**
 
-#### New `leo config` Command
+#### New `ingvar config` Command
 
 ```bash
 # View all settings
-leo config list
+ingvar config list
 
 # Disable auto-resolution (team review workflow)
-leo config set auto-resolve false
+ingvar config set auto-resolve false
 
 # Enable auto-resolution (fast-paced solo work)
-leo config set auto-resolve true
+ingvar config set auto-resolve true
 
 # Check specific setting
-leo config get auto-resolve
+ingvar config get auto-resolve
 
 # Set global defaults
-leo config set auto-resolve true --global
+ingvar config set auto-resolve true --global
 
 # Initialize config file
-leo config init
+ingvar config init
 ```
 
 #### Configuration Keys
@@ -44,8 +44,8 @@ leo config init
 
 - **`auto-init`** (default: `false`)
 
-  - `true`: Auto-initialize on npm install without LEO_AUTO_INIT env var
-  - `false`: Requires explicit LEO_AUTO_INIT=true or manual leo init
+  - `true`: Auto-initialize on npm install without Ingvar_AUTO_INIT env var
+  - `false`: Requires explicit Ingvar_AUTO_INIT=true or manual ingvar init
 
 - **`project-type`** (default: `auto`)
   - Options: auto, frontend, backend, fullstack, cli, mobile, library
@@ -53,15 +53,15 @@ leo config init
 
 #### Configuration Files
 
-- **Local:** `.leorc.json` in project root (project-specific)
-- **Global:** `~/.leorc.json` in user home (applies to all projects)
+- **Local:** `.ingvarrc.json` in project root (project-specific)
+- **Global:** `~/.ingvarrc.json` in user home (applies to all projects)
 - **Priority:** Local > Global > Default
 
 #### How It Works
 
 1. User describes work
 2. Copilot creates GitHub issue (always happens)
-3. Copilot checks `.leorc.json` for `auto-resolve` setting
+3. Copilot checks `.ingvarrc.json` for `auto-resolve` setting
 4. **If enabled (default):** Proceeds with implementation immediately
 5. **If disabled:** Waits for user to explicitly approve before starting
 
@@ -96,7 +96,7 @@ git commit -m "feat(auth): add OAuth2 support (#42)" -m "Implements authenticati
 
 #### Impact
 
-- ✅ Prevents pipeline delays for all LEO kit users
+- ✅ Prevents pipeline delays for all Ingvar kit users
 - ✅ Saves processing time (no more stuck commits!)
 - ✅ Improves commit history readability
 - ✅ Enforces better Git practices
@@ -117,11 +117,11 @@ lib/
 
 ### Modified Files
 
-- `bin/cli.js` - Registered `leo config` command with `cfg` alias
+- `bin/cli.js` - Registered `ingvar config` command with `cfg` alias
 - `lib/copilot-instructions-template.js` - Added auto-resolution check & commit guidelines
 - `README.md` - Updated architecture diagrams, added config command docs
 - `CHANGELOG.md` - Complete v2.6.0 entry
-- `.gitignore` - Excluded `.leorc.json` user configs
+- `.gitignore` - Excluded `.ingvarrc.json` user configs
 - `package.json` - Version bump to 2.6.0
 - `diagrams/architecture.mmd` - Updated system architecture
 - `diagrams/workflow.mmd` - Enhanced workflow with auto-resolution
@@ -164,7 +164,7 @@ Enhanced with:
 
 - ✅ Updated system architecture diagram
 - ✅ Enhanced intelligent workflow diagram
-- ✅ Added `leo config` command documentation
+- ✅ Added `ingvar config` command documentation
 - ✅ Added commit message length guidelines
 - ✅ Updated configuration key descriptions
 - ✅ Added auto-resolution examples
@@ -189,18 +189,18 @@ Enhanced with:
 ### Config Command
 
 ```bash
-✅ leo config help           # Shows comprehensive help
-✅ leo config list           # Lists all settings with sources
-✅ leo config set auto-resolve false  # Sets local config
-✅ leo config get auto-resolve        # Gets current value
-✅ leo config init           # Creates .leorc.json
+✅ ingvar config help           # Shows comprehensive help
+✅ ingvar config list           # Lists all settings with sources
+✅ ingvar config set auto-resolve false  # Sets local config
+✅ ingvar config get auto-resolve        # Gets current value
+✅ ingvar config init           # Creates .ingvarrc.json
 ✅ Configuration priority works (Local > Global > Default)
 ```
 
 ### Integration
 
 ```bash
-✅ .leorc.json created successfully
+✅ .ingvarrc.json created successfully
 ✅ Config files excluded from git (.gitignore)
 ✅ Copilot template includes auto-resolution check
 ✅ All commands still work as expected
@@ -237,7 +237,7 @@ npm version 2.6.0
 npm pack
 
 # 3. Test package installation
-npm install -g ./leo-workflow-kit-2.6.0.tgz
+npm install -g ./ingvar-kit-2.6.0.tgz
 
 # 4. Publish to npm
 npm publish
@@ -246,7 +246,7 @@ npm publish
 gh release create v2.6.0 \
   --title "v2.6.0 - Configuration System & Commit Guidelines" \
   --notes-file RELEASE_NOTES_V2.6.0.md \
-  leo-workflow-kit-2.6.0.tgz
+  ingvar-kit-2.6.0.tgz
 
 # 6. Update wiki (if needed)
 npm run deploy:wiki

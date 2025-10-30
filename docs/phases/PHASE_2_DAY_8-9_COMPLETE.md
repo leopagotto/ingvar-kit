@@ -3,7 +3,7 @@
 > **Status:** COMPLETE (40% of Phase 2)  
 > **Duration:** Day 8-9 (2 days)  
 > **Commits:** `5ea7a70`, `df594cb`, `900a781`  
-> **Issue:** [#75](https://github.com/leonpagotto/leo-kit/issues/75)
+> **Issue:** [#75](https://github.com/leopagotto/ingvar-kit/issues/75)
 
 ---
 
@@ -18,7 +18,7 @@
 ## 🚀 Features Delivered
 
 ### Mode 1: Simple Checklist (Default)
-- ✅ **Command:** `leo tasks create <issue>`
+- ✅ **Command:** `ingvar tasks create <issue>`
 - ✅ **Output:** Markdown checklist posted to issue comment
 - ✅ **Target Users:** Solo developers, quick prototypes
 - ✅ **Performance:** 1-2 seconds, minimal GitHub API usage
@@ -26,17 +26,17 @@
 
 **Example Usage:**
 ```bash
-leo spec new "Add user authentication"  # Creates #42
-leo plan 42                              # Posts implementation plan
-leo tasks create 42                      # Posts checklist with 16 tasks
+ingvar spec new "Add user authentication"  # Creates #42
+ingvar plan 42                              # Posts implementation plan
+ingvar tasks create 42                      # Posts checklist with 16 tasks
 ```
 
-**Test Issue:** [#79](https://github.com/leonpagotto/leo-kit/issues/79) ✅ PASSED
+**Test Issue:** [#79](https://github.com/leopagotto/ingvar-kit/issues/79) ✅ PASSED
 
 ---
 
 ### Mode 2: Child GitHub Issues (Optional)
-- ✅ **Command:** `leo tasks create <issue> --create-issues`
+- ✅ **Command:** `ingvar tasks create <issue> --create-issues`
 - ✅ **Output:** Separate GitHub issues for each task (#81-#96)
 - ✅ **Target Users:** Teams, complex projects, GitHub Projects users
 - ✅ **Performance:** 5-10 seconds for 16 issues
@@ -51,18 +51,18 @@ leo tasks create 42                      # Posts checklist with 16 tasks
 
 **Example Usage:**
 ```bash
-leo spec new "Add payment processing with Stripe"  # Creates #80
-leo plan 80                                        # Posts plan
-leo tasks create 80 --create-issues                # Creates 16 child issues
+ingvar spec new "Add payment processing with Stripe"  # Creates #80
+ingvar plan 80                                        # Posts plan
+ingvar tasks create 80 --create-issues                # Creates 16 child issues
 ```
 
-**Test Issue:** [#80](https://github.com/leonpagotto/leo-kit/issues/80) ✅ PASSED
-- **Child Issues:** [#81](https://github.com/leonpagotto/leo-kit/issues/81) - [#96](https://github.com/leonpagotto/leo-kit/issues/96)
+**Test Issue:** [#80](https://github.com/leopagotto/ingvar-kit/issues/80) ✅ PASSED
+- **Child Issues:** [#81](https://github.com/leopagotto/ingvar-kit/issues/81) - [#96](https://github.com/leopagotto/ingvar-kit/issues/96)
 
 ---
 
 ### Task Status Tracking
-- ✅ **Command:** `leo tasks status <issue>`
+- ✅ **Command:** `ingvar tasks status <issue>`
 - ✅ **Output:** Progress breakdown by phase with emoji indicators
 - ✅ **Metrics:** Task counts, percentage completion (0-100%)
 - ✅ **States:** 📝 Not Started, 🚧 In Progress, ✅ Complete
@@ -101,11 +101,11 @@ Overall Progress: 12/16 (75%) 🎯
 - `status(issueNumber)` - Track completion progress
 
 **bin/cli.js** (MODIFIED)
-- Added `leo tasks create <issue>` command
+- Added `ingvar tasks create <issue>` command
 - Added `--create-issues` flag for dual-mode support
 - Added `--no-post` flag for preview mode
 - Added `--no-tdd` flag to disable TDD workflow
-- Added `leo tasks status <issue>` command
+- Added `ingvar tasks status <issue>` command
 
 **docs/DUAL_MODE_TASK_DEMO.md** (NEW - 257 lines)
 - Comprehensive guide for both modes
@@ -169,7 +169,7 @@ Overall Progress: 12/16 (75%) 🎯
 
 ## 🎨 Label System
 
-LEO auto-creates these labels when using `--create-issues`:
+Ingvar auto-creates these labels when using `--create-issues`:
 
 | Label | Color | Description |
 |-------|-------|-------------|
@@ -193,8 +193,8 @@ LEO auto-creates these labels when using `--create-issues`:
 - **Total:** 949 lines
 
 **Commands Added:**
-- `leo tasks create <issue>` (with `--create-issues`, `--no-post`, `--no-tdd`)
-- `leo tasks status <issue>`
+- `ingvar tasks create <issue>` (with `--create-issues`, `--no-post`, `--no-tdd`)
+- `ingvar tasks status <issue>`
 
 **Modes Implemented:**
 - Mode 1: Simple checklist (default)
@@ -212,26 +212,26 @@ LEO auto-creates these labels when using `--create-issues`:
 
 ### Before Phase 2 Day 8-9:
 ```bash
-leo spec new "Add feature X"  # Create spec
-leo plan 42                   # Generate plan
+ingvar spec new "Add feature X"  # Create spec
+ingvar plan 42                   # Generate plan
 # ❌ No way to break down into actionable tasks
 ```
 
 ### After Phase 2 Day 8-9:
 ```bash
 # Solo Developer Workflow (Mode 1)
-leo spec new "Add feature X"  # Create spec
-leo plan 42                   # Generate plan
-leo tasks create 42           # ✅ Get checklist of 16 tasks
-leo tasks status 42           # ✅ Track progress
+ingvar spec new "Add feature X"  # Create spec
+ingvar plan 42                   # Generate plan
+ingvar tasks create 42           # ✅ Get checklist of 16 tasks
+ingvar tasks status 42           # ✅ Track progress
 
 # Team Workflow (Mode 2)
-leo spec new "Add feature Y"  # Create spec
-leo plan 50                   # Generate plan
-leo tasks create 50 --create-issues  # ✅ Create 16 child issues
+ingvar spec new "Add feature Y"  # Create spec
+ingvar plan 50                   # Generate plan
+ingvar tasks create 50 --create-issues  # ✅ Create 16 child issues
 # Assign tasks to team members via GitHub
 # Track progress on GitHub Projects board
-leo tasks status 50           # ✅ See overall completion
+ingvar tasks status 50           # ✅ See overall completion
 ```
 
 ---
@@ -257,7 +257,7 @@ leo tasks status 50           # ✅ See overall completion
 
 ## 🚧 Smart Dependency Detection
 
-LEO automatically infers task dependencies based on phase names and types:
+Ingvar automatically infers task dependencies based on phase names and types:
 
 **Foundation/Setup Phases:**
 - Type: **Parallel** (all tasks can run simultaneously)
@@ -287,7 +287,7 @@ LEO automatically infers task dependencies based on phase names and types:
 
 ## 🔗 Parent-Child Linking
 
-When using `--create-issues`, LEO automatically:
+When using `--create-issues`, Ingvar automatically:
 
 1. **Creates child issues** with:
    - Title: `[Phase N] Task name`
@@ -340,7 +340,7 @@ When using `--create-issues`, LEO automatically:
 ## 🔮 Next Steps (Phase 2 Days 10-11)
 
 **Implement Spec Evolution Tracking:**
-- `leo spec diff <issue>` - Show what changed in spec over time
+- `ingvar spec diff <issue>` - Show what changed in spec over time
 - Timeline view of spec modifications
 - Highlight additions/deletions
 - Track requirement changes

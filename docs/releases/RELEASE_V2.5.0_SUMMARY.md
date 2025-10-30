@@ -1,20 +1,20 @@
 # 🎉 v2.5.0 Release Summary
 
 **Release Date:** October 19, 2025
-**Package:** leo-workflow-kit@2.5.0
+**Package:** ingvar-kit@2.5.0
 **Status:** ✅ Published and Live
 
 ## 📦 Published Locations
 
-- **npm Registry:** https://www.npmjs.com/package/leo-workflow-kit
-- **GitHub Release:** https://github.com/leonpagotto/leo-kit/releases/tag/v2.5.0
-- **Repository:** https://github.com/leonpagotto/leo-kit
+- **npm Registry:** https://www.npmjs.com/package/ingvar-kit
+- **GitHub Release:** https://github.com/leopagotto/ingvar-kit/releases/tag/v2.5.0
+- **Repository:** https://github.com/leopagotto/ingvar-kit
 
 ## 🚀 Major Features
 
 ### 1. Automatic Initialization
 
-- **One-command setup:** `LEO_AUTO_INIT=true npm install leo-workflow-kit`
+- **One-command setup:** `Ingvar_AUTO_INIT=true npm install ingvar-kit`
 - Zero configuration required
 - Perfect for CI/CD pipelines
 - Setup time: < 30 seconds (vs 5 minutes manual)
@@ -85,10 +85,10 @@
 
 ## 🔗 Quick Links
 
-- **Installation Guide:** https://github.com/leonpagotto/leo-kit/wiki/Installation-Guide
-- **Full Changelog:** https://github.com/leonpagotto/leo-kit/blob/main/CHANGELOG.md
-- **Issue Tracker:** https://github.com/leonpagotto/leo-kit/issues
-- **Wiki:** https://github.com/leonpagotto/leo-kit/wiki
+- **Installation Guide:** https://github.com/leopagotto/ingvar-kit/wiki/Installation-Guide
+- **Full Changelog:** https://github.com/leopagotto/ingvar-kit/blob/main/CHANGELOG.md
+- **Issue Tracker:** https://github.com/leopagotto/ingvar-kit/issues
+- **Wiki:** https://github.com/leopagotto/ingvar-kit/wiki
 
 ## 🎯 Next Steps
 
@@ -112,8 +112,8 @@
 
 - [ ] Extract sections from template into separate files
 - [ ] Create 15 section files in `lib/copilot-instructions/sections/`
-- [ ] Implement project type selection in `leo init`
-- [ ] Add `leo config` command
+- [ ] Implement project type selection in `ingvar init`
+- [ ] Add `ingvar config` command
 - [ ] Test each project type thoroughly
 - [ ] Document smart instructions in detail
 
@@ -122,20 +122,20 @@
 ### Automatic (Recommended)
 
 ```bash
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+Ingvar_AUTO_INIT=true npm install ingvar-kit
 ```
 
 ### Global Installation
 
 ```bash
-npm install -g leo-workflow-kit
-leo init
+npm install -g ingvar-kit
+ingvar init
 ```
 
 ### npx (One-Time)
 
 ```bash
-npx leo-workflow-kit init
+npx ingvar-kit init
 ```
 
 ## 🙏 Acknowledgments

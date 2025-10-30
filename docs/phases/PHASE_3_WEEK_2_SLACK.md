@@ -64,7 +64,7 @@ For detailed completion report, see: [`PHASE_3_WEEK_2_COMPLETION.md`](./PHASE_3_
 ### Slack Integration Flow
 
 ```
-User runs: leo team setupSlack
+User runs: ingvar team setupSlack
     ↓
 Start OAuth flow (slack-auth.js)
     ↓
@@ -80,7 +80,7 @@ Exchange for token (slack-auth.js)
     ├─ Validate scopes
     └─ Save tokens securely
     ↓
-Hunt created: leo hunt start
+Hunt created: ingvar hunt start
     ↓
 Send notification (slack-integration.js)
     ├─ Message: "🦁 New Hunt: {name}"
@@ -88,7 +88,7 @@ Send notification (slack-integration.js)
     ├─ Channel: #hunts or configured
     └─ Thread: Ongoing discussion thread
     ↓
-Hunt transitions: leo hunt nextPhase
+Hunt transitions: ingvar hunt nextPhase
     ↓
 Send phase update
     ├─ Message: "🔄 {hunt} moved to {phase}"
@@ -96,7 +96,7 @@ Send phase update
     ├─ Next: Upcoming phases
     └─ Duration: Time in current phase
     ↓
-Hunt completes: leo hunt complete
+Hunt completes: ingvar hunt complete
     ↓
 Send completion alert
     ├─ Message: "✅ {hunt} completed!"
@@ -475,7 +475,7 @@ Topics:
 
 ```javascript
 // When hunt created with GitHub:
-leo hunt start
+ingvar hunt start
   ↓
 1. Creates GitHub issue #42
 2. Sends Slack notification with GitHub link
@@ -574,9 +574,9 @@ After Week 2 completion:
 
 **By end of Week 2, users will be able to**:
 
-1. ✅ Run `leo team setupSlack` and authorize app
-2. ✅ Create hunts with `leo hunt start` → automatic Slack notification
-3. ✅ Run `leo hunt nextPhase` → automatic Slack status update
+1. ✅ Run `ingvar team setupSlack` and authorize app
+2. ✅ Create hunts with `ingvar hunt start` → automatic Slack notification
+3. ✅ Run `ingvar hunt nextPhase` → automatic Slack status update
 4. ✅ See all hunts on Slack channel with full details
 5. ✅ Have GitHub + Slack fully integrated
 

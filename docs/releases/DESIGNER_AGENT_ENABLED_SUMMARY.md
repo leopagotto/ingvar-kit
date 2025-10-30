@@ -166,7 +166,7 @@ User Request → Orchestrator → 🎨 Designer Agent → 💻 Frontend Agent �
 
 ## 📁 Files Changed
 
-### 1. `.leorc.json`
+### 1. `.ingvarrc.json`
 
 - ✅ Added `designer` agent with `priority: 1`
 - ✅ Added priorities to all agents
@@ -311,7 +311,7 @@ User: "Add a login button"
 With the Designer agent, you'll now see:
 
 ```
-⊘ LEO Ready
+⊘ Ingvar Ready
   ↓ (user requests "Add login button")
 ↻ 🎯 orchestrator → GPT-4T
   ↓
@@ -340,7 +340,7 @@ With the Designer agent, you'll now see:
 ### 1. Check Designer Agent Enabled
 
 ```bash
-cat .leorc.json | jq '.agents.designer'
+cat .ingvarrc.json | jq '.agents.designer'
 ```
 
 **Expected output:**
@@ -400,7 +400,7 @@ After v5.3.0 release:
 
 ```bash
 # Install latest version
-npm install -g leo-workflow-kit@5.3.0
+npm install -g ingvar-kit@5.3.0
 
 # Restart VS Code to see new agent mode
 # (Designer will appear in status bar)

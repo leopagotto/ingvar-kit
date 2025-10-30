@@ -1,11 +1,11 @@
-# `.leorc.json` Configuration Guide
+# `.ingvarrc.json` Configuration Guide
 
-The `.leorc.json` file configures LEO Workflow Kit for your project. This file is automatically created by `leo init` and can be manually edited.
+The `.ingvarrc.json` file configures Ingvar Kit for your project. This file is automatically created by `ingvar init` and can be manually edited.
 
 ## File Location
 
 ```
-.leorc.json  # Project root directory
+.ingvarrc.json  # Project root directory
 ```
 
 ## Complete Configuration Example
@@ -78,13 +78,13 @@ The `.leorc.json` file configures LEO Workflow Kit for your project. This file i
 
 ```bash
 # Disable auto-resolve
-leo config set auto-resolve false
+ingvar config set auto-resolve false
 
 # Enable auto-resolve
-leo config set auto-resolve true
+ingvar config set auto-resolve true
 
 # Check current setting
-leo config get auto-resolve
+ingvar config get auto-resolve
 ```
 
 ---
@@ -152,7 +152,7 @@ gh project list --owner YOUR_ORG
 
 # Output shows:
 # NUMBER  TITLE            STATE  URL
-# 1       LEO Workflow     OPEN   https://github.com/orgs/YOUR_ORG/projects/1
+# 1       Ingvar Workflow     OPEN   https://github.com/orgs/YOUR_ORG/projects/1
 ```
 
 ---
@@ -191,16 +191,16 @@ gh project list --owner YOUR_ORG
 
 ```bash
 # List configured AIs
-leo ai list
+ingvar ai list
 
 # Add AI assistant
-leo ai add cursor
+ingvar ai add cursor
 
 # Remove AI assistant
-leo ai remove cursor
+ingvar ai remove cursor
 
 # Regenerate all instruction files
-leo ai sync
+ingvar ai sync
 ```
 
 ---
@@ -413,19 +413,19 @@ Specialized in technical writing, API documentation, and user guides.
 
 ```bash
 # List enabled agents
-leo agent list
+ingvar agent list
 
 # Enable an agent
-leo agent add frontend
+ingvar agent add frontend
 
 # Disable an agent (except orchestrator)
-leo agent remove devops
+ingvar agent remove devops
 
 # Get agent info
-leo agent info backend
+ingvar agent info backend
 
 # Regenerate all agent instruction files
-leo agent sync
+ingvar agent sync
 ```
 
 #### Recommended Agents by Project Type
@@ -591,36 +591,36 @@ Execution:
 
 ```bash
 # Set auto-resolve
-leo config set auto-resolve false
+ingvar config set auto-resolve false
 
 # Set project type
-leo config set project-type frontend
+ingvar config set project-type frontend
 
 # Set GitHub org
-leo config set github.org your-org-name
+ingvar config set github.org your-org-name
 
 # Set deployment platform
-leo config set deployment.platform railway
+ingvar config set deployment.platform railway
 ```
 
 ### Get Configuration Value
 
 ```bash
 # Get auto-resolve
-leo config get auto-resolve
+ingvar config get auto-resolve
 
 # Get all config
-leo config get
+ingvar config get
 ```
 
 ### Delete Configuration Value
 
 ```bash
 # Delete deployment config
-leo config delete deployment
+ingvar config delete deployment
 
 # Reset to defaults
-leo config reset
+ingvar config reset
 ```
 
 ---
@@ -632,7 +632,7 @@ leo config reset
 You can create environment-specific files (not yet implemented, proposed):
 
 ```
-.leorc.json              # Default config
+.ingvarrc.json              # Default config
 .leorc.development.json  # Development overrides
 .leorc.production.json   # Production overrides
 ```
@@ -641,8 +641,8 @@ You can create environment-specific files (not yet implemented, proposed):
 
 ```bash
 # Override auto-resolve via env var
-export LEO_AUTO_RESOLVE=false
-leo init
+export Ingvar_AUTO_RESOLVE=false
+ingvar init
 ```
 
 ---
@@ -653,7 +653,7 @@ leo init
 
 Create a template for your organization:
 
-**`.leorc.json` (organization template):**
+**`.ingvarrc.json` (organization template):**
 
 ```json
 {
@@ -684,7 +684,7 @@ Create a template for your organization:
 ```bash
 # Add to .github/leo-config-template.json in your organization
 # Team members can copy during setup
-cp .github/leo-config-template.json .leorc.json
+cp .github/leo-config-template.json .ingvarrc.json
 ```
 
 ---
@@ -722,8 +722,8 @@ cp .github/leo-config-template.json .leorc.json
 **Automatic migration:**
 
 ```bash
-# LEO Kit will automatically migrate on first run
-leo status  # Triggers migration if needed
+# Ingvar Kit will automatically migrate on first run
+ingvar status  # Triggers migration if needed
 ```
 
 ---
@@ -735,13 +735,13 @@ leo status  # Triggers migration if needed
 **Check file exists:**
 
 ```bash
-ls -la .leorc.json
+ls -la .ingvarrc.json
 ```
 
 **Check JSON is valid:**
 
 ```bash
-cat .leorc.json | jq .
+cat .ingvarrc.json | jq .
 # If error, JSON is malformed
 ```
 
@@ -749,10 +749,10 @@ cat .leorc.json | jq .
 
 ```bash
 # Backup current config
-mv .leorc.json .leorc.json.backup
+mv .ingvarrc.json .ingvarrc.json.backup
 
 # Re-run init
-leo init
+ingvar init
 ```
 
 ### AI instructions not updating
@@ -760,13 +760,13 @@ leo init
 **Manually sync:**
 
 ```bash
-leo ai sync
+ingvar ai sync
 ```
 
 **Check sync-on-update:**
 
 ```bash
-leo config get ai-assistants.sync-on-update
+ingvar config get ai-assistants.sync-on-update
 # Should return: true
 ```
 
@@ -775,7 +775,7 @@ leo config get ai-assistants.sync-on-update
 **Verify project config:**
 
 ```bash
-leo config get github.project
+ingvar config get github.project
 ```
 
 **Test project connection:**
@@ -788,13 +788,13 @@ gh project view YOUR_PROJECT_NUMBER --owner YOUR_ORG
 
 ## Best Practices
 
-### 1. Commit `.leorc.json` to Git
+### 1. Commit `.ingvarrc.json` to Git
 
 **DO commit:**
 
 ```bash
-git add .leorc.json
-git commit -m "chore: add LEO workflow configuration"
+git add .ingvarrc.json
+git commit -m "chore: add Ingvar workflow configuration"
 ```
 
 **Why:** Ensures consistent workflow across team
@@ -854,7 +854,7 @@ RAILWAY_TOKEN=secret123
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "LEO Workflow Kit Configuration",
+  "title": "Ingvar Kit Configuration",
   "type": "object",
   "properties": {
     "auto-resolve": {
@@ -960,4 +960,4 @@ RAILWAY_TOKEN=secret123
 
 ---
 
-**Need help?** Run `leo status` to check your configuration!
+**Need help?** Run `ingvar status` to check your configuration!

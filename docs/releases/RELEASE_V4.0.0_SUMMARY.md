@@ -1,4 +1,4 @@
-# LEO Workflow Kit v4.0.0 - Release Summary
+# Ingvar Kit v4.0.0 - Release Summary
 
 > **Release Date**: 2025-10-20
 > **Major Version**: Multi-Agent Orchestration System
@@ -8,7 +8,7 @@
 
 ## 🎉 Major Announcement
 
-**LEO Workflow Kit v4.0.0** introduces a revolutionary **Multi-Agent Orchestration System** that transforms how AI assistants help you code. Instead of a single generic AI, you now get **specialized domain experts** that automatically route and coordinate based on your task type.
+**Ingvar Kit v4.0.0** introduces a revolutionary **Multi-Agent Orchestration System** that transforms how AI assistants help you code. Instead of a single generic AI, you now get **specialized domain experts** that automatically route and coordinate based on your task type.
 
 ---
 
@@ -43,7 +43,7 @@
 - Identifies task type (frontend, backend, DevOps, testing, docs)
 - Routes to appropriate specialist(s)
 - Coordinates multi-agent tasks
-- Enforces LEO workflow rules
+- Enforces Ingvar workflow rules
 
 ---
 
@@ -127,25 +127,25 @@
 
 ---
 
-## ⚡ New `leo agent` Command
+## ⚡ New `ingvar agent` Command
 
 Complete CLI for managing agents:
 
 ```bash
 # List all agents and their status
-leo agent list
+ingvar agent list
 
 # Enable a specialized agent
-leo agent enable frontend
+ingvar agent enable frontend
 
 # Disable an agent
-leo agent disable devops
+ingvar agent disable devops
 
 # Show detailed agent information
-leo agent info backend
+ingvar agent info backend
 
 # Regenerate AI instruction files
-leo agent sync
+ingvar agent sync
 ```
 
 ---
@@ -267,7 +267,7 @@ Orchestrator:
 3. **`lib/ai-instructions/adapters/cline-adapter.js`** - Flexible validation
 4. **`lib/ai-instructions/adapters/codeium-adapter.js`** - Flexible validation
 5. **`lib/commands/init.js`** - Agent selection prompts
-6. **`bin/cli.js`** - Added `leo agent` command
+6. **`bin/cli.js`** - Added `ingvar agent` command
 7. **`README.md`** - v4.0.0 announcement
 8. **`CHANGELOG.md`** - Comprehensive v4.0.0 entry
 9. **`package.json`** - Version 4.0.0
@@ -278,22 +278,22 @@ Orchestrator:
 
 ### For Existing Users (v3.x → v4.0.0)
 
-**Step 1**: Update LEO
+**Step 1**: Update Ingvar
 
 ```bash
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-kit@latest
 ```
 
 **Step 2**: Backup config
 
 ```bash
-cp .leorc.json .leorc.json.backup
+cp .ingvarrc.json .ingvarrc.json.backup
 ```
 
 **Step 3**: Re-initialize with agents
 
 ```bash
-leo init
+ingvar init
 ```
 
 Select agents when prompted.
@@ -301,7 +301,7 @@ Select agents when prompted.
 **Step 4**: Sync AI files
 
 ```bash
-leo agent sync
+ingvar agent sync
 ```
 
 **Step 5**: Restart AI assistant
@@ -321,13 +321,13 @@ leo agent sync
 
 **Impact**: Custom edits to `.github/copilot-instructions.md` will be overwritten
 
-**Solution**: Back up custom changes before running `leo agent sync`
+**Solution**: Back up custom changes before running `ingvar agent sync`
 
 ---
 
 ### 2. Configuration Schema
 
-**Added**: New `agents` section in `.leorc.json`
+**Added**: New `agents` section in `.ingvarrc.json`
 
 **Example**:
 
@@ -352,7 +352,7 @@ leo agent sync
 
 **Mostly Backward Compatible**:
 
-- ✅ Existing `.leorc.json` files work
+- ✅ Existing `.ingvarrc.json` files work
 - ✅ GitHub Projects integration unchanged
 - ✅ Issue templates and labels unchanged
 - ✅ CLI commands compatible
@@ -365,7 +365,7 @@ leo agent sync
 ### Automated Tests
 
 - ✅ 6/6 CLI tests passed (100%)
-- ✅ All `leo agent` commands tested
+- ✅ All `ingvar agent` commands tested
 - ✅ Configuration persistence verified
 - ✅ No blocking bugs found
 
@@ -517,7 +517,7 @@ leo agent sync
 
 ## 🙏 Acknowledgments
 
-Thank you to all LEO Workflow Kit users for your feedback and support. The multi-agent system architecture was inspired by real-world usage patterns and developer needs.
+Thank you to all Ingvar Kit users for your feedback and support. The multi-agent system architecture was inspired by real-world usage patterns and developer needs.
 
 Special thanks to the AI community for advancing the field of AI-assisted development.
 
@@ -529,10 +529,10 @@ Special thanks to the AI community for advancing the field of AI-assisted develo
 
 ```bash
 # Install
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 
 # Initialize project with agent selection
-leo init
+ingvar init
 
 # Start coding - AI will route tasks automatically!
 ```
@@ -541,13 +541,13 @@ leo init
 
 ```bash
 # Update to v4.0.0
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-kit@latest
 
 # Re-initialize to enable agents
-leo init
+ingvar init
 
 # Sync AI files
-leo agent sync
+ingvar agent sync
 
 # Restart your AI assistant
 ```
@@ -556,16 +556,16 @@ leo agent sync
 
 ## 📞 Support
 
-- **Documentation**: [GitHub Wiki](https://github.com/leonpagotto/leo-kit/wiki)
-- **Issues**: [GitHub Issues](https://github.com/leonpagotto/leo-kit/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/leonpagotto/leo-kit/discussions)
+- **Documentation**: [GitHub Wiki](https://github.com/leopagotto/ingvar-kit/wiki)
+- **Issues**: [GitHub Issues](https://github.com/leopagotto/ingvar-kit/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/leopagotto/ingvar-kit/discussions)
 - **Multi-Agent Guide**: [docs/guides/multi-agent-system.md](docs/guides/multi-agent-system.md)
 
 ---
 
 ## 🎉 Conclusion
 
-LEO Workflow Kit v4.0.0 represents a **fundamental transformation** in how AI assistants help you code. By introducing specialized agents with domain expertise and intelligent routing, we're delivering:
+Ingvar Kit v4.0.0 represents a **fundamental transformation** in how AI assistants help you code. By introducing specialized agents with domain expertise and intelligent routing, we're delivering:
 
 - ✅ **Higher quality** code from domain specialists
 - ✅ **Faster responses** with smaller instruction sets
@@ -583,4 +583,4 @@ LEO Workflow Kit v4.0.0 represents a **fundamental transformation** in how AI as
 **Breaking Changes**: Yes (AI file structure, see migration guide)
 **Backward Compatible**: Mostly (v3.x configs work)
 
-**🎯 Upgrade now**: `npm install -g leo-workflow-kit@latest`
+**🎯 Upgrade now**: `npm install -g ingvar-kit@latest`

@@ -58,7 +58,7 @@
 **Zero Manual HTML/CSS Required**
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 # Output:
 # ✅ Generated 10 files
 # ✅ Ready to develop
@@ -115,7 +115,7 @@ leo plugin create my-dashboard --template=web
 ### Create Plugin (< 1 second)
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 ```
 
 ### Setup (< 30 seconds)
@@ -185,7 +185,7 @@ my-dashboard/
 
 ### The Generator Pattern
 
-1. **Input:** `leo plugin create my-dashboard --template=web`
+1. **Input:** `ingvar plugin create my-dashboard --template=web`
 2. **Processing:**
    - Parse command options
    - Route to WebPluginGenerator
@@ -263,13 +263,13 @@ my-dashboard/
 
 ## 🔗 Integration Points
 
-### With LEO CLI
+### With Ingvar CLI
 
 ```bash
-leo plugin create my-dashboard --template=web
-leo plugin list
-leo plugin start my-dashboard
-leo dashboard start
+ingvar plugin create my-dashboard --template=web
+ingvar plugin list
+ingvar plugin start my-dashboard
+ingvar dashboard start
 ```
 
 ### With API Server
@@ -313,7 +313,7 @@ export class WebDashboardPlugin extends PluginInterface {
 - ✅ Clear examples
 - ✅ Fast iteration
 
-### For LEO
+### For Ingvar
 
 - ✅ Professional plugin ecosystem
 - ✅ Lower barrier to entry
@@ -372,7 +372,7 @@ Target Release: November 21, 2025 ✅ ON TRACK
 Any developer can now create a professional, production-ready web dashboard with:
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 cd my-dashboard
 npm install && npm run dev
 ```

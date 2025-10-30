@@ -95,7 +95,7 @@
 
 ```bash
 # Already installed - just use:
-leo team init
+ingvar team init
 ```
 
 ### Team Workflows
@@ -103,7 +103,7 @@ leo team init
 **Solo Developer**
 
 ```bash
-leo team init
+ingvar team init
 # Select: Solo (1 person)
 # Workflow: Requirements → (Spec + Impl) → (Test + Deploy)
 ```
@@ -111,7 +111,7 @@ leo team init
 **Small Team (2-3 people)**
 
 ```bash
-leo team init
+ingvar team init
 # Select: Duo or Trio
 # Add members dynamically
 # Workflow auto-adapts
@@ -120,7 +120,7 @@ leo team init
 **Full Team (4 people)**
 
 ```bash
-leo team init
+ingvar team init
 # Select: Pack
 # Add 4 members
 # 5-column specialized pipeline
@@ -130,19 +130,19 @@ leo team init
 
 ```bash
 # Start a hunt
-leo hunt start "Feature Name"
+ingvar hunt start "Feature Name"
 
 # Check progress
-leo hunt status <hunt-id>
+ingvar hunt status <hunt-id>
 
 # Move to next phase
-leo hunt nextPhase <hunt-id>
+ingvar hunt nextPhase <hunt-id>
 
 # View team analytics
-leo hunt analytics
+ingvar hunt analytics
 
 # Complete hunt
-leo hunt complete <hunt-id>
+ingvar hunt complete <hunt-id>
 ```
 
 ---
@@ -225,7 +225,7 @@ LionPack (Team Orchestration)
 ### Adding a Team Member
 
 ```bash
-leo team add
+ingvar team add
 # Follow interactive prompts
 # Enter name, role, title
 # Workflow auto-adapts
@@ -234,7 +234,7 @@ leo team add
 ### Starting a New Feature Hunt
 
 ```bash
-leo hunt start
+ingvar hunt start
 # Enter feature name
 # Enter description
 # Optional: Create GitHub issues
@@ -244,7 +244,7 @@ leo hunt start
 ### Checking Hunt Progress
 
 ```bash
-leo hunt status <hunt-id>
+ingvar hunt status <hunt-id>
 # Shows current phase
 # Timeline visualization
 # Team member assignments
@@ -253,7 +253,7 @@ leo hunt status <hunt-id>
 ### Viewing Team Metrics
 
 ```bash
-leo hunt analytics
+ingvar hunt analytics
 # Velocity metrics
 # Phase timings
 # Bottleneck identification
@@ -338,9 +338,9 @@ git log --oneline -10
 ### For Users
 
 1. Start: `/docs/LIONPACK_CLI_GUIDE.md`
-2. Try: `leo team init`
-3. Create: `leo hunt start`
-4. Track: `leo hunt status`
+2. Try: `ingvar team init`
+3. Create: `ingvar hunt start`
+4. Track: `ingvar hunt status`
 
 ### For Project Managers
 
@@ -419,10 +419,10 @@ git log --oneline -10
 ### For Users
 
 - [ ] Read CLI guide (`/docs/LIONPACK_CLI_GUIDE.md`)
-- [ ] Run `leo team init`
-- [ ] Create a hunt with `leo hunt start`
-- [ ] Check progress with `leo hunt status`
-- [ ] View analytics with `leo hunt analytics`
+- [ ] Run `ingvar team init`
+- [ ] Create a hunt with `ingvar hunt start`
+- [ ] Check progress with `ingvar hunt status`
+- [ ] View analytics with `ingvar hunt analytics`
 
 ### For Developers
 
@@ -447,7 +447,7 @@ git log --oneline -10
 ### If You Want to Use LionPack Now
 
 1. Read `/docs/LIONPACK_CLI_GUIDE.md` (10 min)
-2. Run `leo team init` (5 min)
+2. Run `ingvar team init` (5 min)
 3. Create your first hunt (5 min)
 4. Track progress with commands (ongoing)
 

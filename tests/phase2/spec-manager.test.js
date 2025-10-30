@@ -124,7 +124,7 @@ describe('SpecManager - GitHub Issue Specs', () => {
       expect(body).toContain('## Requirements');
       expect(body).toContain('- [ ] Requirement 1');
       expect(body).toContain('## Acceptance Criteria');
-      expect(body).toContain('_This spec was created using `leo spec new`_');
+      expect(body).toContain('_This spec was created using `ingvar spec new`_');
     });
 
     test('should include footer with next steps', () => {
@@ -134,8 +134,8 @@ describe('SpecManager - GitHub Issue Specs', () => {
 
       const body = manager._formatIssueBody(specContent);
 
-      expect(body).toContain('leo clarify');
-      expect(body).toContain('leo plan');
+      expect(body).toContain('ingvar clarify');
+      expect(body).toContain('ingvar plan');
     });
   });
 

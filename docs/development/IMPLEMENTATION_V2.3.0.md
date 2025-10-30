@@ -214,7 +214,7 @@ User: "We need to add dark mode"
 ✅ Commit: fe5d690 (main feature implementation)
 ✅ Commit: ecb1024 (documentation updates)
 ✅ Pushed to: main branch
-✅ Repository: leonpagotto/leo-kit
+✅ Repository: leopagotto/ingvar-kit
 ```
 
 ### Next Steps for User
@@ -282,7 +282,7 @@ User: "We need to add dark mode"
 
 ### v2.4.0 Candidates
 
-- [ ] Auto-create project if none exists during `leo init`
+- [ ] Auto-create project if none exists during `ingvar init`
 - [ ] Support custom status field names (not just "Status")
 - [ ] Multiple project support (add to multiple boards)
 - [ ] Milestone integration

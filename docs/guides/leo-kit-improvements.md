@@ -1,8 +1,8 @@
-# LEO Kit Improvements - Based on CRM Deployment Experience
+# Ingvar Kit Improvements - Based on CRM Deployment Experience
 
 > **Created:** 2025-10-19
 > **Context:** Twenty CRM Railway deployment (Issue #7)
-> **Purpose:** Document improvements needed in LEO Kit for better client deployments
+> **Purpose:** Document improvements needed in Ingvar Kit for better client deployments
 
 ---
 
@@ -16,7 +16,7 @@
 - AI started working immediately WITHOUT creating a GitHub issue first
 - Issue #7 was created retroactively after ~8 commits
 
-**LEO Kit Standard:**
+**Ingvar Kit Standard:**
 
 ```markdown
 EVERY TIME the user describes work, you MUST create a GitHub issue IMMEDIATELY.
@@ -26,7 +26,7 @@ NO EXCEPTIONS. NO "LET ME KNOW IF YOU WANT ME TO". JUST DO IT.
 **What should have happened:**
 
 1. User: "i got this: {404 error}" → Deploy frontend
-2. AI: Check `.leorc.json` for auto-resolve setting
+2. AI: Check `.ingvarrc.json` for auto-resolve setting
 3. AI: Create Issue #7 immediately with deployment plan
 4. AI: Comment on issue: "🚀 Starting work on this issue..."
 5. AI: Update status to "In Progress"
@@ -47,7 +47,7 @@ NO EXCEPTIONS. NO "LET ME KNOW IF YOU WANT ME TO". JUST DO IT.
 - Started working without updating issue status to "In Progress"
 - No initial comment on issue announcing work started
 
-**LEO Kit Standard:**
+**Ingvar Kit Standard:**
 
 ```bash
 # IMMEDIATELY when starting work:
@@ -71,7 +71,7 @@ gh issue comment ISSUE_NUMBER --body "🚀 Starting work on this issue..."
 - Missing files: `yarn.lock`, `.yarn/patches/`, `.yarn/releases/`
 - Required multiple iterations to discover dependencies
 
-**What should have been in LEO Kit:**
+**What should have been in Ingvar Kit:**
 
 - **Monorepo deployment checklist**
 - **Railway subdirectory build patterns**
@@ -167,7 +167,7 @@ When Railway builds from a subdirectory, you need:
 **What happened:**
 
 - Some commit messages triggered pipeline delays
-- LEO Kit standards warn about this but not strictly enforced
+- Ingvar Kit standards warn about this but not strictly enforced
 
 **Current standard:**
 
@@ -185,7 +185,7 @@ When Railway builds from a subdirectory, you need:
 
 ---
 
-## 📋 Recommended LEO Kit Enhancements
+## 📋 Recommended Ingvar Kit Enhancements
 
 ### 1. **Deployment Workflow Module**
 
@@ -267,12 +267,12 @@ Create `.github/templates/railway-deployment-checklist.md`:
 
 **Missing from this project:**
 
-- No `.leorc.json` file in repository
+- No `.ingvarrc.json` file in repository
 - Auto-resolve defaulted to `true` (work started immediately)
 
-**Recommendation for LEO Kit:**
+**Recommendation for Ingvar Kit:**
 
-Create `.leorc.json` template:
+Create `.ingvarrc.json` template:
 
 ```json
 {
@@ -370,7 +370,7 @@ assignees: ''
 
 **BEFORE deploying anything:**
 
-1. **Check for `.leorc.json`** in project root
+1. **Check for `.ingvarrc.json`** in project root
 
    - If missing, assume `auto-resolve: true`
    - Read platform and service configuration
@@ -421,7 +421,7 @@ assignees: ''
 2. ✅ Add deployment workflow documentation
 3. ✅ Create monorepo deployment patterns guide
 4. ✅ Add Railway-specific templates and checklists
-5. ✅ Create `.leorc.json` template and documentation
+5. ✅ Create `.ingvarrc.json` template and documentation
 
 ### Medium Priority
 6. Create git hooks for commit message length
@@ -438,15 +438,15 @@ assignees: ''
 
 ---
 
-## 📝 Action Items for LEO Kit Repository
+## 📝 Action Items for Ingvar Kit Repository
 
-**For leo-workflow-kit maintainers:**
+**For ingvar-kit maintainers:**
 
 1. **Create new documentation:**
    - `docs/workflows/deployment-workflow.md`
    - `docs/setup/monorepo-deployment-patterns.md`
    - `docs/templates/railway-deployment-checklist.md`
-   - `docs/templates/.leorc.json`
+   - `docs/templates/.ingvarrc.json`
 
 2. **Update existing documentation:**
    - Enhance `.github/copilot-instructions.md` with deployment section
@@ -483,7 +483,7 @@ assignees: ''
 ### Key Takeaway
 **"Spec-First for Complex Work, Issue-Always for Any Work"**
 
-Even though the deployment succeeded, following LEO Kit standards would have:
+Even though the deployment succeeded, following Ingvar Kit standards would have:
 - Created clear tracking from the start
 - Reduced iteration cycles through upfront analysis
 - Provided better documentation for future deployments
@@ -495,15 +495,15 @@ Even though the deployment succeeded, following LEO Kit standards would have:
 
 - Issue #7: https://github.com/osp-group/crm/issues/7
 - OSP Project Board: https://github.com/orgs/osp-group/projects/1
-- LEO Kit Repository: [link needed]
+- Ingvar Kit Repository: [link needed]
 - Railway Documentation: https://docs.railway.app
 
 ---
 
 **Next Steps:**
-1. Review this document with LEO Kit team
+1. Review this document with Ingvar Kit team
 2. Prioritize improvements
-3. Create issues in LEO Kit repository for each enhancement
+3. Create issues in Ingvar Kit repository for each enhancement
 4. Test new workflows with next client deployment
-5. Update LEO Kit templates and documentation
+5. Update Ingvar Kit templates and documentation
 ```

@@ -25,7 +25,7 @@ Transform LionPack from isolated team orchestration system into an integrated pl
 1. ✅ GitHub API integration (create boards, manage issues)
 2. ✅ Slack integration (notifications, alerts)
 3. ✅ Web dashboard (real-time visualization)
-4. ✅ CLI command wiring (leo team/hunt subcommands)
+4. ✅ CLI command wiring (ingvar team/hunt subcommands)
 5. ✅ End-to-end testing (integration tests)
 6. ✅ User documentation (guides, examples)
 
@@ -68,12 +68,12 @@ Transform LionPack from isolated team orchestration system into an integrated pl
 
 **CLI Foundation**
 
-- ✅ `leo team init` - Team setup
-- ✅ `leo team add` - Add members
-- ✅ `leo team list` - Show composition
-- ✅ `leo hunt start` - Begin hunt
-- ✅ `leo hunt status` - Check progress
-- ✅ `leo hunt analytics` - View metrics
+- ✅ `ingvar team init` - Team setup
+- ✅ `ingvar team add` - Add members
+- ✅ `ingvar team list` - Show composition
+- ✅ `ingvar hunt start` - Begin hunt
+- ✅ `ingvar hunt status` - Check progress
+- ✅ `ingvar hunt analytics` - View metrics
 
 ---
 
@@ -129,14 +129,14 @@ Phase 3 Additions
 ### Integration Points
 
 ```
-leo CLI
-├── leo team (existing)
+ingvar CLI
+├── ingvar team (existing)
 │   ├── init → Phase 2 ✅
 │   ├── add → Phase 2 ✅
 │   ├── list → Phase 2 ✅
 │   └── setupBoard → Phase 2 ✅
 │
-├── leo hunt (existing)
+├── ingvar hunt (existing)
 │   ├── start → Phase 2 ✅
 │   ├── status → Phase 2 ✅
 │   ├── list → Phase 2 ✅
@@ -144,17 +144,17 @@ leo CLI
 │   ├── complete → Phase 2 ✅
 │   └── analytics → Phase 2 ✅
 │
-├── leo github (NEW - Phase 3)
+├── ingvar github (NEW - Phase 3)
 │   ├── connect - Connect to GitHub
 │   ├── sync - Sync boards
 │   └── status - Check GitHub status
 │
-├── leo slack (NEW - Phase 3)
+├── ingvar slack (NEW - Phase 3)
 │   ├── connect - Connect to Slack
 │   ├── test - Send test notification
 │   └── config - Slack configuration
 │
-└── leo dashboard (NEW - Phase 3)
+└── ingvar dashboard (NEW - Phase 3)
     ├── start - Start web dashboard
     └── config - Dashboard settings
 ```
@@ -454,7 +454,7 @@ leo CLI
 - ✅ Slack notifications on all hunt events
 - ✅ Dashboard displays real-time team status
 - ✅ Analytics visible in dashboard
-- ✅ All commands wired to leo CLI
+- ✅ All commands wired to ingvar CLI
 
 ### Quality
 
@@ -634,10 +634,10 @@ Phase 3 can begin immediately.
 1. **Setup Phase** (5 minutes)
 
    ```bash
-   leo team init
-   leo github connect
-   leo slack connect
-   leo dashboard start
+   ingvar team init
+   ingvar github connect
+   ingvar slack connect
+   ingvar dashboard start
    ```
 
 2. **Working Phase**

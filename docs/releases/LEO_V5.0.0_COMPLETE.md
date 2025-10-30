@@ -1,4 +1,4 @@
-# 🎉 LEO Kit v5.0.0 - Completion Summary
+# 🎉 Ingvar Kit v5.0.0 - Completion Summary
 
 **Date:** October 25, 2025
 **Status:** ✅ **COMPLETE & READY FOR DEPLOYMENT**
@@ -8,7 +8,7 @@
 
 ## 🎯 What We Accomplished
 
-We successfully improved the LEO Kit installation experience by enabling all 6 specialized agents by default and making the UI more intuitive. Users now experience a "keep these enabled" flow instead of "select what you want" - much more natural for new users.
+We successfully improved the Ingvar Kit installation experience by enabling all 6 specialized agents by default and making the UI more intuitive. Users now experience a "keep these enabled" flow instead of "select what you want" - much more natural for new users.
 
 ### Before vs After
 
@@ -50,7 +50,7 @@ We successfully improved the LEO Kit installation experience by enabling all 6 s
 
    - Added Multi-Agent Configuration section (120+ lines)
    - Included table showing all agents and enabled-by-default status
-   - Added customization instructions (interactive and .leorc.json)
+   - Added customization instructions (interactive and .ingvarrc.json)
    - Provided examples of how tasks route to different agents
 
 5. **`README.md`**
@@ -192,7 +192,7 @@ d5cbdf1 - docs: update README for v5.0.0 - agents enabled by default
 ### Quick Deploy (5-10 minutes)
 
 ```bash
-cd /Users/leo.de.souza1/leo-workflow-kit
+cd /Users/leo.de.souza1/ingvar-kit
 
 # 1. Tag the release
 git tag v5.0.0 -m "feat: enable all agents by default in v5.0.0"
@@ -202,12 +202,12 @@ git push origin v5.0.0
 npm publish
 
 # 3. Verify
-npm view leo-workflow-kit version  # Should show: 5.0.0
+npm view ingvar-kit version  # Should show: 5.0.0
 ```
 
 ### Verify on npm.org
 
-- Visit: https://www.npmjs.com/package/leo-workflow-kit
+- Visit: https://www.npmjs.com/package/ingvar-kit
 - Version should show: 5.0.0
 - README should display updated content
 
@@ -250,7 +250,7 @@ npm view leo-workflow-kit version  # Should show: 5.0.0
 3. **Fully Customizable**
 
    - Users can uncheck agents during init
-   - Can disable agents in .leorc.json
+   - Can disable agents in .ingvarrc.json
    - No forced configurations
 
 4. **Better Documentation**
@@ -268,7 +268,7 @@ npm view leo-workflow-kit version  # Should show: 5.0.0
 
 ## 🎉 Summary
 
-**LEO Kit v5.0.0 is complete, tested, documented, and ready to deploy to npm.**
+**Ingvar Kit v5.0.0 is complete, tested, documented, and ready to deploy to npm.**
 
 ### Checklist
 
@@ -291,4 +291,4 @@ Deploy to npm.org using the quick deploy instructions above.
 
 ---
 
-**Let's make LEO Kit even better! Ready to deploy when you are. 🚀**
+**Let's make Ingvar Kit even better! Ready to deploy when you are. 🚀**

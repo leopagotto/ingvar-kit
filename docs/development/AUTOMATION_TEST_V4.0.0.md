@@ -1,4 +1,4 @@
-# LEO v4.0.0 Automation Test
+# Ingvar v4.0.0 Automation Test
 
 ## Issue: GitHub Issue Automation Not Working
 
@@ -28,7 +28,7 @@ The Copilot instructions were not explicit enough about the automatic issue crea
 
 ```
 - 🚨 AUTOMATIC ISSUE CREATION: When user describes ANY work → Create GitHub issue IMMEDIATELY
-- 🚨 NO MANUAL CLI: NEVER ask user to run `leo issue` or manual commands
+- 🚨 NO MANUAL CLI: NEVER ask user to run `ingvar issue` or manual commands
 - 🚨 NO ASKING PERMISSION: NEVER ask "should I create an issue?" - JUST DO IT AUTOMATICALLY
 - 🚨 DETECT WORK DESCRIPTIONS: ANY task, feature, bug, improvement, docs → IMMEDIATE issue creation
 - 🔥 CRITICAL AUTOMATION RULE: User says "I need X" → YOU IMMEDIATELY CREATE GITHUB ISSUE 🔥
@@ -64,7 +64,7 @@ Example User Messages That Trigger Auto-Issue Creation:
 1. **User describes any work** (like in this document)
 2. **AI detects work description** using trigger patterns
 3. **AI creates GitHub issue immediately** using `gh issue create`
-4. **AI checks auto-resolve config** from `.leorc.json`
+4. **AI checks auto-resolve config** from `.ingvarrc.json`
 5. **AI routes to appropriate agent** (orchestrator → specialist)
 6. **Agent implements solution** automatically
 

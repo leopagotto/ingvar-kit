@@ -1,7 +1,7 @@
 # Issue #1 Completion & Wiki Creation Summary
 
 **Date:** October 19, 2025  
-**Issue:** [#1 - Add architecture and workflow diagrams to README](https://github.com/leonpagotto/leo-kit/issues/1)  
+**Issue:** [#1 - Add architecture and workflow diagrams to README](https://github.com/leopagotto/ingvar-kit/issues/1)  
 **Status:** ✅ **CLOSED** (Moved to Done)
 
 ---
@@ -81,7 +81,7 @@
 **Sections:**
 - Project overview and current version
 - Quick navigation to all wiki sections
-- Quick example showing LEO in action
+- Quick example showing Ingvar in action
 - Current status (v2.3.0 highlights)
 - Roadmap summary
 - Key concepts explained
@@ -138,9 +138,9 @@
 **Sections:**
 - Command overview table
 - Detailed reference for 10+ commands:
-  - `leo init`, `leo issue`, `leo labels`
-  - `leo vscode`, `leo status`, `leo health`
-  - `leo welcome`, `leo docs`, `--version`, `--help`
+  - `ingvar init`, `ingvar issue`, `ingvar labels`
+  - `ingvar vscode`, `ingvar status`, `ingvar health`
+  - `ingvar welcome`, `ingvar docs`, `--version`, `--help`
 - Global options
 - Command chaining examples
 - Common workflows
@@ -227,7 +227,7 @@
 ### Immediate (You Need To Do)
 
 1. **Enable GitHub Wiki**
-   - Go to: https://github.com/leonpagotto/leo-kit/settings
+   - Go to: https://github.com/leopagotto/ingvar-kit/settings
    - Enable "Wikis" feature
    - Save changes
 

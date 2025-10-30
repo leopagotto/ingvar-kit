@@ -1,12 +1,12 @@
-# LEO Workflow Kit - Simple Visual Guide
+# Ingvar Kit - Simple Visual Guide
 
-> **Easy-to-understand diagrams showing how LEO works**
+> **Easy-to-understand diagrams showing how Ingvar works**
 
 ---
 
 ## 📌 Diagram 1: How the Orchestrator Routes Tasks
 
-When you describe work to LEO, the Orchestrator Agent creates an issue FIRST, then routes to the right specialist:
+When you describe work to Ingvar, the Orchestrator Agent creates an issue FIRST, then routes to the right specialist:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -44,7 +44,7 @@ When you describe work to LEO, the Orchestrator Agent creates an issue FIRST, th
 
 ## 📌 Diagram 2: Spec-First Decision Making
 
-LEO decides whether to create a detailed specification or go straight to work:
+Ingvar decides whether to create a detailed specification or go straight to work:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -148,7 +148,7 @@ Step 6: DOCUMENTATION AGENT IMPLEMENTS
 └─────────────────────────────────────────┘
 ```
 
-**Config setting (`.leorc.json`):**
+**Config setting (`.ingvarrc.json`):**
 
 ```json
 {
@@ -161,12 +161,12 @@ Step 6: DOCUMENTATION AGENT IMPLEMENTS
 
 ## 📌 Diagram 4: Complete Spec Workflow (Complex Features)
 
-For complex features, LEO guides you through a structured specification process:
+For complex features, Ingvar guides you through a structured specification process:
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │ STEP 1: CREATE SPECIFICATION                                 │
-│ Command: leo spec new "Build user authentication"           │
+│ Command: ingvar spec new "Build user authentication"           │
 │                                                              │
 │ Creates GitHub issue with template:                         │
 │ ✓ Problem Statement                                         │
@@ -178,7 +178,7 @@ For complex features, LEO guides you through a structured specification process:
                         ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ STEP 2: CLARIFY REQUIREMENTS                                 │
-│ Command: leo clarify 42                                     │
+│ Command: ingvar clarify 42                                     │
 │                                                              │
 │ AI analyzes spec and asks questions:                        │
 │ • "What authentication methods? (OAuth, email, etc.)"       │
@@ -190,7 +190,7 @@ For complex features, LEO guides you through a structured specification process:
                         ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ STEP 3: GENERATE IMPLEMENTATION PLAN                         │
-│ Command: leo plan 42                                        │
+│ Command: ingvar plan 42                                        │
 │                                                              │
 │ Creates checklist of tasks:                                 │
 │ ☐ Set up authentication middleware                          │
@@ -203,19 +203,19 @@ For complex features, LEO guides you through a structured specification process:
                         ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ STEP 4: CREATE TASKS                                         │
-│ Command: leo tasks create 42                                │
+│ Command: ingvar tasks create 42                                │
 │                                                              │
 │ Two modes:                                                   │
 │ 📝 Checklist Mode: Tasks stay in spec (simple)              │
 │ 🔗 Child Issues Mode: Each task = separate issue (teams)    │
 │                                                              │
-│ leo tasks create 42 --create-issues (for parallel work)     │
+│ ingvar tasks create 42 --create-issues (for parallel work)     │
 └───────────────────────┬──────────────────────────────────────┘
                         │
                         ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ STEP 5: TRACK PROGRESS                                       │
-│ Command: leo tasks status 42                                │
+│ Command: ingvar tasks status 42                                │
 │                                                              │
 │ Shows: "5/10 tasks completed (50%)"                         │
 │ Updates project board automatically                         │
@@ -224,7 +224,7 @@ For complex features, LEO guides you through a structured specification process:
                         ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ STEP 6: EXTEND (OPTIONAL)                                    │
-│ Command: leo spec-extend 42 "Add OAuth2 support"           │
+│ Command: ingvar spec-extend 42 "Add OAuth2 support"           │
 │                                                              │
 │ • Merges new requirements into existing spec                │
 │ • Preserves original requirements                           │
@@ -242,19 +242,19 @@ For complex features, LEO guides you through a structured specification process:
 
 ---
 
-## 📌 Diagram 5: The Complete LEO Journey
+## 📌 Diagram 5: The Complete Ingvar Journey
 
 From installation to done - the full picture:
 
 ```
 ┌─────────┐
-│ INSTALL │  npm install -g leo-workflow-kit
+│ INSTALL │  npm install -g ingvar-kit
 └────┬────┘
      │
      ▼
 ┌─────────┐
-│  INIT   │  cd your-project && leo init
-└────┬────┘  Creates: .leorc.json, GitHub Project, Labels
+│  INIT   │  cd your-project && ingvar init
+└────┬────┘  Creates: .ingvarrc.json, GitHub Project, Labels
      │
      ▼
 ┌─────────────────────────────────────────────────────────┐
@@ -262,15 +262,15 @@ From installation to done - the full picture:
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │ Option 1: Interactive                                  │
-│ $ leo issue                                            │
+│ $ ingvar issue                                            │
 │ → Prompts guide you step-by-step                      │
 │                                                         │
 │ Option 2: Just talk to GitHub Copilot                 │
 │ "Hey Copilot, add a dark mode toggle"                 │
-│ → LEO auto-creates issue from conversation             │
+│ → Ingvar auto-creates issue from conversation             │
 │                                                         │
 │ Option 3: Spec for complex features                   │
-│ $ leo spec new "Build payment system"                 │
+│ $ ingvar spec new "Build payment system"                 │
 │ → Creates structured specification                     │
 │                                                         │
 └────────────────────┬────────────────────────────────────┘
@@ -372,16 +372,16 @@ From installation to done - the full picture:
 
 | Command                    | What it does                             |
 | -------------------------- | ---------------------------------------- |
-| `leo init`                 | Set up LEO in your project               |
-| `leo issue`                | Create simple issue (interactive)        |
-| `leo spec new "..."`       | Create specification for complex feature |
-| `leo clarify 42`           | Ask AI to generate clarifying questions  |
-| `leo plan 42`              | Generate implementation plan from spec   |
-| `leo tasks create 42`      | Create task checklist (or child issues)  |
-| `leo tasks status 42`      | Check progress (e.g., "5/10 completed")  |
-| `leo spec-extend 42 "..."` | Add new requirements to existing spec    |
-| `leo health`               | Check LEO setup health                   |
-| `leo agent list`           | See all available agents                 |
+| `ingvar init`                 | Set up Ingvar in your project               |
+| `ingvar issue`                | Create simple issue (interactive)        |
+| `ingvar spec new "..."`       | Create specification for complex feature |
+| `ingvar clarify 42`           | Ask AI to generate clarifying questions  |
+| `ingvar plan 42`              | Generate implementation plan from spec   |
+| `ingvar tasks create 42`      | Create task checklist (or child issues)  |
+| `ingvar tasks status 42`      | Check progress (e.g., "5/10 completed")  |
+| `ingvar spec-extend 42 "..."` | Add new requirements to existing spec    |
+| `ingvar health`               | Check Ingvar setup health                   |
+| `ingvar agent list`           | See all available agents                 |
 
 ---
 

@@ -1,6 +1,6 @@
 # Wiki Deployment Guide
 
-This guide explains how to deploy the LEO Workflow Kit wiki content to GitHub.
+This guide explains how to deploy the Ingvar Kit wiki content to GitHub.
 
 ## 📋 Prerequisites
 
@@ -14,7 +14,7 @@ The wiki repository needs to be initialized with at least one page before you ca
 
 ### Step 1: Create the First Wiki Page
 
-Visit https://github.com/leonpagotto/leo-kit/wiki and:
+Visit https://github.com/leopagotto/ingvar-kit/wiki and:
 
 1. Click "Create the first page"
 2. Add any title and content (it will be replaced)
@@ -70,7 +70,7 @@ The following pages are deployed:
 gh auth status
 
 # 2. Clone wiki repository
-git clone https://github.com/leonpagotto/leo-kit.wiki.git /tmp/leo-kit-wiki
+git clone https://github.com/leopagotto/ingvar-kit.wiki.git /tmp/leo-kit-wiki
 
 # 3. Copy wiki files (excluding README.md)
 cp wiki/*.md /tmp/leo-kit-wiki/
@@ -78,7 +78,7 @@ cp wiki/*.md /tmp/leo-kit-wiki/
 # 4. Commit with version info
 cd /tmp/leo-kit-wiki
 git add .
-git commit -m "docs: update wiki for LEO Workflow Kit vX.X.X"
+git commit -m "docs: update wiki for Ingvar Kit vX.X.X"
 
 # 5. Push to GitHub
 git push origin main
@@ -94,7 +94,7 @@ If you prefer manual control:
 ```bash
 # Clone wiki
 cd /tmp
-git clone https://github.com/leonpagotto/leo-kit.wiki.git
+git clone https://github.com/leopagotto/ingvar-kit.wiki.git
 
 # Copy files
 cd leo-kit-wiki
@@ -196,7 +196,7 @@ jobs:
 If you encounter issues:
 1. Check this guide first
 2. Review script output for error messages
-3. Open an issue: https://github.com/leonpagotto/leo-kit/issues
+3. Open an issue: https://github.com/leopagotto/ingvar-kit/issues
 
 ---
 

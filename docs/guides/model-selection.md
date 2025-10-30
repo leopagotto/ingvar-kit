@@ -1,8 +1,8 @@
-# Model Selection - LEO Workflow Kit
+# Model Selection - Ingvar Kit
 
 > **🤖 Automatic AI Model Selection for Optimal Performance and Cost Efficiency**
 >
-> LEO automatically selects the best AI model for each task based on agent role, task complexity, and development phase. This ensures you get the right balance of performance, cost, and quality for every piece of work.
+> Ingvar automatically selects the best AI model for each task based on agent role, task complexity, and development phase. This ensures you get the right balance of performance, cost, and quality for every piece of work.
 
 ---
 
@@ -24,13 +24,13 @@
 
 ### What is Model Selection?
 
-Model Selection is LEO's intelligent system that automatically chooses the optimal AI model for each task you work on. Instead of always using the most powerful (and expensive) model, or the cheapest model that might struggle with complex tasks, LEO analyzes:
+Model Selection is Ingvar's intelligent system that automatically chooses the optimal AI model for each task you work on. Instead of always using the most powerful (and expensive) model, or the cheapest model that might struggle with complex tasks, Ingvar analyzes:
 
 - **Agent Role**: Frontend, Backend, DevOps, Testing, Documentation
 - **Task Complexity**: Simple (CRUD), Moderate (features), Complex (architecture)
 - **Development Phase**: Development, Staging, Production
 
-Based on these factors, LEO selects from a portfolio of models to give you the best results at the lowest cost.
+Based on these factors, Ingvar selects from a portfolio of models to give you the best results at the lowest cost.
 
 ### Why Use Model Selection?
 
@@ -59,10 +59,10 @@ Based on these factors, LEO selects from a portfolio of models to give you the b
 
 ```bash
 # View all available models
-leo model list
+ingvar model list
 
 # Check current usage and budgets
-leo model status
+ingvar model status
 ```
 
 **Example Output:**
@@ -93,13 +93,13 @@ Default budgets are reasonable for most projects, but you can customize:
 
 ```bash
 # Set daily budget to $10
-leo model budget daily 10
+ingvar model budget daily 10
 
 # Set monthly budget to $100
-leo model budget monthly 100
+ingvar model budget monthly 100
 
 # Set per-agent budget to $20
-leo model budget agent 20
+ingvar model budget agent 20
 ```
 
 ### 3. Enable/Disable Models (Optional)
@@ -108,11 +108,11 @@ All models are enabled by default. Disable expensive models if on a tight budget
 
 ```bash
 # Disable premium models to save costs
-leo model disable gpt-4
-leo model disable claude-3-opus
+ingvar model disable gpt-4
+ingvar model disable claude-3-opus
 
 # Re-enable when needed
-leo model enable gpt-4
+ingvar model enable gpt-4
 ```
 
 ### 4. Test Model Selection
@@ -121,11 +121,11 @@ Test which model would be selected for different scenarios:
 
 ```bash
 # Test frontend + complex task
-leo model test frontend complex
+ingvar model test frontend complex
 # Output: Would select: claude-3-opus
 
 # Test testing + simple task
-leo model test testing simple
+ingvar model test testing simple
 # Output: Would select: gpt-3.5-turbo
 ```
 
@@ -135,7 +135,7 @@ leo model test testing simple
 
 ### Selection Flow
 
-When you start working on a task, LEO automatically:
+When you start working on a task, Ingvar automatically:
 
 1. **Analyzes** the task based on your description and file patterns
 2. **Classifies** the agent role (frontend, backend, etc.)
@@ -183,7 +183,7 @@ Step 5: Execution
 
 ## Configuration
 
-Model selection is configured in `.leorc.json`:
+Model selection is configured in `.ingvarrc.json`:
 
 ### Default Configuration
 
@@ -224,32 +224,32 @@ Model selection is configured in `.leorc.json`:
 
 ### Manual Configuration
 
-Edit `.leorc.json` directly or use CLI commands:
+Edit `.ingvarrc.json` directly or use CLI commands:
 
 ```bash
 # Enable/disable models
-leo model enable gpt-4
-leo model disable claude-3-opus
+ingvar model enable gpt-4
+ingvar model disable claude-3-opus
 
 # Set budgets
-leo model budget daily 10
-leo model budget monthly 100
-leo model budget agent 20
+ingvar model budget daily 10
+ingvar model budget monthly 100
+ingvar model budget agent 20
 
 # Reset usage tracking
-leo model usage reset
+ingvar model usage reset
 ```
 
 ---
 
 ## CLI Commands
 
-### `leo model list`
+### `ingvar model list`
 
 Display all available models with their status, tier, and capabilities.
 
 ```bash
-leo model list
+ingvar model list
 ```
 
 **Output:**
@@ -293,12 +293,12 @@ leo model list
   Best for: Documentation, comments, simple refactoring
 ```
 
-### `leo model status`
+### `ingvar model status`
 
 Show current usage, budgets, and model selection status.
 
 ```bash
-leo model status
+ingvar model status
 ```
 
 **Output:**
@@ -328,45 +328,45 @@ Total Requests: 125
 Average Cost: $0.12 per request
 ```
 
-### `leo model enable <model>`
+### `ingvar model enable <model>`
 
 Enable a specific model for selection.
 
 ```bash
-leo model enable gpt-4
+ingvar model enable gpt-4
 ```
 
-### `leo model disable <model>`
+### `ingvar model disable <model>`
 
 Disable a specific model (will use fallback).
 
 ```bash
-leo model disable gpt-4
+ingvar model disable gpt-4
 ```
 
 **Note**: You must have at least one model enabled in each tier.
 
-### `leo model budget <type> <amount>`
+### `ingvar model budget <type> <amount>`
 
 Set budget limits.
 
 ```bash
 # Daily budget
-leo model budget daily 10
+ingvar model budget daily 10
 
 # Monthly budget
-leo model budget monthly 100
+ingvar model budget monthly 100
 
 # Per-agent budget
-leo model budget agent 20
+ingvar model budget agent 20
 ```
 
-### `leo model usage`
+### `ingvar model usage`
 
 View detailed usage statistics.
 
 ```bash
-leo model usage
+ingvar model usage
 ```
 
 **Output:**
@@ -401,31 +401,31 @@ Top 5 Most Expensive Requests:
   5. Multi-agent coordination (gpt-4-turbo): $0.45
 ```
 
-### `leo model usage reset`
+### `ingvar model usage reset`
 
 Reset usage tracking (for testing or new billing cycle).
 
 ```bash
-leo model usage reset
+ingvar model usage reset
 ```
 
 ⚠️ **Warning**: This will clear all usage statistics. Monthly budgets auto-reset on the 1st of each month.
 
-### `leo model test <agent> <complexity>`
+### `ingvar model test <agent> <complexity>`
 
 Test which model would be selected for a scenario without making actual API calls.
 
 ```bash
 # Test frontend + complex
-leo model test frontend complex
+ingvar model test frontend complex
 # Output: Would select: claude-3-opus
 
 # Test backend + simple
-leo model test backend simple
+ingvar model test backend simple
 # Output: Would select: gpt-3.5-turbo
 
 # Test orchestrator + complex
-leo model test orchestrator complex
+ingvar model test orchestrator complex
 # Output: Would select: gpt-4
 ```
 
@@ -435,43 +435,43 @@ leo model test orchestrator complex
 
 ### Budget Types
 
-LEO enforces three levels of budget:
+Ingvar enforces three levels of budget:
 
 1. **Daily Budget**: Resets every 24 hours
 2. **Monthly Budget**: Resets on the 1st of each month
 3. **Per-Agent Budget**: Tracks spending per specialized agent
 
-All three are checked before executing a task. If any budget is exceeded, LEO falls back to the cheapest available model.
+All three are checked before executing a task. If any budget is exceeded, Ingvar falls back to the cheapest available model.
 
 ### Setting Budgets
 
 ```bash
 # Conservative budgets (small projects)
-leo model budget daily 2
-leo model budget monthly 20
-leo model budget agent 5
+ingvar model budget daily 2
+ingvar model budget monthly 20
+ingvar model budget agent 5
 
 # Standard budgets (most projects) - DEFAULT
-leo model budget daily 5
-leo model budget monthly 50
-leo model budget agent 10
+ingvar model budget daily 5
+ingvar model budget monthly 50
+ingvar model budget agent 10
 
 # Generous budgets (large projects)
-leo model budget daily 10
-leo model budget monthly 100
-leo model budget agent 20
+ingvar model budget daily 10
+ingvar model budget monthly 100
+ingvar model budget agent 20
 
 # Enterprise budgets (production systems)
-leo model budget daily 50
-leo model budget monthly 500
-leo model budget agent 100
+ingvar model budget daily 50
+ingvar model budget monthly 500
+ingvar model budget agent 100
 ```
 
 ### Budget Enforcement
 
 When a budget is exceeded:
 
-1. **Warning**: LEO logs a warning message
+1. **Warning**: Ingvar logs a warning message
 2. **Fallback**: Automatically selects cheapest model (gpt-3.5-turbo or claude-3-haiku)
 3. **Continues**: Work continues with fallback model
 4. **Notification**: User notified of budget limit
@@ -479,7 +479,7 @@ When a budget is exceeded:
 ```bash
 ⚠️  Daily budget exceeded ($5.20 / $5.00)
 ✓ Falling back to cost-efficient model: gpt-3.5-turbo
-ℹ️  Increase budget with: leo model budget daily 10
+ℹ️  Increase budget with: ingvar model budget daily 10
 ```
 
 ### Monitoring Usage
@@ -488,15 +488,15 @@ When a budget is exceeded:
 
 ```bash
 # Check status anytime
-leo model status
+ingvar model status
 
 # View detailed usage
-leo model usage
+ingvar model usage
 ```
 
 **Usage Tracking File:**
 
-LEO stores usage data in `.leo/model-usage.json`:
+Ingvar stores usage data in `.leo/model-usage.json`:
 
 ```json
 {
@@ -522,7 +522,7 @@ LEO stores usage data in `.leo/model-usage.json`:
 
 ## Selection Strategies
 
-LEO uses multiple strategies to select the optimal model. Strategies are applied in order until one succeeds.
+Ingvar uses multiple strategies to select the optimal model. Strategies are applied in order until one succeeds.
 
 ### 1. Agent-Specific Strategy
 
@@ -583,8 +583,8 @@ Development phase influences model selection.
 
 **Environment Detection:**
 
-LEO detects phase from:
-- `LEO_PHASE` environment variable
+Ingvar detects phase from:
+- `Ingvar_PHASE` environment variable
 - `NODE_ENV` environment variable
 - Git branch name (main/master = production)
 
@@ -592,10 +592,10 @@ LEO detects phase from:
 
 ```bash
 # Set development phase
-export LEO_PHASE=development
+export Ingvar_PHASE=development
 
 # Set production phase
-export LEO_PHASE=production
+export Ingvar_PHASE=production
 ```
 
 **Selection Logic:**
@@ -624,13 +624,13 @@ If all strategies fail or budgets are exceeded:
 
 ```bash
 # Check if model selection is enabled
-leo model status
+ingvar model status
 
-# If disabled, check .leorc.json
+# If disabled, check .ingvarrc.json
 # Ensure: "model-selection": { "enabled": true }
 
 # Regenerate AI instructions
-leo agent sync
+ingvar agent sync
 ```
 
 ### Budget Exceeded Too Quickly
@@ -641,15 +641,15 @@ leo agent sync
 
 ```bash
 # Option 1: Increase budgets
-leo model budget daily 10
-leo model budget monthly 100
+ingvar model budget daily 10
+ingvar model budget monthly 100
 
 # Option 2: Disable expensive models
-leo model disable gpt-4
-leo model disable claude-3-opus
+ingvar model disable gpt-4
+ingvar model disable claude-3-opus
 
 # Option 3: Set lower per-agent budgets for non-critical agents
-# Edit .leorc.json to set custom per-agent budgets
+# Edit .ingvarrc.json to set custom per-agent budgets
 ```
 
 ### Wrong Model Being Selected
@@ -660,21 +660,21 @@ leo model disable claude-3-opus
 
 ```bash
 # Test the selection logic
-leo model test <agent> <complexity>
+ingvar model test <agent> <complexity>
 
 # Check which models are enabled
-leo model list
+ingvar model list
 
-# Verify strategy configuration in .leorc.json
+# Verify strategy configuration in .ingvarrc.json
 # "default-strategy": "agent-specific"
 # "fallback-strategy": "complexity-based"
 ```
 
 ### Usage Tracking Not Updating
 
-**Symptom**: `leo model status` shows 0 usage
+**Symptom**: `ingvar model status` shows 0 usage
 
-**Explanation**: Usage tracking requires integration with actual AI provider APIs (OpenAI, Anthropic). In the current version, LEO provides the infrastructure but doesn't make actual API calls. Tracking will work when integrated with real providers.
+**Explanation**: Usage tracking requires integration with actual AI provider APIs (OpenAI, Anthropic). In the current version, Ingvar provides the infrastructure but doesn't make actual API calls. Tracking will work when integrated with real providers.
 
 ### Configuration Changes Not Applied
 
@@ -683,8 +683,8 @@ leo model list
 **Solution**:
 
 ```bash
-# After editing .leorc.json, regenerate AI instructions
-leo agent sync
+# After editing .ingvarrc.json, regenerate AI instructions
+ingvar agent sync
 
 # This updates .github/copilot-instructions.md and other AI files
 ```
@@ -751,14 +751,14 @@ Use different configurations for different environments:
 
 ```bash
 # Development
-leo model disable gpt-4
-leo model disable claude-3-opus
-leo model budget daily 2
+ingvar model disable gpt-4
+ingvar model disable claude-3-opus
+ingvar model budget daily 2
 
 # Production
-leo model enable gpt-4
-leo model enable claude-3-opus
-leo model budget daily 20
+ingvar model enable gpt-4
+ingvar model enable claude-3-opus
+ingvar model budget daily 20
 ```
 
 **Strategy 2: Agent-Specific Restrictions**
@@ -790,10 +790,10 @@ Use cron jobs to reset budgets at specific times:
 
 ```bash
 # Reset daily budget at midnight
-0 0 * * * leo model budget daily 5
+0 0 * * * ingvar model budget daily 5
 
 # Reset monthly budget on 1st of month
-0 0 1 * * leo model budget monthly 50
+0 0 1 * * ingvar model budget monthly 50
 ```
 
 ### Integration with CI/CD
@@ -804,10 +804,10 @@ Use environment-specific budgets in CI/CD pipelines:
 # .github/workflows/deploy.yml
 - name: Configure Model Selection for Production
   run: |
-    leo model budget daily 50
-    leo model budget monthly 500
-    leo model enable gpt-4
-    leo model enable claude-3-opus
+    ingvar model budget daily 50
+    ingvar model budget monthly 500
+    ingvar model enable gpt-4
+    ingvar model enable claude-3-opus
 ```
 
 ---
@@ -855,5 +855,5 @@ Use environment-specific budgets in CI/CD pipelines:
 
 **Questions or Issues?**
 
-- GitHub Issues: https://github.com/leonpagotto/leo-kit/issues
-- Documentation: https://github.com/leonpagotto/leo-kit/wiki
+- GitHub Issues: https://github.com/leopagotto/ingvar-kit/issues
+- Documentation: https://github.com/leopagotto/ingvar-kit/wiki

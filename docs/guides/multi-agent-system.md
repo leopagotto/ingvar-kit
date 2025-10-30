@@ -1,6 +1,6 @@
 # Multi-Agent Orchestration System
 
-> **LEO Workflow Kit v4.0.0+**
+> **Ingvar Kit v4.0.0+**
 >
 > Intelligent task routing with specialized AI agents
 
@@ -26,7 +26,7 @@
 
 ### What is the Multi-Agent System?
 
-LEO Workflow Kit v4.0.0 introduces an **intelligent orchestration layer** that routes your requests to specialized AI agents based on task type. Instead of a single generic AI assistant, you get experts for frontend, backend, DevOps, testing, and documentation.
+Ingvar Kit v4.0.0 introduces an **intelligent orchestration layer** that routes your requests to specialized AI agents based on task type. Instead of a single generic AI assistant, you get experts for frontend, backend, DevOps, testing, and documentation.
 
 ### Why Multi-Agent?
 
@@ -101,7 +101,7 @@ LEO Workflow Kit v4.0.0 introduces an **intelligent orchestration layer** that r
   - Classifies task type
   - Routes to appropriate specialist(s)
   - Coordinates multi-agent tasks
-  - Enforces LEO workflow rules
+  - Enforces Ingvar workflow rules
 
 #### 2. Specialized Agents (Optional)
 
@@ -117,10 +117,10 @@ LEO Workflow Kit v4.0.0 introduces an **intelligent orchestration layer** that r
 
 ### 1. Initialize with Agent Selection
 
-When you run `leo init`, you'll be prompted to select agents:
+When you run `ingvar init`, you'll be prompted to select agents:
 
 ```bash
-leo init
+ingvar init
 ```
 
 **You'll see:**
@@ -144,28 +144,28 @@ leo init
 
 ### 2. Enable/Disable Agents Later
 
-Use the `leo agent` command to manage agents after initialization:
+Use the `ingvar agent` command to manage agents after initialization:
 
 ```bash
 # List all agents and their status
-leo agent list
+ingvar agent list
 
 # Enable a specialized agent
-leo agent enable frontend
+ingvar agent enable frontend
 
 # Disable an agent
-leo agent disable devops
+ingvar agent disable devops
 
 # Show agent details
-leo agent info backend
+ingvar agent info backend
 
 # Regenerate AI files with current config
-leo agent sync
+ingvar agent sync
 ```
 
 ### 3. Verify Configuration
 
-Check your `.leorc.json`:
+Check your `.ingvarrc.json`:
 
 ```json
 {
@@ -193,7 +193,7 @@ Check your `.leorc.json`:
 - Analyze user requests to identify task type
 - Route to appropriate specialized agent(s)
 - Coordinate multi-agent tasks
-- Enforce LEO workflow rules
+- Enforce Ingvar workflow rules
 - Handle cross-cutting concerns
 
 **Status**: Always enabled (core routing layer)
@@ -353,7 +353,7 @@ Check your `.leorc.json`:
 
 ## Configuration
 
-### .leorc.json Structure
+### .ingvarrc.json Structure
 
 ```json
 {
@@ -439,18 +439,18 @@ Check your `.leorc.json`:
 
 ## CLI Commands
 
-### `leo agent list`
+### `ingvar agent list`
 
 Show all agents and their status.
 
 ```bash
-leo agent list
+ingvar agent list
 ```
 
 **Output:**
 
 ```
-🎯 LEO Multi-Agent System
+🎯 Ingvar Multi-Agent System
 
 Project Type: fullstack
 
@@ -469,12 +469,12 @@ Total: 3 agents enabled
 
 ---
 
-### `leo agent enable <agent>`
+### `ingvar agent enable <agent>`
 
 Enable a specialized agent.
 
 ```bash
-leo agent enable frontend
+ingvar agent enable frontend
 ```
 
 **Interactive Prompt:**
@@ -488,12 +488,12 @@ If you select Yes, AI files are automatically regenerated.
 
 ---
 
-### `leo agent disable <agent>`
+### `ingvar agent disable <agent>`
 
 Disable a specialized agent.
 
 ```bash
-leo agent disable devops
+ingvar agent disable devops
 ```
 
 **Interactive Prompt:**
@@ -505,12 +505,12 @@ leo agent disable devops
 
 ---
 
-### `leo agent info <agent>`
+### `ingvar agent info <agent>`
 
 Show detailed information about an agent.
 
 ```bash
-leo agent info backend
+ingvar agent info backend
 ```
 
 **Output:**
@@ -538,19 +538,19 @@ Routing Triggers:
 
 ---
 
-### `leo agent sync`
+### `ingvar agent sync`
 
 Regenerate AI instruction files with current agent configuration.
 
 ```bash
-leo agent sync
+ingvar agent sync
 ```
 
 **When to use:**
 
 - After enabling/disabling agents (if you skipped auto-sync)
-- After manually editing `.leorc.json`
-- After updating LEO Workflow Kit version
+- After manually editing `.ingvarrc.json`
+- After updating Ingvar Kit version
 
 **Output:**
 
@@ -767,21 +767,21 @@ function routeTask(userRequest) {
 
 ### 3. Sync After Configuration Changes
 
-Always run `leo agent sync` after:
+Always run `ingvar agent sync` after:
 
-- Enabling/disabling agents manually in `.leorc.json`
-- Updating LEO Workflow Kit version
+- Enabling/disabling agents manually in `.ingvarrc.json`
+- Updating Ingvar Kit version
 - Changing project-type
 
 ```bash
-leo agent sync
+ingvar agent sync
 ```
 
 ---
 
 ### 4. Review Agent Recommendations
 
-During `leo init`, LEO recommends agents based on project type:
+During `ingvar init`, Ingvar recommends agents based on project type:
 
 ```
 ✨ Recommended agents for fullstack:
@@ -796,10 +796,10 @@ During `leo init`, LEO recommends agents based on project type:
 
 ### 5. Use Agent Info for Clarification
 
-Not sure what an agent does? Use `leo agent info`:
+Not sure what an agent does? Use `ingvar agent info`:
 
 ```bash
-leo agent info devops
+ingvar agent info devops
 ```
 
 Helps you understand:
@@ -824,13 +824,13 @@ Helps you understand:
 1. **Verify agent is enabled:**
 
    ```bash
-   leo agent list
+   ingvar agent list
    ```
 
-2. **Check .leorc.json:**
+2. **Check .ingvarrc.json:**
 
    ```bash
-   cat .leorc.json
+   cat .ingvarrc.json
    ```
 
    Ensure agent has `"enabled": true`
@@ -838,7 +838,7 @@ Helps you understand:
 3. **Regenerate AI files:**
 
    ```bash
-   leo agent sync
+   ingvar agent sync
    ```
 
 4. **Restart your AI assistant** (Copilot, Cursor, etc.)
@@ -908,8 +908,8 @@ Helps you understand:
 1. **Disable unused agents:**
 
    ```bash
-   leo agent disable documentation  # If you don't need it
-   leo agent disable devops        # If not deploying yet
+   ingvar agent disable documentation  # If you don't need it
+   ingvar agent disable devops        # If not deploying yet
    ```
 
 2. **Enable agents incrementally:**
@@ -937,20 +937,20 @@ Helps you understand:
 
 ### Migration Steps
 
-#### 1. Update LEO Workflow Kit
+#### 1. Update Ingvar Kit
 
 ```bash
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-kit@latest
 ```
 
 #### 2. Re-initialize Your Project
 
 ```bash
 # Backup existing config
-cp .leorc.json .leorc.json.backup
+cp .ingvarrc.json .ingvarrc.json.backup
 
 # Re-run init with agent selection
-leo init
+ingvar init
 ```
 
 You'll be prompted to select agents. Choose based on your project needs.
@@ -958,7 +958,7 @@ You'll be prompted to select agents. Choose based on your project needs.
 #### 3. Regenerate AI Instruction Files
 
 ```bash
-leo agent sync
+ingvar agent sync
 ```
 
 This replaces old v3.x instruction files with new multi-agent versions.
@@ -989,7 +989,7 @@ You should see:
 
 v4.0.0 is **mostly backward compatible** with v3.x:
 
-- ✅ Existing `.leorc.json` files work (agents section optional)
+- ✅ Existing `.ingvarrc.json` files work (agents section optional)
 - ✅ GitHub Projects integration unchanged
 - ✅ Issue templates and labels unchanged
 - ✅ CLI commands backward compatible
@@ -1030,17 +1030,17 @@ Coming in v4.2.0:
 2. **Enable agents based on project needs** - Don't enable everything
 3. **Use clear, specific task descriptions** - Better routing + better output
 4. **Sync after configuration changes** - Keep AI files up to date
-5. **Review recommendations** - LEO suggests agents based on project type
+5. **Review recommendations** - Ingvar suggests agents based on project type
 
 ### Getting Help
 
-- **Documentation**: [LEO Workflow Kit Wiki](https://github.com/leonpagotto/leo-kit/wiki)
-- **Issues**: [GitHub Issues](https://github.com/leonpagotto/leo-kit/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/leonpagotto/leo-kit/discussions)
+- **Documentation**: [Ingvar Kit Wiki](https://github.com/leopagotto/ingvar-kit/wiki)
+- **Issues**: [GitHub Issues](https://github.com/leopagotto/ingvar-kit/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/leopagotto/ingvar-kit/discussions)
 
 ### Next Steps
 
-1. Run `leo agent list` to see your current setup
+1. Run `ingvar agent list` to see your current setup
 2. Enable/disable agents as needed
 3. Try a task and observe routing
 4. Read agent-specific docs in `docs/agents/` (coming soon)

@@ -1,14 +1,14 @@
-# 🔌 LEO Plugin Architecture (Phase 3 Week 3 - Day 8)
+# 🔌 Ingvar Plugin Architecture (Phase 3 Week 3 - Day 8)
 
 **Phase 3 Week 3 - Day 8: Plugin Architecture Setup**
 
-> Extensible plugin system for building custom frontends and integrations with the LEO Dashboard API
+> Extensible plugin system for building custom frontends and integrations with the Ingvar Dashboard API
 
 ---
 
 ## 📋 Overview
 
-The LEO Plugin System enables developers to build **custom frontends** and **integrations** that consume the LEO Dashboard API without modifying the core package.
+The Ingvar Plugin System enables developers to build **custom frontends** and **integrations** that consume the Ingvar Dashboard API without modifying the core package.
 
 ### Key Features
 
@@ -72,7 +72,7 @@ Backend services and middleware.
 All plugins must implement the `PluginInterface`:
 
 ```javascript
-const { PluginInterface } = require("leo-workflow-kit/lib/plugins/manager");
+const { PluginInterface } = require("ingvar-kit/lib/plugins/manager");
 
 class MyPlugin extends PluginInterface {
   /**
@@ -137,13 +137,13 @@ module.exports = MyPlugin;
 ### List Plugins
 
 ```bash
-leo plugin list
+ingvar plugin list
 ```
 
 **Output:**
 
 ```
-🔌 LEO Plugins
+🔌 Ingvar Plugins
 
 Registered Plugins:
 
@@ -158,7 +158,7 @@ leo-vscode-extension         | ○ inactive | 1.0.0
 ### Get Plugin Info
 
 ```bash
-leo plugin info leo-web-dashboard
+ingvar plugin info leo-web-dashboard
 ```
 
 **Output:**
@@ -172,7 +172,7 @@ Plugin Details:
   Version:     1.0.0
   Status:      Inactive
   Description: Web-based dashboard for hunt tracking
-  Author:      LEO Team
+  Author:      Ingvar Team
   Type:        frontend
 ```
 
@@ -181,7 +181,7 @@ Plugin Details:
 ### Install Plugin
 
 ```bash
-leo plugin install leo-dashboard-web
+ingvar plugin install leo-dashboard-web
 ```
 
 Installs a plugin from npm and registers it.
@@ -191,7 +191,7 @@ Installs a plugin from npm and registers it.
 ### Start Plugin
 
 ```bash
-leo plugin start leo-web-dashboard
+ingvar plugin start leo-web-dashboard
 ```
 
 Starts a plugin and connects it to the API server.
@@ -210,7 +210,7 @@ Starts a plugin and connects it to the API server.
 ### Stop Plugin
 
 ```bash
-leo plugin stop leo-web-dashboard
+ingvar plugin stop leo-web-dashboard
 ```
 
 Stops a running plugin and cleanup resources.
@@ -220,7 +220,7 @@ Stops a running plugin and cleanup resources.
 ### Uninstall Plugin
 
 ```bash
-leo plugin uninstall leo-dashboard-web
+ingvar plugin uninstall leo-dashboard-web
 ```
 
 Removes the plugin npm package.
@@ -230,7 +230,7 @@ Removes the plugin npm package.
 ### Create Plugin Template
 
 ```bash
-leo plugin create my-dashboard
+ingvar plugin create my-dashboard
 ```
 
 Generates a new plugin template with:
@@ -284,7 +284,7 @@ my-plugin/
 ### Step 1: Generate Template
 
 ```bash
-leo plugin create my-awesome-plugin
+ingvar plugin create my-awesome-plugin
 cd my-awesome-plugin
 ```
 
@@ -296,12 +296,12 @@ cd my-awesome-plugin
 {
   "name": "leo-plugin-my-awesome-plugin",
   "version": "1.0.0",
-  "description": "Awesome dashboard plugin for LEO",
+  "description": "Awesome dashboard plugin for Ingvar",
   "main": "src/index.js",
   "author": "Your Name",
   "license": "MIT",
   "peerDependencies": {
-    "leo-workflow-kit": "^5.0.0"
+    "ingvar-kit": "^5.0.0"
   }
 }
 ```
@@ -309,7 +309,7 @@ cd my-awesome-plugin
 **`src/index.js`:**
 
 ```javascript
-const { PluginInterface } = require("leo-workflow-kit/lib/plugins/manager");
+const { PluginInterface } = require("ingvar-kit/lib/plugins/manager");
 
 class MyAwesomePlugin extends PluginInterface {
   async init(context) {
@@ -371,8 +371,8 @@ npm publish
 ### Step 5: Install Plugin
 
 ```bash
-leo plugin install leo-plugin-my-awesome-plugin
-leo plugin start my-awesome-plugin
+ingvar plugin install leo-plugin-my-awesome-plugin
+ingvar plugin start my-awesome-plugin
 ```
 
 ---
@@ -403,7 +403,7 @@ leo-dashboard-web/
 ### Implementation
 
 ```javascript
-const { PluginInterface } = require("leo-workflow-kit/lib/plugins/manager");
+const { PluginInterface } = require("ingvar-kit/lib/plugins/manager");
 const express = require("express");
 const path = require("path");
 
@@ -419,7 +419,7 @@ class WebDashboardPlugin extends PluginInterface {
       name: "Web Dashboard",
       version: "1.0.0",
       description: "Web-based dashboard for hunt tracking",
-      author: "LEO Team",
+      author: "Ingvar Team",
       type: "frontend",
     };
   }
@@ -490,7 +490,7 @@ leo-vscode-extension/
 ### Implementation
 
 ```javascript
-const { PluginInterface } = require("leo-workflow-kit/lib/plugins/manager");
+const { PluginInterface } = require("ingvar-kit/lib/plugins/manager");
 const vscode = require("vscode");
 
 class VSCodeExtensionPlugin extends PluginInterface {
@@ -502,10 +502,10 @@ class VSCodeExtensionPlugin extends PluginInterface {
 
   getMetadata() {
     return {
-      name: "LEO VS Code Extension",
+      name: "Ingvar VS Code Extension",
       version: "1.0.0",
       description: "VS Code extension for hunt management",
-      author: "LEO Team",
+      author: "Ingvar Team",
       type: "extension",
     };
   }
@@ -517,7 +517,7 @@ class VSCodeExtensionPlugin extends PluginInterface {
       100
     );
 
-    this.statusBar.text = "$(loading~spin) LEO Dashboard";
+    this.statusBar.text = "$(loading~spin) Ingvar Dashboard";
     this.statusBar.command = "leo.openDashboard";
     this.statusBar.show();
 
@@ -718,7 +718,7 @@ npm adduser
 {
   "name": "leo-plugin-your-plugin",
   "version": "1.0.0",
-  "description": "Your awesome LEO plugin",
+  "description": "Your awesome Ingvar plugin",
   "main": "src/index.js",
   "keywords": ["leo", "plugin", "dashboard"],
   "author": "Your Name",
@@ -728,7 +728,7 @@ npm adduser
     "url": "https://github.com/yourusername/leo-plugin-your-plugin"
   },
   "peerDependencies": {
-    "leo-workflow-kit": "^5.0.0"
+    "ingvar-kit": "^5.0.0"
   }
 }
 ```
@@ -742,7 +742,7 @@ npm publish
 ### 4. Install
 
 ```bash
-leo plugin install leo-plugin-your-plugin
+ingvar plugin install leo-plugin-your-plugin
 ```
 
 ---
@@ -760,7 +760,7 @@ Before publishing your plugin:
 - [ ] Has comprehensive README
 - [ ] Includes examples
 - [ ] Has tests
-- [ ] Validated with `leo plugin create`
+- [ ] Validated with `ingvar plugin create`
 - [ ] Published to npm
 - [ ] Tagged with "leo" and "plugin" keywords
 
@@ -772,7 +772,7 @@ Before publishing your plugin:
 
 ```bash
 # Check plugin metadata
-leo plugin info plugin-name
+ingvar plugin info plugin-name
 
 # Review initialization
 npm test
@@ -808,8 +808,8 @@ async stop() {
 
 ## 📞 Support & Resources
 
-- **Documentation:** https://github.com/osp-group/leo-workflow-kit/wiki
-- **GitHub Issues:** https://github.com/osp-group/leo-workflow-kit/issues
+- **Documentation:** https://github.com/osp-group/ingvar-kit/wiki
+- **GitHub Issues:** https://github.com/osp-group/ingvar-kit/issues
 - **Examples:** https://github.com/osp-group/leo-plugins
 
 ---

@@ -1,16 +1,16 @@
-# LEO Workflow Kit v5.0.0 - Feature Request: Documentation Organization
+# Ingvar Kit v5.0.0 - Feature Request: Documentation Organization
 
 **Date:** 2025-10-27
 **Project:** LionPack Studio
 **Submitted By:** Leo de Souza (@leonpagotto)
-**LEO Workflow Kit Version:** 5.0.0
+**Ingvar Kit Version:** 5.0.0
 **Health Score:** 98/100 (Grade A - Excellent!)
 
 ---
 
 ## 🎉 Overall Assessment
 
-**LEO Workflow Kit v5.0.0 is excellent!** Our project scores 98/100 on health checks. The issue tracking, workflow management, and Copilot integration work beautifully.
+**Ingvar Kit v5.0.0 is excellent!** Our project scores 98/100 on health checks. The issue tracking, workflow management, and Copilot integration work beautifully.
 
 **However**, there's one remaining pain point that would make it perfect: **automated documentation organization**.
 
@@ -69,7 +69,7 @@ docs/
 **Implementation:**
 
 ```bash
-# .git/hooks/pre-commit (auto-installed by leo init)
+# .git/hooks/pre-commit (auto-installed by ingvar init)
 #!/bin/bash
 
 # Get new markdown files in root
@@ -83,13 +83,13 @@ if [ -n "$ROOT_MD_FILES" ]; then
   echo "Files attempting to add:"
   echo "$ROOT_MD_FILES" | sed 's/^/  - /'
   echo ""
-  echo "LEO Workflow Organization:"
+  echo "Ingvar Workflow Organization:"
   echo "  • Session summaries  → docs/sessions/YYYY-MM/"
   echo "  • Story docs         → docs/stories/story-X.Y/"
   echo "  • Phase reports      → docs/phases/phase-X/"
   echo "  • Guides             → docs/guides/"
   echo ""
-  echo "Auto-fix: leo organize-docs"
+  echo "Auto-fix: ingvar organize-docs"
   exit 1
 fi
 ```
@@ -104,10 +104,10 @@ $ git commit -m "Add session summary"
 Files attempting to add:
   - SESSION_SUMMARY_2025-10-27.md
 
-LEO Workflow Organization:
+Ingvar Workflow Organization:
   • Session summaries → docs/sessions/YYYY-MM/
 
-Auto-fix: leo organize-docs
+Auto-fix: ingvar organize-docs
 ```
 
 ### 2. Real-Time Documentation Organization
@@ -117,7 +117,7 @@ Auto-fix: leo organize-docs
 **Option A: File Watcher (Development)**
 
 ```javascript
-// Auto-started with leo init or npm run dev
+// Auto-started with ingvar init or npm run dev
 const watcher = chokidar.watch("*.md", { ignoreInitial: true });
 
 watcher.on("add", async (filename) => {
@@ -134,7 +134,7 @@ watcher.on("add", async (filename) => {
 
 ```bash
 # Manual organization
-leo organize-docs
+ingvar organize-docs
 
 # Output:
 # 📁 Organizing documentation...
@@ -145,10 +145,10 @@ leo organize-docs
 
 ### 3. Health Check Integration
 
-**Add to `leo health` command:**
+**Add to `ingvar health` command:**
 
 ```bash
-$ leo health
+$ ingvar health
 
 Documentation Organization:
   ✓ docs/ directory structure (3 pts)
@@ -156,12 +156,12 @@ Documentation Organization:
 
 Overall Score: 91/100 (91%) - Grade A-
 
-💡 Run 'leo organize-docs' to fix documentation organization
+💡 Run 'ingvar organize-docs' to fix documentation organization
 ```
 
 ### 4. Config Options
 
-**Add to `.leorc.json`:**
+**Add to `.ingvarrc.json`:**
 
 ```json
 {
@@ -185,13 +185,13 @@ Overall Score: 91/100 (91%) - Grade A-
 
 ```bash
 # Enable enforcement
-leo config set documentation.enforce-organization true
+ingvar config set documentation.enforce-organization true
 
 # Set auto-organize
-leo config set documentation.auto-organize true
+ingvar config set documentation.auto-organize true
 
 # Check current settings
-leo config get documentation
+ingvar config get documentation
 ```
 
 ---
@@ -201,7 +201,7 @@ leo config get documentation
 ### Phase 1: Basic Validation (Highest Value)
 
 1. **Pre-commit hook** - Prevent root directory clutter
-2. **`leo organize-docs` command** - Manual organization tool
+2. **`ingvar organize-docs` command** - Manual organization tool
 3. **Health check integration** - Add to scoring
 
 **Effort:** Low | **Impact:** High
@@ -234,7 +234,7 @@ leo config get documentation
 ### Workflow Compliance
 
 - ✅ **100% adherence** to documentation standards
-- ✅ **Consistent structure** across all LEO projects
+- ✅ **Consistent structure** across all Ingvar projects
 - ✅ **Easy navigation** for team members
 - ✅ **Onboarding friendly** - new devs see organized docs
 
@@ -257,7 +257,7 @@ We've already implemented and tested the manual version:
 - Moves 45+ files in seconds
 - Works perfectly ✅
 
-**This proves the concept works** - just needs integration into LEO CLI.
+**This proves the concept works** - just needs integration into Ingvar CLI.
 
 ---
 
@@ -265,9 +265,9 @@ We've already implemented and tested the manual version:
 
 If implementation is not feasible soon, at minimum:
 
-1. **Document the pattern** in LEO documentation
+1. **Document the pattern** in Ingvar documentation
 2. **Provide template script** users can copy
-3. **Add to `leo init`** - create folder structure upfront
+3. **Add to `ingvar init`** - create folder structure upfront
 4. **Example `.gitignore`** - ignore root markdown files (except allowed)
 
 This would help but doesn't prevent the problem - just makes cleanup easier.
@@ -276,7 +276,7 @@ This would help but doesn't prevent the problem - just makes cleanup easier.
 
 ## Conclusion
 
-**LEO Workflow Kit v5.0.0 is fantastic!** The issue tracking works perfectly, health checks are comprehensive, and the workflow integration is seamless.
+**Ingvar Kit v5.0.0 is fantastic!** The issue tracking works perfectly, health checks are comprehensive, and the workflow integration is seamless.
 
 **One enhancement would make it perfect:** Automated documentation organization enforcement.
 
@@ -284,10 +284,10 @@ This is the last pain point preventing 100% hands-free workflow compliance.
 
 ### Ask
 
-Would the LEO team consider adding:
+Would the Ingvar team consider adding:
 
 1. **Pre-commit hook** for file placement validation (Phase 1)
-2. **`leo organize-docs` command** for auto-organization (Phase 1)
+2. **`ingvar organize-docs` command** for auto-organization (Phase 1)
 3. **Health check integration** for documentation (Phase 1)
 
 These three features would eliminate the 2-hour manual cleanup burden and complete the workflow automation vision.
@@ -309,4 +309,4 @@ These three features would eliminate the 2-hour manual cleanup burden and comple
 
 ---
 
-**Thank you for creating LEO Workflow Kit!** v5.0.0 is already excellent - this would make it perfect. 🚀
+**Thank you for creating Ingvar Kit!** v5.0.0 is already excellent - this would make it perfect. 🚀

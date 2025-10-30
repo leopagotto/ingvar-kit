@@ -712,7 +712,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * LionPack GitHub Project Board Builder
+ * Ingvar Kit GitHub Project Board Builder
  * Automatically creates and configures GitHub project boards
  * matching the workflow stages for the team size
  */
@@ -739,7 +739,7 @@ class GitHubProjectBuilder {
    */
 <span class="fstat-no" title="function not covered" >  ge</span>tProjectConfig() {
 <span class="cstat-no" title="statement not covered" >    return {</span>
-      name: `🦁 LionPack Hunt ${this._getPackName()}`,
+      name: `🦁 Ingvar Kit Hunt ${this._getPackName()}`,
       description: this._getProjectDescription(),
       public: false,
       template: 'basic',
@@ -756,7 +756,7 @@ class GitHubProjectBuilder {
    */
 <span class="fstat-no" title="function not covered" >  ge</span>nerateGitHubWorkflow() {
     const workflow = <span class="cstat-no" title="statement not covered" >{</span>
-      name: 'LionPack Hunt Automation',
+      name: 'Ingvar Kit Hunt Automation',
       on: {
         issues: {
           types: ['opened', 'reopened', 'labeled']
@@ -805,17 +805,17 @@ class GitHubProjectBuilder {
     const mapping = <span class="cstat-no" title="statement not covered" >WorkflowMode.mapMembersToColumns(this.teamSize, members);</span>
 &nbsp;
     let script = <span class="cstat-no" title="statement not covered" >`#!/bin/bash</span>
-# LionPack Project Board Setup Script
+# Ingvar Kit Project Board Setup Script
 # Generated for: ${this.repoOwner}/${this.repoName}
 &nbsp;
 set -e
 &nbsp;
-echo "🦁 Setting up LionPack project board..."
+echo "🦁 Setting up Ingvar Kit project board..."
 echo "Team Size: ${this.teamSize}"
 echo ""
 &nbsp;
 # Create project
-PROJECT_NAME="🦁 LionPack Hunt - ${this._getPackName()}"
+PROJECT_NAME="🦁 Ingvar Kit Hunt - ${this._getPackName()}"
 echo "Creating project: $PROJECT_NAME"
 &nbsp;
 PROJECT=$(gh project create \\
@@ -871,7 +871,7 @@ echo "   3. Team members watch their columns"
     const mapping = <span class="cstat-no" title="statement not covered" >WorkflowMode.mapMembersToColumns(this.teamSize, members);</span>
     const columnSequence = <span class="cstat-no" title="statement not covered" >WorkflowMode.getColumnSequence(this.teamSize);</span>
 &nbsp;
-    let doc = <span class="cstat-no" title="statement not covered" >`# 🦁 LionPack Project Board Guide\n\n`;</span>
+    let doc = <span class="cstat-no" title="statement not covered" >`# 🦁 Ingvar Kit Project Board Guide\n\n`;</span>
 <span class="cstat-no" title="statement not covered" >    doc += `**Team:** ${this.teamSize} developers\n`;</span>
 <span class="cstat-no" title="statement not covered" >    doc += `**Repository:** ${this.repoOwner}/${this.repoName}\n`;</span>
 <span class="cstat-no" title="statement not covered" >    doc += `**Mode:** ${this.config.mode.toUpperCase()}\n\n`;</span>
@@ -964,11 +964,11 @@ echo "   3. Team members watch their columns"
    * Save configuration files to project
    */
 <span class="fstat-no" title="function not covered" >  as</span>ync saveConfiguration(projectPath, members) {
-    const lionpackDir = <span class="cstat-no" title="statement not covered" >path.join(projectPath, '.lionpack');</span>
-<span class="cstat-no" title="statement not covered" >    await fs.ensureDir(lionpackDir);</span>
+    const leoDir = <span class="cstat-no" title="statement not covered" >path.join(projectPath, '.leo');</span>
+<span class="cstat-no" title="statement not covered" >    await fs.ensureDir(leoDir);</span>
 &nbsp;
     // Save board config
-    const boardConfigPath = <span class="cstat-no" title="statement not covered" >path.join(lionpackDir, 'board.json');</span>
+    const boardConfigPath = <span class="cstat-no" title="statement not covered" >path.join(leoDir, 'board.json');</span>
 <span class="cstat-no" title="statement not covered" >    await fs.writeJson(boardConfigPath, {</span>
       teamSize: this.teamSize,
       mode: this.config.mode,
@@ -980,7 +980,7 @@ echo "   3. Team members watch their columns"
     }, { spaces: 2 });
 &nbsp;
     // Save setup script
-    const scriptPath = <span class="cstat-no" title="statement not covered" >path.join(lionpackDir, 'setup-board.sh');</span>
+    const scriptPath = <span class="cstat-no" title="statement not covered" >path.join(leoDir, 'setup-board.sh');</span>
     const script = <span class="cstat-no" title="statement not covered" >this.generateSetupScript(members);</span>
 <span class="cstat-no" title="statement not covered" >    await fs.writeFile(scriptPath, script, { mode: 0o755 });</span>
 &nbsp;
@@ -1000,7 +1000,7 @@ echo "   3. Team members watch their columns"
    * Load existing configuration
    */
 <span class="fstat-no" title="function not covered" >  st</span>atic async loadConfiguration(projectPath) {
-    const boardConfigPath = <span class="cstat-no" title="statement not covered" >path.join(projectPath, '.lionpack', 'board.json');</span>
+    const boardConfigPath = <span class="cstat-no" title="statement not covered" >path.join(projectPath, '.leo', 'board.json');</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    try {</span>
 <span class="cstat-no" title="statement not covered" >      return await fs.readJson(boardConfigPath);</span>
@@ -1028,7 +1028,7 @@ echo "   3. Team members watch their columns"
       3: 'Trio workflow - three developers with specialized expertise',
       4: 'Full pack - four developers covering all specializations'
     };
-<span class="cstat-no" title="statement not covered" >    return descriptions[this.teamSize] || 'LionPack team workflow';</span>
+<span class="cstat-no" title="statement not covered" >    return descriptions[this.teamSize] || 'Ingvar Kit team workflow';</span>
   }
 }
 &nbsp;
@@ -1042,7 +1042,7 @@ echo "   3. Team members watch their columns"
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-10-29T15:22:41.917Z
+                at 2025-10-29T21:37:01.376Z
             </div>
         <script src="../prettify.js"></script>
         <script>

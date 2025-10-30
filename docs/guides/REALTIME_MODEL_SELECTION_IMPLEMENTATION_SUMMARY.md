@@ -13,7 +13,7 @@ Watch models change **automatically** in VS Code's status bar as different agent
 ```
 Status Bar Updates (Right side):
 
-Initial:      ⊘ LEO Ready
+Initial:      ⊘ Ingvar Ready
               ↓ (task starts)
 Designer:     ↻ 🎨 designer → Claude-S        (spinning while active)
               ✓ 🎨 designer complete           (after 45 minutes)
@@ -30,7 +30,7 @@ Testing:      ↻ 🧪 testing → Claude-S         (back to Sonnet)
 Documentation:↻ 📚 documentation → GPT-3.5     (cheapest!)
               ✓ 📚 documentation complete
               ↓
-Complete:     ⊘ LEO Ready                      (returns to ready)
+Complete:     ⊘ Ingvar Ready                      (returns to ready)
 ```
 
 ---
@@ -320,7 +320,7 @@ async function buildFeature(featureName) {
     await orchestrator.completeAgent("backend", { success: true });
 
     await orchestrator.completeTask({ success: true });
-    // VS Code: ⊘ LEO Ready
+    // VS Code: ⊘ Ingvar Ready
   } catch (error) {
     await orchestrator.completeTask({ success: false });
   }
@@ -352,7 +352,7 @@ async function buildFeature(featureName) {
 **Inactive:**
 
 ```
-⊘ LEO Ready                   ← Slash icon (no task)
+⊘ Ingvar Ready                   ← Slash icon (no task)
 ```
 
 ### Color Coding
@@ -409,7 +409,7 @@ Cost: Cheap ($0.05) - most economical!
 Timeline of a Feature Build:
 
 T+0s:      User: "Build checkout form"
-           VS Code: ⊘ LEO Ready
+           VS Code: ⊘ Ingvar Ready
 
 T+0.5s:    Orchestrator created
            VS Code: ↻ 🎨 designer → Claude-S
@@ -461,7 +461,7 @@ T+14700s:  Documentation completes
            File: 📚 Complete!
 
 T+14700.5s: Task complete
-           VS Code: ⊘ LEO Ready
+           VS Code: ⊘ Ingvar Ready
            Total time: ~4 hours
            All models tracked, all costs recorded
 ```
@@ -514,7 +514,7 @@ const model = await orchestrator.selectModelWithTracking(
 ### 3. Run Task
 
 ```bash
-leo build-feature "checkout"
+ingvar build-feature "checkout"
 # VS Code shows real-time model changes!
 ```
 
@@ -544,10 +544,10 @@ c0c3846 - feat: real-time model selection in VS Code status bar
 ✅ Complete history and cost tracking
 ✅ Ready-to-use VS Code extension
 
-**Result:** As you run LEO tasks, watch the models change dynamically in VS Code! 🎉
+**Result:** As you run Ingvar tasks, watch the models change dynamically in VS Code! 🎉
 
 ```
-⊘ LEO Ready
+⊘ Ingvar Ready
     ↓ task starts
 ↻ 🎨 designer → Claude-S
     ↓ 45 min later
@@ -560,7 +560,7 @@ c0c3846 - feat: real-time model selection in VS Code status bar
 ✓ 🔧 backend complete
 ↻ 📚 documentation → GPT-3.5   ← Cheapest model!
 ✓ 📚 documentation complete
-⊘ LEO Ready
+⊘ Ingvar Ready
 ```
 
 **Every model change automatically visible in your status bar!** 🚀

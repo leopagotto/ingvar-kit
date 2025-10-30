@@ -9,7 +9,7 @@
 ### The Problem (v5.3.1)
 
 You reported:
-> "I actually want all the models to use the Claude Sonnet 4.5 or GPT 5.0 because this is actually a lot of working and at least in my copilot currently. And the way it is now, setting it up a lower model is actually a regression and I cannot even use the LEO kit anymore."
+> "I actually want all the models to use the Claude Sonnet 4.5 or GPT 5.0 because this is actually a lot of working and at least in my copilot currently. And the way it is now, setting it up a lower model is actually a regression and I cannot even use the Ingvar kit anymore."
 
 **Root cause:** v5.3.1 optimized for cost (40% savings) by using Claude 3 Haiku for orchestrator and documentation tasks. For users with high-quality baselines (GitHub Copilot with GPT-4), this was a **downgrade** that blocked adoption.
 
@@ -28,7 +28,7 @@ Added **four configuration modes** so you control quality vs cost:
 
 ### Option 1: Quality-First (Recommended for You!)
 
-**Your `.leorc.json`:**
+**Your `.ingvarrc.json`:**
 ```json
 {
   "model-selection": {
@@ -54,7 +54,7 @@ Added **four configuration modes** so you control quality vs cost:
 
 ### Option 2: Fixed Model (Ultimate Control)
 
-**Your `.leorc.json`:**
+**Your `.ingvarrc.json`:**
 ```json
 {
   "model-selection": {
@@ -76,7 +76,7 @@ Added **four configuration modes** so you control quality vs cost:
 
 ### Option 3: Cost-Optimized (v5.3.1 behavior)
 
-**Your `.leorc.json`:**
+**Your `.ingvarrc.json`:**
 ```json
 {
   "model-selection": {
@@ -95,7 +95,7 @@ Added **four configuration modes** so you control quality vs cost:
 ### Test 1: Quality-First Mode
 
 ```bash
-cd /Users/leo.de.souza1/leo-workflow-kit
+cd /Users/leo.de.souza1/ingvar-kit
 
 node -e "
 const ModelSelector = require('./lib/model-selection/index.js');
@@ -147,7 +147,7 @@ const selector = new ModelSelector(config);
 
 ## 📊 What Changed in Code
 
-### 1. Configuration Schema (`.leorc.json`)
+### 1. Configuration Schema (`.ingvarrc.json`)
 
 **New options:**
 ```json
@@ -221,7 +221,7 @@ this.upgradeDefaults = config['upgrade-defaults'] !== false; // Default: true
 
 ### Step 1: Update Your Config
 
-Edit `.leorc.json`:
+Edit `.ingvarrc.json`:
 ```json
 {
   "model-selection": {
@@ -238,9 +238,9 @@ Run the test commands above to see the quality-first mode in action.
 
 ### Step 3: Verify in Real Usage
 
-Try creating an issue or running any LEO command:
+Try creating an issue or running any Ingvar command:
 ```bash
-leo issue create "Test quality-first mode"
+ingvar issue create "Test quality-first mode"
 ```
 
 Watch the verbose output - you'll see `claude-3.5-sonnet` being selected!
@@ -290,7 +290,7 @@ v5.3.3 gives you **full control**:
 ## 📚 Additional Resources
 
 - **📖 Full Guide:** `docs/MODEL_QUALITY_CONTROL.md`
-- **🔧 Configuration:** `.leorc.json` (your project root)
+- **🔧 Configuration:** `.ingvarrc.json` (your project root)
 - **📋 Changelog:** `CHANGELOG.md` (v5.3.3 section)
 - **🧪 Tests:** `tests/model-selection/model-selector.test.js` (all passing)
 
@@ -307,8 +307,8 @@ v5.3.3 gives you **full control**:
 - ✅ Version bumped to 5.3.3
 
 **You can now:**
-1. Edit `.leorc.json` with your preferred configuration
-2. Use LEO without quality regression
+1. Edit `.ingvarrc.json` with your preferred configuration
+2. Use Ingvar without quality regression
 3. Match or exceed your Copilot experience
 4. Toggle between quality and cost modes anytime
 
@@ -316,11 +316,11 @@ v5.3.3 gives you **full control**:
 
 ## 🙏 Thank You for the Feedback!
 
-Your report that v5.3.1 was a "regression" and you "cannot even use the LEO kit anymore" was critical. Without it, we wouldn't have realized cost optimization was blocking adoption for quality-focused users.
+Your report that v5.3.1 was a "regression" and you "cannot even use the Ingvar kit anymore" was critical. Without it, we wouldn't have realized cost optimization was blocking adoption for quality-focused users.
 
 **This is a better product because of your feedback.**
 
-Now you have the control you need. Enjoy LEO at Copilot-level quality! 🚀
+Now you have the control you need. Enjoy Ingvar at Copilot-level quality! 🚀
 
 ---
 

@@ -6,7 +6,7 @@
 
 ## 🏆 What We Accomplished
 
-We've successfully built a **lean, extensible, production-ready** dashboard infrastructure for the LEO Workflow Kit:
+We've successfully built a **lean, extensible, production-ready** dashboard infrastructure for the Ingvar Kit:
 
 ### Architecture Decision: Lean Core + Extensible Plugins ✅
 
@@ -42,11 +42,11 @@ We've successfully built a **lean, extensible, production-ready** dashboard infr
 ### ✅ Days 5-6: CLI Integration
 
 - **280+ lines** of dashboard commands
-- `leo dashboard start` - Launch API server
-- `leo dashboard stop` - Graceful shutdown
-- `leo dashboard status` - Health check
-- `leo dashboard open` - Browser launch
-- `leo dashboard docs` - API documentation
+- `ingvar dashboard start` - Launch API server
+- `ingvar dashboard stop` - Graceful shutdown
+- `ingvar dashboard status` - Health check
+- `ingvar dashboard open` - Browser launch
+- `ingvar dashboard docs` - API documentation
 - Real-time hunt event logging
 - EventEmitter for event propagation
 
@@ -116,7 +116,7 @@ We've successfully built a **lean, extensible, production-ready** dashboard infr
 ## 🎯 Architecture Overview
 
 ```
-leo-workflow-kit (LEAN CORE)
+ingvar-kit (LEAN CORE)
 ├── Hunt/Team CLI (existing)
 ├── GitHub integration (existing)
 ├── Slack integration (existing)
@@ -139,28 +139,28 @@ leo-workflow-kit (LEAN CORE)
 ### Start API Server
 
 ```bash
-leo dashboard start
+ingvar dashboard start
 # API running on http://localhost:3000
 ```
 
 ### Check Status
 
 ```bash
-leo dashboard status
+ingvar dashboard status
 # Shows active hunts, team members, connection info
 ```
 
 ### List Plugins
 
 ```bash
-leo plugin list
+ingvar plugin list
 # Shows available plugins
 ```
 
 ### Create Custom Plugin
 
 ```bash
-leo plugin create my-dashboard
+ingvar plugin create my-dashboard
 # Generates template with examples
 ```
 
@@ -216,7 +216,7 @@ Target Completion:   Week 8 (November 21, 2025) ✅ ON TRACK
 ### Before (Days 1-2)
 
 ```javascript
-const APIServer = require("leo-workflow-kit/lib/team/api-server");
+const APIServer = require("ingvar-kit/lib/team/api-server");
 const server = new APIServer();
 await server.start(); // Returns this
 
@@ -229,16 +229,16 @@ await server.start(); // Returns this
 
 ```bash
 # CLI command
-leo dashboard start
+ingvar dashboard start
 
 # Plugin support
-leo plugin list
-leo plugin create my-dashboard
-leo plugin install leo-dashboard-web
-leo plugin start leo-web-dashboard
+ingvar plugin list
+ingvar plugin create my-dashboard
+ingvar plugin install leo-dashboard-web
+ingvar plugin start leo-web-dashboard
 
 # Full documentation
-leo dashboard docs
+ingvar dashboard docs
 ```
 
 ---

@@ -2,7 +2,7 @@
 
 > **Control your AI model quality vs cost trade-offs**
 
-LEO Workflow Kit v5.3.3+ gives you complete control over which AI models are used for your work. Choose between quality-first (best models), balanced (cost-optimized), or fixed single-model approaches.
+Ingvar Kit v5.3.3+ gives you complete control over which AI models are used for your work. Choose between quality-first (best models), balanced (cost-optimized), or fixed single-model approaches.
 
 ---
 
@@ -72,7 +72,7 @@ LEO Workflow Kit v5.3.3+ gives you complete control over which AI models are use
 
 **Important Notes:**
 
-- ⚠️ LEO accepts ANY model name - validation happens at the API provider level
+- ⚠️ Ingvar accepts ANY model name - validation happens at the API provider level
 - ✅ Perfect for beta testers, enterprise customers, or users with special access
 - ✅ System shows warnings but doesn't block you from using the model
 - 🔑 Make sure you have API credentials with access to the model
@@ -137,7 +137,7 @@ For better visibility and organization:
 }
 ```
 
-This adds your custom models to LEO's internal registry with metadata for better tracking.
+This adds your custom models to Ingvar's internal registry with metadata for better tracking.
 
 ---
 
@@ -295,7 +295,7 @@ This adds your custom models to LEO's internal registry with metadata for better
 
 ### Example 1: GitHub Copilot Replacement
 
-**Problem:** "I use Copilot Pro with GPT-4. LEO's cost optimization uses Claude Haiku which is a downgrade."
+**Problem:** "I use Copilot Pro with GPT-4. Ingvar's cost optimization uses Claude Haiku which is a downgrade."
 
 **Solution:**
 
@@ -314,7 +314,7 @@ This adds your custom models to LEO's internal registry with metadata for better
 
 ### Example 2: Startup on Budget
 
-**Problem:** "We love LEO but API costs are adding up. Need to optimize."
+**Problem:** "We love Ingvar but API costs are adding up. Need to optimize."
 
 **Solution:**
 
@@ -504,11 +504,11 @@ This adds your custom models to LEO's internal registry with metadata for better
 
 ### Q: Can I change modes dynamically?
 
-**A:** Yes! Just edit `.leorc.json` and the changes take effect immediately.
+**A:** Yes! Just edit `.ingvarrc.json` and the changes take effect immediately.
 
 ### Q: What if I run out of budget?
 
-**A:** LEO automatically falls back to cheaper models when budget is exceeded, regardless of your configuration.
+**A:** Ingvar automatically falls back to cheaper models when budget is exceeded, regardless of your configuration.
 
 ### Q: Is Claude 3.5 Sonnet better than GPT-4?
 
@@ -548,9 +548,9 @@ This adds your custom models to LEO's internal registry with metadata for better
 
 **To apply:**
 
-1. Edit `.leorc.json` in your project root
+1. Edit `.ingvarrc.json` in your project root
 2. Add/update the `model-selection` section
-3. Save and restart LEO
+3. Save and restart Ingvar
 4. Watch the verbose output to see models in action!
 
 ---

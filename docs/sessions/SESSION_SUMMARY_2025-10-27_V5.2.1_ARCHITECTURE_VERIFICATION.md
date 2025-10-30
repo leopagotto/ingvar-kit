@@ -26,7 +26,7 @@
 
 **This was the session's most important finding:**
 
-The LEO Workflow Kit uses an **AI-INSTRUCTION-BASED** architecture, not a **CODE-BASED** enforcement system.
+The Ingvar Kit uses an **AI-INSTRUCTION-BASED** architecture, not a **CODE-BASED** enforcement system.
 
 #### What We Found
 
@@ -62,7 +62,7 @@ The LEO Workflow Kit uses an **AI-INSTRUCTION-BASED** architecture, not a **CODE
 
 **This is BY DESIGN and is actually BRILLIANT:**
 
-| AI-Instruction Approach (What LEO Uses) | Code-Enforcement Approach (What LEO Avoids) |
+| AI-Instruction Approach (What Ingvar Uses) | Code-Enforcement Approach (What Ingvar Avoids) |
 | --------------------------------------- | ------------------------------------------- |
 | ✅ Flexible - Edit instructions         | ❌ Rigid - Requires code changes            |
 | ✅ Adaptable - AI handles edge cases    | ❌ Brittle - Breaks on unexpected inputs    |
@@ -286,7 +286,7 @@ Orchestrator Workflow = GitHub Copilot Reads & Follows Instructions Above
 
    ```bash
    npm publish --dry-run
-   # Package: leo-workflow-kit@5.2.1
+   # Package: ingvar-kit@5.2.1
    # Size: 322.3 KB
    # Files: 104
    # Result: ✅ Ready to publish
@@ -310,17 +310,17 @@ Orchestrator Workflow = GitHub Copilot Reads & Follows Instructions Above
 
 ```bash
 npm publish
-# + leo-workflow-kit@5.2.1
+# + ingvar-kit@5.2.1
 # ✅ Published successfully
 ```
 
 ### Verification
 
 ```bash
-npm view leo-workflow-kit version
+npm view ingvar-kit version
 # 5.2.1 ✅
 
-npm view leo-workflow-kit dist-tags
+npm view ingvar-kit dist-tags
 # { latest: '5.2.1' } ✅
 ```
 
@@ -413,7 +413,7 @@ function handleUserRequest(request) {
 }
 ```
 
-**LEO Approach:**
+**Ingvar Approach:**
 
 ```markdown
 # .github/copilot-instructions.md (AI reads this)
@@ -432,7 +432,7 @@ If simple → Proceed directly
 Route to appropriate specialist agent based on keywords
 ```
 
-**Why LEO's Approach Wins:**
+**Why Ingvar's Approach Wins:**
 
 - AI can adapt to variations
 - No code maintenance for workflow changes
@@ -544,21 +544,21 @@ Route to appropriate specialist agent based on keywords
 
 **Documentation:**
 
-- [CHANGELOG v5.2.1](https://github.com/leonpagotto/leo-kit/blob/main/CHANGELOG.md#521---2025-10-27)
-- [Architecture Clarification](https://github.com/leonpagotto/leo-kit/blob/main/docs/ARCHITECTURE_FLOW_CLARIFICATION.md)
-- [Architecture Diagram](https://github.com/leonpagotto/leo-kit/blob/main/diagrams/architecture.mmd)
+- [CHANGELOG v5.2.1](https://github.com/leopagotto/ingvar-kit/blob/main/CHANGELOG.md#521---2025-10-27)
+- [Architecture Clarification](https://github.com/leopagotto/ingvar-kit/blob/main/docs/ARCHITECTURE_FLOW_CLARIFICATION.md)
+- [Architecture Diagram](https://github.com/leopagotto/ingvar-kit/blob/main/diagrams/architecture.mmd)
 
 **GitHub:**
 
-- [Release v5.2.1](https://github.com/leonpagotto/leo-kit/releases/tag/v5.2.1)
-- [Issue #126](https://github.com/leonpagotto/leo-kit/issues/126) - README + diagram
-- [Issue #127](https://github.com/leonpagotto/leo-kit/issues/127) - Workflow verification
+- [Release v5.2.1](https://github.com/leopagotto/ingvar-kit/releases/tag/v5.2.1)
+- [Issue #126](https://github.com/leopagotto/ingvar-kit/issues/126) - README + diagram
+- [Issue #127](https://github.com/leopagotto/ingvar-kit/issues/127) - Workflow verification
 
 **npm:**
 
-- [Package Page](https://www.npmjs.com/package/leo-workflow-kit)
+- [Package Page](https://www.npmjs.com/package/ingvar-kit)
 - Version: 5.2.1
-- Installation: `npm install -g leo-workflow-kit@5.2.1`
+- Installation: `npm install -g ingvar-kit@5.2.1`
 
 ---
 
@@ -601,11 +601,11 @@ This session successfully:
 
 **Key Takeaway:**
 
-> The LEO Workflow Kit's AI-instruction-based architecture is not a limitation - it's a **superior design choice** that provides flexibility, adaptability, and natural interaction that code-based enforcement cannot match.
+> The Ingvar Kit's AI-instruction-based architecture is not a limitation - it's a **superior design choice** that provides flexibility, adaptability, and natural interaction that code-based enforcement cannot match.
 
 **Phase 2 remains complete.** This was a documentation and clarity patch, with zero functional changes. The system works exactly as designed - and now everyone understands **why** it's designed that way.
 
-**LEO roars with clarity!** 🎉
+**Ingvar roars with clarity!** 🎉
 
 ---
 

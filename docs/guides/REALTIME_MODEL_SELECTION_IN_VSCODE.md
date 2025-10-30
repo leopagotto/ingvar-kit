@@ -190,7 +190,7 @@ Left Side  │  Center                  │  Right Side (Priority)
            │  (File/Activity)         │
            │                          │ ✓ Hover to show full info
            │                          │ ↻ 🔧 backend → Claude-Opus
-           │                          │ (LEO Model Selector - Click for details)
+           │                          │ (Ingvar Model Selector - Click for details)
 ```
 
 ### Status Indicators
@@ -214,7 +214,7 @@ Left Side  │  Center                  │  Right Side (Priority)
 **Inactive:**
 
 ```
-⊘ LEO Ready                   ← Slash icon (no active task)
+⊘ Ingvar Ready                   ← Slash icon (no active task)
 ```
 
 ### Agent Emojis
@@ -296,7 +296,7 @@ async function executeFeature(request) {
 
     // Complete
     await orchestrator.completeTask({ success: true });
-    // ↑ Status bar returns to "LEO Ready"
+    // ↑ Status bar returns to "Ingvar Ready"
   } catch (error) {
     await orchestrator.completeTask({ success: false, error: error.message });
     throw error;
@@ -310,14 +310,14 @@ async function executeFeature(request) {
 
 ```bash
 # Show current model information
-Command: LEO: Show Current Model Info
+Command: Ingvar: Show Current Model Info
 Hotkey: (will appear in Command Palette)
 
 # Select model preference
-Command: LEO: Select Model Preference
+Command: Ingvar: Select Model Preference
 
 # Show model history
-Command: LEO: Show Model History
+Command: Ingvar: Show Model History
 ```
 
 ### Listening to Events
@@ -445,7 +445,7 @@ cp -r lib/vscode-extension/* ~/.vscode/extensions/leo-model-selector/
 Check status bar in VS Code - you should see:
 
 ```
-⊘ LEO Ready
+⊘ Ingvar Ready
 ```
 
 ---

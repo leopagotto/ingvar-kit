@@ -2,17 +2,17 @@
 
 > **Test Date**: 2025-01-XX
 > **Version**: v4.0.0-beta
-> **Tester**: LEO Agent System
+> **Tester**: Ingvar Agent System
 
 ---
 
 ## Test Overview
 
-This document covers end-to-end testing of the Multi-Agent Orchestration System introduced in LEO Workflow Kit v4.0.0.
+This document covers end-to-end testing of the Multi-Agent Orchestration System introduced in Ingvar Kit v4.0.0.
 
 ### Test Scope
 
-- ✅ Core CLI commands (`leo init`, `leo agent`)
+- ✅ Core CLI commands (`ingvar init`, `ingvar agent`)
 - ✅ Agent selection and configuration
 - ✅ AI instruction file generation
 - ✅ Multi-agent routing logic
@@ -28,7 +28,7 @@ This document covers end-to-end testing of the Multi-Agent Orchestration System 
 - **npm**: 10.9.2
 - **OS**: macOS
 - **GitHub CLI**: Installed and authenticated
-- **Test Repository**: `/Users/leo.de.souza1/leo-workflow-kit`
+- **Test Repository**: `/Users/leo.de.souza1/ingvar-kit`
 
 ---
 
@@ -36,22 +36,22 @@ This document covers end-to-end testing of the Multi-Agent Orchestration System 
 
 ### Scenario 1: Fresh Installation
 
-**Objective**: Verify `leo init` works with agent selection on a fresh project
+**Objective**: Verify `ingvar init` works with agent selection on a fresh project
 
 **Steps:**
 
 1. Create new empty directory
 2. Initialize git repository
-3. Run `leo init`
+3. Run `ingvar init`
 4. Select project type: fullstack
 5. Select agents: frontend, backend, testing
-6. Verify `.leorc.json` created
+6. Verify `.ingvarrc.json` created
 7. Verify AI instruction files generated
 
 **Expected Results:**
 
-- ✅ `.leorc.json` contains correct project-type
-- ✅ `.leorc.json` has agents section with frontend, backend, testing enabled
+- ✅ `.ingvarrc.json` contains correct project-type
+- ✅ `.ingvarrc.json` has agents section with frontend, backend, testing enabled
 - ✅ `.github/copilot-instructions.md` exists (~60-80KB)
 - ✅ `.cursorrules` exists (if Cursor selected)
 - ✅ `.clinerules` exists (if Cline selected)
@@ -63,11 +63,11 @@ This document covers end-to-end testing of the Multi-Agent Orchestration System 
 
 ### Scenario 2: Agent List Command
 
-**Objective**: Verify `leo agent list` displays correct agent status
+**Objective**: Verify `ingvar agent list` displays correct agent status
 
 **Steps:**
 
-1. Run `leo agent list` on LEO Kit project
+1. Run `ingvar agent list` on Ingvar Kit project
 2. Verify orchestrator shows as "ENABLED"
 3. Verify other agents show correct status
 4. Check for proper formatting and colors
@@ -86,7 +86,7 @@ This document covers end-to-end testing of the Multi-Agent Orchestration System 
 **Test Output:**
 
 ```
-🎯 LEO Multi-Agent System
+🎯 Ingvar Multi-Agent System
 
 Project Type: fullstack
 
@@ -118,22 +118,22 @@ Total: 2 agents enabled
 
 ### Scenario 3: Enable Agent
 
-**Objective**: Verify `leo agent enable` correctly enables an agent
+**Objective**: Verify `ingvar agent enable` correctly enables an agent
 
 **Steps:**
 
-1. Run `leo agent enable frontend`
+1. Run `ingvar agent enable frontend`
 2. Respond "n" to sync prompt (to test later)
-3. Verify `.leorc.json` updated
-4. Run `leo agent list` to confirm enabled
+3. Verify `.ingvarrc.json` updated
+4. Run `ingvar agent list` to confirm enabled
 5. Check success message
 
 **Expected Results:**
 
 - ✅ Success message: "frontend agent enabled"
-- ✅ `.leorc.json` has `"frontend": { "enabled": true }`
+- ✅ `.ingvarrc.json` has `"frontend": { "enabled": true }`
 - ✅ Prompt asks about syncing AI files
-- ✅ `leo agent list` shows frontend as ENABLED
+- ✅ `ingvar agent list` shows frontend as ENABLED
 
 **Status**: ✅ PASSED
 
@@ -143,13 +143,13 @@ Total: 2 agents enabled
 ✔ frontend agent enabled
 ? Regenerate AI instruction files with new agent? No
 
-💡 Run leo agent sync later to update AI files
+💡 Run ingvar agent sync later to update AI files
 ```
 
 **Verification:**
 
 ```bash
-cat .leorc.json | grep -A 2 '"agents"'
+cat .ingvarrc.json | grep -A 2 '"agents"'
 ```
 
 ```json
@@ -167,21 +167,21 @@ cat .leorc.json | grep -A 2 '"agents"'
 
 ### Scenario 4: Disable Agent
 
-**Objective**: Verify `leo agent disable` correctly disables an agent
+**Objective**: Verify `ingvar agent disable` correctly disables an agent
 
 **Steps:**
 
-1. Run `leo agent disable frontend`
+1. Run `ingvar agent disable frontend`
 2. Respond "n" to sync prompt
-3. Verify `.leorc.json` updated
-4. Run `leo agent list` to confirm disabled
+3. Verify `.ingvarrc.json` updated
+4. Run `ingvar agent list` to confirm disabled
 
 **Expected Results:**
 
 - ✅ Success message: "frontend agent disabled"
-- ✅ `.leorc.json` has `"frontend": { "enabled": false }` or removed
+- ✅ `.ingvarrc.json` has `"frontend": { "enabled": false }` or removed
 - ✅ Prompt asks about syncing
-- ✅ `leo agent list` shows frontend as DISABLED
+- ✅ `ingvar agent list` shows frontend as DISABLED
 
 **Status**: ✅ PASSED
 
@@ -191,7 +191,7 @@ cat .leorc.json | grep -A 2 '"agents"'
 ✔ frontend agent disabled
 ? Regenerate AI instruction files without this agent? No
 
-💡 Run leo agent sync later to update AI files
+💡 Run ingvar agent sync later to update AI files
 ```
 
 **Actual**: Matches expected ✅
@@ -200,13 +200,13 @@ cat .leorc.json | grep -A 2 '"agents"'
 
 ### Scenario 5: Agent Info
 
-**Objective**: Verify `leo agent info` displays detailed agent information
+**Objective**: Verify `ingvar agent info` displays detailed agent information
 
 **Steps:**
 
-1. Run `leo agent info frontend`
+1. Run `ingvar agent info frontend`
 2. Verify description, status, responsibilities, triggers shown
-3. Run `leo agent info orchestrator`
+3. Run `ingvar agent info orchestrator`
 4. Verify orchestrator shows "ALWAYS ENABLED"
 
 **Expected Results:**
@@ -243,7 +243,7 @@ Routing Triggers:
   • Files: *.jsx, *.tsx, *.vue, *.css, *.scss
 
 Commands:
-  leo agent disable frontend  Disable this agent
+  ingvar agent disable frontend  Disable this agent
 ```
 
 **Test Output (Orchestrator):**
@@ -261,7 +261,7 @@ Responsibilities:
   • Analyze user requests to identify task type
   • Route to appropriate specialized agent(s)
   • Coordinate multi-agent tasks
-  • Enforce LEO workflow rules
+  • Enforce Ingvar workflow rules
   • Handle cross-cutting concerns
 
 Routing Triggers:
@@ -274,12 +274,12 @@ Routing Triggers:
 
 ### Scenario 6: Agent Sync
 
-**Objective**: Verify `leo agent sync` regenerates AI instruction files
+**Objective**: Verify `ingvar agent sync` regenerates AI instruction files
 
 **Steps:**
 
 1. Enable frontend agent
-2. Run `leo agent sync`
+2. Run `ingvar agent sync`
 3. Verify AI instruction files updated
 4. Check file sizes (~60-80KB with orchestrator + frontend)
 
@@ -316,7 +316,7 @@ ls -lh .github/copilot-instructions.md
 
 **Steps:**
 
-1. Run `leo agent enable invalid-agent`
+1. Run `ingvar agent enable invalid-agent`
 2. Verify error message shown
 3. Check that valid agents are listed
 
@@ -336,7 +336,7 @@ ls -lh .github/copilot-instructions.md
 
 **Steps:**
 
-1. Run `leo agent disable orchestrator`
+1. Run `ingvar agent disable orchestrator`
 2. Verify rejection message shown
 
 **Expected Results:**
@@ -356,7 +356,7 @@ ls -lh .github/copilot-instructions.md
 **Steps:**
 
 1. Enable 3 agents (frontend, backend, testing)
-2. Run `leo agent sync`
+2. Run `ingvar agent sync`
 3. Check `.github/copilot-instructions.md`
 4. Verify orchestrator instructions present
 5. Verify enabled agent instructions present
@@ -382,13 +382,13 @@ ls -lh .github/copilot-instructions.md
 **Steps:**
 
 1. Enable frontend and backend agents
-2. Run `leo agent list` - verify shown as enabled
-3. Run `leo agent info frontend` - verify shown as enabled
-4. Re-run `leo agent list` - verify still enabled
+2. Run `ingvar agent list` - verify shown as enabled
+3. Run `ingvar agent info frontend` - verify shown as enabled
+4. Re-run `ingvar agent list` - verify still enabled
 
 **Expected Results:**
 
-- ✅ Agent status persists in `.leorc.json`
+- ✅ Agent status persists in `.ingvarrc.json`
 - ✅ All commands read same configuration
 - ✅ No configuration drift
 
@@ -420,12 +420,12 @@ ls -lh .github/copilot-instructions.md
 
 ### Scenario 12: Backward Compatibility (v3.x Config)
 
-**Objective**: Verify v4.0.0 works with v3.x `.leorc.json` files
+**Objective**: Verify v4.0.0 works with v3.x `.ingvarrc.json` files
 
 **Steps:**
 
-1. Create v3.x-style `.leorc.json` (without agents section)
-2. Run `leo agent list`
+1. Create v3.x-style `.ingvarrc.json` (without agents section)
+2. Run `ingvar agent list`
 3. Verify graceful handling (all agents shown as disabled)
 4. Enable an agent
 5. Verify agents section added to config
@@ -448,8 +448,8 @@ ls -lh .github/copilot-instructions.md
 **Steps:**
 
 1. Enable all agents (frontend, backend, devops, testing, documentation)
-2. Run `leo agent list`
-3. Run `leo agent sync`
+2. Run `ingvar agent list`
+3. Run `ingvar agent sync`
 4. Check generated AI file sizes
 
 **Expected Results:**
@@ -469,12 +469,12 @@ ls -lh .github/copilot-instructions.md
 
 | Test                      | Command                       | Status    |
 | ------------------------- | ----------------------------- | --------- |
-| Agent List                | `leo agent list`              | ✅ PASSED |
-| Enable Agent              | `leo agent enable frontend`   | ✅ PASSED |
-| Disable Agent             | `leo agent disable frontend`  | ✅ PASSED |
-| Agent Info (Frontend)     | `leo agent info frontend`     | ✅ PASSED |
-| Agent Info (Orchestrator) | `leo agent info orchestrator` | ✅ PASSED |
-| Agent Sync                | `leo agent sync`              | ✅ PASSED |
+| Agent List                | `ingvar agent list`              | ✅ PASSED |
+| Enable Agent              | `ingvar agent enable frontend`   | ✅ PASSED |
+| Disable Agent             | `ingvar agent disable frontend`  | ✅ PASSED |
+| Agent Info (Frontend)     | `ingvar agent info frontend`     | ✅ PASSED |
+| Agent Info (Orchestrator) | `ingvar agent info orchestrator` | ✅ PASSED |
+| Agent Sync                | `ingvar agent sync`              | ✅ PASSED |
 
 **Results**: 6/6 tests passed (100%)
 
@@ -511,7 +511,7 @@ All automated tests passed successfully. No bugs or issues discovered during aut
 3. ✅ **Error Messages** - Clear and helpful
 4. ✅ **Documentation** - Comprehensive guide created
 5. ⏳ **Manual Testing** - Complete remaining scenarios before release
-6. ⏳ **Fresh Project Test** - Test full `leo init` flow on empty project
+6. ⏳ **Fresh Project Test** - Test full `ingvar init` flow on empty project
 7. ⏳ **AI File Verification** - Manually inspect generated instruction files
 
 ### Test Coverage Improvements
@@ -545,7 +545,7 @@ For future versions, consider:
 
 **Confidence Level**: **HIGH** for core CLI functionality
 
-The multi-agent system's core CLI commands (`leo agent list`, `enable`, `disable`, `info`, `sync`) are working perfectly. All automated tests passed without issues.
+The multi-agent system's core CLI commands (`ingvar agent list`, `enable`, `disable`, `info`, `sync`) are working perfectly. All automated tests passed without issues.
 
 **Manual testing recommended** before final v4.0.0 release to verify:
 
@@ -559,5 +559,5 @@ The multi-agent system's core CLI commands (`leo agent list`, `enable`, `disable
 ---
 
 **Test Report Generated**: 2025-01-XX
-**Tested By**: LEO Agent System (Orchestrator + Documentation Agent)
+**Tested By**: Ingvar Agent System (Orchestrator + Documentation Agent)
 **Sign-off**: ✅ Approved for v4.0.0 Beta Release

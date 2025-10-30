@@ -1,6 +1,6 @@
 # 📊 Spec Evolution Tracking Guide
 
-Track how your specs evolve over time with `leo spec-diff` - understand requirement changes, see what was added or removed, and maintain a complete audit trail of your specification history.
+Track how your specs evolve over time with `ingvar spec-diff` - understand requirement changes, see what was added or removed, and maintain a complete audit trail of your specification history.
 
 ---
 
@@ -21,7 +21,7 @@ Spec evolution tracking helps you:
 ### View All Changes
 
 ```bash
-leo spec-diff 42
+ingvar spec-diff 42
 ```
 
 Shows all changes between all versions with color-coded diff:
@@ -33,7 +33,7 @@ Shows all changes between all versions with color-coded diff:
 ### View Timeline
 
 ```bash
-leo spec-diff 42 --timeline
+ingvar spec-diff 42 --timeline
 ```
 
 Shows chronological history of all edits with timestamps and authors.
@@ -41,7 +41,7 @@ Shows chronological history of all edits with timestamps and authors.
 ### View Summary Statistics
 
 ```bash
-leo spec-diff 42 --summary
+ingvar spec-diff 42 --summary
 ```
 
 Shows aggregated statistics: total versions, items added/removed, most modified sections, contributors.
@@ -53,13 +53,13 @@ Shows aggregated statistics: total versions, items added/removed, most modified 
 ### 1. Full Diff View (Default)
 
 ```bash
-leo spec-diff <issue-number>
+ingvar spec-diff <issue-number>
 ```
 
 **Example:**
 
 ```bash
-leo spec-diff 80
+ingvar spec-diff 80
 ```
 
 **Output:**
@@ -86,13 +86,13 @@ leo spec-diff 80
 ### 2. Timeline View
 
 ```bash
-leo spec-diff <issue-number> --timeline
+ingvar spec-diff <issue-number> --timeline
 ```
 
 **Example:**
 
 ```bash
-leo spec-diff 80 --timeline
+ingvar spec-diff 80 --timeline
 ```
 
 **Output:**
@@ -118,13 +118,13 @@ leo spec-diff 80 --timeline
 ### 3. Summary Statistics
 
 ```bash
-leo spec-diff <issue-number> --summary
+ingvar spec-diff <issue-number> --summary
 ```
 
 **Example:**
 
 ```bash
-leo spec-diff 80 --summary
+ingvar spec-diff 80 --summary
 ```
 
 **Output:**
@@ -161,20 +161,20 @@ Contributors:
 Compare specific version range instead of all versions:
 
 ```bash
-leo spec-diff <issue-number> --from <version> --to <version>
+ingvar spec-diff <issue-number> --from <version> --to <version>
 ```
 
 **Examples:**
 
 ```bash
 # Compare v1 to v3
-leo spec-diff 80 --from 1 --to 3
+ingvar spec-diff 80 --from 1 --to 3
 
 # Compare latest 2 versions
-leo spec-diff 80 --from 4 --to 5
+ingvar spec-diff 80 --from 4 --to 5
 
 # From v2 to latest
-leo spec-diff 80 --from 2
+ingvar spec-diff 80 --from 2
 ```
 
 **Use Cases:**
@@ -189,7 +189,7 @@ leo spec-diff 80 --from 2
 Focus on changes to a specific section:
 
 ```bash
-leo spec-diff <issue-number> --section <section-name>
+ingvar spec-diff <issue-number> --section <section-name>
 ```
 
 **Available Sections:**
@@ -207,13 +207,13 @@ leo spec-diff <issue-number> --section <section-name>
 
 ```bash
 # Only requirements changes
-leo spec-diff 80 --section requirements
+ingvar spec-diff 80 --section requirements
 
 # Only user stories changes
-leo spec-diff 80 --section userStories
+ingvar spec-diff 80 --section userStories
 
 # Only acceptance criteria changes
-leo spec-diff 80 --section acceptanceCriteria
+ingvar spec-diff 80 --section acceptanceCriteria
 ```
 
 **Use Cases:**
@@ -228,17 +228,17 @@ leo spec-diff 80 --section acceptanceCriteria
 Control how much text is shown for long changes:
 
 ```bash
-leo spec-diff <issue-number> --max-length <characters>
+ingvar spec-diff <issue-number> --max-length <characters>
 ```
 
 **Examples:**
 
 ```bash
 # Show only 50 characters
-leo spec-diff 80 --max-length 50
+ingvar spec-diff 80 --max-length 50
 
 # Show full text (500 characters)
-leo spec-diff 80 --max-length 500
+ingvar spec-diff 80 --max-length 500
 ```
 
 **Default:** 100 characters
@@ -251,16 +251,16 @@ You can combine multiple options for precise queries:
 
 ```bash
 # Recent requirements changes only
-leo spec-diff 80 --from 3 --section requirements
+ingvar spec-diff 80 --from 3 --section requirements
 
 # Summary for specific version range
-leo spec-diff 80 --from 1 --to 3 --summary
+ingvar spec-diff 80 --from 1 --to 3 --summary
 
 # Timeline for recent versions
-leo spec-diff 80 --from 4 --timeline
+ingvar spec-diff 80 --from 4 --timeline
 
 # Detailed diff with longer text
-leo spec-diff 80 --section context --max-length 200
+ingvar spec-diff 80 --section context --max-length 200
 ```
 
 ---
@@ -308,10 +308,10 @@ Context:
 
 ```bash
 # View all requirement changes
-leo spec-diff 42 --section requirements
+ingvar spec-diff 42 --section requirements
 
 # Summary of how much changed
-leo spec-diff 42 --summary
+ingvar spec-diff 42 --summary
 ```
 
 ### 2. Developer - Review Acceptance Criteria Updates
@@ -320,10 +320,10 @@ leo spec-diff 42 --summary
 
 ```bash
 # See only acceptance criteria changes
-leo spec-diff 42 --section acceptanceCriteria
+ingvar spec-diff 42 --section acceptanceCriteria
 
 # Compare before/after specific edit
-leo spec-diff 42 --from 2 --to 3 --section acceptanceCriteria
+ingvar spec-diff 42 --from 2 --to 3 --section acceptanceCriteria
 ```
 
 ### 3. Team Lead - Sprint Review
@@ -332,13 +332,13 @@ leo spec-diff 42 --from 2 --to 3 --section acceptanceCriteria
 
 ```bash
 # Timeline of edits
-leo spec-diff 42 --timeline
+ingvar spec-diff 42 --timeline
 
 # Summary statistics
-leo spec-diff 42 --summary
+ingvar spec-diff 42 --summary
 
 # Detailed diff
-leo spec-diff 42
+ingvar spec-diff 42
 ```
 
 ### 4. QA - Verify Test Coverage
@@ -347,10 +347,10 @@ leo spec-diff 42
 
 ```bash
 # See what requirements were added
-leo spec-diff 42 --section requirements
+ingvar spec-diff 42 --section requirements
 
 # Check user stories evolution
-leo spec-diff 42 --section userStories
+ingvar spec-diff 42 --section userStories
 ```
 
 ### 5. Stakeholder - Audit Trail
@@ -359,13 +359,13 @@ leo spec-diff 42 --section userStories
 
 ```bash
 # Complete timeline with authors
-leo spec-diff 42 --timeline
+ingvar spec-diff 42 --timeline
 
 # Statistical summary
-leo spec-diff 42 --summary
+ingvar spec-diff 42 --summary
 
 # Full diff for documentation
-leo spec-diff 42 > spec-42-evolution.txt
+ingvar spec-diff 42 > spec-42-evolution.txt
 ```
 
 ---
@@ -421,7 +421,7 @@ During sprint reviews, show the timeline to highlight iteration.
 Save diff output to files for compliance or documentation:
 
 ```bash
-leo spec-diff 42 > docs/spec-42-evolution.md
+ingvar spec-diff 42 > docs/spec-42-evolution.md
 ```
 
 ### 6. **Combine with Git**
@@ -430,37 +430,37 @@ Track spec evolution alongside code changes in your repository.
 
 ---
 
-## 🔗 Integration with LEO Workflow
+## 🔗 Integration with Ingvar Workflow
 
 ### Workflow Integration
 
 ```bash
 # 1. Create spec
-leo spec new "Add payment processing"  # Creates #42
+ingvar spec new "Add payment processing"  # Creates #42
 
 # 2. Review and clarify
-leo clarify 42
+ingvar clarify 42
 
 # 3. Update spec based on feedback (edit issue #42 on GitHub)
 
 # 4. View changes
-leo spec-diff 42 --section requirements
+ingvar spec-diff 42 --section requirements
 
 # 5. Create plan
-leo plan 42
+ingvar plan 42
 
 # 6. Track ongoing changes
-leo spec-diff 42 --from 3 --timeline
+ingvar spec-diff 42 --from 3 --timeline
 ```
 
 ### With Task Management
 
 ```bash
 # Create tasks from spec
-leo tasks create 42 --create-issues
+ingvar tasks create 42 --create-issues
 
 # Spec requirements change - view diff
-leo spec-diff 42 --section requirements
+ingvar spec-diff 42 --section requirements
 
 # Update child task issues to match
 # (manual step: update child issues based on diff)
@@ -473,7 +473,7 @@ leo spec-diff 42 --section requirements
 ### Example 1: E-commerce Feature Evolution
 
 ```bash
-$ leo spec-diff 101 --summary
+$ ingvar spec-diff 101 --summary
 
 📊 Spec Evolution Summary
 
@@ -500,7 +500,7 @@ Contributors:
 ### Example 2: Bug Fix Scope Changes
 
 ```bash
-$ leo spec-diff 52 --section acceptanceCriteria
+$ ingvar spec-diff 52 --section acceptanceCriteria
 
 📊 Analyzing spec evolution for issue #52...
 
@@ -516,7 +516,7 @@ $ leo spec-diff 52 --section acceptanceCriteria
 ### Example 3: Timeline for Sprint Review
 
 ```bash
-$ leo spec-diff 75 --timeline
+$ ingvar spec-diff 75 --timeline
 
 📅 Spec Evolution Timeline
 
@@ -545,49 +545,49 @@ $ leo spec-diff 75 --timeline
 
 ```bash
 # See only the last edit
-leo spec-diff 42 --from 4 --to 5
+ingvar spec-diff 42 --from 4 --to 5
 ```
 
 ### Tip 2: Find Who Changed What
 
 ```bash
 # Summary shows contributors
-leo spec-diff 42 --summary
+ingvar spec-diff 42 --summary
 ```
 
 ### Tip 3: Export for Email/Slack
 
 ```bash
 # Copy output to clipboard (macOS)
-leo spec-diff 42 | pbcopy
+ingvar spec-diff 42 | pbcopy
 
 # Save to file
-leo spec-diff 42 > spec-changes.txt
+ingvar spec-diff 42 > spec-changes.txt
 ```
 
 ### Tip 4: Compare Original vs Current
 
 ```bash
 # Full evolution from start to now
-leo spec-diff 42
+ingvar spec-diff 42
 
 # Just original vs latest (skip intermediate)
-leo spec-diff 42 --from 1 --to $(leo spec-diff 42 --timeline | grep -c "Version")
+ingvar spec-diff 42 --from 1 --to $(ingvar spec-diff 42 --timeline | grep -c "Version")
 ```
 
 ### Tip 5: Focus on User-Facing Changes
 
 ```bash
 # User stories and acceptance criteria only
-leo spec-diff 42 --section userStories
-leo spec-diff 42 --section acceptanceCriteria
+ingvar spec-diff 42 --section userStories
+ingvar spec-diff 42 --section acceptanceCriteria
 ```
 
 ---
 
 ## 🔮 Future Enhancements
 
-Coming soon to `leo spec-diff`:
+Coming soon to `ingvar spec-diff`:
 
 - **Semantic Diff** - Understand meaning changes, not just text
 - **Change Annotations** - Link changes to commits/PRs
@@ -600,13 +600,13 @@ Coming soon to `leo spec-diff`:
 
 ## 📚 Related Commands
 
-- `leo spec new` - Create new spec issue
-- `leo clarify` - Generate clarifying questions
-- `leo plan` - Create implementation plan
-- `leo tasks create` - Generate task checklists
+- `ingvar spec new` - Create new spec issue
+- `ingvar clarify` - Generate clarifying questions
+- `ingvar plan` - Create implementation plan
+- `ingvar tasks create` - Generate task checklists
 
 ---
 
 **Track your spec evolution. Understand every change. Build better products.**
 
-`leo spec-diff` - Making requirement changes transparent and traceable 📊
+`ingvar spec-diff` - Making requirement changes transparent and traceable 📊

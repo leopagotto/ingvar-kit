@@ -43,7 +43,7 @@
 ### 1. User Guide (`docs/USER_GUIDE.md`)
 
 ```markdown
-# LEO Kit 5.0.0 - User Guide
+# Ingvar Kit 5.0.0 - User Guide
 
 ## Getting Started
 
@@ -77,7 +77,7 @@
 ### 2. Setup & Installation Guide (`docs/SETUP.md`)
 
 ```markdown
-# LEO Kit 5.0.0 - Setup Guide
+# Ingvar Kit 5.0.0 - Setup Guide
 
 ## Prerequisites
 
@@ -117,14 +117,14 @@
 
 ## CLI Commands
 
-- leo spec init
-- leo spec constitution
-- leo spec specify
-- leo spec plan
-- leo spec tasks
-- leo spec analyze
-- leo spec implement
-- leo spec status
+- ingvar spec init
+- ingvar spec constitution
+- ingvar spec specify
+- ingvar spec plan
+- ingvar spec tasks
+- ingvar spec analyze
+- ingvar spec implement
+- ingvar spec status
 
 ## REST API
 
@@ -152,15 +152,15 @@ npm install @leo/kit
 
 ## Initialize
 
-leo spec init my-feature
+ingvar spec init my-feature
 
 ## Define
 
-leo spec specify
+ingvar spec specify
 
 ## Generate
 
-leo spec implement
+ingvar spec implement
 
 ## Done!
 
@@ -177,7 +177,7 @@ Your code is ready in .leo/generated/
 ### 6. Migration Guide (`docs/MIGRATION_V5.md`)
 
 ```markdown
-# Migrating from LEO Kit 4.x to 5.0.0
+# Migrating from Ingvar Kit 4.x to 5.0.0
 
 ## Breaking Changes
 
@@ -202,7 +202,7 @@ Your code is ready in .leo/generated/
 ### 7. Contributing Guide (`CONTRIBUTING.md`)
 
 ```markdown
-# Contributing to LEO Kit
+# Contributing to Ingvar Kit
 
 ## Getting Started
 
@@ -236,7 +236,7 @@ Your code is ready in .leo/generated/
 ### 8. Architecture Guide (`docs/ARCHITECTURE.md`)
 
 ```markdown
-# LEO Kit 5.0.0 Architecture
+# Ingvar Kit 5.0.0 Architecture
 
 ## System Layers
 
@@ -385,7 +385,7 @@ CHANGELOG.md                                (5.0.0 release notes)
 
 **Section 1: Getting Started**
 
-- What is LEO Kit?
+- What is Ingvar Kit?
 - Installation
 - First command
 - Key concepts
@@ -438,10 +438,10 @@ CHANGELOG.md                                (5.0.0 release notes)
 
 **CLI Commands**
 
-- leo spec init
-- leo spec implement
-- leo plugin create
-- leo dashboard start
+- ingvar spec init
+- ingvar spec implement
+- ingvar plugin create
+- ingvar dashboard start
 
 **Configuration**
 
@@ -556,9 +556,9 @@ examples/spec-cli-app/
 ## 📢 Announcement Template
 
 ```markdown
-🚀 **LEO Kit 5.0.0 Released!**
+🚀 **Ingvar Kit 5.0.0 Released!**
 
-We're excited to announce LEO Kit 5.0.0 with major new features:
+We're excited to announce Ingvar Kit 5.0.0 with major new features:
 
 ✨ **What's New:**
 
@@ -572,11 +572,11 @@ We're excited to announce LEO Kit 5.0.0 with major new features:
 npm install @leo/kit@5.0.0
 
 📖 **Get Started:**
-leo spec init my-feature
-leo spec implement
+ingvar spec init my-feature
+ingvar spec implement
 
 💻 **Documentation:**
-https://github.com/leonpagotto/leo-kit/blob/main/docs/
+https://github.com/leopagotto/ingvar-kit/blob/main/docs/
 
 🎯 **Features:**
 
@@ -592,9 +592,9 @@ Special thanks to all contributors!
 
 📞 **Support:**
 
-- Issues: https://github.com/leonpagotto/leo-kit/issues
-- Discussions: https://github.com/leonpagotto/leo-kit/discussions
-- Docs: https://github.com/leonpagotto/leo-kit/tree/main/docs
+- Issues: https://github.com/leopagotto/ingvar-kit/issues
+- Discussions: https://github.com/leopagotto/ingvar-kit/discussions
+- Docs: https://github.com/leopagotto/ingvar-kit/tree/main/docs
 ```
 
 ---

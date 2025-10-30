@@ -265,7 +265,7 @@ Break `lib/copilot-instructions-template.js` into separate section files in `lib
 
 ---
 
-## 🔧 Phase 3: Update `leo init` Command
+## 🔧 Phase 3: Update `ingvar init` Command
 
 ### Add Project Type Selection
 
@@ -326,7 +326,7 @@ fs.writeFileSync('.github/copilot-instructions.md', instructions);
 ### Save Configuration
 
 \`\`\`javascript
-// Save to .leorc.json
+// Save to .ingvarrc.json
 const leoConfig = {
 projectType: answers.projectType,
 copilotSections: getSectionsForType(answers.projectType),
@@ -334,12 +334,12 @@ initialized: true,
 version: '2.5.0'
 };
 
-fs.writeFileSync('.leorc.json', JSON.stringify(leoConfig, null, 2));
+fs.writeFileSync('.ingvarrc.json', JSON.stringify(leoConfig, null, 2));
 \`\`\`
 
 ---
 
-## 🎛️ Phase 4: Add `leo config` Command
+## 🎛️ Phase 4: Add `ingvar config` Command
 
 ### New Command: `lib/commands/config.js`
 
@@ -350,7 +350,7 @@ const { generate, getProjectTypes, getSections } = require('../copilot-instructi
 
 program
 .command('config')
-.description('Configure LEO Kit settings')
+.description('Configure Ingvar Kit settings')
 .option('--project-type <type>', 'Change project type')
 .option('--add-section <section>', 'Add a Copilot instruction section')
 .option('--remove-section <section>', 'Remove a Copilot instruction section')
@@ -367,35 +367,35 @@ program
 
 # Change project type
 
-leo config --project-type frontend
+ingvar config --project-type frontend
 
 # Add SEO section to backend project
 
-leo config --add-section seo
+ingvar config --add-section seo
 
 # Remove UI section
 
-leo config --remove-section ui
+ingvar config --remove-section ui
 
 # List available types
 
-leo config --list-types
+ingvar config --list-types
 
 # Interactive configuration
 
-leo config
+ingvar config
 \`\`\`
 
 ---
 
-## 🔄 Phase 5: Add `leo copilot:refresh` Command
+## 🔄 Phase 5: Add `ingvar copilot:refresh` Command
 
 ### Regenerate Instructions
 
 \`\`\`bash
-leo copilot:refresh
+ingvar copilot:refresh
 
-# Reads .leorc.json and regenerates .github/copilot-instructions.md
+# Reads .ingvarrc.json and regenerates .github/copilot-instructions.md
 
 \`\`\`
 
@@ -436,7 +436,7 @@ leo copilot:refresh
 - [ ] Add project type prompt to init.js
 - [ ] Implement auto-detection logic
 - [ ] Update instruction generation to use new system
-- [ ] Save configuration to .leorc.json
+- [ ] Save configuration to .ingvarrc.json
 - [ ] Test init with each project type
 - [ ] Update non-interactive mode handling
 
@@ -455,7 +455,7 @@ leo copilot:refresh
 
 - [ ] Create lib/commands/copilot.js
 - [ ] Implement refresh subcommand
-- [ ] Read .leorc.json configuration
+- [ ] Read .ingvarrc.json configuration
 - [ ] Regenerate instructions
 - [ ] Confirm to user
 
@@ -465,7 +465,7 @@ leo copilot:refresh
 - [ ] Create docs/guides/PROJECT_TYPES.md
 - [ ] Update AUTO_INITIALIZATION.md
 - [ ] Add examples for each project type
-- [ ] Document leo config command
+- [ ] Document ingvar config command
 - [ ] Add migration guide from v2.4.0
 
 ### Phase 7: Testing
@@ -488,7 +488,7 @@ leo copilot:refresh
 - ✅ All 6 project types generate correct instructions
 - ✅ File sizes match estimates (±10%)
 - ✅ Auto-detection works for common frameworks
-- ✅ Configuration persists in .leorc.json
+- ✅ Configuration persists in .ingvarrc.json
 - ✅ Backward compatible (defaults to fullstack)
 - ✅ No breaking changes to existing installs
 - ✅ Documentation complete and clear

@@ -119,7 +119,7 @@
 
 **Objective:** Wire dashboard into CLI commands
 
-- Add `leo hunt start-dashboard` command
+- Add `ingvar hunt start-dashboard` command
 - Auto-launch dashboard in browser
 - CLI authentication flow
 - Real-time updates in CLI while dashboard is open
@@ -309,7 +309,7 @@ Overall:              ████░░░░░░░░░░░░  30% 🟡
 
 ## 🔗 Related Resources
 
-### LEO Workflow Kit
+### Ingvar Kit
 
 - [Main README](../README.md)
 - [Installation Guide](./setup/INSTALLATION.md)

@@ -105,15 +105,15 @@
 ### Live Claude Integration
 
 ```
-leo spec init feature
+ingvar spec init feature
   ↓
-leo spec constitution
+ingvar spec constitution
   ↓
-leo spec specify
+ingvar spec specify
   ↓
-leo spec plan
+ingvar spec plan
   ↓
-leo spec implement  ← Claude generates code!
+ingvar spec implement  ← Claude generates code!
   ↓
 Code saved to .leo/generated/feature/
 ```
@@ -191,37 +191,37 @@ echo "ANTHROPIC_API_KEY=sk-ant-..." >> .env
 
 ```bash
 # 1. Initialize spec
-leo spec init user-dashboard
+ingvar spec init user-dashboard
 
 # 2. Define principles
-leo spec constitution
+ingvar spec constitution
 # [Edit constitution.md with your project principles]
 
 # 3. Write requirements
-leo spec specify
+ingvar spec specify
 # [Edit specification.md with features]
 
 # 4. Plan architecture
-leo spec plan
+ingvar spec plan
 # [Edit plan.md with tech stack]
 
 # 5. Generate tasks
-leo spec tasks
+ingvar spec tasks
 # [Auto-generates tasks from spec]
 
 # 6. Analyze spec
-leo spec analyze
+ingvar spec analyze
 # [Validates completeness]
 
 # 7. Generate code with Claude!
-leo spec implement
+ingvar spec implement
 # 🤖 Generating Code with AI
 # Using provider: claude
 # Generating code... (this may take a moment)
 # ✅ Code generated successfully!
 
 # 8. Check status
-leo spec status
+ingvar spec status
 # Shows 100% complete
 ```
 
@@ -286,7 +286,7 @@ npm start
 
 - ✅ Error handling comprehensive
 - ✅ Comments for all new methods
-- ✅ Follows LEO coding standards
+- ✅ Follows Ingvar coding standards
 - ✅ Clean, maintainable code
 
 ### Documentation
@@ -304,7 +304,7 @@ npm start
 ### Architecture
 
 ```
-User Command: leo spec implement
+User Command: ingvar spec implement
         ↓
 SpecCommands.implement()
         ↓
@@ -437,8 +437,8 @@ All acceptance criteria from Issue #58 met:
 - **Quick Start:**
   ```bash
   export ANTHROPIC_API_KEY="sk-ant-..."
-  leo spec init my-feature
-  leo spec implement
+  ingvar spec init my-feature
+  ingvar spec implement
   ```
 - **API Docs:** https://docs.anthropic.com
 - **GitHub Issue:** #58

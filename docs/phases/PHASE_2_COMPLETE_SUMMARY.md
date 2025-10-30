@@ -22,9 +22,9 @@ Phase 2 delivered a complete **GitHub-native specification workflow** that elimi
 **Commands:**
 
 ```bash
-leo tasks create <issue>                 # Checklist mode (default)
-leo tasks create <issue> --create-issues # Child issues mode
-leo tasks status <issue>                 # Progress tracking
+ingvar tasks create <issue>                 # Checklist mode (default)
+ingvar tasks create <issue> --create-issues # Child issues mode
+ingvar tasks status <issue>                 # Progress tracking
 ```
 
 **Impact:**
@@ -44,11 +44,11 @@ leo tasks status <issue>                 # Progress tracking
 **Commands:**
 
 ```bash
-leo spec-diff <issue>                    # Standard diff view
-leo spec-diff <issue> --timeline         # Chronological history
-leo spec-diff <issue> --summary          # Aggregate statistics
-leo spec-diff <issue> --from 2 --to 5    # Version range
-leo spec-diff <issue> --section requirements # Section filter
+ingvar spec-diff <issue>                    # Standard diff view
+ingvar spec-diff <issue> --timeline         # Chronological history
+ingvar spec-diff <issue> --summary          # Aggregate statistics
+ingvar spec-diff <issue> --from 2 --to 5    # Version range
+ingvar spec-diff <issue> --section requirements # Section filter
 ```
 
 **Impact:**
@@ -70,9 +70,9 @@ leo spec-diff <issue> --section requirements # Section filter
 **Commands:**
 
 ```bash
-leo spec-extend <issue> <description>              # Basic extension
-leo spec-extend <issue> <description> --create-issues # With child issues
-leo spec-extend <issue> <description> --no-update  # Preview mode
+ingvar spec-extend <issue> <description>              # Basic extension
+ingvar spec-extend <issue> <description> --create-issues # With child issues
+ingvar spec-extend <issue> <description> --no-update  # Preview mode
 ```
 
 **Impact:**
@@ -114,10 +114,10 @@ leo spec-extend <issue> <description> --no-update  # Preview mode
 ### Commands Created
 
 - **Total:** 8 new commands
-  - `leo tasks create` (2 modes)
-  - `leo tasks status`
-  - `leo spec-diff` (6 options)
-  - `leo spec-extend` (3 options)
+  - `ingvar tasks create` (2 modes)
+  - `ingvar tasks status`
+  - `ingvar spec-diff` (6 options)
+  - `ingvar spec-extend` (3 options)
 
 ### Files Created
 
@@ -145,9 +145,9 @@ leo spec-extend <issue> <description> --no-update  # Preview mode
 
 ## 🔥 Key Differentiators
 
-### LEO vs GitHub Spec Kit
+### Ingvar vs GitHub Spec Kit
 
-| **Feature**         | **LEO (GitHub-Native)** | **Spec Kit (File-Based)** |
+| **Feature**         | **Ingvar (GitHub-Native)** | **Spec Kit (File-Based)** |
 | ------------------- | ----------------------- | ------------------------- |
 | **Storage**         | GitHub Issues           | Repository Files          |
 | **Workflow**        | Edit issue in browser   | Commit → Push → PR        |
@@ -161,7 +161,7 @@ leo spec-extend <issue> <description> --no-update  # Preview mode
 | **Version Control** | ✅ Issue edit history   | ✅ Git commits            |
 | **Best For**        | GitHub-native teams     | Git-purist teams          |
 
-**LEO's Advantage:** Faster, more accessible, better for teams that live in GitHub.
+**Ingvar's Advantage:** Faster, more accessible, better for teams that live in GitHub.
 
 **Spec Kit's Advantage:** Better for Git-first workflows, offline work.
 
@@ -171,36 +171,36 @@ leo spec-extend <issue> <description> --no-update  # Preview mode
 
 ```bash
 # 1. Create specification
-leo spec new "Build user authentication system"
+ingvar spec new "Build user authentication system"
 # → GitHub issue #42 created with template
 
 # 2. Clarify requirements
-leo clarify 42
+ingvar clarify 42
 # → AI asks questions, updates spec with answers
 
 # 3. Generate implementation plan
-leo plan 42
+ingvar plan 42
 # → Creates task checklist in spec body
 
 # 4. Create tasks (choose mode)
-leo tasks create 42 --create-issues  # Team: parallel work
+ingvar tasks create 42 --create-issues  # Team: parallel work
 # OR
-leo tasks create 42                  # Solo: simple checklist
+ingvar tasks create 42                  # Solo: simple checklist
 
 # 5. Track task progress
-leo tasks status 42
+ingvar tasks status 42
 # → Shows: 5/10 completed (50%)
 
 # 6. Track spec evolution
-leo spec-diff 42 --timeline
+ingvar spec-diff 42 --timeline
 # → See all versions with timestamps
 
 # 7. Extend with new requirements
-leo spec-extend 42 "Add OAuth2 support"
+ingvar spec-extend 42 "Add OAuth2 support"
 # → Merges new requirements (preserves existing)
 
 # 8. Create child issues for extension
-leo spec-extend 42 "Add SSO" --create-issues
+ingvar spec-extend 42 "Add SSO" --create-issues
 # → Extends spec AND creates work items
 ```
 
@@ -212,10 +212,10 @@ leo spec-extend 42 "Add SSO" --create-issues
 
 ```bash
 # Simple checklist workflow
-leo spec new "Add dark mode"
-leo clarify 42
-leo plan 42
-leo tasks create 42          # Checklist mode
+ingvar spec new "Add dark mode"
+ingvar clarify 42
+ingvar plan 42
+ingvar tasks create 42          # Checklist mode
 # Work through tasks in spec issue
 ```
 
@@ -223,37 +223,37 @@ leo tasks create 42          # Checklist mode
 
 ```bash
 # Checklist + extensions
-leo spec new "Build API"
-leo clarify 42
-leo plan 42
-leo tasks create 42          # Checklist mode
+ingvar spec new "Build API"
+ingvar clarify 42
+ingvar plan 42
+ingvar tasks create 42          # Checklist mode
 # Later: extend spec as requirements change
-leo spec-extend 42 "Add rate limiting"
+ingvar spec-extend 42 "Add rate limiting"
 ```
 
 ### Larger Team (5+ people)
 
 ```bash
 # Child issues for parallel work
-leo spec new "Build admin dashboard"
-leo clarify 42
-leo plan 42
-leo tasks create 42 --create-issues  # Child issues mode
+ingvar spec new "Build admin dashboard"
+ingvar clarify 42
+ingvar plan 42
+ingvar tasks create 42 --create-issues  # Child issues mode
 # Each developer takes a child issue
-# Track progress: leo tasks status 42
+# Track progress: ingvar tasks status 42
 ```
 
 ### Long-Running Project
 
 ```bash
 # Track evolution over time
-leo spec-diff 42 --timeline
+ingvar spec-diff 42 --timeline
 # See: Version 1 (Oct 1), Version 2 (Oct 5), Version 3 (Oct 12)
 
-leo spec-diff 42 --summary
+ingvar spec-diff 42 --summary
 # Report: 25 items added, 10 removed, 15 sections modified
 
-leo spec-diff 42 --from 1 --to 3
+ingvar spec-diff 42 --from 1 --to 3
 # Compare original spec to latest version
 ```
 
@@ -282,7 +282,7 @@ leo spec-diff 42 --from 1 --to 3
 ### Spec Evolution Visibility
 
 - **Before:** Git log (technical, hard to parse)
-- **After:** `leo spec-diff --timeline` (visual, easy)
+- **After:** `ingvar spec-diff --timeline` (visual, easy)
 - **Improvement:** 100% more transparent
 
 ---
@@ -317,7 +317,7 @@ leo spec-diff 42 --from 1 --to 3
 
 ### Updated
 
-- **README.md** - LEO vs Spec Kit comparison table
+- **README.md** - Ingvar vs Spec Kit comparison table
 - **README.md** - Complete workflow example
 - **package.json** - Version 5.0.1 → 5.2.0
 
@@ -334,7 +334,7 @@ Phase 2 delivered **everything** promised and more:
 ✅ Clear differentiation from GitHub Spec Kit
 ✅ Production-ready v5.2.0 release
 
-**LEO Workflow Kit is now a complete GitHub-native spec-first development system.**
+**Ingvar Kit is now a complete GitHub-native spec-first development system.**
 
 **Next Steps:**
 
@@ -346,4 +346,4 @@ Phase 2 delivered **everything** promised and more:
 **Completion:** 100%
 **Status:** ✅ Ready for Release
 
-🦁 **LEO roars with pride!** 🎯
+🦁 **Ingvar roars with pride!** 🎯

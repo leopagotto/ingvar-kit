@@ -339,7 +339,7 @@ f9ba568 - feat: complete agent instruction suite with model selection integratio
 
 ```bash
 # User describes work
-leo "Add dark mode toggle to navbar"
+ingvar "Add dark mode toggle to navbar"
 
 # Orchestrator automatically:
 # 1. Creates GitHub issue
@@ -356,7 +356,7 @@ leo "Add dark mode toggle to navbar"
 
 ```bash
 # User describes complex work
-leo "Build OAuth2 login with social providers"
+ingvar "Build OAuth2 login with social providers"
 
 # Orchestrator:
 # 1. Detects complexity > 1 week → Requests spec-first
@@ -478,7 +478,7 @@ All integrated and documented in `orchestrator-main.md`:
 
 ```bash
 # Test the new architecture
-leo "Add a search feature to the navbar"
+ingvar "Add a search feature to the navbar"
 
 # Should see:
 # ✓ Issue created
@@ -495,7 +495,7 @@ leo "Add a search feature to the navbar"
 
 ```bash
 # Check model selection and costs
-leo model status
+ingvar model status
 
 # Should show:
 # Daily spend: $0.45

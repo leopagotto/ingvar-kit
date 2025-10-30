@@ -148,7 +148,7 @@ my-dashboard/
 **Commands:**
 
 ```bash
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 ```
 
 ### 7. Complete Documentation
@@ -174,7 +174,7 @@ leo plugin create my-dashboard --template=web
 
 ```bash
 # Create automated web plugin
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 
 # Output:
 # ✅ Automated web plugin created successfully!
@@ -240,11 +240,11 @@ client.on("hunt:completed", (hunt) => {
 
 ```bash
 # Create automated web plugin
-leo plugin create my-dashboard --template=web
+ingvar plugin create my-dashboard --template=web
 
 # Create basic plugin (existing)
-leo plugin create my-plugin                   # or --template=basic
-leo plugin create my-plugin --template=basic
+ingvar plugin create my-plugin                   # or --template=basic
+ingvar plugin create my-plugin --template=basic
 ```
 
 **Command Flow:**
@@ -291,7 +291,7 @@ leo plugin create my-plugin --template=basic
 - ✅ Hot reload development server
 - ✅ Comprehensive documentation
 
-### For LEO
+### For Ingvar
 
 - ✅ Repeatability - Use for any web plugin
 - ✅ Consistency - All web plugins follow same pattern
@@ -329,7 +329,7 @@ leo plugin create my-plugin --template=basic
 
 ### With CLI
 
-- Registered in `leo plugin create`
+- Registered in `ingvar plugin create`
 - Auto-generates from command
 - User-friendly output messages
 - Clear next steps guidance
@@ -341,7 +341,7 @@ leo plugin create my-plugin --template=basic
 ### Example 1: Create Web Dashboard
 
 ```bash
-$ leo plugin create my-dashboard --template=web
+$ ingvar plugin create my-dashboard --template=web
 
 🔌 Creating Plugin Template
 
@@ -482,7 +482,7 @@ npm notice Publishing to https://registry.npmjs.org/
 
 ### Auto-Generated Per Plugin
 
-When `leo plugin create my-dashboard --template=web` is run:
+When `ingvar plugin create my-dashboard --template=web` is run:
 
 ```
 my-dashboard/
@@ -547,7 +547,7 @@ npm run dev -- --port 5174
 
 ### "Can't connect to API"
 
-- Ensure API is running: `leo dashboard start`
+- Ensure API is running: `ingvar dashboard start`
 - Check API on port 3000: `curl http://localhost:3000/api/status`
 - Verify CORS is configured
 
@@ -612,11 +612,11 @@ npm publish
 # Available as leo-dashboard-*
 ```
 
-### Integration with LEO
+### Integration with Ingvar
 
 ```bash
-leo plugin install leo-dashboard-my-dashboard
-leo plugin start my-dashboard
+ingvar plugin install leo-dashboard-my-dashboard
+ingvar plugin start my-dashboard
 # Access at http://localhost:5173
 ```
 
@@ -678,7 +678,7 @@ leo plugin start my-dashboard
 ✅ **Professional:** Production-ready output
 ✅ **Documented:** Comprehensive guides included
 ✅ **Tested:** All components working correctly
-✅ **Integrated:** Works seamlessly with LEO CLI
+✅ **Integrated:** Works seamlessly with Ingvar CLI
 ✅ **Extensible:** Easy to add new components
 ✅ **Performant:** < 1 second generation time
 

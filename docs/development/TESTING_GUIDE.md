@@ -1,4 +1,4 @@
-# Testing LEO Workflow Kit v2.0 Installation
+# Testing Ingvar Kit v2.0 Installation
 
 This guide helps you test the new v2.0 features before publishing to npm.
 
@@ -29,11 +29,11 @@ npm link
 
 # Test installation
 cd /path/to/test-leo-new-project
-leo init
+ingvar init
 
 # Expected flow:
 # 1. Choose "Create new GitHub Project"
-# 2. Enter project name: "Test LEO Project"
+# 2. Enter project name: "Test Ingvar Project"
 # 3. Enter description: "Testing v2.0 features"
 # 4. Confirm setup
 # 5. Verify creation of:
@@ -70,7 +70,7 @@ gh repo create test-leo-existing-project --public --source=. --remote=origin --p
 gh project create --owner YOUR_USERNAME --title "Existing Test Project"
 
 # Test installation
-leo init
+ingvar init
 
 # Expected flow:
 # 1. Choose "Use existing GitHub Project"
@@ -97,7 +97,7 @@ git init
 gh repo create test-leo-skip-project --public --source=. --remote=origin --push
 
 # Test installation
-leo init
+ingvar init
 
 # Expected flow:
 # 1. Choose "Skip project setup (I'll do it later)"
@@ -108,7 +108,7 @@ leo init
 **Verification Checklist:**
 - [ ] All standard files created
 - [ ] No GitHub Project created or connected
-- [ ] Can run `leo init` again to add project later
+- [ ] Can run `ingvar init` again to add project later
 
 ---
 
@@ -117,7 +117,7 @@ leo init
 ```bash
 # Test with org repo (if you have access)
 cd /path/to/org-repo
-leo init
+ingvar init
 
 # Expected flow:
 # 1. Organization auto-detected and pre-filled
@@ -132,7 +132,7 @@ leo init
 ### Test Component-First Guidelines
 
 ```bash
-# After running leo init
+# After running ingvar init
 cat .github/copilot-instructions.md | grep -A 10 "Component-First"
 
 # Expected: See comprehensive component-first section
@@ -166,10 +166,10 @@ cat .github/copilot-instructions.md | grep -A 10 "DRY"
 
 ## Command Testing
 
-### Test leo status
+### Test ingvar status
 
 ```bash
-leo status
+ingvar status
 
 # Expected output:
 # ✓ GitHub CLI
@@ -179,26 +179,26 @@ leo status
 # ✓ VS Code Config
 ```
 
-### Test leo issue
+### Test ingvar issue
 
 ```bash
-leo issue
+ingvar issue
 
 # Expected: Interactive issue creation with templates
 ```
 
-### Test leo labels
+### Test ingvar labels
 
 ```bash
-leo labels --clean
+ingvar labels --clean
 
 # Expected: Clean and recreate all labels
 ```
 
-### Test leo vscode
+### Test ingvar vscode
 
 ```bash
-leo vscode --project
+ingvar vscode --project
 
 # Expected: Update Copilot instructions
 ```
@@ -210,9 +210,9 @@ leo vscode --project
 ### 1. Already Initialized Repository
 
 ```bash
-# Run leo init twice
-leo init
-leo init
+# Run ingvar init twice
+ingvar init
+ingvar init
 
 # Expected: Skip already existing files, update Copilot instructions
 ```
@@ -224,8 +224,8 @@ leo init
 which gh
 sudo mv /usr/local/bin/gh /usr/local/bin/gh-backup
 
-# Run leo init
-leo init
+# Run ingvar init
+ingvar init
 
 # Expected: Error message with gh install instructions
 
@@ -239,7 +239,7 @@ sudo mv /usr/local/bin/gh-backup /usr/local/bin/gh
 mkdir test-no-git
 cd test-no-git
 
-leo init
+ingvar init
 
 # Expected: Error about not being in a git repository
 ```
@@ -247,7 +247,7 @@ leo init
 ### 4. Invalid Project Number
 
 ```bash
-leo init
+ingvar init
 
 # Choose "Use existing GitHub Project"
 # Enter invalid number: 999999
@@ -262,7 +262,7 @@ leo init
 ### Measure Initialization Time
 
 ```bash
-time leo init
+time ingvar init
 
 # Expected: Complete in < 60 seconds
 # Target: 30-45 seconds for full setup
@@ -334,8 +334,8 @@ npm version patch
 npm publish
 
 # Major issues - deprecate and rollback
-npm deprecate leo-workflow-kit@2.0.0 "Issue found, use v1.3.0"
-npm unpublish leo-workflow-kit@2.0.0 --force (within 72 hours only)
+npm deprecate ingvar-kit@2.0.0 "Issue found, use v1.3.0"
+npm unpublish ingvar-kit@2.0.0 --force (within 72 hours only)
 ```
 
 ---
@@ -349,10 +349,10 @@ npm link
 
 # Test in another directory
 cd /path/to/test-project
-leo init
+ingvar init
 
 # Unlink when done
-npm unlink -g leo-workflow-kit
+npm unlink -g ingvar-kit
 ```
 
 ---
@@ -378,7 +378,7 @@ What actually happened
 **Environment**:
 - OS: [macOS/Linux/Windows]
 - Node version: [x.x.x]
-- leo-workflow-kit version: [2.0.0]
+- ingvar-kit version: [2.0.0]
 - GitHub CLI version: [x.x.x]
 
 **Additional Context**:

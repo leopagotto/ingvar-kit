@@ -1,4 +1,4 @@
-# LEO Kit v3.0.0 Release Summary
+# Ingvar Kit v3.0.0 Release Summary
 
 ## 🎯 GitHub-Native Issue Creation System
 
@@ -10,7 +10,7 @@
 
 ## 📋 Executive Summary
 
-LEO Kit v3.0.0 transforms issue management by migrating from a label-based workaround system to GitHub's native features. This major release separates concerns (types, priorities, components) into their proper places, enabling better filtering, effort tracking, and automated workflows.
+Ingvar Kit v3.0.0 transforms issue management by migrating from a label-based workaround system to GitHub's native features. This major release separates concerns (types, priorities, components) into their proper places, enabling better filtering, effort tracking, and automated workflows.
 
 **Key Achievement:** Professional project management that follows GitHub's standards instead of fighting against them.
 
@@ -153,10 +153,10 @@ GH_PROJECT_OPTION_DONE=98236657
 **Usage:**
 ```bash
 # Interactive mode
-leo issue --interactive
+ingvar issue --interactive
 
 # Non-interactive mode
-leo issue --title "Add feature" --type enhancement --priority "🟡 Medium" --estimate 5 --components frontend,ux
+ingvar issue --title "Add feature" --type enhancement --priority "🟡 Medium" --estimate 5 --components frontend,ux
 ```
 
 ### 3. `docs/guides/GITHUB_PROJECTS_SETUP.md`
@@ -207,7 +207,7 @@ leo issue --title "Add feature" --type enhancement --priority "🟡 Medium" --es
 
 **Step 1:** Update to v3.0.0
 ```bash
-npm install -g leo-workflow-kit@3.0.0
+npm install -g ingvar-kit@3.0.0
 ```
 
 **Step 2:** Create Component Labels
@@ -230,10 +230,10 @@ node scripts/setup-github-project.js
 **Step 4:** Update Issue Creation
 ```bash
 # OLD (deprecated)
-leo issue  # Don't use - opens interactive CLI
+ingvar issue  # Don't use - opens interactive CLI
 
 # NEW (v3.0.0+)
-leo issue --interactive  # Uses new format automatically
+ingvar issue --interactive  # Uses new format automatically
 ```
 
 ### Backward Compatibility
@@ -314,10 +314,10 @@ leo issue --interactive  # Uses new format automatically
 
 ## 📞 Support
 
-**Issues:** https://github.com/leonpagotto/leo-kit/issues
-**Wiki:** https://github.com/leonpagotto/leo-kit/wiki
-**NPM:** https://www.npmjs.com/package/leo-workflow-kit
+**Issues:** https://github.com/leopagotto/ingvar-kit/issues
+**Wiki:** https://github.com/leopagotto/ingvar-kit/wiki
+**NPM:** https://www.npmjs.com/package/ingvar-kit
 
 ---
 
-**LEO Kit v3.0.0** - Professional project management with GitHub-native features 🎯
+**Ingvar Kit v3.0.0** - Professional project management with GitHub-native features 🎯

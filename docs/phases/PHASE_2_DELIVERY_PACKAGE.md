@@ -134,10 +134,10 @@
 
 - **Purpose**: Interactive team setup and management
 - **Commands**:
-  - `leo team init` - Initialize new LionPack project
-  - `leo team add` - Add team member
-  - `leo team list` - Show team composition
-  - `leo team setupBoard` - Generate GitHub board files
+  - `ingvar team init` - Initialize new LionPack project
+  - `ingvar team add` - Add team member
+  - `ingvar team list` - Show team composition
+  - `ingvar team setupBoard` - Generate GitHub board files
 - **Features**:
   - Interactive Inquirer prompts
   - Chalk colored output
@@ -149,12 +149,12 @@
 
 - **Purpose**: Hunt tracking and management
 - **Commands**:
-  - `leo hunt start` - Begin new hunt with interactive prompts
-  - `leo hunt status <huntId>` - Display detailed hunt progress
-  - `leo hunt list` - Show all hunts (active & completed)
-  - `leo hunt nextPhase <huntId>` - Transition to next phase
-  - `leo hunt complete <huntId>` - Mark hunt done & record metrics
-  - `leo hunt analytics` - Display team performance report
+  - `ingvar hunt start` - Begin new hunt with interactive prompts
+  - `ingvar hunt status <huntId>` - Display detailed hunt progress
+  - `ingvar hunt list` - Show all hunts (active & completed)
+  - `ingvar hunt nextPhase <huntId>` - Transition to next phase
+  - `ingvar hunt complete <huntId>` - Mark hunt done & record metrics
+  - `ingvar hunt analytics` - Display team performance report
 - **Features**:
   - Interactive prompts for hunt creation
   - Real-time phase progress display
@@ -315,16 +315,16 @@ Time: 3.45s
 
 ```bash
 # Initialize LionPack project
-leo team init
+ingvar team init
 
 # Select team size: Solo, Duo, Trio, or Pack
 # Workflow auto-adapts based on selection
 
 # Add team members (for Duo/Trio/Pack)
-leo team add
+ingvar team add
 
 # Start your first hunt
-leo hunt start
+ingvar hunt start
 
 # Fill in hunt details:
 # - Feature name
@@ -332,16 +332,16 @@ leo hunt start
 # - GitHub issue creation (optional)
 
 # Check hunt progress
-leo hunt status <hunt-id>
+ingvar hunt status <hunt-id>
 
 # Move hunt to next phase
-leo hunt nextPhase <hunt-id>
+ingvar hunt nextPhase <hunt-id>
 
 # View team analytics
-leo hunt analytics
+ingvar hunt analytics
 
 # Complete hunt when done
-leo hunt complete <hunt-id>
+ingvar hunt complete <hunt-id>
 ```
 
 ### Example Workflows
@@ -349,10 +349,10 @@ leo hunt complete <hunt-id>
 #### Solo Developer
 
 ```bash
-leo team init
+ingvar team init
 > Select: Solo (1 person)
 
-leo hunt start "Build Dashboard"
+ingvar hunt start "Build Dashboard"
 > Workflow: Requirements → (Spec + Implementation) → (Test + Deploy)
 > Single person does everything
 > Fast cycle, minimal overhead
@@ -361,11 +361,11 @@ leo hunt start "Build Dashboard"
 #### Duo Team
 
 ```bash
-leo team init
+ingvar team init
 > Select: Duo (2 people)
 > Add: Alice (Developer), Bob (QA)
 
-leo hunt start "Add Authentication"
+ingvar hunt start "Add Authentication"
 > Workflow: Requirements → Spec → (Impl + Test) → Deploy
 > Alice & Bob work in parallel
 > Handoff between phases
@@ -374,11 +374,11 @@ leo hunt start "Add Authentication"
 #### Trio Team
 
 ```bash
-leo team init
+ingvar team init
 > Select: Trio (3 people)
 > Add: Alice (Design), Bob (Dev), Carol (QA)
 
-leo hunt start "Deploy to Production"
+ingvar hunt start "Deploy to Production"
 > Workflow: Req → Spec → Impl → Test → Deploy
 > Each person has dedicated phase
 > Sequential pipeline with handoffs
@@ -387,11 +387,11 @@ leo hunt start "Deploy to Production"
 #### Pack (4 people)
 
 ```bash
-leo team init
+ingvar team init
 > Select: Pack (4 people)
 > Add: Alice (Requirements), Bob (Design), Carol (Dev), Dave (Deploy)
 
-leo hunt start "Enterprise Feature"
+ingvar hunt start "Enterprise Feature"
 > Workflow: Req → Spec → Impl → Test → Deploy
 > Dedicated role per phase
 > Full specialization with deployment
@@ -416,7 +416,7 @@ leo hunt start "Enterprise Feature"
 
 - [ ] Wire TeamCommands into main `leo` CLI
 - [ ] Wire HuntCommands into main `leo` CLI
-- [ ] Add subcommands: `leo team`, `leo hunt`
+- [ ] Add subcommands: `ingvar team`, `ingvar hunt`
 - [ ] Run full integration tests
 - [ ] Gather user feedback
 

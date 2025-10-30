@@ -2,7 +2,7 @@
 
 > **Status:** COMPLETE
 > **Duration:** 2 days (Days 10-11)
-> **Commits:** `34302bd`, `8b69546` > **Issue:** [#97](https://github.com/leonpagotto/leo-kit/issues/97) ✅ CLOSED
+> **Commits:** `34302bd`, `8b69546` > **Issue:** [#97](https://github.com/leopagotto/ingvar-kit/issues/97) ✅ CLOSED
 
 ---
 
@@ -21,7 +21,7 @@
 ✅ **Basic Diff Command**
 
 ```bash
-leo spec-diff <issue>
+ingvar spec-diff <issue>
 ```
 
 - Fetches issue timeline from GitHub API
@@ -32,7 +32,7 @@ leo spec-diff <issue>
 ✅ **Timeline View**
 
 ```bash
-leo spec-diff <issue> --timeline
+ingvar spec-diff <issue> --timeline
 ```
 
 - Chronological history of all edits
@@ -44,7 +44,7 @@ leo spec-diff <issue> --timeline
 ✅ **Summary Statistics**
 
 ```bash
-leo spec-diff <issue> --summary
+ingvar spec-diff <issue> --summary
 ```
 
 - Total versions and date range
@@ -55,7 +55,7 @@ leo spec-diff <issue> --summary
 ✅ **Version Range Filtering**
 
 ```bash
-leo spec-diff <issue> --from 1 --to 3
+ingvar spec-diff <issue> --from 1 --to 3
 ```
 
 - Compare specific version range
@@ -65,7 +65,7 @@ leo spec-diff <issue> --from 1 --to 3
 ✅ **Section-Specific Diff**
 
 ```bash
-leo spec-diff <issue> --section requirements
+ingvar spec-diff <issue> --section requirements
 ```
 
 - Focus on one section only
@@ -75,7 +75,7 @@ leo spec-diff <issue> --section requirements
 ✅ **Text Length Control**
 
 ```bash
-leo spec-diff <issue> --max-length 200
+ingvar spec-diff <issue> --max-length 200
 ```
 
 - Control text truncation
@@ -102,7 +102,7 @@ leo spec-diff <issue> --max-length 200
 
 **bin/cli.js** (MODIFIED)
 
-- Added `leo spec-diff <issue>` command
+- Added `ingvar spec-diff <issue>` command
 - Added 6 options: `--timeline`, `--summary`, `--from`, `--to`, `--section`, `--max-length`
 
 **docs/SPEC_DIFF_GUIDE.md** (NEW - 650+ lines)
@@ -128,32 +128,32 @@ leo spec-diff <issue> --max-length 200
 
 **Test Coverage:**
 
-✅ **Basic Diff** - `leo spec-diff 80`
+✅ **Basic Diff** - `ingvar spec-diff 80`
 
 - Result: 3 edits shown with color coding
 - All changes highlighted correctly
 - Format: Clean, readable
 
-✅ **Timeline View** - `leo spec-diff 80 --timeline`
+✅ **Timeline View** - `ingvar spec-diff 80 --timeline`
 
 - Result: 5 versions listed chronologically
 - Timestamps and authors correct
 - Section counts accurate
 
-✅ **Summary Statistics** - `leo spec-diff 80 --summary`
+✅ **Summary Statistics** - `ingvar spec-diff 80 --summary`
 
 - Result: 11 items added, 20 removed
 - 15 sections modified
 - Top 5 most modified sections listed
 - Contributors: @leonpagotto
 
-✅ **Version Range** - `leo spec-diff 80 --from 1 --to 2`
+✅ **Version Range** - `ingvar spec-diff 80 --from 1 --to 2`
 
 - Result: Only v1→v2 changes shown
 - Filtered correctly
 - Format indicates version range
 
-✅ **Section Filter** - `leo spec-diff 80 --section requirements`
+✅ **Section Filter** - `ingvar spec-diff 80 --section requirements`
 
 - Result: Only requirement changes shown
 - Other sections omitted
@@ -168,7 +168,7 @@ leo spec-diff <issue> --max-length 200
 
 **Test Coverage:**
 
-✅ **No Edits Handling** - `leo spec-diff 98`
+✅ **No Edits Handling** - `ingvar spec-diff 98`
 
 - Result: "⚠️ Spec has not been edited yet (only 1 version exists)"
 - Correct warning message
@@ -207,7 +207,7 @@ leo spec-diff <issue> --max-length 200
 **Diff Mode** (default): See what changed
 
 ```bash
-leo spec-diff 80
+ingvar spec-diff 80
 ━━━ Version 1 → 2 ━━━
 Requirements:
   + New requirement
@@ -217,7 +217,7 @@ Requirements:
 **Timeline Mode**: See when it changed
 
 ```bash
-leo spec-diff 80 --timeline
+ingvar spec-diff 80 --timeline
 🆕 Version 1 - 10/27/2025, 3:00 PM by @alice
 ✏️ Version 2 - 10/27/2025, 4:30 PM by @bob
 ```
@@ -225,7 +225,7 @@ leo spec-diff 80 --timeline
 **Summary Mode**: See aggregate stats
 
 ```bash
-leo spec-diff 80 --summary
+ingvar spec-diff 80 --summary
 Total edits: 3
 Items added: 11
 Items removed: 20
@@ -236,15 +236,15 @@ Items removed: 20
 **Version Range:**
 
 ```bash
-leo spec-diff 80 --from 1 --to 3  # First 3 versions only
-leo spec-diff 80 --from 4         # Recent changes only
+ingvar spec-diff 80 --from 1 --to 3  # First 3 versions only
+ingvar spec-diff 80 --from 4         # Recent changes only
 ```
 
 **Section Focus:**
 
 ```bash
-leo spec-diff 80 --section requirements  # Just requirements
-leo spec-diff 80 --section userStories   # Just user stories
+ingvar spec-diff 80 --section requirements  # Just requirements
+ingvar spec-diff 80 --section userStories   # Just user stories
 ```
 
 ### 3. Smart Parsing
@@ -280,7 +280,7 @@ Automatically detects and parses:
 - Common use cases (5 scenarios with examples)
 - Troubleshooting (4 common issues)
 - Best practices (6 tips)
-- Integration with LEO workflow
+- Integration with Ingvar workflow
 - Real-world examples (3 detailed scenarios)
 - Tips & tricks (5 advanced techniques)
 
@@ -300,25 +300,25 @@ Automatically detects and parses:
 
 ```bash
 # 1. Create spec
-leo spec new "Add payment processing"  # #42
+ingvar spec new "Add payment processing"  # #42
 
 # 2. Review and clarify
-leo clarify 42
+ingvar clarify 42
 
 # 3. Edit spec based on feedback (on GitHub)
 
 # 4. Track changes
-leo spec-diff 42                       # See what changed
-leo spec-diff 42 --section requirements # Focus on requirements
+ingvar spec-diff 42                       # See what changed
+ingvar spec-diff 42 --section requirements # Focus on requirements
 
 # 5. Create implementation plan
-leo plan 42
+ingvar plan 42
 
 # 6. Generate tasks
-leo tasks create 42 --create-issues
+ingvar tasks create 42 --create-issues
 
 # 7. Monitor ongoing spec changes
-leo spec-diff 42 --from 3 --timeline   # Recent edits
+ingvar spec-diff 42 --from 3 --timeline   # Recent edits
 ```
 
 ---
@@ -332,7 +332,7 @@ leo spec-diff 42 --from 3 --timeline   # Recent edits
 **After:**
 
 ```bash
-leo spec-diff 42 --section requirements --summary
+ingvar spec-diff 42 --section requirements --summary
 # See exactly what requirements were added/removed
 ```
 
@@ -343,7 +343,7 @@ leo spec-diff 42 --section requirements --summary
 **After:**
 
 ```bash
-leo spec-diff 42 --section acceptanceCriteria --from 3
+ingvar spec-diff 42 --section acceptanceCriteria --from 3
 # See only recent criteria changes
 ```
 
@@ -354,7 +354,7 @@ leo spec-diff 42 --section acceptanceCriteria --from 3
 **After:**
 
 ```bash
-leo spec-diff 42 --timeline
+ingvar spec-diff 42 --timeline
 # Show complete history with authors and timestamps
 ```
 
@@ -365,7 +365,7 @@ leo spec-diff 42 --timeline
 **After:**
 
 ```bash
-leo spec-diff 42 --section requirements
+ingvar spec-diff 42 --section requirements
 # See new requirements → create matching tests
 ```
 
@@ -376,7 +376,7 @@ leo spec-diff 42 --section requirements
 **After:**
 
 ```bash
-leo spec-diff 42 --summary > audit-report.txt
+ingvar spec-diff 42 --summary > audit-report.txt
 # Complete change history for external audit
 ```
 
@@ -450,7 +450,7 @@ leo spec-diff 42 --summary > audit-report.txt
 
 - ✅ **Days 8-9:** Task Management (dual-mode) - 40%
 - ✅ **Days 10-11:** Spec Evolution Tracking - 70% ← **WE ARE HERE**
-- ⏭️ **Days 12-13:** Spec Extensions (`leo spec extend`) - NEXT
+- ⏭️ **Days 12-13:** Spec Extensions (`ingvar spec extend`) - NEXT
 - ⏸️ **Day 14:** Testing & Documentation
 
 **Overall Phase 2 Progress:** 70% complete (10 of 14 days)
@@ -471,7 +471,7 @@ leo spec-diff 42 --summary > audit-report.txt
 
 ✅ **Documentation:** 68 sections, all commands covered
 
-✅ **Integration:** Seamless with existing LEO workflow
+✅ **Integration:** Seamless with existing Ingvar workflow
 
 ✅ **Performance:** Fast, even with many versions
 
@@ -483,7 +483,7 @@ leo spec-diff 42 --summary > audit-report.txt
 
 **Phase 2 Days 12-13: Spec Extensions**
 
-Implement `leo spec extend <issue>` to add new requirements to existing specs:
+Implement `ingvar spec extend <issue>` to add new requirements to existing specs:
 
 - Add requirements to existing spec
 - Create child issues for extensions

@@ -7,14 +7,14 @@
 ### Setup Verification
 
 - ✅ GitHub CLI authenticated (`leonpagotto`)
-- ✅ Repository: `leonpagotto/leo-kit`
+- ✅ Repository: `leopagotto/ingvar-kit`
 - ✅ Can create issues via `gh issue create`
 - ✅ Issues visible in GitHub
 
 ### Test Issue Created
 
 **Issue #3:** Test: Verify automatic issue creation works
-**URL:** https://github.com/leonpagotto/leo-kit/issues/3
+**URL:** https://github.com/leopagotto/ingvar-kit/issues/3
 **Status:** ✅ Created successfully
 
 ## How Copilot Should Create Issues
@@ -59,12 +59,12 @@ gh issue create \
 **Result:**
 
 ```
-Creating issue in leonpagotto/leo-kit
+Creating issue in leopagotto/ingvar-kit
 
-https://github.com/leonpagotto/leo-kit/issues/4
+https://github.com/leopagotto/ingvar-kit/issues/4
 ```
 
-## Why `gh issue create` Instead of `leo issue`
+## Why `gh issue create` Instead of `ingvar issue`
 
 ### ✅ Advantages of `gh issue create`:
 
@@ -74,7 +74,7 @@ https://github.com/leonpagotto/leo-kit/issues/4
 4. **Well-documented** - Standard GitHub CLI tool
 5. **Reliable** - Battle-tested by GitHub
 
-### ❌ Problems with `leo issue`:
+### ❌ Problems with `ingvar issue`:
 
 1. **Interactive prompts** - Requires user input (inquirer)
 2. **Non-interactive mode has bugs** - Missing description handling
@@ -83,7 +83,7 @@ https://github.com/leonpagotto/leo-kit/issues/4
 
 ## Updated Copilot Instructions
 
-The Copilot instructions should be updated to use `gh issue create` instead of `leo issue`.
+The Copilot instructions should be updated to use `gh issue create` instead of `ingvar issue`.
 
 ### Example Pattern:
 
@@ -127,7 +127,7 @@ gh issue create \
 
 ```
 ✅ Issue #5 created: Add dark mode support
-🔗 https://github.com/leonpagotto/leo-kit/issues/5
+🔗 https://github.com/leopagotto/ingvar-kit/issues/5
 ```
 
 ## Testing Commands
@@ -202,7 +202,7 @@ gh issue view 3
 ### 3. Check on GitHub:
 
 ```
-https://github.com/leonpagotto/leo-kit/issues
+https://github.com/leopagotto/ingvar-kit/issues
 ```
 
 ## Current Issues in Repository
@@ -222,7 +222,7 @@ ID  TITLE                                             LABELS
 Change from:
 
 ```bash
-leo issue
+ingvar issue
 # → Requires interactive input ❌
 ```
 
@@ -233,9 +233,9 @@ gh issue create --title "..." --body "..." --label "..."
 # → Works non-interactively ✅
 ```
 
-### 2. Fix `leo issue` Non-Interactive Mode (Optional)
+### 2. Fix `ingvar issue` Non-Interactive Mode (Optional)
 
-If we want to keep `leo issue` for automated use:
+If we want to keep `ingvar issue` for automated use:
 
 - Add description parameter
 - Handle missing description gracefully
@@ -252,7 +252,7 @@ If we want to keep `leo issue` for automated use:
 ✅ **GitHub issue creation works!**
 ✅ **Command:** Use `gh issue create`
 ✅ **Test successful:** Issue #3 created
-❌ **Current problem:** Copilot instructions use `leo issue` which is interactive
+❌ **Current problem:** Copilot instructions use `ingvar issue` which is interactive
 🔧 **Solution:** Update instructions to use `gh issue create` directly
 
 **Next Step:** Update Copilot instructions template to use `gh issue create`

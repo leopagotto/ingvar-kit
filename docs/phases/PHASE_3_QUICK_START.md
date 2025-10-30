@@ -44,7 +44,7 @@
 ```
 User Command
     ↓
-CLI (leo team/hunt/github/slack/dashboard)
+CLI (ingvar team/hunt/github/slack/dashboard)
     ↓
 Phase 2: LocalPack (HuntCycleTracker, AnalyticsEngine)
     ↓
@@ -275,13 +275,13 @@ By end of Week 1:
 **End Result**: Fully integrated LionPack platform
 
 ```
-leo team init          → Setup team
-leo github connect     → Auto-create GitHub board
-leo slack connect      → Setup Slack channel
-leo dashboard start    → Launch web dashboard
-leo hunt start "Feat"  → Synced across all systems
-leo hunt nextPhase     → All platforms updated
-leo hunt analytics     → See metrics everywhere
+ingvar team init          → Setup team
+ingvar github connect     → Auto-create GitHub board
+ingvar slack connect      → Setup Slack channel
+ingvar dashboard start    → Launch web dashboard
+ingvar hunt start "Feat"  → Synced across all systems
+ingvar hunt nextPhase     → All platforms updated
+ingvar hunt analytics     → See metrics everywhere
 ```
 
 ---

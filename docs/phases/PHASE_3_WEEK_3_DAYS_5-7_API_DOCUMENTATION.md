@@ -1,8 +1,8 @@
-# 📚 LEO Dashboard API Reference (Phase 3 Week 3 - Day 7)
+# 📚 Ingvar Dashboard API Reference (Phase 3 Week 3 - Day 7)
 
 **Phase 3 Week 3 - Day 7: API Documentation & OpenAPI**
 
-> Complete REST API and WebSocket documentation for the LEO Dashboard API Server
+> Complete REST API and WebSocket documentation for the Ingvar Dashboard API Server
 
 ---
 
@@ -21,7 +21,7 @@
 
 ## 🎯 Overview
 
-The LEO Dashboard API Server provides real-time access to hunt data, team information, and analytics through:
+The Ingvar Dashboard API Server provides real-time access to hunt data, team information, and analytics through:
 
 - **12 REST Endpoints** for CRUD operations
 - **4 WebSocket Events** for real-time updates
@@ -43,13 +43,13 @@ The LEO Dashboard API Server provides real-time access to hunt data, team inform
 ### Start the API Server
 
 ```bash
-leo dashboard start
+ingvar dashboard start
 ```
 
 ### Expected Output
 
 ```
-🚀 LEO Dashboard API Server
+🚀 Ingvar Dashboard API Server
 
 ✅ Dashboard API Server Started!
 
@@ -83,13 +83,13 @@ Press Ctrl+C to stop the server
 ### Check Server Status
 
 ```bash
-leo dashboard status
+ingvar dashboard status
 ```
 
 ### Open in Browser
 
 ```bash
-leo dashboard open
+ingvar dashboard open
 ```
 
 ---
@@ -921,7 +921,7 @@ socket.on("hunt:completed", (event) => {
 ```yaml
 openapi: 3.0.0
 info:
-  title: LEO Dashboard API
+  title: Ingvar Dashboard API
   version: 1.0.0
   description: Real-time API server for hunt tracking and team visualization
 
@@ -1273,7 +1273,7 @@ const hunts = await api.getHunts({ status: "active" });
 lsof -i :3000
 
 # Use different port
-leo dashboard start --port 3001
+ingvar dashboard start --port 3001
 ```
 
 ### Connection Refused
@@ -1304,8 +1304,8 @@ const socket = io("http://localhost:3000", {
 
 For issues, questions, or feature requests:
 
-- **GitHub Issues**: https://github.com/osp-group/leo-workflow-kit/issues
-- **Documentation**: https://github.com/osp-group/leo-workflow-kit/wiki
+- **GitHub Issues**: https://github.com/osp-group/ingvar-kit/issues
+- **Documentation**: https://github.com/osp-group/ingvar-kit/wiki
 - **Email**: support@example.com
 
 ---

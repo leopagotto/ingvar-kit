@@ -43,12 +43,12 @@ try {
 $ gh auth status
 ✓ Logged in to github.com account leonpagotto
 
-$ leo init
-🦁 Initializing LEO Workflow Kit 🦁
+$ ingvar init
+🦁 Initializing Ingvar Kit 🦁
 
 ✔ Prerequisites check passed
 ✔ GitHub authentication verified   # ← Just confirms, no prompt!
-Repository: leonpagotto/leo-kit
+Repository: leopagotto/ingvar-kit
 
 ? GitHub organization name: ...
 ```
@@ -61,8 +61,8 @@ Repository: leonpagotto/leo-kit
 $ gh auth status
 You are not logged into any GitHub hosts.
 
-$ leo init
-🦁 Initializing LEO Workflow Kit 🦁
+$ ingvar init
+🦁 Initializing Ingvar Kit 🦁
 
 ✔ Prerequisites check passed
 ⚠ GitHub CLI not authenticated
@@ -145,7 +145,7 @@ authSpinner.warn("GitHub CLI not authenticated");
 
 ## Other Places Authentication Is Checked
 
-### 1. `leo health` Command
+### 1. `ingvar health` Command
 
 ```javascript
 try {
@@ -169,7 +169,7 @@ try {
 
 **Result:** Just reports status, doesn't prompt
 
-### 2. `leo issue` Command
+### 2. `ingvar issue` Command
 
 ```javascript
 try {
@@ -211,14 +211,14 @@ ELSE (user NOT authenticated):
 **If authenticated:**
 
 ```bash
-$ leo init
+$ ingvar init
 ✔ GitHub authentication verified   # No prompt!
 ```
 
 **If not authenticated:**
 
 ```bash
-$ leo init
+$ ingvar init
 ⚠ GitHub CLI not authenticated
 ? Would you like to authenticate with GitHub now?   # Prompts!
 ```

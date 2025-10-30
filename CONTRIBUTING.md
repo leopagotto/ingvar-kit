@@ -43,7 +43,7 @@ LEO Kit is an open-source project and we welcome contributions from everyone:
 3. **Add upstream remote**
 
    ```bash
-   git remote add upstream https://github.com/leonpagotto/leo-kit.git
+   git remote add upstream https://github.com/leopagotto/ingvar-kit.git
    ```
 
 4. **Install dependencies**
@@ -55,7 +55,7 @@ LEO Kit is an open-source project and we welcome contributions from everyone:
 5. **Verify setup**
    ```bash
    npm test      # Should pass all tests
-   leo --version # Should show version
+   ingvar --version # Should show version
    ```
 
 ---
@@ -531,7 +531,7 @@ footer
 git commit -m "feat(spec): add code generation
 
 Implement Claude 3.5 Sonnet integration for automatic code generation.
-Users can now run 'leo spec implement' to generate production code.
+Users can now run 'ingvar spec implement' to generate production code.
 
 - Add AICodeGenerator class
 - Integrate Anthropic SDK
@@ -684,10 +684,10 @@ npm test -- --coverage
 
 # Run CLI locally
 npm link
-leo spec init test
+ingvar spec init test
 
 # Start development server
-leo dashboard start
+ingvar dashboard start
 
 # View logs
 npm test -- --verbose
@@ -697,11 +697,11 @@ npm test -- --verbose
 
 ## Resources
 
-- **GitHub:** https://github.com/leonpagotto/leo-kit
-- **Issues:** https://github.com/leonpagotto/leo-kit/issues
-- **Discussions:** https://github.com/leonpagotto/leo-kit/discussions
-- **Documentation:** https://github.com/leonpagotto/leo-kit/tree/main/docs
-- **Wiki:** https://github.com/leonpagotto/leo-kit/wiki
+- **GitHub:** https://github.com/leopagotto/ingvar-kit
+- **Issues:** https://github.com/leopagotto/ingvar-kit/issues
+- **Discussions:** https://github.com/leopagotto/ingvar-kit/discussions
+- **Documentation:** https://github.com/leopagotto/ingvar-kit/tree/main/docs
+- **Wiki:** https://github.com/leopagotto/ingvar-kit/wiki
 
 ---
 

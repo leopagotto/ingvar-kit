@@ -232,14 +232,14 @@ Constitution ↓ Specification ↓ Plan ↓ Tasks ↓ Code
 ### AI-Powered Code Generation
 
 ```bash
-leo spec implement
+ingvar spec implement
 # Uses Claude 3.5 Sonnet to generate production code
 ```
 
 ### Constitutional Governance
 
 ```bash
-leo spec constitution
+ingvar spec constitution
 # Define team principles that guide all development
 ```
 
@@ -274,7 +274,7 @@ CONTRIBUTING.md         (800+ lines)
 npm test                          # Run all tests
 npm test -- --coverage           # Verify coverage
 npm run lint                      # Check style
-leo spec init test-final          # Test CLI
+ingvar spec init test-final          # Test CLI
 ```
 
 **2. Security Review (1 hour)**
@@ -334,7 +334,7 @@ Create comprehensive CHANGELOG.md:
 **6. Release Notes (1 hour)**
 
 ```markdown
-# LEO Kit 5.0.0 Released! 🚀
+# Ingvar Kit 5.0.0 Released! 🚀
 
 This major release introduces...
 ```
@@ -436,7 +436,7 @@ Update command examples
 ## Current State Summary
 
 ```
-LEO Kit 5.0.0 Status:
+Ingvar Kit 5.0.0 Status:
 ├─ Code:             8,500+ lines ✅
 ├─ Tests:            49/49 passing ✅
 ├─ Documentation:    6,000+ lines ✅

@@ -44,7 +44,7 @@
 ```bash
 $ npm publish
 
-+ leo-workflow-kit@2.1.1
++ ingvar-kit@2.1.1
 ```
 
 **Package Details:**
@@ -57,13 +57,13 @@ $ npm publish
 
 #### Test 1: Version Check ✅
 ```bash
-$ npm view leo-workflow-kit version
+$ npm view ingvar-kit version
 2.1.1
 ```
 
 #### Test 2: Package Size ✅
 ```bash
-$ npm view leo-workflow-kit dist.unpackedSize
+$ npm view ingvar-kit dist.unpackedSize
 149327  # ~149 KB (was 314 KB before)
 ```
 
@@ -71,7 +71,7 @@ $ npm view leo-workflow-kit dist.unpackedSize
 ```bash
 $ mkdir test-npm-install && cd test-npm-install
 $ git init
-$ npm install leo-workflow-kit
+$ npm install ingvar-kit
 
 ✅ Installed successfully
 ✅ 69 packages added
@@ -80,7 +80,7 @@ $ npm install leo-workflow-kit
 
 #### Test 4: Templates Included ✅
 ```bash
-$ ls node_modules/leo-workflow-kit/templates/github-workflow/
+$ ls node_modules/ingvar-kit/templates/github-workflow/
 
 ✅ issue-templates/ (4 templates)
 ✅ workflows/ (3 workflows)
@@ -89,7 +89,7 @@ $ ls node_modules/leo-workflow-kit/templates/github-workflow/
 
 #### Test 5: CLI Works ✅
 ```bash
-$ npx leo --version
+$ npx ingvar --version
 2.1.1
 ```
 
@@ -98,7 +98,7 @@ $ npx leo --version
 ### During `npm install`:
 The package includes all templates in `node_modules/`:
 ```
-node_modules/leo-workflow-kit/
+node_modules/ingvar-kit/
   ├── bin/cli.js                    ✅
   ├── lib/                          ✅
   │   ├── commands/                 ✅
@@ -111,7 +111,7 @@ node_modules/leo-workflow-kit/
   └── scripts/postinstall.js        ✅
 ```
 
-### When Running `leo init`:
+### When Running `ingvar init`:
 Files are copied from `node_modules` to your project:
 ```
 your-project/
@@ -133,7 +133,7 @@ your-project/
 ### Global Installation
 ```bash
 # User runs:
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 
 # They get:
 ✅ CLI command available globally: `leo`
@@ -142,22 +142,22 @@ npm install -g leo-workflow-kit
 
 # In any project:
 cd my-project
-leo init  # ← Copies files from global package to project
+ingvar init  # ← Copies files from global package to project
 ```
 
 ### Local Installation
 ```bash
 # User runs:
 cd my-project
-npm install leo-workflow-kit
+npm install ingvar-kit
 
 # Postinstall detects and suggests:
 🎯 Quick Setup Available!
-You installed LEO locally in a git repository.
-Run: npx leo init
+You installed Ingvar locally in a git repository.
+Run: npx ingvar init
 
 # User runs:
-npx leo init
+npx ingvar init
 
 # Result:
 ✅ All files installed in project
@@ -180,7 +180,7 @@ npx leo init
 
 ### GitHub Repository ✅
 ```
-Repository: leonpagotto/leo-kit
+Repository: leopagotto/ingvar-kit
 Branch: main
 Commit: 1371a03
 Message: "fix: ensure templates are included in npm package..."
@@ -189,38 +189,38 @@ Status: Pushed ✅
 
 ### npm Registry ✅
 ```
-Package: leo-workflow-kit
+Package: ingvar-kit
 Version: 2.1.1
 Published: ✅
 Registry: https://registry.npmjs.org/
-Tarball: leo-workflow-kit-2.1.1.tgz
+Tarball: ingvar-kit-2.1.1.tgz
 ```
 
 ## User Experience Verification
 
 ### Scenario 1: Global Install → Use in Project ✅
 ```bash
-$ npm install -g leo-workflow-kit
+$ npm install -g ingvar-kit
 # Banner shows, explains next steps
 
 $ cd my-project
-$ leo init
+$ ingvar init
 # Installs all files successfully ✅
 ```
 
 ### Scenario 2: Local Install in Git Repo ✅
 ```bash
 $ cd my-project
-$ npm install leo-workflow-kit
-# Postinstall suggests: npx leo init
+$ npm install ingvar-kit
+# Postinstall suggests: npx ingvar init
 
-$ npx leo init
+$ npx ingvar init
 # Installs all files successfully ✅
 ```
 
 ### Scenario 3: Check What's Available ✅
 ```bash
-$ npm view leo-workflow-kit
+$ npm view ingvar-kit
 # Shows version 2.1.1
 # Shows package size: 45.6 KB
 # All metadata correct ✅
@@ -239,14 +239,14 @@ Users can now install the package with confidence:
 
 ```bash
 # Option 1: Global install
-npm install -g leo-workflow-kit
+npm install -g ingvar-kit
 cd your-project
-leo init
+ingvar init
 
 # Option 2: Local install  
 cd your-project
-npm install leo-workflow-kit
-npx leo init
+npm install ingvar-kit
+npx ingvar init
 
 # Both work perfectly! ✅
 ```
@@ -267,7 +267,7 @@ npx leo init
 - ✅ Templates verified in package
 - ✅ Fresh installation tested
 - ✅ CLI commands work
-- ✅ `leo init` copies files correctly
+- ✅ `ingvar init` copies files correctly
 - ✅ Documentation complete
 - ✅ User issue resolved
 

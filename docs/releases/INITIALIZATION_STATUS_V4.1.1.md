@@ -1,4 +1,4 @@
-# ✅ LEO Kit Initialization Status - Complete
+# ✅ Ingvar Kit Initialization Status - Complete
 
 **Date:** 2025-10-24
 **Version:** 4.1.1
@@ -8,7 +8,7 @@
 
 ## 📋 Summary
 
-Your LEO Workflow Kit installation is **already initialized and production-ready**. No additional initialization needed!
+Your Ingvar Kit installation is **already initialized and production-ready**. No additional initialization needed!
 
 ---
 
@@ -19,7 +19,7 @@ Your LEO Workflow Kit installation is **already initialized and production-ready
 | Component           | Status        | Details                     |
 | ------------------- | ------------- | --------------------------- |
 | **Installation**    | ✅ Installed  | v4.1.1 globally available   |
-| **Configuration**   | ✅ Configured | `.leorc.json` complete      |
+| **Configuration**   | ✅ Configured | `.ingvarrc.json` complete      |
 | **Git Repository**  | ✅ Ready      | Synced with GitHub          |
 | **GitHub Auth**     | ✅ Connected  | CLI authenticated           |
 | **Documentation**   | ✅ Complete   | All docs in place           |
@@ -68,7 +68,7 @@ Automation:
 
 ## ⚙️ Current Configuration
 
-### `.leorc.json` Status
+### `.ingvarrc.json` Status
 
 ```json
 {
@@ -107,30 +107,30 @@ Automation:
 ### **Quick Start Commands**
 
 ```bash
-leo --version          # Show version (4.1.1)
-leo status             # Quick status check
-leo health             # Full health check
-leo welcome            # Welcome & quick start guide
+ingvar --version          # Show version (4.1.1)
+ingvar status             # Quick status check
+ingvar health             # Full health check
+ingvar welcome            # Welcome & quick start guide
 ```
 
 ### **Workflow Commands**
 
 ```bash
-leo init               # (Re)initialize workflow
-leo issue              # Create a new issue
-leo labels             # Manage labels
-leo agent list         # List available agents
-leo model status       # Check AI model selection
-leo github status      # GitHub repository status
+ingvar init               # (Re)initialize workflow
+ingvar issue              # Create a new issue
+ingvar labels             # Manage labels
+ingvar agent list         # List available agents
+ingvar model status       # Check AI model selection
+ingvar github status      # GitHub repository status
 ```
 
 ### **Configuration Commands**
 
 ```bash
-leo config             # Manage configuration
-leo ai list            # List AI assistants
-leo vscode             # Setup VS Code
-leo docs               # Open documentation
+ingvar config             # Manage configuration
+ingvar ai list            # List AI assistants
+ingvar vscode             # Setup VS Code
+ingvar docs               # Open documentation
 ```
 
 ---
@@ -141,7 +141,7 @@ leo docs               # Open documentation
 
 ```
 Status Bar Display Examples:
-  ⊘ LEO Ready              (idle)
+  ⊘ Ingvar Ready              (idle)
   ↻ 🎨 designer → Claude-S (active)
   ✓ 🎨 designer complete   (done)
   ↻ 💻 frontend → Claude-S (next agent)
@@ -185,10 +185,10 @@ All documentation is available in the `docs/` folder:
 
 ## ✨ What You Can Do Now
 
-### **1. Create Issues with LEO**
+### **1. Create Issues with Ingvar**
 
 ```bash
-leo issue
+ingvar issue
 # Interactive issue creation with:
 # - GitHub-native features
 # - Priority indicators
@@ -199,28 +199,28 @@ leo issue
 ### **2. Manage Labels**
 
 ```bash
-leo labels
+ingvar labels
 # Setup and manage workflow labels
 ```
 
 ### **3. Test AI Model Selection**
 
 ```bash
-leo model status
+ingvar model status
 # Check current model selection configuration
 ```
 
 ### **4. Check Agent Status**
 
 ```bash
-leo agent list
+ingvar agent list
 # View available agents and their status
 ```
 
 ### **5. Setup GitHub Integration**
 
 ```bash
-leo github setup
+ingvar github setup
 # Configure repository webhooks and automation
 ```
 
@@ -230,13 +230,13 @@ leo github setup
 
 ### **GitHub**
 
-- Repository: https://github.com/leonpagotto/leo-kit
+- Repository: https://github.com/leopagotto/ingvar-kit
 - Project: https://github.com/users/leonpagotto/projects/4
-- Issues: https://github.com/leonpagotto/leo-kit/issues
+- Issues: https://github.com/leopagotto/ingvar-kit/issues
 
 ### **NPM**
 
-- Package: https://npmjs.org/package/leo-workflow-kit
+- Package: https://npmjs.org/package/ingvar-kit
 - Version: 4.1.1
 
 ### **Documentation**
@@ -254,36 +254,36 @@ leo github setup
 1. **Explore Commands**
 
    ```bash
-   leo welcome    # See welcome guide
-   leo health     # Run health check
+   ingvar welcome    # See welcome guide
+   ingvar health     # Run health check
    ```
 
 2. **Create Your First Issue**
 
    ```bash
-   leo issue
+   ingvar issue
    # Follow the interactive prompts
    ```
 
 3. **Enable More Agents** (Optional)
 
    ```bash
-   leo agent enable frontend
-   leo agent enable backend
-   leo agent enable testing
+   ingvar agent enable frontend
+   ingvar agent enable backend
+   ingvar agent enable testing
    ```
 
 4. **Test Model Selection**
 
    ```bash
-   leo model status
+   ingvar model status
    ```
 
 5. **Setup VS Code Extension** (Optional)
    ```bash
    # Copy extension to VS Code
    mkdir -p ~/.vscode/extensions/leo-model-selector
-   cp -r $(npm root -g)/leo-workflow-kit/lib/vscode-extension/* \
+   cp -r $(npm root -g)/ingvar-kit/lib/vscode-extension/* \
      ~/.vscode/extensions/leo-model-selector/
    # Reload VS Code
    ```
@@ -292,9 +292,9 @@ leo github setup
 
 ## ✅ Verification Checklist
 
-- ✅ LEO Kit v4.1.1 installed globally
-- ✅ `leo --version` returns 4.1.1
-- ✅ `.leorc.json` properly configured
+- ✅ Ingvar Kit v4.1.1 installed globally
+- ✅ `ingvar --version` returns 4.1.1
+- ✅ `.ingvarrc.json` properly configured
 - ✅ Git repository initialized and synced
 - ✅ GitHub authentication working
 - ✅ All documentation in place
@@ -307,15 +307,15 @@ leo github setup
 
 ## 🎉 Ready to Go!
 
-Your LEO Workflow Kit is **fully initialized, configured, and ready for production use**.
+Your Ingvar Kit is **fully initialized, configured, and ready for production use**.
 
 **Start using it:**
 
 ```bash
-leo issue          # Create an issue
-leo health         # Check health
-leo welcome        # See guide
-leo agent list     # View agents
+ingvar issue          # Create an issue
+ingvar health         # Check health
+ingvar welcome        # See guide
+ingvar agent list     # View agents
 ```
 
 All systems are operational! 🚀

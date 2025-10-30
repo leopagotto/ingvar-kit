@@ -121,8 +121,8 @@ graph TB
     DOCS -->|If needed| ORCHESTRATOR
 
     subgraph "Shared Context"
-        WORKFLOW[LEO Workflow Rules<br/>Issue creation, status, commits]
-        CONFIG[Project Config<br/>.leorc.json]
+        WORKFLOW[Ingvar Workflow Rules<br/>Issue creation, status, commits]
+        CONFIG[Project Config<br/>.ingvarrc.json]
     end
 
     ORCHESTRATOR -.->|Always enforces| WORKFLOW
@@ -134,7 +134,7 @@ graph TB
 1. **Single Entry Point**: User always talks to Orchestrator
 2. **Intelligent Routing**: Orchestrator decides which agent(s) to engage
 3. **Specialized Expertise**: Each agent has deep domain knowledge
-4. **Workflow Compliance**: All agents follow LEO workflow (issues, status, commits)
+4. **Workflow Compliance**: All agents follow Ingvar workflow (issues, status, commits)
 5. **Seamless Coordination**: Multi-agent tasks handled transparently
 6. **Project-Aware**: Agents enabled based on project type
 
@@ -151,7 +151,7 @@ graph TB
 - Analyze user requests to identify task type
 - Route to appropriate specialized agent(s)
 - Coordinate multi-agent tasks
-- Enforce LEO workflow rules (issue creation, status updates, commits)
+- Enforce Ingvar workflow rules (issue creation, status updates, commits)
 - Handle cross-cutting concerns (project board updates, PR creation)
 - Manage agent handoffs
 
@@ -198,7 +198,7 @@ Documentation Tasks:
 
 - 100 lines: Task classification logic
 - 100 lines: Routing rules
-- 100 lines: LEO workflow enforcement
+- 100 lines: Ingvar workflow enforcement
 - 100 lines: Agent coordination patterns
 
 ---
@@ -421,7 +421,7 @@ class OrchestratorAgent {
   }
 
   routeToAgent(analysis) {
-    const agents = this.getEnabledAgents(); // From .leorc.json
+    const agents = this.getEnabledAgents(); // From .ingvarrc.json
 
     // Check if primary agent is enabled for this project
     if (!agents.includes(analysis.primaryAgent)) {
@@ -486,7 +486,7 @@ Step 6: Orchestrator Completion
 
 ### Configuration System
 
-**`.leorc.json` Enhancements**:
+**`.ingvarrc.json` Enhancements**:
 
 ```json
 {
@@ -604,7 +604,7 @@ Each AI assistant gets agent-specific files:
 ## File Structure
 
 ```
-leo-workflow-kit/
+ingvar-kit/
 ├── lib/
 │   ├── agents/
 │   │   ├── orchestrator-template.js
@@ -645,12 +645,12 @@ leo-workflow-kit/
 
 ## User Experience Flow
 
-### During `leo init`
+### During `ingvar init`
 
 ```bash
-$ leo init
+$ ingvar init
 
-🦁 LEO Workflow Kit - Project Initialization
+🦁 Ingvar Kit - Project Initialization
 
 ✓ Detected project type: fullstack (React + Express)
 
@@ -687,14 +687,14 @@ Based on your project type, we recommend these agents:
   ✓ .github/agents/testing.md (Testing Agent - 296 lines)
   ✓ .github/agents/documentation.md (Docs Agent - 248 lines)
 
-✓ Saved configuration to .leorc.json
+✓ Saved configuration to .ingvarrc.json
 
 🎉 Multi-Agent System Ready!
 
 Next steps:
 1. Reload VS Code: Cmd+Shift+P → "Reload Window"
 2. Start working - Orchestrator will route tasks automatically
-3. Manage agents: leo agent list
+3. Manage agents: ingvar agent list
 ```
 
 ### During Development
@@ -771,25 +771,25 @@ Summary:
 - [ ] Routing mechanism functional
 - [ ] All 6 agent templates created (Frontend, Backend, DevOps, Testing, Docs)
 - [ ] Each template ≤ 400 lines
-- [ ] `.leorc.json` schema updated with agents config
+- [ ] `.ingvarrc.json` schema updated with agents config
 - [ ] Agent folder structure created per AI assistant
 
 ### Phase 2: Agent Generation
 
-- [ ] `leo init` includes agent selection step
+- [ ] `ingvar init` includes agent selection step
 - [ ] Agents auto-selected based on project type
 - [ ] All 4 AI adapters (Copilot, Cursor, Cline, Codeium) generate agent files
 - [ ] Agent instruction files created in correct locations
 - [ ] Orchestrator always enabled (required)
-- [ ] Configuration saved to `.leorc.json`
+- [ ] Configuration saved to `.ingvarrc.json`
 
 ### Phase 3: CLI Management
 
-- [ ] `leo agent list` - Show enabled agents
-- [ ] `leo agent add <name>` - Enable additional agent
-- [ ] `leo agent remove <name>` - Disable agent
-- [ ] `leo agent sync` - Regenerate all agent files
-- [ ] `leo agent info <name>` - Show agent details
+- [ ] `ingvar agent list` - Show enabled agents
+- [ ] `ingvar agent add <name>` - Enable additional agent
+- [ ] `ingvar agent remove <name>` - Disable agent
+- [ ] `ingvar agent sync` - Regenerate all agent files
+- [ ] `ingvar agent info <name>` - Show agent details
 
 ### Phase 4: Documentation
 
@@ -823,16 +823,16 @@ Summary:
 2. Build orchestrator template (~400 lines)
    - Task classification logic
    - Routing rules
-   - LEO workflow enforcement
+   - Ingvar workflow enforcement
    - Agent coordination patterns
-3. Design `.leorc.json` schema for agents
+3. Design `.ingvarrc.json` schema for agents
 4. Create agent folder structure
 5. Update AI adapters for agent support
 
 **Deliverables**:
 
 - `lib/agents/orchestrator-template.js`
-- Updated `.leorc.json` schema
+- Updated `.ingvarrc.json` schema
 - Agent folder structure design
 - Updated AI adapter base class
 
@@ -891,7 +891,7 @@ Summary:
 
 ### Phase 3: Init & Generation (Week 2-3) - 3 days
 
-**Goal**: Integrate agent selection into `leo init`
+**Goal**: Integrate agent selection into `ingvar init`
 
 **Tasks**:
 
@@ -899,7 +899,7 @@ Summary:
 2. Auto-detect recommended agents by project type
 3. Update AI adapters to generate agent files
 4. Implement agent folder creation
-5. Save agent config to `.leorc.json`
+5. Save agent config to `.ingvarrc.json`
 
 **Deliverables**:
 
@@ -914,20 +914,20 @@ Summary:
 
 ### Phase 4: CLI Management (Week 3) - 3 days
 
-**Goal**: Build `leo agent` command suite
+**Goal**: Build `ingvar agent` command suite
 
 **Tasks**:
 
 1. Create `lib/commands/agent.js`
-2. Implement `leo agent list`
-3. Implement `leo agent add <name>`
-4. Implement `leo agent remove <name>`
-5. Implement `leo agent sync`
-6. Implement `leo agent info <name>`
+2. Implement `ingvar agent list`
+3. Implement `ingvar agent add <name>`
+4. Implement `ingvar agent remove <name>`
+5. Implement `ingvar agent sync`
+6. Implement `ingvar agent info <name>`
 
 **Deliverables**:
 
-- Complete `leo agent` command
+- Complete `ingvar agent` command
 - Agent management utilities
 - User-friendly output
 
@@ -991,7 +991,7 @@ Summary:
 - ✅ Node.js 16+ (already required)
 - ✅ GitHub CLI (already required)
 - ✅ Existing AI instruction system (already built)
-- ✅ Configuration system (`.leorc.json` - already built)
+- ✅ Configuration system (`.ingvarrc.json` - already built)
 
 ### Feature Dependencies
 
@@ -1002,7 +1002,7 @@ Summary:
 
 ### External Dependencies
 
-None - This is a self-contained enhancement to existing LEO Kit architecture
+None - This is a self-contained enhancement to existing Ingvar Kit architecture
 
 ---
 
@@ -1013,14 +1013,14 @@ None - This is a self-contained enhancement to existing LEO Kit architecture
 **Why Major Version?**
 
 - Significant architectural change (monolithic → multi-agent)
-- New configuration schema in `.leorc.json`
+- New configuration schema in `.ingvarrc.json`
 - New file structure (agent folders)
 - Changes to AI instruction generation logic
 
 **What Breaks?**
 
 1. **Custom AI Instructions**: Users with heavily customized single instruction files will need to migrate
-2. **Configuration Format**: `.leorc.json` gains new `agents` section
+2. **Configuration Format**: `.ingvarrc.json` gains new `agents` section
 3. **File Locations**: AI instructions may move to agent folders
 
 **What Doesn't Break?**
@@ -1039,11 +1039,11 @@ None - This is a self-contained enhancement to existing LEO Kit architecture
 
 ```bash
 # Update to v4.0.0
-npm install -g leo-workflow-kit@latest
+npm install -g ingvar-kit@latest
 
 # Re-run init to configure agents
 cd your-project
-leo init --migrate
+ingvar init --migrate
 
 # Select agents based on your project
 # Old instruction files backed up to .backup/
@@ -1052,7 +1052,7 @@ leo init --migrate
 **Option 2: Backward Compatibility Mode**
 
 ```json
-// .leorc.json
+// .ingvarrc.json
 {
   "version": "4.0.0",
   "agents": {
@@ -1075,23 +1075,23 @@ In legacy mode:
 
 ```bash
 # Start with orchestrator only
-leo agent add orchestrator
+ingvar agent add orchestrator
 
 # Add agents one at a time as needed
-leo agent add frontend
-leo agent add backend
+ingvar agent add frontend
+ingvar agent add backend
 # ... etc
 
 # Sync all agents when ready
-leo agent sync
+ingvar agent sync
 ```
 
 ### Migration Checklist
 
 - [ ] Backup existing AI instruction files
-- [ ] Update LEO Kit to v4.0.0
+- [ ] Update Ingvar Kit to v4.0.0
 - [ ] Choose migration strategy (full, legacy, or gradual)
-- [ ] Run `leo init --migrate` or manually configure agents
+- [ ] Run `ingvar init --migrate` or manually configure agents
 - [ ] Test agent routing with sample tasks
 - [ ] Update team documentation
 - [ ] Verify CI/CD pipelines still work
@@ -1134,7 +1134,7 @@ leo agent sync
 - ✅ **Instruction File Size**: Average agent file ≤ 400 lines (vs 1000+ monolithic)
 - ✅ **Generation Time**: Agent files generate in < 5 seconds total
 - ✅ **Routing Accuracy**: 90%+ correct agent routing in testing
-- ✅ **Adoption Rate**: 60%+ of new `leo init` users enable multi-agent
+- ✅ **Adoption Rate**: 60%+ of new `ingvar init` users enable multi-agent
 - ✅ **Performance**: No noticeable latency added by orchestrator
 
 ### Qualitative
@@ -1177,7 +1177,7 @@ leo agent sync
 
 ## Conclusion
 
-The **Multi-Agent Orchestration System** transforms LEO Workflow Kit from a monolithic AI instruction platform into a **distributed, specialized agent architecture** that provides:
+The **Multi-Agent Orchestration System** transforms Ingvar Kit from a monolithic AI instruction platform into a **distributed, specialized agent architecture** that provides:
 
 - **Better Focus**: Each agent is an expert in their domain
 - **Shorter Instructions**: 300-400 lines per agent vs 1000+ monolithic
@@ -1215,7 +1215,7 @@ I will break this spec down into **focused GitHub issues** for implementation:
 - Issue: Create testing agent template
 - Issue: Create documentation agent template
 - Issue: Update init command with agent selection
-- Issue: Implement `leo agent` CLI commands
+- Issue: Implement `ingvar agent` CLI commands
 - Issue: Update AI adapters for multi-agent generation
 - Issue: Write multi-agent system documentation
 - Issue: End-to-end testing and validation

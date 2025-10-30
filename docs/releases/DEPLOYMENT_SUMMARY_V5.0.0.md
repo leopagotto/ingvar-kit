@@ -1,4 +1,4 @@
-# 🚀 LEO Kit v5.0.0 - Deployment Ready Summary
+# 🚀 Ingvar Kit v5.0.0 - Deployment Ready Summary
 
 **Date:** October 25, 2025
 **Status:** ✅ **READY FOR NPM DEPLOYMENT**
@@ -11,7 +11,7 @@
 
 ### What Was Changed
 
-All 6 LEO specialized agents are now **enabled by default** in new installations, with an improved installation UI that makes it clear users can unselect agents they don't need.
+All 6 Ingvar specialized agents are now **enabled by default** in new installations, with an improved installation UI that makes it clear users can unselect agents they don't need.
 
 ### Key Improvements
 
@@ -84,7 +84,7 @@ All 6 LEO specialized agents are now **enabled by default** in new installations
 ### Step 1: Verify Git Status
 
 ```bash
-cd /Users/leo.de.souza1/leo-workflow-kit
+cd /Users/leo.de.souza1/ingvar-kit
 git status
 # Should be clean (no uncommitted changes)
 
@@ -104,7 +104,7 @@ git push origin v5.0.0
 ```bash
 npm publish
 # Verify version
-npm view leo-workflow-kit version
+npm view ingvar-kit version
 # Should show: 5.0.0
 ```
 
@@ -119,8 +119,8 @@ gh release create v5.0.0 \
 ### Step 5: Verification
 
 ```bash
-npm install -g leo-workflow-kit@5.0.0
-leo --version
+npm install -g ingvar-kit@5.0.0
+ingvar --version
 # Should show: 5.0.0
 ```
 
@@ -177,16 +177,16 @@ leo --version
 
 ### For New Users
 
-- ✅ **No setup needed** - Agents ready immediately after `leo init`
+- ✅ **No setup needed** - Agents ready immediately after `ingvar init`
 - ✅ **Better defaults** - Optimal configuration from the start
-- ✅ **Clear path to customization** - Easy to uncheck agents via UI or .leorc.json
+- ✅ **Clear path to customization** - Easy to uncheck agents via UI or .ingvarrc.json
 - ✅ **More powerful** - Full multi-agent coordination immediately available
 
 ### For Existing Users
 
 - ✅ **Optional update** - No forced changes
 - ✅ **Backward compatible** - Can keep existing config
-- ✅ **Easy to adopt** - Just run `leo init` in new projects
+- ✅ **Easy to adopt** - Just run `ingvar init` in new projects
 - ✅ **Still customizable** - Can disable agents if not needed
 
 ### For Team Leads
@@ -234,7 +234,7 @@ If any issues occur after deployment, rollback is simple:
 
 ```bash
 # Unpublish from npm (be quick - 24 hour window)
-npm unpublish leo-workflow-kit@5.0.0
+npm unpublish ingvar-kit@5.0.0
 
 # Remove git tag
 git tag -d v5.0.0
@@ -278,7 +278,7 @@ npm publish
 
 ## 🎉 Summary
 
-**LEO Kit v5.0.0** is ready for NPM deployment with:
+**Ingvar Kit v5.0.0** is ready for NPM deployment with:
 
 ✅ **Better default behavior** - All agents enabled immediately
 ✅ **Improved UX** - Clearer "unselect if not needed" flow

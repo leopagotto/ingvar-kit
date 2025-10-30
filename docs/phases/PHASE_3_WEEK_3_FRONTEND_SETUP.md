@@ -45,9 +45,9 @@ Create `web/index.html`:
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="LEO Hunt Dashboard - Team Feature Hunting"
+      content="Ingvar Hunt Dashboard - Team Feature Hunting"
     />
-    <title>LEO Dashboard</title>
+    <title>Ingvar Dashboard</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css" />
@@ -70,7 +70,7 @@ Create `web/index.html`:
           <div class="navbar-container">
             <div class="logo">
               <span class="logo-icon">⚡</span>
-              <span class="logo-text">LEO Dashboard</span>
+              <span class="logo-text">Ingvar Dashboard</span>
             </div>
 
             <ul class="nav-menu">
@@ -130,7 +130,7 @@ Create `web/index.html`:
 
         <!-- Footer -->
         <footer class="footer">
-          <p>LEO Workflow Kit • Phase 3 Dashboard • v1.0.0</p>
+          <p>Ingvar Kit • Phase 3 Dashboard • v1.0.0</p>
         </footer>
       </div>
 
@@ -526,7 +526,7 @@ Create `web/css/main.css`:
 
 ```css
 /* ========================================
-   LEO Dashboard - Main Stylesheet
+   Ingvar Dashboard - Main Stylesheet
    ======================================== */
 
 /* CSS Variables */

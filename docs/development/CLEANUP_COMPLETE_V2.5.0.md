@@ -120,7 +120,7 @@
 ### 1. Automatic Initialization ✅
 
 ```bash
-LEO_AUTO_INIT=true npm install leo-workflow-kit
+Ingvar_AUTO_INIT=true npm install ingvar-kit
 ```
 
 - Non-interactive mode for CI/CD
@@ -306,8 +306,8 @@ AI:   "Creating issue for OAuth2 authentication..."
 
    ### Added
 
-   - Automatic initialization with LEO_AUTO_INIT environment variable
-   - Non-interactive mode for leo init command
+   - Automatic initialization with Ingvar_AUTO_INIT environment variable
+   - Non-interactive mode for ingvar init command
    - Automatic issue creation with AI detection
 
    ### Changed
