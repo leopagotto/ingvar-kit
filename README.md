@@ -2,7 +2,7 @@
 
 ![Ingvar Kit](docs/assets/ingvar_kit_logo.png)
 
-<h1>🇸🇪 Ingvar Kit</h1>
+<h1>Ingvar Kit</h1>
 
 <h3>AI-Powered Workflow Automation with IKEA Ingka Design System</h3>
 
@@ -19,7 +19,7 @@
 
 ### 🎉 **v5.4.0** - IKEA Ingka Skapa Design System Integration
 
-🇸🇪 **75+ Official IKEA Components** • 🎨 **Swedish Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📦 **83 Component Specifications**
+� **75+ Official IKEA Components** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📦 **83 Component Specifications**
 
 Generate production-ready apps with official IKEA design tokens, components, and accessibility standards built-in.
 
@@ -33,11 +33,11 @@ Generate production-ready apps with official IKEA design tokens, components, and
 
 **Ingvar Kit** is an AI-powered CLI that combines multi-agent orchestration, rapid app generation with IKEA design system, spec-driven development, and GitHub Projects automation—all in one powerful tool.
 
-Named after IKEA founder **Ingvar Kamprad**, this toolkit brings Swedish design excellence and AI automation together to transform your development workflow.
+Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional design excellence and AI automation together to transform your development workflow.
 
 ### 🎯 Core Capabilities
 
-1. **🇸🇪 IKEA Design System Integration** - Generate apps with official Ingka Skapa components
+1. **� IKEA Design System Integration** - Generate apps with official Ingka Skapa components
 2. **🤖 Multi-Agent AI** - 6 specialized agents (Frontend, Backend, DevOps, Testing, Docs, Orchestrator)
 3. **⚡ Spark Generator** - Create full-stack React apps from natural language prompts
 4. **📋 Spec-First Development** - GitHub-native specifications with evolution tracking
