@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - **Copilot Instructions**: Restructured `.github/copilot-instructions.md`
+
   - Reduced file size by 89% (4,499 → 500 lines)
   - Removed embedded agent instructions (no more duplication)
   - Kept core workflow rules (issue creation, commit format, status updates)
@@ -37,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Technical Details
 
 **Before:**
+
 - Single monolithic file: 4,499 lines
 - Full agent instructions embedded:
   - Orchestrator: ~742 lines
@@ -49,6 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Maintenance nightmare (dual updates)
 
 **After:**
+
 - Lightweight core: 500 lines
 - Agent routing + workflow rules only
 - Single source of truth: `lib/ai-instructions/*.md`

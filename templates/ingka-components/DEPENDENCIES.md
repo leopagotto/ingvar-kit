@@ -23,6 +23,7 @@ These components are **standalone** and **production-ready**. They:
 ## Component Features
 
 ### Button
+
 - 5 variants: primary, secondary, tertiary, ghost, danger
 - 3 sizes: sm (40px), md (48px), lg (56px)
 - Loading states with accessible spinner
@@ -31,6 +32,7 @@ These components are **standalone** and **production-ready**. They:
 - WCAG AA contrast ratios (4.5:1)
 
 ### Card
+
 - Elevation levels (0-3)
 - Clickable variants with hover effects
 - Sub-components: Header, Content, Title, Description, Media, Actions
@@ -38,6 +40,7 @@ These components are **standalone** and **production-ready**. They:
 - Keyboard accessible
 
 ### Input
+
 - Multiple types: text, email, password, number, tel, url
 - Error states with messages
 - Helper text support
@@ -45,6 +48,7 @@ These components are **standalone** and **production-ready**. They:
 - Labels properly associated
 
 ### All Components
+
 - 8px grid system spacing
 - Noto Sans typography
 - Mobile-first breakpoints (320px, 768px, 1024px, 1440px)
@@ -54,17 +58,13 @@ These components are **standalone** and **production-ready**. They:
 ## Usage Example
 
 ```tsx
-import { Button } from './ingka-components/Button';
-import { Card } from './ingka-components/Card';
+import { Button } from "./ingka-components/Button";
+import { Card } from "./ingka-components/Card";
 
 function ProductCard() {
   return (
     <Card elevation={2}>
-      <Card.Media 
-        src="/product.jpg" 
-        alt="POÄNG Armchair"
-        aspectRatio="4:3"
-      />
+      <Card.Media src="/product.jpg" alt="POÄNG Armchair" aspectRatio="4:3" />
       <Card.Content>
         <Card.Title>POÄNG</Card.Title>
         <Card.Description>
@@ -91,6 +91,7 @@ function ProductCard() {
 ## Accessibility
 
 All components meet WCAG 2.1 AA standards:
+
 - Keyboard navigation (Tab, Enter, Space, Arrow keys)
 - Screen reader support (ARIA labels, roles, states)
 - Focus indicators (2px visible outline)
@@ -100,13 +101,15 @@ All components meet WCAG 2.1 AA standards:
 ## Design Tokens Reference
 
 ### Colors
+
 ```typescript
-IKEA_BLUE = '#0051BA'    // Primary actions
-IKEA_YELLOW = '#FFDA1A'  // Accents
-ERROR_RED = '#C8102E'     // Error states
+IKEA_BLUE = "#0051BA"; // Primary actions
+IKEA_YELLOW = "#FFDA1A"; // Accents
+ERROR_RED = "#C8102E"; // Error states
 ```
 
 ### Spacing (8px Grid)
+
 ```typescript
 xs = 8px
 sm = 16px
@@ -115,6 +118,7 @@ lg = 32px
 ```
 
 ### Typography
+
 ```typescript
 Family: 'Noto Sans'
 Sizes: 14px (sm), 16px (md), 18px (lg)
@@ -122,6 +126,7 @@ Weights: 400 (regular), 500 (medium), 600 (semibold)
 ```
 
 ### Breakpoints
+
 ```typescript
 mobile: 320px
 tablet: 768px
