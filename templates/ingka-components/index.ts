@@ -44,6 +44,9 @@ export type { QuantityStepperProps } from './QuantityStepper';
 export { Search } from './Search';
 export type { SearchProps } from './Search';
 
+export { Combobox } from './Combobox';
+export type { ComboboxProps, ComboboxOption } from './Combobox';
+
 // === FEEDBACK COMPONENTS ===
 export { Badge } from './Badge';
 export type { BadgeProps } from './Badge';
@@ -90,6 +93,25 @@ export type { TooltipProps } from './Tooltip';
 // === DISPLAY COMPONENTS ===
 export { Avatar } from './Avatar';
 export type { AvatarProps } from './Avatar';
+
+export { Icon, IconNames } from './Icon';
+export type { IconProps, IconName } from './Icon';
+
+export { Text } from './Text';
+export type { TextProps } from './Text';
+
+export { Image } from './Image';
+export type { ImageProps } from './Image';
+
+export { List, ListItem } from './List';
+export type { ListProps, ListItemProps } from './List';
+
+export { Table } from './Table';
+export type { TableProps, TableColumn } from './Table';
+
+// === NAVIGATION COMPONENTS ===
+export { Hyperlink } from './Hyperlink';
+export type { HyperlinkProps } from './Hyperlink';
 
 // === BUTTON VARIANTS ===
 export { IconButton } from './IconButton';
@@ -180,17 +202,16 @@ export const ComponentDocs = {
 /**
  * Development Status
  *
- * ✅ Production Ready (27 components):
+ * ✅ Production Ready (34 components):
  *    - Buttons (3): Button, IconButton, Pill
- *    - Display (2): Card, Avatar
- *    - Forms (9): Input, TextArea, Checkbox, RadioButton, Select, Switch, Slider, QuantityStepper, Search
+ *    - Display (7): Card, Avatar, Icon, Text, Image, List, Table
+ *    - Forms (10): Input, TextArea, Checkbox, RadioButton, Select, Combobox, Switch, Slider, QuantityStepper, Search
  *    - Feedback (6): Badge, Banner, Toast, Loading, ProgressIndicator, Status
  *    - Layout (4): Divider, Accordion, Grid, AspectRatioBox
- *    - Navigation (1): Tabs
+ *    - Navigation (2): Tabs, Hyperlink
  *    - Overlays (2): Modal, Tooltip
  *
  * 📋 Planned for future releases:
- *    - Text, Image, List, Table
  *    - Price, Tag, Rating
  *    - Carousel, Video
  *    - Breadcrumbs, Stepper
