@@ -1,10 +1,10 @@
 /**
  * IKEA Ingka Skapa Component Library
- * 
+ *
  * Complete set of React components built with the official IKEA design system.
  * All components follow WCAG 2.1 AA accessibility standards and use official
  * IKEA design tokens for consistent styling.
- * 
+ *
  * @see https://npm.m2.blue.cdtapps.com (IKEA Ingka Skapa registry)
  */
 
@@ -30,7 +30,7 @@ export const LayoutComponents = {
   // Grid, AspectRatio, Divider will be added here
 };
 
-// Buttons & Actions  
+// Buttons & Actions
 export const ButtonComponents = {
   Button,
 };
@@ -44,7 +44,7 @@ export const FormComponents = {
 // Display & Content
 export const DisplayComponents = {
   Card,
-  // Text, Image, Badge will be added here  
+  // Text, Image, Badge will be added here
 };
 
 // Feedback & Status
@@ -59,7 +59,7 @@ export const OverlayComponents = {
 
 /**
  * Design System Exports
- * 
+ *
  * These should be imported from the actual @ingka packages
  * in your project after setting up the registry.
  */
@@ -71,19 +71,19 @@ export const OverlayComponents = {
 
 /**
  * Component Installation Guide
- * 
+ *
  * 1. Set up IKEA Ingka Skapa registry:
  *    npm set --location project @ingka:registry="https://npm.m2.blue.cdtapps.com"
- * 
+ *
  * 2. Install required design system packages:
  *    npm install @ingka/design-tokens @ingka/colours @ingka/typography
- * 
+ *
  * 3. Install component packages as needed:
  *    npm install @ingka/button @ingka/card @ingka/input-field
- * 
+ *
  * 4. Copy component templates from this directory to your project:
  *    cp -r templates/ingka-components/Button src/components/ui/
- * 
+ *
  * 5. Import and use:
  *    import { Button } from './components/ui/Button/Button';
  */
@@ -93,7 +93,7 @@ export const OverlayComponents = {
  */
 export const ComponentDocs = {
   button: './Button/README.md',
-  card: './Card/README.md', 
+  card: './Card/README.md',
   input: './Input/README.md',
   designSystem: '../../docs/guides/INGKA_DESIGN_SYSTEM.md',
   componentPDFs: '../../docs/guides/Skapa-components/',
@@ -102,7 +102,7 @@ export const ComponentDocs = {
 
 /**
  * Development Status
- * 
+ *
  * ✅ Ready: Button, Card, Input
  * 🚧 In Development: Checkbox, Select, Modal
  * 📋 Planned: Badge, Tooltip, Progress, Table
