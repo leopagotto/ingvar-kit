@@ -143,6 +143,26 @@ program
     modelCommand(subcommand, ...args);
   });
 
+// Components command - Install/manage IKEA design system components (NEW - v5.5.0)
+program
+  .command('components [action]')
+  .alias('comp')
+  .description('Manage IKEA Ingka Skapa design system components')
+  .option('-c, --components <list>', 'Components to install (comma-separated: button,card,input)')
+  .option('-o, --output <dir>', 'Output directory', 'src/components/ingka')
+  .option('--design-tokens', 'Install design tokens', true)
+  .option('--tailwind-config', 'Generate Tailwind config', true)
+  .action((action, options) => {
+    const componentsCommand = require('../lib/commands/components');
+    componentsCommand({
+      action: action || 'install',
+      components: options.components ? options.components.split(',') : undefined,
+      outputDir: options.output,
+      installDesignTokens: options.designTokens,
+      installTailwindConfig: options.tailwindConfig
+    });
+  });
+
 // Natural Language Command Handler - Intelligent detection for app creation
 program
   .command('detect [input...]')
