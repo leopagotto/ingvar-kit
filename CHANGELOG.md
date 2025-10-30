@@ -6,6 +6,65 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.10.0] - 2025-10-30
+
+### 🔄 Changed: Modular Instruction Architecture (BREAKING CHANGE)
+
+**Problem:** Massive duplication between `.github/copilot-instructions.md` (4,499 lines with full agent instructions embedded) and `lib/ai-instructions/` folder (separate agent files). Updates required in TWO places, inconsistency risk, unwieldy navigation.
+
+**Solution:** Modular architecture with lightweight core file + detailed agent files as single source of truth.
+
+### Changed
+
+- **Copilot Instructions**: Restructured `.github/copilot-instructions.md`
+  - Reduced file size by 89% (4,499 → 500 lines)
+  - Removed embedded agent instructions (no more duplication)
+  - Kept core workflow rules (issue creation, commit format, status updates)
+  - Added agent routing logic with decision tree
+  - Created explicit table of all 8 agent files
+  - Added workflow example showing `read_file()` usage
+  - Added critical reminders checklist (8-point verification)
+
+- **Enforcement Mechanisms**: Added 7+ touchpoints to ensure reading agent files
+  - Top-level mandatory reading warning
+  - 4-step checklist before any work
+  - Explicit table listing all agent files with paths
+  - Step-by-step "How to Use" instructions
+  - Complete workflow example with `read_file()` calls
+  - Question #2 in critical reminders: "Did I read the relevant agent instruction file(s)?"
+  - Closing reminder: "End of Core Instructions - Now Read Your Agent File!"
+
+### Technical Details
+
+**Before:**
+- Single monolithic file: 4,499 lines
+- Full agent instructions embedded:
+  - Orchestrator: ~742 lines
+  - Frontend: ~902 lines
+  - Backend: ~731 lines
+  - DevOps: ~617 lines
+  - Testing: ~627 lines
+  - Documentation: ~752 lines
+- Source of truth unclear
+- Maintenance nightmare (dual updates)
+
+**After:**
+- Lightweight core: 500 lines
+- Agent routing + workflow rules only
+- Single source of truth: `lib/ai-instructions/*.md`
+- Clear separation of concerns
+- Modular and maintainable
+
+### Benefits
+
+- ✅ Single source of truth (no more dual updates)
+- ✅ 89% smaller core file (faster to navigate)
+- ✅ Modular architecture (easier to maintain)
+- ✅ Clear separation (core vs detailed)
+- ✅ Impossible to miss (multiple enforcement touchpoints)
+- ✅ All core workflow rules preserved
+- ✅ Backward compatible (functionality unchanged)
+
 ## [5.4.0] - 2025-10-30
 
 ### 🇸🇪 Added: IKEA Ingka Skapa Design System Integration
