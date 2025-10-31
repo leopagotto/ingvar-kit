@@ -17,13 +17,13 @@
 
 ---
 
-### 🎉 **v5.13.0** - 20x Faster CLI Performance
+### 🎉 **v6.0.0** - Modular AI Instructions Architecture
 
-⚡ **CLI Startup: 1.2s → 0.06s** • 🚀 **20x Performance Boost** • 📦 **75+ IKEA Components** • 🎨 **Automatic Installation** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant**
+🎯 **Copilot Instructions: 4,967 → 464 lines** • 🎨 **Designer Agent Integrated** • ✅ **Accurate Component Reporting** • 📦 **75+ IKEA Components** • 🤖 **7 Specialized Agents** • ♿ **WCAG 2.1 AA Compliant**
 
-Blazing fast performance with lazy command loading, plus production-ready apps with official IKEA design tokens, components, and accessibility standards built-in. Automatic component installation during npm install - choose from 26 essential components, all 75 components, or cherry-pick specific ones.
+Major architecture refactor with 90.7% smaller AI instructions, complete 7-agent system (Designer now included!), and accurate component installation reporting. True modular system with zero duplication - update once, applies everywhere.
 
-**[Release Notes](CHANGELOG.md#5130)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)** • **[Component Installation](docs/guides/COMPONENT_INSTALLATION.md)**
+**[Release Notes](CHANGELOG.md#600)** • **[Architecture Guide](docs/development/COPILOT_INSTRUCTIONS_REFACTOR_V6.md)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Component Installation](docs/guides/COMPONENT_INSTALLATION.md)**
 
 ---
 
@@ -45,9 +45,17 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
 
 2. **🤖 Multi-Agent AI Orchestration**
 
-   - 6 specialized agents: Frontend, Backend, DevOps, Testing, Docs, Orchestrator
-   - Dynamic AI instruction builder adapts to project context
+   - 7 specialized agents: Orchestrator, Designer, Frontend, Backend, DevOps, Testing, Docs
+   - Dynamic AI instruction builder adapts to 4 editors (Copilot, Cursor, Cline, Codeium)
    - Intelligent task routing with complexity-based model selection
+   - Designer-first workflow for 10x faster UI prototyping
+
+3. **⚡ Spark Generator (App-in-Minutes)**
+
+   - Natural language → production React app (2-5 minutes)
+   - IKEA detection: Automatically uses Ingka components when appropriate
+   - Component libraries: 40+ shadcn/ui vs 75+ IKEA Ingka components
+   - Claude 3.5 Sonnet generation with best practices built-in
 
 3. **⚡ Spark Generator - Natural Language Apps**
 
@@ -85,21 +93,21 @@ graph TD
     B -->|Quality| F[🧪 Testing Agent]
     B -->|Documentation| G[📚 Docs Agent]
     B -->|Complex Task| H[Multi-Agent<br/>Coordination]
-    
+
     C --> I[Component Code]
     D --> J[API Endpoints]
     E --> K[Deployment Config]
     F --> L[Test Suites]
     G --> M[Documentation]
     H --> N[Integrated Solution]
-    
+
     I --> O[✅ Quality Output]
     J --> O
     K --> O
     L --> O
     M --> O
     N --> O
-    
+
     style B fill:#0051BA,color:#fff
     style H fill:#FFDA1A,color:#000
     style O fill:#4CAF50,color:#fff
@@ -118,7 +126,7 @@ graph LR
     F --> G[React + TypeScript<br/>Vite Setup]
     G --> H[AI-Generated<br/>Components]
     H --> I[✅ Production-Ready<br/>App]
-    
+
     style A fill:#2196F3,color:#fff
     style C fill:#FFDA1A,color:#000
     style D fill:#0051BA,color:#fff
@@ -133,21 +141,21 @@ sequenceDiagram
     participant CLI as Ingvar CLI
     participant GH as GitHub
     participant AI as AI Agent
-    
+
     Dev->>CLI: ingvar spec new "Feature"
     CLI->>GH: Create Issue #42
     GH-->>Dev: Spec Ready for Review
-    
+
     Dev->>GH: Add Acceptance Criteria
     Dev->>AI: Implement with AI
     AI->>Dev: Generated Code
-    
+
     Dev->>CLI: ingvar spec-diff #42
     CLI->>GH: Fetch Original Spec
     CLI-->>Dev: Show Semantic Changes
-    
+
     Dev->>GH: Close Issue (Feature Complete)
-    
+
     Note over Dev,GH: Real-time Collaboration<br/>No Merge Conflicts
 ```
 
@@ -158,19 +166,19 @@ graph TD
     A[npm install<br/>ingvar-kit] --> B{Postinstall<br/>Prompt}
     B -->|Yes| C{Choose Mode}
     B -->|No| Z[Skip Installation]
-    
+
     C -->|Essential| D[Install 26<br/>Components]
     C -->|All| E[Install 75<br/>Components]
     C -->|Cherry-pick| F[Interactive<br/>Selection]
-    
+
     D --> G[Copy to<br/>components/]
     E --> G
     F --> G
-    
+
     G --> H[Update Imports]
     H --> I[Configure Registry]
     I --> J[✅ Ready to Use]
-    
+
     style A fill:#2196F3,color:#fff
     style C fill:#FFDA1A,color:#000
     style J fill:#4CAF50,color:#fff
