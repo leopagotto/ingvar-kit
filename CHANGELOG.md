@@ -6,6 +6,112 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.13.0] - 2025-10-31
+
+### 🚀 Performance: CLI Startup Optimization (20x Faster)
+
+**Problem:** CLI had severe startup performance issues - taking 1.2+ seconds just to display version or help, making every command feel sluggish.
+
+**Root Cause:** All 21 commands were loaded eagerly at CLI startup, even when not needed. This meant importing dozens of modules (commander, chalk, inquirer, ora, etc.) for every invocation.
+
+**Solution:** Implemented lazy loading pattern - commands are only loaded when actually invoked.
+
+**Performance Results:**
+
+```bash
+# Before (v5.12.1):
+$ time ingvar --version
+5.12.1
+1.207 seconds total
+
+# After (v5.13.0):
+$ time ingvar --version
+5.13.0
+0.060 seconds total
+
+# Improvement: 20x faster (95% reduction)
+```
+
+**Technical Details:**
+
+- **Before:** All commands imported at startup
+
+  ```javascript
+  const initCommand = require("../lib/commands/init");
+  const issueCommand = require("../lib/commands/issue");
+  // ... 19 more commands loaded immediately
+  ```
+
+- **After:** Commands loaded on-demand
+  ```javascript
+  program.command("init").action((options) => {
+    const initCommand = require("../lib/commands/init"); // Lazy load
+    initCommand(options);
+  });
+  ```
+
+**Commands Optimized (21 total):**
+
+- Core: init, issue, labels, vscode, config
+- AI/Agents: ai, agent, model, dashboard
+- GitHub: github, github-project
+- Tools: plugin, organize-docs, components, spark
+- Specs: spec, health, team
+
+**Impact:**
+
+- ✅ CLI startup time: **1.2s → 0.06s** (20x faster)
+- ✅ Version/help commands: Instant response (<100ms)
+- ✅ Actual command execution: Still fast (~30-50ms to load command)
+- ✅ No breaking changes - all commands work identically
+- ✅ Significantly improved user experience
+
+### 🧹 Cleanup: Remove Legacy Package References
+
+**Problem:** Codebase contained references to old package names ("leo-kit", "leo-workflow-kit") from before the Ingvar Kit rebrand.
+
+**Fixed:**
+
+1. **Wiki Documentation** (`wiki/Installation-Guide.md`, `wiki/README.md`)
+
+   - Changed: `cd leo-kit` → `cd ingvar-kit` (2 instances)
+   - Changed: `leo-kit.wiki` → `ingvar-kit.wiki` (2 instances)
+
+2. **Command Comments** (`lib/commands/spec.js`)
+
+   - Changed: "leo-workflow-kit" → "Ingvar Kit"
+   - Updated all command documentation
+
+3. **Plugin Generator** (`lib/commands/plugin.js`)
+   - Changed: `peerDependencies: { 'leo-workflow-kit': '^5.0.0' }` → `'ingvar-kit': '^5.0.0'`
+   - Changed: `require('leo-workflow-kit/...')` → `require('ingvar-kit/...')`
+   - Changed: Keywords `['leo', ...]` → `['ingvar', ...]`
+
+**Verification:**
+
+- ✅ No "leo-kit" or "leo-workflow-kit" references in active code
+- ✅ Archive files intentionally preserved (historical record)
+- ✅ All package references accurate
+- ✅ Clean codebase ready for production
+
+### 📊 Summary
+
+**Performance:**
+
+- CLI startup: 20x faster (1.2s → 0.06s)
+- User experience: Significantly improved responsiveness
+- No functionality changes or breaking changes
+
+**Code Quality:**
+
+- Removed all legacy package name references
+- Clean, maintainable codebase
+- Production-ready
+
+**Release Type:** Minor version (performance + cleanup, no breaking changes)
+
+---
+
 ## [5.12.1] - 2025-10-31
 
 ### 🐛 Fixed: Postinstall Script Module Syntax Error
@@ -15,11 +121,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Fix:** Wrapped postinstall script execution in async IIFE (Immediately Invoked Function Expression) to properly handle asynchronous operations while maintaining CommonJS compatibility.
 
 **Changed:**
+
 - `scripts/postinstall.js`: Wrapped main execution block in `(async () => { ... })()` to eliminate top-level await
 - Maintains all functionality from v5.12.0 (component installation, initialization)
 - No breaking changes - all features work as intended
 
 **Impact:**
+
 - ✅ npm install now completes successfully
 - ✅ Component installation prompt works correctly
 - ✅ All postinstall hooks execute without errors
@@ -36,21 +144,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **New Features:**
 
 1. **ComponentInstaller Class** (`lib/components/component-installer.js`)
+
    - Complete installation management for all 75 IKEA components
    - 3 installation modes: Essential (26), All (75), Cherry-pick (custom)
    - Automatic Ingka registry configuration
    - React dependency verification
-   - npm package installation from @ingka/* registry
+   - npm package installation from @ingka/\* registry
    - Local template fallback
    - Automatic exports generation
 
 2. **Enhanced Postinstall Hook** (`scripts/postinstall.js`)
+
    - Automatic component prompt during npm install
    - Interactive selection with CI/CD fallback
    - Non-blocking installation
    - Beautiful terminal UI
 
 3. **Updated Components Command** (`lib/commands/components.js`)
+
    - Shows all 75 components (previously only 19)
    - Uses ComponentInstaller for consistency
    - Grouped by category with descriptions
