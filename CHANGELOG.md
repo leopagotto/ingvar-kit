@@ -6,6 +6,25 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.12.1] - 2025-10-31
+
+### 🐛 Fixed: Postinstall Script Module Syntax Error
+
+**Problem:** v5.12.0 published successfully to npm but failed during installation due to ambiguous module syntax error in postinstall script. The script used CommonJS `require()` with top-level `await`, causing Node.js ERR_AMBIGUOUS_MODULE_SYNTAX error.
+
+**Fix:** Wrapped postinstall script execution in async IIFE (Immediately Invoked Function Expression) to properly handle asynchronous operations while maintaining CommonJS compatibility.
+
+**Changed:**
+- `scripts/postinstall.js`: Wrapped main execution block in `(async () => { ... })()` to eliminate top-level await
+- Maintains all functionality from v5.12.0 (component installation, initialization)
+- No breaking changes - all features work as intended
+
+**Impact:**
+- ✅ npm install now completes successfully
+- ✅ Component installation prompt works correctly
+- ✅ All postinstall hooks execute without errors
+- ✅ Compatible with Node.js v18+ and CommonJS/ESM projects
+
 ## [5.12.0] - 2025-10-31
 
 ### 🎁 Added: Automatic IKEA Component Installation

@@ -93,20 +93,22 @@ ${chalk.hex('#FFD700').bold('🚀 Quick Start:')}
   ${chalk.white.bold('1.')} ${chalk.hex('#FF9500')('leo --version')}        ${chalk.gray('→ Verify installation')}
   ${chalk.white.bold('2.')} ${chalk.hex('#FF9500')('leo welcome')}          ${chalk.gray('→ View complete guide')}
   ${chalk.white.bold('3.')} ${chalk.hex('#FF9500')('cd your-project')}      ${chalk.gray('→ Navigate to project')}
-  ${chalk.white.bold('4.')} ${chalk.hex('#FF9500')('leo init')}             ${chalk.gray('→ Initialize workflow')}
+  ${chalk.white.bold('4.')} ${chalk.hex('#FF9500')('leo init')}            ${chalk.gray('→ Initialize workflow')}
 
 ${chalk.hex('#FFD700')('─────────────────────────────────────────────────────────────────────')}
 
 ${chalk.gray('📚 Documentation:')} ${chalk.blue.underline('https://github.com/leonpagotto/leo-kit')}
 `;
 
-try {
-  // Always show installation message
-  console.log(simpleMessage);
+// Wrap in async IIFE to handle top-level await
+(async () => {
+  try {
+    // Always show installation message
+    console.log(simpleMessage);
 
-  const isGlobal = isGlobalInstall();
-  const inGitRepo = isGitRepo();
-  const alreadyInitialized = isLeoInitialized();
+    const isGlobal = isGlobalInstall();
+    const inGitRepo = isGitRepo();
+    const alreadyInitialized = isLeoInitialized();
 
   // Create a marker file to indicate successful installation
   const homeDir = require('os').homedir();
@@ -186,10 +188,11 @@ try {
   // ===== NEW: Offer component installation =====
   await offerComponentInstallation(isGlobal, inGitRepo);
 
-} catch (error) {
-  // Silently fail if there are issues (e.g., during npm publish)
-  console.error(chalk.yellow('Note: Could not complete post-install setup, but the CLI should still work.'));
-}
+  } catch (error) {
+    // Silently fail if there are issues (e.g., during npm publish)
+    console.error(chalk.yellow('Note: Could not complete post-install setup, but the CLI should still work.'));
+  }
+})(); // End async IIFE
 
 /**
  * Check if package.json exists in current directory
