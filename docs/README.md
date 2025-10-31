@@ -1,6 +1,8 @@
 # Ingvar Kit Documentation# Project Documentation
 
-> **AI-powered workflow automation tool with IKEA Ingka Design System integration**All project documentation is organized here.
+# Ingvar Kit Documentation
+
+> **AI-powered workflow automation tool with IKEA Ingka Design System integration** > **Current Version: v5.12.1** - Automatic Component Installation + Bug FixesAll project documentation is organized here.
 
 ---## Structure
 
@@ -112,13 +114,16 @@ ingvar init
 - ✅ **Model Selection** - OpenAI, Anthropic, custom models with budget control
 - ✅ **Spec-First Development** - Architecture decision records and technical specs
 
-### IKEA Integration (v5.4.0)
+### IKEA Integration (v5.12.1)
 
+- 🚀 **Automatic Installation** - Install 75 components during npm install (NEW in v5.12.0)
+- 🎯 **3 Installation Modes** - Essential (26), All (75), or Cherry-pick (NEW in v5.12.0)
 - 🇸🇪 **1,300+ lines** of AI-readable Ingka documentation
 - 📦 **83 PDF specifications** (60 components + 23 foundations)
 - 🎨 **Design tokens** - Colors, spacing (8px grid), typography
 - ♿ **WCAG 2.1 AA** accessibility compliance
 - 📱 **Responsive design** - Mobile-first approach with Ingka components
+- 📝 **[Component Installation Guide](guides/COMPONENT_INSTALLATION.md)** - Complete setup documentation
 
 ---
 

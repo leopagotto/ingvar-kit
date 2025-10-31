@@ -17,13 +17,13 @@
 
 ---
 
-### 🎉 **v5.4.0** - IKEA Ingka Skapa Design System Integration
+### 🎉 **v5.12.1** - Automatic Component Installation + IKEA Design System
 
-📦 **75+ Official IKEA Components** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • � **[83 PDF Specifications](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)**
+📦 **75+ Official IKEA Components** • 🚀 **Automatic Installation** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📋 **[83 PDF Specifications](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)**
 
-Generate production-ready apps with official IKEA design tokens, components, and accessibility standards built-in.
+Generate production-ready apps with official IKEA design tokens, components, and accessibility standards built-in. Now with **automatic component installation** during npm install - choose from 26 essential components, all 75 components, or cherry-pick specific ones.
 
-**[Release Notes](CHANGELOG.md#540)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)**
+**[Release Notes](CHANGELOG.md#5121)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)** • **[Component Installation](docs/guides/COMPONENT_INSTALLATION.md)**
 
 ---
 
@@ -309,7 +309,7 @@ ingvar spec-extend 42 "Add SSO" --create-issues
 
 ### 📁 Automated Documentation Organization
 
-New in v5.0.1! Automatically organizes markdown files:
+Automatically organizes markdown files:
 
 \`\`\`bash
 
@@ -866,30 +866,33 @@ git push origin feature/amazing-feature
 
 ## 📊 Project Status
 
-### Current Release: v5.0.1
+### Current Release: v5.12.1
 
 **Key Features:**
 
-- ✅ Automated documentation organization
-- ✅ Pre-commit hooks for docs
-- ✅ Health check integration
-- ✅ Multi-agent orchestration (6 agents)
-- ✅ Spec-first development
-- ✅ GitHub Projects automation
-- ✅ Configuration management
+- ✅ **Automatic Component Installation** - Install IKEA components during npm install (v5.12.0)
+- ✅ **75+ IKEA Components** - Complete Ingka Skapa Design System (v5.4.0)
+- ✅ **3 Installation Modes** - Essential (26), All (75), or Cherry-pick (v5.12.0)
+- ✅ **AI-Powered Generation** - Spark generator with IKEA integration (v5.4.0)
+- ✅ **1,300+ Lines AI Specs** - GitHub Copilot/Claude instructions (v5.4.0)
+- ✅ **Multi-agent orchestration** - 6 specialized agents (v5.0.0)
+- ✅ **Spec-first development** - GitHub-native specifications (v4.0.0)
+- ✅ **GitHub Projects automation** - One-command setup (v4.0.0)
+- ✅ **Automated documentation organization** - Pre-commit hooks (v5.0.1)
 
-**In Progress:**
+**Recent Updates (v5.12.1):**
 
-- 🔨 Test coverage improvements (59 remaining)
-- 🔨 Enhanced error handling
-- 🔨 Performance optimizations
+- � **Bug Fix**: Fixed module syntax error in postinstall.js
+- ✅ **Hotfix**: Wrapped async operations in IIFE for CommonJS compatibility
+- ✅ **Verified**: Clean installation working across all environments
 
-**Upcoming (v5.1.0):**
+**Upcoming:**
 
 - 🎯 Advanced model selection strategies
 - 🎯 Cost tracking and budgets
 - 🎯 Team collaboration features
 - 🎯 Slack integration
+- 🎯 Additional design system support (Material, Ant Design)
 
 **Roadmap**: Check our [open issues](https://github.com/leopagotto/ingvar-kit/issues) for upcoming features
 
