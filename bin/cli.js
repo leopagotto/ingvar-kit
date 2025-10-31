@@ -213,7 +213,7 @@ program
       if (result.intent === 'create_app' && result.action === 'spark_generate') {
         console.log(chalk.green('\n✨ Creating app with IKEA design system...\n'));
 
-        const SparkGenerator = require('../lib/commands/spark-generator');
+        const { SparkGenerator } = require('../lib/commands/spark-generator');
         const generator = new SparkGenerator();
 
         await generator.create({
@@ -250,8 +250,8 @@ program
   .action(async (options) => {
     console.log(banner);
 
-    // Import the spark generator with Ingka support
-    const SparkGenerator = require('../lib/commands/spark-generator');
+    // Import the spark generator with Ingka support (FIXED: destructure named export)
+    const { SparkGenerator } = require('../lib/commands/spark-generator');
     const generator = new SparkGenerator();
 
     try {
