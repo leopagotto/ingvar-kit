@@ -17,6 +17,16 @@
 
 ---
 
+### 🎉 **v6.1.0** - 100% Component Registry Coverage
+
+✅ **72/72 Components Available** • 🔄 **Automatic Package Mapping** • 📦 **Individual Installation** • 🎯 **Spark Model Selection** • 🚀 **Zero Local Templates Needed**
+
+Achieved 100% Ingka registry coverage through automatic package name mapping. All 72 components now install from official registry with transparent mapping (e.g., colours → variables). Individual package installation prevents cascading failures. Spark now respects your model configuration.
+
+**[Release Notes](CHANGELOG.md#610)** • **[Registry Guide](docs/development/INGKA_REGISTRY_COMPONENTS.md)** • **[Package Mappings](docs/development/INGKA_REGISTRY_COMPONENTS.md#package-name-mappings)**
+
+---
+
 ### 🎉 **v6.0.0** - Modular AI Instructions Architecture
 
 🎯 **Copilot Instructions: 4,967 → 464 lines** • 🎨 **Designer Agent Integrated** • ✅ **Accurate Component Reporting** • 📦 **75+ IKEA Components** • 🤖 **7 Specialized Agents** • ♿ **WCAG 2.1 AA Compliant**
@@ -39,8 +49,10 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
 
 1. **🇸🇪 IKEA Design System Integration**
 
-   - 75+ official Ingka Skapa components with automatic installation
+   - 72+ official Ingka Skapa components with 100% registry coverage
+   - Automatic package name mapping (e.g., colours → variables)
    - Production-ready design tokens, typography, and accessibility
+   - Individual package installation for reliability
    - 83 PDF specifications with visual examples and code snippets
 
 2. **🤖 Multi-Agent AI Orchestration**

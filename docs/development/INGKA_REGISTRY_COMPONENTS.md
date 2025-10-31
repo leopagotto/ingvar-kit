@@ -226,6 +226,7 @@ The Ingvar Kit component installer automatically maps component names to the cor
 ```
 
 You'll see output like:
+
 ```
 ✓ colours → variables (from registry)
 ✓ expanding-button → button (from registry)
@@ -244,15 +245,15 @@ You'll see output like:
 
 If installing packages manually, use these mappings:
 
-| Select This Component | Installer Installs | Manual Install Command |
-|-----------------------|-------------------|------------------------|
-| `colours` | `@ingka/variables` | `npm i @ingka/variables` |
-| `expanding-button` | `@ingka/button` | `npm i @ingka/button` |
-| `icon-button` | `@ingka/button` | `npm i @ingka/button` |
-| `icon-pill` | `@ingka/pill` | `npm i @ingka/pill` |
-| `modal-sheets` | `@ingka/modal` | `npm i @ingka/modal` |
-| `modal-theatre` | `@ingka/modal` | `npm i @ingka/modal` |
-| `logos` | `@ingka/ssr-icon` | `npm i @ingka/ssr-icon` |
+| Select This Component | Installer Installs          | Manual Install Command            |
+| --------------------- | --------------------------- | --------------------------------- |
+| `colours`             | `@ingka/variables`          | `npm i @ingka/variables`          |
+| `expanding-button`    | `@ingka/button`             | `npm i @ingka/button`             |
+| `icon-button`         | `@ingka/button`             | `npm i @ingka/button`             |
+| `icon-pill`           | `@ingka/pill`               | `npm i @ingka/pill`               |
+| `modal-sheets`        | `@ingka/modal`              | `npm i @ingka/modal`              |
+| `modal-theatre`       | `@ingka/modal`              | `npm i @ingka/modal`              |
+| `logos`               | `@ingka/ssr-icon`           | `npm i @ingka/ssr-icon`           |
 | `commercial-messages` | `@ingka/commercial-message` | `npm i @ingka/commercial-message` |
 
 ## Testing Results
