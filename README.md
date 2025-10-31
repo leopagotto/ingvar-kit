@@ -17,13 +17,13 @@
 
 ---
 
-### 🎉 **v5.12.1** - Automatic Component Installation + IKEA Design System
+### 🎉 **v5.13.0** - 20x Faster CLI Performance
 
-📦 **75+ Official IKEA Components** • 🚀 **Automatic Installation** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📋 **[83 PDF Specifications](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)**
+⚡ **CLI Startup: 1.2s → 0.06s** • 🚀 **20x Performance Boost** • 📦 **75+ IKEA Components** • 🎨 **Automatic Installation** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant**
 
-Generate production-ready apps with official IKEA design tokens, components, and accessibility standards built-in. Now with **automatic component installation** during npm install - choose from 26 essential components, all 75 components, or cherry-pick specific ones.
+Blazing fast performance with lazy command loading, plus production-ready apps with official IKEA design tokens, components, and accessibility standards built-in. Automatic component installation during npm install - choose from 26 essential components, all 75 components, or cherry-pick specific ones.
 
-**[Release Notes](CHANGELOG.md#5121)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)** • **[Component Installation](docs/guides/COMPONENT_INSTALLATION.md)**
+**[Release Notes](CHANGELOG.md#5130)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)** • **[Component Installation](docs/guides/COMPONENT_INSTALLATION.md)**
 
 ---
 
@@ -37,12 +37,146 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
 
 ### 🎯 Core Capabilities
 
-1. **� IKEA Design System Integration** - Generate apps with official Ingka Skapa components
-2. **🤖 Multi-Agent AI** - 6 specialized agents (Frontend, Backend, DevOps, Testing, Docs, Orchestrator)
-3. **⚡ Spark Generator** - Create full-stack React apps from natural language prompts
-4. **📋 Spec-First Development** - GitHub-native specifications with evolution tracking
-5. **🎯 GitHub Projects** - Automated project board setup and issue management
-6. **🎨 AI Instructions** - 1,300+ lines of component specs for Copilot/Claude
+1. **🇸🇪 IKEA Design System Integration**
+
+   - 75+ official Ingka Skapa components with automatic installation
+   - Production-ready design tokens, typography, and accessibility
+   - 83 PDF specifications with visual examples and code snippets
+
+2. **🤖 Multi-Agent AI Orchestration**
+
+   - 6 specialized agents: Frontend, Backend, DevOps, Testing, Docs, Orchestrator
+   - Dynamic AI instruction builder adapts to project context
+   - Intelligent task routing with complexity-based model selection
+
+3. **⚡ Spark Generator - Natural Language Apps**
+
+   - Generate full-stack React apps from simple prompts
+   - Automatic IKEA design detection ("make it look like IKEA")
+   - 40+ shadcn/ui components OR 75+ Ingka components
+
+4. **📋 Spec-First Development**
+
+   - GitHub-native specifications (issues, not files)
+   - Real-time collaboration with no merge conflicts
+   - Evolution tracking with semantic diff analysis
+
+5. **🎯 GitHub Projects Automation**
+
+   - One-command project board setup with proper columns
+   - Auto-labeling and issue templates
+   - Integrated with spec workflow
+
+6. **🎨 Dynamic AI Instructions**
+   - 1,300+ lines of component specifications
+   - Adapts to: Cline, Copilot, Cursor, Codeium
+   - Auto-updates based on project structure and enabled features
+
+### 📊 How It Works
+
+#### Multi-Agent Orchestration Flow
+
+```mermaid
+graph TD
+    A[User Request] --> B{Orchestrator<br/>Analyzes Request}
+    B -->|UI/UX Task| C[🎨 Frontend Agent]
+    B -->|API/Database| D[⚙️ Backend Agent]
+    B -->|Deploy/CI| E[🚀 DevOps Agent]
+    B -->|Quality| F[🧪 Testing Agent]
+    B -->|Documentation| G[📚 Docs Agent]
+    B -->|Complex Task| H[Multi-Agent<br/>Coordination]
+    
+    C --> I[Component Code]
+    D --> J[API Endpoints]
+    E --> K[Deployment Config]
+    F --> L[Test Suites]
+    G --> M[Documentation]
+    H --> N[Integrated Solution]
+    
+    I --> O[✅ Quality Output]
+    J --> O
+    K --> O
+    L --> O
+    M --> O
+    N --> O
+    
+    style B fill:#0051BA,color:#fff
+    style H fill:#FFDA1A,color:#000
+    style O fill:#4CAF50,color:#fff
+```
+
+#### Spark Generation Workflow
+
+```mermaid
+graph LR
+    A[Natural Language<br/>Prompt] --> B{Parse Intent}
+    B -->|Design System| C{IKEA Detected?}
+    C -->|Yes| D[Load Ingka<br/>Components]
+    C -->|No| E[Load shadcn/ui<br/>Components]
+    D --> F[Generate with<br/>Claude 3.5]
+    E --> F
+    F --> G[React + TypeScript<br/>Vite Setup]
+    G --> H[AI-Generated<br/>Components]
+    H --> I[✅ Production-Ready<br/>App]
+    
+    style A fill:#2196F3,color:#fff
+    style C fill:#FFDA1A,color:#000
+    style D fill:#0051BA,color:#fff
+    style I fill:#4CAF50,color:#fff
+```
+
+#### Spec-First Development Flow
+
+```mermaid
+sequenceDiagram
+    participant Dev as Developer
+    participant CLI as Ingvar CLI
+    participant GH as GitHub
+    participant AI as AI Agent
+    
+    Dev->>CLI: ingvar spec new "Feature"
+    CLI->>GH: Create Issue #42
+    GH-->>Dev: Spec Ready for Review
+    
+    Dev->>GH: Add Acceptance Criteria
+    Dev->>AI: Implement with AI
+    AI->>Dev: Generated Code
+    
+    Dev->>CLI: ingvar spec-diff #42
+    CLI->>GH: Fetch Original Spec
+    CLI-->>Dev: Show Semantic Changes
+    
+    Dev->>GH: Close Issue (Feature Complete)
+    
+    Note over Dev,GH: Real-time Collaboration<br/>No Merge Conflicts
+```
+
+#### Component Installation Flow
+
+```mermaid
+graph TD
+    A[npm install<br/>ingvar-kit] --> B{Postinstall<br/>Prompt}
+    B -->|Yes| C{Choose Mode}
+    B -->|No| Z[Skip Installation]
+    
+    C -->|Essential| D[Install 26<br/>Components]
+    C -->|All| E[Install 75<br/>Components]
+    C -->|Cherry-pick| F[Interactive<br/>Selection]
+    
+    D --> G[Copy to<br/>components/]
+    E --> G
+    F --> G
+    
+    G --> H[Update Imports]
+    H --> I[Configure Registry]
+    I --> J[✅ Ready to Use]
+    
+    style A fill:#2196F3,color:#fff
+    style C fill:#FFDA1A,color:#000
+    style J fill:#4CAF50,color:#fff
+```
+
+**[See More Diagrams →](docs/WORKFLOW_DIAGRAMS.md)**
 
 ### 🆚 Ingvar vs GitHub Spec Kit
 
