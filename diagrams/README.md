@@ -1,44 +1,46 @@
-# LEO Workflow Kit - Diagrams
+# Ingvar Kit - Diagrams
 
-This directory contains architecture and workflow diagrams for the LEO Workflow Kit (v5.0.0).
+This directory contains architecture and workflow diagrams for Ingvar Kit (v6.0.0).
 
 ## 📊 Available Diagrams
 
-### 1. Architecture Diagram (v5.0.0)
+### 1. Architecture Diagram (v6.0.0)
 
 **File:** `architecture.mmd`
 **Shows:**
 
-- System components and data flow with real-time model selection
-- 🆕 **All 6 agents enabled by default** (v5.0.0)
-- Multi-agent orchestration system (6 specialized agents + Designer)
-- Real-time model selection status manager and display
+- System components and data flow with modular AI instructions (90% smaller!)
+- 🆕 **7 specialized agents** including Designer Agent (v6.0.0)
+- Multi-agent orchestration system with Designer-first workflow
+- Modular AI instructions architecture (4,967 → 464 lines)
 - AI instructions builder and agent adapters
-- `leo agent`, `leo github`, and `leo model` commands
-- Configuration system with agent and model management
+- `ingvar agent`, `ingvar github` commands
+- Configuration system with agent management
 - External dependencies (GitHub CLI, API, Projects, Repository)
 - Copilot integration with spec-first decision making
 
 **Key Features:**
 
 - Orchestrator Agent → Routes tasks to specialists
+- **Designer Agent** → Creates UI/UX mockups before implementation
 - Frontend, Backend, DevOps, Testing, Documentation agents
-- **All agents ready to use immediately** ✨ (v5.0.0)
-- Real-Time Model Selection with VS Code status bar display
-- Agent configuration via `.leorc.json`
+- **7 agents total** ✨ (v6.0.0)
+- **Modular AI instructions** - 90% smaller, zero duplication
+- Agent configuration via `.ingvarrc.json`
 - Intelligent routing based on keywords, files, and intent
+- Designer-first workflow for UI/UX tasks
 
-### 2. Workflow Diagram (v5.0.0)
+### 2. Workflow Diagram (v6.0.0)
 
 **File:** `workflow.mmd`
 **Shows:**
 
 - Complete development workflow from user request to deployment
-- Multi-agent orchestration and task routing with real-time model display
-- 🆕 **All 6 agents enabled by default** (v5.0.0)
-- Real-time model selection display in VS Code
+- Multi-agent orchestration and task routing
+- 🆕 **7 agents including Designer** (v6.0.0)
+- 🆕 **Designer-first workflow** for UI/UX work
 - Enhanced spec-first decision making (complexity estimation)
-- Multi-agent coordination for complex features
+- Multi-agent coordination for complex features (5-step flow)
 - Auto-resolution configuration
 - Issue creation and GitHub Projects integration
 - Development lifecycle with status management
@@ -47,11 +49,11 @@ This directory contains architecture and workflow diagrams for the LEO Workflow 
 
 - Orchestrator analyzes and classifies tasks
 - Routes to appropriate specialized agent(s)
-- **All 6 agents available immediately** ✨ (v5.0.0)
-- Real-time model selection with status updates
+- **Designer Agent creates mockups → Frontend implements**
+- **7 agents available immediately** ✨ (v6.0.0)
 - Spec creation for complex work (> 1 week)
 - Direct issue creation for simple work (< 1 day)
-- Multi-agent coordination example (Backend → Frontend → Testing → Docs)
+- Multi-agent coordination example (Designer → Backend → Frontend → Testing → Docs)
 - Auto-resolve configuration check
 - Status transitions: Todo → In Progress → Done
 
@@ -166,60 +168,64 @@ When updating diagrams:
 - ✅ PR creation and merge flow
 - ✅ CI/CD pipeline stages
 
-## 🆕 v4.0.0 Diagram Updates
+## 🆕 v6.0.0 Diagram Updates
 
 ### What's New in Architecture Diagram:
 
-1. **Multi-Agent Orchestration System**
+1. **Modular AI Instructions System**
+
+   - 90.7% size reduction (4,967 → 464 lines)
+   - Zero duplication - single source of truth per agent
+   - Core instructions + modular agent adapters
+   - Combined output to `.github/copilot-instructions.md`
+
+2. **Designer Agent Integration**
+
+   - 🎨 New Designer Agent for UI/UX mockups
+   - 7 specialized agents total (was 6)
+   - Designer-first workflow for visual work
+   - Rapid HTML/CSS prototyping before implementation
+
+3. **Enhanced Multi-Agent Orchestration**
 
    - Orchestrator Agent (task routing & coordination)
-   - 6 specialized agents with specific domains
+   - 7 specialized agents with specific domains
    - Intelligent routing logic (keywords, files, intent)
    - Multi-agent coordination support
 
-2. **New Commands**
+4. **Component Installation Accuracy**
 
-   - `leo agent` - Agent management (list, enable, disable, info, sync)
-   - `leo github` - Repository settings automation
-
-3. **AI Instructions System**
-
-   - AI instructions builder
-   - Core instructions (orchestrator logic)
-   - Agent adapters (per-agent instructions)
-   - Combined output to `.github/copilot-instructions.md`
-
-4. **Enhanced Configuration**
-   - Agent configuration in `.leorc.json`
-   - Project type detection
-   - Agent enable/disable controls
+   - Fixed misleading installation counts
+   - Accurate reporting (installed vs failed)
+   - No more broken TypeScript imports
 
 ### What's New in Workflow Diagram:
 
-1. **Multi-Agent Orchestration**
+1. **Designer-First Workflow**
 
-   - Orchestrator analyzes and classifies tasks
-   - Routes to appropriate specialized agent(s)
-   - Multi-agent coordination example (4-step flow)
+   - UI/UX work starts with Designer Agent
+   - Creates HTML/CSS mockups for approval
+   - Frontend Agent implements from approved mockups
+   - 10x faster visual feedback
 
-2. **Enhanced Spec-First Decision Making**
+2. **Enhanced Multi-Agent Coordination**
+
+   - 5-step multi-agent flow (was 4-step)
+   - Designer → Backend → Frontend → Testing → Docs
+   - Clear handoffs between agents
+   - Coordinated end-to-end implementation
+
+3. **Improved Spec-First Decision Making**
 
    - Complexity estimation (< 1 day vs > 1 week)
    - Spec template usage (EXAMPLE_SPEC.md)
    - Detailed spec sections (problem, solution, technical, criteria, timeline)
    - User review and approval loop
 
-3. **Agent-Driven Implementation**
-
+4. **Agent-Driven Implementation**
    - Specialized agents implement following domain guidelines
    - Agent-specific best practices enforced
    - Quality standards per domain
-
-4. **Improved Issue Flow**
-   - Clearer simple vs complex paths
-   - Spec-to-multiple-issues breakdown
-   - Auto-resolve configuration check
-   - Status management throughout lifecycle
 
 ## 🎯 Tips
 
@@ -246,5 +252,5 @@ When updating diagrams:
 
 ---
 
-**Last Updated:** October 25, 2025
-**Diagrams Version:** 3.0 (v5.0.0 - All Agents Enabled by Default)
+**Last Updated:** October 31, 2025
+**Diagrams Version:** 4.0 (v6.0.0 - Modular AI Instructions + Designer Agent)
