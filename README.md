@@ -57,25 +57,25 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
    - Component libraries: 40+ shadcn/ui vs 75+ IKEA Ingka components
    - Claude 3.5 Sonnet generation with best practices built-in
 
-3. **⚡ Spark Generator - Natural Language Apps**
+4. **⚡ Spark Generator - Natural Language Apps**
 
    - Generate full-stack React apps from simple prompts
    - Automatic IKEA design detection ("make it look like IKEA")
    - 40+ shadcn/ui components OR 75+ Ingka components
 
-4. **📋 Spec-First Development**
+5. **📋 Spec-First Development**
 
    - GitHub-native specifications (issues, not files)
    - Real-time collaboration with no merge conflicts
    - Evolution tracking with semantic diff analysis
 
-5. **🎯 GitHub Projects Automation**
+6. **🎯 GitHub Projects Automation**
 
    - One-command project board setup with proper columns
    - Auto-labeling and issue templates
    - Integrated with spec workflow
 
-6. **🎨 Dynamic AI Instructions**
+7. **🎨 Dynamic AI Instructions**
    - 1,300+ lines of component specifications
    - Adapts to: Cline, Copilot, Cursor, Codeium
    - Auto-updates based on project structure and enabled features

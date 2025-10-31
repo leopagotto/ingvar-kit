@@ -1,7 +1,7 @@
 # Copilot Instructions Refactor v6.0.0
 
-**Date:** 2025-10-31  
-**Type:** Architecture Improvement  
+**Date:** 2025-10-31
+**Type:** Architecture Improvement
 **Impact:** High - Reduces duplication, improves modularity
 
 ---
@@ -30,28 +30,39 @@
 #### 1. Added Designer Agent to Builder (`lib/ai-instructions/builder.js`)
 
 **Before:**
+
 ```javascript
-const { generateOrchestratorInstructions } = require('../agents/orchestrator-template');
-const { generateFrontendInstructions } = require('../agents/frontend-template');
-const { generateBackendInstructions } = require('../agents/backend-template');
-const { generateDevOpsInstructions } = require('../agents/devops-template');
-const { generateTestingInstructions } = require('../agents/testing-template');
-const { generateDocumentationInstructions } = require('../agents/documentation-template');
+const {
+  generateOrchestratorInstructions,
+} = require("../agents/orchestrator-template");
+const { generateFrontendInstructions } = require("../agents/frontend-template");
+const { generateBackendInstructions } = require("../agents/backend-template");
+const { generateDevOpsInstructions } = require("../agents/devops-template");
+const { generateTestingInstructions } = require("../agents/testing-template");
+const {
+  generateDocumentationInstructions,
+} = require("../agents/documentation-template");
 // ❌ MISSING: Designer
 ```
 
 **After:**
+
 ```javascript
-const { generateOrchestratorInstructions } = require('../agents/orchestrator-template');
-const { generateFrontendInstructions } = require('../agents/frontend-template');
-const { generateBackendInstructions } = require('../agents/backend-template');
-const { generateDevOpsInstructions } = require('../agents/devops-template');
-const { generateTestingInstructions } = require('../agents/testing-template');
-const { generateDocumentationInstructions } = require('../agents/documentation-template');
-const { generateDesignerInstructions } = require('../agents/designer-template'); // ✅ ADDED
+const {
+  generateOrchestratorInstructions,
+} = require("../agents/orchestrator-template");
+const { generateFrontendInstructions } = require("../agents/frontend-template");
+const { generateBackendInstructions } = require("../agents/backend-template");
+const { generateDevOpsInstructions } = require("../agents/devops-template");
+const { generateTestingInstructions } = require("../agents/testing-template");
+const {
+  generateDocumentationInstructions,
+} = require("../agents/documentation-template");
+const { generateDesignerInstructions } = require("../agents/designer-template"); // ✅ ADDED
 ```
 
 **Also updated `getAgentGenerators()` to include designer:**
+
 ```javascript
 getAgentGenerators() {
   return {
@@ -71,12 +82,14 @@ getAgentGenerators() {
 #### 2. Drastically Reduced Copilot Instructions (`.github/copilot-instructions.md`)
 
 **Before:**
+
 - 4,967 lines
 - Contained FULL instructions for 6 agents (Orchestrator, Frontend, Backend, DevOps, Testing, Documentation)
 - Missing Designer agent entirely
 - Massive duplication of standards and patterns
 
 **After:**
+
 - 464 lines (90.7% reduction!)
 - Contains ONLY:
   - Core workflow rules (issue creation, commits, status updates)
@@ -95,32 +108,51 @@ getAgentGenerators() {
 # GitHub Copilot Instructions - Ingvar Workflow Kit
 
 ## ⚡ ACTIVE ENFORCEMENT MODE
+
 - Core workflow rules (issue creation, commits, status updates)
 
 ## Core Workflow Rules
+
 ### 🚨 Automatic Issue Creation
-### 📝 Commit Message Format  
+
+### 📝 Commit Message Format
+
 ### 🔄 Status Updates
+
 ### 📋 Spec-First Decision Making
+
 ### 💬 Issue Comments
 
 ## Multi-Agent System
+
 ### 🤖 7 Specialized Agents (including Designer!)
+
 ### Designer-First Workflow
 
 ## Agent Routing
+
 ### 🎯 Your Role: Intelligent Router
+
 ### 📊 Task Classification
+
 ### 🎨 Designer Tasks → Read `lib/ai-instructions/designer-agent.md`
+
 ### 🎨 Frontend Tasks → Read `lib/ai-instructions/frontend-agent.md`
+
 ### ⚙️ Backend Tasks → Read `lib/ai-instructions/backend-agent.md`
+
 ### 🚀 DevOps Tasks → Read `lib/ai-instructions/devops-agent.md`
+
 ### 🧪 Testing Tasks → Read `lib/ai-instructions/testing-agent.md`
+
 ### 📚 Documentation Tasks → Read `lib/ai-instructions/documentation-agent.md`
+
 ### 🔀 Multi-Agent Tasks
 
 ## Detailed Agent Instructions
+
 ### 🚨 CRITICAL: YOU MUST READ THESE FILES
+
 - Table with all 7 agents and their files
 - Step-by-step usage instructions
 ```
@@ -132,22 +164,26 @@ getAgentGenerators() {
 ### Benefits
 
 1. **90.7% Size Reduction**
+
    - Before: 4,967 lines
    - After: 464 lines
    - Backup saved: `.github/copilot-instructions.md.backup`
 
 2. **Designer Agent Now Available**
+
    - ✅ Imported in builder.js
    - ✅ Registered in agent generators
    - ✅ Documented in copilot instructions
    - ✅ Available for multi-agent workflows
 
 3. **Zero Duplication**
+
    - Core rules defined ONCE in copilot instructions
    - Agent details defined ONCE in their respective files
    - No more maintaining 3 places for the same logic
 
 4. **True Modularity**
+
    - Each agent has ONE source of truth
    - Copilot instructions references them dynamically
    - Changes to agent logic only need updates in ONE file
@@ -211,6 +247,7 @@ Execute (but Designer was missing!)
 ```
 
 **Problems:**
+
 - Overwhelming file size
 - Hard to find relevant sections
 - Designer agent completely missing
@@ -233,6 +270,7 @@ Execute with both core rules + agent-specific instructions
 ```
 
 **Benefits:**
+
 - Fast to read and understand
 - Clear routing logic
 - All 7 agents available (including Designer!)
@@ -280,6 +318,7 @@ Done! ✅
 ```
 
 **Now properly implemented with all 7 agents:**
+
 1. 🎯 Orchestrator - Routes requests
 2. 🎨 Designer - Rapid prototyping (NOW WORKS!)
 3. 🎨 Frontend - Component implementation
@@ -328,6 +367,7 @@ grep -c "designer-agent.md" .github/copilot-instructions.md
 ### For Users
 
 **No action required!** The changes are backward compatible:
+
 - Existing projects work the same way
 - All 7 agents now available (Designer is a bonus!)
 - Instructions are modular and reference external files
@@ -341,6 +381,7 @@ grep -c "designer-agent.md" .github/copilot-instructions.md
 3. ❌ DON'T update `.github/copilot-instructions.md` (it references the files!)
 
 **The modular approach means:**
+
 - One change in `lib/agents/designer-template.js` automatically applies to all AI assistants (Copilot, Cursor, Cline, Codeium)
 - No more maintaining multiple copies of the same instructions
 - Builder system generates AI-specific formats dynamically
@@ -360,14 +401,17 @@ grep -c "designer-agent.md" .github/copilot-instructions.md
 ### Future Enhancements
 
 1. **Auto-Generate Copilot Instructions**
+
    - Could generate `.github/copilot-instructions.md` from builder system
    - Keep core rules in a template, inject agent routing table dynamically
 
 2. **Agent Configuration**
+
    - Allow projects to enable/disable specific agents via `.ingvarrc.json`
    - Dynamic agent list based on project type (e.g., frontend-only projects don't need Backend agent)
 
 3. **Agent Dependencies**
+
    - Define which agents depend on each other
    - Orchestrator automatically coordinates handoffs
 
@@ -391,18 +435,18 @@ grep -c "designer-agent.md" .github/copilot-instructions.md
 
 ### What Changed
 
-✅ **Added Designer Agent** to builder.js (import + registration)  
-✅ **Reduced Copilot Instructions** from 4,967 → 464 lines (90.7% reduction)  
-✅ **Eliminated Duplication** by referencing modular agent files  
-✅ **Completed Multi-Agent System** with all 7 agents functional  
+✅ **Added Designer Agent** to builder.js (import + registration)
+✅ **Reduced Copilot Instructions** from 4,967 → 464 lines (90.7% reduction)
+✅ **Eliminated Duplication** by referencing modular agent files
+✅ **Completed Multi-Agent System** with all 7 agents functional
 ✅ **Preserved Original** as `.github/copilot-instructions.md.backup`
 
 ### Why It Matters
 
-🎯 **True Modularity** - One source of truth per agent  
-🎯 **Designer-First Workflow** - Now fully functional  
-🎯 **Easy Maintenance** - Update once, applies everywhere  
-🎯 **Better DX** - Clear structure, easy to understand  
+🎯 **True Modularity** - One source of truth per agent
+🎯 **Designer-First Workflow** - Now fully functional
+🎯 **Easy Maintenance** - Update once, applies everywhere
+🎯 **Better DX** - Clear structure, easy to understand
 🎯 **Architecture Alignment** - Uses the builder system as intended
 
 ### Impact
@@ -415,6 +459,6 @@ grep -c "designer-agent.md" .github/copilot-instructions.md
 
 ---
 
-**Version:** 6.0.0  
-**Architecture:** Modular Multi-Agent  
+**Version:** 6.0.0
+**Architecture:** Modular Multi-Agent
 **Status:** ✅ Complete and Verified
