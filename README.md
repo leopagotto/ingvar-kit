@@ -146,18 +146,45 @@ ingvar spark "Create product catalog with search and filters"
 
 ### 🇸🇪 IKEA Ingka Design System
 
-Built-in support for the official IKEA design system with 75+ production-ready components and complete AI-readable specifications.
+Built-in support for the official IKEA design system with 75+ production-ready components and **automatic installation** during setup.
 
 ```bash
+# Automatic installation during npm install
+npm install ingvar-kit
+# → Prompted to install 75 IKEA components
+
+# Or install components anytime
+ingvar components
+
 # Generate app with official IKEA design
 ingvar spark "todo app" --style ingka
 
 # Or use natural language detection
 ingvar spark "Create a shopping cart that looks like IKEA"
-
-# Configure Ingka registry (one-time setup)
-npm set --location project @ingka:registry="https://npm.m2.blue.cdtapps.com"
 ```
+
+**🚀 New: Automatic Component Installation**
+
+When you install Ingvar Kit, you'll be prompted to install IKEA components:
+
+```
+📦 IKEA Component Library Available
+
+  Ingvar Kit includes 75 production-ready IKEA components
+  from the official Ingka Skapa Design System:
+
+  • Buttons, Cards, Forms, Modals, Tables, and more
+  • Mobile-first & WCAG AA compliant
+  • Looks like IKEA.com
+
+? Install IKEA components now? (y/N)
+```
+
+**Component Installation Modes:**
+
+1. **Essential** (26 components) - Most common components for quick start
+2. **All** (75 components) - Complete library for full coverage
+3. **Cherry-pick** - Select individual components interactively
 
 **What's Included:**
 
@@ -182,6 +209,7 @@ npm set --location project @ingka:registry="https://npm.m2.blue.cdtapps.com"
 
 **Documentation Structure:**
 
+- **Installation Guide**: `docs/guides/COMPONENT_INSTALLATION.md` (complete setup guide)
 - **AI Instructions**: `lib/ai-instructions/frontend-agent-ingka.instructions.md` (26KB, complete guide)
 - **Quick Reference**: `docs/INGKA_QUICK_REFERENCE.md` (component overview)
 - **Design System Guide**: `docs/guides/INGKA_DESIGN_SYSTEM.md` (developer guide)
@@ -192,8 +220,8 @@ npm set --location project @ingka:registry="https://npm.m2.blue.cdtapps.com"
 **Example Usage:**
 
 ```tsx
-import { Button } from "@ingka/button";
-import { Card } from "@ingka/card";
+// Import from auto-installed components
+import { Button, Card } from "./components/ingka";
 import { colors } from "@ingka/colours";
 
 function ProductCard({ product }) {
@@ -217,6 +245,7 @@ function ProductCard({ product }) {
 
 **Learn More:**
 
+- **[Component Installation Guide](docs/guides/COMPONENT_INSTALLATION.md)** - Setup, modes, troubleshooting
 - **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** - Component overview
 - **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)** - Setup and implementation
 - **[Component Index](docs/guides/SKAPA_COMPONENT_INDEX.md)** - Searchable component list

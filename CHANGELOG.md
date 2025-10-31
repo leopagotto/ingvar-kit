@@ -6,6 +6,46 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.12.0] - 2025-10-31
+
+### 🎁 Added: Automatic IKEA Component Installation
+
+**Problem:** Users had to manually discover and install 75 IKEA components after installing Ingvar Kit. No automatic installation, no clear workflow, only 19 components shown in CLI (not 75).
+
+**Solution:** Comprehensive automatic installation system with 3 modes.
+
+**New Features:**
+
+1. **ComponentInstaller Class** (`lib/components/component-installer.js`)
+   - Complete installation management for all 75 IKEA components
+   - 3 installation modes: Essential (26), All (75), Cherry-pick (custom)
+   - Automatic Ingka registry configuration
+   - React dependency verification
+   - npm package installation from @ingka/* registry
+   - Local template fallback
+   - Automatic exports generation
+
+2. **Enhanced Postinstall Hook** (`scripts/postinstall.js`)
+   - Automatic component prompt during npm install
+   - Interactive selection with CI/CD fallback
+   - Non-blocking installation
+   - Beautiful terminal UI
+
+3. **Updated Components Command** (`lib/commands/components.js`)
+   - Shows all 75 components (previously only 19)
+   - Uses ComponentInstaller for consistency
+   - Grouped by category with descriptions
+
+4. **Complete Documentation** (`docs/guides/COMPONENT_INSTALLATION.md`)
+   - 500+ line installation guide
+   - All 75 components listed
+   - Usage examples
+   - Troubleshooting section
+
+**Impact:** ✅ Users now see component installation prompt during npm install with all 75 components available
+
+---
+
 ## [5.11.0] - 2025-10-31
 
 ### 🔴 Fixed: Critical Spark Generator Bug

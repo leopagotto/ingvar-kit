@@ -4,6 +4,7 @@ const chalk = require('chalk');
 const path = require('path');
 const fs = require('fs');
 const { execSync } = require('child_process');
+const os = require('os');
 
 // Read version from package.json
 const getVersion = () => {
@@ -182,8 +183,86 @@ try {
     console.log(chalk.gray('Navigate to your project and run: ') + chalk.cyan('leo init\n'));
   }
 
+  // ===== NEW: Offer component installation =====
+  await offerComponentInstallation(isGlobal, inGitRepo);
+
 } catch (error) {
   // Silently fail if there are issues (e.g., during npm publish)
   console.error(chalk.yellow('Note: Could not complete post-install setup, but the CLI should still work.'));
+}
+
+/**
+ * Check if package.json exists in current directory
+ */
+function hasPackageJson() {
+  try {
+    return fs.existsSync(path.join(process.cwd(), 'package.json'));
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Offer to install IKEA components
+ */
+async function offerComponentInstallation(isGlobal, inGitRepo) {
+  // Only offer components for local installs in projects with package.json
+  if (isGlobal || !hasPackageJson()) {
+    return;
+  }
+
+  try {
+    console.log(chalk.gray('─'.repeat(80)));
+    console.log();
+    console.log(chalk.hex('#FFD700').bold('📦 IKEA Component Library Available'));
+    console.log();
+    console.log(chalk.white('  Ingvar Kit includes 75 production-ready IKEA components'));
+    console.log(chalk.gray('  from the official Ingka Skapa Design System:\n'));
+    console.log(chalk.gray('  • Buttons, Cards, Forms, Modals, Tables, and more'));
+    console.log(chalk.gray('  • Mobile-first & WCAG AA compliant'));
+    console.log(chalk.gray('  • Looks like IKEA.com\n'));
+
+    // Check if running non-interactively
+    if (process.env.LEO_AUTO_INIT === 'true' || !process.stdin.isTTY) {
+      console.log(chalk.yellow('  ℹ️  Run'), chalk.cyan('leo components'), chalk.yellow('to install components later\n'));
+      console.log(chalk.gray('─'.repeat(80)));
+      return;
+    }
+
+    // Ask if user wants to install components
+    console.log(chalk.yellow('  Options:\n'));
+    console.log(chalk.cyan('  1.') + chalk.white(' Install now: ') + chalk.cyan.bold('Say yes below'));
+    console.log(chalk.cyan('  2.') + chalk.white(' Install later: ') + chalk.cyan.bold('leo components\n'));
+
+    // Use inquirer for interactive prompt
+    const inquirer = require('inquirer');
+    const { installComponents } = await inquirer.prompt([{
+      type: 'confirm',
+      name: 'installComponents',
+      message: 'Install IKEA components now?',
+      default: false // Don't force installation by default
+    }]);
+
+    if (installComponents) {
+      console.log(chalk.cyan('\n📦 Starting component installation...\n'));
+
+      // Import and run component installer
+      const { ComponentInstaller } = require('../lib/components/component-installer');
+      const installer = new ComponentInstaller();
+      await installer.install({ skipConfirmation: false });
+    } else {
+      console.log(chalk.gray('\n  No problem! Install anytime with:'));
+      console.log(chalk.cyan('  leo components\n'));
+    }
+
+    console.log(chalk.gray('─'.repeat(80)));
+
+  } catch (error) {
+    // If component installation fails, don't crash postinstall
+    console.log(chalk.yellow('\n  ⚠️  Component installation skipped'));
+    console.log(chalk.gray(`  Run ${chalk.cyan('leo components')} to install later\n`));
+    console.log(chalk.gray('─'.repeat(80)));
+    if (process.env.DEBUG) console.error(error);
+  }
 }
 
