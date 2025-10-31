@@ -113,7 +113,7 @@ For contributors or cutting-edge features:
 ```bash
 # Clone the repository
 git clone https://github.com/leopagotto/ingvar-kit.git
-cd leo-kit
+cd ingvar-kit
 
 # Install dependencies
 npm install
@@ -511,7 +511,7 @@ ingvar --version
 ### Update from Source
 
 ```bash
-cd leo-kit
+cd ingvar-kit
 git pull origin main
 npm install
 npm link
