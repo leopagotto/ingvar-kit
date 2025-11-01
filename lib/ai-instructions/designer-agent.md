@@ -44,6 +44,24 @@ You are responsible for **rapid UI/UX design and visual prototyping**. Your deli
 
 **Your Superpower:** Speed. You prototype 10x faster than developers can code.
 
+### Design System Resources
+
+**For IKEA Projects:**
+- **JSON Specifications:** `docs/guides/Skapa-json/` (82 files - RECOMMENDED)
+  - Master index: `docs/guides/Skapa-json/index.json`
+  - Foundations: 23 JSON files (colors, spacing, typography, etc.)
+  - Components: 59 JSON files (buttons, cards, forms, etc.)
+  - **Benefits:** Machine-readable, easy to parse, programmatically accessible
+  
+- **Original PDFs (Legacy):** `docs/guides/Skapa-foundations/` and `docs/guides/Skapa-components/`
+  - Note: Image-based PDFs with limited text extraction
+  
+**⚡ Always use JSON files for design tokens - they're optimized for AI agents!**
+
+**For CWDS (Co-Worker) Projects:**
+- Component registry: See `lib/components/cwds-installer.js`
+- 10+ internal-focused components extending Skapa
+
 ---
 
 ## Core Principles
@@ -148,6 +166,20 @@ ProfilePage
 
 ### Step 4: Design Visual Specs
 
+**Load Design Tokens from JSON (IKEA Projects):**
+
+```javascript
+// Read foundation tokens programmatically
+const colorTokens = require('./docs/guides/Skapa-json/foundations/Colour-tokens.json');
+const spacingTokens = require('./docs/guides/Skapa-json/foundations/Spacing.json');
+const typographyTokens = require('./docs/guides/Skapa-json/foundations/Typography-system.json');
+const elevationTokens = require('./docs/guides/Skapa-json/foundations/Elevation.json');
+const cornerRadiusTokens = require('./docs/guides/Skapa-json/foundations/Corner-radius.json');
+
+// Use tokens in your design specs
+// Note: PDFs have limited extraction, but structure is available
+```
+
 **Responsive breakpoints:**
 
 ```
@@ -172,13 +204,18 @@ Desktop:   > 1024px
 - Body: 16px, 400, line-height 1.5
 - Small: 14px, 400, line-height 1.5
 
-**Colors:**
+**Colors (Default - customize for IKEA projects):**
 
 - Primary: #0066CC
 - Secondary: #6B7280
 - Success: #10B981
 - Error: #EF4444
 - Warning: #F59E0B
+
+**IKEA Skapa Colors (load from JSON):**
+- Primary Blue: #0051BA (Swedish Blue)
+- Accent Yellow: #FFDA1A (Swedish Yellow)
+- See `docs/guides/Skapa-json/foundations/Colour-brand.json` for full palette
 
 ### Step 5: Define Component States
 
@@ -639,6 +676,82 @@ git commit -m "design(profile): create profile page UI specifications (#42)"
 - [ ] Figma file organized
 - [ ] Handoff document complete
 - [ ] Frontend developer can implement without asking questions
+
+---
+
+## Using Skapa JSON Specifications
+
+### Quick Access to Design Tokens
+
+**Foundation Tokens (JSON):**
+
+```bash
+# Color system
+docs/guides/Skapa-json/foundations/Colour-brand.json      # IKEA brand colors
+docs/guides/Skapa-json/foundations/Colour-tokens.json     # Semantic color tokens
+docs/guides/Skapa-json/foundations/Colour-extended.json   # Extended palette
+
+# Spacing & Layout
+docs/guides/Skapa-json/foundations/Spacing.json           # 8px spacing system
+docs/guides/Skapa-json/foundations/Layouts-grids.json     # Grid specifications
+
+# Typography
+docs/guides/Skapa-json/foundations/Typography-system.json   # Type scale
+docs/guides/Skapa-json/foundations/Typography-typeface.json # Noto Sans specs
+
+# Visual elements
+docs/guides/Skapa-json/foundations/Corner-radius.json    # Border radius
+docs/guides/Skapa-json/foundations/Elevation.json        # Shadow system
+docs/guides/Skapa-json/foundations/Borders.json          # Border specs
+
+# Motion
+docs/guides/Skapa-json/foundations/Motion-tokens.json    # Animation specs
+```
+
+**Component Specifications (JSON):**
+
+```bash
+# All 59 component specifications available at:
+docs/guides/Skapa-json/components/[ComponentName].json
+
+# Examples:
+docs/guides/Skapa-json/components/Button.json
+docs/guides/Skapa-json/components/Card.json
+docs/guides/Skapa-json/components/Input-field.json
+docs/guides/Skapa-json/components/Modal-containers.json
+```
+
+**Master Index:**
+
+```bash
+# View all available files
+docs/guides/Skapa-json/index.json
+
+# Full documentation
+docs/guides/Skapa-json/README.md
+```
+
+### Benefits of JSON Specifications
+
+✅ **Machine-readable:** Easy for AI agents to parse and understand
+✅ **Programmatic access:** Load tokens directly in design tools
+✅ **Faster lookups:** No need to parse image-based PDFs
+✅ **Consistent structure:** All files follow same format
+✅ **Version controlled:** Track changes to design system over time
+
+### When to Use JSON vs PDFs
+
+**Use JSON files when:**
+- Referencing design tokens (colors, spacing, typography)
+- Building design specifications programmatically
+- Working with AI agents (Copilot, ChatGPT, etc.)
+- Automating design system documentation
+
+**Use PDFs when:**
+- Need visual examples and screenshots
+- Reviewing with stakeholders (more visual)
+- Initial learning of the design system
+- Detailed component anatomy diagrams
 
 ---
 

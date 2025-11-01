@@ -21,7 +21,24 @@
 
 ### What is Ingka Skapa?
 
-Ingka Skapa is the **official IKEA design system** used across all IKEA digital products. This guide contains extracted specifications from 83 official PDF documents.
+Ingka Skapa is the **official IKEA design system** used across all IKEA digital products. This guide contains specifications extracted from the official Skapa Design System.
+
+### Design System Resources
+
+**JSON Specifications (RECOMMENDED):**
+
+- **Location:** `docs/guides/Skapa-json/`
+- **Index:** `docs/guides/Skapa-json/index.json` (master index with all files)
+- **Foundations:** 23 JSON files (colors, typography, spacing, motion, etc.)
+- **Components:** 59 JSON files (buttons, cards, forms, navigation, etc.)
+- **Benefits:** Machine-readable, easy to parse, programmatically accessible
+
+**Original PDFs (Legacy):**
+
+- **Location:** `docs/guides/Skapa-foundations/` and `docs/guides/Skapa-components/`
+- **Note:** Image-based PDFs with limited text extraction
+
+**⚡ Use JSON files whenever possible - they're optimized for AI agent consumption!**
 
 ### When to Use This Guide
 
@@ -62,7 +79,7 @@ const primaryBlue = colors.blue.primary; // #0051BA
 const accentYellow = colors.yellow.accent; // #FFDA1A
 ```
 
-**Color Tokens** (from `Colour-tokens.pdf`):
+**Color Tokens** (from `docs/guides/Skapa-json/foundations/Colour-tokens.json`):
 
 ```typescript
 // Semantic colors
@@ -87,7 +104,7 @@ colors.state.warning; // Warning states
 
 ### 📏 Spacing System
 
-**8px Base Grid** (from `Spacing.pdf`):
+**8px Base Grid** (from `docs/guides/Skapa-json/foundations/Spacing.json`):
 
 ```typescript
 // Standard spacing scale (all multiples of 8)
@@ -124,14 +141,14 @@ import { tokens } from "@ingka/design-tokens";
 
 ### 🔤 Typography System
 
-**Typeface** (from `Typography-typeface.pdf`):
+**Typeface** (from `docs/guides/Skapa-json/foundations/Typography-typeface.json`):
 
 ```typescript
 // Primary typeface for all IKEA products
 font-family: 'Noto Sans', sans-serif;
 ```
 
-**Type Scale** (from `Typography-system.pdf`):
+**Type Scale** (from `docs/guides/Skapa-json/foundations/Typography-system.json`):
 
 ```typescript
 // Standard type scale
@@ -169,7 +186,7 @@ import { Text, Heading } from '@ingka/typography';
 
 ### 🔲 Corner Radius
 
-**Border Radius Scale** (from `Corner-radius.pdf`):
+**Border Radius Scale** (from `docs/guides/Skapa-json/foundations/Corner-radius.json`):
 
 ```typescript
 const borderRadius = {
@@ -190,7 +207,7 @@ import { tokens } from '@ingka/design-tokens';
 
 ### 🌑 Elevation System
 
-**Shadow Levels** (from `Elevation.pdf`):
+**Shadow Levels** (from `docs/guides/Skapa-json/foundations/Elevation.json`):
 
 ```typescript
 const elevation = {
@@ -215,7 +232,7 @@ import { tokens } from '@ingka/design-tokens';
 ### 🔘 Button Component
 
 **Package:** `@ingka/button`
-**Specification:** `Skapa-components/Button.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Button.json`
 
 **Props:**
 
@@ -309,7 +326,7 @@ import { Button } from '@ingka/button';
 ### 📝 Input Field Component
 
 **Package:** `@ingka/input-field`
-**Specification:** `Skapa-components/Input-field.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Input-field.json`
 
 **Props:**
 
@@ -423,7 +440,7 @@ const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
 ### 🎴 Card Component
 
 **Package:** `@ingka/card`
-**Specification:** `Skapa-components/Card.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Card.json`
 
 **Structure:**
 
@@ -500,7 +517,7 @@ import { Button } from '@ingka/button';
 ### 📐 Grid Layout
 
 **Package:** `@ingka/grid`
-**Specification:** `Skapa-components/Layouts-grids.pdf`
+**Specification:** `docs/guides/Skapa-json/foundations/Layouts-grids.json`
 
 **Responsive Grid System:**
 
@@ -571,7 +588,7 @@ const gaps = {
 ### 🪟 Modal Components
 
 **Packages:** `@ingka/modal-prompt`, `@ingka/modal-sheets`, `@ingka/modal-theatre`
-**Specification:** `Skapa-components/Modal-containers.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Modal-containers.json`
 
 #### Modal Prompt (Dialogs)
 
@@ -647,7 +664,7 @@ import { ModalTheatre } from "@ingka/modal-theatre";
 #### Checkbox
 
 **Package:** `@ingka/checkbox`
-**Specification:** `Skapa-components/Checkbox.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Checkbox.json`
 
 ```tsx
 import { Checkbox } from '@ingka/checkbox';
@@ -679,7 +696,7 @@ import { Checkbox } from '@ingka/checkbox';
 #### Radio Button
 
 **Package:** `@ingka/radio-button`
-**Specification:** `Skapa-components/Radio-button.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Radio-button.json`
 
 ```tsx
 import { RadioButton } from "@ingka/radio-button";
@@ -700,7 +717,7 @@ import { RadioButton } from "@ingka/radio-button";
 #### Select Dropdown
 
 **Package:** `@ingka/select`
-**Specification:** `Skapa-components/Select.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Select-native.json`
 
 ```tsx
 import { Select } from '@ingka/select';
@@ -743,7 +760,7 @@ import { Select } from '@ingka/select';
 #### Toast Notifications
 
 **Package:** `@ingka/toast`
-**Specification:** `Skapa-components/Toast.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Toast.json`
 
 ```tsx
 import { toast } from "@ingka/toast";
@@ -778,7 +795,7 @@ toast.custom("Item removed from cart", {
 #### Banner Messages
 
 **Package:** `@ingka/banner`
-**Specification:** `Skapa-components/Banner.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Banner.json`
 
 ```tsx
 import { Banner } from '@ingka/banner';
@@ -807,7 +824,7 @@ import { Banner } from '@ingka/banner';
 #### Badge & Status
 
 **Package:** `@ingka/badge`
-**Specification:** `Skapa-components/Badge.pdf`
+**Specification:** `docs/guides/Skapa-json/components/Badge.json`
 
 ```tsx
 import { Badge } from '@ingka/badge';
@@ -1244,11 +1261,16 @@ Before submitting any code using Ingka components, verify:
 
 ## Reference Links
 
-- **Component PDFs:** `docs/guides/Skapa-components/` (60+ specifications)
-- **Foundation PDFs:** `docs/guides/Skapa-foundations/` (23 specifications)
+- **JSON Specifications (Recommended):** `docs/guides/Skapa-json/` (82 JSON files)
+- **Master Index:** `docs/guides/Skapa-json/index.json`
+- **JSON README:** `docs/guides/Skapa-json/README.md`
+- **Component PDFs (Legacy):** `docs/guides/Skapa-components/` (59 specifications)
+- **Foundation PDFs (Legacy):** `docs/guides/Skapa-foundations/` (23 specifications)
 - **Component Index:** `docs/guides/SKAPA_COMPONENT_INDEX.md`
 - **Ingka Registry:** `https://npm.m2.blue.cdtapps.com`
 - **Package Installation:** `npm install @ingka/[component-name]`
+
+**💡 Tip:** Always read the JSON files first - they're optimized for programmatic access and AI parsing!
 
 ---
 
