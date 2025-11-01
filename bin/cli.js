@@ -221,13 +221,17 @@ program
 // Spark command - AI-powered app generator (v5.4.0+)
 program
   .command('spark')
-  .description('Generate React apps with IKEA Ingka Skapa (+ optional CWDS for internal tools)')
+  .description('Generate React apps with IKEA design systems (Ingka Skapa or CWDS)')
   .option('-p, --prompt <prompt>', 'Natural language prompt describing the app')
   .option('-n, --name <name>', 'Project name')
   .option('-d, --dir <directory>', 'Output directory', './spark-apps')
-  .option('--ikea', 'Use IKEA Ingka Skapa design system (75+ components)')
-  .option('--cwds', 'Add CWDS components (internal tools, extends Ingka Skapa)')
+  .option(
+    '--design-system <system>',
+    'Design system: ingka (customer-facing) or cwds (internal co-worker tools)',
+    'ingka'
+  )
   .option('--no-install', 'Skip npm install after generation')
+  .option('--no-start', 'Skip starting dev server after generation')
   .action((options) => {
     const sparkCommand = require('../lib/commands/spark');
     sparkCommand(options);
