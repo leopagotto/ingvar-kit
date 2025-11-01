@@ -55,25 +55,29 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
    - Individual package installation for reliability
    - 83 PDF specifications with visual examples and code snippets
 
-2. **🤖 Multi-Agent AI Orchestration**
+2. **🏢 Co-Worker Design Subsystem (CWDS)**
+
+   - Internal IKEA applications and tools (co-worker-facing)
+   - Global Header with App Switcher (switch between IKEA apps)
+   - Navigation Menu, Bottom Navigation (mobile), User Profile
+   - ILOFF Layout integration (automatic app discovery)
+   - Auth0 and Azure authentication support
+   - Full component library for admin panels and dashboards
+
+3. **🤖 Multi-Agent AI Orchestration**
 
    - 7 specialized agents: Orchestrator, Designer, Frontend, Backend, DevOps, Testing, Docs
    - Dynamic AI instruction builder adapts to 4 editors (Copilot, Cursor, Cline, Codeium)
    - Intelligent task routing with complexity-based model selection
    - Designer-first workflow for 10x faster UI prototyping
 
-3. **⚡ Spark Generator (App-in-Minutes)**
+4. **⚡ Spark Generator (App-in-Minutes)** 🇸🇪 _IKEA Ingka Skapa + Optional CWDS_
 
    - Natural language → production React app (2-5 minutes)
-   - IKEA detection: Automatically uses Ingka components when appropriate
-   - Component libraries: 40+ shadcn/ui vs 75+ IKEA Ingka components
+   - **✅ Ingka Skapa Base (75+ components)** - Customer-facing apps (always included)
+   - **✅ Optional CWDS (10+ components)** - Internal co-worker tools (extends Ingka Skapa)
+   - **✅ IKEA-compliant:** Pure @ingka/_ and @ingka-group-digital/_ components
    - Claude 3.5 Sonnet generation with best practices built-in
-
-4. **⚡ Spark Generator - Natural Language Apps**
-
-   - Generate full-stack React apps from simple prompts
-   - Automatic IKEA design detection ("make it look like IKEA")
-   - 40+ shadcn/ui components OR 75+ Ingka components
 
 5. **📋 Spec-First Development**
 
@@ -268,39 +272,46 @@ Your Request → Orchestrator → Routes to Specialist(s)
 
 ### 🚀 Rapid App Generation
 
-Generate complete React apps from a single prompt using Ingvar Spark with optional IKEA design system:
+Generate complete React apps from a single prompt using Ingvar Spark with IKEA design systems:
 
 ```bash
-# Generate a complete app from a prompt
-ingvar spark "Create a todo app with dark mode"
+# Generate with Ingka Skapa (customer-facing)
+ingvar spark "Create a todo app" --design-system ingka
 
-# With IKEA design system
-ingvar spark "Create a todo app" --style ingka
+# Generate with CWDS (internal co-worker tools)
+ingvar spark "Build admin dashboard" --design-system cwds
 
-# Natural language IKEA detection
-ingvar spark "Build a shopping cart that looks like IKEA"
+# Interactive mode prompts for design system choice
+ingvar spark "Create a shopping cart"
 
-# Advanced dashboard with charts
-ingvar spark "Build analytics dashboard with charts and tables"
-
-# E-commerce catalog
-ingvar spark "Create product catalog with search and filters"
+# Advanced examples
+ingvar spark "Build analytics dashboard with charts" --design-system ingka
+ingvar spark "Create product catalog with search" --design-system ingka
 ```
 
 **What you get:**
 
 - ✅ **Complete React 19 + TypeScript setup** with Vite
-- ✅ **40+ shadcn/ui components** pre-configured (or 75+ Ingka components)
-- ✅ **Modern stack**: Tailwind CSS v4, Framer Motion, React Query
+- ✅ **75+ Ingka Skapa components** OR **CWDS co-worker suite**
+- ✅ **Modern stack**: IKEA design tokens, React Query, React Hook Form
 - ✅ **AI-generated components** using Claude 3.5 Sonnet
 - ✅ **Production-ready** with forms, validation, routing
-- ✅ **IKEA Design System** optional with `--style ingka` flag
+- ✅ **IKEA Design System** with `--design-system ingka|cwds`
 
 **[Complete Spark Guide →](docs/SPARK.md)**
 
 ### 🇸🇪 IKEA Ingka Design System
 
-Built-in support for the official IKEA design system with 75+ production-ready components and **automatic installation** during setup.
+Built-in support for the official IKEA design systems with **automatic installation** during setup.
+
+**⚠️ IKEA-Only Policy:**
+Ingvar Kit uses **only official IKEA design systems**:
+
+- ✅ **Ingka Skapa** (75+ components) for customer-facing apps
+- ✅ **CWDS** (10+ components) for internal co-worker tools
+- ❌ **No third-party design systems** (Tailwind, Material-UI, etc.)
+
+**✅ v6.2.0:** Spark now supports both Ingka Skapa AND CWDS design systems!
 
 ```bash
 # Automatic installation during npm install
@@ -310,11 +321,13 @@ npm install ingvar-kit
 # Or install components anytime
 ingvar components
 
-# Generate app with official IKEA design
-ingvar spark "todo app" --style ingka
+# Or install CWDS for internal tools
+ingvar cwds install
 
-# Or use natural language detection
-ingvar spark "Create a shopping cart that looks like IKEA"
+# 🚀 Spark with design system choice!
+ingvar spark "todo app"
+# → Choose: Ingka Skapa (customer-facing) or CWDS (internal tools)
+# → Generates React app with @ingka/* or @ingka-group-digital/* components
 ```
 
 **🚀 New: Automatic Component Installation**
@@ -404,6 +417,73 @@ function ProductCard({ product }) {
 - **[Complete Guide](docs/guides/INGKA_DESIGN_SYSTEM.md)** - Setup and implementation
 - **[Component Index](docs/guides/SKAPA_COMPONENT_INDEX.md)** - Searchable component list
 - **[AI Instructions](lib/ai-instructions/frontend-agent-ingka.instructions.md)** - Complete specs
+
+---
+
+### 🏢 Co-Worker Design Subsystem (CWDS)
+
+For internal IKEA co-worker applications (admin tools, dashboards, internal platforms):
+
+```bash
+# Install CWDS components interactively
+ingvar cwds install
+
+# Auto-install recommended components
+ingvar cwds install --auto
+
+# List available CWDS components
+ingvar cwds list
+```
+
+**What is CWDS?**
+
+The **Co-Worker Design Subsystem** is IKEA's design system for internal employee-facing applications. While Ingka Skapa is for customer-facing products, CWDS is optimized for co-worker productivity tools.
+
+**Recommended Components:**
+
+- ✅ **CWDS Layout** - Main layout wrapper with header, nav, and content areas
+- ✅ **ILOFF Layout** - Layout with automatic ILOFF apps integration
+- ✅ **Global Header** - Co-worker branding with navigation triggers
+- ✅ **App Switcher** - Switch between different IKEA internal apps
+- ✅ **Navigation Menu** - Drawer-based hierarchical navigation
+- ✅ **Bottom Navigation** - Mobile touch-optimized tab bar
+- ✅ **User Profile** - User settings and logout drawer
+
+**ILOFF Integration:**
+
+The ILOFF Layout automatically discovers and displays all IKEA applications the user has access to:
+
+```typescript
+import { IloffLayout } from "@ingka-group-digital/iloff-layout-react";
+import { useAuth0 } from "@auth0/auth0-react";
+
+export const AppLayout = ({ children }) => {
+  const { user, logout } = useAuth0();
+
+  return (
+    <IloffLayout
+      envName="prod"
+      iloffBaseUrl="https://iloff.ingka.com"
+      isAuth0Used={true}
+      narrowContent={true}
+    >
+      {children}
+    </IloffLayout>
+  );
+};
+```
+
+**Authentication Support:**
+
+- ✅ **Auth0** - Enterprise SSO with `@auth0/auth0-react`
+- ✅ **Azure MSAL** - Microsoft authentication with `@azure/msal-react`
+
+**Learn More:**
+
+- **[CWDS Complete Guide](docs/development/CWDS_COWORKER_DESIGN_SYSTEM.md)** - Full documentation
+- **[Official CWDS Docs](https://skapa.ikea.com/subsystems/cwds)** - IKEA's CWDS documentation
+
+---
 
 ### 📋 Spec-First Development
 

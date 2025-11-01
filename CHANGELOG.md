@@ -5,6 +5,58 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.2.0] - 2025-11-01
+
+### 🎨 Dual Design System Support in Spark
+
+**Major Feature:** Spark now supports both IKEA Ingka Skapa and CWDS design systems with a unified CLI interface.
+
+#### Added
+
+- **Dual Design System Support:**
+  - New `--design-system <system>` flag replaces legacy `--ikea` and `--cwds` flags
+  - Options: `ingka` (customer-facing) or `cwds` (internal co-worker tools)
+  - Interactive mode prompts for design system selection
+  - Defaults to `ingka` if not specified
+
+- **AI Code Generation:**
+  - Separate system prompts for Ingka Skapa and CWDS
+  - CWDS prompt includes Global Header, App Switcher, CWDS Layouts
+  - Ingka Skapa prompt focuses on customer-facing components
+  - Code generator respects `designSystem` parameter throughout
+
+- **Component Installation:**
+  - Ingka Skapa components installed for both design systems
+  - CWDS components added when `--design-system cwds` specified
+  - CWDSInstaller automatically configures recommended components
+  - Auth0 default provider for CWDS authentication
+
+#### Changed
+
+- **CLI Interface:**
+  - `ingvar spark --ikea` → `ingvar spark --design-system ingka`
+  - `ingvar spark --ikea --cwds` → `ingvar spark --design-system cwds`
+  - Added `--no-start` option for consistency
+  - Cleaner command structure with unified parameter
+
+- **Code Structure:**
+  - Refactored `generateSparkApp` to use `designSystem` parameter
+  - Updated `getAppRequirements` with interactive design system selection
+  - Simplified helper functions (`generateAppCode`, `generateFallbackApp`)
+  - Removed obsolete Commander-based CLI implementation from spark.js
+
+#### Fixed
+
+- Removed legacy boolean flags (`useIkea`, `useCwds`) causing confusion
+- Fixed code generator to handle `designSystem` instead of separate booleans
+- Cleaned up spark.js merge conflicts from previous implementations
+
+#### Documentation
+
+- Updated README.md with `--design-system` examples
+- Added CHANGELOG entry for v6.2.0
+- Issue #6 tracking implementation progress
+
 ## [6.1.0] - 2025-10-31
 
 ### 🎯 Component Registry: 100% Coverage Achieved
