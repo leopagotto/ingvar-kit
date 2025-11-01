@@ -244,6 +244,25 @@ program
     specCommand(action, args);
   });
 
+// Screenshot to JSON command - Convert Skapa screenshots to JSON (v6.3.0+)
+program
+  .command('screenshot-to-json [action]')
+  .alias('ss2json')
+  .description('Convert Skapa design system screenshots to JSON specifications')
+  .option('-i, --input <dir>', 'Input directory with screenshots')
+  .option('-o, --output <dir>', 'Output directory for JSON files')
+  .option('-k, --api-key <key>', 'OpenAI API key')
+  .option('-m, --model <model>', 'OpenAI model to use', 'gpt-4o')
+  .option('--dry-run', 'Show what would be processed')
+  .action((action, options) => {
+    const screenshotCommand = require('../lib/commands/screenshot-to-json');
+    if (action === 'list' || action === 'test') {
+      screenshotCommand.parse(['node', 'ingvar', action, ...process.argv.slice(4)]);
+    } else {
+      screenshotCommand.parse(['node', 'ingvar', 'screenshot-to-json', ...process.argv.slice(3)]);
+    }
+  });
+
 // Health command - Check system health
 program
   .command('health')
