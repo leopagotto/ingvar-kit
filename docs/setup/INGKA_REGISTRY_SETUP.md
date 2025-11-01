@@ -1,8 +1,274 @@
 # IKEA Ingka Private Registry Setup Guide
 
+## ⚠️ IMPORTANT UPDATE (v6.4.0)
+
+**CWDS is now available as React/TypeScript templates, NOT npm packages!**
+
+This guide has been updated to reflect the new template-based CWDS system. The previous `@ingka-group-digital/cwds-*` packages **do not exist** - CWDS is a design specification, not an npm package ecosystem.
+
+---
+
 ## Overview
 
-IKEA CWDS (Co-worker Design System) components are distributed via a **private npm registry** that requires authentication. This guide will help you set up access to install packages from `@ingka-group-digital/*`.
+**CWDS (Co-worker Design System)** is IKEA's design specification for internal co-worker applications. Starting with Ingvar Kit v6.4.0, CWDS components are provided as **React/TypeScript templates** extracted directly from the official IKEA Figma designs.
+
+**Real IKEA npm Packages:** Only `@ingka/*` UI primitives (button, card, input, avatar, etc.) exist on npm and require registry authentication.
+
+---
+
+## 🎨 What Is CWDS?
+
+CWDS is **not** a set of npm packages. It's a **design pattern** that you implement by:
+
+1. Using the CWDS component templates (Header, Navigation, Profile, etc.)
+2. Composing real `@ingka/*` UI primitives inside those templates
+3. Following CWDS design tokens (colors, spacing, typography)
+
+**Think of CWDS as:**
+- ✅ Design specification (Figma file)
+- ✅ Component templates (React/TypeScript code)
+- ✅ Design patterns (layout, navigation, auth)
+- ❌ NOT npm packages you install
+
+---
+
+## 📦 Installing CWDS Templates
+
+Use the built-in CWDS installer:
+
+```bash
+# Install all 5 CWDS components
+node lib/components/cwds-installer.js .
+
+# Or during ingvar init, select "CWDS"
+ingvar init
+> Design System: CWDS (Co-worker Design System)
+✅ Yes - Install CWDS components
+```
+
+**This installs:**
+- `GlobalHeader.tsx` (7.9KB) - Main navigation bar
+- `NavigationMenu.tsx` (3.4KB) - Side navigation
+- `AppSwitcher.tsx` (4.3KB) - App switching modal
+- `Profile.tsx` (6.4KB) - User profile dropdown
+- `BottomBarNavigation.tsx` (3.4KB) - Mobile navigation
+- Design tokens & documentation
+
+**Location:** `src/components/cwds/`
+
+---
+
+## 🔐 What DOES Require Authentication?
+
+Only the **real `@ingka/*` UI primitives** require authentication:
+
+### Packages that exist and require auth:
+
+```bash
+# These are REAL packages on npm
+@ingka/button
+@ingka/card
+@ingka/input
+@ingka/avatar
+@ingka/modal
+@ingka/icon
+@ingka/grid
+# ... 60+ other UI primitives
+```
+
+### Packages that DON'T exist:
+
+```bash
+# ❌ These were never real packages
+@ingka-group-digital/cwds-react-header
+@ingka-group-digital/cwds-react-layout
+@ingka-group-digital/cwds-react-app-switcher
+@ingka-group-digital/iloff-layout-react
+# ... any other @ingka-group-digital/cwds-* packages
+```
+
+---
+
+## ✅ Registry Setup for @ingka/* Packages
+
+If you need to use real `@ingka/*` UI primitives in your CWDS templates:
+
+### Step 1: Configure npm Registry
+
+```bash
+npm config set @ingka:registry https://npm.m2.blue.cdtapps.com/
+```
+
+**Note:** We're using `@ingka`, NOT `@ingka-group-digital`.
+
+### Step 2: Authenticate
+
+```bash
+npm login --registry=https://npm.m2.blue.cdtapps.com/ --scope=@ingka
+```
+
+This opens SSO authentication in your browser.
+
+### Step 3: Verify
+
+```bash
+npm view @ingka/button
+# Should show package info, NOT 404
+```
+
+---
+
+## 📦 Installing Real @ingka/* Dependencies
+
+After installing CWDS templates, install the required UI primitives:
+
+```bash
+# Required dependencies for CWDS templates
+npm install @ingka/button @ingka/icon @ingka/avatar @ingka/modal @ingka/card
+```
+
+**These are the ONLY packages you need to install from the IKEA registry.**
+
+---
+
+## 🚀 Using CWDS Templates
+
+After installation:
+
+```tsx
+// Import from your local components directory
+import { GlobalHeader, Profile } from './components/cwds';
+
+function App() {
+  return (
+    <>
+      <GlobalHeader
+        appName="Warehouse Management"
+        userName="John Doe"
+        userRole="Developer"
+        notificationCount={3}
+      />
+      <Profile
+        isOpen={true}
+        userName="John Doe"
+        onSignOut={() => console.log('Sign out')}
+      />
+    </>
+  );
+}
+```
+
+**The templates use inline styles initially.** You can gradually replace styled divs with real `@ingka/*` components:
+
+```tsx
+// Before (template default)
+<button onClick={onMenuClick}>Menu</button>
+
+// After (using @ingka/button)
+import { Button } from '@ingka/button';
+<Button onClick={onMenuClick}>Menu</Button>
+```
+
+---
+
+## 🔄 Migration from Old Documentation
+
+If you followed previous versions of this guide:
+
+**Old Way (v6.3.0 and earlier):**
+```bash
+# ❌ This never worked - packages don't exist
+npm install @ingka-group-digital/cwds-react-header
+npm install @ingka-group-digital/cwds-react-layout
+```
+
+**New Way (v6.4.0+):**
+```bash
+# ✅ Install templates (not packages)
+node lib/components/cwds-installer.js .
+
+# ✅ Then install real @ingka/* primitives
+npm install @ingka/button @ingka/icon @ingka/avatar
+```
+
+---
+
+## 💡 Key Differences Summary
+
+| Aspect | Old (Incorrect) | New (Correct) |
+|--------|----------------|---------------|
+| **CWDS Components** | npm packages | React templates |
+| **Package Scope** | `@ingka-group-digital/cwds-*` | No packages - templates only |
+| **Installation** | `npm install @ingka-group-digital/cwds-*` | `cwds-installer .` |
+| **Location** | `node_modules/` | `src/components/cwds/` |
+| **Customization** | Limited - locked to package version | Full - edit templates directly |
+| **UI Primitives** | Bundled inside CWDS packages | Install separately: `@ingka/*` |
+| **Registry** | Private registry required | No registry for templates |
+| **Source of Truth** | npm packages (didn't exist) | Figma + local templates |
+
+---
+
+## 🔧 Troubleshooting
+
+### Issue 1: "Package @ingka-group-digital/cwds-* not found"
+
+**Solution:** These packages don't exist. Use the template installer instead:
+
+```bash
+node lib/components/cwds-installer.js .
+```
+
+### Issue 2: "401 Unauthorized" for @ingka/button
+
+**Solution:** Authenticate with IKEA registry:
+
+```bash
+npm login --registry=https://npm.m2.blue.cdtapps.com/ --scope=@ingka
+```
+
+### Issue 3: Templates not found
+
+**Solution:** Ensure you're running installer from Ingvar Kit root:
+
+```bash
+cd /path/to/ingvar-kit
+node lib/components/cwds-installer.js /path/to/your-project
+```
+
+---
+
+## 📚 Additional Resources
+
+- **CWDS Templates:** `templates/cwds-components/`
+- **Template Documentation:** `templates/cwds-components/README.md`
+- **Figma Source:** [Ingka Co-worker Design Components](https://www.figma.com/design/Zec1eGMCNeB0IkPMWs35qx/)
+- **Ingka UI Primitives:** https://www.npmjs.com/search?q=%40ingka
+- **Extraction Script:** `scripts/extract-cwds-from-figma.js`
+
+---
+
+## ❓ FAQ
+
+**Q: Why don't `@ingka-group-digital/cwds-*` packages exist?**
+A: CWDS is a design specification, not a packaged component library. The templates give you more control and customization.
+
+**Q: Can I still use previous Ingvar Kit versions?**
+A: Yes, but they reference non-existent packages. Upgrade to v6.4.0+ for the template-based system.
+
+**Q: Do I need IKEA VPN for templates?**
+A: No! Templates are included in Ingvar Kit. You only need VPN/auth for `@ingka/*` packages.
+
+**Q: Can I modify the templates?**
+A: Yes! That's the whole point. Edit them directly in `src/components/cwds/`.
+
+**Q: What about ILOFF Layout?**
+A: ILOFF is a separate system. CWDS templates provide similar functionality without the ILOFF dependency.
+
+---
+
+**Last Updated:** November 1, 2025  
+**Ingvar Kit Version:** 6.4.0+  
+**CWDS Template System:** v1.0.0
 
 ---
 
