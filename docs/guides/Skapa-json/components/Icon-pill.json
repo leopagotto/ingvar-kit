@@ -1,0 +1,24 @@
+{
+  "name": "Icon-pill",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Icon-pill.pdf",
+  "extractedAt": "2025-11-01T09:45:55.458Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 2 --\n\n\n\n-- 2 of 2 --\n\n",
+    "lines": [
+      "-- 1 of 2 --",
+      "-- 2 of 2 --"
+    ]
+  },
+  "component": {
+    "name": "Icon-pill",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

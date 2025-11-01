@@ -1,0 +1,24 @@
+{
+  "name": "Broken-image",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Broken-image.pdf",
+  "extractedAt": "2025-11-01T09:45:54.747Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 2 --\n\n\n\n-- 2 of 2 --\n\n",
+    "lines": [
+      "-- 1 of 2 --",
+      "-- 2 of 2 --"
+    ]
+  },
+  "component": {
+    "name": "Broken-image",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

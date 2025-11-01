@@ -1,0 +1,30 @@
+{
+  "name": "Compact-card",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Compact-card.pdf",
+  "extractedAt": "2025-11-01T09:45:55.286Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 8 --\n\n\n\n-- 2 of 8 --\n\n\n\n-- 3 of 8 --\n\n\n\n-- 4 of 8 --\n\n\n\n-- 5 of 8 --\n\n\n\n-- 6 of 8 --\n\n\n\n-- 7 of 8 --\n\n\n\n-- 8 of 8 --\n\n",
+    "lines": [
+      "-- 1 of 8 --",
+      "-- 2 of 8 --",
+      "-- 3 of 8 --",
+      "-- 4 of 8 --",
+      "-- 5 of 8 --",
+      "-- 6 of 8 --",
+      "-- 7 of 8 --",
+      "-- 8 of 8 --"
+    ]
+  },
+  "component": {
+    "name": "Compact-card",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

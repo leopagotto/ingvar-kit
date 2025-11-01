@@ -1,0 +1,29 @@
+{
+  "name": "Colour-tokens",
+  "category": "Skapa-foundations",
+  "source": "Skapa-foundations/Colour-tokens.pdf",
+  "extractedAt": "2025-11-01T09:45:54.366Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 9 --\n\n\n\n-- 2 of 9 --\n\n\n\n-- 3 of 9 --\n\n\n\n-- 4 of 9 --\n\n\n\n-- 5 of 9 --\n\n\n\n-- 6 of 9 --\n\n\n\n-- 7 of 9 --\n\n\n\n-- 8 of 9 --\n\n\n\n-- 9 of 9 --\n\n",
+    "lines": [
+      "-- 1 of 9 --",
+      "-- 2 of 9 --",
+      "-- 3 of 9 --",
+      "-- 4 of 9 --",
+      "-- 5 of 9 --",
+      "-- 6 of 9 --",
+      "-- 7 of 9 --",
+      "-- 8 of 9 --",
+      "-- 9 of 9 --"
+    ]
+  },
+  "tokens": {
+    "type": "color",
+    "values": [],
+    "colors": []
+  }
+}

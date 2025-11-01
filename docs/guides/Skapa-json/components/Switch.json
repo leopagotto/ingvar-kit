@@ -1,0 +1,26 @@
+{
+  "name": "Switch",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Switch.pdf",
+  "extractedAt": "2025-11-01T09:45:56.133Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 4 --\n\n\n\n-- 2 of 4 --\n\n\n\n-- 3 of 4 --\n\n\n\n-- 4 of 4 --\n\n",
+    "lines": [
+      "-- 1 of 4 --",
+      "-- 2 of 4 --",
+      "-- 3 of 4 --",
+      "-- 4 of 4 --"
+    ]
+  },
+  "component": {
+    "name": "Switch",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

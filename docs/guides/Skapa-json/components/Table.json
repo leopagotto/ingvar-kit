@@ -1,0 +1,27 @@
+{
+  "name": "Table",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Table.pdf",
+  "extractedAt": "2025-11-01T09:45:56.172Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 5 --\n\n\n\n-- 2 of 5 --\n\n\n\n-- 3 of 5 --\n\n\n\n-- 4 of 5 --\n\n\n\n-- 5 of 5 --\n\n",
+    "lines": [
+      "-- 1 of 5 --",
+      "-- 2 of 5 --",
+      "-- 3 of 5 --",
+      "-- 4 of 5 --",
+      "-- 5 of 5 --"
+    ]
+  },
+  "component": {
+    "name": "Table",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

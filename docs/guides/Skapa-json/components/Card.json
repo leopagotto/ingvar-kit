@@ -1,0 +1,37 @@
+{
+  "name": "Card",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Card.pdf",
+  "extractedAt": "2025-11-01T09:45:54.848Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 15 --\n\n\n\n-- 2 of 15 --\n\n\n\n-- 3 of 15 --\n\n\n\n-- 4 of 15 --\n\n\n\n-- 5 of 15 --\n\n\n\n-- 6 of 15 --\n\n\n\n-- 7 of 15 --\n\n\n\n-- 8 of 15 --\n\n\n\n-- 9 of 15 --\n\n\n\n-- 10 of 15 --\n\n\n\n-- 11 of 15 --\n\n\n\n-- 12 of 15 --\n\n\n\n-- 13 of 15 --\n\n\n\n-- 14 of 15 --\n\n\n\n-- 15 of 15 --\n\n",
+    "lines": [
+      "-- 1 of 15 --",
+      "-- 2 of 15 --",
+      "-- 3 of 15 --",
+      "-- 4 of 15 --",
+      "-- 5 of 15 --",
+      "-- 6 of 15 --",
+      "-- 7 of 15 --",
+      "-- 8 of 15 --",
+      "-- 9 of 15 --",
+      "-- 10 of 15 --",
+      "-- 11 of 15 --",
+      "-- 12 of 15 --",
+      "-- 13 of 15 --",
+      "-- 14 of 15 --",
+      "-- 15 of 15 --"
+    ]
+  },
+  "component": {
+    "name": "Card",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

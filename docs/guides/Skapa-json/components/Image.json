@@ -1,0 +1,25 @@
+{
+  "name": "Image",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Image.pdf",
+  "extractedAt": "2025-11-01T09:45:55.479Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 3 --\n\n\n\n-- 2 of 3 --\n\n\n\n-- 3 of 3 --\n\n",
+    "lines": [
+      "-- 1 of 3 --",
+      "-- 2 of 3 --",
+      "-- 3 of 3 --"
+    ]
+  },
+  "component": {
+    "name": "Image",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

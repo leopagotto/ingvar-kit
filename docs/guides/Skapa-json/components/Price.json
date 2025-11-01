@@ -1,0 +1,29 @@
+{
+  "name": "Price",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Price.pdf",
+  "extractedAt": "2025-11-01T09:45:55.643Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 7 --\n\n\n\n-- 2 of 7 --\n\n\n\n-- 3 of 7 --\n\n\n\n-- 4 of 7 --\n\n\n\n-- 5 of 7 --\n\n\n\n-- 6 of 7 --\n\n\n\n-- 7 of 7 --\n\n",
+    "lines": [
+      "-- 1 of 7 --",
+      "-- 2 of 7 --",
+      "-- 3 of 7 --",
+      "-- 4 of 7 --",
+      "-- 5 of 7 --",
+      "-- 6 of 7 --",
+      "-- 7 of 7 --"
+    ]
+  },
+  "component": {
+    "name": "Price",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

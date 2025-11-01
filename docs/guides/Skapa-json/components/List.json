@@ -1,0 +1,24 @@
+{
+  "name": "List",
+  "category": "Skapa-components",
+  "source": "Skapa-components/List.pdf",
+  "extractedAt": "2025-11-01T09:45:55.580Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 2 --\n\n\n\n-- 2 of 2 --\n\n",
+    "lines": [
+      "-- 1 of 2 --",
+      "-- 2 of 2 --"
+    ]
+  },
+  "component": {
+    "name": "List",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

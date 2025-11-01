@@ -1,0 +1,28 @@
+{
+  "name": "List-box",
+  "category": "Skapa-components",
+  "source": "Skapa-components/List-box.pdf",
+  "extractedAt": "2025-11-01T09:45:55.549Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 6 --\n\n\n\n-- 2 of 6 --\n\n\n\n-- 3 of 6 --\n\n\n\n-- 4 of 6 --\n\n\n\n-- 5 of 6 --\n\n\n\n-- 6 of 6 --\n\n",
+    "lines": [
+      "-- 1 of 6 --",
+      "-- 2 of 6 --",
+      "-- 3 of 6 --",
+      "-- 4 of 6 --",
+      "-- 5 of 6 --",
+      "-- 6 of 6 --"
+    ]
+  },
+  "component": {
+    "name": "List-box",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Quantity-stepper",
+  "category": "Skapa-components",
+  "source": "Skapa-components/Quantity-stepper.pdf",
+  "extractedAt": "2025-11-01T09:45:55.694Z",
+  "metadata": {
+    "pages": 0,
+    "info": {}
+  },
+  "content": {
+    "rawText": "\n\n-- 1 of 3 --\n\n\n\n-- 2 of 3 --\n\n\n\n-- 3 of 3 --\n\n",
+    "lines": [
+      "-- 1 of 3 --",
+      "-- 2 of 3 --",
+      "-- 3 of 3 --"
+    ]
+  },
+  "component": {
+    "name": "Quantity-stepper",
+    "variants": [],
+    "states": [],
+    "properties": [],
+    "usage": []
+  }
+}

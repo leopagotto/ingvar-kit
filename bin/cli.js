@@ -207,13 +207,26 @@ program
     componentsCommand(options);
   });
 
+// CWDS command - Install Co-Worker Design Subsystem (v6.1.0+)
+program
+  .command('cwds')
+  .description('Install IKEA Co-Worker Design Subsystem components')
+  .argument('[action]', 'Action: install, list')
+  .option('--auto', 'Auto-install recommended components (non-interactive)')
+  .action((action, options) => {
+    const cwdsCommand = require('../lib/commands/cwds');
+    cwdsCommand(action, options);
+  });
+
 // Spark command - AI-powered app generator (v5.4.0+)
 program
   .command('spark')
-  .description('Generate a full-stack app from a prompt using AI')
+  .description('Generate React apps with IKEA Ingka Skapa (+ optional CWDS for internal tools)')
   .option('-p, --prompt <prompt>', 'Natural language prompt describing the app')
   .option('-n, --name <name>', 'Project name')
-  .option('-s, --style <style>', 'UI style: default (shadcn), ingka (official IKEA), ikea (custom IKEA)')
+  .option('-d, --dir <directory>', 'Output directory', './spark-apps')
+  .option('--ikea', 'Use IKEA Ingka Skapa design system (75+ components)')
+  .option('--cwds', 'Add CWDS components (internal tools, extends Ingka Skapa)')
   .option('--no-install', 'Skip npm install after generation')
   .action((options) => {
     const sparkCommand = require('../lib/commands/spark');
@@ -249,6 +262,27 @@ program
   .action((action, args) => {
     const teamCommand = require('../lib/commands/team');
     teamCommand(action, args);
+  });
+
+// PDF to JSON command - Convert design specs (v6.2.0+)
+program
+  .command('pdf-to-json')
+  .alias('p2j')
+  .description('Convert Skapa PDF specifications to JSON format')
+  .argument('[action]', 'Action: convert, list, install-deps')
+  .option('-d, --dir <directory>', 'Specific directory to convert')
+  .option('-o, --output <directory>', 'Output directory', 'docs/guides/Skapa-json')
+  .option('-v, --verbose', 'Verbose output')
+  .action((action, options) => {
+    const pdfToJsonCommand = require('../lib/commands/pdf-to-json');
+
+    if (!action || action === 'convert') {
+      pdfToJsonCommand.parse(['node', 'cli', 'convert', ...Object.entries(options).flatMap(([k, v]) => [`--${k}`, v])]);
+    } else if (action === 'list') {
+      pdfToJsonCommand.parse(['node', 'cli', 'list']);
+    } else if (action === 'install-deps') {
+      pdfToJsonCommand.parse(['node', 'cli', 'install-deps']);
+    }
   });
 
 // Parse command-line arguments
