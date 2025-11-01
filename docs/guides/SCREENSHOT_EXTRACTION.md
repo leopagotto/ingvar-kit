@@ -7,6 +7,7 @@ This guide explains how to convert Skapa Design System screenshots to structured
 The PDF files we have are **image-based** with no extractable text. However, we have **73 high-quality screenshots** from the actual Skapa website at `skapa.ikea.net`. These screenshots contain the real design specifications.
 
 Using **GPT-4 Vision** (or similar AI vision models), we can:
+
 - Read the screenshots and extract structured design information
 - Generate proper JSON files with real content
 - Create a machine-readable design system specification
@@ -16,6 +17,7 @@ Using **GPT-4 Vision** (or similar AI vision models), we can:
 Located in: `docs/guides/Skapa SS/`
 
 ### Components (55 screenshots)
+
 - Accordion, App-Bar, Badge, Banner, Button, Card, Carousel
 - Choice, Combobox, Compact-Card, Divider, Dual-Button
 - Hyperlink, Icon-Button, Icon-Pill, Inline-Message, Input-Field
@@ -26,6 +28,7 @@ Located in: `docs/guides/Skapa SS/`
 - Tag, Text, Text-Overlay-Card, Toast, Tooltip
 
 ### Foundations (8 screenshots)
+
 - All-Icons (icon library)
 - Borders (border specifications)
 - Corner-Radius (border radius scale)
@@ -35,6 +38,7 @@ Located in: `docs/guides/Skapa SS/`
 - Typography (typeface, scale, hierarchy)
 
 ### Subsystems (9 screenshots)
+
 - CWDS/Co-Worker components:
   - App-Switcher
   - Bottom-Bar-Navigation
@@ -44,21 +48,27 @@ Located in: `docs/guides/Skapa SS/`
   - Profile
 
 ### Patterns (1 screenshot)
+
 - Filtering pattern
 
 ## Usage
 
 ### Prerequisites
 
-1. **OpenAI API Key** (for GPT-4 Vision)
-   ```bash
-   export OPENAI_API_KEY="sk-your-key-here"
-   ```
+1. EITHER **OpenAI API Key** (for GPT-4 Vision)
 
-2. **Install Ingvar Kit** (if not already)
-   ```bash
-   npm install -g ingvar-kit
-   ```
+  ```bash
+  export OPENAI_API_KEY="sk-your-key-here"
+  ```
+
+2. OR use **OCR-only mode** (no API key) with Tesseract.js
+
+  This will extract readable text (tokens, sizes, labels) from screenshots. It won't be as rich as Vision, but produces meaningful JSON instead of empty files.
+
+3. **Install Ingvar Kit** (if not already)
+  ```bash
+  npm install -g ingvar-kit
+  ```
 
 ### Commands
 
@@ -70,19 +80,28 @@ ingvar screenshot-to-json list
 
 Shows all screenshots organized by type (components, foundations, subsystems, patterns).
 
-#### Convert All Screenshots
+#### Convert All Screenshots (Vision)
 
 ```bash
 ingvar screenshot-to-json
 ```
 
 This will:
+
 1. Read all 73 screenshots
 2. Use GPT-4 Vision to extract design specifications
 3. Generate JSON files in `docs/guides/Skapa-json/`
 4. Create a master index file
 
 **Note:** This will make ~73 API calls and may take 5-10 minutes.
+
+#### Convert All Screenshots (OCR-only, no API key)
+
+```bash
+ingvar screenshot-to-json --ocr-only
+```
+
+Falls back to local OCR using Tesseract.js. Extracts text content and basic tokens (colors, spacing, typography) heuristically.
 
 #### Dry Run (Preview)
 
@@ -115,6 +134,7 @@ ingvar screenshot-to-json \
 Generated JSON files will contain:
 
 #### Component JSON
+
 ```json
 {
   "name": "Button",
@@ -176,6 +196,7 @@ Generated JSON files will contain:
 ```
 
 #### Foundation JSON
+
 ```json
 {
   "name": "Spacing",
@@ -217,9 +238,12 @@ Generated JSON files will contain:
 ## Cost Estimation
 
 Using GPT-4 Vision (gpt-4o model):
+
 - ~73 screenshots
 - ~$0.01-0.05 per screenshot (varies by image size and response length)
 - **Total estimated cost: $0.73 - $3.65**
+ 
+OCR-only mode: $0.00 (local processing). Results are less detailed but useful (tokens, sizes, common variants/states).
 
 ## Benefits
 
@@ -234,15 +258,18 @@ Using GPT-4 Vision (gpt-4o model):
 After conversion:
 
 1. **Review JSON Files**
+
    ```bash
    cat docs/guides/Skapa-json/components/Button.json
    ```
 
 2. **Update Agent Instructions**
+
    - Agents will now read real content from JSON
    - Much more accurate component generation
 
 3. **Test with Spark**
+
    ```bash
    ingvar spark --prompt "Create a login form" --ikea
    ```
@@ -256,25 +283,33 @@ After conversion:
 ## Troubleshooting
 
 ### API Key Not Set
+
 ```bash
 ❌ Error: OpenAI API key required
 ```
+
 **Solution:** Export your API key:
+
 ```bash
 export OPENAI_API_KEY="sk-..."
 ```
 
 ### Rate Limiting
+
 ```bash
 ⚠️  OpenAI API error: 429 - Rate limit exceeded
 ```
+
 **Solution:** Add delays between requests or use a higher rate limit tier.
 
 ### Poor Extraction Quality
+
 ```bash
 ⚠️  Could not parse JSON response
 ```
-**Solution:** 
+
+**Solution:**
+
 - Check screenshot quality
 - Try a different model (`--model gpt-4-turbo`)
 - Manually review and edit the JSON file
