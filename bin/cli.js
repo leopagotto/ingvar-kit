@@ -253,6 +253,7 @@ program
   .option('-o, --output <dir>', 'Output directory for JSON files')
   .option('-k, --api-key <key>', 'OpenAI API key')
   .option('-m, --model <model>', 'OpenAI model to use', 'gpt-4o')
+  .option('--ocr-only', 'Use OCR fallback only (no AI vision API)')
   .option('--dry-run', 'Show what would be processed')
   .action((action, options) => {
     const screenshotCommand = require('../lib/commands/screenshot-to-json');
