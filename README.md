@@ -17,6 +17,16 @@
 
 ---
 
+### 🎉 **v6.5.0** - CWDS Installation Priority & npm Package Enhancements
+
+📦 **npm Packages First** • 🔄 **Local Templates Fallback** • 📚 **Enhanced Documentation** • 💡 **Smart Installer Guidance** • ✅ **Production Ready**
+
+CWDS components now prioritize official `@ingka/*` npm packages with local templates as fallback. Smart installer guides users to check npm registry first, providing best-practice installation flow with clear documentation and rationale.
+
+**[Release Notes](CHANGELOG.md#650)** • **[CWDS Guide](templates/cwds-components/README.md)** • **[Installation Priority](templates/cwds-components/README.md#-installation-priority)**
+
+---
+
 ### 🎉 **v6.1.0** - 100% Component Registry Coverage
 
 ✅ **72/72 Components Available** • 🔄 **Automatic Package Mapping** • 📦 **Individual Installation** • 🎯 **Spark Model Selection** • 🚀 **Zero Local Templates Needed**
