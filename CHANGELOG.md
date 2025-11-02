@@ -14,11 +14,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Fixed
 
 - **Initialization Check:**
+
   - Spark now verifies that `ingvar init` was run before allowing app generation
   - Prompts user to run initialization if not configured
   - Prevents "appearing too early" issue by enforcing proper setup flow
 
 - **Voice Command Support:**
+
   - Added clear voice command instructions for input
   - macOS: "Press Fn key twice to enable dictation"
   - Windows: "Press Win + H for voice typing"
