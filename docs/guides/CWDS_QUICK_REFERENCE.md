@@ -5,17 +5,17 @@
 ## 🚀 Quick Start
 
 ```typescript
-import { GlobalHeader } from '@ingka/global-header';
-import { NavigationMenu } from '@ingka/navigation-menu';
-import { Profile } from '@ingka/profile';
-import { BottomBarNavigation } from '@ingka/bottom-bar-navigation';
+import { GlobalHeader } from "@ingka/global-header";
+import { NavigationMenu } from "@ingka/navigation-menu";
+import { Profile } from "@ingka/profile";
+import { BottomBarNavigation } from "@ingka/bottom-bar-navigation";
 
 // Basic co-worker app structure
 export function CoWorkerApp() {
   return (
     <>
       <GlobalHeader productName="App" />
-      <NavigationMenu items={items} />  {/* Desktop */}
+      <NavigationMenu items={items} /> {/* Desktop */}
       <main>Content</main>
       <BottomBarNavigation items={items} /> {/* Mobile */}
       <Profile user={currentUser} />
@@ -27,6 +27,7 @@ export function CoWorkerApp() {
 ## 6 CWDS Components at a Glance
 
 ### 1. Global Header
+
 - **Location:** Top, fixed
 - **Color:** #003E72 (non-negotiable)
 - **Contains:** App title, nav links, utilities, profile access, app switcher
@@ -34,30 +35,35 @@ export function CoWorkerApp() {
 - **Special:** Hide/show on scroll behavior
 
 ### 2. Navigation Menu
+
 - **Location:** Left sidebar (desktop only)
 - **Max depth:** 2 levels
 - **Features:** Icons, active states, collapsible sections
 - **Alternative:** Bottom Bar Navigation on mobile
 
 ### 3. Bottom Bar Navigation
+
 - **Location:** Bottom of screen (mobile only)
 - **Max items:** 5
 - **Features:** Icons, labels, badge counts
 - **Alternative:** Navigation Menu on desktop
 
 ### 4. Profile Component
+
 - **Location:** Side panel (triggered from Global Header)
 - **Contents:** User card, list items (max 5), language selector
 - **Special:** Sticky profile + language selector
 - **Behavior:** Scroll inner content, keep top/bottom fixed
 
 ### 5. App Switcher
+
 - **Location:** Modal overlay
 - **Triggered by:** Icon in Global Header
 - **Features:** Recently used, frequently used, search
 - **Behavior:** Navigate to selected app URL
 
 ### 6. Colours
+
 - **Primary:** #003E72 (Global Header)
 - **Secondary:** #0051BA (Links, accents)
 - **States:** Danger (#D20000), Success (#007C3D), Warning (#FF8C00)
@@ -65,10 +71,10 @@ export function CoWorkerApp() {
 
 ## Responsive Strategy
 
-| Breakpoint | Navigation | Header |
-|------------|-----------|--------|
-| **S** (0-599px) | Bottom Bar | Simplified header |
-| **M** (600-1024px) | Navigation Menu | Full header |
+| Breakpoint          | Navigation      | Header                 |
+| ------------------- | --------------- | ---------------------- |
+| **S** (0-599px)     | Bottom Bar      | Simplified header      |
+| **M** (600-1024px)  | Navigation Menu | Full header            |
 | **L-XXL** (1024px+) | Navigation Menu | Full header with links |
 
 **❌ NEVER combine:** Hamburger Menu + Bottom Bar Navigation
@@ -76,12 +82,14 @@ export function CoWorkerApp() {
 ## 🔧 Implementation Checklist
 
 ### Before Building
+
 - [ ] Read CWDS instructions: `lib/ai-instructions/frontend-agent-ingka.instructions.md`
 - [ ] Check JSON specs: `docs/guides/Skapa-json/subsystems/`
 - [ ] Verify breakpoint strategy
 - [ ] Plan navigation depth (max 2 levels)
 
 ### During Development
+
 - [ ] Use #003E72 ONLY for Global Header background
 - [ ] Implement keyboard navigation (Tab, Enter, Escape)
 - [ ] Add ARIA landmarks (header, nav, main)
@@ -90,6 +98,7 @@ export function CoWorkerApp() {
 - [ ] Make touch targets 44x44px minimum
 
 ### Accessibility (Required)
+
 - [ ] Tab navigation works for all controls
 - [ ] Enter/Space activates buttons & links
 - [ ] Escape closes modals & panels
@@ -98,6 +107,7 @@ export function CoWorkerApp() {
 - [ ] ARIA labels on icon-only buttons
 
 ### Testing
+
 - [ ] Desktop (1440px): Full header + nav menu
 - [ ] Tablet (768px): Full header + nav menu
 - [ ] Mobile (320px): Simplified header + bottom bar
@@ -108,6 +118,7 @@ export function CoWorkerApp() {
 ## Do's & Don'ts
 
 ### ✅ DO
+
 ```typescript
 // Use CWDS colors
 backgroundColor: '#003E72'  // Global Header
@@ -130,6 +141,7 @@ onKeyDown={(e) => e.key === 'Enter' && handleClick()}
 ```
 
 ### ❌ DON'T
+
 ```typescript
 // Don't change header color
 backgroundColor: '#0051BA'  // WRONG - must be #003E72
@@ -152,6 +164,7 @@ direction: 'rtl' {/* WRONG - use lang attribute */}
 ## Common Patterns
 
 ### Authentication Flow
+
 ```typescript
 // User logs in → Show Global Header with profile
 // Profile triggered → Show user name, role, department
@@ -160,6 +173,7 @@ direction: 'rtl' {/* WRONG - use lang attribute */}
 ```
 
 ### Mobile Navigation
+
 ```typescript
 // Small screens (< 600px)
 // - Global Header simplified (app name + utilities + profile)
@@ -168,6 +182,7 @@ direction: 'rtl' {/* WRONG - use lang attribute */}
 ```
 
 ### Desktop Navigation
+
 ```typescript
 // Large screens (> 600px)
 // - Global Header (app name + nav links + utilities + profile)
@@ -176,6 +191,7 @@ direction: 'rtl' {/* WRONG - use lang attribute */}
 ```
 
 ### Sticky Elements
+
 ```typescript
 // Profile component:
 // - Profile card (top) → STICKY
@@ -213,18 +229,18 @@ colors.success    // #007C3D
 
 ## Accessibility Keyboard Shortcuts
 
-| Component | Shortcut | Action |
-|-----------|----------|--------|
-| All | Tab | Focus next element |
-| All | Shift+Tab | Focus previous element |
-| Links/Buttons | Enter | Activate |
-| Icon buttons | Space | Activate |
-| Global Header | Tab | Cycle through header items |
-| Navigation Menu | Arrow Up/Down | Navigate items |
-| Navigation Menu | Arrow Right | Expand submenu |
-| Navigation Menu | Arrow Left | Collapse submenu |
-| Profile | Escape | Close panel |
-| Profile | Tab | Navigate list items |
+| Component       | Shortcut      | Action                     |
+| --------------- | ------------- | -------------------------- |
+| All             | Tab           | Focus next element         |
+| All             | Shift+Tab     | Focus previous element     |
+| Links/Buttons   | Enter         | Activate                   |
+| Icon buttons    | Space         | Activate                   |
+| Global Header   | Tab           | Cycle through header items |
+| Navigation Menu | Arrow Up/Down | Navigate items             |
+| Navigation Menu | Arrow Right   | Expand submenu             |
+| Navigation Menu | Arrow Left    | Collapse submenu           |
+| Profile         | Escape        | Close panel                |
+| Profile         | Tab           | Navigate list items        |
 
 ## JSON Specification Files
 
@@ -241,6 +257,7 @@ docs/guides/Skapa-json/subsystems/
 ```
 
 Parse these to extract:
+
 - Component anatomy & structure
 - Variant definitions
 - Responsive specifications
@@ -257,6 +274,7 @@ Parse these to extract:
 ---
 
 **Quick Links:**
+
 - ✅ CWDS Instructions: 421 lines of implementation guidance
 - ✅ React Examples: 7+ complete code snippets
 - ✅ Accessibility: WCAG AA compliant

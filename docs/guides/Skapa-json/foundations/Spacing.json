@@ -2,7 +2,7 @@
   "name": "Spacing",
   "category": "Skapa-foundations",
   "source": "Screenshot from skapa.ikea.net",
-  "extractedAt": "2025-11-01T10:33:55.550Z",
+  "extractedAt": "2025-11-02T08:59:40.897Z",
   "extractionMethod": "tesseract-ocr",
   "type": "spacing",
   "description": "Extracted spacing scale from screenshot (OCR)",

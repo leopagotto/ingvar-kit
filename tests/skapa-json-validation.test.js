@@ -46,7 +46,7 @@ describe('Skapa JSON Extraction', () => {
   describe('JSON Validity', () => {
     test('all JSON files should be valid', () => {
       const errors = [];
-      
+
       allFiles.forEach(file => {
         try {
           const fullPath = path.join(SKAPA_JSON_DIR, file);
@@ -64,7 +64,7 @@ describe('Skapa JSON Extraction', () => {
       const indexPath = path.join(SKAPA_JSON_DIR, 'index.json');
       const content = fs.readFileSync(indexPath, 'utf8');
       const index = JSON.parse(content);
-      
+
       expect(index).toHaveProperty('components');
       expect(index).toHaveProperty('foundations');
       expect(index).toHaveProperty('subsystems');
@@ -98,8 +98,8 @@ describe('Skapa JSON Extraction', () => {
 
       // Should have either structured data or raw text content
       expect(
-        data.content?.rawText || 
-        data.description || 
+        data.content?.rawText ||
+        data.description ||
         data.anatomy ||
         data.usage
       ).toBeTruthy();
@@ -118,12 +118,12 @@ describe('Skapa JSON Extraction', () => {
     test('color foundations should have tokens with values', () => {
       const files = fs.readdirSync(path.join(SKAPA_JSON_DIR, 'foundations'));
       const colorFile = files.find(f => f.toLowerCase().includes('colour') || f.toLowerCase().includes('color'));
-      
+
       if (colorFile) {
         const data = JSON.parse(
           fs.readFileSync(path.join(SKAPA_JSON_DIR, 'foundations', colorFile), 'utf8')
         );
-        
+
         if (data.tokens && data.tokens.length > 0) {
           expect(data.tokens[0]).toHaveProperty('name');
           expect(data.tokens[0]).toHaveProperty('value');

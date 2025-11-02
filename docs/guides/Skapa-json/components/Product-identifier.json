@@ -2,7 +2,7 @@
   "name": "Product-Identifier",
   "category": "Skapa-components",
   "source": "Screenshot from skapa.ikea.net",
-  "extractedAt": "2025-11-01T10:27:01.298Z",
+  "extractedAt": "2025-11-02T08:53:50.281Z",
   "extractionMethod": "tesseract-ocr",
   "description": "OCR extracted component specification (heuristic)",
   "variants": [

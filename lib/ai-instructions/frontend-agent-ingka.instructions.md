@@ -237,6 +237,7 @@ import { tokens } from '@ingka/design-tokens';
 ### What is CWDS?
 
 **CWDS Components** are purpose-built for:
+
 - ✅ Internal IKEA employee-facing applications
 - ✅ Co-worker digital ecosystem (tools, dashboards, portals)
 - ✅ High accessibility requirements
@@ -248,9 +249,11 @@ import { tokens } from '@ingka/design-tokens';
 **6 Core Subsystems** (extracted from `docs/guides/Skapa-json/subsystems/`):
 
 #### 1. **Global Header** (`Ingka-Co-Worker-Global-Header.json`)
+
 Top navigation bar for all co-worker applications.
 
 **Key Features:**
+
 - Fixed position at top of page
 - Application title + navigation links
 - Utility icons (search, notifications, etc.)
@@ -259,6 +262,7 @@ Top navigation bar for all co-worker applications.
 - Hide/show on scroll behavior
 
 **Responsive Variants:**
+
 - Large: Header with navigation links or left sidebar menu
 - Small/Medium: Header with Bottom Bar Navigation
 - Never combine Hamburger Menu + Bottom Bar Navigation
@@ -266,27 +270,30 @@ Top navigation bar for all co-worker applications.
 **Color:** Static dark blue #003E72 (NOT a color token - fixed)
 
 **React Implementation:**
+
 ```typescript
-import { GlobalHeader } from '@ingka/global-header';
+import { GlobalHeader } from "@ingka/global-header";
 
 <GlobalHeader
   productName="HR Portal"
   links={[
     { label: "Dashboard", href: "/dashboard" },
-    { label: "Time Off", href: "/timeoff" }
+    { label: "Time Off", href: "/timeoff" },
   ]}
   profileIcon={<Avatar initials="AB" />}
   appSwitcher={apps}
   onAppSwitch={(app) => navigate(app.url)}
-/>
+/>;
 ```
 
 ---
 
 #### 2. **Navigation Menu** (`Ingka-Co-Worker-Navigation-Menu.json`)
+
 Left sidebar navigation for large-scale applications.
 
 **Key Features:**
+
 - Vertical menu hierarchy
 - Supports nested navigation (up to 2 levels)
 - Icon + label for menu items
@@ -295,30 +302,33 @@ Left sidebar navigation for large-scale applications.
 - RTL language support
 
 **React Implementation:**
+
 ```typescript
-import { NavigationMenu } from '@ingka/navigation-menu';
+import { NavigationMenu } from "@ingka/navigation-menu";
 
 <NavigationMenu
   items={[
-    { 
-      label: "Admin", 
+    {
+      label: "Admin",
       icon: <SettingsIcon />,
       children: [
         { label: "Users", href: "/users" },
-        { label: "Roles", href: "/roles" }
-      ]
-    }
+        { label: "Roles", href: "/roles" },
+      ],
+    },
   ]}
   active="/users"
-/>
+/>;
 ```
 
 ---
 
 #### 3. **Bottom Bar Navigation** (`Ingka-Co-Worker-Bottom-Bar-Navigation.json`)
+
 Mobile-first navigation appearing at bottom of screen.
 
 **Key Features:**
+
 - 5 max navigation items
 - Icon + label combination
 - Badge support (count indicators)
@@ -326,30 +336,34 @@ Mobile-first navigation appearing at bottom of screen.
 - Fixed positioning at screen bottom
 
 **When to Use:**
+
 - Mobile apps (primary navigation)
 - Tablet landscape (alternative to hamburger)
 - Small screens < 600px
 
 **React Implementation:**
+
 ```typescript
-import { BottomBarNavigation } from '@ingka/bottom-bar-navigation';
+import { BottomBarNavigation } from "@ingka/bottom-bar-navigation";
 
 <BottomBarNavigation
   items={[
     { icon: <HomeIcon />, label: "Home", href: "/", badge: 0 },
     { icon: <TasksIcon />, label: "Tasks", href: "/tasks", badge: 3 },
-    { icon: <ProfileIcon />, label: "Profile", href: "/profile" }
+    { icon: <ProfileIcon />, label: "Profile", href: "/profile" },
   ]}
   active="/"
-/>
+/>;
 ```
 
 ---
 
 #### 4. **Profile Component** (`Ingka-Co-Worker-Profile.json`)
+
 Side panel for user profile and settings.
 
 **Key Features:**
+
 - Triggered from Global Header avatar
 - Profile card with user info (image, name, role, department)
 - List items for actions (max 5 items)
@@ -358,42 +372,47 @@ Side panel for user profile and settings.
 - One navigation level only
 
 **List Item Variants:**
+
 - Large (default): Title + description with icon
 - Single line: Title only with icon
 - Emphasised: Highlighted title-only items
 
 **Accessibility:**
+
 - Tab navigation through items
 - Enter to activate link
 - Focus returns to Global Header when closed
 
 **React Implementation:**
+
 ```typescript
-import { Profile } from '@ingka/profile';
+import { Profile } from "@ingka/profile";
 
 <Profile
   user={{
     image: avatarUrl,
     name: "Andrew Baptist",
     role: "Inbound Team Lead",
-    department: "IKEA Amsterdam"
+    department: "IKEA Amsterdam",
   }}
   actions={[
     { title: "Personal Information", icon: <UserIcon /> },
     { title: "Contact Information", icon: <PhoneIcon /> },
-    { title: "Employment Details", icon: <BriefcaseIcon /> }
+    { title: "Employment Details", icon: <BriefcaseIcon /> },
   ]}
   languages={["en", "sv", "nl"]}
   onLanguageChange={(lang) => i18n.changeLanguage(lang)}
-/>
+/>;
 ```
 
 ---
 
 #### 5. **App Switcher** (`Ingka-Co-Worker-App-Switcher.json`)
+
 Modal dialog for switching between co-worker applications/products.
 
 **Key Features:**
+
 - Modal overlay showing available apps
 - Recently used apps section
 - Frequently used apps section
@@ -402,42 +421,46 @@ Modal dialog for switching between co-worker applications/products.
 - Keyboard navigation support
 
 **React Implementation:**
+
 ```typescript
-import { AppSwitcher } from '@ingka/app-switcher';
+import { AppSwitcher } from "@ingka/app-switcher";
 
 <AppSwitcher
   isOpen={showSwitcher}
   apps={availableApps}
   recentlyUsed={recent}
   frequentlyUsed={frequent}
-  onSelectApp={(app) => window.location.href = app.url}
-/>
+  onSelectApp={(app) => (window.location.href = app.url)}
+/>;
 ```
 
 ---
 
 #### 6. **Colours** (`Ingka-Co-Worker-Colours.json`)
+
 CWDS-specific color palette.
 
 **Primary Colors:**
+
 ```typescript
 // Co-Worker Brand Colors (NOT from standard Ingka palette)
 const CWDS_COLORS = {
-  primary: '#003E72',       // Dark blue (Global Header, key elements)
-  secondary: '#0051BA',     // IKEA Blue (accents, links)
-  danger: '#D20000',        // Red (alerts, destructive)
-  success: '#007C3D',       // Green (confirmations)
-  warning: '#FF8C00',       // Orange (warnings)
+  primary: "#003E72", // Dark blue (Global Header, key elements)
+  secondary: "#0051BA", // IKEA Blue (accents, links)
+  danger: "#D20000", // Red (alerts, destructive)
+  success: "#007C3D", // Green (confirmations)
+  warning: "#FF8C00", // Orange (warnings)
 };
 
 // Import CWDS-specific colors
-import { colors } from '@ingka/cwds-colours';
+import { colors } from "@ingka/cwds-colours";
 
 // Usage
-<div style={{ backgroundColor: colors.primary }} /> // #003E72
+<div style={{ backgroundColor: colors.primary }} />; // #003E72
 ```
 
 **⚠️ CRITICAL:**
+
 - ❌ Do NOT override Co-Worker colors
 - ✅ ALWAYS use #003E72 for Global Header background
 - ✅ Use semantic color tokens for states
@@ -450,21 +473,23 @@ import { colors } from '@ingka/cwds-colours';
 #### Responsive Breakpoints
 
 **Breakpoint S (Small):** 0-599px
+
 - Bottom Bar Navigation primary
 - Full-width layout
 - No backdrop on modals
 
 **Breakpoint M-XXL (Medium+):** 600px+
+
 - Navigation Menu + Global Header
 - Sidebar layout option
 - Backdrops for modals/panels
 
 ```typescript
 // Use responsive props
-<NavigationMenu 
+<NavigationMenu
   display={{ mobile: 'none', desktop: 'block' }}
 />
-<BottomBarNavigation 
+<BottomBarNavigation
   display={{ mobile: 'flex', desktop: 'none' }}
 />
 ```
@@ -472,20 +497,23 @@ import { colors } from '@ingka/cwds-colours';
 #### Layout & Spacing
 
 **Spacing Grid:** 8px base (same as Skapa)
+
 ```typescript
-padding: tokens.spacing.md;    // 24px
-margin: tokens.spacing.lg;     // 32px
-gap: tokens.spacing.sm;        // 16px
+padding: tokens.spacing.md; // 24px
+margin: tokens.spacing.lg; // 32px
+gap: tokens.spacing.sm; // 16px
 ```
 
 #### Motion & Interactions
 
 **Profile Panel Motion:**
+
 - Profile card: Always sticky
 - List items: Scrollable
 - Language selector: Sticky at bottom
 
 **Global Header:**
+
 - Hide/show animation on scroll
 - Icons: 300ms hover fade
 - Links: Underline reveal on hover
@@ -497,17 +525,20 @@ gap: tokens.spacing.sm;        // 16px
 #### Keyboard Navigation
 
 **Global Header:**
+
 - Tab: Navigate between elements
 - Enter: Activate links
 - Space: Activate icon buttons
 - Skip to main content button on first Tab
 
 **Profile Panel:**
+
 - Tab: Move through list items
 - Enter: Activate list item (updates main content)
 - Escape: Close panel (focus returns to trigger)
 
 **Navigation Menu:**
+
 - Arrow Up/Down: Move between items
 - Arrow Right: Expand submenu
 - Arrow Left: Collapse submenu
@@ -516,6 +547,7 @@ gap: tokens.spacing.sm;        // 16px
 #### ARIA Landmarks
 
 **Ingka Co-Worker Design applies:**
+
 - `<header>` landmark for Global Header
 - `<nav>` landmark for Navigation Menu
 - `<main>` for main content area
@@ -551,11 +583,11 @@ gap: tokens.spacing.sm;        // 16px
 Complete application structure:
 
 ```typescript
-import { GlobalHeader } from '@ingka/global-header';
-import { NavigationMenu } from '@ingka/navigation-menu';
-import { BottomBarNavigation } from '@ingka/bottom-bar-navigation';
-import { Profile } from '@ingka/profile';
-import { AppSwitcher } from '@ingka/app-switcher';
+import { GlobalHeader } from "@ingka/global-header";
+import { NavigationMenu } from "@ingka/navigation-menu";
+import { BottomBarNavigation } from "@ingka/bottom-bar-navigation";
+import { Profile } from "@ingka/profile";
+import { AppSwitcher } from "@ingka/app-switcher";
 
 export function CoWorkerApp() {
   const [mobileNav, setMobileNav] = useState(false);
@@ -573,7 +605,7 @@ export function CoWorkerApp() {
         />
       </header>
 
-      <div style={{ display: 'flex', minHeight: '100vh' }}>
+      <div style={{ display: "flex", minHeight: "100vh" }}>
         {/* Left Navigation - Desktop Only */}
         <nav role="navigation" className="desktop-only">
           <NavigationMenu items={navItems} />
@@ -605,17 +637,17 @@ export function CoWorkerApp() {
 
 ### CWDS Do's and Don'ts
 
-| ✅ DO | ❌ DON'T |
-|-----|---------|
-| Use #003E72 for Global Header | Change Global Header color |
+| ✅ DO                                       | ❌ DON'T                                      |
+| ------------------------------------------- | --------------------------------------------- |
+| Use #003E72 for Global Header               | Change Global Header color                    |
 | Combine Global Header + Nav Menu on desktop | Combine Hamburger Menu + Bottom Bar on mobile |
-| Use Bottom Bar for mobile navigation | Mix different Navigation patterns |
-| Keep Profile to 5 list items max | Make Profile navigation deeper than 1 level |
-| Use native device dropdowns for language | Create custom language selector |
-| Apply semantic CWDS colors | Use arbitrary colors in CWDS apps |
-| Sticky profile card + scrollable content | Float content over profile card |
-| RTL language support for all components | Hardcode text direction |
-| Test keyboard navigation | Rely only on mouse/touch |
+| Use Bottom Bar for mobile navigation        | Mix different Navigation patterns             |
+| Keep Profile to 5 list items max            | Make Profile navigation deeper than 1 level   |
+| Use native device dropdowns for language    | Create custom language selector               |
+| Apply semantic CWDS colors                  | Use arbitrary colors in CWDS apps             |
+| Sticky profile card + scrollable content    | Float content over profile card               |
+| RTL language support for all components     | Hardcode text direction                       |
+| Test keyboard navigation                    | Rely only on mouse/touch                      |
 
 ---
 
@@ -635,6 +667,7 @@ export function CoWorkerApp() {
 ```
 
 **Parse these JSON files to extract:**
+
 - Component structure & anatomy
 - Variant definitions
 - Responsive breakpoints
