@@ -5,6 +5,36 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.5.1] - 2025-11-02
+
+### 🐛 Spark Generator Fixes
+
+**Bug Fixes:** Improved Spark workflow to require initialization and provide voice command guidance.
+
+#### Fixed
+
+- **Initialization Check:**
+  - Spark now verifies that `ingvar init` was run before allowing app generation
+  - Prompts user to run initialization if not configured
+  - Prevents "appearing too early" issue by enforcing proper setup flow
+
+- **Voice Command Support:**
+  - Added clear voice command instructions for input
+  - macOS: "Press Fn key twice to enable dictation"
+  - Windows: "Press Win + H for voice typing"
+  - Users can still type manually if preferred
+
+- **Better Error Handling:**
+  - Clear guidance when design system not configured
+  - Option to run `ingvar init` directly from Spark
+  - Improved error messages and user guidance
+
+#### Impact
+
+- Users must complete `ingvar init` before using Spark (proper workflow)
+- Voice input is encouraged but text input still available
+- Better onboarding experience with clear setup steps
+
 ## [6.5.0] - 2025-11-02
 
 ### 📦 CWDS Installation Priority & npm Package Enhancements
