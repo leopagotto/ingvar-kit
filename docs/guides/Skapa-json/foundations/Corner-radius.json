@@ -1,23 +1,10 @@
 {
-  "name": "Corner-radius",
+  "name": "Corner-Radius",
   "category": "Skapa-foundations",
-  "source": "Skapa-foundations/Corner-radius.pdf",
-  "extractedAt": "2025-11-01T09:45:54.378Z",
-  "metadata": {
-    "pages": 0,
-    "info": {}
-  },
-  "content": {
-    "rawText": "\n\n-- 1 of 3 --\n\n\n\n-- 2 of 3 --\n\n\n\n-- 3 of 3 --\n\n",
-    "lines": [
-      "-- 1 of 3 --",
-      "-- 2 of 3 --",
-      "-- 3 of 3 --"
-    ]
-  },
-  "tokens": {
-    "type": "borderRadius",
-    "values": [],
-    "borderRadius": []
-  }
+  "source": "Screenshot from skapa.ikea.net",
+  "extractedAt": "2025-11-01T10:33:38.064Z",
+  "extractionMethod": "tesseract-ocr",
+  "type": "foundation",
+  "description": "OCR extracted content",
+  "tokens": []
 }

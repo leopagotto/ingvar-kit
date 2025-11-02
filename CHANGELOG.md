@@ -14,12 +14,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added
 
 - **Dual Design System Support:**
+
   - New `--design-system <system>` flag replaces legacy `--ikea` and `--cwds` flags
   - Options: `ingka` (customer-facing) or `cwds` (internal co-worker tools)
   - Interactive mode prompts for design system selection
   - Defaults to `ingka` if not specified
 
 - **AI Code Generation:**
+
   - Separate system prompts for Ingka Skapa and CWDS
   - CWDS prompt includes Global Header, App Switcher, CWDS Layouts
   - Ingka Skapa prompt focuses on customer-facing components
@@ -34,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Changed
 
 - **CLI Interface:**
+
   - `ingvar spark --ikea` → `ingvar spark --design-system ingka`
   - `ingvar spark --ikea --cwds` → `ingvar spark --design-system cwds`
   - Added `--no-start` option for consistency

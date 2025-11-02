@@ -1,11 +1,12 @@
 {
-  "generated": "2025-11-01T09:45:56.428Z",
-  "version": "1.0.0",
-  "description": "IKEA Skapa Design System - JSON Format",
-  "source": "Converted from PDF specifications",
+  "generated": "2025-11-01T10:35:22.239Z",
+  "version": "2.0.0",
+  "description": "IKEA Skapa Design System - Extracted from Website Screenshots",
+  "extractionMethod": "gpt-4-vision",
   "foundations": {
-    "count": 23,
+    "count": 26,
     "files": [
+      "foundations/All-Icons.json",
       "foundations/Borders.json",
       "foundations/Colour-brand.json",
       "foundations/Colour-extended.json",
@@ -17,6 +18,7 @@
       "foundations/Iconography-specs.json",
       "foundations/Iconography.json",
       "foundations/Icons.json",
+      "foundations/Layout-And-Grids.json",
       "foundations/Layouts-grids.json",
       "foundations/Motion-dynamics.json",
       "foundations/Motion-overview.json",
@@ -26,13 +28,14 @@
       "foundations/Typography-system.json",
       "foundations/Typography-typeface.json",
       "foundations/Typography-using.json",
+      "foundations/Typography.json",
       "foundations/Writting-overview.json",
       "foundations/Writting-style.json",
       "foundations/Writting-voice-tone.json"
     ]
   },
   "components": {
-    "count": 59,
+    "count": 64,
     "files": [
       "components/Accordion.json",
       "components/App-bar.json",
@@ -53,6 +56,7 @@
       "components/Endorsement-label.json",
       "components/Expander.json",
       "components/Expanding-button.json",
+      "components/Filtering.json",
       "components/Helper-text.json",
       "components/Hyperlink.json",
       "components/Icon-button.json",
@@ -64,7 +68,9 @@
       "components/List-box.json",
       "components/List-view-item.json",
       "components/List.json",
+      "components/Listbox.json",
       "components/Loading.json",
+      "components/Member-Card.json",
       "components/Menu-item.json",
       "components/Modal-containers.json",
       "components/Pill.json",
@@ -80,12 +86,14 @@
       "components/Select-native.json",
       "components/Sheet.json",
       "components/Simple-video.json",
+      "components/Skeleton.json",
       "components/Slider.json",
       "components/Status.json",
       "components/Switch.json",
       "components/Table.json",
       "components/Tabs.json",
       "components/Tag.json",
+      "components/Text-Overlay-Card.json",
       "components/Text-area.json",
       "components/Text-overlay-cards.json",
       "components/Text.json",
@@ -93,6 +101,17 @@
       "components/Toast.json",
       "components/Toggle.json",
       "components/Tooltip.json"
+    ]
+  },
+  "subsystems": {
+    "count": 6,
+    "files": [
+      "subsystems/Ingka-Co-Worker-App-Switcher.json",
+      "subsystems/Ingka-Co-Worker-Bottom-Bar-Navigation.json",
+      "subsystems/Ingka-Co-Worker-Colours.json",
+      "subsystems/Ingka-Co-Worker-Global-Header.json",
+      "subsystems/Ingka-Co-Worker-Navigation-Menu.json",
+      "subsystems/Ingka-Co-Worker-Profile.json"
     ]
   }
 }

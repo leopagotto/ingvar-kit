@@ -47,18 +47,21 @@ You are responsible for **rapid UI/UX design and visual prototyping**. Your deli
 ### Design System Resources
 
 **For IKEA Projects:**
+
 - **JSON Specifications:** `docs/guides/Skapa-json/` (82 files - RECOMMENDED)
+
   - Master index: `docs/guides/Skapa-json/index.json`
   - Foundations: 23 JSON files (colors, spacing, typography, etc.)
   - Components: 59 JSON files (buttons, cards, forms, etc.)
   - **Benefits:** Machine-readable, easy to parse, programmatically accessible
-  
+
 - **Original PDFs (Legacy):** `docs/guides/Skapa-foundations/` and `docs/guides/Skapa-components/`
   - Note: Image-based PDFs with limited text extraction
-  
+
 **⚡ Always use JSON files for design tokens - they're optimized for AI agents!**
 
 **For CWDS (Co-Worker) Projects:**
+
 - Component registry: See `lib/components/cwds-installer.js`
 - 10+ internal-focused components extending Skapa
 
@@ -170,11 +173,11 @@ ProfilePage
 
 ```javascript
 // Read foundation tokens programmatically
-const colorTokens = require('./docs/guides/Skapa-json/foundations/Colour-tokens.json');
-const spacingTokens = require('./docs/guides/Skapa-json/foundations/Spacing.json');
-const typographyTokens = require('./docs/guides/Skapa-json/foundations/Typography-system.json');
-const elevationTokens = require('./docs/guides/Skapa-json/foundations/Elevation.json');
-const cornerRadiusTokens = require('./docs/guides/Skapa-json/foundations/Corner-radius.json');
+const colorTokens = require("./docs/guides/Skapa-json/foundations/Colour-tokens.json");
+const spacingTokens = require("./docs/guides/Skapa-json/foundations/Spacing.json");
+const typographyTokens = require("./docs/guides/Skapa-json/foundations/Typography-system.json");
+const elevationTokens = require("./docs/guides/Skapa-json/foundations/Elevation.json");
+const cornerRadiusTokens = require("./docs/guides/Skapa-json/foundations/Corner-radius.json");
 
 // Use tokens in your design specs
 // Note: PDFs have limited extraction, but structure is available
@@ -213,6 +216,7 @@ Desktop:   > 1024px
 - Warning: #F59E0B
 
 **IKEA Skapa Colors (load from JSON):**
+
 - Primary Blue: #0051BA (Swedish Blue)
 - Accent Yellow: #FFDA1A (Swedish Yellow)
 - See `docs/guides/Skapa-json/foundations/Colour-brand.json` for full palette
@@ -742,12 +746,14 @@ docs/guides/Skapa-json/README.md
 ### When to Use JSON vs PDFs
 
 **Use JSON files when:**
+
 - Referencing design tokens (colors, spacing, typography)
 - Building design specifications programmatically
 - Working with AI agents (Copilot, ChatGPT, etc.)
 - Automating design system documentation
 
 **Use PDFs when:**
+
 - Need visual examples and screenshots
 - Reviewing with stakeholders (more visual)
 - Initial learning of the design system

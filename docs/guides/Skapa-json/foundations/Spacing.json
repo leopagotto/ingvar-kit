@@ -1,23 +1,81 @@
 {
   "name": "Spacing",
   "category": "Skapa-foundations",
-  "source": "Skapa-foundations/Spacing.pdf",
-  "extractedAt": "2025-11-01T09:45:54.510Z",
-  "metadata": {
-    "pages": 0,
-    "info": {}
-  },
-  "content": {
-    "rawText": "\n\n-- 1 of 3 --\n\n\n\n-- 2 of 3 --\n\n\n\n-- 3 of 3 --\n\n",
-    "lines": [
-      "-- 1 of 3 --",
-      "-- 2 of 3 --",
-      "-- 3 of 3 --"
+  "source": "Screenshot from skapa.ikea.net",
+  "extractedAt": "2025-11-01T10:33:55.550Z",
+  "extractionMethod": "tesseract-ocr",
+  "type": "spacing",
+  "description": "Extracted spacing scale from screenshot (OCR)",
+  "tokens": [
+    {
+      "name": "spacing-4",
+      "value": "4px"
+    },
+    {
+      "name": "spacing-8",
+      "value": "8px"
+    },
+    {
+      "name": "spacing-12",
+      "value": "12px"
+    },
+    {
+      "name": "spacing-13",
+      "value": "13px"
+    },
+    {
+      "name": "spacing-16",
+      "value": "16px"
+    },
+    {
+      "name": "spacing-20",
+      "value": "20px"
+    },
+    {
+      "name": "spacing-24",
+      "value": "24px"
+    },
+    {
+      "name": "spacing-32",
+      "value": "32px"
+    },
+    {
+      "name": "spacing-40",
+      "value": "40px"
+    },
+    {
+      "name": "spacing-48",
+      "value": "48px"
+    },
+    {
+      "name": "spacing-64",
+      "value": "64px"
+    },
+    {
+      "name": "spacing-88",
+      "value": "88px"
+    },
+    {
+      "name": "spacing-120",
+      "value": "120px"
+    }
+  ],
+  "scale": {
+    "description": "Detected px values",
+    "values": [
+      "4px",
+      "8px",
+      "12px",
+      "13px",
+      "16px",
+      "20px",
+      "24px",
+      "32px",
+      "40px",
+      "48px",
+      "64px",
+      "88px",
+      "120px"
     ]
-  },
-  "tokens": {
-    "type": "spacing",
-    "values": [],
-    "spacing": []
   }
 }

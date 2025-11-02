@@ -57,18 +57,19 @@ Located in: `docs/guides/Skapa SS/`
 
 1. EITHER **OpenAI API Key** (for GPT-4 Vision)
 
-  ```bash
-  export OPENAI_API_KEY="sk-your-key-here"
-  ```
+```bash
+export OPENAI_API_KEY="sk-your-key-here"
+```
 
 2. OR use **OCR-only mode** (no API key) with Tesseract.js
 
-  This will extract readable text (tokens, sizes, labels) from screenshots. It won't be as rich as Vision, but produces meaningful JSON instead of empty files.
+This will extract readable text (tokens, sizes, labels) from screenshots. It won't be as rich as Vision, but produces meaningful JSON instead of empty files.
 
 3. **Install Ingvar Kit** (if not already)
-  ```bash
-  npm install -g ingvar-kit
-  ```
+
+```bash
+npm install -g ingvar-kit
+```
 
 ### Commands
 
@@ -242,7 +243,7 @@ Using GPT-4 Vision (gpt-4o model):
 - ~73 screenshots
 - ~$0.01-0.05 per screenshot (varies by image size and response length)
 - **Total estimated cost: $0.73 - $3.65**
- 
+
 OCR-only mode: $0.00 (local processing). Results are less detailed but useful (tokens, sizes, common variants/states).
 
 ## Benefits

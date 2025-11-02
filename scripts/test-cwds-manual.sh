@@ -49,7 +49,7 @@ console.log('✅ Navigation components:', Object.keys(CWDS_COMPONENTS.navigation
 console.log('✅ User components:', Object.keys(CWDS_COMPONENTS.user).length, 'types');
 console.log('✅ Shared components:', Object.keys(CWDS_COMPONENTS.shared).length, 'types');
 console.log('');
-console.log('Total CWDS components available:', 
+console.log('Total CWDS components available:',
   Object.values(CWDS_COMPONENTS).reduce((sum, cat) => sum + cat.length, 0)
 );
 "

@@ -25,6 +25,7 @@ CWDS is **not** a set of npm packages. It's a **design pattern** that you implem
 3. Following CWDS design tokens (colors, spacing, typography)
 
 **Think of CWDS as:**
+
 - ✅ Design specification (Figma file)
 - ✅ Component templates (React/TypeScript code)
 - ✅ Design patterns (layout, navigation, auth)
@@ -47,6 +48,7 @@ ingvar init
 ```
 
 **This installs:**
+
 - `GlobalHeader.tsx` (7.9KB) - Main navigation bar
 - `NavigationMenu.tsx` (3.4KB) - Side navigation
 - `AppSwitcher.tsx` (4.3KB) - App switching modal
@@ -89,7 +91,7 @@ Only the **real `@ingka/*` UI primitives** require authentication:
 
 ---
 
-## ✅ Registry Setup for @ingka/* Packages
+## ✅ Registry Setup for @ingka/\* Packages
 
 If you need to use real `@ingka/*` UI primitives in your CWDS templates:
 
@@ -118,7 +120,7 @@ npm view @ingka/button
 
 ---
 
-## 📦 Installing Real @ingka/* Dependencies
+## 📦 Installing Real @ingka/\* Dependencies
 
 After installing CWDS templates, install the required UI primitives:
 
@@ -137,7 +139,7 @@ After installation:
 
 ```tsx
 // Import from your local components directory
-import { GlobalHeader, Profile } from './components/cwds';
+import { GlobalHeader, Profile } from "./components/cwds";
 
 function App() {
   return (
@@ -151,7 +153,7 @@ function App() {
       <Profile
         isOpen={true}
         userName="John Doe"
-        onSignOut={() => console.log('Sign out')}
+        onSignOut={() => console.log("Sign out")}
       />
     </>
   );
@@ -162,11 +164,11 @@ function App() {
 
 ```tsx
 // Before (template default)
-<button onClick={onMenuClick}>Menu</button>
+<button onClick={onMenuClick}>Menu</button>;
 
 // After (using @ingka/button)
-import { Button } from '@ingka/button';
-<Button onClick={onMenuClick}>Menu</Button>
+import { Button } from "@ingka/button";
+<Button onClick={onMenuClick}>Menu</Button>;
 ```
 
 ---
@@ -176,6 +178,7 @@ import { Button } from '@ingka/button';
 If you followed previous versions of this guide:
 
 **Old Way (v6.3.0 and earlier):**
+
 ```bash
 # ❌ This never worked - packages don't exist
 npm install @ingka-group-digital/cwds-react-header
@@ -183,6 +186,7 @@ npm install @ingka-group-digital/cwds-react-layout
 ```
 
 **New Way (v6.4.0+):**
+
 ```bash
 # ✅ Install templates (not packages)
 node lib/components/cwds-installer.js .
@@ -195,22 +199,22 @@ npm install @ingka/button @ingka/icon @ingka/avatar
 
 ## 💡 Key Differences Summary
 
-| Aspect | Old (Incorrect) | New (Correct) |
-|--------|----------------|---------------|
-| **CWDS Components** | npm packages | React templates |
-| **Package Scope** | `@ingka-group-digital/cwds-*` | No packages - templates only |
-| **Installation** | `npm install @ingka-group-digital/cwds-*` | `cwds-installer .` |
-| **Location** | `node_modules/` | `src/components/cwds/` |
-| **Customization** | Limited - locked to package version | Full - edit templates directly |
-| **UI Primitives** | Bundled inside CWDS packages | Install separately: `@ingka/*` |
-| **Registry** | Private registry required | No registry for templates |
-| **Source of Truth** | npm packages (didn't exist) | Figma + local templates |
+| Aspect              | Old (Incorrect)                           | New (Correct)                  |
+| ------------------- | ----------------------------------------- | ------------------------------ |
+| **CWDS Components** | npm packages                              | React templates                |
+| **Package Scope**   | `@ingka-group-digital/cwds-*`             | No packages - templates only   |
+| **Installation**    | `npm install @ingka-group-digital/cwds-*` | `cwds-installer .`             |
+| **Location**        | `node_modules/`                           | `src/components/cwds/`         |
+| **Customization**   | Limited - locked to package version       | Full - edit templates directly |
+| **UI Primitives**   | Bundled inside CWDS packages              | Install separately: `@ingka/*` |
+| **Registry**        | Private registry required                 | No registry for templates      |
+| **Source of Truth** | npm packages (didn't exist)               | Figma + local templates        |
 
 ---
 
 ## 🔧 Troubleshooting
 
-### Issue 1: "Package @ingka-group-digital/cwds-* not found"
+### Issue 1: "Package @ingka-group-digital/cwds-\* not found"
 
 **Solution:** These packages don't exist. Use the template installer instead:
 
@@ -266,8 +270,8 @@ A: ILOFF is a separate system. CWDS templates provide similar functionality with
 
 ---
 
-**Last Updated:** November 1, 2025  
-**Ingvar Kit Version:** 6.4.0+  
+**Last Updated:** November 1, 2025
+**Ingvar Kit Version:** 6.4.0+
 **CWDS Template System:** v1.0.0
 
 ---

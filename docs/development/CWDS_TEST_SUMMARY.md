@@ -1,8 +1,8 @@
 # CWDS Integration Test Summary
 
-**Date:** November 1, 2025  
-**Issue:** #2  
-**Test File:** `tests/cwds-integration.test.js`  
+**Date:** November 1, 2025
+**Issue:** #2
+**Test File:** `tests/cwds-integration.test.js`
 **Status:** ✅ All 42 tests passing
 
 ---
@@ -12,6 +12,7 @@
 ### CWDS Component Registry (7 tests)
 
 ✅ **Component Categories**
+
 - Validates all 4 categories exist (layout, navigation, user, shared)
 - Verifies layout components (cwds-react-layout, iloff-layout-react)
 - Verifies navigation components (header, app-switcher, mobile-nav, nav-menu)
@@ -19,6 +20,7 @@
 - Verifies shared/utility components
 
 ✅ **Component Metadata**
+
 - All components have required fields (name, label, description, package, category)
 - ILOFF layout has Auth0 and Azure authentication options
 
@@ -27,6 +29,7 @@
 ### CWDSInstaller Class (4 tests)
 
 ✅ **Initialization**
+
 - Correctly initializes with target directory
 - Gets all components as flat array from registry
 - Allows component selection
@@ -37,6 +40,7 @@
 ### Registry Configuration (2 tests)
 
 ✅ **npm Registry Setup**
+
 - Creates `.npmrc` file with correct registry URLs
 - Properly formats registry configuration for @ingka-group-digital scope
 
@@ -45,6 +49,7 @@
 ### CSS Import Generation (5 tests)
 
 ✅ **Base Styles**
+
 - Creates `src/styles/cwds.css` with Skapa base imports
 - Includes component-specific Skapa imports for layout components
 - Adds selected CWDS component imports
@@ -56,19 +61,23 @@
 ### Example Component Generation (7 tests)
 
 ✅ **Layout Components**
+
 - Creates `Layout.tsx` for cwds-react-layout
 - Creates `ILOFFLayout.tsx` with Auth0 integration
 - Creates `ILOFFLayout.tsx` with Azure MSAL integration
 
 ✅ **Navigation Components**
+
 - Creates `AppSwitcher.tsx` for app switcher
 - Creates `MobileNavigation.tsx` for bottom navigation
 - Creates `NavigationMenu.tsx` for drawer navigation
 
 ✅ **User Components**
+
 - Creates `UserProfile.tsx` for user profile drawer
 
 ✅ **Smart Generation**
+
 - Only creates examples for selected components (no extras)
 
 ---
@@ -76,8 +85,9 @@
 ### Component Dependencies (4 tests)
 
 ✅ **Dependency Validation**
-- Layout components have correct Skapa dependencies (@ingka/*)
-- Layout components have correct CWDS dependencies (@ingka-group-digital/*)
+
+- Layout components have correct Skapa dependencies (@ingka/\*)
+- Layout components have correct CWDS dependencies (@ingka-group-digital/\*)
 - ILOFF layout includes additional dependencies (iloff-apps, layout-utils)
 - Navigation components include shared dependencies (modal, nav)
 
@@ -86,6 +96,7 @@
 ### Authentication Configuration (3 tests)
 
 ✅ **Auth Providers**
+
 - ILOFF layout supports Auth0 (@auth0/auth0-react)
 - ILOFF layout supports Azure MSAL (@azure/msal-browser, @azure/msal-react)
 - Auth provider is correctly set on installer instance
@@ -95,6 +106,7 @@
 ### Full Installation Flow (3 tests)
 
 ✅ **End-to-End Workflow**
+
 - Complete installation with multiple components
 - ILOFF layout installation with Auth0 configuration
 - Gracefully handles empty component selection
@@ -104,10 +116,12 @@
 ### File Structure Validation (2 tests)
 
 ✅ **Directory Structure**
+
 - Creates correct directory hierarchy (src/styles, src/components/cwds)
 - Generates valid TypeScript files with correct syntax
 
 ✅ **TypeScript Syntax**
+
 - Interface definitions (interface XxxProps)
 - React FC types (FC<XxxProps>)
 - Proper React imports
@@ -117,6 +131,7 @@
 ### Error Handling (2 tests)
 
 ✅ **Graceful Degradation**
+
 - Handles missing target directory
 - Handles empty component selection
 
@@ -125,6 +140,7 @@
 ### Spark Integration (2 tests)
 
 ✅ **Command Integration**
+
 - Verifies spark command supports --cwds flag
 - CWDS requires --ikea flag (extends Ingka Skapa)
 
@@ -146,19 +162,21 @@ Time:        1.165 s
 
 ```javascript
 CWDS_COMPONENTS = {
-  layout: [cwds-react-layout, iloff-layout-react],
-  navigation: [header, app-switcher, mobile-nav, nav-menu],
-  user: [user-profile],
-  shared: [variables, models, utils]
-}
+  layout: [cwds - react - layout, iloff - layout - react],
+  navigation: [header, app - switcher, mobile - nav, nav - menu],
+  user: [user - profile],
+  shared: [variables, models, utils],
+};
 ```
 
 ### Generated Files
 
 1. **Registry Configuration**
+
    - `.npmrc` with @ingka-group-digital registry
 
 2. **CSS Imports**
+
    - `src/styles/cwds.css` with all component styles
 
 3. **Example Components** (based on selection)
@@ -206,11 +224,13 @@ focus-visible
 ### Authentication Dependencies
 
 **Auth0:**
+
 ```javascript
 @auth0/auth0-react
 ```
 
 **Azure MSAL:**
+
 ```javascript
 @azure/msal-browser
 @azure/msal-react
@@ -234,13 +254,13 @@ focus-visible
 
 ### Issue: Duplicate Function Declaration
 
-**File:** `lib/commands/spark.js`  
+**File:** `lib/commands/spark.js`
 **Problem:** `parseAIResponse` function was declared twice
 
 ```javascript
 // Before (broken)
+function parseAIResponse(response) {}
 function parseAIResponse(response) {
-}function parseAIResponse(response) {
   // ...
 }
 
@@ -259,30 +279,30 @@ function parseAIResponse(response) {
 ### Basic CWDS Installation
 
 ```javascript
-const installer = new CWDSInstaller('/path/to/app');
-installer.selectedComponents = ['cwds-react-layout', 'cwds-react-header'];
+const installer = new CWDSInstaller("/path/to/app");
+installer.selectedComponents = ["cwds-react-layout", "cwds-react-header"];
 await installer.install();
 ```
 
 ### ILOFF Layout with Auth0
 
 ```javascript
-const installer = new CWDSInstaller('/path/to/app');
-installer.selectedComponents = ['iloff-layout-react'];
-installer.authProvider = 'auth0';
+const installer = new CWDSInstaller("/path/to/app");
+installer.selectedComponents = ["iloff-layout-react"];
+installer.authProvider = "auth0";
 await installer.install();
 ```
 
 ### Multiple Components
 
 ```javascript
-const installer = new CWDSInstaller('/path/to/app');
+const installer = new CWDSInstaller("/path/to/app");
 installer.selectedComponents = [
-  'cwds-react-layout',
-  'cwds-react-header',
-  'cwds-react-app-switcher',
-  'cwds-react-user-profile',
-  'cwds-variables'
+  "cwds-react-layout",
+  "cwds-react-header",
+  "cwds-react-app-switcher",
+  "cwds-react-user-profile",
+  "cwds-variables",
 ];
 await installer.install();
 ```
@@ -328,6 +348,6 @@ tests/cwds-integration.test.js
 
 ---
 
-**Last Updated:** November 1, 2025  
-**Status:** ✅ Production Ready  
+**Last Updated:** November 1, 2025
+**Status:** ✅ Production Ready
 **Test Coverage:** 42/42 passing

@@ -1,0 +1,61 @@
+{
+  "name": "Ingka-Co-Worker-Colours",
+  "category": "Skapa-subsystems",
+  "source": "Screenshot from skapa.ikea.net",
+  "extractedAt": "2025-11-01T10:34:30.578Z",
+  "extractionMethod": "tesseract-ocr",
+  "description": "OCR extracted component specification (heuristic)",
+  "variants": [
+    {
+      "name": "info"
+    }
+  ],
+  "states": [],
+  "content": {
+    "rawText": "OD) Skapa ¢ Q Search\nAbout Skapa v\nDesigning v\nLast updated: 2024-02-06\nDeveloping v\ntis Colours\nComponents v\nThese are the two colours that designers should be using in the\nPatterns v . .\nheaders on co-worker domain pages. These colours are standardised\nSubsystems A and should not be changed or altered in any way.\nOverview\nIngka Co-worker ~\nintroduction Colour usage\nColours\nApp Switcher WN Caution! These colours are not meant to be used in any other Skapa components or internal or external presentations and communications.\nBottom Bar Navigation\nGlobal Header\nNavigation Menu These colours are only to be used by Co-worker Design Subsystem designers only\nwithin the Global Header.\nProfile\nThese colours do not have Skapa colour tokens currently, and only have HEX values.\nInter Co-worker\nThey are not meant to be used in other Skapa components or internal or external\nKompis presentations and communications.\nSupport v\n___________________________________________________________________________________________/\n(1) It's not allowed to use these colours freely in your designs. Please consider alternative brand colours..\nDo you have feedback on the content of this page? Tell us about it. We are always open to feedback and happy to discuss it with you. If we missed\nany important points or the imagery does not support the message, please inform us.\nUp next\no\nApp Switcher >\nXx\n[*]\nI]\nE-]\n°\n[7]\n[7]\n[* 9\nOD © Inter IKEA Systems B.V 1999-2025\n",
+    "lines": [
+      "OD) Skapa ¢ Q Search",
+      "About Skapa v",
+      "Designing v",
+      "Last updated: 2024-02-06",
+      "Developing v",
+      "tis Colours",
+      "Components v",
+      "These are the two colours that designers should be using in the",
+      "Patterns v . .",
+      "headers on co-worker domain pages. These colours are standardised",
+      "Subsystems A and should not be changed or altered in any way.",
+      "Overview",
+      "Ingka Co-worker ~",
+      "introduction Colour usage",
+      "Colours",
+      "App Switcher WN Caution! These colours are not meant to be used in any other Skapa components or internal or external presentations and communications.",
+      "Bottom Bar Navigation",
+      "Global Header",
+      "Navigation Menu These colours are only to be used by Co-worker Design Subsystem designers only",
+      "within the Global Header.",
+      "Profile",
+      "These colours do not have Skapa colour tokens currently, and only have HEX values.",
+      "Inter Co-worker",
+      "They are not meant to be used in other Skapa components or internal or external",
+      "Kompis presentations and communications.",
+      "Support v",
+      "___________________________________________________________________________________________/",
+      "(1) It's not allowed to use these colours freely in your designs. Please consider alternative brand colours..",
+      "Do you have feedback on the content of this page? Tell us about it. We are always open to feedback and happy to discuss it with you. If we missed",
+      "any important points or the imagery does not support the message, please inform us.",
+      "Up next",
+      "o",
+      "App Switcher >",
+      "Xx",
+      "[*]",
+      "I]",
+      "E-]",
+      "°",
+      "[7]",
+      "[7]",
+      "[* 9",
+      "OD © Inter IKEA Systems B.V 1999-2025"
+    ]
+  }
+}

@@ -13,6 +13,7 @@ This guide provides visual references and usage examples for CWDS components. Us
 **Purpose:** Main layout wrapper for co-worker applications with header, navigation, and content areas.
 
 **Visual Structure:**
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  [IKEA Logo]  App Name        [App Switcher] [Profile] │ ← Header
@@ -28,14 +29,16 @@ This guide provides visual references and usage examples for CWDS components. Us
 ```
 
 **Key Features:**
+
 - Sticky header with IKEA branding
 - Collapsible side navigation
 - Responsive content area
 - Mobile-friendly hamburger menu
 
 **Example Implementation:**
+
 ```jsx
-import { Layout } from '@ingka-group-digital/cwds-react-layout';
+import { Layout } from "@ingka-group-digital/cwds-react-layout";
 
 function App() {
   return (
@@ -44,9 +47,9 @@ function App() {
       userName="John Doe"
       userEmail="john.doe@ingka.com"
       navigation={[
-        { label: 'Home', icon: 'home', path: '/' },
-        { label: 'Orders', icon: 'list', path: '/orders' },
-        { label: 'Settings', icon: 'settings', path: '/settings' }
+        { label: "Home", icon: "home", path: "/" },
+        { label: "Orders", icon: "list", path: "/orders" },
+        { label: "Settings", icon: "settings", path: "/settings" },
       ]}
     >
       <YourAppContent />
@@ -62,6 +65,7 @@ function App() {
 **Purpose:** Enhanced CWDS Layout with ILOFF (IKEA Logistic Office) app integration and enterprise features.
 
 **Visual Structure:**
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  [IKEA Logo]  App Name    [ILOFF Apps ▼] [User ▼]     │
@@ -78,14 +82,16 @@ function App() {
 ```
 
 **Key Features:**
+
 - ILOFF app switcher integration
 - SSO authentication (Auth0 or Azure MSAL)
 - Enterprise-grade security
 - Multi-tenant support
 
 **Example Implementation:**
+
 ```jsx
-import { IloffLayout } from '@ingka-group-digital/iloff-layout-react';
+import { IloffLayout } from "@ingka-group-digital/iloff-layout-react";
 
 function App() {
   return (
@@ -110,6 +116,7 @@ function App() {
 **Purpose:** Standard co-worker application header with IKEA branding and user controls.
 
 **Visual Appearance:**
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │ [🔵 IKEA]  Application Name        [🎯 Apps] [👤 User] │
@@ -119,12 +126,14 @@ function App() {
 ```
 
 **Elements:**
+
 - **IKEA Logo:** Blue circle with white IKEA text
 - **App Name:** Bold, truncated if too long
 - **App Switcher:** Grid icon, opens app directory
 - **User Profile:** Avatar with dropdown menu
 
 **States:**
+
 - **Normal:** Blue background, white text
 - **Hover:** Slightly lighter blue
 - **Active:** Highlighted item with darker shade
@@ -136,6 +145,7 @@ function App() {
 **Purpose:** Navigate between different IKEA co-worker applications.
 
 **Visual Appearance:**
+
 ```
 ┌───────────────────────────────┐
 │  Co-worker Applications       │
@@ -150,6 +160,7 @@ function App() {
 ```
 
 **Behavior:**
+
 - Opens on click of grid icon
 - Shows recently used apps
 - Search functionality
@@ -162,6 +173,7 @@ function App() {
 **Purpose:** Sidebar navigation for application sections.
 
 **Visual Appearance:**
+
 ```
 ┌──────────────────┐
 │ 🏠 Dashboard     │ ← Active (highlighted)
@@ -175,6 +187,7 @@ function App() {
 ```
 
 **Features:**
+
 - Icons with labels
 - Active state highlighting
 - Collapsible sections
@@ -187,6 +200,7 @@ function App() {
 **Purpose:** Display user information and access account settings.
 
 **Visual Appearance:**
+
 ```
 ┌──────────────────────────┐
 │ [👤] John Doe            │
@@ -202,6 +216,7 @@ function App() {
 ```
 
 **Information Shown:**
+
 - User full name
 - Email address
 - Profile picture (if available)
@@ -214,6 +229,7 @@ function App() {
 **Purpose:** Responsive navigation for mobile/tablet devices.
 
 **Visual Appearance:**
+
 ```
 Mobile (< 768px):
 ┌─────────────────────────────┐
@@ -239,16 +255,19 @@ When menu opened:
 ### Colors (CWDS Internal)
 
 **Primary:**
+
 - **CWDS Blue:** `#003D82` (darker than customer-facing `#0058A3`)
 - **IKEA Yellow:** `#FFDB00`
 
 **Neutrals:**
+
 - **Text Primary:** `#111111`
 - **Text Secondary:** `#484848`
 - **Background:** `#FFFFFF`
 - **Border:** `#DFDFDF`
 
 **Semantic:**
+
 - **Success:** `#007A3D` (green)
 - **Warning:** `#FFA000` (orange)
 - **Error:** `#D32F2F` (red)
@@ -259,6 +278,7 @@ When menu opened:
 **Font Family:** Noto IKEA (fallback: system fonts)
 
 **Sizes:**
+
 ```
 Heading 1: 32px / 2rem
 Heading 2: 24px / 1.5rem
@@ -287,6 +307,7 @@ XXL: 48px (3rem)
 Use this checklist to verify your CWDS implementation:
 
 ### Layout ✓
+
 - [ ] Header displays IKEA logo correctly
 - [ ] App name is visible and truncated appropriately
 - [ ] Navigation menu is collapsible
@@ -295,6 +316,7 @@ Use this checklist to verify your CWDS implementation:
 - [ ] Footer (if used) stays at bottom
 
 ### Navigation ✓
+
 - [ ] Active navigation item is highlighted
 - [ ] Icons match IKEA Skapa icon set
 - [ ] Hover states work on all interactive elements
@@ -302,6 +324,7 @@ Use this checklist to verify your CWDS implementation:
 - [ ] Focus indicators are visible
 
 ### User Profile ✓
+
 - [ ] User name displays correctly
 - [ ] Email shows full address
 - [ ] Avatar/initials render properly
@@ -309,6 +332,7 @@ Use this checklist to verify your CWDS implementation:
 - [ ] Sign out button is clearly labeled
 
 ### Accessibility ✓
+
 - [ ] All interactive elements have proper ARIA labels
 - [ ] Color contrast meets WCAG AA (4.5:1 for text)
 - [ ] Keyboard navigation works throughout
@@ -332,6 +356,7 @@ Use this checklist to verify your CWDS implementation:
 ```
 
 **Visual:**
+
 ```
 ┌─────────────────────────────────────┐
 │  Dashboard                          │
@@ -358,7 +383,7 @@ Use this checklist to verify your CWDS implementation:
       </TableRow>
     </TableHeader>
     <TableBody>
-      {orders.map(order => (
+      {orders.map((order) => (
         <TableRow key={order.id}>
           <TableCell>{order.id}</TableCell>
           <TableCell>{order.customer}</TableCell>
@@ -371,6 +396,7 @@ Use this checklist to verify your CWDS implementation:
 ```
 
 **Visual:**
+
 ```
 ┌──────────────────────────────────────┐
 │  Orders                              │
@@ -401,6 +427,7 @@ Use this checklist to verify your CWDS implementation:
 ```
 
 **Visual:**
+
 ```
 ┌──────────────────────────────────────┐
 │  Settings                            │
@@ -423,6 +450,7 @@ Use this checklist to verify your CWDS implementation:
 > For now, ASCII diagrams provide structural reference.
 
 To add screenshots to this guide:
+
 1. Deploy a CWDS app locally
 2. Take screenshots of each component
 3. Place in `docs/design-references/images/`
@@ -433,6 +461,7 @@ To add screenshots to this guide:
 ## 🔍 Visual Debugging Tips
 
 ### Issue: Header Not Sticky
+
 ```css
 /* Verify this CSS is applied */
 .cwds-header {
@@ -443,6 +472,7 @@ To add screenshots to this guide:
 ```
 
 ### Issue: Navigation Overlapping Content
+
 ```css
 /* Ensure proper layout structure */
 .cwds-layout {
@@ -460,6 +490,7 @@ To add screenshots to this guide:
 ```
 
 ### Issue: Colors Don't Match
+
 **Check:** Are you using CWDS colors (`#003D82`) or Ingka colors (`#0058A3`)?
 **Solution:** CWDS = internal tools, Ingka = customer-facing
 
@@ -468,11 +499,13 @@ To add screenshots to this guide:
 ## 🛠️ Development Tools
 
 ### Browser DevTools
+
 - **Inspect Element:** Check applied CSS classes
 - **Network Tab:** Verify component assets load
 - **Console:** Look for React warnings
 
 ### Recommended Extensions
+
 - **React Developer Tools:** Inspect component props
 - **Axe DevTools:** Accessibility testing
 - **ColorZilla:** Verify color values
@@ -501,6 +534,6 @@ To add screenshots to this guide:
 
 ---
 
-**Last Updated:** November 1, 2025  
-**Ingvar Kit Version:** 6.2.0+  
+**Last Updated:** November 1, 2025
+**Ingvar Kit Version:** 6.2.0+
 **CWDS Version:** See individual package versions
