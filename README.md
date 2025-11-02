@@ -63,6 +63,7 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
    - ILOFF Layout integration (automatic app discovery)
    - Auth0 and Azure authentication support
    - Full component library for admin panels and dashboards
+   - **Installation Priority:** Try official @ingka/\* npm packages first, use local templates as fallback
 
 3. **🤖 Multi-Agent AI Orchestration**
 

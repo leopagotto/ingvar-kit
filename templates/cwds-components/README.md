@@ -1,16 +1,37 @@
 # CWDS Component Templates
 
-> **Source of Truth**: Official IKEA Ingka Co-worker Design Components (Skapa + Figma)  
-> **JSON Specifications**: Extracted from 73 Skapa screenshots via OCR  
+> **Source of Truth**: Official IKEA Ingka Co-worker Design Components (Skapa + Figma)
+> **JSON Specifications**: Extracted from 73 Skapa screenshots via OCR
 > **Last Updated**: 2025-11-02
 
 ## Overview
 
 These React/TypeScript component templates implement the **Co-Worker Design System (CWDS)** specification extracted from:
+
 1. **Official Skapa Design System** (73 screenshots → JSON specs)
 2. **IKEA Figma designs** (Co-worker components)
 
-**Important**: CWDS is a **design specification**, not an npm package. These templates compose real `@ingka/*` UI primitives to match the CWDS design patterns.
+**Important**: CWDS is a **design specification**, not an npm package. These templates provide two installation options:
+
+1. **Recommended**: Install from npm package `@ingka/*` (if available)
+2. **Fallback**: Use local templates (compose `@ingka/*` UI primitives)
+
+## 📦 Installation Priority
+
+```bash
+# 1. First, try to install from official npm packages
+npm install @ingka/global-header @ingka/navigation-menu
+
+# 2. If not available, use ingvar CLI to install local templates
+ingvar cwds install
+```
+
+**Why this approach?**
+
+- ✅ Official npm packages are maintained by IKEA teams
+- ✅ Automatic updates and bug fixes
+- ✅ Consistent versioning across projects
+- ✅ Local templates as reliable fallback
 
 ## 🎯 JSON Specifications
 
@@ -27,6 +48,7 @@ docs/guides/Skapa-json/subsystems/
 ```
 
 **Each JSON file contains:**
+
 - Component anatomy & structure
 - Variants & states
 - Responsive specifications (S, M-XXL breakpoints)
@@ -37,8 +59,9 @@ docs/guides/Skapa-json/subsystems/
 ## Available Components
 
 ### 1. Global Header
+
 ```tsx
-import { GlobalHeader } from './GlobalHeader';
+import { GlobalHeader } from "./GlobalHeader";
 
 <GlobalHeader
   appName="Warehouse Management"
@@ -47,84 +70,102 @@ import { GlobalHeader } from './GlobalHeader';
   notificationCount={3}
   onMenuClick={() => {}}
   onSearchClick={() => {}}
-/>
+/>;
 ```
 
 ### 2. Navigation Menu
+
 ```tsx
-import { NavigationMenu } from './NavigationMenu';
+import { NavigationMenu } from "./NavigationMenu";
 
 <NavigationMenu
   items={[
-    { id: 'home', label: 'Home', href: '/' },
-    { id: 'orders', label: 'Orders', href: '/orders' },
+    { id: "home", label: "Home", href: "/" },
+    { id: "orders", label: "Orders", href: "/orders" },
   ]}
   activeItemId="home"
-/>
+/>;
 ```
 
 ### 3. App Switcher
+
 ```tsx
-import { AppSwitcher } from './AppSwitcher';
+import { AppSwitcher } from "./AppSwitcher";
 
 <AppSwitcher
   isOpen={true}
   apps={[
-    { id: 'wms', name: 'Warehouse Management' },
-    { id: 'pos', name: 'Point of Sale' },
+    { id: "wms", name: "Warehouse Management" },
+    { id: "pos", name: "Point of Sale" },
   ]}
   onAppClick={(app) => console.log(app)}
-/>
+/>;
 ```
 
 ### 4. Profile
+
 ```tsx
-import { Profile } from './Profile';
+import { Profile } from "./Profile";
 
 <Profile
   isOpen={true}
   userName="Bill Lau"
   userRole="Reverse Flow Specialist"
   onSignOut={() => {}}
-/>
+/>;
 ```
 
 ### 5. Bottom Bar Navigation
+
 ```tsx
-import { BottomBarNavigation } from './BottomBarNavigation';
+import { BottomBarNavigation } from "./BottomBarNavigation";
 
 <BottomBarNavigation
   items={[
-    { id: 'home', label: 'Home' },
-    { id: 'search', label: 'Search' },
+    { id: "home", label: "Home" },
+    { id: "search", label: "Search" },
   ]}
   activeItemId="home"
-/>
+/>;
 ```
 
 ## Installation
 
 ### Via Ingvar Kit (Recommended)
 
-Use the integrated CWDS installer:
+## 🚀 Installation
+
+### Option 1: Official npm Packages (Recommended)
+
+**Try official IKEA packages first:**
 
 ```bash
-# Interactive installation (select components)
+# Check if official packages exist
+npm search @ingka/global-header
+npm search @ingka/navigation-menu
+npm search @ingka/app-switcher
+
+# Install available packages
+npm install @ingka/global-header
+npm install @ingka/navigation-menu
+```
+
+### Option 2: Local Templates (Fallback)
+
+**If npm packages aren't available, use Ingvar CLI:**
+
+```bash
+# Interactive selection (choose components you need)
 ingvar cwds install
 
-# Auto-install all recommended components
+# Or install all components automatically
 ingvar cwds install --auto
 
 # List available components
 ingvar cwds list
 ```
 
-The installer will:
-1. Copy selected templates to `src/components/cwds/`
-2. Install required `@ingka/*` dependencies
-3. Setup design tokens (CSS custom properties)
-4. Generate TypeScript types
-5. Create example usage files
+**What this does:**
 
 ### Manual Installation
 
@@ -143,15 +184,18 @@ npm install @ingka/button @ingka/card @ingka/input @ingka/icon @ingka/avatar @in
 These components follow **100% of the CWDS specification** extracted from Skapa:
 
 ### Color System
+
 - **Primary**: #003E72 (Global Header - non-negotiable)
 - **Secondary**: #0051BA (Links, accents)
 - **States**: Danger (#D20000), Success (#007C3D), Warning (#FF8C00)
 
 ### Responsive Breakpoints
+
 - **S** (0-599px): Bottom Bar Navigation
 - **M-XXL** (600px+): Navigation Menu + Global Header
 
 ### Accessibility (WCAG AA)
+
 - ✅ 4.5:1 contrast ratio minimum
 - ✅ Keyboard navigation (Tab, Enter, Escape, Arrow keys)
 - ✅ ARIA landmarks & labels
@@ -159,6 +203,7 @@ These components follow **100% of the CWDS specification** extracted from Skapa:
 - ✅ 44x44px touch targets (mobile)
 
 ### Layout & Spacing
+
 - **8px base grid** (same as Skapa)
 - Fixed header positioning
 - Sticky profile card + language selector
@@ -166,11 +211,13 @@ These components follow **100% of the CWDS specification** extracted from Skapa:
 ## Design Tokens
 
 Design tokens are extracted from the Figma file and available in:
+
 - `styles/cwds-tokens.css` - CSS custom properties
 
 Import the tokens in your app:
+
 ```tsx
-import './components/cwds/styles/cwds-tokens.css';
+import "./components/cwds/styles/cwds-tokens.css";
 ```
 
 ## Customization
@@ -182,7 +229,7 @@ These templates provide a base implementation matching the CWDS specification. Y
 3. **Adjust colors and spacing** to match your brand requirements
 4. **Add additional props** for your use cases
 
-## Real @ingka/* Packages
+## Real @ingka/\* Packages
 
 According to npm registry search, these are the actual available `@ingka/*` packages:
 
@@ -200,6 +247,7 @@ According to npm registry search, these are the actual available `@ingka/*` pack
 ## Figma Reference
 
 View the original designs in Figma:
+
 - [Global Header](https://www.figma.com/design/Zec1eGMCNeB0IkPMWs35qx?node-id=301-142)
 - [Navigation Menu](https://www.figma.com/design/Zec1eGMCNeB0IkPMWs35qx?node-id=702-2930)
 - [App Switcher](https://www.figma.com/design/Zec1eGMCNeB0IkPMWs35qx?node-id=702-2931)
@@ -211,22 +259,26 @@ View the original designs in Figma:
 For complete specifications and implementation guidance:
 
 ### JSON Specifications (Machine-Readable)
+
 - `docs/guides/Skapa-json/subsystems/` - All 6 CWDS component specs
 - `docs/guides/Skapa-json/index.json` - Master index with metadata
 
 ### Implementation Guides (Human-Readable)
+
 - `lib/ai-instructions/frontend-agent-ingka.instructions.md` - 421 lines of CWDS documentation
 - `docs/guides/CWDS_QUICK_REFERENCE.md` - Fast implementation guide
 - `docs/development/CWDS_INSTRUCTIONS_UPDATE.md` - Update documentation
 - `docs/guides/SKAPA_JSON_TEST_RESULTS.md` - Validation test results
 
 ### Design References
+
 - `docs/guides/CWDS_FIGMA_SPECS.md` - Original Figma specifications (legacy)
 - Skapa Design System: https://skapa.ikea.com/subsystems/ingka-co-worker
 
 ## Support
 
 For issues with these templates or the CWDS specification extraction:
+
 - GitHub Issues: https://github.com/leopagotto/ingvar-kit/issues
 - Label: `cwds`
 

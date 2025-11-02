@@ -5,6 +5,59 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.5.0] - 2025-11-02
+
+### 📦 CWDS Installation Priority & npm Package Enhancements
+
+**Major Improvement:** CWDS components now prioritize official npm packages over local templates, with comprehensive documentation updates and production-ready deployment.
+
+#### Added
+
+- **Installation Priority Documentation:**
+
+  - Two-tier installation strategy: official @ingka/\* npm packages first, local templates as fallback
+  - Clear guidance in README and component documentation
+  - CLI instructions show npm search commands before local installation
+  - Rationale documentation (automatic updates, versioning, IKEA team maintenance)
+
+- **Enhanced Installer Messages:**
+
+  - CWDS installer now displays installation priority tips
+  - Suggests checking npm registry first: `npm search @ingka/global-header`
+  - Clear fallback messaging when using local templates
+
+- **Comprehensive Documentation:**
+  - Updated templates/cwds-components/README.md with two-tier installation strategy
+  - Added official package search examples
+  - Installation priority clearly documented in main README
+  - JSON specifications section with 6 CWDS subsystem files documented
+
+#### Changed
+
+- **CWDS Installation Flow:**
+
+  - Prioritizes official npm package installation over local templates
+  - Local templates explicitly positioned as fallback option
+  - Installer displays installation priority tips at runtime
+
+- **Documentation Structure:**
+
+  - Reorganized installation section with Option 1 (npm) and Option 2 (local)
+  - Added "Why this approach?" section explaining benefits
+  - Updated all CWDS references to clarify package priority
+
+- **CLI Messages:**
+  - Updated cwds-installer.js console output
+  - Added npm search command suggestions
+  - Clearer distinction between official packages and local templates
+
+#### Impact
+
+- Users try official IKEA packages first (better maintenance, automatic updates)
+- Local templates provide reliable fallback when npm packages unavailable
+- Clear documentation reduces confusion about installation methods
+- Consistent with IKEA team development practices
+
 ## [6.2.0] - 2025-11-01
 
 ### 🎨 Dual Design System Support in Spark
