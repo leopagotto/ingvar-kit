@@ -1,0 +1,49 @@
+{
+  "name": "@ingvar/cwds-components",
+  "version": "1.0.0",
+  "description": "Ingka Co-Worker Design System (CWDS) React Component Templates - Based on official Skapa specifications",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts,.tsx",
+    "format": "prettier --write \"**/*.{ts,tsx,json,md}\""
+  },
+  "keywords": [
+    "ikea",
+    "ingka",
+    "cwds",
+    "coworker",
+    "design-system",
+    "react",
+    "typescript",
+    "components",
+    "internal"
+  ],
+  "author": "Ingvar Workflow Kit",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "*.tsx",
+    "*.ts",
+    "styles/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leopagotto/ingvar-kit"
+  },
+  "bugs": {
+    "url": "https://github.com/leopagotto/ingvar-kit/issues"
+  },
+  "homepage": "https://github.com/leopagotto/ingvar-kit#readme"
+}

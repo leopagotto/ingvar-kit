@@ -3,13 +3,13 @@ import './styles/cwds-tokens.css';
 
 /**
  * CWDS Global Header Component
- * 
+ *
  * Design Source: Figma - Ingka Co-worker Design Components
  * Node: 301:142
- * 
+ *
  * This component uses @ingka/* UI primitives to implement the CWDS Global Header specification.
  * The Global Header is the main navigation bar that appears at the top of all internal IKEA applications.
- * 
+ *
  * @example
  * <GlobalHeader
  *   appName="Warehouse Management"
@@ -31,43 +31,43 @@ import './styles/cwds-tokens.css';
 export interface GlobalHeaderProps {
   /** Application name displayed in the header */
   appName: string;
-  
+
   /** User's display name */
   userName?: string;
-  
+
   /** User's role/title */
   userRole?: string;
-  
+
   /** Number of unread notifications (0-99+) */
   notificationCount?: number;
-  
+
   /** Show/hide search icon */
   showSearch?: boolean;
-  
+
   /** Show/hide notifications icon */
   showNotifications?: boolean;
-  
+
   /** Show/hide user profile avatar */
   showProfile?: boolean;
-  
+
   /** Show/hide app switcher icon */
   showAppSwitcher?: boolean;
-  
+
   /** Callback when menu/hamburger icon is clicked */
   onMenuClick?: () => void;
-  
+
   /** Callback when search icon is clicked */
   onSearchClick?: () => void;
-  
+
   /** Callback when notification icon is clicked */
   onNotificationClick?: () => void;
-  
+
   /** Callback when profile avatar is clicked */
   onProfileClick?: () => void;
-  
+
   /** Callback when app switcher icon is clicked */
   onAppSwitcherClick?: () => void;
-  
+
   /** Custom CSS class name */
   className?: string;
 }
@@ -98,18 +98,23 @@ export const GlobalHeader: React.FC<GlobalHeaderProps> = ({
   };
 
   return (
-    <header 
+    <header
       className={`cwds-global-header ${className}`}
+      role="banner"
+      aria-label="Co-Worker Application Header"
       style={{
-        backgroundColor: '#FFFFFF',
-        borderBottom: '1px solid #E0E0E0',
+        backgroundColor: '#003E72',  // CWDS Primary Color (mandatory)
+        color: '#FFFFFF',
+        borderBottom: 'none',
         height: '64px',
         display: 'flex',
         alignItems: 'center',
         padding: '0 24px',
         gap: '16px',
-        position: 'sticky',
+        position: 'fixed',  // Fixed position at top (CWDS spec)
         top: 0,
+        left: 0,
+        right: 0,
         zIndex: 1000
       }}
     >
@@ -125,19 +130,20 @@ export const GlobalHeader: React.FC<GlobalHeaderProps> = ({
             padding: '8px',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center'
+            justifyContent: 'center',
+            color: '#FFFFFF'
           }}
         >
           {/* Menu Icon - Replace with @ingka/icon when available */}
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M3 6h18M3 12h18M3 18h18" stroke="#111" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round"/>
           </svg>
         </button>
-        
+
         <h1 style={{
           fontSize: '16px',
           fontWeight: 700,
-          color: '#111111',
+          color: '#FFFFFF',
           margin: 0
         }}>
           {appName}
@@ -160,13 +166,14 @@ export const GlobalHeader: React.FC<GlobalHeaderProps> = ({
               padding: '8px',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              color: '#FFFFFF'
             }}
           >
             {/* Search Icon */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <circle cx="11" cy="11" r="7" stroke="#111" strokeWidth="2"/>
-              <path d="M20 20l-4-4" stroke="#111" strokeWidth="2" strokeLinecap="round"/>
+              <circle cx="11" cy="11" r="7" stroke="#FFFFFF" strokeWidth="2"/>
+              <path d="M20 20l-4-4" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </button>
         )}
@@ -183,12 +190,13 @@ export const GlobalHeader: React.FC<GlobalHeaderProps> = ({
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              position: 'relative'
+              position: 'relative',
+              color: '#FFFFFF'
             }}
           >
             {/* Bell Icon */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" stroke="#111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             {notificationCount > 0 && (
               <span style={{
@@ -227,13 +235,13 @@ export const GlobalHeader: React.FC<GlobalHeaderProps> = ({
               gap: '8px'
             }}
           >
-            {/* Avatar */}
+            /* Avatar */}
             <div style={{
               width: '40px',
               height: '40px',
               borderRadius: '50%',
-              backgroundColor: '#111111',
-              color: '#FFFFFF',
+              backgroundColor: '#FFFFFF',
+              color: '#003E72',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -256,15 +264,16 @@ export const GlobalHeader: React.FC<GlobalHeaderProps> = ({
               padding: '8px',
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'center'
+              justifyContent: 'center',
+              color: '#FFFFFF'
             }}
           >
             {/* App Grid Icon */}
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <rect x="4" y="4" width="6" height="6" rx="1" fill="#111"/>
-              <rect x="14" y="4" width="6" height="6" rx="1" fill="#111"/>
-              <rect x="4" y="14" width="6" height="6" rx="1" fill="#111"/>
-              <rect x="14" y="14" width="6" height="6" rx="1" fill="#111"/>
+              <rect x="4" y="4" width="6" height="6" rx="1" fill="#FFFFFF"/>
+              <rect x="14" y="4" width="6" height="6" rx="1" fill="#FFFFFF"/>
+              <rect x="4" y="14" width="6" height="6" rx="1" fill="#FFFFFF"/>
+              <rect x="14" y="14" width="6" height="6" rx="1" fill="#FFFFFF"/>
             </svg>
           </button>
         )}

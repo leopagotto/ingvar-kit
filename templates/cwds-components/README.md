@@ -1,13 +1,38 @@
 # CWDS Component Templates
 
-> **Source of Truth**: Official IKEA Ingka Co-worker Design Components (Figma)
-> **Last Generated**: 2025-11-01
+> **Source of Truth**: Official IKEA Ingka Co-worker Design Components (Skapa + Figma)  
+> **JSON Specifications**: Extracted from 73 Skapa screenshots via OCR  
+> **Last Updated**: 2025-11-02
 
 ## Overview
 
-These React/TypeScript component templates implement the **Co-Worker Design System (CWDS)** specification extracted directly from the official IKEA Figma designs. 
+These React/TypeScript component templates implement the **Co-Worker Design System (CWDS)** specification extracted from:
+1. **Official Skapa Design System** (73 screenshots → JSON specs)
+2. **IKEA Figma designs** (Co-worker components)
 
 **Important**: CWDS is a **design specification**, not an npm package. These templates compose real `@ingka/*` UI primitives to match the CWDS design patterns.
+
+## 🎯 JSON Specifications
+
+All CWDS components have been extracted to JSON format with complete specifications:
+
+```
+docs/guides/Skapa-json/subsystems/
+├── Ingka-Co-Worker-Global-Header.json        # Fixed header (#003E72)
+├── Ingka-Co-Worker-Navigation-Menu.json      # Left sidebar navigation
+├── Ingka-Co-Worker-Bottom-Bar-Navigation.json # Mobile bottom nav
+├── Ingka-Co-Worker-Profile.json              # User profile panel
+├── Ingka-Co-Worker-App-Switcher.json         # App switching modal
+└── Ingka-Co-Worker-Colours.json              # CWDS color palette
+```
+
+**Each JSON file contains:**
+- Component anatomy & structure
+- Variants & states
+- Responsive specifications (S, M-XXL breakpoints)
+- Accessibility requirements (WCAG AA, keyboard nav)
+- Motion & interaction details
+- Usage guidelines
 
 ## Available Components
 
@@ -79,7 +104,27 @@ import { BottomBarNavigation } from './BottomBarNavigation';
 
 ## Installation
 
-These templates are designed to be copied into your project during initialization with `ingvar init`. When you select "CWDS" as your design system, these files will be automatically copied to your `src/components/cwds/` directory.
+### Via Ingvar Kit (Recommended)
+
+Use the integrated CWDS installer:
+
+```bash
+# Interactive installation (select components)
+ingvar cwds install
+
+# Auto-install all recommended components
+ingvar cwds install --auto
+
+# List available components
+ingvar cwds list
+```
+
+The installer will:
+1. Copy selected templates to `src/components/cwds/`
+2. Install required `@ingka/*` dependencies
+3. Setup design tokens (CSS custom properties)
+4. Generate TypeScript types
+5. Create example usage files
 
 ### Manual Installation
 
@@ -89,9 +134,34 @@ If you need to add these templates to an existing project:
 # Copy templates to your project
 cp -r templates/cwds-components/* src/components/cwds/
 
-# Install required @ingka/* dependencies (examples - adjust based on actual usage)
-npm install @ingka/button @ingka/card @ingka/input @ingka/icon
+# Install required @ingka/* dependencies
+npm install @ingka/button @ingka/card @ingka/input @ingka/icon @ingka/avatar @ingka/modal
 ```
+
+## Design System Compliance
+
+These components follow **100% of the CWDS specification** extracted from Skapa:
+
+### Color System
+- **Primary**: #003E72 (Global Header - non-negotiable)
+- **Secondary**: #0051BA (Links, accents)
+- **States**: Danger (#D20000), Success (#007C3D), Warning (#FF8C00)
+
+### Responsive Breakpoints
+- **S** (0-599px): Bottom Bar Navigation
+- **M-XXL** (600px+): Navigation Menu + Global Header
+
+### Accessibility (WCAG AA)
+- ✅ 4.5:1 contrast ratio minimum
+- ✅ Keyboard navigation (Tab, Enter, Escape, Arrow keys)
+- ✅ ARIA landmarks & labels
+- ✅ Focus management
+- ✅ 44x44px touch targets (mobile)
+
+### Layout & Spacing
+- **8px base grid** (same as Skapa)
+- Fixed header positioning
+- Sticky profile card + language selector
 
 ## Design Tokens
 
@@ -138,9 +208,21 @@ View the original designs in Figma:
 
 ## Documentation
 
-For complete specifications extracted from Figma, see:
-- `docs/guides/CWDS_FIGMA_SPECS.md` - Human-readable documentation
-- `docs/guides/CWDS_FIGMA_SPECS.json` - Machine-readable specifications
+For complete specifications and implementation guidance:
+
+### JSON Specifications (Machine-Readable)
+- `docs/guides/Skapa-json/subsystems/` - All 6 CWDS component specs
+- `docs/guides/Skapa-json/index.json` - Master index with metadata
+
+### Implementation Guides (Human-Readable)
+- `lib/ai-instructions/frontend-agent-ingka.instructions.md` - 421 lines of CWDS documentation
+- `docs/guides/CWDS_QUICK_REFERENCE.md` - Fast implementation guide
+- `docs/development/CWDS_INSTRUCTIONS_UPDATE.md` - Update documentation
+- `docs/guides/SKAPA_JSON_TEST_RESULTS.md` - Validation test results
+
+### Design References
+- `docs/guides/CWDS_FIGMA_SPECS.md` - Original Figma specifications (legacy)
+- Skapa Design System: https://skapa.ikea.com/subsystems/ingka-co-worker
 
 ## Support
 
