@@ -110,5 +110,24 @@ export type { SnackbarProps, SnackbarPosition } from './components/feedback/Snac
 export { Dialog } from './components/feedback/Dialog';
 export type { DialogProps, DialogSize } from './components/feedback/Dialog';
 
+// Navigation (14 components) 🔄 IN PROGRESS
+export { Tabs } from './components/navigation/Tabs';
+export type { TabsProps, TabItem } from './components/navigation/Tabs';
+
+export { Breadcrumbs } from './components/navigation/Breadcrumbs';
+export type { BreadcrumbsProps, BreadcrumbItem } from './components/navigation/Breadcrumbs';
+
+export { Pagination } from './components/navigation/Pagination';
+export type { PaginationProps } from './components/navigation/Pagination';
+
+export { Header } from './components/navigation/Header';
+export type { HeaderProps } from './components/navigation/Header';
+
+export { Footer } from './components/navigation/Footer';
+export type { FooterProps } from './components/navigation/Footer';
+
+export { Menu } from './components/navigation/Menu';
+export type { MenuProps, MenuItem } from './components/navigation/Menu';
+
 // Re-export styles
 import './styles/tokens.css';
