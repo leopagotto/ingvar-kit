@@ -24,25 +24,25 @@ The documentation is organized into 9 focused modules:
 | **[06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)** | Navigation, Media, Commerce                              | 14               |
 | **[07-LAYOUT-PATTERNS.md](./07-LAYOUT-PATTERNS.md)**                   | Page layouts and composition                             | -                |
 | **[08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md)**                     | Coworker Design System (internal apps)                   | 6                |
-| **[09-DESIGN-PATTERNS.md](./09-DESIGN-PATTERNS.md)** ⭐ NEW           | UX patterns (Filtering, Forms, Empty States, etc.)       | 12 patterns      |
-| **[10-FOUNDATIONS-EXTENDED.md](./10-FOUNDATIONS-EXTENDED.md)** ⭐ NEW  | Deep dive: Typography, Colors, Spacing, Motion, Grid    | Extended specs   |
+| **[09-DESIGN-PATTERNS.md](./09-DESIGN-PATTERNS.md)** ⭐ NEW            | UX patterns (Filtering, Forms, Empty States, etc.)       | 12 patterns      |
+| **[10-FOUNDATIONS-EXTENDED.md](./10-FOUNDATIONS-EXTENDED.md)** ⭐ NEW  | Deep dive: Typography, Colors, Spacing, Motion, Grid     | Extended specs   |
 
-**Total Components Documented:** 58 production-ready components  
+**Total Components Documented:** 58 production-ready components
 **Total Patterns Documented:** 12 design patterns
 
 ## 🚀 Quick Navigation
 
 ### By User Need
 
-**Building Forms?** → [03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md) + [09-DESIGN-PATTERNS.md#5-forms-pattern](./09-DESIGN-PATTERNS.md#5-forms-pattern)  
-**Creating Buttons/Links?** → [02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)  
-**Displaying Products?** → [04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)  
-**Showing Notifications?** → [05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)  
-**Building Navigation?** → [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)  
-**E-commerce Features?** → [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md) + [09-DESIGN-PATTERNS.md#1-filtering-pattern](./09-DESIGN-PATTERNS.md#1-filtering-pattern)  
-**Page Layouts?** → [07-LAYOUT-PATTERNS.md](./07-LAYOUT-PATTERNS.md)  
-**Internal IKEA Apps?** → [08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md)  
-**Design Patterns?** → [09-DESIGN-PATTERNS.md](./09-DESIGN-PATTERNS.md) ⭐ NEW  
+**Building Forms?** → [03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md) + [09-DESIGN-PATTERNS.md#5-forms-pattern](./09-DESIGN-PATTERNS.md#5-forms-pattern)
+**Creating Buttons/Links?** → [02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)
+**Displaying Products?** → [04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)
+**Showing Notifications?** → [05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)
+**Building Navigation?** → [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)
+**E-commerce Features?** → [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md) + [09-DESIGN-PATTERNS.md#1-filtering-pattern](./09-DESIGN-PATTERNS.md#1-filtering-pattern)
+**Page Layouts?** → [07-LAYOUT-PATTERNS.md](./07-LAYOUT-PATTERNS.md)
+**Internal IKEA Apps?** → [08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md)
+**Design Patterns?** → [09-DESIGN-PATTERNS.md](./09-DESIGN-PATTERNS.md) ⭐ NEW
 **Design Foundations?** → [10-FOUNDATIONS-EXTENDED.md](./10-FOUNDATIONS-EXTENDED.md) ⭐ NEW
 
 ### By Component Name
