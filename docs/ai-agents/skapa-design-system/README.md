@@ -17,15 +17,15 @@ The documentation is organized into 9 focused modules:
 | ---------------------------------------------------------------------- | -------------------------------------------------------- | ---------------- |
 | **[00-QUICK-START-GUIDE.md](./00-QUICK-START-GUIDE.md)**               | Installation, quick reference, common patterns           | -                |
 | **[01-OVERVIEW-AND-FOUNDATIONS.md](./01-OVERVIEW-AND-FOUNDATIONS.md)** | Design tokens, typography, spacing, colors, grids, icons | -                |
-| **[02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)**               | Interactive elements                                     | 6                |
-| **[03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)**                 | Forms and data entry                                     | 10               |
-| **[04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)**             | Content display (Cards, Lists, Tables)                   | 7                |
+| **[02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)**               | Interactive elements                                     | 7                |
+| **[03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)**                 | Forms and data entry                                     | 11               |
+| **[04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)**             | Content display (Cards, Lists, Tables)                   | 10               |
 | **[05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)**           | User feedback (Toasts, Modals, Alerts)                   | 7                |
 | **[06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)** | Navigation, Media, Commerce                              | 14               |
 | **[07-LAYOUT-PATTERNS.md](./07-LAYOUT-PATTERNS.md)**                   | Page layouts and composition                             | -                |
 | **[08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md)**                     | Coworker Design System (internal apps)                   | 6                |
 
-**Total Components Documented:** 50+ production-ready components
+**Total Components Documented:** 55 production-ready components
 
 ## 🚀 Quick Navigation
 
@@ -43,7 +43,7 @@ The documentation is organized into 9 focused modules:
 ### By Component Name
 
 <details>
-<summary><strong>Action Components (6)</strong></summary>
+<summary><strong>Action Components (7)</strong></summary>
 
 - Button (Primary, Secondary, Tertiary, Danger, Emphasised)
 - Icon Button
@@ -51,10 +51,11 @@ The documentation is organized into 9 focused modules:
 - Hyperlink (Regular, Subtle)
 - Expanding Button
 - Jumbo Button
+- Pill (Text, Icon, Thumbnail, Badge variants)
 </details>
 
 <details>
-<summary><strong>Input Components (10)</strong></summary>
+<summary><strong>Input Components (11)</strong></summary>
 
 - Input Field
 - Text Area
@@ -66,10 +67,11 @@ The documentation is organized into 9 focused modules:
 - Combobox
 - Slider
 - Quantity Stepper
+- Choice (Small, Medium, Large variants)
 </details>
 
 <details>
-<summary><strong>Display Components (8)</strong></summary>
+<summary><strong>Display Components (10)</strong></summary>
 
 - Card (Regular, Simple, Themed)
 - Compact Card
@@ -79,6 +81,9 @@ The documentation is organized into 9 focused modules:
 - Table
 - Accordion
 - Expander
+- Divider (Horizontal, Vertical)
+- Tooltip (Tooltip, Toggletip variants)
+- Member Card (IKEA Family, Business, Network)
 </details>
 
 <details>
@@ -341,7 +346,16 @@ This documentation was created using:
 
 ### Version History
 
+- **v1.2** (2025-11-04): Added missing components for complete coverage
+
+  - Added Pill component to 02-ACTION-COMPONENTS.md
+  - Added Choice component to 03-INPUT-COMPONENTS.md
+  - Added Divider, Tooltip, and Member Card to 04-DISPLAY-COMPONENTS.md
+  - Total: 55 components documented (up from 50)
+  - Component coverage: ~89% of available Skapa components
+
 - **v1.1** (2025-11-04): Separated Layout and CWDS into dedicated files
+
   - Split 07-LAYOUT-AND-CWDS.md into two files for better organization
   - 07-LAYOUT-PATTERNS.md: Layout patterns and page templates
   - 08-CWDS-SUBSYSTEM.md: Coworker Design System components

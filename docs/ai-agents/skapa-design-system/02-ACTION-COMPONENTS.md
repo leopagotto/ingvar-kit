@@ -1020,6 +1020,322 @@ a:focus-visible {
 
 ## Quick Reference: When to Use Which Action Component
 
+---
+
+## 7. Pill
+
+### Overview
+
+**Purpose:** A button that represents an attribute or unit of data (nouns/adjectives, NOT actions).
+
+**Platforms:** Web, Android, iOS
+**Last Updated:** May 14, 2025
+
+**Key Distinction:**
+
+- **Pills = DATA** (nouns, adjectives): "Kitchen", "Soft", "Blue", "Outdoor"
+- **Buttons = ACTIONS** (verbs): "Shop", "Apply", "Continue", "Add to cart"
+
+### Anatomy
+
+```
+┌───────────────┐
+│ [🖼️] Label   │ ← Pill with optional icon/thumbnail
+└───────────────┘
+```
+
+### Variants
+
+#### 1. Text Pill
+
+Basic label representing categories or attributes
+
+```jsx
+<Pill>Kitchens</Pill>
+<Pill>Bathrooms</Pill>
+<Pill>Outdoors</Pill>
+```
+
+#### 2. Icon Pill
+
+Leading or trailing icons with label
+
+```jsx
+{
+  /* Leading icon */
+}
+<Pill icon="delivery" iconPosition="leading">
+  Delivery
+</Pill>;
+
+{
+  /* Trailing icon */
+}
+<Pill icon="clipboard" iconPosition="trailing">
+  Pre-order
+</Pill>;
+```
+
+#### 3. Thumbnail Pill
+
+Image thumbnail with label (profiles, categories)
+
+```jsx
+<Pill thumbnail="/images/user-avatar.jpg">
+  Sarah Thompson
+</Pill>
+
+<Pill thumbnail="/images/category-bedroom.jpg">
+  Bedroom
+</Pill>
+```
+
+#### 4. Badge Pill
+
+With quantity badge indicator
+
+```jsx
+<Pill badge={3}>
+  Kitchen appliances
+</Pill>
+
+<Pill badge={12}>
+  Outdoor furniture
+</Pill>
+```
+
+### Sizes
+
+**Medium:** Default, for larger screens (kiosks)
+**Small:** Standard web and mobile
+**Extra Small:** Dismissible filter pills (trailing X icon only)
+
+```jsx
+<Pill size="medium">Category</Pill>
+<Pill size="small">Category</Pill>
+<Pill size="xs" dismissible onDismiss={() => {}}>Filter</Pill>
+```
+
+### States
+
+- **Default:** Unselected, interactive
+- **Selected:** Active state (e.g., applied filter)
+- **Disabled:** Non-interactive, grayed out
+- **Loading:** Skeleton state while loading
+
+```jsx
+<Pill>Default</Pill>
+<Pill selected>Selected</Pill>
+<Pill disabled>Disabled</Pill>
+```
+
+### Behaviors
+
+#### Fluid Width Container (Horizontal Scroll)
+
+Pills overflow into horizontal scrollable carousel
+
+```jsx
+<PillGroup scrollable>
+  <Pill>Kitchen</Pill>
+  <Pill>Bedroom</Pill>
+  <Pill>Living room</Pill>
+  {/* ...20 more pills */}
+</PillGroup>
+```
+
+#### Fixed Width Container (Multi-Row Wrap)
+
+Pills wrap to multiple rows with "+N more" overflow button
+
+```jsx
+<PillGroup wrap maxVisible={5}>
+  <Pill>Kitchen</Pill>
+  <Pill>Bedroom</Pill>
+  <Pill>Living room</Pill>
+  <Pill>Bathroom</Pill>
+  <Pill>Outdoor</Pill>
+  {/* +15 more collapsed, shown in modal */}
+</PillGroup>
+```
+
+### Usage Patterns
+
+#### Pills as Selection (Checkbox Alternative)
+
+Use for quizzes, preferences, attribute selection
+
+```jsx
+<fieldset>
+  <legend>Select your room preferences</legend>
+  <PillGroup type="checkbox" value={selectedRooms} onChange={setSelectedRooms}>
+    <Pill value="kitchen">Kitchen</Pill>
+    <Pill value="bedroom">Bedroom</Pill>
+    <Pill value="living">Living room</Pill>
+  </PillGroup>
+</fieldset>
+```
+
+#### Pills as Input (Chatbot Suggestions)
+
+Tap to populate input field
+
+```jsx
+<Stack>
+  <TextInput placeholder="What are you looking for?" />
+  <PillGroup onPillClick={handleSuggestion}>
+    <Pill>Sofas</Pill>
+    <Pill>Dining tables</Pill>
+    <Pill>Bed frames</Pill>
+  </PillGroup>
+</Stack>
+```
+
+#### Dismissible Pills (Active Filters)
+
+Remove applied filters with X icon
+
+```jsx
+<PillGroup>
+  {activeFilters.map((filter) => (
+    <Pill
+      key={filter.id}
+      size="xs"
+      dismissible
+      onDismiss={() => removeFilter(filter.id)}
+    >
+      {filter.label}
+    </Pill>
+  ))}
+</PillGroup>
+```
+
+### Badge Integration
+
+**Rules for Pills with Badges:**
+
+- Use only Badge **Small, Black, Label Only** variant
+- Maximum value: 99 (display as "+99" for larger numbers)
+- Position: Trailing edge of pill
+
+```jsx
+<Pill badge={3}>Kitchen items</Pill>
+<Pill badge={99}>Popular products</Pill>
+<Pill badge={150}>Top sellers</Pill> {/* Displays "+99" */}
+```
+
+### Usage Guidelines
+
+#### ✅ DO:
+
+- Use pills to represent DATA (nouns, categories, attributes)
+- Use for filtering, tagging, categorization
+- Keep labels short (1-3 words)
+- Use auto-width for natural sizing
+- Provide clear selected/unselected states
+
+```jsx
+{
+  /* ✅ GOOD: Data representation */
+}
+<PillGroup>
+  <Pill>Modern</Pill>
+  <Pill>Traditional</Pill>
+  <Pill>Minimalist</Pill>
+</PillGroup>;
+
+{
+  /* ✅ GOOD: Active filters */
+}
+<Stack>
+  <Text>Active filters:</Text>
+  <PillGroup>
+    <Pill dismissible>Price: $0-$100</Pill>
+    <Pill dismissible>Color: Blue</Pill>
+  </PillGroup>
+</Stack>;
+```
+
+#### ❌ DON'T:
+
+- Use pills for ACTIONS (use Buttons instead)
+- Use dismissible pills without X icon
+- Exceed badge count of 99
+- Use Medium size on mobile (use Small)
+- Put long text in pills (keep concise)
+
+```jsx
+{/* ❌ BAD: Action words (use Button instead) */}
+<Pill>Add to cart</Pill>
+<Pill>Buy now</Pill>
+<Pill>Continue shopping</Pill>
+
+{/* ✅ GOOD: Use Button for actions */}
+<Button>Add to cart</Button>
+```
+
+### Accessibility
+
+**Keyboard Interactions:**
+
+```jsx
+<Pill
+  role="button"
+  tabIndex={0}
+  onKeyDown={(e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      handlePillClick();
+    }
+  }}
+>
+  Kitchen
+</Pill>
+```
+
+**ARIA Attributes:**
+
+```jsx
+{
+  /* Selection pattern */
+}
+<div role="group" aria-label="Room preferences">
+  <Pill role="checkbox" aria-checked={isSelected}>
+    Kitchen
+  </Pill>
+</div>;
+
+{
+  /* Dismissible pattern */
+}
+<Pill>
+  <span>Active filter</span>
+  <button aria-label="Remove filter">×</button>
+</Pill>;
+```
+
+**Focus State:** 3px blue outline, 2px offset
+
+### Pill vs Button Comparison
+
+| Aspect          | Pill                            | Button                            |
+| --------------- | ------------------------------- | --------------------------------- |
+| **Represents**  | Data (nouns/adjectives)         | Actions (verbs)                   |
+| **Examples**    | "Kitchen", "Blue", "Modern"     | "Add to cart", "Continue", "Shop" |
+| **Primary Use** | Filtering, categorization, tags | Triggering actions                |
+| **Selection**   | Can be multi-select             | Typically single action           |
+| **Dismissible** | Yes (filters)                   | No                                |
+| **Badge**       | Yes (quantities)                | No                                |
+
+### Internationalization
+
+- **RTL:** Pill labels are center-aligned, no visual difference
+- **Icon position:** Leading/trailing flip in RTL
+- **Dismissible X:** Moves to leading edge in RTL
+
+---
+
+## Quick Reference: When to Use Which Action Component
+
 ```javascript
 actionComponents: {
   Button: {
@@ -1046,6 +1362,13 @@ actionComponents: {
     regular: "Body text links (always underlined)",
     subtle: "Navigation lists, footers, menus (NOT body text)",
     rule: "Subtle variant violates WCAG 2.2 F73 if used in body text"
+  },
+
+  Pill: {
+    useCase: "Represent DATA (nouns, attributes, categories)",
+    patterns: ["filtering", "tagging", "selection", "chatbot suggestions"],
+    rule: "Pills = data, Buttons = actions",
+    dismissible: "Use for active filters with X icon"
   }
 }
 ```
@@ -1053,3 +1376,10 @@ actionComponents: {
 ---
 
 **Next:** [03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md) - Forms, Text Fields, and Data Entry
+
+```
+
+---
+
+**Next:** [03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md) - Forms, Text Fields, and Data Entry
+```

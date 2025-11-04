@@ -858,4 +858,297 @@ stepperFeatures: {
 
 ---
 
+## 11. Choice
+
+### Overview
+
+**Purpose:** Enhanced selection component for choosing between options with rich visual content (alternative to Radio Button Group).
+
+**Platforms:** Web, Android, iOS
+**Last Updated:** May 14, 2025
+
+**When to use Choice vs Radio:**
+
+- **Choice:** When options need thumbnails, descriptions, or expanding content
+- **Radio Button:** When options are simple text labels only
+
+### Anatomy
+
+```
+┌───────────────────────────────────┐
+│ [🖼️] Title                       │ ← Optional thumbnail + Title
+│     Description text              │ ← Optional description
+│     Additional content area       │ ← Optional expandable content
+└───────────────────────────────────┘
+```
+
+### Variants
+
+#### Small
+
+Basic choice with title only (use when Radio Button Group is not an option)
+
+```jsx
+<ChoiceGroup value={color} onChange={setColor}>
+  <Choice value="birch" size="small">
+    Birch
+  </Choice>
+  <Choice value="black" size="small">
+    Black
+  </Choice>
+  <Choice value="bright-blue" size="small">
+    Bright blue
+  </Choice>
+</ChoiceGroup>
+```
+
+#### Medium
+
+With title and optional description
+
+```jsx
+<ChoiceGroup value={meal} onChange={setMeal}>
+  <Choice value="spaghetti" size="medium" thumbnail="/images/spaghetti.jpg">
+    <Choice.Title>Spaghetti</Choice.Title>
+    <Choice.Description>250g</Choice.Description>
+  </Choice>
+
+  <Choice value="pizza" size="medium" thumbnail="/images/pizza.jpg">
+    <Choice.Title>Pizza</Choice.Title>
+    <Choice.Description>300g</Choice.Description>
+  </Choice>
+</ChoiceGroup>
+```
+
+#### Large
+
+With thumbnail, title, description, and expandable content
+
+```jsx
+<ChoiceGroup value={material} onChange={setMaterial}>
+  <Choice value="solid-pine" size="large" thumbnail="/images/pine-texture.jpg">
+    <Choice.Title>Solid pine</Choice.Title>
+    <Choice.Description>Resistant with natural variations</Choice.Description>
+    <Choice.ExpandedContent>
+      Solid pine is very resistant and offers natural variations in grain, color
+      and texture that give each element its unique appearance.
+    </Choice.ExpandedContent>
+  </Choice>
+</ChoiceGroup>
+```
+
+### States
+
+- **Default:** Unselected, interactive
+- **Focused:** Keyboard focus visible
+- **Selected:** Active choice highlighted
+- **Disabled:** Non-interactive, grayed out
+- **Expanded:** (Large size only) Additional content visible
+
+```jsx
+<Choice selected>Selected choice</Choice>
+<Choice disabled>Disabled choice</Choice>
+<Choice focused>Focused choice</Choice>
+```
+
+### Behaviors
+
+#### Selection
+
+- **Single selection:** Use `<ChoiceGroup>` wrapper (radio behavior)
+- **Click anywhere:** Entire choice area is interactive
+- **Visual feedback:** Selected state clearly indicated
+
+#### Expanding Content (Large variant)
+
+```jsx
+<Choice size="large" onExpand={() => console.log("Choice expanded")}>
+  <Choice.Title>Option with details</Choice.Title>
+  <Choice.ExpandedContent>
+    Text layer to add content to a selected and expanded Choice item.
+  </Choice.ExpandedContent>
+</Choice>
+```
+
+### Usage Guidelines
+
+#### ✅ DO:
+
+- Present at least 2 choices (minimum)
+- Keep information concise
+- Be consistent in size and layout within a group
+- Use Small variant for title-only choices
+- Show disabled choices to maintain context
+- Use missing image placeholder to maintain alignment
+
+```jsx
+{
+  /* ✅ GOOD: Consistent choices with thumbnails */
+}
+<ChoiceGroup value={product} onChange={setProduct}>
+  <Choice value="spaghetti" thumbnail="/images/spaghetti.jpg">
+    <Choice.Title>Spaghetti</Choice.Title>
+    <Choice.Description>250g</Choice.Description>
+  </Choice>
+
+  <Choice value="pizza" thumbnail="/images/pizza.jpg">
+    <Choice.Title>Pizza</Choice.Title>
+    <Choice.Description>300g</Choice.Description>
+  </Choice>
+
+  <Choice
+    value="soup"
+    thumbnail={null} // Missing image placeholder used
+  >
+    <Choice.Title>Soup</Choice.Title>
+    <Choice.Description>320g</Choice.Description>
+  </Choice>
+</ChoiceGroup>;
+```
+
+#### ❌ DON'T:
+
+- Show a single choice (confusing UX - not a choice)
+- Mix different sizes in the same group
+- Use Medium/Large variants with title-only content (wastes space)
+- Put lengthy explanations inside choices
+- Use inconsistent leading items (thumbnails)
+
+```jsx
+{
+  /* ❌ BAD: Single choice (no alternatives) */
+}
+<ChoiceGroup>
+  <Choice>Only option</Choice>
+</ChoiceGroup>;
+
+{
+  /* ❌ BAD: Mixed sizes */
+}
+<ChoiceGroup>
+  <Choice size="small">Option 1</Choice>
+  <Choice size="large">Option 2</Choice> {/* Inconsistent */}
+</ChoiceGroup>;
+
+{
+  /* ❌ BAD: Long explanation inside choice */
+}
+<Choice size="medium">
+  <Choice.Title>Solid pine</Choice.Title>
+  <Choice.Description>
+    Solid pine is very resistant and offers natural variations...
+    {/* Too long - move outside choice group */}
+  </Choice.Description>
+</Choice>;
+```
+
+### When to Use Small Variant
+
+**Use Small variant when:**
+
+- Options are title-only (no descriptions/thumbnails)
+- Radio Button Group is not appropriate
+- Need consistent spacing without empty areas
+
+**Why:** Medium and Large variants with title-only content create excessive empty space due to minimum height requirements.
+
+```jsx
+{
+  /* ✅ GOOD: Small variant for title-only */
+}
+<ChoiceGroup value={color} onChange={setColor}>
+  <Choice size="small">Birch</Choice>
+  <Choice size="small">Black</Choice>
+  <Choice size="small">Bright blue</Choice>
+</ChoiceGroup>;
+
+{
+  /* ❌ BAD: Large variant wastes space */
+}
+<ChoiceGroup value={color} onChange={setColor}>
+  <Choice size="large">Birch</Choice> {/* Lots of empty space */}
+  <Choice size="large">Black</Choice>
+</ChoiceGroup>;
+```
+
+### Custom Choice Components
+
+**Extending choice language:** You can create custom choice components following Skapa visual language
+
+```jsx
+{
+  /* Custom color picker inspired by Choice */
+}
+<ChoiceGroup value={color} onChange={setColor}>
+  <ColorChoice value="green" colorHex="#00B341" />
+  <ColorChoice value="blue" colorHex="#0058A3" />
+  <ColorChoice value="yellow" colorHex="#FFDB00" />
+</ChoiceGroup>;
+
+{
+  /* Custom capacity selector */
+}
+<ChoiceGroup value={capacity} onChange={setCapacity}>
+  <CapacityChoice value="power" label="Power use" price="€80" />
+  <CapacityChoice value="professional" label="Professional use" price="€150" />
+  <CapacityChoice value="extreme" label="Extreme use" price="€250" />
+</ChoiceGroup>;
+```
+
+**Important:** Follow Choice component margins and Skapa visual language. Use the custom content variant as a base.
+
+### Accessibility
+
+**Keyboard Interactions:**
+
+| Key             | Action                       |
+| --------------- | ---------------------------- |
+| `Tab`           | Navigate between choices     |
+| `Arrow Up/Down` | Navigate within choice group |
+| `Enter`/`Space` | Select focused choice        |
+
+**ARIA Attributes:**
+
+```jsx
+<div role="radiogroup" aria-label="Choose colour">
+  <div
+    role="radio"
+    aria-checked={isSelected}
+    tabIndex={isSelected ? 0 : -1}
+    onClick={handleSelect}
+  >
+    <span>Birch</span>
+  </div>
+</div>
+```
+
+**Focus Management:**
+
+- First/selected choice gets `tabIndex={0}`
+- Other choices get `tabIndex={-1}`
+- Arrow keys navigate within group
+
+### Internationalization
+
+**RTL Languages:**
+
+- Choices and Choice Groups flip horizontally
+- Thumbnails move to right side
+- Text alignment flips to right
+
+```jsx
+{
+  /* RTL example */
+}
+<ChoiceGroup dir="rtl">
+  <Choice thumbnail="/image.jpg">اختيار 1</Choice>
+</ChoiceGroup>;
+```
+
+---
+
 **Next:** [04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md) - Cards, Lists, Tables, and Content Display
+
+```
+
+```
