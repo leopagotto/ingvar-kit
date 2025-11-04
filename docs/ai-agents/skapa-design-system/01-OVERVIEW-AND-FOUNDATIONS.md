@@ -614,6 +614,236 @@ function App() {
 
 ---
 
+## 7. Text Component (React)
+
+### Overview
+
+**Purpose:** Coded component that generates text containers with Skapa Typography 2.0 styles and recommended colors.
+
+**Platform:** React only (corresponds to Figma Text Styles)
+**Last Updated:** May 14, 2025
+
+### Usage
+
+The Text component makes it easy to apply Skapa's typography system consistently in React applications.
+
+```jsx
+import { Text } from '@ingka/skapa-react';
+
+{/* Body text variants */}
+<Text variant="body-large">Simple changes for a more sustainable life</Text>
+<Text variant="body-medium">Standard body text (14px/150%)</Text>
+<Text variant="body-small">Small text for captions (12px/180%)</Text>
+
+{/* Heading variants */}
+<Text variant="heading-xl">IKEA is renowned for innovation</Text>
+<Text variant="heading-large">Section heading</Text>
+<Text variant="heading-medium">Subsection heading</Text>
+<Text variant="heading-small">Card heading</Text>
+```
+
+### Typography Scale
+
+**Body Variants:**
+
+```jsx
+<Text variant="body-large">   {/* 16px / 150% line-height */}
+  It's easier and more affordable than ever to make your home
+  more sustainable.
+</Text>
+
+<Text variant="body-medium">  {/* 14px / 150% line-height (default) */}
+  Standard body text for paragraphs and content.
+</Text>
+
+<Text variant="body-small">   {/* 12px / 180% line-height */}
+  Fine print, captions, and metadata.
+</Text>
+```
+
+**Heading Variants:**
+
+```jsx
+<Text variant="heading-xl" as="h1">     {/* 32px / 125% */}
+  Page title
+</Text>
+
+<Text variant="heading-large" as="h2">   {/* 24px / 133% */}
+  Section heading
+</Text>
+
+<Text variant="heading-medium" as="h3">  {/* 20px / 140% */}
+  Subsection heading
+</Text>
+
+<Text variant="heading-small" as="h4">   {/* 16px / 150% */}
+  Card or component heading
+</Text>
+```
+
+### Semantic HTML
+
+Use the `as` prop to control the HTML element while maintaining visual style:
+
+```jsx
+{
+  /* Visual style: heading-large, Semantic element: h2 */
+}
+<Text variant="heading-large" as="h2">
+  Section Title
+</Text>;
+
+{
+  /* Visual style: body-medium, Semantic element: span */
+}
+<Text variant="body-medium" as="span">
+  Inline text
+</Text>;
+
+{
+  /* Visual style: body-small, Semantic element: p */
+}
+<Text variant="body-small" as="p">
+  Caption text
+</Text>;
+```
+
+### Color Variants
+
+Apply recommended Skapa colors:
+
+```jsx
+{/* Default: Primary text color */}
+<Text>Default text color</Text>
+
+{/* Secondary/muted text */}
+<Text color="secondary">
+  Secondary information
+</Text>
+
+{/* Semantic colors */}
+<Text color="success">Operation successful</Text>
+<Text color="error">Error message</Text>
+<Text color="warning">Warning text</Text>
+
+{/* Brand colors */}
+<Text color="blue-ikea">IKEA blue</Text>
+<Text color="yellow-ikea">IKEA yellow</Text>
+```
+
+### Relationship with Figma
+
+**Skapa Foundations in Figma:**
+
+- Text styles defined in "Skapa Foundations"
+- Base font size settings
+- Type scale specifications
+
+**Corresponding React Component:**
+
+```jsx
+// Figma: "Body M" text style
+<Text variant="body-medium">Content</Text>
+
+// Figma: "Heading XL" text style
+<Text variant="heading-xl">Title</Text>
+
+// Figma: "Body S" text style with custom color
+<Text variant="body-small" color="secondary">
+  Caption
+</Text>
+```
+
+### Typography Best Practices
+
+#### ✅ DO:
+
+- Use Text component for consistent typography
+- Match visual hierarchy with semantic HTML (`as` prop)
+- Use appropriate variants for content type
+- Maintain WCAG contrast ratios
+
+```jsx
+{
+  /* ✅ GOOD: Proper hierarchy */
+}
+<article>
+  <Text variant="heading-xl" as="h1">
+    Article Title
+  </Text>
+  <Text variant="heading-large" as="h2">
+    Section Heading
+  </Text>
+  <Text variant="body-medium" as="p">
+    Paragraph content with proper semantics.
+  </Text>
+</article>;
+```
+
+#### ❌ DON'T:
+
+- Hardcode font sizes or line heights
+- Skip heading levels (h1 → h3)
+- Use headings for visual styling only
+- Override Text component styles arbitrarily
+
+```jsx
+{/* ❌ BAD: Hardcoded styles */}
+<p style={{ fontSize: '14px', lineHeight: '1.5' }}>
+  Text
+</p>
+
+{/* ❌ BAD: Wrong semantic order */}
+<Text variant="heading-xl" as="h1">Title</Text>
+<Text variant="heading-small" as="h4">Skipped h2, h3</Text>
+```
+
+### Accessibility
+
+**Semantic HTML:** Always use appropriate `as` prop for proper document structure
+
+**Color Contrast:** Text component applies colors that meet WCAG 2.1 AA standards
+
+**Screen Readers:** Proper heading hierarchy helps screen reader navigation
+
+```jsx
+{
+  /* Accessible heading structure */
+}
+<main>
+  <Text variant="heading-xl" as="h1">
+    Main Title
+  </Text>
+  <section>
+    <Text variant="heading-large" as="h2">
+      Section 1
+    </Text>
+    <Text variant="body-medium" as="p">
+      Content...
+    </Text>
+  </section>
+  <section>
+    <Text variant="heading-large" as="h2">
+      Section 2
+    </Text>
+    <Text variant="heading-medium" as="h3">
+      Subsection
+    </Text>
+    <Text variant="body-medium" as="p">
+      Content...
+    </Text>
+  </section>
+</main>;
+```
+
+### Further Reading
+
+- **Typography showcase:** Official Skapa typography examples
+- **Our typography system:** Deep dive into type system
+- **Using typography in Figma:** Designer guide
+
+---
+
 ## Additional Resources
 
 - **Official Documentation:** https://skapa.ikea.net
@@ -624,3 +854,20 @@ function App() {
 ---
 
 **Next:** [02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md) - Buttons, Links, and Interactive Elements
+
+````
+```
+
+---
+
+## Additional Resources
+
+- **Official Documentation:** https://skapa.ikea.net
+- **Figma Library:** Available to IKEA designers
+- **GitHub:** Internal IKEA repositories
+- **Support:** Contact IKEA design team
+
+---
+
+**Next:** [02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md) - Buttons, Links, and Interactive Elements
+````

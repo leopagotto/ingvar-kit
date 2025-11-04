@@ -16,16 +16,16 @@ The documentation is organized into 9 focused modules:
 | File                                                                   | Coverage                                                 | Components Count |
 | ---------------------------------------------------------------------- | -------------------------------------------------------- | ---------------- |
 | **[00-QUICK-START-GUIDE.md](./00-QUICK-START-GUIDE.md)**               | Installation, quick reference, common patterns           | -                |
-| **[01-OVERVIEW-AND-FOUNDATIONS.md](./01-OVERVIEW-AND-FOUNDATIONS.md)** | Design tokens, typography, spacing, colors, grids, icons | -                |
+| **[01-OVERVIEW-AND-FOUNDATIONS.md](./01-OVERVIEW-AND-FOUNDATIONS.md)** | Design tokens, typography, spacing, colors, grids, icons | 1                |
 | **[02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)**               | Interactive elements                                     | 7                |
-| **[03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)**                 | Forms and data entry                                     | 11               |
+| **[03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)**                 | Forms and data entry                                     | 12               |
 | **[04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)**             | Content display (Cards, Lists, Tables)                   | 10               |
 | **[05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)**           | User feedback (Toasts, Modals, Alerts)                   | 7                |
 | **[06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)** | Navigation, Media, Commerce                              | 14               |
 | **[07-LAYOUT-PATTERNS.md](./07-LAYOUT-PATTERNS.md)**                   | Page layouts and composition                             | -                |
 | **[08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md)**                     | Coworker Design System (internal apps)                   | 6                |
 
-**Total Components Documented:** 55 production-ready components
+**Total Components Documented:** 57 production-ready components
 
 ## 🚀 Quick Navigation
 
@@ -55,7 +55,7 @@ The documentation is organized into 9 focused modules:
 </details>
 
 <details>
-<summary><strong>Input Components (11)</strong></summary>
+<summary><strong>Input Components (12)</strong></summary>
 
 - Input Field
 - Text Area
@@ -68,6 +68,7 @@ The documentation is organized into 9 focused modules:
 - Slider
 - Quantity Stepper
 - Choice (Small, Medium, Large variants)
+- Listbox (Single/Multi-select, with Menu Items or List View Items)
 </details>
 
 <details>
@@ -345,6 +346,14 @@ This documentation was created using:
 - **Skapa Version:** 2025 (components updated through August 2025)
 
 ### Version History
+
+- **v1.3** (2025-11-04): Added Listbox and Text components for near-complete coverage
+
+  - Added Listbox component to 03-INPUT-COMPONENTS.md (dropdown/selection box)
+  - Added Text component to 01-OVERVIEW-AND-FOUNDATIONS.md (React typography wrapper)
+  - Total: 57 components documented (up from 55)
+  - Component coverage: ~92% of available Skapa components
+  - Remaining: Icon Pill (likely duplicate), Endorsement Label, Simple Video (WIP), Filtering (pattern not component)
 
 - **v1.2** (2025-11-04): Added missing components for complete coverage
 

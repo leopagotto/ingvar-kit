@@ -1147,6 +1147,389 @@ With thumbnail, title, description, and expandable content
 
 ---
 
+## 12. Listbox
+
+### Overview
+
+**Purpose:** A floating dropdown box populated with selection controls, actions, or navigation items.
+
+**Platforms:** Web, Android, iOS
+**Last Updated:** May 14, 2025
+
+**Common Use Cases:**
+
+- Dropdown selections (triggered by Select/Combobox)
+- Filter menus (triggered by Pill buttons)
+- Action menus (triggered by Icon buttons)
+- Navigation lists
+
+### Anatomy
+
+```
+┌─────────────────────────┐
+│ Menu Item - Option 1  ✓ │ ← Menu Items
+│ Menu Item - Option 2    │
+│ Divider                 │ ← Optional divider
+│ Menu Item - Option 3    │
+├─────────────────────────┤
+│ Cancel    |    Apply    │ ← Optional footer
+└─────────────────────────┘
+```
+
+### Variants
+
+#### Single Select
+
+Only one Menu Item can be selected
+
+```jsx
+<Listbox onSelect={handleSelect}>
+  <MenuItem value="netherlands">Netherlands</MenuItem>
+  <MenuItem value="spain">Spain</MenuItem>
+  <MenuItem value="sweden" selected>
+    Sweden ✓
+  </MenuItem>
+</Listbox>
+```
+
+#### Multi-Select
+
+Multiple Menu Items can be selected
+
+```jsx
+<Listbox multiple value={selected} onChange={setSelected}>
+  <MenuItem value="base-cabinet">Base cabinet 32 ✓</MenuItem>
+  <MenuItem value="drawers">Drawers 12 ✓</MenuItem>
+  <MenuItem value="wall-cabinet">Wall cabinet</MenuItem>
+</Listbox>
+```
+
+#### With Footer (Single Button)
+
+```jsx
+<Listbox>
+  <MenuItem value="cabinet">Base cabinet 32</MenuItem>
+  <MenuItem value="drawers">Drawers 12</MenuItem>
+  <MenuItem value="wall">Wall cabinet</MenuItem>
+  <Listbox.Footer>
+    <Button>Apply</Button>
+  </Listbox.Footer>
+</Listbox>
+```
+
+#### With Footer (Two Buttons)
+
+```jsx
+<Listbox>
+  <MenuItem value="cabinet">Base cabinet 32</MenuItem>
+  <MenuItem value="drawers">Drawers 12</MenuItem>
+  <Listbox.Footer>
+    <Button variant="secondary">Cancel</Button>
+    <Button variant="primary">Apply</Button>
+  </Listbox.Footer>
+</Listbox>
+```
+
+#### Grouped Content
+
+```jsx
+<Listbox>
+  <Listbox.Group label="Bedroom">
+    <MenuItem value="beds">Beds</MenuItem>
+    <MenuItem value="mattresses">Mattresses</MenuItem>
+    <MenuItem value="wall-cabinet">Wall cabinet</MenuItem>
+  </Listbox.Group>
+
+  <Listbox.Divider />
+
+  <Listbox.Group label="Living room">
+    <MenuItem value="sofa-beds">Sofa beds</MenuItem>
+    <MenuItem value="sofas">Sofas</MenuItem>
+    <MenuItem value="armchairs">Armchairs & chaise longues</MenuItem>
+  </Listbox.Group>
+</Listbox>
+```
+
+#### With List View Items (Actions/Navigation)
+
+```jsx
+<Listbox>
+  <ListViewItem icon="add" onClick={addProduct}>
+    Add a product by article number
+  </ListViewItem>
+  <ListViewItem icon="wishlist" onClick={addToWishlist}>
+    Add (2) products to wishlist
+  </ListViewItem>
+  <ListViewItem icon="trash" onClick={emptyBag}>
+    Empty shopping bag
+  </ListViewItem>
+  <ListViewItem icon="share" onClick={shareItems}>
+    Share these items
+  </ListViewItem>
+</Listbox>
+```
+
+### Behaviors
+
+#### Selection Triggers
+
+**Combobox (Forms):**
+
+```jsx
+<Combobox label="Choose country" value={country} onChange={setCountry}>
+  <Listbox>
+    <MenuItem value="sweden">Sweden</MenuItem>
+    <MenuItem value="netherlands">Netherlands</MenuItem>
+    <MenuItem value="spain">Spain</MenuItem>
+  </Listbox>
+</Combobox>
+```
+
+**Pill Button (Filters):**
+
+```jsx
+<Pill onClick={toggleListbox}>Material ▾</Pill>;
+{
+  isOpen && (
+    <Listbox onClose={toggleListbox}>
+      <MenuItem value="metal">Metal</MenuItem>
+      <MenuItem value="glass">Glass</MenuItem>
+      <MenuItem value="textile">Textile</MenuItem>
+    </Listbox>
+  );
+}
+```
+
+**Icon Button (Actions):**
+
+```jsx
+<IconButton
+  icon="shopping-bag"
+  aria-label="Shopping bag"
+  onClick={toggleListbox}
+/>;
+{
+  isOpen && (
+    <Listbox onClose={toggleListbox}>
+      <ListViewItem icon="add">Add product</ListViewItem>
+      <ListViewItem icon="wishlist">Add to wishlist</ListViewItem>
+      <ListViewItem icon="trash">Empty bag</ListViewItem>
+    </Listbox>
+  );
+}
+```
+
+#### Filtering with Pills
+
+```jsx
+{
+  /* Filter selection */
+}
+<PillGroup>
+  <Pill onClick={toggleFilters}>Price ▾</Pill>
+  <Pill onClick={toggleColorFilters}>Color ▾</Pill>
+  <Pill onClick={toggleSizeFilters}>Size ▾</Pill>
+</PillGroup>;
+
+{
+  /* Active filters (dismissible) */
+}
+<PillGroup>
+  <Pill size="xs" dismissible onDismiss={() => removeFilter("yellow")}>
+    Yellow ×
+  </Pill>
+  <Pill size="xs" dismissible onDismiss={() => removeFilter("blue")}>
+    Blue ×
+  </Pill>
+  <Pill size="xs" dismissible onDismiss={() => removeFilter("200cm")}>
+    200+cm ×
+  </Pill>
+</PillGroup>;
+
+{
+  /* Listbox for price filter */
+}
+{
+  showPriceFilter && (
+    <Listbox multiple value={priceRanges} onChange={setPriceRanges}>
+      <MenuItem value="0-199">€0 - 199</MenuItem>
+      <MenuItem value="200-299">€200 - 299</MenuItem>
+      <MenuItem value="300-499">€300 - 499</MenuItem>
+    </Listbox>
+  );
+}
+```
+
+### States
+
+**Container States:**
+
+- Listbox itself has no states (it's a container)
+- Inherits states from child components
+
+**Inherited States (from Menu Items or List View Items):**
+
+- **Default:** Unselected, interactive
+- **Hover:** Mouse over item
+- **Selected:** Active selection (checkmark shown)
+- **Disabled:** Non-interactive, grayed out
+
+```jsx
+<Listbox>
+  <MenuItem>Default</MenuItem>
+  <MenuItem hover>Hover</MenuItem>
+  <MenuItem selected>Selected ✓</MenuItem>
+  <MenuItem disabled>Disabled</MenuItem>
+</Listbox>
+```
+
+### Usage Guidelines
+
+#### ✅ DO:
+
+- Display 2 or more items minimum
+- Use Menu Item for selections
+- Use List View Item for actions/navigation
+- Show clear, simple actions
+- Group related items with headers
+- Use footer buttons when confirmation needed
+
+```jsx
+{
+  /* ✅ GOOD: Clear action menu */
+}
+<Listbox>
+  <ListViewItem icon="add">Add product by article number</ListViewItem>
+  <ListViewItem icon="wishlist">Add (2) products to wishlist</ListViewItem>
+  <ListViewItem icon="trash">Empty shopping bag</ListViewItem>
+  <ListViewItem icon="share">Share these items</ListViewItem>
+</Listbox>;
+
+{
+  /* ✅ GOOD: Grouped navigation */
+}
+<Listbox>
+  <Listbox.Group label="Bedroom">
+    <MenuItem>Beds & Bed frames →</MenuItem>
+    <MenuItem>Mattresses →</MenuItem>
+    <MenuItem>Wardrobes →</MenuItem>
+  </Listbox.Group>
+</Listbox>;
+```
+
+#### ❌ DON'T:
+
+- Show only 1 item (not a choice)
+- Hide primary actions in Listbox
+- Use for complex navigation patterns
+- Use for forms or text input
+- Mix Menu Items with actions (use List View Items instead)
+
+```jsx
+{/* ❌ BAD: Only 1 option */}
+<Listbox>
+  <MenuItem>Only option</MenuItem>
+</Listbox>
+
+{/* ❌ BAD: Complex form in Listbox */}
+<Listbox>
+  <InputField label="First name" />
+  <InputField label="Last name" />
+  <Button>Submit</Button>
+</Listbox>
+
+{/* ❌ BAD: Primary action hidden */}
+<IconButton icon="more" />
+<Listbox>
+  <MenuItem>Main action</MenuItem> {/* Should be a button */}
+</Listbox>
+```
+
+### Component Relationships
+
+**Menu Item vs List View Item:**
+
+| Aspect       | Menu Item                                  | List View Item      |
+| ------------ | ------------------------------------------ | ------------------- |
+| **Use**      | Selections (single/multi)                  | Actions, Navigation |
+| **Platform** | Web: Inside Listbox<br/>Mobile: Standalone | All platforms       |
+| **Visual**   | Checkmark on selection                     | Icon + action label |
+| **Example**  | "Sweden ✓"                                 | "Add to wishlist →" |
+
+```jsx
+{
+  /* Menu Item - Selection */
+}
+<Listbox>
+  <MenuItem value="option1" selected>
+    Option 1 ✓
+  </MenuItem>
+  <MenuItem value="option2">Option 2</MenuItem>
+</Listbox>;
+
+{
+  /* List View Item - Actions */
+}
+<Listbox>
+  <ListViewItem icon="add" onClick={handleAdd}>
+    Add product
+  </ListViewItem>
+  <ListViewItem icon="edit" onClick={handleEdit}>
+    Edit selection
+  </ListViewItem>
+</Listbox>;
+```
+
+### Accessibility
+
+**Keyboard Interactions:**
+
+| Key             | Action                                  |
+| --------------- | --------------------------------------- |
+| `Tab`           | Focus next field (in forms)             |
+| `Shift + Tab`   | Focus previous field (in forms)         |
+| `Arrow Up/Down` | Open Listbox when focused               |
+| `Arrow Up/Down` | Navigate focused option in open Listbox |
+| `Enter`/`Space` | Select focused option                   |
+| `Esc`           | Close Listbox                           |
+
+**ARIA Attributes:**
+
+```jsx
+<div role="listbox" aria-label="Choose country">
+  <div role="option" aria-selected={isSelected} tabIndex={0}>
+    Sweden
+  </div>
+</div>
+```
+
+**Focus Management:**
+
+- First or selected item receives focus when opened
+- Arrow keys navigate within listbox
+- Esc closes and returns focus to trigger
+
+### Internationalization
+
+**RTL Languages:**
+
+- Content flips horizontally
+- Icon placement flips
+- Alignment changes to right
+
+```jsx
+{
+  /* RTL example */
+}
+<Listbox dir="rtl">
+  <MenuItem>خيار 1</MenuItem>
+  <MenuItem>خيار 2</MenuItem>
+  <MenuItem>خيار 3</MenuItem>
+</Listbox>;
+```
+
+---
+
 **Next:** [04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md) - Cards, Lists, Tables, and Content Display
 
 ```
