@@ -1334,6 +1334,266 @@ Remove applied filters with X icon
 
 ---
 
+## 8. Jumbo Button
+
+### Overview
+
+**Purpose:** Large, prominent button used to emphasize the final action in a linear flow (e.g., purchase journey).
+
+**Platforms:** Web, Android, iOS
+**Last Updated:** May 14, 2025
+
+**Key Use Case:** Final step confirmation in critical user flows (payment, checkout, form submission)
+
+### Anatomy
+
+```
+┌─────────────────────────────────────────┐
+│ Complete purchase                    →  │ ← Button label + Trailing icon
+└─────────────────────────────────────────┘
+```
+
+### Variants
+
+#### Regular Jumbo Button
+
+Used within a grid or container on larger screens (inset, inline)
+
+```jsx
+<JumboButton variant="regular" onClick={handlePurchase}>
+  Complete purchase
+</JumboButton>
+```
+
+#### Footer Jumbo Button
+
+Spans edge-to-edge at bottom of container, typically on mobile (fills full width)
+
+```jsx
+<JumboButton variant="footer" onClick={handleSubmit}>
+  Submit application
+</JumboButton>
+```
+
+### States
+
+- **Default:** Normal interactive state
+- **Loading:** Shows spinner, prevents interaction
+- **Disabled:** Non-interactive, grayed out
+
+```jsx
+<JumboButton>Complete purchase</JumboButton>
+<JumboButton loading>Processing...</JumboButton>
+<JumboButton disabled>Unavailable</JumboButton>
+```
+
+### Behaviors
+
+#### Text Overflow
+
+- Buttons respect fixed height
+- Text can wrap up to 2 lines
+- Truncates with ellipsis if exceeds 2 lines
+
+```jsx
+<JumboButton>Really really really long Jumbo Button label trunc...</JumboButton>
+```
+
+#### Link Conversion
+
+Can be converted to `<a>` tag with `href` prop
+
+```jsx
+<JumboButton href="/checkout">Continue to checkout</JumboButton>;
+{
+  /* Renders as: <a class="jumbo-button" href="/checkout">...</a> */
+}
+```
+
+### Usage Guidelines
+
+#### ✅ DO:
+
+- Use ONLY for the final step of a linear flow
+- Present as standalone action on the screen
+- Use clear, verb-based labels
+- Be consistent across flow steps
+- Use Regular variant on larger screens
+- Use Footer variant on mobile
+
+```jsx
+{/* ✅ GOOD: Final step of checkout */}
+<CheckoutFlow>
+  <Step1>Contact information →</Step1>
+  <Step2>Payment method →</Step2>
+  <Step3>
+    <OrderSummary />
+    <JumboButton variant="footer">
+      Complete purchase
+    </JumboButton>
+  </Step3>
+</CheckoutFlow>
+
+{/* ✅ GOOD: Clear verb-based label */}
+<JumboButton>Complete purchase</JumboButton>
+<JumboButton>Submit application</JumboButton>
+<JumboButton>Confirm order</JumboButton>
+```
+
+#### ❌ DON'T:
+
+- Pair with secondary actions (no "Cancel" button alongside)
+- Use in middle steps of a flow
+- Use for non-critical actions
+- Use long sentence-like labels
+- Mix Regular and Footer variants in same flow
+
+```jsx
+{
+  /* ❌ BAD: Paired with secondary action */
+}
+<Stack>
+  <JumboButton>Complete purchase</JumboButton>
+  <Button variant="secondary">Continue shopping</Button>
+</Stack>;
+
+{
+  /* ❌ BAD: Long label (provide context outside) */
+}
+<JumboButton>Let's complete your purchase and finalize the order</JumboButton>;
+
+{
+  /* ✅ GOOD: Context outside, concise label */
+}
+<Stack>
+  <Text>Let's complete your purchase</Text>
+  <JumboButton>Complete purchase</JumboButton>
+</Stack>;
+```
+
+### Regular vs Footer Variants
+
+**Regular Jumbo Button:**
+
+- **Use on:** Larger screens (tablets, desktops)
+- **Layout:** Inset and inline like typical button
+- **Width:** Natural width or constrained by container
+- **Why:** Footer variant feels too stretched on wide screens
+
+**Footer Jumbo Button:**
+
+- **Use on:** Mobile screens or narrow containers
+- **Layout:** Edge-to-edge at bottom of screen/container
+- **Width:** Full width (100%)
+- **Why:** Makes button prominent and easy to tap on mobile
+
+```jsx
+{
+  /* Desktop layout */
+}
+<Grid container="large">
+  <PaymentForm />
+  <JumboButton variant="regular">Complete purchase</JumboButton>
+</Grid>;
+
+{
+  /* Mobile layout */
+}
+<Screen>
+  <PaymentForm />
+  <JumboButton variant="footer">Complete purchase</JumboButton>
+</Screen>;
+```
+
+### Visual Emphasis
+
+**Only use Jumbo Buttons in the final step** - Its visual prominence is most effective when conveying critical decisions like payment confirmation.
+
+**Linear flow example:**
+
+1. Contact information → (regular button)
+2. Delivery details → (regular button)
+3. Payment method → (regular button)
+4. Order summary → **Complete purchase (Jumbo Button)**
+
+### Button Labels
+
+**Best practices:**
+
+- Use a verb (action word)
+- Be concise (2-4 words max)
+- Set clear expectations
+- Avoid sentences
+
+**Good examples:**
+
+- "Complete purchase"
+- "Submit application"
+- "Confirm order"
+- "Finalize booking"
+
+**Bad examples:**
+
+- "Click here" (not descriptive)
+- "Let's complete your purchase together" (too long)
+- "Next" (not specific enough for final step)
+
+### Accessibility
+
+**Keyboard Interactions:**
+
+| Key             | Action                |
+| --------------- | --------------------- |
+| `Tab`           | Navigate to button    |
+| `Enter`/`Space` | Trigger button action |
+
+**ARIA Attributes:**
+
+```jsx
+<button
+  className="jumbo-button"
+  aria-label="Complete purchase and finalize order"
+  onClick={handlePurchase}
+>
+  Complete purchase →
+</button>;
+
+{
+  /* Loading state */
+}
+<button
+  className="jumbo-button"
+  aria-busy="true"
+  aria-label="Processing purchase"
+  disabled
+>
+  <Spinner /> Processing...
+</button>;
+```
+
+**Focus State:** 3px blue outline, 2px offset
+
+### Internationalization
+
+**RTL Languages:**
+
+- Text and icon flip positions
+- Icon moves from trailing (→) to leading (←) edge
+
+```jsx
+{
+  /* LTR */
+}
+<JumboButton>Complete purchase →</JumboButton>;
+
+{
+  /* RTL */
+}
+<JumboButton dir="rtl">← إكمال الشراء</JumboButton>;
+```
+
+---
+
 ## Quick Reference: When to Use Which Action Component
 
 ```javascript
@@ -1369,6 +1629,13 @@ actionComponents: {
     patterns: ["filtering", "tagging", "selection", "chatbot suggestions"],
     rule: "Pills = data, Buttons = actions",
     dismissible: "Use for active filters with X icon"
+  },
+
+  JumboButton: {
+    useCase: "Final step of linear flows (checkout, forms)",
+    variants: ["regular (desktop)", "footer (mobile)"],
+    rule: "Use ONLY for final critical action, never pair with secondary actions",
+    emphasis: "Maximum visual prominence for conversion moments"
   }
 }
 ```

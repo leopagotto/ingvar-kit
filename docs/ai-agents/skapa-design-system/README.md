@@ -17,7 +17,7 @@ The documentation is organized into 9 focused modules:
 | ---------------------------------------------------------------------- | -------------------------------------------------------- | ---------------- |
 | **[00-QUICK-START-GUIDE.md](./00-QUICK-START-GUIDE.md)**               | Installation, quick reference, common patterns           | -                |
 | **[01-OVERVIEW-AND-FOUNDATIONS.md](./01-OVERVIEW-AND-FOUNDATIONS.md)** | Design tokens, typography, spacing, colors, grids, icons | 1                |
-| **[02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)**               | Interactive elements                                     | 7                |
+| **[02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)**               | Interactive elements                                     | 8                |
 | **[03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)**                 | Forms and data entry                                     | 12               |
 | **[04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)**             | Content display (Cards, Lists, Tables)                   | 10               |
 | **[05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)**           | User feedback (Toasts, Modals, Alerts)                   | 7                |
@@ -25,7 +25,7 @@ The documentation is organized into 9 focused modules:
 | **[07-LAYOUT-PATTERNS.md](./07-LAYOUT-PATTERNS.md)**                   | Page layouts and composition                             | -                |
 | **[08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md)**                     | Coworker Design System (internal apps)                   | 6                |
 
-**Total Components Documented:** 57 production-ready components
+**Total Components Documented:** 58 production-ready components
 
 ## 🚀 Quick Navigation
 
@@ -43,14 +43,14 @@ The documentation is organized into 9 focused modules:
 ### By Component Name
 
 <details>
-<summary><strong>Action Components (7)</strong></summary>
+<summary><strong>Action Components (8)</strong></summary>
 
 - Button (Primary, Secondary, Tertiary, Danger, Emphasised)
 - Icon Button
 - Dual Button
 - Hyperlink (Regular, Subtle)
 - Expanding Button
-- Jumbo Button
+- Jumbo Button (Regular, Footer variants)
 - Pill (Text, Icon, Thumbnail, Badge variants)
 </details>
 
@@ -346,6 +346,14 @@ This documentation was created using:
 - **Skapa Version:** 2025 (components updated through August 2025)
 
 ### Version History
+
+- **v1.4** (2025-11-04): Added Jumbo Button for complete Action Components coverage
+
+  - Added Jumbo Button (Regular, Footer variants) to 02-ACTION-COMPONENTS.md
+  - Final critical action button for linear flows (checkout, forms)
+  - Total: 58 components documented (up from 57)
+  - Component coverage: ~94% of available Skapa components
+  - Action Components: Now complete with all 8 documented
 
 - **v1.3** (2025-11-04): Added Listbox and Text components for near-complete coverage
 
