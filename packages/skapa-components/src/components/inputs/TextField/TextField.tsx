@@ -1,35 +1,35 @@
-import React from 'react';
-import clsx from 'clsx';
-import type { TextFieldProps } from './TextField.types';
-import styles from './TextField.module.css';
+import React from "react";
+import clsx from "clsx";
+import type { TextFieldProps } from "./TextField.types";
+import styles from "./TextField.module.css";
 
 /**
  * TextField Component - Single-line text input
- * 
+ *
  * Used for collecting short text input from users. Supports validation,
  * helper text, icons, and error states.
- * 
+ *
  * Based on: docs/ai-agents/skapa-design-system/02-INPUTS.md
- * 
+ *
  * @example
  * ```tsx
  * // Basic text field
- * <TextField 
+ * <TextField
  *   label="Email"
  *   placeholder="Enter your email"
  *   type="email"
  * />
- * 
+ *
  * // With validation
- * <TextField 
+ * <TextField
  *   label="Username"
  *   required
  *   error="Username is required"
  *   helperText="Must be at least 3 characters"
  * />
- * 
+ *
  * // With icons
- * <TextField 
+ * <TextField
  *   label="Search"
  *   startIcon={<SearchIcon />}
  *   placeholder="Search products..."
@@ -39,8 +39,8 @@ import styles from './TextField.module.css';
 export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   (
     {
-      size = 'medium',
-      variant = 'outlined',
+      size = "medium",
+      variant = "outlined",
       label,
       helperText,
       error,
@@ -55,7 +55,8 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
     },
     ref
   ) => {
-    const inputId = id || `textfield-${Math.random().toString(36).substr(2, 9)}`;
+    const inputId =
+      id || `textfield-${Math.random().toString(36).substr(2, 9)}`;
     const hasError = Boolean(error);
 
     const containerClasses = clsx(
@@ -85,7 +86,7 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
 
         <div className={styles.inputContainer}>
           {startIcon && <span className={styles.startIcon}>{startIcon}</span>}
-          
+
           <input
             ref={ref}
             id={inputId}
@@ -112,4 +113,4 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
   }
 );
 
-TextField.displayName = 'SkapaTextField';
+TextField.displayName = "SkapaTextField";

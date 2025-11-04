@@ -27,5 +27,11 @@ export type { SplitButtonProps, SplitButtonOption, SplitButtonSize, SplitButtonV
 export { TextField } from './components/inputs/TextField';
 export type { TextFieldProps, TextFieldSize, TextFieldVariant } from './components/inputs/TextField';
 
+export { TextArea } from './components/inputs/TextArea';
+export type { TextAreaProps, TextAreaSize, TextAreaVariant, TextAreaResize } from './components/inputs/TextArea';
+
+export { Checkbox } from './components/inputs/Checkbox';
+export type { CheckboxProps, CheckboxSize } from './components/inputs/Checkbox';
+
 // Re-export styles
 import './styles/tokens.css';
