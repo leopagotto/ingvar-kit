@@ -88,5 +88,27 @@ export type { DividerProps, DividerOrientation, DividerVariant } from './compone
 export { Spinner } from './components/display/Spinner';
 export type { SpinnerProps, SpinnerSize } from './components/display/Spinner';
 
+// Feedback (7 components) ✅ COMPLETE
+export { Toast } from './components/feedback/Toast';
+export type { ToastProps } from './components/feedback/Toast';
+
+export { Banner } from './components/feedback/Banner';
+export type { BannerProps, BannerVariant } from './components/feedback/Banner';
+
+export { Modal } from './components/feedback/Modal';
+export type { ModalProps } from './components/feedback/Modal';
+
+export { Alert } from './components/feedback/Alert';
+export type { AlertProps, AlertVariant, AlertSize } from './components/feedback/Alert';
+
+export { ProgressBar } from './components/feedback/ProgressBar';
+export type { ProgressBarProps, ProgressBarVariant, ProgressBarSize } from './components/feedback/ProgressBar';
+
+export { Snackbar } from './components/feedback/Snackbar';
+export type { SnackbarProps, SnackbarPosition } from './components/feedback/Snackbar';
+
+export { Dialog } from './components/feedback/Dialog';
+export type { DialogProps, DialogSize } from './components/feedback/Dialog';
+
 // Re-export styles
 import './styles/tokens.css';
