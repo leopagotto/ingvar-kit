@@ -1,143 +1,73 @@
-import React, { useState } from "react";
-import clsx from "clsx";
+import React from "react";
+import IngkaSlider from "@ingka/slider";
 import type { SliderProps } from "./Slider.types";
 import styles from "./Slider.module.css";
 
 /**
  * Slider component for range input
- *
- * @example
- * // Basic slider
- * <Slider min={0} max={100} defaultValue={50} />
- *
- * @example
- * // With label and value display
- * <Slider
- *   label="Volume"
- *   min={0}
- *   max={100}
- *   defaultValue={75}
- *   showValue
- * />
- *
- * @example
- * // Controlled slider
- * <Slider
- *   label="Price"
- *   value={price}
- *   onChange={(e) => setPrice(Number(e.target.value))}
- *   min={0}
- *   max={1000}
- *   step={10}
- * />
- *
- * @example
- * // Different sizes
- * <Slider size="small" label="Small" min={0} max={100} />
- * <Slider size="medium" label="Medium" min={0} max={100} />
- * <Slider size="large" label="Large" min={0} max={100} />
- *
- * @example
- * // With error
- * <Slider
- *   label="Age"
- *   error="Value must be between 18 and 65"
- *   min={0}
- *   max={100}
- * />
+ * Wraps @ingka/slider for official IKEA compliance
  */
 export const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
   (
     {
-      size = "medium",
       label,
       helperText,
       error,
-      showValue = true,
-      fullWidth = false,
-      required,
-      disabled,
-      className,
-      value,
-      defaultValue,
       min = 0,
       max = 100,
+      step = 1,
+      defaultValue,
+      value,
+      disabled,
+      className,
+      id,
       onChange,
       ...props
     },
     ref
   ) => {
-    const [internalValue, setInternalValue] = useState(
-      (value !== undefined
-        ? value
-        : defaultValue !== undefined
-        ? defaultValue
-        : min
-      ).toString()
-    );
+    const sliderId = id || `slider-${Math.random().toString(36).substr(2, 9)}`;
+    const hasError = Boolean(error);
 
-    const currentValue = value !== undefined ? value : internalValue;
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      if (value === undefined) {
-        setInternalValue(e.target.value);
+    // Convert to @ingka/slider format
+    const startValue = value !== undefined ? value : defaultValue !== undefined ? defaultValue : min;
+    
+    const handleChange = (values: number[]) => {
+      if (onChange) {
+        // Create a synthetic event-like object
+        const syntheticEvent = {
+          target: { value: values[0] }
+        } as any;
+        onChange(syntheticEvent);
       }
-      onChange?.(e);
     };
 
-    const sliderClasses = clsx(styles.slider, styles[size], {
-      [styles.error]: Boolean(error),
-    });
-
-    const labelClasses = clsx(styles.label, styles[size]);
-
-    const valueClasses = clsx(styles.value, styles[size], {
-      [styles.error]: Boolean(error),
-    });
-
-    const helperTextClasses = clsx(styles.helperText, {
-      [styles.error]: Boolean(error),
-    });
+    // Filter incompatible props
+    const { size, showValue, fullWidth, marks, ...compatibleProps } = props as any;
 
     return (
-      <div
-        className={clsx(
-          styles.container,
-          { [styles.fullWidth]: fullWidth },
-          className
-        )}
-      >
-        {(label || showValue) && (
-          <div className={styles.header}>
-            {label && (
-              <label className={labelClasses}>
-                {label}
-                {required && <span className={styles.required}>*</span>}
-              </label>
-            )}
-            {showValue && <span className={valueClasses}>{currentValue}</span>}
-          </div>
-        )}
-        <div className={styles.sliderWrapper}>
-          <input
-            ref={ref}
-            type="range"
-            className={sliderClasses}
-            value={currentValue}
-            min={min}
-            max={max}
-            onChange={handleChange}
-            disabled={disabled}
-            required={required}
-            {...props}
-          />
-        </div>
+      <div className={`${styles.wrapper} ${className || ""}`}>
+        {label && <label className={styles.label}>{label}</label>}
+        <IngkaSlider
+          id={sliderId}
+          start={startValue}
+          range={{ min, max }}
+          step={step}
+          disabled={disabled}
+          ariaFormat={{ to: (v) => String(v) }}
+          ariaLabels={label || "Slider"}
+          onChange={handleChange}
+          className={styles.slider}
+          {...compatibleProps}
+        />
         {(error || helperText) && (
-          <span className={helperTextClasses}>{error || helperText}</span>
+          <span className={hasError ? styles.error : styles.helperText}>
+            {error || helperText}
+          </span>
         )}
       </div>
     );
   }
 );
 
-Slider.displayName = "Slider";
+Slider.displayName = "SkapaSlider";

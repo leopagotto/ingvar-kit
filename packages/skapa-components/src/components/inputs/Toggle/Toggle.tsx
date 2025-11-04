@@ -1,42 +1,11 @@
 import React from "react";
-import clsx from "clsx";
+import IngkaSwitch from "@ingka/switch";
 import type { ToggleProps } from "./Toggle.types";
 import styles from "./Toggle.module.css";
 
 /**
  * Toggle component for on/off switches
- *
- * @example
- * // Basic toggle
- * <Toggle label="Enable notifications" />
- *
- * @example
- * // Controlled toggle
- * <Toggle
- *   checked={isEnabled}
- *   onChange={(e) => setIsEnabled(e.target.checked)}
- *   label="Dark mode"
- * />
- *
- * @example
- * // Label on the left
- * <Toggle
- *   label="Wi-Fi"
- *   labelPosition="left"
- * />
- *
- * @example
- * // With helper text
- * <Toggle
- *   label="Auto-save"
- *   helperText="Automatically save your work every 5 minutes"
- * />
- *
- * @example
- * // Different sizes
- * <Toggle size="small" label="Small" />
- * <Toggle size="medium" label="Medium" />
- * <Toggle size="large" label="Large" />
+ * Wraps @ingka/switch for official IKEA compliance
  */
 export const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
   (
@@ -45,54 +14,45 @@ export const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
       label,
       helperText,
       error,
-      labelPosition = "right",
       disabled,
       className,
+      id,
+      value = "on",
       ...props
     },
     ref
   ) => {
-    const trackClasses = clsx(styles.track, styles[size], {
-      [styles.error]: Boolean(error),
-      [styles.disabled]: disabled,
-    });
+    const toggleId = id || `toggle-${Math.random().toString(36).substr(2, 9)}`;
+    const hasError = Boolean(error);
 
-    const labelClasses = clsx(styles.label, styles[size], {
-      [styles.disabled]: disabled,
-    });
-
-    const helperTextClasses = clsx(styles.helperText, styles[size], {
-      [styles.error]: Boolean(error),
-      [styles.labelLeft]: labelPosition === "left",
-    });
+    // Filter incompatible props
+    const { labelPosition, ...compatibleProps } = props as any;
 
     return (
-      <div className={clsx(styles.container, className)}>
-        <label
-          className={clsx(styles.wrapper, {
-            [styles.disabled]: disabled,
-            [styles.labelLeft]: labelPosition === "left",
-          })}
-        >
-          <input
-            ref={ref}
-            type="checkbox"
-            className={styles.input}
-            disabled={disabled}
-            role="switch"
-            {...props}
-          />
-          <span className={trackClasses}>
-            <span className={styles.thumb} />
-          </span>
-          {label && <span className={labelClasses}>{label}</span>}
-        </label>
+      <div className={`${styles.wrapper} ${className || ""}`}>
+        <IngkaSwitch
+          ref={ref as any}
+          id={toggleId}
+          value={String(value)}
+          label={label}
+          disabled={disabled}
+          describedById={
+            hasError || helperText ? `${toggleId}-helper` : undefined
+          }
+          className={styles.toggle}
+          {...compatibleProps}
+        />
         {(error || helperText) && (
-          <span className={helperTextClasses}>{error || helperText}</span>
+          <span
+            id={`${toggleId}-helper`}
+            className={hasError ? styles.error : styles.helperText}
+          >
+            {error || helperText}
+          </span>
         )}
       </div>
     );
   }
 );
 
-Toggle.displayName = "Toggle";
+Toggle.displayName = "SkapaToggle";
