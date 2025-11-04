@@ -42,42 +42,40 @@ Components:
 ### Variants
 
 #### 1. Primary Button
+
 **Use Case:** Main action on a screen
 
 ```jsx
-<Button variant="primary">
-  Add to cart
-</Button>
+<Button variant="primary">Add to cart</Button>
 ```
 
 **Visual:** Blue background (#0058A3), white text
 **When to use:** Place emphasis on the most important action
 
 #### 2. Secondary Button
+
 **Use Case:** Supporting action
 
 ```jsx
-<Button variant="secondary">
-  Cancel
-</Button>
+<Button variant="secondary">Cancel</Button>
 ```
 
 **Visual:** Transparent background, border, dark text
 **When to use:** Less emphasis than primary actions
 
 #### 3. Tertiary Button
+
 **Use Case:** Lowest priority action
 
 ```jsx
-<Button variant="tertiary">
-  Skip question
-</Button>
+<Button variant="tertiary">Skip question</Button>
 ```
 
 **Visual:** No background, no border, underlined text
 **When to use:** Least emphasis on an action
 
 #### 4. Danger Button
+
 **Use Case:** Destructive actions
 
 ```jsx
@@ -91,18 +89,18 @@ Components:
 **When to use:** Actions that lead to irreversible data loss
 
 #### 5. Emphasised Button
+
 **Use Case:** Critical call-to-action
 
 ```jsx
-<Button variant="emphasised">
-  Start free trial
-</Button>
+<Button variant="emphasised">Start free trial</Button>
 ```
 
 **Visual:** Accent color background, high contrast
 **When to use:** Most important actions in critical flows
 
 #### 6. Inverse Themes
+
 **Use Case:** Dark backgrounds or images
 
 ```jsx
@@ -119,12 +117,11 @@ Components:
 **When to use:** Buttons on dark backgrounds, never on white (neutral-1)
 
 #### 7. Image Overlay
+
 **Use Case:** Buttons on top of images
 
 ```jsx
-<Button variant="image-overlay">
-  View gallery
-</Button>
+<Button variant="image-overlay">View gallery</Button>
 ```
 
 **Visual:** Secondary button variant optimized for image backgrounds
@@ -171,6 +168,7 @@ sizes: {
 ```
 
 **Guidelines:**
+
 - ✅ Use icons that directly connect to the action (e.g., cart icon for "Add to cart")
 - ✅ Icon should be recognizable without the label
 - ❌ Don't use icons as decoration
@@ -179,9 +177,11 @@ sizes: {
 ### States
 
 #### Default
+
 Normal interactive state
 
 #### Hover
+
 ```css
 /* Fade to darker color */
 transition: background-color 200ms ease;
@@ -189,6 +189,7 @@ background-color: darken(primary, 10%);
 ```
 
 #### Pressed
+
 ```css
 /* Scale down animation */
 transform: scale(0.97);
@@ -196,6 +197,7 @@ transition: transform 100ms ease;
 ```
 
 #### Loading
+
 ```jsx
 <Button loading>
   <LoadingIndicator type="bouncy-ball" />
@@ -204,10 +206,9 @@ transition: transform 100ms ease;
 ```
 
 #### Disabled
+
 ```jsx
-<Button disabled>
-  Unavailable
-</Button>
+<Button disabled>Unavailable</Button>
 ```
 
 **Visual:** Grey background, reduced opacity, `cursor: not-allowed`
@@ -215,12 +216,11 @@ transition: transform 100ms ease;
 ### Behavior
 
 #### Fluid Width
+
 Button expands to fill container
 
 ```jsx
-<Button width="fluid">
-  Full width button
-</Button>
+<Button width="fluid">Full width button</Button>
 ```
 
 ```css
@@ -228,12 +228,11 @@ width: 100%;
 ```
 
 #### Auto Width
+
 Button width determined by content
 
 ```jsx
-<Button width="auto">
-  Auto width
-</Button>
+<Button width="auto">Auto width</Button>
 ```
 
 **Note:** Labels rarely wrap to two lines in this scenario
@@ -241,6 +240,7 @@ Button width determined by content
 ### Button Grouping
 
 #### Two Buttons
+
 ```jsx
 <ButtonGroup>
   <Button variant="primary">Submit</Button>
@@ -249,10 +249,12 @@ Button width determined by content
 ```
 
 **Rules:**
+
 - Use identical styles together (primary + secondary regular, OR primary + secondary inverse)
 - Exception: Emphasised button can be used with secondary regular
 
 #### Three Buttons
+
 ```jsx
 <ButtonGroup>
   <Button variant="primary">Save</Button>
@@ -262,6 +264,7 @@ Button width determined by content
 ```
 
 #### On Image
+
 ```jsx
 <ButtonGroup>
   <Button variant="primary-inverse">Learn more</Button>
@@ -272,6 +275,7 @@ Button width determined by content
 ### Button Order
 
 #### Horizontal Layout
+
 ```
 ┌─────────────────────────────────┐
 │  [Secondary]      [Primary] →   │
@@ -281,6 +285,7 @@ Button width determined by content
 **Primary button positioned at the end (trailing)**
 
 #### Vertical Layout
+
 ```
 ┌─────────────┐
 │  [Primary]  │ ← Top
@@ -294,23 +299,28 @@ Button width determined by content
 ### Usage Guidelines
 
 #### ✅ DO:
+
 1. **Give one clear primary action**
+
    - Only one primary button per screen
    - Creates clear forward path
-   
+
 2. **Use emphasised variants for important actions**
+
    - Highlights critical product flows
    - Shows importance hierarchy
-   
+
 3. **Use concise verbs in labels**
+
    - "Customise" ✅
    - "Click here to customize your settings" ❌
-   
+
 4. **Keep button order consistent**
    - Horizontal: Primary trailing
    - Vertical: Primary top
 
 #### ❌ DON'T:
+
 1. Mix multiple primary actions
 2. Combine emphasised + primary + secondary in one group
 3. Use unclear or unnecessarily long labels
@@ -319,17 +329,26 @@ Button width determined by content
 ### Motion
 
 #### Press and Release
+
 ```css
 /* Press */
 @keyframes press {
-  from { transform: scale(1); }
-  to { transform: scale(0.97); }
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.97);
+  }
 }
 
 /* Release */
 @keyframes release {
-  from { transform: scale(0.97); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(0.97);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Apply */
@@ -337,11 +356,13 @@ transition: transform 100ms ease;
 ```
 
 #### Hover
+
 ```css
 transition: background-color 200ms ease;
 ```
 
 #### Waiting State
+
 ```jsx
 <Button loading>
   <InlineBouncyBall />
@@ -352,6 +373,7 @@ transition: background-color 200ms ease;
 ### Internationalization
 
 #### RTL Support
+
 ```jsx
 // Button labels are center-aligned
 // No difference between LTR and RTL for label
@@ -379,13 +401,14 @@ transition: background-color 200ms ease;
 
 **Keyboard Interactions:**
 
-| Key | Action |
-|-----|--------|
+| Key     | Action                 |
+| ------- | ---------------------- |
 | `Space` | Triggers button action |
 | `Enter` | Triggers button action |
-| `Tab` | Moves focus to button |
+| `Tab`   | Moves focus to button  |
 
 **Focus State:**
+
 ```css
 :focus-visible {
   outline: 3px solid var(--color-blue-ikea);
@@ -422,6 +445,7 @@ Components:
 ### Variants
 
 #### Primary Icon Button
+
 ```jsx
 <IconButton variant="primary" icon="search" label="Search" />
 ```
@@ -429,6 +453,7 @@ Components:
 **Use Case:** More emphasis on an action
 
 #### Secondary Icon Button
+
 ```jsx
 <IconButton variant="secondary" icon="favorite" label="Add to favorites" />
 ```
@@ -436,6 +461,7 @@ Components:
 **Use Case:** Less emphasis on an action
 
 #### Tertiary Icon Button
+
 ```jsx
 <IconButton variant="tertiary" icon="close" label="Close" />
 ```
@@ -443,6 +469,7 @@ Components:
 **Use Case:** Least emphasis on an action
 
 #### Emphasised Icon Button
+
 ```jsx
 <IconButton variant="emphasised" icon="cart" label="Add to cart" />
 ```
@@ -450,6 +477,7 @@ Components:
 **Use Case:** Critical actions with highest emphasis
 
 #### Image Overlay Icon Button
+
 ```jsx
 <IconButton variant="image-overlay" icon="play" label="Play video" />
 ```
@@ -457,6 +485,7 @@ Components:
 **Use Case:** Actions placed on top of images
 
 #### Inverse Theme Icon Button
+
 ```jsx
 <IconButton variant="inverse" icon="share" label="Share" />
 ```
@@ -472,6 +501,7 @@ Components:
 ```
 
 **Icon Variants for Extra Small:**
+
 - Use `-Small` icon variants (e.g., "Cross - Small")
 - Designed for legibility at small sizes
 - Retains natural 24px icon size internally
@@ -479,6 +509,7 @@ Components:
 ### States
 
 Same as regular Button:
+
 - Default
 - Hover (fade to darker)
 - Pressed (scale to 97%)
@@ -490,6 +521,7 @@ Same as regular Button:
 #### ✅ DO:
 
 **Designing Compact Actions**
+
 ```jsx
 // Product card with compact favorite action
 <Card>
@@ -497,25 +529,25 @@ Same as regular Button:
   <CardTitle />
   <ButtonGroup>
     <Button variant="primary">Add to bag</Button>
-    <IconButton 
-      variant="secondary" 
-      icon="favorite"
-      label="Add to favorites"
-    />
+    <IconButton variant="secondary" icon="favorite" label="Add to favorites" />
   </ButtonGroup>
 </Card>
 ```
 
 **Placing Icon Buttons**
+
 - Place inline horizontally following full-size buttons
 - Use as secondary actions
 - Position primary icon buttons at the end of groups
 
 **Combining Button Styles**
+
 ```jsx
 // Use size to communicate hierarchy, not just color
 <ButtonGroup>
-  <Button variant="primary" size="medium">Add to bag</Button>
+  <Button variant="primary" size="medium">
+    Add to bag
+  </Button>
   <IconButton variant="secondary" size="small" icon="favorite" />
 </ButtonGroup>
 ```
@@ -523,6 +555,7 @@ Same as regular Button:
 #### ❌ DON'T:
 
 1. **Don't stack vertically as secondary action**
+
    ```jsx
    {/* ❌ Bad */}
    <Button>Add to bag</Button>
@@ -530,6 +563,7 @@ Same as regular Button:
    ```
 
 2. **Don't mix contradicting color styles**
+
    ```jsx
    {/* ❌ Bad */}
    <Button variant="primary">Add to bag</Button>
@@ -537,12 +571,17 @@ Same as regular Button:
    ```
 
 3. **Don't use medium icons on extra-small buttons**
+
    ```jsx
-   {/* ❌ Bad */}
-   <IconButton size="extra-small" icon="cross-medium" />
-   
-   {/* ✅ Good */}
-   <IconButton size="extra-small" icon="cross-small" />
+   {
+     /* ❌ Bad */
+   }
+   <IconButton size="extra-small" icon="cross-medium" />;
+
+   {
+     /* ✅ Good */
+   }
+   <IconButton size="extra-small" icon="cross-small" />;
    ```
 
 ### Icon Button Group Order
@@ -560,17 +599,17 @@ Same as regular Button:
 **CRITICAL:** Always provide a label for screen readers
 
 ```jsx
-<IconButton 
+<IconButton
   icon="close"
-  label="Close dialog"  // Screen reader only
+  label="Close dialog" // Screen reader only
   aria-label="Close dialog"
 />
 ```
 
 **Keyboard Interactions:**
 
-| Key | Action |
-|-----|--------|
+| Key               | Action                 |
+| ----------------- | ---------------------- |
 | `Space` / `Enter` | Triggers button action |
 
 ---
@@ -608,6 +647,7 @@ Components:
 ### Variants
 
 #### Primary Dual Button
+
 ```jsx
 <DualButton variant="primary">
   <DualButton.First icon="zoom-out" label="Zoom out" />
@@ -618,6 +658,7 @@ Components:
 **Use Case:** Stand out on images or graphics (e.g., interactive maps)
 
 #### Secondary Dual Button
+
 ```jsx
 <DualButton variant="secondary">
   <DualButton.First icon="arrow-left" label="Previous" />
@@ -628,6 +669,7 @@ Components:
 **Use Case:** Low emphasis on light backgrounds
 
 #### Secondary Inverse Dual Button
+
 ```jsx
 <DualButton variant="secondary-inverse">
   <DualButton.First icon="minus" label="Decrease" />
@@ -640,6 +682,7 @@ Components:
 ### Orientations
 
 #### Horizontal
+
 ```jsx
 <DualButton orientation="horizontal">
   <DualButton.First icon="arrow-left" />
@@ -648,6 +691,7 @@ Components:
 ```
 
 #### Vertical
+
 ```jsx
 <DualButton orientation="vertical">
   <DualButton.First icon="arrow-up" />
@@ -691,16 +735,19 @@ Components:
 #### ❌ DON'T: Use Unrelated Actions
 
 ```jsx
-{/* ❌ Bad: Unrelated actions */}
+{
+  /* ❌ Bad: Unrelated actions */
+}
 <DualButton>
   <DualButton.First icon="close" label="Close" />
   <DualButton.Second icon="add-product" label="Add product" />
-</DualButton>
+</DualButton>;
 ```
 
 ### States
 
 Each button has independent states:
+
 - Default
 - Hover
 - Pressed
@@ -718,12 +765,12 @@ Each button has independent states:
 
 ```jsx
 <DualButton>
-  <DualButton.First 
+  <DualButton.First
     icon="arrow-left"
     label="Navigate to previous item"
     aria-label="Navigate to previous item"
   />
-  <DualButton.Second 
+  <DualButton.Second
     icon="arrow-right"
     label="Navigate to next item"
     aria-label="Navigate to next item"
@@ -733,12 +780,12 @@ Each button has independent states:
 
 **Keyboard Interactions:**
 
-| Key | Action |
-|-----|--------|
-| `Space` / `Return` | Triggers focused button action |
-| `Tab` | Moves focus between buttons |
+| Key                | Action                               |
+| ------------------ | ------------------------------------ |
+| `Space` / `Return` | Triggers focused button action       |
+| `Tab`              | Moves focus between buttons          |
 | `Arrow Left/Right` | Move focus in horizontal orientation |
-| `Arrow Up/Down` | Move focus in vertical orientation |
+| `Arrow Up/Down`    | Move focus in vertical orientation   |
 
 ---
 
@@ -769,10 +816,11 @@ Components:
 ### Variants
 
 #### Regular Hyperlink
+
 ```jsx
 <p>
-  Here you will find everything from 
-  <Hyperlink href="/smart-home">smart home solutions</Hyperlink> 
+  Here you will find everything from
+  <Hyperlink href="/smart-home">smart home solutions</Hyperlink>
   to a large selection of bedroom furniture.
 </p>
 ```
@@ -782,17 +830,25 @@ Components:
 **Required:** Always underlined for emphasis
 
 #### Subtle Hyperlink
+
 ```jsx
 <nav>
-  <Hyperlink variant="subtle" href="/planning">Planning Services</Hyperlink>
-  <Hyperlink variant="subtle" href="/delivery">Delivery & collection</Hyperlink>
-  <Hyperlink variant="subtle" href="/assembly">Assembly</Hyperlink>
+  <Hyperlink variant="subtle" href="/planning">
+    Planning Services
+  </Hyperlink>
+  <Hyperlink variant="subtle" href="/delivery">
+    Delivery & collection
+  </Hyperlink>
+  <Hyperlink variant="subtle" href="/assembly">
+    Assembly
+  </Hyperlink>
 </nav>
 ```
 
 **Visual:** NOT underlined, bold text style
 **Use Case:** Headings, navigation lists, footers, menus
 **Requirements:**
+
 - Only use when isolated in navigation contexts
 - Clear that entire group is interactive
 - ⚠️ **NEVER** use in body text (WCAG 2.2 F73 violation)
@@ -811,6 +867,7 @@ Components:
 ```
 
 **Rules:**
+
 - Doesn't need underline if entire component is clickable
 - Should be emphasized in bold text
 - Typically accompanied by directional icon (arrow/chevron)
@@ -823,13 +880,13 @@ Components:
 ```css
 /* ✅ Good: Use parent color styles */
 .body-text a {
-  color: inherit;  /* Inherits from parent */
+  color: inherit; /* Inherits from parent */
   text-decoration: underline;
 }
 
 /* ❌ Bad: Don't use accent/brand colors */
 .body-text a {
-  color: var(--color-yellow-ikea);  /* Too prominent, confusing */
+  color: var(--color-yellow-ikea); /* Too prominent, confusing */
 }
 ```
 
@@ -838,63 +895,72 @@ Components:
 #### ✅ DO:
 
 **Always Make Links Feel Clickable**
+
 ```jsx
 // In body text: Always underline
 <p>
-  For more than 70 years, we have worked to create a 
-  <Hyperlink href="/about">better everyday life</Hyperlink> 
+  For more than 70 years, we have worked to create a
+  <Hyperlink href="/about">better everyday life</Hyperlink>
   for the many people.
 </p>
 ```
 
 **Use Solid Backgrounds**
-```jsx
-{/* ✅ Good: Clear contrast */}
-<div style={{ background: 'white' }}>
-  <Hyperlink href="/stockholm">STOCKHOLM 2017</Hyperlink>
-</div>
 
-{/* ❌ Bad: On image without solid background */}
-<div style={{ backgroundImage: 'url(...)' }}>
+```jsx
+{
+  /* ✅ Good: Clear contrast */
+}
+<div style={{ background: "white" }}>
   <Hyperlink href="/stockholm">STOCKHOLM 2017</Hyperlink>
-</div>
+</div>;
+
+{
+  /* ❌ Bad: On image without solid background */
+}
+<div style={{ backgroundImage: "url(...)" }}>
+  <Hyperlink href="/stockholm">STOCKHOLM 2017</Hyperlink>
+</div>;
 ```
 
 #### ❌ DON'T:
 
 **Opening New Tabs**
+
 - ⚠️ **Generally avoid** `target="_blank"`
 - Loses context, breaks back button
 - Accessibility issue, especially on mobile
 - Only use if user needs to reference both tabs simultaneously
 
 **Exceptions for New Tab:**
+
 ```jsx
 // Only when absolutely necessary
-<Hyperlink 
-  href="/terms" 
-  target="_blank"
-  rel="noopener noreferrer"
->
+<Hyperlink href="/terms" target="_blank" rel="noopener noreferrer">
   Terms & Conditions (opens in new tab)
 </Hyperlink>
 ```
 
 **External Link Icons**
+
 - ⚠️ **Don't use** icons to indicate external sites
 - Users misunderstand as "opens in new tab"
 - If context change is important, write as text
 
 ```jsx
-{/* ❌ Bad: Icon confusion */}
+{
+  /* ❌ Bad: Icon confusion */
+}
 <Hyperlink href="https://external.com">
   External site <Icon name="external" />
-</Hyperlink>
+</Hyperlink>;
 
-{/* ✅ Good: Text notification */}
+{
+  /* ✅ Good: Text notification */
+}
 <Hyperlink href="https://external.com">
   External site (leaves IKEA website)
-</Hyperlink>
+</Hyperlink>;
 ```
 
 ### Mobile Native Considerations
@@ -902,16 +968,21 @@ Components:
 **Provide Adequate Clickable Area:**
 
 ```jsx
-{/* ❌ Bad: Small touch target in text block */}
+{
+  /* ❌ Bad: Small touch target in text block */
+}
 <Text>
-  Make your return faster. <Hyperlink href="/login">Log in</Hyperlink> to get info.
-</Text>
+  Make your return faster. <Hyperlink href="/login">Log in</Hyperlink> to get
+  info.
+</Text>;
 
-{/* ✅ Good: Use List or Buttons for actions */}
+{
+  /* ✅ Good: Use List or Buttons for actions */
+}
 <List>
   <ListItem onClick={handleReturn}>Make your return faster</ListItem>
   <ListItem onClick={handleLogin}>Log in for more info</ListItem>
-</List>
+</List>;
 ```
 
 **Exception:** Terms & Conditions and similar legal text can use hyperlinks
@@ -921,10 +992,7 @@ Components:
 **WCAG 2.2 Compliance:**
 
 ```jsx
-<Hyperlink 
-  href="/delivery"
-  aria-label="Delivery and collection information"
->
+<Hyperlink href="/delivery" aria-label="Delivery and collection information">
   Delivery & collection
 </Hyperlink>
 ```
@@ -933,12 +1001,13 @@ Components:
 
 **Keyboard Interactions:**
 
-| Key | Action |
-|-----|--------|
-| `Tab` | Navigates to link |
+| Key               | Action               |
+| ----------------- | -------------------- |
+| `Tab`             | Navigates to link    |
 | `Enter` / `Space` | Triggers link action |
 
 **Focus State:**
+
 ```css
 a:focus-visible {
   outline: 3px solid var(--color-blue-ikea);
@@ -960,19 +1029,19 @@ actionComponents: {
     danger: "Destructive actions (data loss)",
     emphasised: "Critical call-to-action in important flows"
   },
-  
+
   IconButton: {
     useCase: "Compact spaces, icon-only actions",
     requirement: "Icon must be recognizable without label",
     accessibility: "Always provide hidden label"
   },
-  
+
   DualButton: {
     useCase: "Binary opposite actions only",
     examples: ["zoom in/out", "undo/redo", "previous/next"],
     rule: "Both buttons must correspond to each other"
   },
-  
+
   Hyperlink: {
     regular: "Body text links (always underlined)",
     subtle: "Navigation lists, footers, menus (NOT body text)",

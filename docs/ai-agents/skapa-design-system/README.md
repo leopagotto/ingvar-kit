@@ -1,6 +1,6 @@
 # Skapa Design System - AI Agent Documentation
 
-> **📖 Complete Reference Guide for AI Agents**  
+> **📖 Complete Reference Guide for AI Agents**
 > Comprehensive documentation of IKEA's Skapa Design System extracted from official sources and organized for AI agent consumption.
 
 ## 🎯 Purpose
@@ -9,39 +9,35 @@ This documentation provides AI agents with detailed specifications for implement
 
 ## 📚 Documentation Structure
 
-The documentation is organized into 10 focused modules:
+The documentation is organized into 8 focused modules:
 
 ### Core Documentation
 
-| File | Coverage | Components Count |
-|------|----------|------------------|
-| **[00-QUICK-START-GUIDE.md](./00-QUICK-START-GUIDE.md)** | Installation, quick reference, common patterns | - |
-| **[01-OVERVIEW-AND-FOUNDATIONS.md](./01-OVERVIEW-AND-FOUNDATIONS.md)** | Design tokens, typography, spacing, colors, grids, icons | - |
-| **[02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)** | Interactive elements | 6 |
-| **[03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)** | Forms and data entry | 10 |
-| **[04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)** | Content display (Cards, Lists, Tables) | 8 |
-| **[05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)** | User feedback (Toasts, Modals, Alerts) | 7 |
-| **[06-NAVIGATION-COMPONENTS.md](./06-NAVIGATION-COMPONENTS.md)** | Navigation patterns | 6 |
-| **[07-MEDIA-COMPONENTS.md](./07-MEDIA-COMPONENTS.md)** | Images, videos, carousels | 5 |
-| **[08-SPECIALTY-COMPONENTS.md](./08-SPECIALTY-COMPONENTS.md)** | Commerce, pricing, ratings | 8 |
-| **[09-LAYOUT-PATTERNS.md](./09-LAYOUT-PATTERNS.md)** | Page layouts and composition | - |
-| **[10-CWDS-SUBSYSTEM.md](./10-CWDS-SUBSYSTEM.md)** | Coworker Design System (internal) | 6 |
+| File                                                                   | Coverage                                                 | Components Count |
+| ---------------------------------------------------------------------- | -------------------------------------------------------- | ---------------- |
+| **[00-QUICK-START-GUIDE.md](./00-QUICK-START-GUIDE.md)**               | Installation, quick reference, common patterns           | -                |
+| **[01-OVERVIEW-AND-FOUNDATIONS.md](./01-OVERVIEW-AND-FOUNDATIONS.md)** | Design tokens, typography, spacing, colors, grids, icons | -                |
+| **[02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)**               | Interactive elements                                     | 6                |
+| **[03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)**                 | Forms and data entry                                     | 10               |
+| **[04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)**             | Content display (Cards, Lists, Tables)                   | 7                |
+| **[05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)**           | User feedback (Toasts, Modals, Alerts)                   | 7                |
+| **[06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)** | Navigation, Media, Commerce                              | 14               |
+| **[07-LAYOUT-AND-CWDS.md](./07-LAYOUT-AND-CWDS.md)**                   | Page layouts + CWDS subsystem                            | 6                |
 
-**Total Components Documented:** 64+ production-ready components
+**Total Components Documented:** 50+ production-ready components
 
 ## 🚀 Quick Navigation
 
 ### By User Need
 
-**Building Forms?** → [03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)  
-**Creating Buttons/Links?** → [02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)  
-**Displaying Products?** → [04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)  
-**Showing Notifications?** → [05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)  
-**Building Navigation?** → [06-NAVIGATION-COMPONENTS.md](./06-NAVIGATION-COMPONENTS.md)  
-**Working with Media?** → [07-MEDIA-COMPONENTS.md](./07-MEDIA-COMPONENTS.md)  
-**E-commerce Features?** → [08-SPECIALTY-COMPONENTS.md](./08-SPECIALTY-COMPONENTS.md)  
-**Page Layouts?** → [09-LAYOUT-PATTERNS.md](./09-LAYOUT-PATTERNS.md)  
-**Internal IKEA Apps?** → [10-CWDS-SUBSYSTEM.md](./10-CWDS-SUBSYSTEM.md)
+**Building Forms?** → [03-INPUT-COMPONENTS.md](./03-INPUT-COMPONENTS.md)
+**Creating Buttons/Links?** → [02-ACTION-COMPONENTS.md](./02-ACTION-COMPONENTS.md)
+**Displaying Products?** → [04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)
+**Showing Notifications?** → [05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)
+**Building Navigation?** → [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)
+**E-commerce Features?** → [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)
+**Page Layouts?** → [07-LAYOUT-AND-CWDS.md](./07-LAYOUT-AND-CWDS.md)
+**Internal IKEA Apps?** → [07-LAYOUT-AND-CWDS.md](./07-LAYOUT-AND-CWDS.md)
 
 ### By Component Name
 
@@ -97,37 +93,32 @@ The documentation is organized into 10 focused modules:
 </details>
 
 <details>
-<summary><strong>Navigation Components (6)</strong></summary>
+<summary><strong>Navigation Components (4)</strong></summary>
 
 - Tabs
 - App Bar
 - Menu Item
 - Segmented Control
-- Breadcrumbs (implied)
-- Pagination (implied)
 </details>
 
 <details>
-<summary><strong>Media Components (5)</strong></summary>
+<summary><strong>Media Components (3)</strong></summary>
 
 - Image (Aspect Ratio Box, Broken Image)
-- Simple Video
 - Carousel
 - Shoppable Image
-- Avatar
 </details>
 
 <details>
-<summary><strong>Specialty Components (8)</strong></summary>
+<summary><strong>Specialty Components (7)</strong></summary>
 
 - Price
 - Price Module
 - Product Identifier
 - Rating
 - Badge
-- Pill / Icon Pill
 - Tag
-- Endorsement Label
+- Avatar
 </details>
 
 <details>
@@ -146,17 +137,20 @@ The documentation is organized into 10 focused modules:
 ### For AI Agents
 
 1. **Start with [00-QUICK-START-GUIDE.md](./00-QUICK-START-GUIDE.md)**
+
    - Get installation instructions
    - Learn common patterns
    - Understand quick reference
 
 2. **Read [01-OVERVIEW-AND-FOUNDATIONS.md](./01-OVERVIEW-AND-FOUNDATIONS.md)**
+
    - Understand design tokens
    - Learn color system
    - Master spacing scale
    - Typography system
 
 3. **Reference Component-Specific Files**
+
    - Each file contains detailed component specs
    - Includes variants, states, usage rules
    - Accessibility requirements
@@ -181,28 +175,28 @@ The documentation is organized into 10 focused modules:
 ### Colors (IKEA Brand)
 
 ```css
---color-blue-ikea: #0058A3;      /* Primary */
---color-yellow-ikea: #FFDB00;    /* Accent */
---color-success: #00A300;        /* Green */
---color-error: #E00751;          /* Red */
---color-warning: #FF8C00;        /* Orange */
+--color-blue-ikea: #0058a3; /* Primary */
+--color-yellow-ikea: #ffdb00; /* Accent */
+--color-success: #00a300; /* Green */
+--color-error: #e00751; /* Red */
+--color-warning: #ff8c00; /* Orange */
 ```
 
 ### Spacing (Base-8 Grid)
 
 ```css
---spacing-8: 8px;    /* Base unit */
---spacing-16: 16px;  /* Common padding */
---spacing-24: 24px;  /* Section spacing */
---spacing-32: 32px;  /* Large spacing */
---spacing-64: 64px;  /* Section breaks */
+--spacing-8: 8px; /* Base unit */
+--spacing-16: 16px; /* Common padding */
+--spacing-24: 24px; /* Section spacing */
+--spacing-32: 32px; /* Large spacing */
+--spacing-64: 64px; /* Section breaks */
 ```
 
 ### Typography (Noto IKEA)
 
 ```css
---text-body-medium: 14px / 20px;     /* Default body */
---text-heading-medium: 24px / 32px;  /* Default heading */
+--text-body-medium: 14px / 20px; /* Default body */
+--text-heading-medium: 24px / 32px; /* Default heading */
 --font-weight-regular: 400;
 --font-weight-bold: 700;
 ```
@@ -210,10 +204,10 @@ The documentation is organized into 10 focused modules:
 ### Breakpoints
 
 ```css
---breakpoint-sm: 600px;   /* Phone landscape */
---breakpoint-md: 900px;   /* Tablet */
---breakpoint-lg: 1200px;  /* Desktop */
---breakpoint-xl: 1440px;  /* Large desktop */
+--breakpoint-sm: 600px; /* Phone landscape */
+--breakpoint-md: 900px; /* Tablet */
+--breakpoint-lg: 1200px; /* Desktop */
+--breakpoint-xl: 1440px; /* Large desktop */
 ```
 
 ## ♿ Accessibility Standards
@@ -229,6 +223,7 @@ All components meet **WCAG 2.1 Level AA** requirements:
 ## 🌍 Internationalization
 
 All components support:
+
 - **RTL Languages** (Arabic, Hebrew) - automatic mirroring
 - **Multi-language** content with proper text wrapping
 - **Locale-specific** formatting (dates, numbers, currency)
@@ -276,12 +271,12 @@ All components support:
 
 ## 📊 Component Complexity Matrix
 
-| Complexity | Components | Time to Implement |
-|------------|------------|-------------------|
-| **Simple** | Button, Icon Button, Badge, Pill, Hyperlink, Checkbox, Radio, Switch | 30-60 min |
-| **Medium** | Input Field, Select, Card, List, Toast, Tabs, Image | 1-2 hours |
-| **Complex** | Combobox, Table, Modal, Carousel, Search, Shoppable Image | 2-4 hours |
-| **Advanced** | Full page layouts, Multi-step forms, Complex navigation | 4-8 hours |
+| Complexity   | Components                                                           | Time to Implement |
+| ------------ | -------------------------------------------------------------------- | ----------------- |
+| **Simple**   | Button, Icon Button, Badge, Pill, Hyperlink, Checkbox, Radio, Switch | 30-60 min         |
+| **Medium**   | Input Field, Select, Card, List, Toast, Tabs, Image                  | 1-2 hours         |
+| **Complex**  | Combobox, Table, Modal, Carousel, Search, Shoppable Image            | 2-4 hours         |
+| **Advanced** | Full page layouts, Multi-step forms, Complex navigation              | 4-8 hours         |
 
 ## 🐛 Common Implementation Mistakes
 
@@ -338,22 +333,27 @@ This documentation was created using:
 ## 📝 Documentation Maintenance
 
 ### Last Updated
+
 - **Documentation Generated:** November 4, 2025
 - **Source Data Extracted:** November 2, 2025
 - **Skapa Version:** 2025 (components updated through August 2025)
 
 ### Version History
+
 - **v1.0** (2025-11-04): Initial comprehensive AI agent documentation
-  - 10 organized markdown files
-  - 64+ components documented
-  - Full accessibility specs
+  - 8 organized markdown files (~6,500 lines)
+  - 50+ components documented
+  - Full accessibility specs (WCAG 2.1 AA)
   - Responsive patterns included
+  - Layout templates
+  - CWDS subsystem coverage
 
 ## 🤝 Contributing
 
 ### For AI Agents
 
 When implementing components:
+
 1. Reference the appropriate documentation file
 2. Follow accessibility guidelines strictly
 3. Use design tokens (never hardcode)
@@ -363,6 +363,7 @@ When implementing components:
 ### For Human Developers
 
 To update this documentation:
+
 1. Extract new screenshots from skapa.ikea.net
 2. Run OCR processing (`scripts/extract-cwds-from-figma.js`)
 3. Update relevant markdown files

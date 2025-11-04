@@ -20,11 +20,13 @@
 ## Input Field
 
 ### Overview
+
 Single-line text input for collecting user data.
 
 **Platforms:** Figma, React, Vue, Web Components, Android, iOS
 
 ### Anatomy
+
 ```
 Label (optional)          Helper text (optional)
    ↓                             ↓
@@ -41,8 +43,9 @@ Label (optional)          Helper text (optional)
 ### Variants
 
 #### Default Input
+
 ```jsx
-<InputField 
+<InputField
   label="Email address"
   placeholder="your.email@example.com"
   type="email"
@@ -50,8 +53,9 @@ Label (optional)          Helper text (optional)
 ```
 
 #### With Leading Icon
+
 ```jsx
-<InputField 
+<InputField
   label="Search"
   placeholder="Search products..."
   leadingIcon="search"
@@ -59,8 +63,9 @@ Label (optional)          Helper text (optional)
 ```
 
 #### With Trailing Icon
+
 ```jsx
-<InputField 
+<InputField
   label="Password"
   type="password"
   trailingIcon="visibility"
@@ -69,8 +74,9 @@ Label (optional)          Helper text (optional)
 ```
 
 #### With Helper Text
+
 ```jsx
-<InputField 
+<InputField
   label="Username"
   helperText="Must be 3-20 characters"
   pattern="[a-zA-Z0-9]{3,20}"
@@ -80,24 +86,28 @@ Label (optional)          Helper text (optional)
 ### States
 
 #### Default
+
 ```jsx
 <InputField label="Name" />
 ```
 
 #### Focused
+
 ```css
 border: 2px solid var(--color-blue-ikea);
 outline: 3px solid rgba(0, 88, 163, 0.2);
 ```
 
 #### Filled
+
 ```jsx
 <InputField label="Name" value="John Doe" />
 ```
 
 #### Error
+
 ```jsx
-<InputField 
+<InputField
   label="Email"
   value="invalid"
   error="Please enter a valid email address"
@@ -106,8 +116,9 @@ outline: 3px solid rgba(0, 88, 163, 0.2);
 ```
 
 #### Success
+
 ```jsx
-<InputField 
+<InputField
   label="Email"
   value="valid@email.com"
   success="Email verified"
@@ -116,6 +127,7 @@ outline: 3px solid rgba(0, 88, 163, 0.2);
 ```
 
 #### Disabled
+
 ```jsx
 <InputField label="Name" disabled value="Readonly value" />
 ```
@@ -140,7 +152,7 @@ inputTypes: {
 ### Validation
 
 ```jsx
-<InputField 
+<InputField
   label="Email"
   type="email"
   required
@@ -154,7 +166,7 @@ inputTypes: {
 ### Accessibility
 
 ```jsx
-<InputField 
+<InputField
   id="email-input"
   label="Email address"
   aria-required="true"
@@ -165,6 +177,7 @@ inputTypes: {
 ```
 
 **Keyboard:**
+
 - `Tab`: Navigate between fields
 - `Shift + Tab`: Navigate backwards
 - `Enter`: Submit form (if in form)
@@ -174,9 +187,11 @@ inputTypes: {
 ## Text Area
 
 ### Overview
+
 Multi-line text input for longer content.
 
 ### Anatomy
+
 ```
 Label
    ↓
@@ -191,7 +206,7 @@ Label
 ### Implementation
 
 ```jsx
-<TextArea 
+<TextArea
   label="Description"
   placeholder="Tell us about your experience..."
   rows={4}
@@ -213,7 +228,9 @@ features: {
 ```
 
 ### States
+
 Same as Input Field:
+
 - Default
 - Focused
 - Filled
@@ -226,9 +243,11 @@ Same as Input Field:
 ## Search
 
 ### Overview
+
 Specialized input for search functionality with autocomplete and suggestions.
 
 ### Anatomy
+
 ```
 ┌────────────────────────────────┐
 │ 🔍 Search query...        [×]  │
@@ -243,13 +262,13 @@ Specialized input for search functionality with autocomplete and suggestions.
 ### Implementation
 
 ```jsx
-<Search 
+<Search
   placeholder="Search products, rooms & ideas"
   onSearch={handleSearch}
   suggestions={[
-    { type: 'recent', label: 'sofas' },
-    { type: 'suggested', label: 'sofa beds' },
-    { type: 'product', label: 'STOCKHOLM sofa', id: '12345' }
+    { type: "recent", label: "sofas" },
+    { type: "suggested", label: "sofa beds" },
+    { type: "product", label: "STOCKHOLM sofa", id: "12345" },
   ]}
   showRecentSearches
   clearable
@@ -274,9 +293,11 @@ searchFeatures: {
 ## Checkbox
 
 ### Overview
+
 Binary selection control for multiple choices.
 
 ### Anatomy
+
 ```
 ┌───┐
 │ ✓ │  Label text
@@ -286,8 +307,9 @@ Binary selection control for multiple choices.
 ### Variants
 
 #### Single Checkbox
+
 ```jsx
-<Checkbox 
+<Checkbox
   label="I agree to the terms and conditions"
   checked={agreed}
   onChange={setAgreed}
@@ -295,6 +317,7 @@ Binary selection control for multiple choices.
 ```
 
 #### Checkbox Group
+
 ```jsx
 <CheckboxGroup label="Select your interests">
   <Checkbox value="living-room" label="Living room" />
@@ -304,8 +327,9 @@ Binary selection control for multiple choices.
 ```
 
 #### Indeterminate State
+
 ```jsx
-<Checkbox 
+<Checkbox
   label="Select all"
   checked={allChecked}
   indeterminate={someChecked}
@@ -329,12 +353,14 @@ states: {
 ### Usage Rules
 
 **✅ DO:**
+
 - Use for multiple independent choices
 - Keep label text short and clear
 - Indicate required fields
 - Group related checkboxes
 
 **❌ DON'T:**
+
 - Use for mutually exclusive options (use Radio instead)
 - Nest checkboxes more than 2 levels
 - Use negative language ("Don't send me emails")
@@ -344,9 +370,11 @@ states: {
 ## Radio Button
 
 ### Overview
+
 Mutually exclusive selection within a group.
 
 ### Anatomy
+
 ```
 ○ Option 1
 ● Option 2  ← Selected
@@ -356,7 +384,7 @@ Mutually exclusive selection within a group.
 ### Implementation
 
 ```jsx
-<RadioGroup 
+<RadioGroup
   label="Delivery method"
   value={deliveryMethod}
   onChange={setDeliveryMethod}
@@ -382,12 +410,14 @@ states: {
 ### Usage Rules
 
 **✅ DO:**
+
 - Use for mutually exclusive choices
 - Always have one option pre-selected (when possible)
 - Show all options at once
 - Keep options to 2-7 choices
 
 **❌ DON'T:**
+
 - Use for binary yes/no (use Checkbox or Switch)
 - Allow deselection after selection (use Checkbox if needed)
 - Hide options in dropdowns (use Select instead)
@@ -413,9 +443,11 @@ decisionTree: {
 ## Switch / Toggle
 
 ### Overview
+
 Binary control for instant on/off states.
 
 ### Anatomy
+
 ```
 OFF  [○────]  Label
 ON   [────●]  Label
@@ -424,7 +456,7 @@ ON   [────●]  Label
 ### Implementation
 
 ```jsx
-<Switch 
+<Switch
   label="Enable notifications"
   checked={notificationsEnabled}
   onChange={setNotificationsEnabled}
@@ -467,11 +499,13 @@ useCheckbox: {
 ```
 
 **✅ DO:**
+
 - Use for settings with immediate effect
 - Label clearly what will happen when toggled
 - Provide instant feedback
 
 **❌ DON'T:**
+
 - Use in forms requiring submit button
 - Use for actions requiring confirmation
 - Use for multiple related options (use Checkbox group)
@@ -481,9 +515,11 @@ useCheckbox: {
 ## Select (Native)
 
 ### Overview
+
 Dropdown menu for single selection from many options.
 
 ### Anatomy
+
 ```
 ┌──────────────────────────┐
 │ Selected option      ▼   │
@@ -500,7 +536,7 @@ Dropdown menu for single selection from many options.
 ### Implementation
 
 ```jsx
-<Select 
+<Select
   label="Country"
   value={selectedCountry}
   onChange={setSelectedCountry}
@@ -531,12 +567,14 @@ Dropdown menu for single selection from many options.
 ### Usage Rules
 
 **✅ DO:**
+
 - Use for 8+ options
 - Sort options logically (alphabetical, frequency, etc.)
 - Include search for 15+ options (use Combobox)
 - Provide clear default/placeholder
 
 **❌ DON'T:**
+
 - Use for 2-7 options (use Radio Button)
 - Use for critical frequently-used options (makes them hidden)
 - Use for binary choices (use Switch or Checkbox)
@@ -546,9 +584,11 @@ Dropdown menu for single selection from many options.
 ## Combobox
 
 ### Overview
+
 Searchable dropdown with autocomplete (Select + Search combined).
 
 ### Anatomy
+
 ```
 ┌──────────────────────────┐
 │ Type to search...    ▼   │
@@ -566,7 +606,7 @@ Searchable dropdown with autocomplete (Select + Search combined).
 ### Implementation
 
 ```jsx
-<Combobox 
+<Combobox
   label="Product category"
   placeholder="Search categories..."
   options={categories}
@@ -610,9 +650,11 @@ useCombobox: {
 ## Slider
 
 ### Overview
+
 Continuous or discrete value selection along a track.
 
 ### Anatomy
+
 ```
 Label: 50%
 ├────●─────────┤  ← Track with thumb
@@ -622,8 +664,9 @@ Label: 50%
 ### Variants
 
 #### Single Thumb
+
 ```jsx
-<Slider 
+<Slider
   label="Volume"
   min={0}
   max={100}
@@ -634,8 +677,9 @@ Label: 50%
 ```
 
 #### Range (Two Thumbs)
+
 ```jsx
-<Slider 
+<Slider
   label="Price range"
   min={0}
   max={5000}
@@ -647,8 +691,9 @@ Label: 50%
 ```
 
 #### With Steps
+
 ```jsx
-<Slider 
+<Slider
   label="Quantity"
   min={0}
   max={10}
@@ -677,9 +722,11 @@ sliderFeatures: {
 ## Quantity Stepper
 
 ### Overview
+
 Increment/decrement control for quantities.
 
 ### Anatomy
+
 ```
 ┌───┬─────┬───┐
 │ − │  5  │ + │
@@ -689,7 +736,7 @@ Increment/decrement control for quantities.
 ### Implementation
 
 ```jsx
-<QuantityStepper 
+<QuantityStepper
   label="Quantity"
   value={quantity}
   onChange={setQuantity}
@@ -702,7 +749,7 @@ Increment/decrement control for quantities.
 ### With Input Field
 
 ```jsx
-<QuantityStepper 
+<QuantityStepper
   label="Quantity"
   value={quantity}
   onChange={setQuantity}
@@ -727,12 +774,14 @@ stepperFeatures: {
 ### Usage Rules
 
 **✅ DO:**
+
 - Use for shopping cart quantities
 - Disable buttons at min/max limits
 - Show current value clearly
 - Support keyboard input (arrows)
 
 **❌ DON'T:**
+
 - Use for large ranges (use Slider or Input instead)
 - Allow negative quantities (unless appropriate)
 - Hide current value
@@ -751,19 +800,23 @@ stepperFeatures: {
     <InputField label="Last name" required />
     <InputField label="Email" type="email" required />
   </FormSection>
-  
+
   <FormSection title="Preferences">
     <CheckboxGroup label="Interests">
       <Checkbox value="living" label="Living room" />
       <Checkbox value="bedroom" label="Bedroom" />
     </CheckboxGroup>
-    
+
     <Switch label="Receive marketing emails" />
   </FormSection>
-  
+
   <ButtonGroup>
-    <Button variant="primary" type="submit">Submit</Button>
-    <Button variant="secondary" type="button">Cancel</Button>
+    <Button variant="primary" type="submit">
+      Submit
+    </Button>
+    <Button variant="secondary" type="button">
+      Cancel
+    </Button>
   </ButtonGroup>
 </Form>
 ```
@@ -774,7 +827,7 @@ stepperFeatures: {
 
 ```jsx
 // Real-time (for immediate feedback)
-<InputField 
+<InputField
   label="Username"
   value={username}
   onChange={(e) => {
