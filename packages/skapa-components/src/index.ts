@@ -23,5 +23,9 @@ export type { FABProps, FABSize, FABPosition } from './components/actions/FAB';
 export { SplitButton } from './components/actions/SplitButton';
 export type { SplitButtonProps, SplitButtonOption, SplitButtonSize, SplitButtonVariant } from './components/actions/SplitButton';
 
+// Inputs (12 components)
+export { TextField } from './components/inputs/TextField';
+export type { TextFieldProps, TextFieldSize, TextFieldVariant } from './components/inputs/TextField';
+
 // Re-export styles
 import './styles/tokens.css';
