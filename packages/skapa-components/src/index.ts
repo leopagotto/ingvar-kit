@@ -110,7 +110,7 @@ export type { SnackbarProps, SnackbarPosition } from './components/feedback/Snac
 export { Dialog } from './components/feedback/Dialog';
 export type { DialogProps, DialogSize } from './components/feedback/Dialog';
 
-// Navigation (14 components) 🔄 IN PROGRESS
+// Navigation (14 components) ✅ COMPLETE
 export { Tabs } from './components/navigation/Tabs';
 export type { TabsProps, TabItem } from './components/navigation/Tabs';
 
@@ -128,6 +128,30 @@ export type { FooterProps } from './components/navigation/Footer';
 
 export { Menu } from './components/navigation/Menu';
 export type { MenuProps, MenuItem } from './components/navigation/Menu';
+
+export { Navbar } from './components/navigation/Navbar';
+export type { NavbarProps } from './components/navigation/Navbar';
+
+export { Stepper } from './components/navigation/Stepper';
+export type { StepperProps, Step } from './components/navigation/Stepper';
+
+export { Sidebar } from './components/navigation/Sidebar';
+export type { SidebarProps } from './components/navigation/Sidebar';
+
+export { Drawer } from './components/navigation/Drawer';
+export type { DrawerProps } from './components/navigation/Drawer';
+
+export { BottomNav } from './components/navigation/BottomNav';
+export type { BottomNavProps, BottomNavItem } from './components/navigation/BottomNav';
+
+export { AppBar } from './components/navigation/AppBar';
+export type { AppBarProps } from './components/navigation/AppBar';
+
+export { SegmentedControl } from './components/navigation/SegmentedControl';
+export type { SegmentedControlProps, SegmentOption } from './components/navigation/SegmentedControl';
+
+export { Accordion } from './components/navigation/Accordion';
+export type { AccordionProps, AccordionItem } from './components/navigation/Accordion';
 
 // Re-export styles
 import './styles/tokens.css';

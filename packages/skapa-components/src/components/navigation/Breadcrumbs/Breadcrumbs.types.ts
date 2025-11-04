@@ -9,13 +9,13 @@ export interface BreadcrumbsProps {
    * Breadcrumb items
    */
   items: BreadcrumbItem[];
-  
+
   /**
    * Separator character
    * @default '/'
    */
   separator?: string;
-  
+
   /**
    * Additional CSS class
    */

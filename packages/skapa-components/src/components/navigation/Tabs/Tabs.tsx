@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import type { TabsProps } from './Tabs.types';
-import styles from './Tabs.module.css';
+import React, { useState } from "react";
+import type { TabsProps } from "./Tabs.types";
+import styles from "./Tabs.module.css";
 
 /**
  * Tabs component for content organization
- * 
+ *
  * @example
- * <Tabs 
+ * <Tabs
  *   items={[
  *     { id: '1', label: 'Tab 1', content: <div>Content 1</div> },
  *     { id: '2', label: 'Tab 2', content: <div>Content 2</div> }
@@ -25,7 +25,10 @@ export const Tabs: React.FC<TabsProps> = ({
     defaultActiveTab || items[0]?.id
   );
 
-  const activeTab = controlledActiveTab !== undefined ? controlledActiveTab : uncontrolledActiveTab;
+  const activeTab =
+    controlledActiveTab !== undefined
+      ? controlledActiveTab
+      : uncontrolledActiveTab;
 
   const handleTabClick = (tabId: string) => {
     if (controlledActiveTab === undefined) {
@@ -37,8 +40,11 @@ export const Tabs: React.FC<TabsProps> = ({
   const activeContent = items.find((item) => item.id === activeTab)?.content;
 
   return (
-    <div className={`${styles.tabs} ${className || ''}`}>
-      <div className={`${styles.tabList} ${subtle ? styles.subtle : ''}`} role="tablist">
+    <div className={`${styles.tabs} ${className || ""}`}>
+      <div
+        className={`${styles.tabList} ${subtle ? styles.subtle : ""}`}
+        role="tablist"
+      >
         {items.map((item) => (
           <button
             key={item.id}
@@ -47,7 +53,9 @@ export const Tabs: React.FC<TabsProps> = ({
             aria-selected={activeTab === item.id}
             aria-controls={`panel-${item.id}`}
             id={`tab-${item.id}`}
-            className={`${styles.tab} ${activeTab === item.id ? styles.active : ''}`}
+            className={`${styles.tab} ${
+              activeTab === item.id ? styles.active : ""
+            }`}
             onClick={() => handleTabClick(item.id)}
             disabled={item.disabled}
           >
@@ -55,11 +63,16 @@ export const Tabs: React.FC<TabsProps> = ({
           </button>
         ))}
       </div>
-      <div className={styles.panel} role="tabpanel" id={`panel-${activeTab}`} aria-labelledby={`tab-${activeTab}`}>
+      <div
+        className={styles.panel}
+        role="tabpanel"
+        id={`panel-${activeTab}`}
+        aria-labelledby={`tab-${activeTab}`}
+      >
         {activeContent}
       </div>
     </div>
   );
 };
 
-Tabs.displayName = 'Tabs';
+Tabs.displayName = "Tabs";

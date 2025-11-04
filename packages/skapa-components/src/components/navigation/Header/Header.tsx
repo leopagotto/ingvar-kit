@@ -1,12 +1,12 @@
-import React from 'react';
-import type { HeaderProps } from './Header.types';
-import styles from './Header.module.css';
+import React from "react";
+import type { HeaderProps } from "./Header.types";
+import styles from "./Header.module.css";
 
 /**
  * Header component for page navigation
- * 
+ *
  * @example
- * <Header 
+ * <Header
  *   logo={<Logo />}
  *   actions={<Button>Login</Button>}
  * >
@@ -18,7 +18,9 @@ export const Header = React.forwardRef<HTMLElement, HeaderProps>(
     return (
       <header
         ref={ref}
-        className={`${styles.header} ${sticky ? styles.sticky : ''} ${className || ''}`}
+        className={`${styles.header} ${sticky ? styles.sticky : ""} ${
+          className || ""
+        }`}
         {...props}
       >
         {logo && <div className={styles.logo}>{logo}</div>}
@@ -29,4 +31,4 @@ export const Header = React.forwardRef<HTMLElement, HeaderProps>(
   }
 );
 
-Header.displayName = 'Header';
+Header.displayName = "Header";

@@ -1,14 +1,19 @@
-import React from 'react';
-import type { MenuProps } from './Menu.types';
-import styles from './Menu.module.css';
+import React from "react";
+import type { MenuProps } from "./Menu.types";
+import styles from "./Menu.module.css";
 
-export const Menu: React.FC<MenuProps> = ({ items, isOpen = false, onClose, className }) => {
+export const Menu: React.FC<MenuProps> = ({
+  items,
+  isOpen = false,
+  onClose,
+  className,
+}) => {
   if (!isOpen) return null;
 
   return (
     <>
       <div className={styles.overlay} onClick={onClose} />
-      <div className={`${styles.menu} ${className || ''}`} role="menu">
+      <div className={`${styles.menu} ${className || ""}`} role="menu">
         {items.map((item, index) =>
           item.divider ? (
             <div key={index} className={styles.divider} role="separator" />
@@ -34,4 +39,4 @@ export const Menu: React.FC<MenuProps> = ({ items, isOpen = false, onClose, clas
   );
 };
 
-Menu.displayName = 'Menu';
+Menu.displayName = "Menu";

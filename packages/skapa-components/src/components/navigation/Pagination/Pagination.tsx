@@ -1,12 +1,12 @@
-import React from 'react';
-import type { PaginationProps } from './Pagination.types';
-import styles from './Pagination.module.css';
+import React from "react";
+import type { PaginationProps } from "./Pagination.types";
+import styles from "./Pagination.module.css";
 
 /**
  * Pagination component
- * 
+ *
  * @example
- * <Pagination 
+ * <Pagination
  *   totalPages={10}
  *   currentPage={3}
  *   onPageChange={(page) => console.log(page)}
@@ -27,7 +27,7 @@ export const Pagination: React.FC<PaginationProps> = ({
 
     if (leftSibling > 2) {
       pages.push(1);
-      if (leftSibling > 3) pages.push('...');
+      if (leftSibling > 3) pages.push("...");
     } else {
       for (let i = 1; i < leftSibling; i++) {
         pages.push(i);
@@ -39,7 +39,7 @@ export const Pagination: React.FC<PaginationProps> = ({
     }
 
     if (rightSibling < totalPages - 1) {
-      if (rightSibling < totalPages - 2) pages.push('...');
+      if (rightSibling < totalPages - 2) pages.push("...");
       pages.push(totalPages);
     } else {
       for (let i = rightSibling + 1; i <= totalPages; i++) {
@@ -53,7 +53,10 @@ export const Pagination: React.FC<PaginationProps> = ({
   const pages = generatePageNumbers();
 
   return (
-    <nav aria-label="Pagination" className={`${styles.pagination} ${className || ''}`}>
+    <nav
+      aria-label="Pagination"
+      className={`${styles.pagination} ${className || ""}`}
+    >
       {showFirstLast && (
         <button
           type="button"
@@ -75,14 +78,16 @@ export const Pagination: React.FC<PaginationProps> = ({
         ‹
       </button>
       {pages.map((page, index) =>
-        typeof page === 'number' ? (
+        typeof page === "number" ? (
           <button
             key={index}
             type="button"
-            className={`${styles.button} ${page === currentPage ? styles.active : ''}`}
+            className={`${styles.button} ${
+              page === currentPage ? styles.active : ""
+            }`}
             onClick={() => onPageChange(page)}
             aria-label={`Page ${page}`}
-            aria-current={page === currentPage ? 'page' : undefined}
+            aria-current={page === currentPage ? "page" : undefined}
           >
             {page}
           </button>
@@ -116,4 +121,4 @@ export const Pagination: React.FC<PaginationProps> = ({
   );
 };
 
-Pagination.displayName = 'Pagination';
+Pagination.displayName = "Pagination";
