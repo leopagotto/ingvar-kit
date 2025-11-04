@@ -14,15 +14,18 @@ export const SegmentedControl: React.FC<SegmentedControlProps> = ({
   className,
 }) => {
   // Find the active index
-  const activeIndex = options.findIndex(opt => opt.value === value);
-  
+  const activeIndex = options.findIndex((opt) => opt.value === value);
+
   // Convert our options to Ingka format
-  const items = options.map(opt => ({
+  const items = options.map((opt) => ({
     label: opt.label,
-    disabled: opt.disabled
+    disabled: opt.disabled,
   }));
 
-  const handleClick = (_e: React.MouseEvent<HTMLButtonElement>, index: number) => {
+  const handleClick = (
+    _e: React.MouseEvent<HTMLButtonElement>,
+    index: number
+  ) => {
     onChange(options[index].value);
   };
 
