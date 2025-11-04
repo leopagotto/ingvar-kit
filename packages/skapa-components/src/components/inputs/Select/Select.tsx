@@ -1,44 +1,44 @@
-import React from 'react';
-import clsx from 'clsx';
-import type { SelectProps } from './Select.types';
-import styles from './Select.module.css';
+import React from "react";
+import clsx from "clsx";
+import type { SelectProps } from "./Select.types";
+import styles from "./Select.module.css";
 
 /**
  * Select component for dropdown selection
- * 
+ *
  * @example
  * // Basic select
- * <Select 
+ * <Select
  *   options={[
  *     { value: '1', label: 'Option 1' },
  *     { value: '2', label: 'Option 2' }
  *   ]}
  * />
- * 
+ *
  * @example
  * // With label and placeholder
- * <Select 
+ * <Select
  *   label="Country"
  *   placeholder="Select a country"
  *   options={countries}
  * />
- * 
+ *
  * @example
  * // Controlled select
- * <Select 
+ * <Select
  *   value={selectedValue}
  *   onChange={(e) => setSelectedValue(e.target.value)}
  *   options={options}
  * />
- * 
+ *
  * @example
  * // With error
- * <Select 
+ * <Select
  *   label="Size"
  *   error="Please select a size"
  *   options={sizes}
  * />
- * 
+ *
  * @example
  * // Different sizes and variants
  * <Select size="small" variant="outlined" options={options} />
@@ -48,8 +48,8 @@ import styles from './Select.module.css';
 export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   (
     {
-      size = 'medium',
-      variant = 'outlined',
+      size = "medium",
+      variant = "outlined",
       label,
       helperText,
       error,
@@ -63,36 +63,35 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
     },
     ref
   ) => {
-    const selectClasses = clsx(
-      styles.select,
-      styles[size],
-      styles[variant],
-      {
-        [styles.error]: Boolean(error),
-      }
-    );
+    const selectClasses = clsx(styles.select, styles[size], styles[variant], {
+      [styles.error]: Boolean(error),
+    });
 
-    const labelClasses = clsx(
-      styles.label,
-      styles[size]
-    );
+    const labelClasses = clsx(styles.label, styles[size]);
 
-    const helperTextClasses = clsx(
-      styles.helperText,
-      {
-        [styles.error]: Boolean(error),
-      }
-    );
+    const helperTextClasses = clsx(styles.helperText, {
+      [styles.error]: Boolean(error),
+    });
 
     return (
-      <div className={clsx(styles.container, { [styles.fullWidth]: fullWidth }, className)}>
+      <div
+        className={clsx(
+          styles.container,
+          { [styles.fullWidth]: fullWidth },
+          className
+        )}
+      >
         {label && (
           <label className={labelClasses}>
             {label}
             {required && <span className={styles.required}>*</span>}
           </label>
         )}
-        <div className={clsx(styles.selectWrapper, { [styles.fullWidth]: fullWidth })}>
+        <div
+          className={clsx(styles.selectWrapper, {
+            [styles.fullWidth]: fullWidth,
+          })}
+        >
           <select
             ref={ref}
             className={selectClasses}
@@ -140,4 +139,4 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   }
 );
 
-Select.displayName = 'Select';
+Select.displayName = "Select";

@@ -78,6 +78,16 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@ingka/button": "^19.0.4",
+    "@ingka/checkbox": "^18.0.4",
+    "@ingka/input-field": "^23.0.4",
+    "@ingka/quantity-stepper": "^11.0.4",
+    "@ingka/radio-button": "^17.0.4",
+    "@ingka/search": "^11.0.4",
+    "@ingka/select": "^15.0.4",
+    "@ingka/slider": "^21.0.4",
+    "@ingka/text-area": "^18.0.4",
+    "@ingka/toggle": "^9.0.4",
     "clsx": "^2.0.0"
   }
 }

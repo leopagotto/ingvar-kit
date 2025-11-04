@@ -8,28 +8,28 @@ export interface SliderProps extends Omit<React.InputHTMLAttributes<HTMLInputEle
    * @default 'medium'
    */
   size?: SliderSize;
-  
+
   /**
    * Label text
    */
   label?: string;
-  
+
   /**
    * Helper text displayed below the slider
    */
   helperText?: string;
-  
+
   /**
    * Error message (shows error state)
    */
   error?: string;
-  
+
   /**
    * Show current value
    * @default true
    */
   showValue?: boolean;
-  
+
   /**
    * Full width
    * @default false

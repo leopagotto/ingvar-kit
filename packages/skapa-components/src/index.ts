@@ -45,5 +45,11 @@ export type { SelectProps, SelectOption, SelectSize, SelectVariant } from './com
 export { Slider } from './components/inputs/Slider';
 export type { SliderProps, SliderSize } from './components/inputs/Slider';
 
+export { NumberField } from './components/inputs/NumberField';
+export type { NumberFieldProps, NumberFieldSize } from './components/inputs/NumberField';
+
+export { SearchField } from './components/inputs/SearchField';
+export type { SearchFieldProps, SearchFieldSize } from './components/inputs/SearchField';
+
 // Re-export styles
 import './styles/tokens.css';

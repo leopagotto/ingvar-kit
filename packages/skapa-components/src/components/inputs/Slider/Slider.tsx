@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import clsx from 'clsx';
-import type { SliderProps } from './Slider.types';
-import styles from './Slider.module.css';
+import React, { useState } from "react";
+import clsx from "clsx";
+import type { SliderProps } from "./Slider.types";
+import styles from "./Slider.module.css";
 
 /**
  * Slider component for range input
- * 
+ *
  * @example
  * // Basic slider
  * <Slider min={0} max={100} defaultValue={50} />
- * 
+ *
  * @example
  * // With label and value display
- * <Slider 
+ * <Slider
  *   label="Volume"
  *   min={0}
  *   max={100}
  *   defaultValue={75}
  *   showValue
  * />
- * 
+ *
  * @example
  * // Controlled slider
- * <Slider 
+ * <Slider
  *   label="Price"
  *   value={price}
  *   onChange={(e) => setPrice(Number(e.target.value))}
@@ -30,16 +30,16 @@ import styles from './Slider.module.css';
  *   max={1000}
  *   step={10}
  * />
- * 
+ *
  * @example
  * // Different sizes
  * <Slider size="small" label="Small" min={0} max={100} />
  * <Slider size="medium" label="Medium" min={0} max={100} />
  * <Slider size="large" label="Large" min={0} max={100} />
- * 
+ *
  * @example
  * // With error
- * <Slider 
+ * <Slider
  *   label="Age"
  *   error="Value must be between 18 and 65"
  *   min={0}
@@ -49,7 +49,7 @@ import styles from './Slider.module.css';
 export const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
   (
     {
-      size = 'medium',
+      size = "medium",
       label,
       helperText,
       error,
@@ -68,7 +68,12 @@ export const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
     ref
   ) => {
     const [internalValue, setInternalValue] = useState(
-      (value !== undefined ? value : defaultValue !== undefined ? defaultValue : min).toString()
+      (value !== undefined
+        ? value
+        : defaultValue !== undefined
+        ? defaultValue
+        : min
+      ).toString()
     );
 
     const currentValue = value !== undefined ? value : internalValue;
@@ -80,36 +85,28 @@ export const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
       onChange?.(e);
     };
 
-    const sliderClasses = clsx(
-      styles.slider,
-      styles[size],
-      {
-        [styles.error]: Boolean(error),
-      }
-    );
+    const sliderClasses = clsx(styles.slider, styles[size], {
+      [styles.error]: Boolean(error),
+    });
 
-    const labelClasses = clsx(
-      styles.label,
-      styles[size]
-    );
+    const labelClasses = clsx(styles.label, styles[size]);
 
-    const valueClasses = clsx(
-      styles.value,
-      styles[size],
-      {
-        [styles.error]: Boolean(error),
-      }
-    );
+    const valueClasses = clsx(styles.value, styles[size], {
+      [styles.error]: Boolean(error),
+    });
 
-    const helperTextClasses = clsx(
-      styles.helperText,
-      {
-        [styles.error]: Boolean(error),
-      }
-    );
+    const helperTextClasses = clsx(styles.helperText, {
+      [styles.error]: Boolean(error),
+    });
 
     return (
-      <div className={clsx(styles.container, { [styles.fullWidth]: fullWidth }, className)}>
+      <div
+        className={clsx(
+          styles.container,
+          { [styles.fullWidth]: fullWidth },
+          className
+        )}
+      >
         {(label || showValue) && (
           <div className={styles.header}>
             {label && (
@@ -118,9 +115,7 @@ export const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
                 {required && <span className={styles.required}>*</span>}
               </label>
             )}
-            {showValue && (
-              <span className={valueClasses}>{currentValue}</span>
-            )}
+            {showValue && <span className={valueClasses}>{currentValue}</span>}
           </div>
         )}
         <div className={styles.sliderWrapper}>
@@ -145,4 +140,4 @@ export const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
   }
 );
 
-Slider.displayName = 'Slider';
+Slider.displayName = "Slider";
