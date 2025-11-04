@@ -30,20 +30,26 @@ export const Slider = React.forwardRef<HTMLInputElement, SliderProps>(
     const hasError = Boolean(error);
 
     // Convert to @ingka/slider format
-    const startValue = value !== undefined ? value : defaultValue !== undefined ? defaultValue : min;
-    
+    const startValue =
+      value !== undefined
+        ? value
+        : defaultValue !== undefined
+        ? defaultValue
+        : min;
+
     const handleChange = (values: number[]) => {
       if (onChange) {
         // Create a synthetic event-like object
         const syntheticEvent = {
-          target: { value: values[0] }
+          target: { value: values[0] },
         } as any;
         onChange(syntheticEvent);
       }
     };
 
     // Filter incompatible props
-    const { size, showValue, fullWidth, marks, ...compatibleProps } = props as any;
+    const { size, showValue, fullWidth, marks, ...compatibleProps } =
+      props as any;
 
     return (
       <div className={`${styles.wrapper} ${className || ""}`}>

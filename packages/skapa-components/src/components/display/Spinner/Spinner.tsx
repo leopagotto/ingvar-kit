@@ -4,12 +4,7 @@ import styles from "./Spinner.module.css";
 
 /**
  * Spinner loading indicator
- *
- * @example
- * <Spinner />
- *
- * @example
- * <Spinner size="large" label="Loading content..." />
+ * Note: Consider using the Loading component for @ingka/loading integration
  */
 export const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
   ({ size = "medium", label = "Loading...", className, ...props }, ref) => {

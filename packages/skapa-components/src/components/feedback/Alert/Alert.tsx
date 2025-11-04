@@ -1,27 +1,11 @@
 import React from "react";
+import IngkaInlineMessage from "@ingka/inline-message";
 import type { AlertProps } from "./Alert.types";
 import styles from "./Alert.module.css";
 
 /**
  * Alert component for inline notifications
- *
- * @example
- * <Alert message="This is an informational alert" />
- *
- * @example
- * <Alert
- *   title="Success"
- *   message="Your changes have been saved"
- *   variant="success"
- * />
- *
- * @example
- * <Alert
- *   message="Error occurred"
- *   variant="error"
- *   dismissible
- *   onDismiss={() => console.log('dismissed')}
- * />
+ * Wraps @ingka/inline-message for official IKEA compliance
  */
 export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   (
@@ -37,42 +21,34 @@ export const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
     },
     ref
   ) => {
-    const icons = {
-      info: "🔵",
-      success: "✅",
-      warning: "⚠️",
-      error: "❌",
+    // Map our variants to Ingka variants
+    const variantMap: Record<
+      string,
+      "informative" | "positive" | "cautionary" | "negative"
+    > = {
+      info: "informative",
+      success: "positive",
+      warning: "cautionary",
+      error: "negative",
     };
 
     return (
       <div
         ref={ref}
-        className={`${styles.alert} ${styles[variant]} ${styles[size]} ${
-          className || ""
-        }`}
-        role="alert"
+        className={`${styles.wrapper} ${className || ""}`}
         {...props}
       >
-        <span className={styles.icon} aria-hidden="true">
-          {icons[variant]}
-        </span>
-        <div className={styles.content}>
-          {title && <div className={styles.title}>{title}</div>}
-          <div className={styles.message}>{message}</div>
-        </div>
-        {dismissible && (
-          <button
-            type="button"
-            className={styles.dismissButton}
-            onClick={onDismiss}
-            aria-label="Dismiss alert"
-          >
-            ✕
-          </button>
-        )}
+        <IngkaInlineMessage
+          variant={variantMap[variant]}
+          title={title}
+          body={message}
+          dismissable={dismissible}
+          onDismissClick={onDismiss as any}
+          className={styles.alert}
+        />
       </div>
     );
   }
 );
 
-Alert.displayName = "Alert";
+Alert.displayName = "SkapaAlert";
