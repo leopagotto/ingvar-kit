@@ -1,10 +1,11 @@
-import React from 'react';
-import clsx from 'clsx';
-import type { HyperlinkProps } from './Hyperlink.types';
-import styles from './Hyperlink.module.css';
+import React from "react";
+import IngkaHyperlink from "@ingka/hyperlink";
+import type { HyperlinkProps } from "./Hyperlink.types";
+import styles from "./Hyperlink.module.css";
 
 /**
  * Hyperlink Component - Text links for navigation
+ * Wraps @ingka/hyperlink for official IKEA compliance
  *
  * Hyperlinks are used for navigation between pages or sections.
  * Use 'regular' variant for prominent links, 'subtle' for inline text links.
@@ -30,45 +31,30 @@ import styles from './Hyperlink.module.css';
 export const Hyperlink = React.forwardRef<HTMLAnchorElement, HyperlinkProps>(
   (
     {
-      variant = 'regular',
-      startIcon,
-      endIcon,
+      variant = "regular",
       external = false,
       className,
       children,
-      target,
-      rel,
+      href,
       ...props
     },
     ref
   ) => {
-    const linkClasses = clsx(
-      styles.hyperlink,
-      styles[variant],
-      {
-        [styles.external]: external,
-      },
-      className
-    );
-
-    // Automatically add security attributes for external links
-    const linkTarget = external ? '_blank' : target;
-    const linkRel = external ? 'noopener noreferrer' : rel;
-
     return (
-      <a
-        ref={ref}
-        className={linkClasses}
-        target={linkTarget}
-        rel={linkRel}
-        {...props}
-      >
-        {startIcon && <span className={styles.startIcon}>{startIcon}</span>}
-        {children}
-        {endIcon && <span className={styles.endIcon}>{endIcon}</span>}
-      </a>
+      <div className={`${styles.wrapper} ${className || ""}`}>
+        <IngkaHyperlink
+          ref={ref}
+          url={href}
+          newWindow={external}
+          subtle={variant === "subtle"}
+          className={styles.hyperlink}
+          {...props}
+        >
+          {children}
+        </IngkaHyperlink>
+      </div>
     );
   }
 );
 
-Hyperlink.displayName = 'SkapaHyperlink';
+Hyperlink.displayName = "SkapaHyperlink";
