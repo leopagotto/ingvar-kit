@@ -153,5 +153,24 @@ export type { SegmentedControlProps, SegmentOption } from './components/navigati
 export { Accordion } from './components/navigation/Accordion';
 export type { AccordionProps, AccordionItem } from './components/navigation/Accordion';
 
+// CWDS (6 components) ✅ COMPLETE
+export { GlobalHeader } from './components/cwds/GlobalHeader';
+export type { GlobalHeaderProps } from './components/cwds/GlobalHeader';
+
+export { SearchBar } from './components/cwds/SearchBar';
+export type { SearchBarProps } from './components/cwds/SearchBar';
+
+export { UserProfile } from './components/cwds/UserProfile';
+export type { UserProfileProps, UserProfileMenuItem } from './components/cwds/UserProfile';
+
+export { Cart } from './components/cwds/Cart';
+export type { CartProps, CartItem } from './components/cwds/Cart';
+
+export { ProductCard } from './components/cwds/ProductCard';
+export type { ProductCardProps } from './components/cwds/ProductCard';
+
+export { CategoryNav } from './components/cwds/CategoryNav';
+export type { CategoryNavProps, Category } from './components/cwds/CategoryNav';
+
 // Re-export styles
 import './styles/tokens.css';
