@@ -1,16 +1,16 @@
-import React from 'react';
-import clsx from 'clsx';
-import type { JumboButtonProps } from './JumboButton.types';
-import styles from './JumboButton.module.css';
+import React from "react";
+import clsx from "clsx";
+import type { JumboButtonProps } from "./JumboButton.types";
+import styles from "./JumboButton.module.css";
 
 /**
  * JumboButton Component - Large prominent call-to-action button
- * 
+ *
  * Used for high-priority actions that need extra visibility. Common in hero sections,
  * landing pages, or as primary CTAs in footers.
- * 
+ *
  * Based on: docs/ai-agents/skapa-design-system/01-ACTIONS.md
- * 
+ *
  * @example
  * ```tsx
  * <JumboButton
@@ -19,7 +19,7 @@ import styles from './JumboButton.module.css';
  *   icon={<ShoppingCartIcon />}
  *   onClick={handleShop}
  * />
- * 
+ *
  * <JumboButton
  *   variant="footer"
  *   label="Find a Store"
@@ -28,10 +28,13 @@ import styles from './JumboButton.module.css';
  * />
  * ```
  */
-export const JumboButton = React.forwardRef<HTMLButtonElement, JumboButtonProps>(
+export const JumboButton = React.forwardRef<
+  HTMLButtonElement,
+  JumboButtonProps
+>(
   (
     {
-      variant = 'regular',
+      variant = "regular",
       label,
       description,
       icon,
@@ -39,7 +42,7 @@ export const JumboButton = React.forwardRef<HTMLButtonElement, JumboButtonProps>
       fullWidth = false,
       disabled = false,
       className,
-      type = 'button',
+      type = "button",
       ...props
     },
     ref
@@ -67,11 +70,13 @@ export const JumboButton = React.forwardRef<HTMLButtonElement, JumboButtonProps>
         {icon && !loading && <span className={styles.icon}>{icon}</span>}
         <div className={styles.content}>
           <span className={styles.label}>{label}</span>
-          {description && <span className={styles.description}>{description}</span>}
+          {description && (
+            <span className={styles.description}>{description}</span>
+          )}
         </div>
       </button>
     );
   }
 );
 
-JumboButton.displayName = 'SkapaJumboButton';
+JumboButton.displayName = "SkapaJumboButton";

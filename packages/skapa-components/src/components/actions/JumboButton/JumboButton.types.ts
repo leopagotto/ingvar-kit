@@ -8,28 +8,28 @@ export interface JumboButtonProps extends React.ButtonHTMLAttributes<HTMLButtonE
    * @default 'regular'
    */
   variant?: JumboButtonVariant;
-  
+
   /**
    * Main button label/heading
    */
   label: string;
-  
+
   /**
    * Supporting text/description
    */
   description?: string;
-  
+
   /**
    * Icon to display
    */
   icon?: React.ReactNode;
-  
+
   /**
    * Whether the button is in a loading state
    * @default false
    */
   loading?: boolean;
-  
+
   /**
    * Whether the button should take full width
    * @default false

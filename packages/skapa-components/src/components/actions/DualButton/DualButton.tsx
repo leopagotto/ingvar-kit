@@ -1,16 +1,16 @@
-import React from 'react';
-import clsx from 'clsx';
-import type { DualButtonProps } from './DualButton.types';
-import styles from './DualButton.module.css';
+import React from "react";
+import clsx from "clsx";
+import type { DualButtonProps } from "./DualButton.types";
+import styles from "./DualButton.module.css";
 
 /**
  * DualButton Component - Combined button pair for related actions
- * 
+ *
  * Used for presenting two closely related actions together (e.g., "Add to Cart" + "Buy Now").
  * Commonly seen in e-commerce for primary and alternative purchase paths.
- * 
+ *
  * Based on: docs/ai-agents/skapa-design-system/01-ACTIONS.md
- * 
+ *
  * @example
  * ```tsx
  * <DualButton
@@ -22,8 +22,8 @@ import styles from './DualButton.module.css';
  * ```
  */
 export const DualButton: React.FC<DualButtonProps> = ({
-  variant = 'default',
-  size = 'medium',
+  variant = "default",
+  size = "medium",
   primaryLabel,
   secondaryLabel,
   onPrimaryClick,
@@ -66,4 +66,4 @@ export const DualButton: React.FC<DualButtonProps> = ({
   );
 };
 
-DualButton.displayName = 'SkappaDualButton';
+DualButton.displayName = "SkappaDualButton";

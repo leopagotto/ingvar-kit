@@ -1,4 +1,4 @@
-// Actions (8 components)
+// Actions (8 components - COMPLETE)
 export { Button } from './components/actions/Button';
 export type { ButtonProps, ButtonVariant, ButtonSize } from './components/actions/Button';
 
@@ -16,6 +16,12 @@ export type { DualButtonProps, DualButtonVariant, DualButtonSize } from './compo
 
 export { JumboButton } from './components/actions/JumboButton';
 export type { JumboButtonProps, JumboButtonVariant } from './components/actions/JumboButton';
+
+export { FAB } from './components/actions/FAB';
+export type { FABProps, FABSize, FABPosition } from './components/actions/FAB';
+
+export { SplitButton } from './components/actions/SplitButton';
+export type { SplitButtonProps, SplitButtonOption, SplitButtonSize, SplitButtonVariant } from './components/actions/SplitButton';
 
 // Re-export styles
 import './styles/tokens.css';
