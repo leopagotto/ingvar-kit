@@ -8,22 +8,22 @@ export interface ToggleProps extends Omit<React.InputHTMLAttributes<HTMLInputEle
    * @default 'medium'
    */
   size?: ToggleSize;
-  
+
   /**
    * Label text
    */
   label?: React.ReactNode;
-  
+
   /**
    * Helper text displayed below the toggle
    */
   helperText?: string;
-  
+
   /**
    * Error message (shows error state)
    */
   error?: string;
-  
+
   /**
    * Position of the label relative to the toggle
    * @default 'right'

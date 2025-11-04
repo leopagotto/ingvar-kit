@@ -39,5 +39,11 @@ export type { RadioProps, RadioSize } from './components/inputs/Radio';
 export { Toggle } from './components/inputs/Toggle';
 export type { ToggleProps, ToggleSize } from './components/inputs/Toggle';
 
+export { Select } from './components/inputs/Select';
+export type { SelectProps, SelectOption, SelectSize, SelectVariant } from './components/inputs/Select';
+
+export { Slider } from './components/inputs/Slider';
+export type { SliderProps, SliderSize } from './components/inputs/Slider';
+
 // Re-export styles
 import './styles/tokens.css';

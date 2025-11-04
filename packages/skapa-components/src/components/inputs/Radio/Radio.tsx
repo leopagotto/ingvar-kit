@@ -1,26 +1,26 @@
-import React from 'react';
-import clsx from 'clsx';
-import type { RadioProps } from './Radio.types';
-import styles from './Radio.module.css';
+import React from "react";
+import clsx from "clsx";
+import type { RadioProps } from "./Radio.types";
+import styles from "./Radio.module.css";
 
 /**
  * Radio component for exclusive selection within a group
- * 
+ *
  * @example
  * // Basic radio
  * <Radio name="option" value="1" label="Option 1" />
- * 
+ *
  * @example
  * // Controlled radio group
  * <div>
- *   <Radio 
+ *   <Radio
  *     name="size"
  *     value="small"
  *     checked={size === 'small'}
  *     onChange={(e) => setSize(e.target.value)}
  *     label="Small"
  *   />
- *   <Radio 
+ *   <Radio
  *     name="size"
  *     value="medium"
  *     checked={size === 'medium'}
@@ -28,17 +28,17 @@ import styles from './Radio.module.css';
  *     label="Medium"
  *   />
  * </div>
- * 
+ *
  * @example
  * // With helper text
- * <Radio 
+ * <Radio
  *   label="Express shipping"
  *   helperText="Arrives in 1-2 business days"
  * />
- * 
+ *
  * @example
  * // With error
- * <Radio 
+ * <Radio
  *   error="Please select an option"
  *   label="I agree to the terms"
  * />
@@ -46,7 +46,7 @@ import styles from './Radio.module.css';
 export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
   (
     {
-      size = 'medium',
+      size = "medium",
       label,
       helperText,
       error,
@@ -56,34 +56,24 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
     },
     ref
   ) => {
-    const radioClasses = clsx(
-      styles.radio,
-      styles[size],
-      {
-        [styles.error]: Boolean(error),
-        [styles.disabled]: disabled,
-      }
-    );
+    const radioClasses = clsx(styles.radio, styles[size], {
+      [styles.error]: Boolean(error),
+      [styles.disabled]: disabled,
+    });
 
-    const labelClasses = clsx(
-      styles.label,
-      styles[size],
-      {
-        [styles.disabled]: disabled,
-      }
-    );
+    const labelClasses = clsx(styles.label, styles[size], {
+      [styles.disabled]: disabled,
+    });
 
-    const helperTextClasses = clsx(
-      styles.helperText,
-      styles[size],
-      {
-        [styles.error]: Boolean(error),
-      }
-    );
+    const helperTextClasses = clsx(styles.helperText, styles[size], {
+      [styles.error]: Boolean(error),
+    });
 
     return (
       <div className={clsx(styles.container, className)}>
-        <label className={clsx(styles.wrapper, { [styles.disabled]: disabled })}>
+        <label
+          className={clsx(styles.wrapper, { [styles.disabled]: disabled })}
+        >
           <input
             ref={ref}
             type="radio"
@@ -104,4 +94,4 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
   }
 );
 
-Radio.displayName = 'Radio';
+Radio.displayName = "Radio";

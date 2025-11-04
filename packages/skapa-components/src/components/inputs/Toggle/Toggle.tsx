@@ -1,37 +1,37 @@
-import React from 'react';
-import clsx from 'clsx';
-import type { ToggleProps } from './Toggle.types';
-import styles from './Toggle.module.css';
+import React from "react";
+import clsx from "clsx";
+import type { ToggleProps } from "./Toggle.types";
+import styles from "./Toggle.module.css";
 
 /**
  * Toggle component for on/off switches
- * 
+ *
  * @example
  * // Basic toggle
  * <Toggle label="Enable notifications" />
- * 
+ *
  * @example
  * // Controlled toggle
- * <Toggle 
+ * <Toggle
  *   checked={isEnabled}
  *   onChange={(e) => setIsEnabled(e.target.checked)}
  *   label="Dark mode"
  * />
- * 
+ *
  * @example
  * // Label on the left
- * <Toggle 
+ * <Toggle
  *   label="Wi-Fi"
  *   labelPosition="left"
  * />
- * 
+ *
  * @example
  * // With helper text
- * <Toggle 
+ * <Toggle
  *   label="Auto-save"
  *   helperText="Automatically save your work every 5 minutes"
  * />
- * 
+ *
  * @example
  * // Different sizes
  * <Toggle size="small" label="Small" />
@@ -41,49 +41,37 @@ import styles from './Toggle.module.css';
 export const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
   (
     {
-      size = 'medium',
+      size = "medium",
       label,
       helperText,
       error,
-      labelPosition = 'right',
+      labelPosition = "right",
       disabled,
       className,
       ...props
     },
     ref
   ) => {
-    const trackClasses = clsx(
-      styles.track,
-      styles[size],
-      {
-        [styles.error]: Boolean(error),
-        [styles.disabled]: disabled,
-      }
-    );
+    const trackClasses = clsx(styles.track, styles[size], {
+      [styles.error]: Boolean(error),
+      [styles.disabled]: disabled,
+    });
 
-    const labelClasses = clsx(
-      styles.label,
-      styles[size],
-      {
-        [styles.disabled]: disabled,
-      }
-    );
+    const labelClasses = clsx(styles.label, styles[size], {
+      [styles.disabled]: disabled,
+    });
 
-    const helperTextClasses = clsx(
-      styles.helperText,
-      styles[size],
-      {
-        [styles.error]: Boolean(error),
-        [styles.labelLeft]: labelPosition === 'left',
-      }
-    );
+    const helperTextClasses = clsx(styles.helperText, styles[size], {
+      [styles.error]: Boolean(error),
+      [styles.labelLeft]: labelPosition === "left",
+    });
 
     return (
       <div className={clsx(styles.container, className)}>
-        <label 
+        <label
           className={clsx(styles.wrapper, {
             [styles.disabled]: disabled,
-            [styles.labelLeft]: labelPosition === 'left',
+            [styles.labelLeft]: labelPosition === "left",
           })}
         >
           <input
@@ -107,4 +95,4 @@ export const Toggle = React.forwardRef<HTMLInputElement, ToggleProps>(
   }
 );
 
-Toggle.displayName = 'Toggle';
+Toggle.displayName = "Toggle";
