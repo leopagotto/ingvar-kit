@@ -78,16 +78,25 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@ingka/avatar": "^0.12.5",
+    "@ingka/badge": "^0.4.4",
     "@ingka/button": "^19.0.4",
+    "@ingka/card": "^19.1.1",
     "@ingka/checkbox": "^18.0.4",
+    "@ingka/icon": "^2.0.20",
+    "@ingka/image": "^7.0.2",
     "@ingka/input-field": "^23.0.4",
+    "@ingka/loading": "^9.0.4",
+    "@ingka/popover": "^0.0.12",
     "@ingka/quantity-stepper": "^11.0.4",
     "@ingka/radio-button": "^17.0.4",
     "@ingka/search": "^11.0.4",
     "@ingka/select": "^15.0.4",
+    "@ingka/skeleton": "^5.0.2",
     "@ingka/slider": "^21.0.4",
     "@ingka/text-area": "^18.0.4",
     "@ingka/toggle": "^9.0.4",
+    "@ingka/tooltip": "^16.1.0",
     "clsx": "^2.0.0"
   }
 }

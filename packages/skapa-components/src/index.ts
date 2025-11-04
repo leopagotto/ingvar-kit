@@ -60,5 +60,33 @@ export type { FileUploadProps, FileUploadSize } from './components/inputs/FileUp
 export { ColorPicker } from './components/inputs/ColorPicker';
 export type { ColorPickerProps, ColorPickerSize } from './components/inputs/ColorPicker';
 
+// Display (10 components) ✅ COMPLETE
+export { Card } from './components/display/Card';
+export type { CardProps, CardVariant } from './components/display/Card';
+
+export { Badge } from './components/display/Badge';
+export type { BadgeProps, BadgeVariant, BadgeSize } from './components/display/Badge';
+
+export { Avatar } from './components/display/Avatar';
+export type { AvatarProps, AvatarSize, AvatarVariant } from './components/display/Avatar';
+
+export { Image } from './components/display/Image';
+export type { ImageProps } from './components/display/Image';
+
+export { Skeleton } from './components/display/Skeleton';
+export type { SkeletonProps, SkeletonVariant } from './components/display/Skeleton';
+
+export { Tooltip } from './components/display/Tooltip';
+export type { TooltipProps, TooltipPlacement } from './components/display/Tooltip';
+
+export { Loading } from './components/display/Loading';
+export type { LoadingProps, LoadingSize } from './components/display/Loading';
+
+export { Divider } from './components/display/Divider';
+export type { DividerProps, DividerOrientation, DividerVariant } from './components/display/Divider';
+
+export { Spinner } from './components/display/Spinner';
+export type { SpinnerProps, SpinnerSize } from './components/display/Spinner';
+
 // Re-export styles
 import './styles/tokens.css';
