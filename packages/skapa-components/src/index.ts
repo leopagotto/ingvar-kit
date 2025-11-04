@@ -23,7 +23,7 @@ export type { FABProps, FABSize, FABPosition } from './components/actions/FAB';
 export { SplitButton } from './components/actions/SplitButton';
 export type { SplitButtonProps, SplitButtonOption, SplitButtonSize, SplitButtonVariant } from './components/actions/SplitButton';
 
-// Inputs (12 components)
+// Inputs (12 components) ✅ COMPLETE
 export { TextField } from './components/inputs/TextField';
 export type { TextFieldProps, TextFieldSize, TextFieldVariant } from './components/inputs/TextField';
 
@@ -50,6 +50,15 @@ export type { NumberFieldProps, NumberFieldSize } from './components/inputs/Numb
 
 export { SearchField } from './components/inputs/SearchField';
 export type { SearchFieldProps, SearchFieldSize } from './components/inputs/SearchField';
+
+export { DatePicker } from './components/inputs/DatePicker';
+export type { DatePickerProps, DatePickerSize, DatePickerVariant } from './components/inputs/DatePicker';
+
+export { FileUpload } from './components/inputs/FileUpload';
+export type { FileUploadProps, FileUploadSize } from './components/inputs/FileUpload';
+
+export { ColorPicker } from './components/inputs/ColorPicker';
+export type { ColorPickerProps, ColorPickerSize } from './components/inputs/ColorPicker';
 
 // Re-export styles
 import './styles/tokens.css';
