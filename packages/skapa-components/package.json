@@ -143,6 +143,7 @@
     "@ingka/toggle": "^9.0.4",
     "@ingka/tooltip": "^16.1.0",
     "@ingka/typography": "^7.0.1",
+    "@ingka/variables": "^7.0.1",
     "clsx": "^2.0.0"
   }
 }

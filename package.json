@@ -57,6 +57,12 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.67.0",
+    "@ingka/checkbox": "^18.0.4",
+    "@ingka/dual-button": "^0.10.2",
+    "@ingka/input-field": "^23.0.4",
+    "@ingka/jumbo-button": "^9.0.4",
+    "@ingka/radio-button": "^17.0.4",
+    "@ingka/text-area": "^18.0.4",
     "body-parser": "^2.2.0",
     "chalk": "^4.1.2",
     "commander": "^11.0.0",

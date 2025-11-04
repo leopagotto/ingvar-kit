@@ -1,10 +1,11 @@
 import React from "react";
-import clsx from "clsx";
+import IngkaJumboButton from "@ingka/jumbo-button";
 import type { JumboButtonProps } from "./JumboButton.types";
 import styles from "./JumboButton.module.css";
 
 /**
  * JumboButton Component - Large prominent call-to-action button
+ * Wraps @ingka/jumbo-button for official IKEA compliance
  *
  * Used for high-priority actions that need extra visibility. Common in hero sections,
  * landing pages, or as primary CTAs in footers.
@@ -16,67 +17,40 @@ import styles from "./JumboButton.module.css";
  * <JumboButton
  *   label="Start Shopping"
  *   description="Browse 10,000+ products"
- *   icon={<ShoppingCartIcon />}
  *   onClick={handleShop}
- * />
- *
- * <JumboButton
- *   variant="footer"
- *   label="Find a Store"
- *   description="200+ locations worldwide"
- *   icon={<LocationIcon />}
  * />
  * ```
  */
-export const JumboButton = React.forwardRef<
-  HTMLButtonElement,
-  JumboButtonProps
->(
-  (
-    {
-      variant = "regular",
-      label,
-      description,
-      icon,
-      loading = false,
-      fullWidth = false,
-      disabled = false,
-      className,
-      type = "button",
-      ...props
-    },
-    ref
-  ) => {
-    const buttonClasses = clsx(
-      styles.jumboButton,
-      styles[variant],
-      {
-        [styles.loading]: loading,
-        [styles.fullWidth]: fullWidth,
-      },
-      className
-    );
+export const JumboButton: React.FC<JumboButtonProps> = ({
+  variant = "regular",
+  label,
+  description,
+  loading = false,
+  disabled = false,
+  className,
+  type = "button",
+  onClick,
+  ...props
+}) => {
+  // Filter out incompatible props
+  const { icon, fullWidth, ...compatibleProps } = props as any;
 
-    return (
-      <button
-        ref={ref}
-        type={type}
-        className={buttonClasses}
-        disabled={disabled || loading}
-        aria-busy={loading}
-        aria-disabled={disabled || loading}
-        {...props}
+  return (
+    <div className={`${styles.wrapper} ${className || ""}`}>
+      <IngkaJumboButton
+        label={label}
+        htmlType={type}
+        loading={loading}
+        disabled={disabled}
+        footer={variant === "footer"}
+        onClick={onClick as any}
+        className={styles.jumboButton}
+        {...compatibleProps}
       >
-        {icon && !loading && <span className={styles.icon}>{icon}</span>}
-        <div className={styles.content}>
-          <span className={styles.label}>{label}</span>
-          {description && (
-            <span className={styles.description}>{description}</span>
-          )}
-        </div>
-      </button>
-    );
-  }
-);
-
-JumboButton.displayName = "SkapaJumboButton";
+        {description && (
+          <span className={styles.description}>{description}</span>
+        )}
+      </IngkaJumboButton>
+    </div>
+  );
+};
