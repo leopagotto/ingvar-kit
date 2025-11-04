@@ -1,22 +1,20 @@
-# 07 - Layout Patterns & CWDS Subsystem
+# 07 - Layout Patterns
 
-**Category:** Layout Patterns, Coworker Design System  
+**Category:** Layout & Composition  
 **Last Updated:** November 4, 2025  
 **Source:** Skapa Design System (skapa.ikea.net) - OCR Extracted Nov 2, 2025
 
 ---
 
-## Part A: Layout Patterns
-
-### Overview
+## Overview
 
 Layout patterns provide responsive, accessible page structures using Skapa's grid system and spacing tokens. These patterns ensure consistent visual hierarchy across breakpoints.
 
 ---
 
-### 1. Grid System
+## 1. Grid System
 
-#### 12-Column Responsive Grid
+### 12-Column Responsive Grid
 
 **Breakpoints:**
 ```javascript
@@ -30,7 +28,7 @@ const breakpoints = {
 };
 ```
 
-#### Grid Container
+### Grid Container
 ```jsx
 <Container maxWidth="lg" padding={24}>
   {/* Content constrained to max-width */}
@@ -44,7 +42,7 @@ const breakpoints = {
 - `xl`: 1440px
 - `full`: 100%
 
-#### Grid Layout
+### Grid Layout
 ```jsx
 <Grid container spacing={16}>
   <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -74,9 +72,9 @@ const breakpoints = {
 
 ---
 
-### 2. Page Layouts
+## 2. Page Layouts
 
-#### Single Column Layout
+### Single Column Layout
 **Use:** Content-heavy pages, articles, forms
 
 ```jsx
@@ -93,7 +91,7 @@ const breakpoints = {
 </Page>
 ```
 
-#### Two-Column Layout
+### Two-Column Layout
 **Use:** Content + sidebar, product listings with filters
 
 ```jsx
@@ -117,7 +115,7 @@ const breakpoints = {
 </Page>
 ```
 
-#### Three-Column Layout
+### Three-Column Layout
 **Use:** Dashboards, complex data displays
 
 ```jsx
@@ -138,9 +136,9 @@ const breakpoints = {
 
 ---
 
-### 3. Common Page Templates
+## 3. Common Page Templates
 
-#### Product Listing Page
+### Product Listing Page
 
 ```jsx
 <Page>
@@ -227,7 +225,7 @@ const breakpoints = {
 </Page>
 ```
 
-#### Product Detail Page
+### Product Detail Page
 
 ```jsx
 <Page>
@@ -322,7 +320,7 @@ const breakpoints = {
 </Page>
 ```
 
-#### Checkout Page
+### Checkout Page
 
 ```jsx
 <Page>
@@ -404,9 +402,9 @@ const breakpoints = {
 
 ---
 
-### 4. Responsive Patterns
+## 4. Responsive Patterns
 
-#### Mobile-First Breakpoints
+### Mobile-First Breakpoints
 
 ```jsx
 // Stack on mobile, side-by-side on tablet+
@@ -428,380 +426,6 @@ const breakpoints = {
 
 ---
 
-## Part B: CWDS Subsystem (Coworker Design System)
-
-### Overview
-
-**Purpose:** Design system for IKEA internal coworker applications (staff-facing tools).
-
-**Key Difference:** Optimized for productivity, dense information, and frequent use by trained users.
-
----
-
-### 1. Ingka Global Header
-
-#### Overview
-**Purpose:** Consistent top navigation across all coworker apps with branding, user profile, and global actions.
-
-#### Anatomy
-```
-┌──────────────────────────────────────────┐
-│ [≡] INGKA │ App Name │ [🔔] [👤] John D │
-└──────────────────────────────────────────┘
-```
-
-#### Implementation
-```jsx
-<GlobalHeader>
-  <GlobalHeader.MenuButton aria-label="Open navigation" />
-  <GlobalHeader.Brand>INGKA</GlobalHeader.Brand>
-  <GlobalHeader.AppName>Inventory Management</GlobalHeader.AppName>
-  
-  <GlobalHeader.Actions>
-    <IconButton icon="notifications" badge={3} />
-    <GlobalHeader.Profile
-      name="John Doe"
-      role="Store Manager"
-      avatar="/avatar.jpg"
-      onProfileClick={handleProfileClick}
-      onSignOut={handleSignOut}
-    />
-  </GlobalHeader.Actions>
-</GlobalHeader>
-```
-
----
-
-### 2. Navigation Menu
-
-#### Overview
-**Purpose:** Primary navigation for coworker apps with collapsible sections and deep hierarchies.
-
-#### Implementation
-```jsx
-<NavigationMenu collapsed={isCollapsed}>
-  <NavigationMenu.Section>
-    <NavigationMenu.Item
-      icon="dashboard"
-      label="Dashboard"
-      href="/dashboard"
-      active
-    />
-    <NavigationMenu.Item
-      icon="inventory"
-      label="Inventory"
-      href="/inventory"
-      badge={12}
-    />
-  </NavigationMenu.Section>
-  
-  <NavigationMenu.Section title="Management">
-    <NavigationMenu.Item
-      icon="users"
-      label="Team"
-      href="/team"
-    />
-    <NavigationMenu.Item
-      icon="settings"
-      label="Settings"
-      href="/settings"
-    />
-  </NavigationMenu.Section>
-  
-  <NavigationMenu.CollapseButton />
-</NavigationMenu>
-```
-
-#### Collapsed State
-```jsx
-<NavigationMenu collapsed>
-  {/* Shows only icons, expands on hover */}
-</NavigationMenu>
-```
-
----
-
-### 3. Bottom Bar Navigation (Mobile)
-
-#### Overview
-**Purpose:** Mobile-optimized bottom navigation for coworker apps on tablets/phones.
-
-#### Implementation
-```jsx
-<BottomBarNavigation>
-  <BottomBarNavigation.Item
-    icon="home"
-    label="Home"
-    href="/home"
-    active
-  />
-  <BottomBarNavigation.Item
-    icon="scan"
-    label="Scan"
-    href="/scan"
-    badge={3}
-  />
-  <BottomBarNavigation.Item
-    icon="tasks"
-    label="Tasks"
-    href="/tasks"
-  />
-  <BottomBarNavigation.Item
-    icon="profile"
-    label="Profile"
-    href="/profile"
-  />
-</BottomBarNavigation>
-```
-
-**Max Items:** 3-5 for optimal usability
-
----
-
-### 4. App Switcher
-
-#### Overview
-**Purpose:** Quick navigation between different coworker applications.
-
-#### Implementation
-```jsx
-<AppSwitcher>
-  <AppSwitcher.Trigger>
-    <IconButton icon="grid" aria-label="Switch application" />
-  </AppSwitcher.Trigger>
-  
-  <AppSwitcher.Menu>
-    <AppSwitcher.App
-      name="Inventory Management"
-      icon="inventory"
-      href="/apps/inventory"
-      active
-    />
-    <AppSwitcher.App
-      name="Staff Scheduling"
-      icon="calendar"
-      href="/apps/scheduling"
-    />
-    <AppSwitcher.App
-      name="Sales Dashboard"
-      icon="chart"
-      href="/apps/sales"
-    />
-    <AppSwitcher.App
-      name="Customer Service"
-      icon="headset"
-      href="/apps/support"
-    />
-  </AppSwitcher.Menu>
-</AppSwitcher>
-```
-
----
-
-### 5. Profile Component
-
-#### Overview
-**Purpose:** User profile display with role, department, and quick actions.
-
-#### Implementation
-```jsx
-<Profile>
-  <Profile.Avatar src="/avatar.jpg" alt="John Doe" size={48} />
-  <Profile.Info>
-    <Profile.Name>John Doe</Profile.Name>
-    <Profile.Role>Store Manager</Profile.Role>
-    <Profile.Department>Stockholm Store #42</Profile.Department>
-  </Profile.Info>
-  
-  <Profile.Menu>
-    <MenuItem href="/profile">My Profile</MenuItem>
-    <MenuItem href="/settings">Settings</MenuItem>
-    <MenuDivider />
-    <MenuItem variant="danger" onClick={signOut}>
-      Sign Out
-    </MenuItem>
-  </Profile.Menu>
-</Profile>
-```
-
----
-
-### 6. CWDS Colors
-
-#### Color Palette
-
-**Primary Colors:**
-```javascript
-const cwdsColors = {
-  // Brand
-  primary: '#0058A3',      // IKEA Blue
-  secondary: '#FFDB00',    // IKEA Yellow
-  
-  // Status
-  success: '#2E7D32',      // Green
-  warning: '#F57C00',      // Orange
-  error: '#C62828',        // Red
-  info: '#0277BD',         // Blue
-  
-  // Neutrals (Coworker optimized)
-  grey: {
-    50: '#FAFAFA',
-    100: '#F5F5F5',
-    200: '#EEEEEE',
-    300: '#E0E0E0',
-    400: '#BDBDBD',
-    500: '#9E9E9E',
-    600: '#757575',
-    700: '#616161',
-    800: '#424242',
-    900: '#212121',
-  },
-  
-  // Background
-  background: {
-    default: '#FAFAFA',    // Light grey
-    paper: '#FFFFFF',      // White
-    elevated: '#FFFFFF',   // White with shadow
-  },
-  
-  // Text
-  text: {
-    primary: '#212121',    // Dark grey
-    secondary: '#757575',  // Medium grey
-    disabled: '#BDBDBD',   // Light grey
-    hint: '#9E9E9E',       // Very light grey
-  }
-};
-```
-
-**Usage:**
-```jsx
-<Box
-  background="background.default"
-  color="text.primary"
-  borderColor="grey.300"
->
-  {/* Content */}
-</Box>
-```
-
----
-
-### 7. CWDS Layout Example
-
-#### Coworker Dashboard
-
-```jsx
-<CWDSPage>
-  <GlobalHeader>
-    <GlobalHeader.MenuButton />
-    <GlobalHeader.Brand>INGKA</GlobalHeader.Brand>
-    <GlobalHeader.AppName>Staff Dashboard</GlobalHeader.AppName>
-    <GlobalHeader.Actions>
-      <AppSwitcher />
-      <IconButton icon="notifications" badge={3} />
-      <Profile />
-    </GlobalHeader.Actions>
-  </GlobalHeader>
-  
-  <Flex>
-    <NavigationMenu collapsed={isMenuCollapsed}>
-      <NavigationMenu.Item icon="dashboard" label="Dashboard" active />
-      <NavigationMenu.Item icon="tasks" label="Tasks" badge={5} />
-      <NavigationMenu.Item icon="schedule" label="Schedule" />
-      <NavigationMenu.Item icon="inventory" label="Inventory" />
-      <NavigationMenu.Section title="Reports">
-        <NavigationMenu.Item icon="chart" label="Sales" />
-        <NavigationMenu.Item icon="users" label="Staff" />
-      </NavigationMenu.Section>
-    </NavigationMenu>
-    
-    <Main flex={1}>
-      <Container maxWidth="xl" padding={24}>
-        <Stack spacing={24}>
-          <Flex justify="space-between" align="center">
-            <Heading level={1}>Dashboard</Heading>
-            <Button variant="primary">New Task</Button>
-          </Flex>
-          
-          <Grid columns={{ xs: 1, sm: 2, lg: 4 }} gap={16}>
-            <StatCard
-              title="Today's Tasks"
-              value={12}
-              icon="tasks"
-              trend={+8}
-            />
-            <StatCard
-              title="Staff On Duty"
-              value={24}
-              icon="users"
-            />
-            <StatCard
-              title="Pending Orders"
-              value={156}
-              icon="shopping-cart"
-              trend={-12}
-            />
-            <StatCard
-              title="Stock Alerts"
-              value={3}
-              icon="warning"
-              variant="warning"
-            />
-          </Grid>
-          
-          <Grid container spacing={16}>
-            <Grid item xs={12} lg={8}>
-              <Card>
-                <Card.Header>
-                  <Card.Title>Recent Activities</Card.Title>
-                </Card.Header>
-                <Card.Body>
-                  <Table>
-                    {/* Activity log */}
-                  </Table>
-                </Card.Body>
-              </Card>
-            </Grid>
-            
-            <Grid item xs={12} lg={4}>
-              <Card>
-                <Card.Header>
-                  <Card.Title>Quick Actions</Card.Title>
-                </Card.Header>
-                <Card.Body>
-                  <Stack spacing={8}>
-                    <Button variant="secondary" fullWidth>
-                      Clock In/Out
-                    </Button>
-                    <Button variant="secondary" fullWidth>
-                      Report Issue
-                    </Button>
-                    <Button variant="secondary" fullWidth>
-                      View Schedule
-                    </Button>
-                  </Stack>
-                </Card.Body>
-              </Card>
-            </Grid>
-          </Grid>
-        </Stack>
-      </Container>
-    </Main>
-  </Flex>
-  
-  {/* Mobile Bottom Navigation */}
-  <BottomBarNavigation>
-    <BottomBarNavigation.Item icon="home" label="Home" active />
-    <BottomBarNavigation.Item icon="tasks" label="Tasks" badge={5} />
-    <BottomBarNavigation.Item icon="scan" label="Scan" />
-    <BottomBarNavigation.Item icon="profile" label="Profile" />
-  </BottomBarNavigation>
-</CWDSPage>
-```
-
----
-
 ## Summary
 
 ### Layout System
@@ -813,34 +437,17 @@ const cwdsColors = {
 | **Three Column** | Dashboards, complex data | High | ✅ Yes |
 | **Grid** | Product listings, cards | Medium | ✅ Yes |
 
-### CWDS Components
+### Page Templates
 
-| Component | Use Case | Coworker-Specific |
-|-----------|----------|-------------------|
-| **Global Header** | App branding, navigation | ✅ Yes |
-| **Navigation Menu** | Primary navigation | ✅ Yes |
-| **Bottom Bar** | Mobile navigation | ✅ Yes |
-| **App Switcher** | Switch between apps | ✅ Yes |
-| **Profile** | User info, actions | ✅ Yes |
-| **CWDS Colors** | Consistent theming | ✅ Yes |
+| Template | Components Used | Complexity |
+|----------|----------------|------------|
+| **Product Listing** | AppBar, Grid, Card, Filters, Accordion | Medium |
+| **Product Detail** | Carousel, Rating, Price Module, Accordion | Medium |
+| **Checkout** | Form, Card, Sticky Summary | Medium-High |
 
 ---
 
-## Key Differences: Skapa vs. CWDS
-
-| Aspect | Skapa (Customer) | CWDS (Coworker) |
-|--------|------------------|-----------------|
-| **Audience** | Customers | Staff members |
-| **Density** | Spacious, breathable | Compact, information-dense |
-| **Navigation** | Simple, guided | Complex, multi-level |
-| **Typography** | Large, readable | Smaller, efficient |
-| **Colors** | Warm, inviting | Professional, neutral |
-| **Interactions** | Touch-optimized | Keyboard-optimized |
-| **Learning Curve** | None expected | Training assumed |
-
----
-
-**Congratulations!** You've completed the Skapa Design System documentation for AI agents.
+**Next:** [08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md) - Coworker Design System
 
 **Previous:** [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md) - Navigation, Media, Commerce
 

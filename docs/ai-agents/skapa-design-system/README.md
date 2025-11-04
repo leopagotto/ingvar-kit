@@ -9,7 +9,7 @@ This documentation provides AI agents with detailed specifications for implement
 
 ## 📚 Documentation Structure
 
-The documentation is organized into 8 focused modules:
+The documentation is organized into 9 focused modules:
 
 ### Core Documentation
 
@@ -22,7 +22,8 @@ The documentation is organized into 8 focused modules:
 | **[04-DISPLAY-COMPONENTS.md](./04-DISPLAY-COMPONENTS.md)**             | Content display (Cards, Lists, Tables)                   | 7                |
 | **[05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)**           | User feedback (Toasts, Modals, Alerts)                   | 7                |
 | **[06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)** | Navigation, Media, Commerce                              | 14               |
-| **[07-LAYOUT-AND-CWDS.md](./07-LAYOUT-AND-CWDS.md)**                   | Page layouts + CWDS subsystem                            | 6                |
+| **[07-LAYOUT-PATTERNS.md](./07-LAYOUT-PATTERNS.md)**                   | Page layouts and composition                             | -                |
+| **[08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md)**                     | Coworker Design System (internal apps)                   | 6                |
 
 **Total Components Documented:** 50+ production-ready components
 
@@ -36,8 +37,8 @@ The documentation is organized into 8 focused modules:
 **Showing Notifications?** → [05-FEEDBACK-COMPONENTS.md](./05-FEEDBACK-COMPONENTS.md)
 **Building Navigation?** → [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)
 **E-commerce Features?** → [06-NAVIGATION-AND-SPECIALTY.md](./06-NAVIGATION-AND-SPECIALTY.md)
-**Page Layouts?** → [07-LAYOUT-AND-CWDS.md](./07-LAYOUT-AND-CWDS.md)
-**Internal IKEA Apps?** → [07-LAYOUT-AND-CWDS.md](./07-LAYOUT-AND-CWDS.md)
+**Page Layouts?** → [07-LAYOUT-PATTERNS.md](./07-LAYOUT-PATTERNS.md)
+**Internal IKEA Apps?** → [08-CWDS-SUBSYSTEM.md](./08-CWDS-SUBSYSTEM.md)
 
 ### By Component Name
 
@@ -339,6 +340,12 @@ This documentation was created using:
 - **Skapa Version:** 2025 (components updated through August 2025)
 
 ### Version History
+
+- **v1.1** (2025-11-04): Separated Layout and CWDS into dedicated files
+  - Split 07-LAYOUT-AND-CWDS.md into two files for better organization
+  - 07-LAYOUT-PATTERNS.md: Layout patterns and page templates
+  - 08-CWDS-SUBSYSTEM.md: Coworker Design System components
+  - Total: 9 organized markdown files
 
 - **v1.0** (2025-11-04): Initial comprehensive AI agent documentation
   - 8 organized markdown files (~6,500 lines)
