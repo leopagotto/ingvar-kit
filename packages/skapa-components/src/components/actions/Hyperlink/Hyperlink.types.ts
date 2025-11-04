@@ -8,23 +8,23 @@ export interface HyperlinkProps extends React.AnchorHTMLAttributes<HTMLAnchorEle
    * @default 'regular'
    */
   variant?: HyperlinkVariant;
-  
+
   /**
    * Icon to display before the link text
    */
   startIcon?: React.ReactNode;
-  
+
   /**
    * Icon to display after the link text
    */
   endIcon?: React.ReactNode;
-  
+
   /**
    * Whether to show external link indicator
    * @default false
    */
   external?: boolean;
-  
+
   /**
    * Link content
    */

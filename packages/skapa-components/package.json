@@ -2,6 +2,7 @@
   "name": "@ingvar-kit/skapa-components",
   "version": "0.1.0",
   "description": "IKEA Skapa Design System React Components - Production-ready UI components for rapid prototyping",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",

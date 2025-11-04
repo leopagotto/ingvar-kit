@@ -7,7 +7,7 @@ export default {
         // IKEA Brand Colors
         'ikea-blue': '#0058A3',
         'ikea-yellow': '#FFDB00',
-        
+
         // Neutral Scale (from 10-FOUNDATIONS-EXTENDED.md)
         neutral: {
           0: '#FFFFFF',
@@ -23,7 +23,7 @@ export default {
           900: '#111111',
           950: '#000000',
         },
-        
+
         // Semantic Colors
         success: {
           DEFAULT: '#2E7D32',

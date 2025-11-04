@@ -9,29 +9,29 @@ export interface IconButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEl
    * @default 'primary'
    */
   variant?: IconButtonVariant;
-  
+
   /**
    * Size of the icon button
    * @default 'medium'
    */
   size?: IconButtonSize;
-  
+
   /**
    * Icon to display
    */
   icon: React.ReactNode;
-  
+
   /**
    * Accessible label for screen readers (required)
    */
   'aria-label': string;
-  
+
   /**
    * Whether the button is in a loading state
    * @default false
    */
   loading?: boolean;
-  
+
   /**
    * Whether the button is in an active/selected state
    * @default false

@@ -1,4 +1,4 @@
-// Actions
+// Actions (8 components)
 export { Button } from './components/actions/Button';
 export type { ButtonProps, ButtonVariant, ButtonSize } from './components/actions/Button';
 
@@ -10,6 +10,12 @@ export type { PillProps, PillVariant, PillSize } from './components/actions/Pill
 
 export { Hyperlink } from './components/actions/Hyperlink';
 export type { HyperlinkProps, HyperlinkVariant } from './components/actions/Hyperlink';
+
+export { DualButton } from './components/actions/DualButton';
+export type { DualButtonProps, DualButtonVariant, DualButtonSize } from './components/actions/DualButton';
+
+export { JumboButton } from './components/actions/JumboButton';
+export type { JumboButtonProps, JumboButtonVariant } from './components/actions/JumboButton';
 
 // Re-export styles
 import './styles/tokens.css';

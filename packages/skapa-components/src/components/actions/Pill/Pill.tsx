@@ -5,22 +5,22 @@ import styles from './Pill.module.css';
 
 /**
  * Pill Component - Compact button for filters, tags, and badges
- * 
+ *
  * Pills are used in filtering interfaces, tag selections, and as status badges.
  * The active state indicates selection in filter contexts.
- * 
+ *
  * Based on: docs/ai-agents/skapa-design-system/09-DESIGN-PATTERNS.md (Filtering Pattern)
- * 
+ *
  * @example
  * ```tsx
  * // Filter pills (e-commerce)
  * <Pill variant="filter" active>All</Pill>
  * <Pill variant="filter">Living Room</Pill>
  * <Pill variant="filter">Bedroom</Pill>
- * 
+ *
  * // Dismissible tag
- * <Pill 
- *   variant="tag" 
+ * <Pill
+ *   variant="tag"
  *   endIcon={<CloseIcon />}
  *   onEndIconClick={() => removeTag()}
  * >
@@ -74,8 +74,8 @@ export const Pill = React.forwardRef<HTMLButtonElement, PillProps>(
         {icon && <span className={styles.icon}>{icon}</span>}
         {children}
         {endIcon && (
-          <span 
-            className={styles.endIcon} 
+          <span
+            className={styles.endIcon}
             onClick={handleEndIconClick}
             role="button"
             tabIndex={-1}

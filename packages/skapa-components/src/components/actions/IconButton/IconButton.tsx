@@ -5,23 +5,23 @@ import styles from './IconButton.module.css';
 
 /**
  * IconButton Component - Compact action button with icon only
- * 
+ *
  * Icon buttons are used for common actions where space is limited.
  * Always provide an accessible label for screen readers.
- * 
+ *
  * Based on: docs/ai-agents/skapa-design-system/01-ACTIONS.md
- * 
+ *
  * @example
  * ```tsx
  * // Basic icon button
- * <IconButton 
- *   icon={<HeartIcon />} 
+ * <IconButton
+ *   icon={<HeartIcon />}
  *   aria-label="Add to favorites"
  * />
- * 
+ *
  * // Active state (e.g., favorited)
- * <IconButton 
- *   icon={<HeartIcon />} 
+ * <IconButton
+ *   icon={<HeartIcon />}
  *   aria-label="Remove from favorites"
  *   active
  * />
