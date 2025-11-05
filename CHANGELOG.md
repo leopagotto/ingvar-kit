@@ -5,12 +5,37 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.7.4] - 2025-11-06
+
+### 📚 Added
+
+- **Design Guidelines:** Added comprehensive `DESIGN_GUIDELINES.md` with centralized IKEA design system information
+  - Complete Skapa Design System documentation (customer-facing apps)
+  - Complete CWDS (Co-Worker Design Subsystem) documentation (internal tools)
+  - Decision matrix: Which design system to use when
+  - Component architecture and atomic design patterns
+  - Step-by-step implementation guides with code examples
+  - Best practices for accessibility, performance, and responsive design
+  - Design tokens reference (colors, spacing, typography)
+  - 885 lines of comprehensive, production-ready guidance
+
+### 🚀 Improved
+
+- **Documentation Discovery:** Added design guidelines reference to README.md documentation section
+- **Developer Experience:** Single source of truth for IKEA application development
+- **Package Metadata:** Enhanced npm package discoverability with additional keywords
+
+### 📦 Changed
+
+- **Package Files:** Ensured design guidelines are included in npm package distribution
+
 ## [6.7.3] - 2025-11-05
 
 ### 🔧 Fixed
 
 - **CLI Command Consistency:** Fixed all CLI command references to use `ingvar` instead of mixed `leo`/`ingvar` commands (#17)
-  - Updated `lib/commands/init.js` - CLI examples in initialization flow  
+
+  - Updated `lib/commands/init.js` - CLI examples in initialization flow
   - Updated `lib/commands/agent.js` - Agent management commands
   - Updated `lib/commands/github-project.js` - GitHub setup commands
   - Updated `lib/commands/plugin.js` - Plugin system commands

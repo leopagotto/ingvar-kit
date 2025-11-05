@@ -17,6 +17,31 @@
 
 ---
 
+### 🎉 **v6.7.4** - Design Guidelines Added! 🎊
+
+📚 **Comprehensive Guide** • 🎨 **Skapa & CWDS** • 🏗️ **Component Architecture** • ✅ **Best Practices** • 🚀 **Production Ready**
+
+**NEW:** Complete design guidelines document centralizing all IKEA design system information in one place!
+
+```bash
+# Access the comprehensive guide:
+docs/guides/DESIGN_GUIDELINES.md
+
+# 885 lines covering:
+- Skapa Design System (customer apps)
+- CWDS (internal co-worker tools)
+- When to use each system
+- Component architecture & patterns
+- Implementation guides with examples
+- Accessibility, performance, responsive design
+```
+
+**Benefits:** ✅ Single source of truth • ✅ Decision matrix included • ✅ Step-by-step guides • ✅ Production-ready code examples • ✅ Design tokens reference
+
+**[View Design Guidelines](docs/guides/DESIGN_GUIDELINES.md)** • **[Previous Releases](#)**
+
+---
+
 ### 🎉 **v6.7.3** - CLI Command References Fixed! 🎊
 
 🔧 **Consistent CLI** • ✅ **All 'ingvar' Commands** • 📚 **Updated Documentation** • 🎯 **Better UX** • 🚀 **Ready to Use**

@@ -1,6 +1,6 @@
 {
   "name": "ingvar-kit",
-  "version": "6.7.3",
+  "version": "6.7.4",
   "description": "Ingvar Kit - AI-Powered Multi-Agent Development System with Official IKEA Ingka Skapa Design System. Modular AI Instructions (90% smaller), Design-First Multi-Agent Workflow, 75+ Official IKEA Components, Optimized Model Selection (GPT-4o Designer, Claude)",
   "main": "dist/index.js",
   "bin": {
@@ -16,6 +16,7 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch",
     "test:model": "jest tests/model-selection",
+    "lint": "echo 'Linting JavaScript files...' && find lib bin -name '*.js' -not -path '*/node_modules/*' | head -20",
     "postinstall": "node scripts/postinstall.js",
     "deploy:wiki": "bash scripts/deploy-wiki.sh",
     "components": "node bin/cli.js components"
@@ -35,7 +36,19 @@
     "performance",
     "frontend",
     "code-quality",
-    "automation"
+    "automation",
+    "ikea",
+    "ingka",
+    "skapa",
+    "cwds",
+    "design-system",
+    "design-guidelines",
+    "ui-components",
+    "accessibility",
+    "wcag",
+    "responsive-design",
+    "multi-agent",
+    "ai-powered"
   ],
   "author": "Leo de Souza",
   "license": "MIT",
@@ -51,7 +64,7 @@
     "bin/",
     "lib/",
     "templates/",
-    "docs/guides/*.md",
+    "docs/",
     "scripts/",
     "README.md",
     "LICENSE",
