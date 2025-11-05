@@ -13,30 +13,30 @@
 export { default as Accordion } from '@ingka/accordion';
 export { default as Avatar } from '@ingka/avatar';
 export { default as Card } from '@ingka/card';
-// export { default as CompactCard } from '@ingka/compact-card'; // Not installed
+export { default as CompactCard } from '@ingka/compact-card';
 export { default as Image } from '@ingka/image';
 export { default as List } from '@ingka/list';
-// export { default as MemberCard } from '@ingka/member-card'; // Not installed
+export { default as MemberCard } from '@ingka/member-card';
 export { default as Rating } from '@ingka/rating';
-// export { default as ShoppableImage } from '@ingka/shoppable-image'; // Not installed
-// export { default as SimpleVideo } from '@ingka/simple-video'; // Not installed
+export { default as ShoppableImage } from '@ingka/shoppable-image';
+export { default as SimpleVideo } from '@ingka/simple-video';
 export { default as Table } from '@ingka/table';
 export { default as Tabs } from '@ingka/tabs';
 export { default as Teaser } from '@ingka/teaser';
 export { default as Text } from '@ingka/text';
-// export { default as TextOverlayCard } from '@ingka/text-overlay-card'; // Not installed
-// export { default as ThumbnailGrid } from '@ingka/thumbnail-grid'; // Not installed
+export { default as TextOverlayCard } from '@ingka/text-overlay-card';
+// export { default as ThumbnailGrid } from '@ingka/thumbnail-grid'; // Missing TypeScript types
 
 // Typography
-// export { default as Typography } from '@ingka/typography'; // Not installed
+// export { default as Typography } from '@ingka/typography'; // Missing TypeScript types
 
 // ============================================================================
 // PRODUCT RANGE COMPONENTS
 // ============================================================================
 
 export { default as Price } from '@ingka/price';
-// export { default as PriceModule } from '@ingka/price-module'; // Not installed
-// export { default as ProductIdentifier } from '@ingka/product-identifier'; // Not installed
+export { default as PriceModule } from '@ingka/price-module';
+export { default as ProductIdentifier } from '@ingka/product-identifier';
 
 // ============================================================================
 // NAVIGATION COMPONENTS
@@ -60,8 +60,8 @@ export { default as Pill } from '@ingka/pill';
 // ============================================================================
 
 export { default as Checkbox } from '@ingka/checkbox';
-// export { default as Choice } from '@ingka/choice'; // Not installed
-// export { default as Combobox } from '@ingka/combobox'; // Not installed
+export { default as Choice } from '@ingka/choice';
+export { default as Combobox } from '@ingka/combobox';
 export { default as InputField } from '@ingka/input-field';
 export { default as QuantityStepper } from '@ingka/quantity-stepper';
 export { default as RadioButton } from '@ingka/radio-button';
@@ -72,7 +72,7 @@ export { default as Slider } from '@ingka/slider';
 export { default as Switch } from '@ingka/switch';
 export { default as TextArea } from '@ingka/text-area';
 export { default as Toggle } from '@ingka/toggle';
-// export { default as FileUpload } from '@ingka/file-upload'; // Has type issues
+// export { default as FileUpload } from '@ingka/file-upload'; // Missing TypeScript types
 
 // ============================================================================
 // INDICATOR COMPONENTS
@@ -98,21 +98,21 @@ export { default as Modal } from '@ingka/modal';
 // CONTAINER & OVERFLOW COMPONENTS
 // ============================================================================
 
-// export { default as AspectRatioBox } from '@ingka/aspect-ratio-box'; // Not installed
+export { default as AspectRatioBox } from '@ingka/aspect-ratio-box';
 export { default as Carousel } from '@ingka/carousel';
-// export { default as EndorsementLabel } from '@ingka/endorsement-label'; // Not installed
+export { default as EndorsementLabel } from '@ingka/endorsement-label';
 export { default as Expander } from '@ingka/expander';
-// export { default as ListBox } from '@ingka/list-box'; // Not installed
-// export { default as ListView } from '@ingka/list-view'; // Not installed
-// export { default as PaymentLogo } from '@ingka/payment-logo'; // Not installed
-// export { default as SkipContent } from '@ingka/skip-content'; // Not installed
+export { default as ListBox } from '@ingka/list-box';
+export { default as ListView } from '@ingka/list-view';
+export { default as PaymentLogo } from '@ingka/payment-logo';
+export { default as SkipContent } from '@ingka/skip-content';
 export { default as Tooltip } from '@ingka/tooltip';
 
 // ============================================================================
 // FOUNDATION
 // ============================================================================
 
-// export { default as Grid } from '@ingka/grid'; // Not installed or missing types
+// export { default as Grid } from '@ingka/grid'; // CSS-only package, no TS exports
 export { default as Icon } from '@ingka/icon';
 
 // ============================================================================

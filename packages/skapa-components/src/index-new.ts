@@ -15,27 +15,27 @@ export {
   Accordion,
   Avatar,
   Card,
-  // CompactCard, // Not installed
+  CompactCard,
   Image,
   List,
-  // MemberCard, // Not installed
+  MemberCard,
   Rating,
-  // ShoppableImage, // Not installed
-  // SimpleVideo, // Not installed
+  ShoppableImage,
+  SimpleVideo,
   Table,
   Tabs as IngkaTabs, // Rename to avoid conflict
   Teaser,
   Text,
-  // TextOverlayCard, // Not installed
-  // ThumbnailGrid, // Not installed
-  // Typography, // Not installed
+  TextOverlayCard,
+  // ThumbnailGrid - Missing TypeScript types
+  // Typography - Missing TypeScript types
 } from './ingka-direct';
 
 // PRODUCT RANGE
 export {
   Price,
-  // PriceModule, // Not installed
-  // ProductIdentifier, // Not installed
+  PriceModule,
+  ProductIdentifier,
 } from './ingka-direct';
 
 // NAVIGATION (Direct @ingka)
@@ -56,8 +56,8 @@ export {
 // INPUTS (Direct @ingka)
 export {
   Checkbox as IngkaCheckbox,
-  // Choice, // Not installed
-  // Combobox, // Not installed
+  Choice,
+  Combobox,
   InputField,
   QuantityStepper,
   RadioButton,
@@ -68,7 +68,7 @@ export {
   Switch,
   TextArea as IngkaTextArea,
   Toggle as IngkaToggle, // Button group toggle
-  // FileUpload as IngkaFileUpload, // Has type issues
+  // FileUpload - Missing TypeScript types
 } from './ingka-direct';
 
 // INDICATORS (Direct @ingka)
@@ -91,20 +91,20 @@ export {
 
 // CONTAINERS (Direct @ingka)
 export {
-  // AspectRatioBox, // Not installed
+  AspectRatioBox,
   Carousel,
-  // EndorsementLabel, // Not installed
+  EndorsementLabel,
   Expander,
-  // ListBox, // Not installed
-  // ListView, // Not installed
-  // PaymentLogo, // Not installed
-  // SkipContent, // Not installed
+  ListBox,
+  ListView,
+  PaymentLogo,
+  SkipContent,
   Tooltip as IngkaTooltip,
 } from './ingka-direct';
 
 // FOUNDATION (Direct @ingka)
 export {
-  // Grid, // Not installed or missing types
+  // Grid - CSS-only package, no TS exports
   Icon,
 } from './ingka-direct';
 

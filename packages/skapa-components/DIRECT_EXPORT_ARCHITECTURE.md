@@ -11,12 +11,13 @@ This gives you maximum flexibility: use official Skapa components when you need 
 
 ## Installation Status
 
-**Currently installed:** 44 @ingka packages  
+**Currently installed:** 44 @ingka packages
 **Target:** ~65-70 packages (full Skapa coverage)
 
 ### Installed Packages (44)
 
 **LAYOUT (10):**
+
 - ✅ accordion
 - ✅ avatar
 - ✅ card
@@ -29,12 +30,14 @@ This gives you maximum flexibility: use official Skapa components when you need 
 - ✅ text
 
 **ACTIONS (4):**
+
 - ✅ button
 - ✅ dual-button
 - ✅ jumbo-button
 - ✅ pill
 
 **INPUTS (11):**
+
 - ✅ checkbox
 - ✅ input-field
 - ✅ quantity-stepper
@@ -48,6 +51,7 @@ This gives you maximum flexibility: use official Skapa components when you need 
 - ✅ toggle
 
 **INDICATORS (5):**
+
 - ✅ badge
 - ✅ loading
 - ✅ progress-indicator
@@ -55,6 +59,7 @@ This gives you maximum flexibility: use official Skapa components when you need 
 - ✅ status
 
 **MESSAGES (5):**
+
 - ✅ banner
 - ✅ helper-text
 - ✅ inline-message
@@ -62,25 +67,30 @@ This gives you maximum flexibility: use official Skapa components when you need 
 - ✅ toast
 
 **NAVIGATION (2):**
+
 - ✅ breadcrumb
 - ✅ hyperlink
 - ✅ tag
 
 **CONTAINERS (3):**
+
 - ✅ carousel
 - ✅ expander
 - ✅ tooltip
 
 **FOUNDATION (2):**
+
 - ✅ icon
 - ⚠️ grid (installed but missing types)
 
 **PRODUCT RANGE (1):**
+
 - ✅ price
 
 ### Missing Packages (~20)
 
 **LAYOUT:**
+
 - ⏳ compact-card
 - ⏳ member-card
 - ⏳ shoppable-image
@@ -90,14 +100,17 @@ This gives you maximum flexibility: use official Skapa components when you need 
 - ⏳ typography
 
 **INPUTS:**
+
 - ⏳ choice
 - ⏳ combobox
 
 **PRODUCT RANGE:**
+
 - ⏳ price-module
 - ⏳ product-identifier
 
 **CONTAINERS:**
+
 - ⏳ aspect-ratio-box
 - ⏳ endorsement-label
 - ⏳ list-box
@@ -110,7 +123,7 @@ This gives you maximum flexibility: use official Skapa components when you need 
 ### Option 1: Direct @ingka Exports (Exact Skapa Names)
 
 ```typescript
-import { 
+import {
   Button,        // Direct from @ingka/button
   Card,          // Direct from @ingka/card
   InputField,    // Direct from @ingka/input-field (not TextField)
@@ -123,7 +136,7 @@ import {
   Click me
 </Button>
 
-<InputField 
+<InputField
   label="Email"
   type="email"
   value={email}
@@ -134,7 +147,7 @@ import {
 ### Option 2: Custom Wrappers (Simplified APIs)
 
 ```typescript
-import { 
+import {
   Button,        // Our wrapper
   Card,          // Our wrapper
   TextField,     // Simplified API (wraps InputField)
@@ -147,7 +160,7 @@ import {
   Click me
 </Button>
 
-<TextField 
+<TextField
   label="Email"
   value={email}
   onChange={setEmail}  // Direct function, not event
@@ -157,7 +170,7 @@ import {
 ### Option 3: Mixed Usage (index-new.ts)
 
 ```typescript
-import { 
+import {
   Button as IngkaButton,      // Direct @ingka
   Button,                     // Our wrapper
   Card as IngkaCard,          // Direct @ingka
@@ -175,25 +188,25 @@ import {
 
 **Our wrappers use simplified names, @ingka uses official Skapa names:**
 
-| Wrapper Name | @ingka Package | Official Skapa Name |
-|--------------|----------------|---------------------|
-| `TextField` | `@ingka/input-field` | `InputField` |
-| `Toggle` | `@ingka/switch` | `Switch` |
-| `Radio` | `@ingka/radio-button` | `RadioButton` |
-| `TextArea` | `@ingka/text-area` | `TextArea` |
-| `Select` | `@ingka/select` | `Select` |
-| `Slider` | `@ingka/slider` | `Slider` |
-| `Checkbox` | `@ingka/checkbox` | `Checkbox` |
-| `Button` | `@ingka/button` | `Button` |
-| `Pill` | `@ingka/pill` | `Pill` |
-| `DualButton` | `@ingka/dual-button` | `DualButton` |
-| `JumboButton` | `@ingka/jumbo-button` | `JumboButton` |
-| `Alert` | `@ingka/inline-message` | `InlineMessage` |
-| `Toast` | `@ingka/toast` | `Toast` |
-| `Banner` | `@ingka/banner` | `Banner` |
-| `Modal` | `@ingka/modal` | `Modal` |
-| `SegmentedControl` | `@ingka/segmented-control` | `SegmentedControl` |
-| `Tooltip` | `@ingka/tooltip` | `Tooltip` |
+| Wrapper Name       | @ingka Package             | Official Skapa Name |
+| ------------------ | -------------------------- | ------------------- |
+| `TextField`        | `@ingka/input-field`       | `InputField`        |
+| `Toggle`           | `@ingka/switch`            | `Switch`            |
+| `Radio`            | `@ingka/radio-button`      | `RadioButton`       |
+| `TextArea`         | `@ingka/text-area`         | `TextArea`          |
+| `Select`           | `@ingka/select`            | `Select`            |
+| `Slider`           | `@ingka/slider`            | `Slider`            |
+| `Checkbox`         | `@ingka/checkbox`          | `Checkbox`          |
+| `Button`           | `@ingka/button`            | `Button`            |
+| `Pill`             | `@ingka/pill`              | `Pill`              |
+| `DualButton`       | `@ingka/dual-button`       | `DualButton`        |
+| `JumboButton`      | `@ingka/jumbo-button`      | `JumboButton`       |
+| `Alert`            | `@ingka/inline-message`    | `InlineMessage`     |
+| `Toast`            | `@ingka/toast`             | `Toast`             |
+| `Banner`           | `@ingka/banner`            | `Banner`            |
+| `Modal`            | `@ingka/modal`             | `Modal`             |
+| `SegmentedControl` | `@ingka/segmented-control` | `SegmentedControl`  |
+| `Tooltip`          | `@ingka/tooltip`           | `Tooltip`           |
 
 ## File Structure
 
@@ -213,6 +226,7 @@ packages/skapa-components/src/
 ## Benefits
 
 ### Direct @ingka Exports
+
 - ✅ Maximum compatibility with official Skapa
 - ✅ Exact component names as in Skapa docs
 - ✅ Easy migration from existing Skapa projects
@@ -220,6 +234,7 @@ packages/skapa-components/src/
 - ✅ Always up-to-date with latest Skapa releases
 
 ### Custom Wrappers
+
 - ✅ Simplified APIs for rapid prototyping
 - ✅ Consistent naming conventions
 - ✅ Less boilerplate code
@@ -229,11 +244,13 @@ packages/skapa-components/src/
 ## Roadmap
 
 ### Phase 1: Complete Package Installation ✅
+
 - ✅ Install core 44 packages
 - ⏳ Install remaining ~20 packages
 - ⏳ Verify all types are available
 
 ### Phase 2: Export Strategy Migration
+
 - ⏳ Test index-new.ts in real projects
 - ⏳ Gather user feedback
 - ⏳ Create migration guide
@@ -241,12 +258,14 @@ packages/skapa-components/src/
 - ⏳ Bump to v1.0.0
 
 ### Phase 3: Complete Component Coverage
+
 - ⏳ Build remaining 7/58 custom components
 - ⏳ Add "Patterns" category (12 components)
 - ⏳ Create comprehensive examples
 - ⏳ Add Storybook documentation
 
 ### Phase 4: Testing & Quality
+
 - ⏳ Add unit tests for direct exports
 - ⏳ Add integration tests
 - ⏳ Improve TypeScript type safety
@@ -257,33 +276,35 @@ packages/skapa-components/src/
 ### For Existing Users
 
 **Current import (v0.1.0):**
+
 ```typescript
-import { Button, TextField, Toggle } from '@ingvar-kit/skapa-components';
+import { Button, TextField, Toggle } from "@ingvar-kit/skapa-components";
 ```
 
 **New import (v1.0.0 - future):**
+
 ```typescript
 // Option A: Keep using wrappers (recommended for prototyping)
-import { Button, TextField, Toggle } from '@ingvar-kit/skapa-components';
+import { Button, TextField, Toggle } from "@ingvar-kit/skapa-components";
 
 // Option B: Switch to official Skapa names
-import { Button, InputField, Switch } from '@ingvar-kit/skapa-components';
+import { Button, InputField, Switch } from "@ingvar-kit/skapa-components";
 
 // Option C: Mix and match
-import { 
-  Button,           // Wrapper
-  InputField,       // Direct @ingka
-  Switch as Toggle  // Direct @ingka with alias
-} from '@ingvar-kit/skapa-components';
+import {
+  Button, // Wrapper
+  InputField, // Direct @ingka
+  Switch as Toggle, // Direct @ingka with alias
+} from "@ingvar-kit/skapa-components";
 ```
 
 **No breaking changes until v1.0.0** - Both approaches will be supported.
 
 ## Build Status
 
-✅ **Build:** Passing  
-✅ **Bundle:** dist/index.js, dist/index.esm.js  
-⚠️ **Warnings:** React "use client" directives (expected)  
+✅ **Build:** Passing
+✅ **Bundle:** dist/index.js, dist/index.esm.js
+⚠️ **Warnings:** React "use client" directives (expected)
 ⚠️ **TypeScript:** 3 minor type issues in custom wrappers
 
 ## Next Steps
