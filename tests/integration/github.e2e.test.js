@@ -128,12 +128,12 @@ jest.mock('../../lib/team/github-api');describe('GitHub Integration E2E Tests', 
 
       // Then board should be created with columns
       expect(api.createProjectBoard).toHaveBeenCalledWith(
-        'LEO Workflow Kit Board',
+        'Ingvar Kit Board',
         ['discovery', 'design', 'development']
       );
       expect(board).toEqual({
         id: 'P1',
-        name: 'LEO Workflow Kit Board',
+        name: 'Ingvar Kit Board',
         columns: [
           { id: 'C1', name: 'discovery' },
           { id: 'C2', name: 'design' },
