@@ -259,22 +259,6 @@ async function offerComponentInstallation(isGlobal, inGitRepo) {
 
       try {
         // Install the package
-        execSync('npm install ingvar-skapa-components', { stdio: 'inherit' });
-
-    // Use inquirer for interactive prompt
-    const inquirer = require('inquirer');
-    const { installComponents } = await inquirer.prompt([{
-      type: 'confirm',
-      name: 'installComponents',
-      message: 'Install @ingvar-kit/skapa-components package now?',
-      default: false // Don't force installation by default
-    }]);
-
-    if (installComponents) {
-      console.log(chalk.cyan('\n📦 Installing @ingvar-kit/skapa-components package...\n'));
-
-      try {
-        // Install the package directly
         const { execSync } = require('child_process');
         execSync('npm install ingvar-skapa-components', { stdio: 'inherit' });
 
