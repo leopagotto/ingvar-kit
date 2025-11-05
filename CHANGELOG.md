@@ -5,6 +5,74 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.7.1] - 2025-11-05
+
+### 🐛 Fixed
+
+- **React Peer Dependencies:** Added `react` and `react-dom` as peer dependencies (>=16.8.0) for bundled Skapa components
+
+## [6.7.0] - 2025-11-05
+
+### 🎉 BREAKING CHANGE: Skapa Components Now Bundled
+
+**Major Simplification:** All 64 Skapa components are now bundled directly with `ingvar-kit`. No separate package installation needed!
+
+#### Changed
+
+- **Bundled Components:** Skapa components moved from separate `ingvar-skapa-components` package into main `ingvar-kit` package
+- **New Import Paths:**
+  - Old: `import { Button } from 'ingvar-skapa-components'`
+  - New: `import { Button } from 'ingvar-kit/skapa'`
+  - Or: `import { Button } from 'ingvar-kit/skapa/ingka-direct'`
+- **Simplified Installation:** One package instead of two
+
+  ```bash
+  # Old (v6.6.x):
+  npm install ingvar-kit
+  npm install ingvar-skapa-components
+
+  # New (v6.7.0+):
+  npm install ingvar-kit react react-dom
+  ```
+
+#### Added
+
+- **Bundled Package Exports:**
+  - `ingvar-kit/skapa` - Simplified component wrappers (56 components)
+  - `ingvar-kit/skapa/ingka-direct` - Direct @ingka exports (58 components)
+- **Merged Dependencies:** All 20+ @ingka packages now included in main package
+- **Updated CLI:** `ingvar components` command now shows components are bundled
+- **Updated Postinstall:** Displays bundled components info with new import paths
+
+#### Deprecated
+
+- **ingvar-skapa-components@0.1.0:** Deprecated in favor of bundled components in `ingvar-kit@6.7.0+`
+
+#### Fixed
+
+- **Postinstall Syntax Error:** Fixed unterminated template literal in error handling
+
+#### Migration Guide
+
+```javascript
+// Before (v6.6.x):
+import { Button, TextField } from "ingvar-skapa-components";
+import { Card } from "ingvar-skapa-components/ingka-direct";
+
+// After (v6.7.0+):
+import { Button, TextField } from "ingvar-kit/skapa";
+import { Card } from "ingvar-kit/skapa/ingka-direct";
+```
+
+**Benefits:**
+
+- ✅ Simpler installation (one package instead of two)
+- ✅ No confusion about separate packages
+- ✅ All 64 components included out of the box
+- ✅ Same tree-shakeable ES modules
+- ✅ Same 97% TypeScript coverage
+- ✅ Dual export options maintained
+
 ## [6.6.0] - 2025-11-05
 
 ### 📦 @ingvar-kit/skapa-components Package & CLI Integration

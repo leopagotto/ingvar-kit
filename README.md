@@ -17,6 +17,36 @@
 
 ---
 
+### 🎉 **v6.7.1** - Skapa Components Now Bundled! 🎊
+
+🎁 **One Package** • 📦 **64 Components Included** • 🚀 **Simpler Installation** • ✅ **React Peer Dependencies** • 🔄 **New Import Paths**
+
+**BREAKING CHANGE:** Skapa components are now bundled directly with `ingvar-kit`! No separate package installation needed.
+
+```bash
+# Old (v6.6.x):
+npm install ingvar-kit
+npm install ingvar-skapa-components
+
+# New (v6.7.1+):
+npm install ingvar-kit react react-dom
+```
+
+**New Import Paths:**
+```javascript
+// Simplified wrappers
+import { Button, TextField } from 'ingvar-kit/skapa';
+
+// Direct @ingka exports (Recommended)
+import { Button, Card } from 'ingvar-kit/skapa/ingka-direct';
+```
+
+**Benefits:** ✅ One package instead of two • ✅ All 64 components included • ✅ Same tree-shakeable ES modules • ✅ 97% TypeScript coverage maintained
+
+**[Migration Guide](CHANGELOG.md#670)** • **[Release Notes](CHANGELOG.md#671)** • **[Component List](lib/skapa-components/COMPONENT_STATUS.md)**
+
+---
+
 ### 🎉 **v6.5.0** - CWDS Installation Priority & npm Package Enhancements
 
 📦 **npm Packages First** • 🔄 **Local Templates Fallback** • 📚 **Enhanced Documentation** • 💡 **Smart Installer Guidance** • ✅ **Production Ready**
