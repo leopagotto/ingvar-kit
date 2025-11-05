@@ -18,8 +18,8 @@ npm install ingvar-skapa-components
 ```
 
 ```tsx
-import { Button } from 'ingvar-skapa-components';
-import { Card } from 'ingvar-skapa-components/ingka-direct';
+import { Button } from "ingvar-skapa-components";
+import { Card } from "ingvar-skapa-components/ingka-direct";
 ```
 
 ### New Way (v6.7.1+)
@@ -30,10 +30,10 @@ npm install ingvar-kit react react-dom
 
 ```tsx
 // Option 1: Simplified wrappers
-import { Button, TextField } from 'ingvar-kit/skapa';
+import { Button, TextField } from "ingvar-kit/skapa";
 
 // Option 2: Direct @ingka exports (Recommended)
-import { Button, Card } from 'ingvar-kit/skapa/ingka-direct';
+import { Button, Card } from "ingvar-kit/skapa/ingka-direct";
 ```
 
 ---
@@ -599,6 +599,7 @@ This package provides **two import paths**:
 ## 🤖 Copilot Integration
 
 This package is designed to work seamlessly with GitHub Copilot and AI assistants:
+
 - Auto-suggest appropriate components based on context
 - Complete component props with TypeScript IntelliSense
 - Generate pattern implementations from the Skapa design system
@@ -634,15 +635,20 @@ If you're migrating from direct @ingka package usage:
 
 ```tsx
 // Before (direct @ingka)
-import Button from '@ingka/button';
-import InputField from '@ingka/input-field';
-import Switch from '@ingka/switch';
+import Button from "@ingka/button";
+import InputField from "@ingka/input-field";
+import Switch from "@ingka/switch";
 
 // After (ingvar-kit/skapa-components)
-import { Button, InputField, Switch } from '@ingvar-kit/skapa-components/ingka-direct';
+import {
+  Button,
+  InputField,
+  Switch,
+} from "@ingvar-kit/skapa-components/ingka-direct";
 ```
 
 **Benefits:**
+
 - ✅ Single package installation (66 @ingka packages → 1 install)
 - ✅ Consistent versioning
 - ✅ Tree-shaking enabled
@@ -654,17 +660,18 @@ If migrating from Radix, shadcn/ui, or similar:
 
 ```tsx
 // Before
-import { Button } from '@radix-ui/react-button';
+import { Button } from "@radix-ui/react-button";
 
 // After
-import { Button } from '@ingvar-kit/skapa-components/ingka-direct';
+import { Button } from "@ingvar-kit/skapa-components/ingka-direct";
 // or simplified wrapper:
-import { Button } from '@ingvar-kit/skapa-components';
+import { Button } from "@ingvar-kit/skapa-components";
 ```
 
 ## 📝 Contributing
 
 We welcome contributions! Please see:
+
 - [CONTRIBUTING.md](../../CONTRIBUTING.md) - Contribution guidelines
 - [GitHub Issues](https://github.com/leopagotto/ingvar-kit/issues) - Report bugs or request features
 
@@ -689,4 +696,4 @@ MIT © Ingvar Kit Contributors
 
 **Built with ❤️ using IKEA's Skapa Design System**
 
-*Version 0.1.0 - November 2025*
+_Version 0.1.0 - November 2025_
