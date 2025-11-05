@@ -796,7 +796,10 @@ Everything connects to GitHub:
 Import 64+ official IKEA Skapa components with TypeScript support:
 
 ```bash
-# Install the package
+# Option 1: Install via CLI (interactive - choose package or individual components)
+ingvar components
+
+# Option 2: Install package directly
 npm install @ingvar-kit/skapa-components
 ```
 
@@ -841,8 +844,9 @@ function App() {
 }
 ```
 
-**📦 Package Stats:** 64 components • 328KB bundle • 97% TypeScript coverage • Tree-shakeable
-**📚 Documentation:** [Complete Guide →](packages/skapa-components/README.md) | [Component List →](packages/skapa-components/COMPONENT_STATUS.md)
+**📦 Package Stats:** 64 components • 328KB bundle • 97% TypeScript coverage • Tree-shakeable  
+**📚 Documentation:** [Complete Guide →](packages/skapa-components/README.md) | [Component List →](packages/skapa-components/COMPONENT_STATUS.md)  
+**🔧 Alternative:** Cherry-pick individual components with `ingvar components` (75+ available)
 
 ---
 
