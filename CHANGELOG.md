@@ -5,6 +5,132 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.6.0] - 2025-11-05
+
+### 📦 @ingvar-kit/skapa-components Package & CLI Integration
+
+**Major Feature:** New production-ready npm package with 64 official IKEA Skapa components and integrated CLI installation flow.
+
+#### Added
+
+- **@ingvar-kit/skapa-components Package:**
+
+  - 64 official Skapa components with direct @ingka package exports
+  - Dual import strategy: `/ingka-direct` (official names) or main export (wrappers)
+  - 328KB optimized ESM bundle with tree-shaking support
+  - 97% TypeScript coverage (61/64 components with full types)
+  - Production-ready with comprehensive documentation
+
+- **Dual Export Architecture:**
+
+  - Main export (`@ingvar-kit/skapa-components`): Simplified wrappers for rapid prototyping
+  - Subpath export (`@ingvar-kit/skapa-components/ingka-direct`): Direct @ingka exports with official names
+  - Both bundles optimized with Rollup (CJS + ESM formats)
+  - Full TypeScript declarations for both export paths
+
+- **CLI Integration:**
+
+  - Updated `ingvar components` command to offer package or individual components
+  - Interactive menu: "npm Package (Recommended)" vs "Individual Components"
+  - Package installation with usage examples and documentation links
+  - Seamless integration with existing cherry-pick workflow
+
+- **Postinstall Enhancement:**
+
+  - Updated postinstall script to promote @ingvar-kit/skapa-components package
+  - Shows both installation options: package vs individual components
+  - Clear benefits listed: bundle size, TypeScript, dual strategies
+  - Option to install package immediately during CLI setup
+
+- **Comprehensive Documentation:**
+  - Complete package README with 5 usage examples
+  - Component catalog (COMPONENT_STATUS.md) with 64 components
+  - Architecture guide (DIRECT_EXPORT_ARCHITECTURE.md)
+  - Component name mapping reference (SKAPA_COMPONENT_MAPPING.md)
+  - Integration test report (TEST_RESULTS.md)
+  - Main README updated with package Quick Start section
+
+#### Changed
+
+- **Component Installation Flow:**
+
+  - CLI now offers package installation first (recommended)
+  - Individual component installation still available (75+ components)
+  - Clear use case guidance for each approach
+  - Updated README Quick Start to show both options
+
+- **Package Build System:**
+
+  - Rollup config updated to build dual exports
+  - Generates both main and ingka-direct bundles
+  - Separate sourcemaps and TypeScript declarations
+  - Optimized builds with peer dependency externalization
+
+#### Technical Details
+
+- **Package Structure:**
+
+  ```
+  dist/
+  ├── index.js + index.esm.js (328KB - wrappers)
+  ├── ingka-direct.js + ingka-direct.esm.js (424KB - direct exports)
+  ├── index.d.ts + ingka-direct.d.ts (TypeScript)
+  └── styles.css (optimized CSS)
+  ```
+
+- **Import Examples:**
+
+  ```typescript
+  // Direct @ingka exports (recommended for Skapa projects)
+  import { Button, InputField } from "@ingvar-kit/skapa-components/ingka-direct";
+
+  // Simplified wrappers (rapid prototyping)
+  import { Button, TextField } from "@ingvar-kit/skapa-components";
+  ```
+
+- **Component Coverage:**
+  - Actions (4): Button, IconButton, DualButton, Hyperlink
+  - Inputs (13): InputField, TextArea, Checkbox, RadioButton, Select, Switch, etc.
+  - Indicators (5): Badge, Loading, ProgressBar, ProgressIndicator, Status
+  - Messages (5): Banner, Toast, AlertDialog, InformationDialog, DecisionDialog
+  - Navigation (3): Breadcrumb, Tabs, Stepper
+  - Layout (15): Grid, Stack, Container, Spacer, Divider, etc.
+  - Containers (9): Card, Accordion, Drawer, Sheet, Popover, etc.
+  - Product Range (3): Price, ProductID, Pill
+  - Foundation (1): Theme
+
+#### Impact
+
+- Streamlined component installation (single package vs 64 individual installs)
+- Better DX with TypeScript support and dual import options
+- Consistent versioning (all components bundled together)
+- Faster Spark app generation (pre-bundled components)
+- Choice preserved: users can still cherry-pick individual components
+
+#### Migration Guide
+
+**From Individual Components to Package:**
+
+```bash
+# Install package
+npm install @ingvar-kit/skapa-components
+
+# Update imports
+- import Button from '@ingka/button';
++ import { Button } from '@ingvar-kit/skapa-components/ingka-direct';
+```
+
+**For New Projects:**
+
+```bash
+# Option 1: Use CLI (recommended)
+ingvar components
+# → Choose "npm Package"
+
+# Option 2: Direct install
+npm install @ingvar-kit/skapa-components
+```
+
 ## [6.5.1] - 2025-11-02
 
 ### 🐛 Spark Generator Fixes
