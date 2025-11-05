@@ -1,4 +1,50 @@
-# @ingvar-kit/skapa-components
+# ⚠️ DEPRECATED: @ingvar-kit/skapa-components
+
+**This package has been deprecated as of November 5, 2025.**
+
+## 🎉 Components Are Now Bundled with ingvar-kit!
+
+Skapa components are now bundled directly with `ingvar-kit@6.7.1+`. No separate package installation needed!
+
+---
+
+## ⚡ Quick Migration
+
+### Old Way (v6.6.x)
+
+```bash
+npm install ingvar-kit
+npm install ingvar-skapa-components
+```
+
+```tsx
+import { Button } from 'ingvar-skapa-components';
+import { Card } from 'ingvar-skapa-components/ingka-direct';
+```
+
+### New Way (v6.7.1+)
+
+```bash
+npm install ingvar-kit react react-dom
+```
+
+```tsx
+// Option 1: Simplified wrappers
+import { Button, TextField } from 'ingvar-kit/skapa';
+
+// Option 2: Direct @ingka exports (Recommended)
+import { Button, Card } from 'ingvar-kit/skapa/ingka-direct';
+```
+
+---
+
+## 📚 Full Documentation Below (For Reference)
+
+The content below is preserved for historical reference. **Please use the bundled version in `ingvar-kit@6.7.1+` instead.**
+
+---
+
+# @ingvar-kit/skapa-components (DEPRECATED)
 
 Production-ready React components implementing the IKEA Skapa Design System with **direct @ingka package integration**.
 

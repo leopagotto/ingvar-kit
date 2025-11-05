@@ -33,12 +33,13 @@ npm install ingvar-kit react react-dom
 ```
 
 **New Import Paths:**
+
 ```javascript
 // Simplified wrappers
-import { Button, TextField } from 'ingvar-kit/skapa';
+import { Button, TextField } from "ingvar-kit/skapa";
 
 // Direct @ingka exports (Recommended)
-import { Button, Card } from 'ingvar-kit/skapa/ingka-direct';
+import { Button, Card } from "ingvar-kit/skapa/ingka-direct";
 ```
 
 **Benefits:** ✅ One package instead of two • ✅ All 64 components included • ✅ Same tree-shakeable ES modules • ✅ 97% TypeScript coverage maintained

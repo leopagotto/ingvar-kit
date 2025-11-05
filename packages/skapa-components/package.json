@@ -1,7 +1,8 @@
 {
   "name": "ingvar-skapa-components",
   "version": "0.1.0",
-  "description": "IKEA Skapa Design System React Components - Production-ready UI components for rapid prototyping",
+  "description": "⚠️ DEPRECATED: Components are now bundled with ingvar-kit@6.7.1+. Use 'npm install ingvar-kit react react-dom' instead.",
+  "deprecated": "This package is deprecated. Skapa components are now bundled with ingvar-kit@6.7.1+. Install with: npm install ingvar-kit react react-dom. New import paths: 'ingvar-kit/skapa' or 'ingvar-kit/skapa/ingka-direct'",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
