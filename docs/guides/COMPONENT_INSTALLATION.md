@@ -53,7 +53,7 @@ You can also install components manually anytime:
 
 ```bash
 # Interactive selection
-leo components
+ingvar components
 
 # Or with alias
 ingvar components
@@ -82,7 +82,7 @@ npm install ingvar-kit
 Run the components command anytime:
 
 ```bash
-leo components
+ingvar components
 ```
 
 **Interactive Flow:**
@@ -98,13 +98,13 @@ For automated setups:
 
 ```bash
 # Install all components
-leo components --mode=all --skip-confirmation
+ingvar components --mode=all --skip-confirmation
 
 # Install essential only
-leo components --mode=essential --skip-confirmation
+ingvar components --mode=essential --skip-confirmation
 
 # Install specific components
-leo components --mode=cherry-pick --components=button,card,input --skip-confirmation
+ingvar components --mode=cherry-pick --components=button,card,input --skip-confirmation
 ```
 
 ---
@@ -127,7 +127,7 @@ leo components --mode=cherry-pick --components=button,card,input --skip-confirma
 - **Media:** Icon
 
 ```bash
-leo components
+ingvar components
 # → Select "Essential Components"
 ```
 
@@ -138,7 +138,7 @@ leo components
 **Includes:** All 75 components across all categories
 
 ```bash
-leo components
+ingvar components
 # → Select "All Components (75 components)"
 ```
 
@@ -154,7 +154,7 @@ leo components
 - Visual categories: Foundations, Layout, Display, Buttons, Forms, etc.
 
 ```bash
-leo components
+ingvar components
 # → Select "Cherry-pick (Select individual components)"
 # → Use spacebar to toggle, Enter to confirm
 ```
@@ -466,7 +466,7 @@ Check installation location:
 ls -la src/components/ingka/
 
 # If missing, reinstall:
-leo components
+ingvar components
 ```
 
 ---
@@ -534,7 +534,7 @@ Components include TypeScript definitions. Ensure `tsconfig.json` includes:
 
 ```bash
 npm update ingvar-kit
-leo components --action=update
+ingvar components --action=update
 ```
 
 **Option 2: Manual Update**
@@ -544,7 +544,7 @@ leo components --action=update
 npm update @ingka/button @ingka/card
 
 # Or reinstall from templates
-leo components --action=update
+ingvar components --action=update
 ```
 
 ### Can I customize components?
@@ -579,7 +579,7 @@ export function Button({ variant, size, children, className, ...props }) {
 | ----------------- | ---------------------- | ------------------------ |
 | **Source**        | IKEA internal registry | Ingvar Kit templates/    |
 | **Access**        | IKEA network required  | Anyone                   |
-| **Updates**       | npm update             | leo components update    |
+| **Updates**       | npm update             | ingvar components update    |
 | **Customization** | node_modules (limited) | src/components (full)    |
 | **Best for**      | IKEA internal projects | External/custom projects |
 
@@ -587,11 +587,11 @@ export function Button({ variant, size, children, className, ...props }) {
 
 ### Can I add more components later?
 
-**Yes.** Run `leo components` anytime to add more:
+**Yes.** Run `ingvar components` anytime to add more:
 
 ```bash
 # Add components to existing installation
-leo components
+ingvar components
 
 # → Select "Cherry-pick"
 # → Choose additional components

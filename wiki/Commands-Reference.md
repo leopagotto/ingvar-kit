@@ -1,12 +1,12 @@
 # 📖 Commands Reference
 
-> **Complete reference for all Ingvar Kit v4.1.1 commands**
+> **Complete reference for all Ingvar Kit v6.7.3 commands**
 
 ## 🎯 Command Overview
 
-| Command         | Purpose                                   | Interactive | Version |
-| --------------- | ----------------------------------------- | ----------- | ------- |
-| `ingvar init`      | Initialize Ingvar in project                 | ✅ Yes      | v1.0.0  |
+| Command            | Purpose                                   | Interactive | Version |
+| ------------------ | ----------------------------------------- | ----------- | ------- |
+| `ingvar init`      | Initialize Ingvar in project              | ✅ Yes      | v1.0.0  |
 | `ingvar agent`     | Manage specialized agents                 | ✅ Yes      | v4.0.0  |
 | `ingvar github`    | Configure repository settings             | ✅ Yes      | v4.0.0  |
 | `ingvar model`     | Manage AI model selection 🎉 NEW (v4.1.1) | ✅ Yes      | v4.1.1  |
@@ -19,7 +19,7 @@
 | `ingvar health`    | System health check                       | ❌ No       | v2.0.0  |
 | `ingvar welcome`   | Show welcome banner                       | ❌ No       | v1.0.0  |
 | `ingvar docs`      | Open documentation                        | ❌ No       | v1.0.0  |
-| `ingvar --version` | Show version (4.1.1)                      | ❌ No       | v1.0.0  |
+| `ingvar --version` | Show version (6.7.3)                      | ❌ No       | v1.0.0  |
 | `ingvar --help`    | Show help                                 | ❌ No       | v1.0.0  |
 
 ---

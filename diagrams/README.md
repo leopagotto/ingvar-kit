@@ -248,7 +248,7 @@ When updating diagrams:
 - [Multi-Agent System Guide](../docs/guides/multi-agent-system.md) - Complete guide to the v4.0.0 orchestration system
 - [Spec-First Decision Making](../wiki/Spec-First-Decision-Making.md) - When to create specs vs issues
 - [EXAMPLE_SPEC.md](../docs/specs/EXAMPLE_SPEC.md) - Spec template
-- [Commands Reference](../wiki/Commands-Reference.md) - All CLI commands including `leo agent` and `leo github`
+- [Commands Reference](../wiki/Commands-Reference.md) - All CLI commands including `ingvar agent` and `ingvar github`
 
 ---
 

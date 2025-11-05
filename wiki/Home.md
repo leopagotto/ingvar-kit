@@ -16,19 +16,16 @@ Ingvar Kit is a powerful CLI tool that revolutionizes software development proje
 - **📊 Intelligent Project Management**: Auto-sync with GitHub Projects with smart status updates
 - **⚡ Zero Configuration**: Works out-of-the-box - literally just `npm install`
 
-**Current Version:** 5.2.2 🎉
-**Latest Stable:** 5.2.2
-**Released:** October 29, 2025
+**Current Version:** 6.7.3 🎉
+**Latest Stable:** 6.7.3
+**Released:** November 5, 2025
 
-**What's New in 5.2.2:** 📚 DOCUMENTATION EXCELLENCE
+**What's New in 6.7.3:** � CLI CONSISTENCY FIXED
 
-- 📊 **Visual Workflow Diagrams**: 5 kid-friendly ASCII art diagrams in `docs/WORKFLOW_DIAGRAMS.md`
-  - Orchestrator Routing - Keyword-based agent selection
-  - Spec-First Decision - Simple vs complex work decision tree
-  - Simple Issue Creation - 5-step workflow visualization
-  - Complete Spec Workflow - 6-step process with real commands
-  - Complete Ingvar Journey - From install to done
-- � **Fixed All Broken Links**: 18 broken wiki references in README.md now working
+- ✅ **Consistent CLI Commands**: All command references now use `ingvar` instead of mixed `leo`/`ingvar`
+- 🎯 **Better User Experience**: No more confusion between tool name and command examples
+- 📚 **Updated Documentation**: All guides, help text, and examples now consistent
+- 🚀 **Enhanced Reliability**: CLI tool name matches all command references throughout
 - 📖 **Simplified README**: Removed complex Mermaid diagrams, added clear explanations
 - ✅ **Verified Spec Workflow**: All 6 spec commands tested and documented
 

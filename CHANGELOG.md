@@ -5,6 +5,41 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.7.3] - 2025-11-05
+
+### 🔧 Fixed
+
+- **CLI Command Consistency:** Fixed all CLI command references to use `ingvar` instead of mixed `leo`/`ingvar` commands (#17)
+  - Updated `lib/commands/init.js` - CLI examples in initialization flow  
+  - Updated `lib/commands/agent.js` - Agent management commands
+  - Updated `lib/commands/github-project.js` - GitHub setup commands
+  - Updated `lib/commands/plugin.js` - Plugin system commands
+  - Updated `lib/commands/hunt.js` - Hunt feature commands
+  - Updated `lib/commands/components.js` - Component commands
+  - Updated `bin/cli-backup.js` - Backup CLI references
+  - Updated `bin/leo-constitution.js` - Constitution commands
+  - Updated `.github/copilot-instructions.md` - AI assistant instructions
+  - Updated configuration file references: `.leorc.json` → `.ingvarrc.json`
+
+- **Documentation:** Updated README.md with v6.7.3 features and consistent command examples
+- **Wiki:** Updated installation guide and commands reference to show v6.7.3
+- **Guides:** Fixed CLI command references in component installation guide
+
+### 🚀 Improved
+
+- **User Experience:** Eliminated confusion between CLI tool name and command examples
+- **Documentation Quality:** All command references now consistent throughout interface
+- **Developer Experience:** Enhanced onboarding with accurate CLI examples
+
+## [6.7.2] - 2025-11-05
+
+### 🐛 Fixed
+
+- **SyntaxError:** Fixed duplicate `configManager` declaration in `lib/commands/init.js` (#16)
+  - Removed duplicate `const configManager = require('../utils/config-manager');` line at line 840
+  - Fixed `ingvar init` command that was completely broken due to JavaScript syntax error
+  - All CLI functionality now works correctly
+
 ## [6.7.1] - 2025-11-05
 
 ### 🐛 Fixed

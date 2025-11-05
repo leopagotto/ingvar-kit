@@ -10,12 +10,14 @@ All project documentation is organized here.
 - **development/** - Development documentation and architecture
 - **archive/** - Historical documentation and completed work
 
-## LEO workflow
+## Ingvar workflow
 
 ### Phase 1: Specification
+
 Write detailed specification files in `specs/` folder. Include problem statement, solution approach, technical details, and acceptance criteria.
 
 ### Phase 2: Execution
+
 Convert approved specs into GitHub issues. Track all work in GitHub Projects. Reference issues in all commits.
 
 **Remember: Specifications are FILES. Tasks are GITHUB ISSUES.**

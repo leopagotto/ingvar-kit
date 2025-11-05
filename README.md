@@ -17,6 +17,27 @@
 
 ---
 
+### 🎉 **v6.7.3** - CLI Command References Fixed! 🎊
+
+🔧 **Consistent CLI** • ✅ **All 'ingvar' Commands** • 📚 **Updated Documentation** • 🎯 **Better UX** • 🚀 **Ready to Use**
+
+**FIXED:** All CLI command references now consistently use `ingvar` instead of mixed `leo`/`ingvar` commands. No more confusion between tool name and command examples!
+
+```bash
+# ✅ Now consistent everywhere:
+ingvar init              # Initialize workflow
+ingvar agent list        # List AI agents
+ingvar ai sync           # Regenerate AI instructions
+ingvar issue             # Create GitHub issue
+ingvar github setup      # Configure repository
+```
+
+**Benefits:** ✅ Eliminates user confusion • ✅ Consistent documentation • ✅ Better developer experience • ✅ Accurate CLI examples throughout
+
+**[Previous Release Notes](#)** • **[CLI Reference](wiki/Commands-Reference.md)** • **[Installation Guide](wiki/Installation-Guide.md)**
+
+---
+
 ### 🎉 **v6.7.1** - Skapa Components Now Bundled! 🎊
 
 🎁 **One Package** • 📦 **64 Components Included** • 🚀 **Simpler Installation** • ✅ **React Peer Dependencies** • 🔄 **New Import Paths**

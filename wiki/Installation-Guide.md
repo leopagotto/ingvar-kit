@@ -1,8 +1,8 @@
 # 📦 Installation Guide
 
-> **Get Ingvar Kit v5.0.0 up and running in < 30 seconds**
+> **Get Ingvar Kit v6.7.3 up and running in < 30 seconds**
 >
-> **✨ NEW in v5.0.0:** All 6 agents enabled by default! No manual setup needed.
+> **✨ NEW in v6.7.3:** All CLI command references now use `ingvar` consistently! Better UX throughout.
 
 ## 🎯 Prerequisites
 
@@ -26,17 +26,18 @@ Before installing Ingvar Kit, ensure you have:
 
 ### Method 1: Automatic Installation (Recommended)
 
-**One command - complete setup with v5.0.0 features!**
+**One command - complete setup with v6.7.3 features!**
 
 ```bash
-Ingvar_AUTO_INIT=true npm install -g ingvar-kit@5.0.0
+INGVAR_AUTO_INIT=true npm install -g ingvar-kit@6.7.3
 ```
 
 **What this does:**
 
-- ✅ Installs Ingvar Kit v5.0.0
+- ✅ Installs Ingvar Kit v6.7.3
 - ✅ Automatically initializes your project
-- ✅ **Enables all 6 agents by default** ✨ (NEW!)
+- ✅ **Consistent CLI commands** ✨ (FIXED in v6.7.3!)
+- ✅ **Enables all 6 agents by default** ✨
 - ✅ Creates documentation structure (`docs/specs/`)
 - ✅ Installs issue templates (8 professional templates)
 - ✅ Configures GitHub Actions workflows
