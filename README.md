@@ -485,13 +485,13 @@ import { Button, TextField, Toggle } from '@ingvar-kit/skapa-components';
 
 **🎯 Use Cases:**
 
-| Scenario | Recommended Approach |
-|----------|---------------------|
-| IKEA Skapa project with existing @ingka packages | Use `/ingka-direct` imports |
-| Rapid prototyping / MVPs | Use simplified wrappers (main export) |
-| Spark-generated apps | Automatically configured |
-| TypeScript projects | Use `/ingka-direct` for full type safety |
-| Learning Skapa design system | Start with wrappers, migrate to direct |
+| Scenario                                         | Recommended Approach                     |
+| ------------------------------------------------ | ---------------------------------------- |
+| IKEA Skapa project with existing @ingka packages | Use `/ingka-direct` imports              |
+| Rapid prototyping / MVPs                         | Use simplified wrappers (main export)    |
+| Spark-generated apps                             | Automatically configured                 |
+| TypeScript projects                              | Use `/ingka-direct` for full type safety |
+| Learning Skapa design system                     | Start with wrappers, migrate to direct   |
 
 ---
 
@@ -844,8 +844,8 @@ function App() {
 }
 ```
 
-**📦 Package Stats:** 64 components • 328KB bundle • 97% TypeScript coverage • Tree-shakeable  
-**📚 Documentation:** [Complete Guide →](packages/skapa-components/README.md) | [Component List →](packages/skapa-components/COMPONENT_STATUS.md)  
+**📦 Package Stats:** 64 components • 328KB bundle • 97% TypeScript coverage • Tree-shakeable
+**📚 Documentation:** [Complete Guide →](packages/skapa-components/README.md) | [Component List →](packages/skapa-components/COMPONENT_STATUS.md)
 **🔧 Alternative:** Cherry-pick individual components with `ingvar components` (75+ available)
 
 ---

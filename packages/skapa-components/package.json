@@ -6,6 +6,18 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./ingka-direct": {
+      "types": "./dist/ingka-direct.d.ts",
+      "import": "./dist/ingka-direct.esm.js",
+      "require": "./dist/ingka-direct.js"
+    }
+  },
   "files": [
     "dist",
     "README.md",
