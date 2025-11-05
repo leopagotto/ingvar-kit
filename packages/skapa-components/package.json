@@ -1,5 +1,5 @@
 {
-  "name": "@ingvar-kit/skapa-components",
+  "name": "ingvar-skapa-components",
   "version": "0.1.0",
   "description": "IKEA Skapa Design System React Components - Production-ready UI components for rapid prototyping",
   "type": "module",

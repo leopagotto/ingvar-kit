@@ -82,7 +82,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
   ```typescript
   // Direct @ingka exports (recommended for Skapa projects)
-  import { Button, InputField } from "@ingvar-kit/skapa-components/ingka-direct";
+  import {
+    Button,
+    InputField,
+  } from "@ingvar-kit/skapa-components/ingka-direct";
 
   // Simplified wrappers (rapid prototyping)
   import { Button, TextField } from "@ingvar-kit/skapa-components";

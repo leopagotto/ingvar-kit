@@ -220,12 +220,11 @@ async function offerComponentInstallation(isGlobal, inGitRepo) {
     console.log(chalk.hex('#FFD700').bold('📦 IKEA Skapa Component Library Available'));
     console.log();
     console.log(chalk.white('  Ingvar Kit supports two ways to use IKEA components:\n'));
-    console.log(chalk.hex('#FFD700').bold('  Option 1: @ingvar-kit/skapa-components Package (Recommended) 🆕'));
-    console.log(chalk.gray('    • 64 production-ready components in one package'));
+    console.log(chalk.hex('#FFD700').bold('  Option 1: ingvar-skapa-components Package (Recommended) 🆕'));
+    console.log(chalk.gray('    • 64 components in one package'));
     console.log(chalk.gray('    • 328KB optimized bundle with tree-shaking'));
     console.log(chalk.gray('    • 97% TypeScript coverage'));
-    console.log(chalk.gray('    • Dual import options (direct @ingka or wrappers)'));
-    console.log(chalk.gray('    • Install: ') + chalk.cyan('npm install @ingvar-kit/skapa-components\n'));
+    console.log(chalk.gray('    • Install: ') + chalk.cyan('npm install ingvar-skapa-components\n'));
     console.log(chalk.hex('#FFD700').bold('  Option 2: Individual Component Installation'));
     console.log(chalk.gray('    • Cherry-pick 75+ individual @ingka components'));
     console.log(chalk.gray('    • Install essential, all, or custom selection'));
@@ -243,7 +242,24 @@ async function offerComponentInstallation(isGlobal, inGitRepo) {
     console.log(chalk.yellow('  Quick Actions:\n'));
     console.log(chalk.cyan('  1.') + chalk.white(' Install package now: ') + chalk.cyan.bold('Say yes below'));
     console.log(chalk.cyan('  2.') + chalk.white(' Choose method interactively: ') + chalk.cyan.bold('ingvar components'));
-    console.log(chalk.cyan('  3.') + chalk.white(' Install package manually: ') + chalk.cyan.bold('npm install @ingvar-kit/skapa-components\n'));
+    console.log(chalk.cyan('  3.') + chalk.white(' Install package manually: ') + chalk.cyan.bold('npm install ingvar-skapa-components\n'));
+
+    // Step 5: Offer direct installation (optional)
+    console.log(chalk.hex('#FFD700').bold('💡 Quick Setup:\n'));
+
+    const { installComponents } = await inquirer.prompt([{
+      type: 'confirm',
+      name: 'installComponents',
+      message: 'Install ingvar-skapa-components package now?',
+      default: false
+    }]);
+
+    if (installComponents) {
+      console.log(chalk.cyan('\n📦 Installing ingvar-skapa-components package...\n'));
+
+      try {
+        // Install the package
+        execSync('npm install ingvar-skapa-components', { stdio: 'inherit' });
 
     // Use inquirer for interactive prompt
     const inquirer = require('inquirer');
@@ -260,22 +276,22 @@ async function offerComponentInstallation(isGlobal, inGitRepo) {
       try {
         // Install the package directly
         const { execSync } = require('child_process');
-        execSync('npm install @ingvar-kit/skapa-components', { stdio: 'inherit' });
+        execSync('npm install ingvar-skapa-components', { stdio: 'inherit' });
 
         console.log(chalk.green('\n✅ Package installed successfully!\n'));
         console.log(chalk.gray('Import components:\n'));
         console.log(chalk.cyan('  // Direct @ingka exports'));
-        console.log(chalk.cyan('  import { Button, Card } from \'@ingvar-kit/skapa-components/ingka-direct\';\n'));
+        console.log(chalk.cyan('  import { Button, Card } from \'ingvar-skapa-components/ingka-direct\';\n'));
         console.log(chalk.cyan('  // Or simplified wrappers'));
-        console.log(chalk.cyan('  import { Button, TextField } from \'@ingvar-kit/skapa-components\';\n'));
+        console.log(chalk.cyan('  import { Button, TextField } from \'ingvar-skapa-components\';\n'));
         console.log(chalk.gray('See package README for full documentation and examples.\n'));
       } catch (error) {
         console.log(chalk.yellow('\n⚠️  Package installation failed'));
-        console.log(chalk.gray('  Install manually: ') + chalk.cyan('npm install @ingvar-kit/skapa-components\n'));
+        console.log(chalk.gray('  Install manually: ') + chalk.cyan('npm install ingvar-skapa-components\n'));
       }
     } else {
       console.log(chalk.gray('\n  No problem! Install anytime with:'));
-      console.log(chalk.cyan('  npm install @ingvar-kit/skapa-components'));
+      console.log(chalk.cyan('  npm install ingvar-skapa-components'));
       console.log(chalk.gray('  or'));
       console.log(chalk.cyan('  ingvar components') + chalk.gray(' (interactive)\n'));
     }
@@ -286,7 +302,7 @@ async function offerComponentInstallation(isGlobal, inGitRepo) {
     // If component installation fails, don't crash postinstall
     console.log(chalk.yellow('\n  ⚠️  Component installation skipped'));
     console.log(chalk.gray(`  Run ${chalk.cyan('ingvar components')} or install package with:`));
-    console.log(chalk.cyan('  npm install @ingvar-kit/skapa-components\n'));
+    console.log(chalk.cyan('  npm install ingvar-skapa-components\n'));
     console.log(chalk.gray('─'.repeat(80)));
     if (process.env.DEBUG) console.error(error);
   }
