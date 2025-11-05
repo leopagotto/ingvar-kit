@@ -1091,10 +1091,17 @@ ingvar spec-extend 42 "Add mobile app" --no-update
 
 ### Essential Guides
 
+- **[🎨 IKEA Design Guidelines](docs/guides/DESIGN_GUIDELINES.md)** - Complete guide to building IKEA apps with Skapa & CWDS
 - **[Visual Workflow Guide](docs/WORKFLOW_DIAGRAMS.md)** - Simple diagrams showing how Ingvar works
 - **[GitHub Integration Guide](docs/guides/GITHUB_INTEGRATION_GUIDE.md)** - GitHub Projects and automation
 - **[Configuration Guide](#-configuration)** - Customize Ingvar for your project (see below)
 - **[CLI Reference](bin/cli.js)** - All commands and options (`ingvar --help`)
+
+### IKEA Design Systems
+
+- **[Design Guidelines](docs/guides/DESIGN_GUIDELINES.md)** - Comprehensive guide for Skapa & CWDS
+- **[Skapa Components](packages/skapa-components/README.md)** - Customer-facing design system
+- **[CWDS Guide](docs/development/CWDS_COWORKER_DESIGN_SYSTEM.md)** - Internal co-worker tools
 
 ### Advanced Topics
 
