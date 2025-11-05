@@ -103,9 +103,18 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
    - Integrated with spec workflow
 
 7. **🎨 Dynamic AI Instructions**
+
    - 1,300+ lines of component specifications
    - Adapts to: Cline, Copilot, Cursor, Codeium
    - Auto-updates based on project structure and enabled features
+
+8. **📦 @ingvar-kit/skapa-components Package** 🆕
+   - 64 official Skapa components with direct @ingka exports
+   - Dual import strategy: direct @ingka vs simplified wrappers
+   - 328KB optimized bundle with tree-shaking
+   - 97% TypeScript coverage with full IntelliSense
+   - Production-ready with comprehensive documentation
+   - **[Complete Guide →](packages/skapa-components/README.md)** | **[Component List →](packages/skapa-components/COMPONENT_STATUS.md)**
 
 ### 📊 How It Works
 
@@ -431,6 +440,61 @@ function ProductCard({ product }) {
 
 ---
 
+### 📦 @ingvar-kit/skapa-components Package (NEW!)
+
+**Production-ready npm package** with 64+ official IKEA Skapa components:
+
+```bash
+# Install the package
+npm install @ingvar-kit/skapa-components
+
+# Import with official Skapa names (TypeScript support)
+import { Button, Card, InputField, Switch } from '@ingvar-kit/skapa-components/ingka-direct';
+
+# Or use simplified wrappers for rapid prototyping
+import { Button, TextField, Toggle } from '@ingvar-kit/skapa-components';
+```
+
+**✨ Key Features:**
+
+- ✅ **64 Official Components** - Complete UI library with direct @ingka package exports
+- ✅ **Dual Import Strategy** - Choose between official Skapa names or friendly wrappers
+- ✅ **328KB Optimized Bundle** - Tree-shakeable ESM with minimal footprint
+- ✅ **97% TypeScript Coverage** - Full IntelliSense and type safety (61/64 components)
+- ✅ **Production Ready** - Used in Spark-generated apps, thoroughly tested
+- ✅ **Comprehensive Docs** - 5 usage examples, component catalog, migration guides
+
+**📊 Component Categories:**
+
+- **Actions** (4): Button, IconButton, DualButton, Hyperlink
+- **Inputs** (13): InputField, TextArea, Checkbox, RadioButton, Select, Switch, SearchField, Slider, FileUploader, DatePicker, TimePicker, NumberInput, ColorPicker
+- **Indicators** (5): Badge, Loading, ProgressBar, ProgressIndicator, Status
+- **Messages** (5): Banner, Toast, AlertDialog, InformationDialog, DecisionDialog
+- **Navigation** (3): Breadcrumb, Tabs, Stepper
+- **Layout** (15): Grid, Stack, Container, Spacer, Divider, Separator, AspectRatio, FlexBox, Box, Section, Article, Aside, Header, Footer, Main
+- **Containers** (9): Card, Accordion, Drawer, Sheet, Popover, Dropdown, Panel, Modal, Dialog
+- **Product Range** (3): Price, ProductID, Pill
+- **Foundation** (1): Theme
+
+**📚 Documentation:**
+
+- **[Complete Package Guide](packages/skapa-components/README.md)** - Installation, usage, examples
+- **[Component Status](packages/skapa-components/COMPONENT_STATUS.md)** - Full component catalog
+- **[Architecture Guide](packages/skapa-components/DIRECT_EXPORT_ARCHITECTURE.md)** - Technical details
+- **[Test Results](packages/skapa-components/TEST_RESULTS.md)** - Integration test report
+
+**🎯 Use Cases:**
+
+| Scenario | Recommended Approach |
+|----------|---------------------|
+| IKEA Skapa project with existing @ingka packages | Use `/ingka-direct` imports |
+| Rapid prototyping / MVPs | Use simplified wrappers (main export) |
+| Spark-generated apps | Automatically configured |
+| TypeScript projects | Use `/ingka-direct` for full type safety |
+| Learning Skapa design system | Start with wrappers, migrate to direct |
+
+---
+
 ### 🏢 Co-Worker Design Subsystem (CWDS)
 
 For internal IKEA co-worker applications (admin tools, dashboards, internal platforms):
@@ -727,11 +791,66 @@ Everything connects to GitHub:
 
 ## 🚀 Quick Start
 
-### Option 1: Rapid App Generation (NEW! ⚡)
+### Using Skapa Components Package (NEW! 🎨)
+
+Import 64+ official IKEA Skapa components with TypeScript support:
+
+```bash
+# Install the package
+npm install @ingvar-kit/skapa-components
+```
+
+**Option A: Direct @ingka Exports (Recommended for Skapa Projects)**
+
+Use official Skapa component names with full TypeScript support:
+
+```tsx
+import {
+  Button,
+  Card,
+  InputField,
+  Switch,
+} from "@ingvar-kit/skapa-components/ingka-direct";
+
+function App() {
+  return (
+    <Card>
+      <InputField label="Email" type="email" />
+      <Switch label="Subscribe to newsletter" />
+      <Button variant="primary">Add to cart</Button>
+    </Card>
+  );
+}
+```
+
+**Option B: Simplified Wrappers (Rapid Prototyping)**
+
+Friendly component names for quick prototyping:
+
+```tsx
+import { Button, TextField, Toggle } from "@ingvar-kit/skapa-components";
+
+function App() {
+  return (
+    <>
+      <TextField label="Email" type="email" />
+      <Toggle label="Subscribe" />
+      <Button variant="primary">Submit</Button>
+    </>
+  );
+}
+```
+
+**📦 Package Stats:** 64 components • 328KB bundle • 97% TypeScript coverage • Tree-shakeable
+**📚 Documentation:** [Complete Guide →](packages/skapa-components/README.md) | [Component List →](packages/skapa-components/COMPONENT_STATUS.md)
+
+---
+
+### Option 2: Rapid App Generation (⚡)
 
 Generate complete React apps from a single prompt:
 
-\`\`\`bash
+```bash
 
 # Install globally
 
@@ -751,11 +870,11 @@ ingvar spark --prompt "Create a todo app with dark mode and drag-drop"
 
 # - AI-generated custom components
 
-\`\`\`
+```
 
 **[Complete Spark Guide →](docs/SPARK.md)**
 
-### Option 2: Development Workflow
+### Option 3: Development Workflow
 
 Set up Ingvar for project management and AI assistance:
 
