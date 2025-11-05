@@ -23,12 +23,12 @@
 > GitHub Copilot MUST follow these rules in EVERY response, starting from the FIRST message:
 >
 > - **🚨 AUTOMATIC ISSUE CREATION:** When user describes ANY work → Create GitHub issue IMMEDIATELY using `gh issue create --title "..." --body "..." --label "..."`
-> - **🚨 NO INTERACTIVE CLI:** NEVER use `leo issue` command - it opens interactive prompts that force manual input
+> - **🚨 NO INTERACTIVE CLI:** NEVER use `ingvar issue` command - it opens interactive prompts that force manual input
 > - **🚨 NO MANUAL PROMPTS:** NEVER ask user to fill in issue details manually - YOU must provide all details programmatically
 > - **🚨 ONLY USE `gh issue create`:** Direct GitHub CLI with ALL parameters provided in the command itself
 > - **🚨 NO ASKING PERMISSION:** NEVER ask "should I create an issue?" - JUST DO IT AUTOMATICALLY
 > - **🚨 DETECT WORK DESCRIPTIONS:** ANY task, feature, bug, improvement, docs → IMMEDIATE automated issue creation
-> - **Auto-Resolve Check:** Read `.leorc.json` for `auto-resolve` setting before working
+> - **Auto-Resolve Check:** Read `.ingvarrc.json` for `auto-resolve` setting before working
 > - **Status Updates:** Comment "🚀 Starting work..." and update to "In Progress" when starting
 > - **Commit Messages:** Keep under 72 characters, reference issue number
 > - **Issue Comments:** Keep under 3-4 lines (200 chars max)
@@ -332,8 +332,8 @@ Which area would you like to focus on?
 
 **To add more agents:**
 ```bash
-leo agent list           # See all available agents
-leo agent add <name>    # Enable additional agent
+ingvar agent list           # See all available agents
+ingvar agent add <name>    # Enable additional agent
 ```
 
 
@@ -395,13 +395,13 @@ Users can check current model configuration:
 
 ```bash
 # View all models and their status
-leo model list
+ingvar model list
 
 # Check current usage and budgets
-leo model status
+ingvar model status
 
 # Test model selection for a scenario
-leo model test frontend complex
+ingvar model test frontend complex
 ```
 
 ### For AI Assistants (You!)
@@ -678,7 +678,7 @@ Step 3: Routing to Testing Agent for test coverage...
 
 1. **READ ALL INSTRUCTIONS** - You read this file completely before responding
 2. **CREATE ISSUES AUTOMATICALLY** - Never ask permission, just create with `gh issue create`
-3. **NO INTERACTIVE CLI** - Never use `leo issue` command, it forces manual input
+3. **NO INTERACTIVE CLI** - Never use `ingvar issue` command, it forces manual input
 4. **ROUTE TO SPECIALISTS** - Don't implement yourself, delegate to experts
 5. **ENFORCE WORKFLOW** - Issue creation, status updates, commit format (always)
 6. **COORDINATE MULTI-AGENT** - Sequential handoffs with clear context
@@ -693,7 +693,7 @@ Step 3: Routing to Testing Agent for test coverage...
 
 > **Remember:** You are the intelligent routing layer. Analyze, classify, route, coordinate, enforce.
 > **Every request** goes through you. **Every workflow rule** is enforced by you.
-> **You are the guardian of leo standards.**
+> **You are the guardian of ingvar standards.**
 
 
 ---
