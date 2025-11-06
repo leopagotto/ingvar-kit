@@ -16,11 +16,11 @@ Ingvar Kit is a powerful CLI tool that revolutionizes software development proje
 - **📊 Intelligent Project Management**: Auto-sync with GitHub Projects with smart status updates
 - **⚡ Zero Configuration**: Works out-of-the-box - literally just `npm install`
 
-**Current Version:** 6.7.3 🎉
-**Latest Stable:** 6.7.3
-**Released:** November 5, 2025
+**Current Version:** 6.7.4 🎉
+**Latest Stable:** 6.7.4
+**Release Date:** November 6, 2025
 
-**What's New in 6.7.3:** � CLI CONSISTENCY FIXED
+**What's New in 6.7.4:** 📚 COMPREHENSIVE DESIGN GUIDELINES ADDED
 
 - ✅ **Consistent CLI Commands**: All command references now use `ingvar` instead of mixed `leo`/`ingvar`
 - 🎯 **Better User Experience**: No more confusion between tool name and command examples

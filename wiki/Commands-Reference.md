@@ -1,6 +1,6 @@
-# 📖 Commands Reference
+# Commands Reference
 
-> **Complete reference for all Ingvar Kit v6.7.3 commands**
+> **Complete reference for all Ingvar Kit v6.7.4 commands**
 
 ## 🎯 Command Overview
 
@@ -19,7 +19,7 @@
 | `ingvar health`    | System health check                       | ❌ No       | v2.0.0  |
 | `ingvar welcome`   | Show welcome banner                       | ❌ No       | v1.0.0  |
 | `ingvar docs`      | Open documentation                        | ❌ No       | v1.0.0  |
-| `ingvar --version` | Show version (6.7.3)                      | ❌ No       | v1.0.0  |
+| `ingvar --version` | Show version (6.7.4)                      | ❌ No       | v1.0.0  |
 | `ingvar --help`    | Show help                                 | ❌ No       | v1.0.0  |
 
 ---
