@@ -5,6 +5,31 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.8.1] - 2025-11-06
+
+### 🚀 Improved
+
+- **Spark UX Enhancement:** Added positional argument support for app description
+  - No more double-entry: `ingvar spark "Build a todo app"` works directly
+  - Backward compatible: `--prompt` flag still works
+  - Eliminates manual prompt step for better automation and CI/CD integration
+
+### 📊 Fixed
+
+- **Component Count Accuracy:** Corrected component count from 75+ to 72 across all documentation
+  - Verified actual count: 72 official IKEA components
+  - Updated CLI help, component installer, package.json, README, and all docs
+  - Breakdown: foundations(3) + layout(5) + display(14) + buttons(8) + forms(13) + feedback(9) + modals(4) + media(6) + ecommerce(8) + utilities(2) = 72
+
+### 🔒 Security
+
+- **Audit Verified:** 0 vulnerabilities in main package (confirmed via npm audit)
+
+### 📝 Documentation
+
+- **Test Results:** Added comprehensive v6.8.0 test results in `docs/releases/`
+- **Logo:** Updated Ingvar Kit logo image
+
 ## [6.8.0] - 2025-11-06
 
 ### 📚 Documentation

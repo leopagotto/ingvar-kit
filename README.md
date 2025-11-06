@@ -17,6 +17,22 @@
 
 ---
 
+### 🎉 **v6.8.1** - Spark UX Improved & Component Count Fixed! 🎊
+
+⚡ **No Double Prompts** • 📊 **Accurate Docs (72 components)** • 🔒 **0 Vulnerabilities** • ✅ **All Tests Passing**
+
+**NEW:** Spark accepts app description directly as argument—no more manual prompt entry!
+
+```bash
+# Enhanced Spark command:
+ingvar spark "Build a todo app" --name my-app   # Works immediately!
+
+# Component count corrected:
+72 Official IKEA Components (verified and documented)
+```
+
+---
+
 ### 🎉 **v6.8.0** - Component System Strategy Clarified! 🎊
 
 📚 **AI-Ready Docs** • � **Decision Matrices** • 🏗️ **Official vs Templates** • ✅ **Best Practices** • 🤖 **Copilot Optimized**
