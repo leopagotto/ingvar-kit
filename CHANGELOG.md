@@ -5,6 +5,15 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.8.3] - 2025-11-06
+
+### 🔧 Fixed
+
+- **NPM Package:** Fixed missing `lib/agents/` directory in published package
+  - Added `lib/agents/` to package.json `files` array
+  - Resolves "Cannot find module '../agents/orchestrator-template'" error
+  - Ensures agent commands work correctly in published version
+
 ## [6.8.2] - 2025-11-06
 
 ### 🎯 Changed
