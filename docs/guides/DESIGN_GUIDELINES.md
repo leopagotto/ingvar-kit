@@ -41,6 +41,174 @@ A design system is a collection of reusable components, design tokens, patterns,
 - ✅ **Brand Alignment**: IKEA visual identity maintained
 - ✅ **Quality**: Battle-tested, production-ready components
 
+---
+
+## 🎯 **CRITICAL: Understanding Component Systems**
+
+Ingvar Kit provides **TWO COMPLEMENTARY component systems**. Understanding when to use each is essential:
+
+### 1️⃣ **Official @ingka/\* Packages (66+ Components)**
+
+**What they are:**
+
+- ✅ Production-ready, compiled React components
+- ✅ Published to IKEA's private npm registry
+- ✅ Official IKEA Skapa design system implementation
+- ✅ Automatically installed with `ingvar-kit`
+
+**When to use:**
+
+```tsx
+// ✅ Use official packages for standard IKEA-compliant apps
+import { Button } from "@ingka/button";
+import { Card } from "@ingka/card";
+import { Modal } from "@ingka/modal";
+
+function ProductPage() {
+  return (
+    <Card>
+      <Button variant="primary">Add to Cart</Button>
+    </Card>
+  );
+}
+```
+
+**Characteristics:**
+
+- 🔒 Pre-compiled (not editable)
+- ✅ Production-tested by IKEA
+- 🔄 Automatic updates via npm
+- 🎯 Official IKEA support
+- ⚠️ Limited customization (props only)
+
+---
+
+### 2️⃣ **Local TypeScript Templates (34 Components)**
+
+**What they are:**
+
+- 📝 Full source code templates in `templates/ingka-components/`
+- 📚 Learning resources showing proper implementation
+- 🎨 Customizable starting points you can copy and modify
+- 📖 Educational examples of best practices
+
+**When to use:**
+
+```tsx
+// ✅ Use templates when you need customization
+// 1. Copy template to your project:
+//    ingvar components add Button
+
+// 2. Import YOUR customized version:
+import { Button } from "./components/Button";
+
+function CustomDashboard() {
+  // You can modify this template to have:
+  // - Custom colors, sizes, behaviors
+  // - Additional variants
+  // - Project-specific features
+  return <Button variant="custom">My Custom Button</Button>;
+}
+```
+
+**Characteristics:**
+
+- ✏️ Full source code (100% editable)
+- 🎨 Completely customizable
+- 📖 Educational (shows implementation)
+- 🛠️ Starting point for custom components
+- 💡 Self-contained (no @ingka dependencies)
+
+---
+
+### 📊 **Decision Matrix: Which to Use?**
+
+| Scenario                         | Use Official @ingka/\* | Use Local Templates |
+| -------------------------------- | ---------------------- | ------------------- |
+| Standard IKEA customer apps      | ✅ Yes                 | ❌ No               |
+| Need guaranteed brand compliance | ✅ Yes                 | ❌ No               |
+| Want automatic IKEA updates      | ✅ Yes                 | ❌ No               |
+| Learning component patterns      | ⚠️ Maybe               | ✅ Yes              |
+| Heavy customization needed       | ❌ No                  | ✅ Yes              |
+| Internal tools (non-standard)    | ⚠️ Maybe               | ✅ Yes              |
+| Prototyping new variants         | ❌ No                  | ✅ Yes              |
+| Offline development              | ❌ No                  | ✅ Yes              |
+| Building custom design system    | ❌ No                  | ✅ Yes              |
+
+---
+
+### 💡 **Hybrid Approach (Recommended)**
+
+Most projects use **both** strategically:
+
+```tsx
+// Official packages for standard components
+import { Card } from "@ingka/card";
+import { Modal } from "@ingka/modal";
+import { Icon } from "@ingka/icon";
+
+// Custom templates for unique needs
+import { CustomButton } from "./components/Button"; // Modified template
+import { SpecialInput } from "./components/Input"; // Modified template
+
+function App() {
+  return (
+    <Card>
+      {" "}
+      {/* Official - standard card */}
+      <Modal>
+        {" "}
+        {/* Official - standard modal */}
+        {/* Custom - modified for special features */}
+        <CustomButton variant="special" customProp="unique-to-your-app">
+          Custom Action
+        </CustomButton>
+      </Modal>
+    </Card>
+  );
+}
+```
+
+**Key Rule:** Use official packages by default, customize templates only when necessary.
+
+---
+
+### 🔍 **Quick Reference**
+
+**Official Packages Available:**
+
+```bash
+# View all installed @ingka packages
+npm list --depth=0 | grep @ingka
+
+# Example: 66+ components including:
+# @ingka/button, @ingka/card, @ingka/modal, @ingka/input-field,
+# @ingka/accordion, @ingka/carousel, @ingka/table, etc.
+```
+
+**Local Templates Available:**
+
+```bash
+# View all template components
+ls templates/ingka-components/
+
+# 34 components including:
+# Button/, Card/, Modal/, Input/, Checkbox/, Select/, etc.
+# Plus 800+ SVG icons in Icons/
+```
+
+**Installation Commands:**
+
+```bash
+# Official packages (already installed with ingvar-kit)
+import { Button } from '@ingka/button'; // Ready to use!
+
+# Templates (copy to your project)
+ingvar components add Button  # Copies template to src/components/
+```
+
+---
+
 ### IKEA Ingka's Design Philosophy
 
 1. **Democratic Design**: Form, function, quality, sustainability, and low price
@@ -58,6 +226,7 @@ A design system is a collection of reusable components, design tokens, patterns,
 **Skapa** (Swedish for "create") is IKEA's design system for **customer-facing applications**.
 
 **Use Skapa for:**
+
 - E-commerce websites
 - Customer mobile apps
 - Public-facing web applications
@@ -67,12 +236,14 @@ A design system is a collection of reusable components, design tokens, patterns,
 ### Key Features
 
 #### 1. **Visual Identity**
+
 - IKEA brand colors (blue, yellow, white)
 - IKEA Noto Sans typography
 - Authentic IKEA look and feel
 - Product imagery guidelines
 
 #### 2. **Component Library**
+
 - Buttons, forms, navigation
 - Product cards and listings
 - Shopping cart components
@@ -80,6 +251,7 @@ A design system is a collection of reusable components, design tokens, patterns,
 - Modals and overlays
 
 #### 3. **Design Tokens**
+
 ```json
 {
   "colors": {
@@ -107,12 +279,14 @@ A design system is a collection of reusable components, design tokens, patterns,
 ```
 
 #### 4. **Responsive Design**
+
 - Mobile-first approach
 - Breakpoints: 320px, 768px, 1024px, 1440px
 - Touch-friendly (44x44px minimum)
 - Progressive enhancement
 
 #### 5. **Accessibility**
+
 - WCAG 2.1 AA compliant
 - Keyboard navigation
 - Screen reader support
@@ -132,13 +306,13 @@ npm install @ikea/skapa-components
 ### Skapa Example
 
 ```typescript
-import { Button, ProductCard, Navigation } from '@ikea/skapa-components';
+import { Button, ProductCard, Navigation } from "@ikea/skapa-components";
 
 function ProductPage() {
   return (
     <div>
       <Navigation logo="IKEA" />
-      
+
       <ProductCard
         name="BILLY Bookcase"
         price="$79.99"
@@ -146,7 +320,7 @@ function ProductPage() {
         rating={4.5}
         reviews={1234}
       />
-      
+
       <Button variant="primary" size="lg">
         Add to Cart
       </Button>
@@ -164,6 +338,7 @@ function ProductPage() {
 **CWDS** is IKEA's design system for **internal co-worker applications**.
 
 **Use CWDS for:**
+
 - Internal dashboards
 - Admin tools
 - Inventory management systems
@@ -174,12 +349,14 @@ function ProductPage() {
 ### Key Features
 
 #### 1. **Professional Interface**
+
 - Clean, functional design
 - Focus on productivity
 - Data-dense layouts
 - Task-oriented workflows
 
 #### 2. **Component Library**
+
 - GlobalHeader: Company-wide navigation
 - AppSwitcher: Navigate between internal apps
 - NavigationMenu: Hierarchical navigation
@@ -190,6 +367,7 @@ function ProductPage() {
 - Charts: Data visualization
 
 #### 3. **Design Tokens**
+
 ```json
 {
   "colors": {
@@ -214,12 +392,14 @@ function ProductPage() {
 ```
 
 #### 4. **Layout Patterns**
+
 - **GlobalHeader**: Top navigation with branding
 - **Sidebar Navigation**: Left-side menu for deep hierarchies
 - **Content Area**: Main workspace
 - **Bottom Bar**: Mobile-optimized navigation
 
 #### 5. **Accessibility**
+
 - WCAG 2.1 AA compliant
 - Enterprise keyboard shortcuts
 - Screen reader optimized
@@ -238,25 +418,25 @@ npm install @ikea/cwds-components
 ### CWDS Example
 
 ```typescript
-import { 
-  GlobalHeader, 
-  NavigationMenu, 
+import {
+  GlobalHeader,
+  NavigationMenu,
   Profile,
-  AppSwitcher 
-} from '@ikea/cwds-components';
+  AppSwitcher,
+} from "@ikea/cwds-components";
 
 function AdminDashboard() {
   const apps = [
-    { id: 'inventory', name: 'Inventory', icon: 'warehouse' },
-    { id: 'hr', name: 'HR Portal', icon: 'people' },
-    { id: 'finance', name: 'Finance', icon: 'chart' }
+    { id: "inventory", name: "Inventory", icon: "warehouse" },
+    { id: "hr", name: "HR Portal", icon: "people" },
+    { id: "finance", name: "Finance", icon: "chart" },
   ];
 
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: 'home' },
-    { id: 'products', label: 'Products', icon: 'inventory' },
-    { id: 'orders', label: 'Orders', icon: 'shopping' },
-    { id: 'reports', label: 'Reports', icon: 'analytics' }
+    { id: "dashboard", label: "Dashboard", icon: "home" },
+    { id: "products", label: "Products", icon: "inventory" },
+    { id: "orders", label: "Orders", icon: "shopping" },
+    { id: "reports", label: "Reports", icon: "analytics" },
   ];
 
   return (
@@ -280,9 +460,7 @@ function AdminDashboard() {
         onItemClick={handleNavigation}
       />
 
-      <main>
-        {/* Your content here */}
-      </main>
+      <main>{/* Your content here */}</main>
     </div>
   );
 }
@@ -294,18 +472,19 @@ function AdminDashboard() {
 
 ### Decision Matrix
 
-| Criteria | Skapa | CWDS |
-|----------|-------|------|
-| **Audience** | Customers | Co-workers/Internal staff |
-| **Purpose** | Shopping, browsing | Work tasks, data management |
-| **Branding** | Full IKEA brand experience | Professional, functional |
-| **Data Density** | Product-focused, visual | Data-dense, tables, forms |
-| **Mobile Priority** | Mobile-first, responsive | Desktop-first, mobile-optimized |
-| **Examples** | IKEA.com, mobile app | WMS, HR portal, admin tools |
+| Criteria            | Skapa                      | CWDS                            |
+| ------------------- | -------------------------- | ------------------------------- |
+| **Audience**        | Customers                  | Co-workers/Internal staff       |
+| **Purpose**         | Shopping, browsing         | Work tasks, data management     |
+| **Branding**        | Full IKEA brand experience | Professional, functional        |
+| **Data Density**    | Product-focused, visual    | Data-dense, tables, forms       |
+| **Mobile Priority** | Mobile-first, responsive   | Desktop-first, mobile-optimized |
+| **Examples**        | IKEA.com, mobile app       | WMS, HR portal, admin tools     |
 
 ### Quick Decision Guide
 
 **Choose Skapa if:**
+
 - ✅ Building customer-facing features
 - ✅ E-commerce or product browsing
 - ✅ Public website or app
@@ -313,6 +492,7 @@ function AdminDashboard() {
 - ✅ Customer self-service
 
 **Choose CWDS if:**
+
 - ✅ Building internal tools
 - ✅ Admin dashboards
 - ✅ Data management systems
@@ -485,35 +665,35 @@ pages/          # Actual pages
 
 ### Component Structure Example
 
-```typescript
+````typescript
 // GlobalHeader.tsx (CWDS Component)
 
-import React from 'react';
-import './GlobalHeader.css';
+import React from "react";
+import "./GlobalHeader.css";
 
 export interface GlobalHeaderProps {
   /** Application name displayed in the header */
   appName: string;
-  
+
   /** User name for profile display */
   userName: string;
-  
+
   /** Optional user role */
   userRole?: string;
-  
+
   /** Additional header actions */
   children?: React.ReactNode;
-  
+
   /** Logo URL (optional) */
   logoUrl?: string;
 }
 
 /**
  * GlobalHeader - Top navigation for IKEA internal applications
- * 
+ *
  * Provides consistent branding, navigation, and user profile access
  * across all IKEA co-worker applications.
- * 
+ *
  * @example
  * ```tsx
  * <GlobalHeader
@@ -531,25 +711,23 @@ export const GlobalHeader: React.FC<GlobalHeaderProps> = ({
   userName,
   userRole,
   children,
-  logoUrl = '/ikea-logo.svg'
+  logoUrl = "/ikea-logo.svg",
 }) => {
   return (
     <header className="cwds-global-header" role="banner">
       <div className="cwds-global-header__logo">
         <img src={logoUrl} alt="IKEA" />
       </div>
-      
+
       <div className="cwds-global-header__title">
         <h1>{appName}</h1>
       </div>
-      
-      <div className="cwds-global-header__actions">
-        {children}
-      </div>
+
+      <div className="cwds-global-header__actions">{children}</div>
     </header>
   );
 };
-```
+````
 
 ---
 
@@ -591,12 +769,12 @@ my-store-app/
 
 ```typescript
 // src/pages/ProductList.tsx
-import { ProductCard, Button, SearchBar } from '@ikea/skapa-components';
-import { useState, useEffect } from 'react';
+import { ProductCard, Button, SearchBar } from "@ikea/skapa-components";
+import { useState, useEffect } from "react";
 
 export function ProductList() {
   const [products, setProducts] = useState([]);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     // Fetch products from API
@@ -612,7 +790,7 @@ export function ProductList() {
       />
 
       <div className="product-grid">
-        {products.map(product => (
+        {products.map((product) => (
           <ProductCard
             key={product.id}
             name={product.name}
@@ -662,19 +840,19 @@ inventory-manager/
 
 ```typescript
 // src/layouts/DashboardLayout.tsx
-import { 
-  GlobalHeader, 
-  NavigationMenu, 
+import {
+  GlobalHeader,
+  NavigationMenu,
   Profile,
-  AppSwitcher 
-} from '@ikea/cwds-components';
+  AppSwitcher,
+} from "@ikea/cwds-components";
 
 export function DashboardLayout({ children }) {
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: 'home', path: '/' },
-    { id: 'products', label: 'Products', icon: 'inventory', path: '/products' },
-    { id: 'stock', label: 'Stock Levels', icon: 'warehouse', path: '/stock' },
-    { id: 'reports', label: 'Reports', icon: 'analytics', path: '/reports' }
+    { id: "dashboard", label: "Dashboard", icon: "home", path: "/" },
+    { id: "products", label: "Products", icon: "inventory", path: "/products" },
+    { id: "stock", label: "Stock Levels", icon: "warehouse", path: "/stock" },
+    { id: "reports", label: "Reports", icon: "analytics", path: "/reports" },
   ];
 
   return (
@@ -695,9 +873,7 @@ export function DashboardLayout({ children }) {
           onItemClick={handleNavigation}
         />
 
-        <main className="dashboard-layout__main">
-          {children}
-        </main>
+        <main className="dashboard-layout__main">{children}</main>
       </div>
     </div>
   );
@@ -724,16 +900,16 @@ import { Button } from '@ikea/skapa-components';
 ```typescript
 // ✅ Good: Use design tokens
 const styles = {
-  padding: 'var(--spacing-md)',
-  color: 'var(--color-primary)',
-  fontSize: 'var(--font-size-body)'
+  padding: "var(--spacing-md)",
+  color: "var(--color-primary)",
+  fontSize: "var(--font-size-body)",
 };
 
 // ❌ Bad: Hard-coded values
 const styles = {
-  padding: '16px',
-  color: '#0058A3',
-  fontSize: '16px'
+  padding: "16px",
+  color: "#0058A3",
+  fontSize: "16px",
 };
 ```
 
@@ -746,13 +922,13 @@ const styles = {
     .container {
       padding: 16px; /* Mobile */
     }
-    
+
     @media (min-width: 768px) {
       .container {
         padding: 24px; /* Tablet */
       }
     }
-    
+
     @media (min-width: 1024px) {
       .container {
         padding: 32px; /* Desktop */
@@ -786,17 +962,17 @@ const styles = {
 
 ```typescript
 // ✅ Good: Lazy loading
-import { lazy, Suspense } from 'react';
-const Dashboard = lazy(() => import('./pages/Dashboard'));
+import { lazy, Suspense } from "react";
+const Dashboard = lazy(() => import("./pages/Dashboard"));
 
 <Suspense fallback={<LoadingSpinner />}>
   <Dashboard />
-</Suspense>
+</Suspense>;
 
 // ❌ Bad: Import everything upfront
-import Dashboard from './pages/Dashboard';
-import Products from './pages/Products';
-import Reports from './pages/Reports';
+import Dashboard from "./pages/Dashboard";
+import Products from "./pages/Products";
+import Reports from "./pages/Reports";
 // All pages loaded immediately
 ```
 
@@ -823,6 +999,7 @@ npm install @ikea/cwds-components
 ### Quick Reference
 
 #### Skapa Components
+
 - `Button`, `Input`, `Select`, `Checkbox`, `Radio`
 - `ProductCard`, `PriceTag`, `Rating`
 - `Navigation`, `Breadcrumb`, `Footer`
@@ -830,6 +1007,7 @@ npm install @ikea/cwds-components
 - `SearchBar`, `Filters`, `Pagination`
 
 #### CWDS Components
+
 - `GlobalHeader`, `NavigationMenu`, `BottomBarNavigation`
 - `AppSwitcher`, `Profile`
 - `DataTable`, `DataGrid`, `TreeView`
@@ -840,6 +1018,7 @@ npm install @ikea/cwds-components
 ### Design Tokens
 
 Both systems provide design tokens for:
+
 - Colors (primary, secondary, semantic)
 - Typography (fonts, sizes, weights)
 - Spacing (margins, padding, gaps)
@@ -882,4 +1061,4 @@ When building IKEA applications:
 
 **Built with ❤️ by IKEA Ingka**
 
-*Last updated: November 2025*
+_Last updated: November 2025_

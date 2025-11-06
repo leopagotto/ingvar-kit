@@ -136,11 +136,17 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
 
 1. **🇸🇪 IKEA Design System Integration**
 
-   - 72+ official Ingka Skapa components with 100% registry coverage
-   - Automatic package name mapping (e.g., colours → variables)
-   - Production-ready design tokens, typography, and accessibility
-   - Individual package installation for reliability
-   - 83 PDF specifications with visual examples and code snippets
+   - **66+ Official @ingka/\* Components** - Production-ready, pre-compiled React components from IKEA's private npm registry. Use these for standard IKEA-compliant applications.
+   - **34 Local TypeScript Templates** - Full source code templates in `templates/ingka-components/` for learning and customization. Copy and modify when you need control.
+   - **800+ Official SVG Icons** - Complete IKEA icon library
+   - **Automatic Installation** - Both official packages and templates included with `ingvar-kit`
+   - **Comprehensive Design Guidelines** - Learn when to use official vs templates: `docs/guides/DESIGN_GUIDELINES.md`
+
+   **Understanding the Dual System:**
+
+   - **Official Packages (@ingka/\*)**: Use for production apps (compiled, maintained by IKEA)
+   - **Templates (templates/ingka-components/)**: Use for learning & customization (full source, editable)
+   - **See**: [Component System Strategy](docs/guides/DESIGN_GUIDELINES.md#critical-understanding-component-systems)
 
 2. **🏢 Co-Worker Design Subsystem (CWDS)**
 

@@ -50,7 +50,249 @@ You are responsible for **translating design specifications into production-read
 
 ---
 
-## Core Principles
+## 🎯 **CRITICAL: Component System Strategy**
+
+**Before starting ANY component work, read this section carefully.**
+
+Ingvar Kit provides **TWO COMPLEMENTARY component systems**. You MUST understand when to use each:
+
+---
+
+### 1️⃣ **Official @ingka/\* Packages (Production Components)**
+
+**Priority: USE THESE FIRST for standard IKEA components**
+
+```tsx
+// ✅ ALWAYS prefer official packages when available
+import { Button } from "@ingka/button";
+import { Card } from "@ingka/card";
+import { Modal } from "@ingka/modal";
+import { InputField } from "@ingka/input-field";
+
+function ProductPage() {
+  return (
+    <Card>
+      <Button variant="primary" size="lg">
+        Add to Cart
+      </Button>
+    </Card>
+  );
+}
+```
+
+**Characteristics:**
+
+- 🔒 Pre-compiled, production-ready
+- ✅ Official IKEA Skapa design system
+- 🔄 Maintained and updated by IKEA
+- ⚠️ Cannot be modified (props only)
+- 🎯 Best for: Standard IKEA customer-facing apps
+
+**Available Components (66+):**
+
+```bash
+@ingka/accordion        @ingka/button          @ingka/card
+@ingka/carousel         @ingka/checkbox        @ingka/combobox
+@ingka/expander         @ingka/grid            @ingka/hyperlink
+@ingka/icon             @ingka/image           @ingka/input-field
+@ingka/list             @ingka/loading         @ingka/modal
+@ingka/pill             @ingka/progress-indicator
+@ingka/quantity-stepper @ingka/radio-button    @ingka/search
+@ingka/select           @ingka/slider          @ingka/status
+@ingka/switch           @ingka/table           @ingka/tabs
+@ingka/text             @ingka/text-area       @ingka/toast
+@ingka/tooltip          # ... and 40+ more
+```
+
+**Check if component exists:**
+
+```bash
+# List all installed @ingka packages
+npm list --depth=0 | grep @ingka
+```
+
+---
+
+### 2️⃣ **Local TypeScript Templates (Customizable Components)**
+
+**Priority: USE ONLY when official packages don't meet requirements**
+
+**When to use templates:**
+
+- ✅ Official component doesn't exist
+- ✅ Need heavy customization beyond props
+- ✅ Building internal tools (non-customer-facing)
+- ✅ Prototyping new component variants
+- ✅ Learning component patterns
+- ✅ Creating project-specific components
+
+```tsx
+// ❌ DON'T copy template if official exists
+// Instead of:
+import { Button } from "./components/Button"; // Template copy
+
+// ✅ DO use official package:
+import { Button } from "@ingka/button";
+
+// ✅ BUT DO copy template for custom components:
+import { SpecialCard } from "./components/SpecialCard"; // No official equivalent
+```
+
+**Available Templates (34):**
+Located in: `templates/ingka-components/`
+
+```
+Accordion/         Button/           Card/             Checkbox/
+Combobox/          Divider/          Grid/             Hyperlink/
+Icon/              IconButton/       Image/            Input/
+List/              Loading/          Modal/            Pill/
+ProgressIndicator/ QuantityStepper/  RadioButton/      Search/
+Select/            Slider/           Status/           Switch/
+Table/             Tabs/             Text/             TextArea/
+Toast/             Tooltip/          + Icons/ (800+ SVGs)
+```
+
+**How to use templates:**
+
+```bash
+# Copy template to your project
+ingvar components add Button
+
+# This creates: src/components/Button/Button.tsx
+# Now you can modify it for your needs
+```
+
+**Template modification example:**
+
+```tsx
+// templates/ingka-components/Button/Button.tsx (original)
+export const Button = ({ variant, size, children, ...props }) => {
+  // Official IKEA implementation
+  const colors = { primary: "#0051BA", secondary: "#FFFFFF" };
+  // ... rest of implementation
+};
+
+// YOUR PROJECT: src/components/CustomButton/CustomButton.tsx
+export const CustomButton = ({ variant, size, children, ...props }) => {
+  // Modified for your specific needs
+  const colors = {
+    primary: "#0051BA",
+    secondary: "#FFFFFF",
+    special: "#FF6B00", // ✅ Custom variant you added
+  };
+  // ... your modifications
+};
+```
+
+---
+
+### 📊 **Decision Tree**
+
+```
+New Component Needed?
+    |
+    ├─> Is it a standard IKEA component (Button, Card, etc.)?
+    |       ├─> YES → Check if @ingka/* package exists
+    |       |           ├─> EXISTS → ✅ USE OFFICIAL PACKAGE
+    |       |           └─> DOESN'T EXIST → Go to templates
+    |       └─> NO → It's a custom component
+    |
+    ├─> Does it need heavy customization?
+    |       ├─> YES → Use template as starting point
+    |       └─> NO → Use official package with props
+    |
+    └─> Is it for internal tools only?
+            ├─> YES → Templates are fine
+            └─> NO → Prefer official packages
+```
+
+---
+
+### 🚨 **Common Mistakes to Avoid**
+
+**❌ DON'T:**
+
+```tsx
+// ❌ Copying template when official exists
+import { Button } from "./components/Button"; // Template copy
+// Official @ingka/button exists! Use it instead.
+
+// ❌ Installing template alongside official
+import { Button as OfficialButton } from "@ingka/button";
+import { Button as CustomButton } from "./components/Button";
+// Confusing! Pick one approach.
+
+// ❌ Modifying node_modules/@ingka/* packages
+// You can't edit these! Use templates instead if you need changes.
+```
+
+**✅ DO:**
+
+```tsx
+// ✅ Use official when available
+import { Button } from "@ingka/button";
+import { Card } from "@ingka/card";
+
+// ✅ Use template only for custom needs
+import { SpecialCard } from "./components/SpecialCard"; // No official equivalent
+
+// ✅ Hybrid approach (most common)
+import { Button, Card, Modal } from "@ingka/button"; // Official
+import { CustomDashboardCard } from "./components/DashboardCard"; // Custom
+```
+
+---
+
+### 💡 **Best Practice: Check First, Build Second**
+
+**Always follow this order:**
+
+1. **Check official packages:**
+
+   ```bash
+   npm list @ingka/* | grep <component-name>
+   ```
+
+2. **If found, use it:**
+
+   ```tsx
+   import { ComponentName } from "@ingka/component-name";
+   ```
+
+3. **If NOT found, check templates:**
+
+   ```bash
+   ls templates/ingka-components/ | grep <ComponentName>
+   ```
+
+4. **If template exists and you need customization:**
+
+   ```bash
+   ingvar components add ComponentName
+   # Then modify the copied file
+   ```
+
+5. **If neither exists, build from scratch:**
+   - Follow IKEA design guidelines
+   - Reference similar templates
+   - Use IKEA design tokens
+
+---
+
+### 📖 **Documentation References**
+
+**For official packages:**
+
+- Read: `docs/guides/DESIGN_GUIDELINES.md` (Skapa section)
+- Official docs: https://www.ikea.com/global/en/this-is-ikea/design/
+
+**For templates:**
+
+- Read: `templates/ingka-components/README.md`
+- Each component has its own README
+- Example: `templates/ingka-components/Button/README.md`
+
+---
 
 ### 1. **Design Fidelity**
 
