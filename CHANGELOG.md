@@ -5,6 +5,41 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.8.2] - 2025-11-06
+
+### 🎯 Changed
+
+- **Branding Update:** Rebranded all "LEO" references to "INGVAR" throughout the codebase
+  - User-facing: "INGVAR Workflow" instead of "LEO workflow"
+  - Commands: References updated in help text and documentation
+  - Environment variables: `INGVAR_AUTO_INIT`, `INGVAR_API_PORT`, `INGVAR_API_HOST`, `INGVAR_POSTINSTALL`
+  - Consistent branding across all CLI commands, docs, and AI instructions
+
+### 🔧 Fixed
+
+- **CWDS Command:** Fixed TypeError crash in `ingvar cwds list` command
+  - Root cause: CWDS_COMPONENTS not exported from refactored cwds-installer.js
+  - Solution: Deprecated entire `ingvar cwds` command in favor of unified installer
+  - Now shows helpful deprecation notice guiding users to `ingvar components`
+
+### ✨ Improved
+
+- **Unified Component Path:** Eliminated confusion between two component installation methods
+
+  - Deprecated: `ingvar cwds` (template-based, internal co-worker components)
+  - Preferred: `ingvar components` (npm package-based, official @ingka/\* packages)
+  - Single clear path: Install all components via `ingvar components --mode essential/all/cherry-pick`
+
+- **Streamlined Init Workflow:** Added optional component installation prompt after `ingvar init`
+  - Users can now install components immediately after project setup
+  - Reduces steps: no need to remember `ingvar components` command
+  - Still optional: can skip and install later if needed
+
+### 📝 Documentation
+
+- **Command Help:** Updated CLI help text to reflect CWDS deprecation
+- **User Guidance:** Improved error messages and deprecation notices with clear next steps
+
 ## [6.8.1] - 2025-11-06
 
 ### 🚀 Improved

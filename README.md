@@ -17,6 +17,25 @@
 
 ---
 
+### 🎉 **v6.8.2** - INGVAR Rebranding & Unified Component Installer! 🎊
+
+🎯 **INGVAR Workflow** • 📦 **One Component Path** • 🔧 **CWDS Deprecated** • ✨ **Streamlined Init**
+
+**WHAT'S NEW:**
+- Consistent **INGVAR** branding throughout (goodbye "LEO"!)
+- Unified component installer: Use `ingvar components` for all IKEA components
+- Optional component install prompt right after `ingvar init`
+- Fixed CWDS command crash (now shows helpful deprecation notice)
+
+```bash
+# After ingvar init, install components immediately:
+ingvar init                                    # Setup + optional component install
+ingvar components --mode essential             # Or install later (23 components)
+ingvar components --mode all                   # All 72 components
+```
+
+---
+
 ### 🎉 **v6.8.1** - Spark UX Improved & Component Count Fixed! 🎊
 
 ⚡ **No Double Prompts** • 📊 **Accurate Docs (72 components)** • 🔒 **0 Vulnerabilities** • ✅ **All Tests Passing**
