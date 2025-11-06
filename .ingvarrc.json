@@ -26,5 +26,14 @@
       "enabled": true
     }
   },
-  "project-type": "Express"
+  "project-type": "Express",
+  "design-system": {
+    "enabled": true,
+    "type": "cwds",
+    "install-components": true,
+    "cwds": {
+      "enabled": true,
+      "install-components": true
+    }
+  }
 }
