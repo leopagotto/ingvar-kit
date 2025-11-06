@@ -207,10 +207,10 @@ program
     componentsCommand(options);
   });
 
-// CWDS command - Install Co-Worker Design Subsystem (v6.1.0+)
+// CWDS command - DEPRECATED in favor of unified 'ingvar components' (v6.1.0+)
 program
   .command('cwds')
-  .description('Install IKEA Co-Worker Design Subsystem components')
+  .description('[DEPRECATED] Use "ingvar components" instead')
   .argument('[action]', 'Action: install, list')
   .option('--auto', 'Auto-install recommended components (non-interactive)')
   .action((action, options) => {
