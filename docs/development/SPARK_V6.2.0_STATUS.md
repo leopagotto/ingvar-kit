@@ -256,7 +256,7 @@ module.exports = async function spark(options = {}) {
     chalk.blue("ℹ️  Generates React apps using official IKEA components:\n")
   );
   console.log(
-    chalk.gray("   • Ingka Skapa (75+ components) - Customer-facing apps")
+    chalk.gray("   • Ingka Skapa (72 components) - Customer-facing apps")
   );
   console.log(
     chalk.gray("   • CWDS (10+ components) - Internal co-worker tools\n")
@@ -376,7 +376,7 @@ After testing passes:
 ### Added
 
 - **Dual Design System Support in Spark:**
-  - Ingka Skapa (75+ components) - Customer-facing apps
+  - Ingka Skapa (72 components) - Customer-facing apps
   - CWDS (10+ components) - Internal co-worker tools
   - Interactive design system selection
   - CLI option: `--design-system ingka|cwds`

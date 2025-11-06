@@ -200,7 +200,7 @@ import { Card } from "ingvar-kit/skapa/ingka-direct";
 - **Component Installation Flow:**
 
   - CLI now offers package installation first (recommended)
-  - Individual component installation still available (75+ components)
+  - Individual component installation still available (72 components)
   - Clear use case guidance for each approach
   - Updated README Quick Start to show both options
 

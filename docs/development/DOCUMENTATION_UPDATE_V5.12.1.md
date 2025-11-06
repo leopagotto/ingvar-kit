@@ -30,7 +30,7 @@ Complete documentation update following the successful release of v5.12.1 (bug f
 ```markdown
 ### 🎉 **v5.4.0** - IKEA Ingka Skapa Design System Integration
 
-📦 **75+ Official IKEA Components** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📋 **[83 PDF Specifications](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)**
+📦 **72 Official IKEA Components** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📋 **[83 PDF Specifications](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)**
 
 Generate production-ready apps with official IKEA design tokens, components, and accessibility standards built-in.
 
@@ -42,7 +42,7 @@ Generate production-ready apps with official IKEA design tokens, components, and
 ```markdown
 ### 🎉 **v5.12.1** - Automatic Component Installation + IKEA Design System
 
-📦 **75+ Official IKEA Components** • 🚀 **Automatic Installation** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📋 **[83 PDF Specifications](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)**
+📦 **72 Official IKEA Components** • 🚀 **Automatic Installation** • 🎨 **Professional Design Excellence** • 🤖 **AI-Powered Generation** • ♿ **WCAG 2.1 AA Compliant** • 📋 **[83 PDF Specifications](https://github.com/leopagotto/ingvar-kit/tree/main/docs/guides)**
 
 Generate production-ready apps with official IKEA design tokens, components, and accessibility standards built-in. Now with **automatic component installation** during npm install - choose from 26 essential components, all 75 components, or cherry-pick specific ones.
 
@@ -120,7 +120,7 @@ Automatically organizes markdown files:
 **Key Features:**
 
 - ✅ **Automatic Component Installation** - Install IKEA components during npm install (v5.12.0)
-- ✅ **75+ IKEA Components** - Complete Ingka Skapa Design System (v5.4.0)
+- ✅ **72 IKEA Components** - Complete Ingka Skapa Design System (v5.4.0)
 - ✅ **3 Installation Modes** - Essential (26), All (75), or Cherry-pick (v5.12.0)
 - ✅ **AI-Powered Generation** - Spark generator with IKEA integration (v5.4.0)
 - ✅ **1,300+ Lines AI Specs** - GitHub Copilot/Claude instructions (v5.4.0)
@@ -301,7 +301,7 @@ User requested: "take a comprehensive look at that and update truthfully"
 
 2. **Component Count:**
 
-   - Claimed: 75+ IKEA components ✅
+   - Claimed: 72 IKEA components ✅
    - Actual: 75 components in component-installer.js ✅
    - Verified in: COMPONENT_INSTALLATION.md ✅
 

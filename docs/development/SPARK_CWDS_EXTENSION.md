@@ -14,12 +14,12 @@
 
 1. **Ingka Skapa Only** (default) → Customer-facing apps
 
-   - 75+ @ingka/\* components
+   - 72 @ingka/\* components
    - E-commerce, product pages, public sites
    - IKEA Blue (#0051BA) + Yellow (#FFDB00)
 
 2. **Ingka Skapa + CWDS** → Internal co-worker tools
-   - 75+ @ingka/\* components (base)
+   - 72 @ingka/\* components (base)
    - 10+ @ingka-group-digital/\* components (co-worker features)
    - Admin panels, dashboards, internal tools
    - Co-Worker Blue (#003E72) + Yellow (#FFDB00)
@@ -86,7 +86,7 @@ $ ingvar spark -p "shopping cart" -n "cart-app" --ikea
 
 ℹ️  Generate React apps with IKEA Ingka Skapa Design System
 
-   • Ingka Skapa (75+ components) - Customer-facing apps
+   • Ingka Skapa (72 components) - Customer-facing apps
    • Optional: Add CWDS (10+ components) for internal tools
 
 🔧 Setting up Spark app...
@@ -127,7 +127,7 @@ $ ingvar spark -p "admin dashboard" -n "admin-app" --ikea --cwds
 
 ℹ️  Generate React apps with IKEA Ingka Skapa Design System
 
-   • Ingka Skapa (75+ components) - Customer-facing apps
+   • Ingka Skapa (72 components) - Customer-facing apps
    • Optional: Add CWDS (10+ components) for internal tools
 
 🔧 Setting up Spark app...
@@ -158,7 +158,7 @@ $ ingvar spark -p "admin dashboard" -n "admin-app" --ikea --cwds
 
 📍 Location: ./spark-apps/admin-app
 🇸🇪 Design System: IKEA Ingka Skapa + CWDS
-🎨 Components: 75+ Ingka Skapa + 10+ CWDS (Internal tools)
+🎨 Components: 72 Ingka Skapa + 10+ CWDS (Internal tools)
    • Global Header, App Switcher, ILOFF Layout
 ```
 
@@ -173,7 +173,7 @@ $ ingvar spark -p "project management tool" -n "project-app"
 
 ℹ️  Generate React apps with IKEA Ingka Skapa Design System
 
-? 🇸🇪 Use IKEA Ingka Skapa design system? (75+ components, customer-facing apps) (Y/n) Y
+? 🇸🇪 Use IKEA Ingka Skapa design system? (72 components, customer-facing apps) (Y/n) Y
 ? 🏢 Add CWDS components? (For internal co-worker tools, extends Ingka Skapa) (y/N) Y
 
 🔧 Setting up Spark app...
@@ -197,7 +197,7 @@ TECH STACK:
 
 COMPONENTS:
 - Button, Card, InputField, Text, Grid, Loading, Badge, Modal, Tabs, Checkbox, Select
-- (75+ total)
+- (72 total)
 
 DESIGN:
 - IKEA Blue (#0051BA), Yellow (#FFDB00)
@@ -399,7 +399,7 @@ ingvar spark -p "dashboard" -n "test-dash"
 ```
 Ingvar Spark
 ├── No Design System (default Vite template)
-├── IKEA Ingka Skapa (75+ components)
+├── IKEA Ingka Skapa (72 components)
 │   ├── Customer-facing apps
 │   └── + CWDS (10+ components)
 │       └── Internal co-worker tools

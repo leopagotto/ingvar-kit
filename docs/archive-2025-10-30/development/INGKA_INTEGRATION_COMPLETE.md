@@ -17,7 +17,7 @@ Successfully integrated the **official IKEA Ingka Skapa Design System** into Ing
 ### 2. **Copilot Instructions Updated** (`.github/copilot-instructions.md`)
 
 - Added comprehensive Ingka Skapa Design System section
-- Listed all 75+ available official components
+- Listed all 72 available official components
 - Included usage examples and best practices
 - Made AI aware of official components vs custom implementations
 - Prioritizes Ingka components in all code generation
@@ -31,7 +31,7 @@ Successfully integrated the **official IKEA Ingka Skapa Design System** into Ing
   - Prompt mentions "official IKEA"
 - **Automatic package installation:**
   - Core packages for simple apps (7 packages)
-  - Full suite for complex apps (75+ packages)
+  - Full suite for complex apps (72 packages)
 - **Generated components:**
   - Example React component using Ingka
   - Usage documentation (INGKA_README.md)
@@ -46,7 +46,7 @@ Successfully integrated the **official IKEA Ingka Skapa Design System** into Ing
 ### 5. **Comprehensive Documentation** (`docs/guides/INGKA_DESIGN_SYSTEM.md`)
 
 - Complete integration guide
-- All 75+ available packages listed by category
+- All 72 available packages listed by category
 - Usage examples for common patterns
 - Troubleshooting section
 - Spec-first workflow explanation
@@ -97,7 +97,7 @@ ingvar spark --prompt "official IKEA components app"
 
 ---
 
-## 📦 Available Ingka Packages (75+)
+## 📦 Available Ingka Packages (72)
 
 ### Core Design Tokens
 
@@ -188,7 +188,7 @@ ingvar spark --prompt "official IKEA components app"
 
 - `@ingka/skip-content` - Skip navigation
 
-**Total:** 75+ production-ready components
+**Total:** 72 production-ready components
 
 ---
 
@@ -406,7 +406,7 @@ ingvar spark --prompt "create a todo app with Ingka Skapa components"
 ### v1.0.0 - Initial Integration
 
 - ✅ Ingka registry configuration
-- ✅ 75+ official components available
+- ✅ 72 official components available
 - ✅ Spark generator Ingka support
 - ✅ Automatic package installation
 - ✅ AI detection of Ingka intent

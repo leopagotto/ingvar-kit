@@ -26,7 +26,7 @@
 
 2. **Ingka Skapa Installer (`lib/components/component-installer.js`)**
 
-   - ✅ 75+ official `@ingka/*` components from npm
+   - ✅ 72 official `@ingka/*` components from npm
    - ✅ 100% IKEA Ingka Skapa Design System
    - ✅ No external design systems
 
@@ -81,7 +81,7 @@ console.log(
 console.log(chalk.gray("For IKEA-compliant applications, use:\n"));
 console.log(
   chalk.cyan("  ingvar components install") +
-    chalk.gray(" - Official Ingka Skapa components (75+ components)")
+    chalk.gray(" - Official Ingka Skapa components (72 components)")
 );
 console.log(
   chalk.cyan("  ingvar cwds install") +
@@ -150,7 +150,7 @@ if (!proceed) {
 **⚠️ IKEA-Only Policy:**
 Ingvar Kit uses **only official IKEA design systems**:
 
-- ✅ **Ingka Skapa** (75+ components) for customer-facing apps
+- ✅ **Ingka Skapa** (72 components) for customer-facing apps
 - ✅ **CWDS** (10+ components) for internal co-worker tools
 - ❌ **No third-party design systems** (Tailwind, Material-UI, etc.)
 
@@ -357,7 +357,7 @@ cat package.json | grep "@ingka"    # ❌ NO @ingka packages (expected)
 ✅ **GOOD NEWS:** 95% of Ingvar Kit is already IKEA-only:
 
 - ✅ Core package has no external design systems
-- ✅ Component installer (75+ components) is 100% IKEA Ingka Skapa
+- ✅ Component installer (72 components) is 100% IKEA Ingka Skapa
 - ✅ CWDS installer (10+ components) is 100% IKEA CWDS
 - ✅ Init command installs only IKEA components
 

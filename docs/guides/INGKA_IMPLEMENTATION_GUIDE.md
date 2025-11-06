@@ -31,7 +31,7 @@ The Ingka Design System documentation is organized into multiple files for bette
 **Purpose:** Quick component lookup and categorization
 **Contents:**
 
-- All 75+ `@ingka/*` packages organized by category
+- All 72 `@ingka/*` packages organized by category
 - Component-to-PDF mapping
 - Usage examples and quick reference
 

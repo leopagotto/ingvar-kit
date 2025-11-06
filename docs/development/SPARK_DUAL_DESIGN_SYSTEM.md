@@ -10,7 +10,7 @@
 
 **ENHANCED:** Spark now supports **both** IKEA design systems:
 
-- ✅ **Ingka Skapa** (75+ components) - Customer-facing apps
+- ✅ **Ingka Skapa** (72 components) - Customer-facing apps
 - ✅ **CWDS** (10+ components) - Internal co-worker tools
 
 Users can choose which design system to use when generating apps, making Spark the most versatile IKEA app generator.
@@ -53,7 +53,7 @@ ingvar spark "admin tool" --design-system cwds   # Internal tool
 - Uses @ingka/\* components
 - IKEA Blue (#0051BA) + Yellow (#FFDB00)
 - E-commerce, product, customer focus
-- 75+ components available
+- 72 components available
 
 **For CWDS (Internal tools):**
 
@@ -244,7 +244,7 @@ function App() {
 | Feature           | Ingka Skapa                      | CWDS                              |
 | ----------------- | -------------------------------- | --------------------------------- |
 | **Purpose**       | Customer-facing                  | Internal co-worker tools          |
-| **Components**    | 75+ components                   | 10+ specialized components        |
+| **Components**    | 72 components                   | 10+ specialized components        |
 | **Package**       | @ingka/\*                        | @ingka-group-digital/\*           |
 | **Primary Color** | IKEA Blue (#0051BA)              | Co-Worker Blue (#003E72)          |
 | **Accent Color**  | IKEA Yellow (#FFDB00)            | IKEA Yellow (#FFDB00)             |
@@ -261,7 +261,7 @@ function App() {
 
 ### For Customer-Facing Apps (Ingka Skapa):
 
-✅ **75+ Components** - Complete e-commerce toolkit
+✅ **72 Components** - Complete e-commerce toolkit
 ✅ **E-Commerce Focused** - Price, ProductId, ShoppableImage, Rating
 ✅ **Public Registry** - Easy installation from npm
 ✅ **Proven at Scale** - Powers IKEA.com globally

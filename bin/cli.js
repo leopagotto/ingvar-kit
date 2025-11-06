@@ -220,7 +220,7 @@ program
 
 // Spark command - AI-powered app generator (v5.4.0+)
 program
-  .command('spark')
+  .command('spark [prompt]')
   .description('Generate React apps with IKEA design systems (Ingka Skapa or CWDS)')
   .option('-p, --prompt <prompt>', 'Natural language prompt describing the app')
   .option('-n, --name <name>', 'Project name')
@@ -232,7 +232,11 @@ program
   )
   .option('--no-install', 'Skip npm install after generation')
   .option('--no-start', 'Skip starting dev server after generation')
-  .action((options) => {
+  .action((promptArg, options) => {
+    // If prompt provided as argument, use it (overrides --prompt option)
+    if (promptArg) {
+      options.prompt = promptArg;
+    }
     const sparkCommand = require('../lib/commands/spark');
     sparkCommand(options);
   });

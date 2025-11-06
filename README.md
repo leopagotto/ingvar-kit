@@ -114,7 +114,7 @@ Achieved 100% Ingka registry coverage through automatic package name mapping. Al
 
 ### 🎉 **v6.0.0** - Modular AI Instructions Architecture
 
-🎯 **Copilot Instructions: 4,967 → 464 lines** • 🎨 **Designer Agent Integrated** • ✅ **Accurate Component Reporting** • 📦 **75+ IKEA Components** • 🤖 **7 Specialized Agents** • ♿ **WCAG 2.1 AA Compliant**
+🎯 **Copilot Instructions: 4,967 → 464 lines** • 🎨 **Designer Agent Integrated** • ✅ **Accurate Component Reporting** • 📦 **72 IKEA Components** • 🤖 **7 Specialized Agents** • ♿ **WCAG 2.1 AA Compliant**
 
 Major architecture refactor with 90.7% smaller AI instructions, complete 7-agent system (Designer now included!), and accurate component installation reporting. True modular system with zero duplication - update once, applies everywhere.
 
@@ -166,7 +166,7 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
 4. **⚡ Spark Generator (App-in-Minutes)** 🇸🇪 _IKEA Ingka Skapa + Optional CWDS_
 
    - Natural language → production React app (2-5 minutes)
-   - **✅ Ingka Skapa Base (75+ components)** - Customer-facing apps (always included)
+   - **✅ Ingka Skapa Base (72 components)** - Customer-facing apps (always included)
    - **✅ Optional CWDS (10+ components)** - Internal co-worker tools (extends Ingka Skapa)
    - **✅ IKEA-compliant:** Pure @ingka/_ and @ingka-group-digital/_ components
    - Claude 3.5 Sonnet generation with best practices built-in
@@ -393,7 +393,7 @@ ingvar spark "Create product catalog with search" --design-system ingka
 **What you get:**
 
 - ✅ **Complete React 19 + TypeScript setup** with Vite
-- ✅ **75+ Ingka Skapa components** OR **CWDS co-worker suite**
+- ✅ **72 Ingka Skapa components** OR **CWDS co-worker suite**
 - ✅ **Modern stack**: IKEA design tokens, React Query, React Hook Form
 - ✅ **AI-generated components** using Claude 3.5 Sonnet
 - ✅ **Production-ready** with forms, validation, routing
@@ -408,7 +408,7 @@ Built-in support for the official IKEA design systems with **automatic installat
 **⚠️ IKEA-Only Policy:**
 Ingvar Kit uses **only official IKEA design systems**:
 
-- ✅ **Ingka Skapa** (75+ components) for customer-facing apps
+- ✅ **Ingka Skapa** (72 components) for customer-facing apps
 - ✅ **CWDS** (10+ components) for internal co-worker tools
 - ❌ **No third-party design systems** (Tailwind, Material-UI, etc.)
 
@@ -456,7 +456,7 @@ When you install Ingvar Kit, you'll be prompted to install IKEA components:
 
 **What's Included:**
 
-- ✅ **75+ Official Components**: Buttons, Cards, Forms, Modals, Tables, Navigation
+- ✅ **72 Official Components**: Buttons, Cards, Forms, Modals, Tables, Navigation
 - ✅ **Swedish Design**: Official IKEA Blue (#0051BA) and Yellow (#FFDA1A)
 - ✅ **Design Tokens**: 8px grid system, Noto Sans typography, elevation system
 - ✅ **Production-Ready**: Used across all IKEA digital products worldwide
@@ -927,7 +927,7 @@ function App() {
 
 **📦 Package Stats:** 64 components • 328KB bundle • 97% TypeScript coverage • Tree-shakeable
 **📚 Documentation:** [Complete Guide →](packages/skapa-components/README.md) | [Component List →](packages/skapa-components/COMPONENT_STATUS.md)
-**🔧 Alternative:** Cherry-pick individual components with `ingvar components` (75+ available)
+**🔧 Alternative:** Cherry-pick individual components with `ingvar components` (72 available)
 
 ---
 
@@ -1327,7 +1327,7 @@ git push origin feature/amazing-feature
 **Key Features:**
 
 - ✅ **Automatic Component Installation** - Install IKEA components during npm install (v5.12.0)
-- ✅ **75+ IKEA Components** - Complete Ingka Skapa Design System (v5.4.0)
+- ✅ **72 IKEA Components** - Complete Ingka Skapa Design System (v5.4.0)
 - ✅ **3 Installation Modes** - Essential (26), All (75), or Cherry-pick (v5.12.0)
 - ✅ **AI-Powered Generation** - Spark generator with IKEA integration (v5.4.0)
 - ✅ **1,300+ Lines AI Specs** - GitHub Copilot/Claude instructions (v5.4.0)

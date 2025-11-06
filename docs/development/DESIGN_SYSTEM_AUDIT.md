@@ -54,7 +54,7 @@
 
 **What it installs:**
 
-- 75+ official `@ingka/*` components from npm registry
+- 72 official `@ingka/*` components from npm registry
 - Official IKEA Ingka Skapa Design System
 - No external design systems
 
@@ -370,7 +370,7 @@ Add section:
 
 Ingvar Kit is **IKEA-first** and uses only official IKEA design systems:
 
-- ✅ **Ingka Skapa** - 75+ components for customer-facing apps (@ingka/\*)
+- ✅ **Ingka Skapa** - 72 components for customer-facing apps (@ingka/\*)
 - ✅ **CWDS** - 10+ components for internal co-worker tools (@ingka-group-digital/\*)
 - ❌ **No third-party design systems** (Tailwind, Material-UI, Ant Design, etc.)
 

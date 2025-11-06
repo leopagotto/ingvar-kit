@@ -19,7 +19,7 @@
 
 **Skapa** (Swedish for "create") is IKEA's comprehensive design system that provides:
 
-- **75+ Production-Ready Components** for web and mobile
+- **72 Production-Ready Components** for web and mobile
 - **Unified Design Language** across all IKEA digital touchpoints
 - **Accessibility-First Approach** (WCAG 2.1 AA compliance)
 - **Multi-Platform Support:** React, Vue, Web Components, Android, iOS
