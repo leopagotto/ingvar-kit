@@ -16,18 +16,16 @@ Ingvar Kit is a powerful CLI tool that revolutionizes software development proje
 - **📊 Intelligent Project Management**: Auto-sync with GitHub Projects with smart status updates
 - **⚡ Zero Configuration**: Works out-of-the-box - literally just `npm install`
 
-**Current Version:** 6.7.4 🎉
-**Latest Stable:** 6.7.4
+**Current Version:** 6.8.0 🎉
+**Latest Stable:** 6.8.0
 **Release Date:** November 6, 2025
 
-**What's New in 6.7.4:** 📚 COMPREHENSIVE DESIGN GUIDELINES ADDED
+**What's New in 6.8.0:** 🎯 COMPONENT SYSTEM STRATEGY CLARIFIED
 
-- ✅ **Consistent CLI Commands**: All command references now use `ingvar` instead of mixed `leo`/`ingvar`
-- 🎯 **Better User Experience**: No more confusion between tool name and command examples
-- 📚 **Updated Documentation**: All guides, help text, and examples now consistent
-- 🚀 **Enhanced Reliability**: CLI tool name matches all command references throughout
-- 📖 **Simplified README**: Removed complex Mermaid diagrams, added clear explanations
-- ✅ **Verified Spec Workflow**: All 6 spec commands tested and documented
+- ✅ **Decision Matrices**: When to use official @ingka/\* packages vs templates
+- 🤖 **AI-Optimized Docs**: Copilot/Claude now understand component architecture
+- 🎯 **Priority Rules**: Check official packages first workflow
+- � **600+ Lines Added**: Comprehensive guidance across 4 key documentation files
 
 **What's New in 4.1.1:** ✨ REAL-TIME MODEL SELECTION IN VS CODE
 

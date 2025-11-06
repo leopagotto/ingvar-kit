@@ -1,8 +1,8 @@
 # Installation Guide
 
-> **Get Ingvar Kit v6.7.4 up and running in < 30 seconds**
+> **Get Ingvar Kit v6.8.0 up and running in < 30 seconds**
 
-> **✨ NEW in v6.7.4:** Comprehensive IKEA Design Guidelines added! Complete guide for Skapa & CWDS design systems.
+> **✨ NEW in v6.8.0:** Component system strategy clarified! Clear documentation for when to use official @ingka/\* packages vs local templates.
 
 ## 🎯 Prerequisites
 
@@ -26,18 +26,19 @@ Before installing Ingvar Kit, ensure you have:
 
 ### Method 1: Automatic Installation (Recommended)
 
-**One command - complete setup with v6.7.4 features!**
+**One command - complete setup with v6.8.0 features!**
 
 ```bash
-INGVAR_AUTO_INIT=true npm install -g ingvar-kit@6.7.4
+INGVAR_AUTO_INIT=true npm install -g ingvar-kit@6.8.0
 ```
 
 **What this does:**
 
-- ✅ Installs Ingvar Kit v6.7.4
+- ✅ Installs Ingvar Kit v6.8.0
 - ✅ Automatically initializes your project
-- ✅ **Comprehensive Design Guidelines** ✨ (NEW in v6.7.4!)
-- ✅ **Consistent CLI commands** ✨ (FIXED in v6.7.3!)
+- ✅ **Component System Strategy** ✨ (NEW in v6.8.0!)
+- ✅ **Comprehensive Design Guidelines** ✨
+- ✅ **Consistent CLI commands** ✨
 - ✅ **Enables all 6 agents by default** ✨
 - ✅ Creates documentation structure (`docs/specs/`)
 - ✅ Installs issue templates (8 professional templates)
@@ -64,14 +65,14 @@ INGVAR_AUTO_INIT=true npm install -g ingvar-kit@6.7.4
 Install Ingvar globally to use across all projects:
 
 ```bash
-npm install -g ingvar-kit@6.7.4
+npm install -g ingvar-kit@6.8.0
 ```
 
 **Verify installation:**
 
 ```bash
 ingvar --version
-# Should show: 6.7.4 (or later)
+# Should show: 6.8.0 (or later)
 
 ingvar --help
 # Shows all available commands

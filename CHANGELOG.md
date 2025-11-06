@@ -5,6 +5,23 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.8.0] - 2025-11-06
+
+### 📚 Documentation
+
+- **Component System Clarity:** Added comprehensive documentation explaining dual component strategy
+  - Updated `DESIGN_GUIDELINES.md` with decision matrix for official @ingka/\* packages vs local templates
+  - Enhanced `frontend-agent.md` with component selection decision tree and priority rules
+  - Added quick reference guide to `copilot-instructions-template.js` for AI agents
+  - Clarified README with distinction between 66+ official packages and 34 templates
+  - Ensures Copilot/AI understands when to use production packages vs customizable templates
+
+### 🎯 Improved
+
+- **AI Agent Guidance:** AI agents now have clear instructions to check official @ingka/\* packages first
+- **Developer Experience:** Clear decision matrices prevent common mistakes in component selection
+- **Documentation Consistency:** 600+ lines added/updated across 4 key documentation files
+
 ## [6.7.4] - 2025-11-06
 
 ### 📚 Added

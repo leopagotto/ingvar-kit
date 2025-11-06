@@ -17,18 +17,16 @@
 
 ---
 
-### 🎉 **v6.7.4** - Design Guidelines Added! 🎊
+### 🎉 **v6.8.0** - Component System Strategy Clarified! 🎊
 
-📚 **Comprehensive Guide** • 🎨 **Skapa & CWDS** • 🏗️ **Component Architecture** • ✅ **Best Practices** • 🚀 **Production Ready**
+📚 **AI-Ready Docs** • � **Decision Matrices** • 🏗️ **Official vs Templates** • ✅ **Best Practices** • 🤖 **Copilot Optimized**
 
-**NEW:** Complete design guidelines document centralizing all IKEA design system information in one place!
+**NEW:** Clear documentation explaining when to use official @ingka/\* packages vs local templates!
 
 ```bash
-# Access the comprehensive guide:
-docs/guides/DESIGN_GUIDELINES.md
-
-# 885 lines covering:
-- Skapa Design System (customer apps)
+# Updated guides with component strategy:
+docs/guides/DESIGN_GUIDELINES.md     # Decision matrix
+lib/ai-instructions/frontend-agent.md # Priority rules
 - CWDS (internal co-worker tools)
 - When to use each system
 - Component architecture & patterns
