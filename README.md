@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Ingvar Kit</h1>
+<h1>INGVAR KIT</h1>
 
 <h3>AI-Powered Workflow Automation with IKEA Ingka Design System</h3>
 
