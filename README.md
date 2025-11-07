@@ -1,8 +1,5 @@
 <div align="center">
-
-<h1>INGVAR KIT</h1>
 <h3>AI-Powered Workflow Automation with IKEA Ingka Design System</h3>
-**Transform your development with multi-agent AI, rapid app generation, spec-first development, and the official IKEA design system—all from your terminal.**
 
 ![Ingvar Kit](docs/assets/ingvar_kit_logo.png)
 
@@ -13,175 +10,9 @@
 
 [Quick Start](#-quick-start) • [Features](#-features) • [IKEA Design System](#-ikea-ingka-design-system) • [Spark Generator](docs/SPARK.md) • [Documentation](docs/README.md)
 
----
-
-## 🚀 Recent Updates
-
-### 🎉 **v6.8.5** - Critical Spark Bug Fix & Complete Rebranding! 🎊
-
-**Released:** November 7, 2025
-
-**Critical Fixes:**
-
-- 🐛 **Fixed**: Spark execution bug - all v6.8.4 fixes now in correct file (`spark.js`)
-- ✅ **Removed**: Duplicate `spark-generator.js` file causing confusion
-- 🏷️ **Rebranded**: All "leo" command references → "ingvar" throughout codebase
-- 📝 **Updated**: "LEO workflow" → "INGVAR workflow" in all AI instructions
-
-**What Works Now:**
-
-- ✅ IngkaExample.tsx generation with working components
-- ✅ INGKA_README.md comprehensive documentation
-- ✅ INGKA_ICON_MIGRATION.md with icon path mappings
-- ✅ Auto-install logic reading `.ingvarrc.json`
-- ✅ Uses `@ingka/ssr-icon` (not deprecated `@ingka/icon`)
-
-**Closes:** GitHub issue #18
+**Transform your development with multi-agent AI, rapid app generation, spec-first development, and the official IKEA design system—all from your terminal.**
 
 ---
-
-### 🎉 **v6.8.2** - INGVAR Rebranding & Unified Component Installer! 🎊
-
-🎯 **INGVAR Workflow** • 📦 **One Component Path** • 🔧 **CWDS Deprecated** • ✨ **Streamlined Init**
-
-**WHAT'S NEW:**
-
-- Consistent **INGVAR** branding throughout (goodbye "LEO"!)
-- Unified component installer: Use `ingvar components` for all IKEA components
-- Optional component install prompt right after `ingvar init`
-- Fixed CWDS command crash (now shows helpful deprecation notice)
-
-```bash
-# After ingvar init, install components immediately:
-ingvar init                                    # Setup + optional component install
-ingvar components --mode essential             # Or install later (23 components)
-ingvar components --mode all                   # All 72 components
-```
-
----
-
-### 🎉 **v6.8.1** - Spark UX Improved & Component Count Fixed! 🎊
-
-⚡ **No Double Prompts** • 📊 **Accurate Docs (72 components)** • 🔒 **0 Vulnerabilities** • ✅ **All Tests Passing**
-
-**NEW:** Spark accepts app description directly as argument—no more manual prompt entry!
-
-```bash
-# Enhanced Spark command:
-ingvar spark "Build a todo app" --name my-app   # Works immediately!
-
-# Component count corrected:
-72 Official IKEA Components (verified and documented)
-```
-
----
-
-### 🎉 **v6.8.0** - Component System Strategy Clarified! 🎊
-
-📚 **AI-Ready Docs** • � **Decision Matrices** • 🏗️ **Official vs Templates** • ✅ **Best Practices** • 🤖 **Copilot Optimized**
-
-**NEW:** Clear documentation explaining when to use official @ingka/\* packages vs local templates!
-
-```bash
-# Updated guides with component strategy:
-docs/guides/DESIGN_GUIDELINES.md     # Decision matrix
-lib/ai-instructions/frontend-agent.md # Priority rules
-- CWDS (internal co-worker tools)
-- When to use each system
-- Component architecture & patterns
-- Implementation guides with examples
-- Accessibility, performance, responsive design
-```
-
-**Benefits:** ✅ Single source of truth • ✅ Decision matrix included • ✅ Step-by-step guides • ✅ Production-ready code examples • ✅ Design tokens reference
-
-**[View Design Guidelines](docs/guides/DESIGN_GUIDELINES.md)** • **[Previous Releases](#)**
-
----
-
-### 🎉 **v6.7.3** - CLI Command References Fixed! 🎊
-
-🔧 **Consistent CLI** • ✅ **All 'ingvar' Commands** • 📚 **Updated Documentation** • 🎯 **Better UX** • 🚀 **Ready to Use**
-
-**FIXED:** All CLI command references now consistently use `ingvar` instead of mixed `leo`/`ingvar` commands. No more confusion between tool name and command examples!
-
-```bash
-# ✅ Now consistent everywhere:
-ingvar init              # Initialize workflow
-ingvar agent list        # List AI agents
-ingvar ai sync           # Regenerate AI instructions
-ingvar issue             # Create GitHub issue
-ingvar github setup      # Configure repository
-```
-
-**Benefits:** ✅ Eliminates user confusion • ✅ Consistent documentation • ✅ Better developer experience • ✅ Accurate CLI examples throughout
-
-**[Previous Release Notes](#)** • **[CLI Reference](wiki/Commands-Reference.md)** • **[Installation Guide](wiki/Installation-Guide.md)**
-
----
-
-### 🎉 **v6.7.1** - Skapa Components Now Bundled! 🎊
-
-🎁 **One Package** • 📦 **64 Components Included** • 🚀 **Simpler Installation** • ✅ **React Peer Dependencies** • 🔄 **New Import Paths**
-
-**BREAKING CHANGE:** Skapa components are now bundled directly with `ingvar-kit`! No separate package installation needed.
-
-```bash
-# Old (v6.6.x):
-npm install ingvar-kit
-npm install ingvar-skapa-components
-
-# New (v6.7.1+):
-npm install ingvar-kit react react-dom
-```
-
-**New Import Paths:**
-
-```javascript
-// Simplified wrappers
-import { Button, TextField } from "ingvar-kit/skapa";
-
-// Direct @ingka exports (Recommended)
-import { Button, Card } from "ingvar-kit/skapa/ingka-direct";
-```
-
-**Benefits:** ✅ One package instead of two • ✅ All 64 components included • ✅ Same tree-shakeable ES modules • ✅ 97% TypeScript coverage maintained
-
-**[Migration Guide](CHANGELOG.md#670)** • **[Release Notes](CHANGELOG.md#671)** • **[Component List](lib/skapa-components/COMPONENT_STATUS.md)**
-
----
-
-### 🎉 **v6.5.0** - CWDS Installation Priority & npm Package Enhancements
-
-📦 **npm Packages First** • 🔄 **Local Templates Fallback** • 📚 **Enhanced Documentation** • 💡 **Smart Installer Guidance** • ✅ **Production Ready**
-
-CWDS components now prioritize official `@ingka/*` npm packages with local templates as fallback. Smart installer guides users to check npm registry first, providing best-practice installation flow with clear documentation and rationale.
-
-**[Release Notes](CHANGELOG.md#650)** • **[CWDS Guide](templates/cwds-components/README.md)** • **[Installation Priority](templates/cwds-components/README.md#-installation-priority)**
-
----
-
-### 🎉 **v6.1.0** - 100% Component Registry Coverage
-
-✅ **72/72 Components Available** • 🔄 **Automatic Package Mapping** • 📦 **Individual Installation** • 🎯 **Spark Model Selection** • 🚀 **Zero Local Templates Needed**
-
-Achieved 100% Ingka registry coverage through automatic package name mapping. All 72 components now install from official registry with transparent mapping (e.g., colours → variables). Individual package installation prevents cascading failures. Spark now respects your model configuration.
-
-**[Release Notes](CHANGELOG.md#610)** • **[Registry Guide](docs/development/INGKA_REGISTRY_COMPONENTS.md)** • **[Package Mappings](docs/development/INGKA_REGISTRY_COMPONENTS.md#package-name-mappings)**
-
----
-
-### 🎉 **v6.0.0** - Modular AI Instructions Architecture
-
-🎯 **Copilot Instructions: 4,967 → 464 lines** • 🎨 **Designer Agent Integrated** • ✅ **Accurate Component Reporting** • 📦 **72 IKEA Components** • 🤖 **7 Specialized Agents** • ♿ **WCAG 2.1 AA Compliant**
-
-Major architecture refactor with 90.7% smaller AI instructions, complete 7-agent system (Designer now included!), and accurate component installation reporting. True modular system with zero duplication - update once, applies everywhere.
-
-**[Release Notes](CHANGELOG.md#600)** • **[Architecture Guide](docs/development/COPILOT_INSTRUCTIONS_REFACTOR_V6.md)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Component Installation](docs/guides/COMPONENT_INSTALLATION.md)**
-
----
-
-</div>
 
 ## What is Ingvar?
 
@@ -1380,6 +1211,176 @@ git push origin feature/amazing-feature
 ---
 
 ## 📊 Project Status
+
+---
+
+## 🚀 Recent Updates
+
+### 🎉 **v6.8.5** - Critical Spark Bug Fix & Complete Rebranding! 🎊
+
+**Released:** November 7, 2025
+
+**Critical Fixes:**
+
+- 🐛 **Fixed**: Spark execution bug - all v6.8.4 fixes now in correct file (`spark.js`)
+- ✅ **Removed**: Duplicate `spark-generator.js` file causing confusion
+- 🏷️ **Rebranded**: All "leo" command references → "ingvar" throughout codebase
+- 📝 **Updated**: "LEO workflow" → "INGVAR workflow" in all AI instructions
+
+**What Works Now:**
+
+- ✅ IngkaExample.tsx generation with working components
+- ✅ INGKA_README.md comprehensive documentation
+- ✅ INGKA_ICON_MIGRATION.md with icon path mappings
+- ✅ Auto-install logic reading `.ingvarrc.json`
+- ✅ Uses `@ingka/ssr-icon` (not deprecated `@ingka/icon`)
+
+**Closes:** GitHub issue #18
+
+---
+
+### 🎉 **v6.8.2** - INGVAR Rebranding & Unified Component Installer! 🎊
+
+🎯 **INGVAR Workflow** • 📦 **One Component Path** • 🔧 **CWDS Deprecated** • ✨ **Streamlined Init**
+
+**WHAT'S NEW:**
+
+- Consistent **INGVAR** branding throughout (goodbye "LEO"!)
+- Unified component installer: Use `ingvar components` for all IKEA components
+- Optional component install prompt right after `ingvar init`
+- Fixed CWDS command crash (now shows helpful deprecation notice)
+
+```bash
+# After ingvar init, install components immediately:
+ingvar init                                    # Setup + optional component install
+ingvar components --mode essential             # Or install later (23 components)
+ingvar components --mode all                   # All 72 components
+```
+
+---
+
+### 🎉 **v6.8.1** - Spark UX Improved & Component Count Fixed! 🎊
+
+⚡ **No Double Prompts** • 📊 **Accurate Docs (72 components)** • 🔒 **0 Vulnerabilities** • ✅ **All Tests Passing**
+
+**NEW:** Spark accepts app description directly as argument—no more manual prompt entry!
+
+```bash
+# Enhanced Spark command:
+ingvar spark "Build a todo app" --name my-app   # Works immediately!
+
+# Component count corrected:
+72 Official IKEA Components (verified and documented)
+```
+
+---
+
+### 🎉 **v6.8.0** - Component System Strategy Clarified! 🎊
+
+📚 **AI-Ready Docs** • � **Decision Matrices** • 🏗️ **Official vs Templates** • ✅ **Best Practices** • 🤖 **Copilot Optimized**
+
+**NEW:** Clear documentation explaining when to use official @ingka/\* packages vs local templates!
+
+```bash
+# Updated guides with component strategy:
+docs/guides/DESIGN_GUIDELINES.md     # Decision matrix
+lib/ai-instructions/frontend-agent.md # Priority rules
+- CWDS (internal co-worker tools)
+- When to use each system
+- Component architecture & patterns
+- Implementation guides with examples
+- Accessibility, performance, responsive design
+```
+
+**Benefits:** ✅ Single source of truth • ✅ Decision matrix included • ✅ Step-by-step guides • ✅ Production-ready code examples • ✅ Design tokens reference
+
+**[View Design Guidelines](docs/guides/DESIGN_GUIDELINES.md)** • **[Previous Releases](#)**
+
+---
+
+### 🎉 **v6.7.3** - CLI Command References Fixed! 🎊
+
+🔧 **Consistent CLI** • ✅ **All 'ingvar' Commands** • 📚 **Updated Documentation** • 🎯 **Better UX** • 🚀 **Ready to Use**
+
+**FIXED:** All CLI command references now consistently use `ingvar` instead of mixed `leo`/`ingvar` commands. No more confusion between tool name and command examples!
+
+```bash
+# ✅ Now consistent everywhere:
+ingvar init              # Initialize workflow
+ingvar agent list        # List AI agents
+ingvar ai sync           # Regenerate AI instructions
+ingvar issue             # Create GitHub issue
+ingvar github setup      # Configure repository
+```
+
+**Benefits:** ✅ Eliminates user confusion • ✅ Consistent documentation • ✅ Better developer experience • ✅ Accurate CLI examples throughout
+
+**[Previous Release Notes](#)** • **[CLI Reference](wiki/Commands-Reference.md)** • **[Installation Guide](wiki/Installation-Guide.md)**
+
+---
+
+### 🎉 **v6.7.1** - Skapa Components Now Bundled! 🎊
+
+🎁 **One Package** • 📦 **64 Components Included** • 🚀 **Simpler Installation** • ✅ **React Peer Dependencies** • 🔄 **New Import Paths**
+
+**BREAKING CHANGE:** Skapa components are now bundled directly with `ingvar-kit`! No separate package installation needed.
+
+```bash
+# Old (v6.6.x):
+npm install ingvar-kit
+npm install ingvar-skapa-components
+
+# New (v6.7.1+):
+npm install ingvar-kit react react-dom
+```
+
+**New Import Paths:**
+
+```javascript
+// Simplified wrappers
+import { Button, TextField } from "ingvar-kit/skapa";
+
+// Direct @ingka exports (Recommended)
+import { Button, Card } from "ingvar-kit/skapa/ingka-direct";
+```
+
+**Benefits:** ✅ One package instead of two • ✅ All 64 components included • ✅ Same tree-shakeable ES modules • ✅ 97% TypeScript coverage maintained
+
+**[Migration Guide](CHANGELOG.md#670)** • **[Release Notes](CHANGELOG.md#671)** • **[Component List](lib/skapa-components/COMPONENT_STATUS.md)**
+
+---
+
+### 🎉 **v6.5.0** - CWDS Installation Priority & npm Package Enhancements
+
+📦 **npm Packages First** • 🔄 **Local Templates Fallback** • 📚 **Enhanced Documentation** • 💡 **Smart Installer Guidance** • ✅ **Production Ready**
+
+CWDS components now prioritize official `@ingka/*` npm packages with local templates as fallback. Smart installer guides users to check npm registry first, providing best-practice installation flow with clear documentation and rationale.
+
+**[Release Notes](CHANGELOG.md#650)** • **[CWDS Guide](templates/cwds-components/README.md)** • **[Installation Priority](templates/cwds-components/README.md#-installation-priority)**
+
+---
+
+### 🎉 **v6.1.0** - 100% Component Registry Coverage
+
+✅ **72/72 Components Available** • 🔄 **Automatic Package Mapping** • 📦 **Individual Installation** • 🎯 **Spark Model Selection** • 🚀 **Zero Local Templates Needed**
+
+Achieved 100% Ingka registry coverage through automatic package name mapping. All 72 components now install from official registry with transparent mapping (e.g., colours → variables). Individual package installation prevents cascading failures. Spark now respects your model configuration.
+
+**[Release Notes](CHANGELOG.md#610)** • **[Registry Guide](docs/development/INGKA_REGISTRY_COMPONENTS.md)** • **[Package Mappings](docs/development/INGKA_REGISTRY_COMPONENTS.md#package-name-mappings)**
+
+---
+
+### 🎉 **v6.0.0** - Modular AI Instructions Architecture
+
+🎯 **Copilot Instructions: 4,967 → 464 lines** • 🎨 **Designer Agent Integrated** • ✅ **Accurate Component Reporting** • 📦 **72 IKEA Components** • 🤖 **7 Specialized Agents** • ♿ **WCAG 2.1 AA Compliant**
+
+Major architecture refactor with 90.7% smaller AI instructions, complete 7-agent system (Designer now included!), and accurate component installation reporting. True modular system with zero duplication - update once, applies everywhere.
+
+**[Release Notes](CHANGELOG.md#600)** • **[Architecture Guide](docs/development/COPILOT_INSTRUCTIONS_REFACTOR_V6.md)** • **[Ingka Quick Reference](docs/INGKA_QUICK_REFERENCE.md)** • **[Component Installation](docs/guides/COMPONENT_INSTALLATION.md)**
+
+---
+
+</div>
 
 ### Current Release: v5.12.1
 
