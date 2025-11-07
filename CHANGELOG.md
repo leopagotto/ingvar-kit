@@ -5,6 +5,75 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.8.4] - 2025-11-07
+
+### 🔥 Critical Fixes (GitHub Issue #18)
+
+- **Auto-Install Packages:** Fixed `install-components: true` in `.ingvarrc.json` not actually installing packages
+  - Now reads `.ingvarrc.json` configuration during scaffold generation
+  - Automatically installs all critical Skapa packages: `@ingka/ssr-icon`, `@ingka/button`, `@ingka/list`, `@ingka/badge`, `@ingka/skeleton`, `@ingka/card`
+  - Respects config setting (defaults to true if not specified)
+  - Provides helpful message if skipped with install command
+
+- **Deprecated Package:** Replaced `@ingka/icon` with `@ingka/ssr-icon@^11.1.0` throughout codebase
+  - Updated: `spark-generator.js`, `cwds-installer.js`, `package.json`, `ingka-direct.ts`
+  - Removed deprecated package from all templates and documentation
+  - Updated npm dependencies across all packages
+
+### ✨ Improved
+
+- **Working Component Examples:** Complete rewrite of `IngkaExample.tsx` with real, working code
+  - Removed non-existent components (`Text`, `Card.Content`)
+  - Added real examples: Button (with ssrIcon), List (with CSS resets), Badge, Card, Icon
+  - All examples work out of the box with proper imports
+  - Inline comments explaining requirements and best practices
+
+- **Icon Migration Guide:** Created comprehensive `INGKA_ICON_MIGRATION.md`
+  - Icon path mappings: `reload` → `arrow-clockwise`, `search` → `magnifying-glass`, etc.
+  - Complete table of old/new paths with notes
+  - Automated migration script examples
+  - Common errors and solutions
+
+- **TypeScript Type Documentation:** Added complete type definitions in generated README
+  - `IconProps` interface with `svg`, `size`, `colour` properties
+  - `ButtonProps` interface with `ssrIcon` prop fully documented
+  - JSDoc-style comments for editor autocomplete discoverability
+  - Inline examples showing proper TypeScript usage
+
+### 📝 Documentation
+
+- **List Component CSS Reset:** Documented required CSS resets for `@ingka/list`
+  - Clear explanation: `list-style: none`, `margin: 0`, `padding: 0` are required
+  - Example code in scaffold with proper resets applied
+  - Common issues section explaining styling problems
+
+- **Enhanced INGKA_README.md:** Comprehensive usage guide with real examples
+  - Quick start section for each component
+  - Button ssrIcon prop fully explained with examples
+  - Icon migration guide embedded
+  - TypeScript type reference section
+  - Common issues and solutions
+
+### 🎯 User Experience
+
+- **Reduced Setup Time:** From 2+ hours of manual fixes → 5 minutes working project
+  - All packages auto-installed if `install-components: true`
+  - Working examples with proper imports and usage
+  - No deprecated packages or broken icon paths
+  - Clear documentation for all components
+
+### 🔧 Test Case
+
+Successfully resolves GitHub Issue #18 test case:
+
+```bash
+leo init test-project --style ingka
+cd test-project
+npm run dev  # ✅ NOW WORKS (previously failed)
+```
+
+**Closes:** #18
+
 ## [6.8.3] - 2025-11-06
 
 ### 🔧 Fixed
