@@ -1,17 +1,15 @@
 <div align="center">
 
 <h1>INGVAR KIT</h1>
-
 <h3>AI-Powered Workflow Automation with IKEA Ingka Design System</h3>
-
 **Transform your development with multi-agent AI, rapid app generation, spec-first development, and the official IKEA design system—all from your terminal.**
+
+![Ingvar Kit](docs/assets/ingvar_kit_logo.png)
 
 [![npm version](https://img.shields.io/npm/v/ingvar-kit.svg?style=flat-square&color=0051BA&logo=npm)](https://www.npmjs.com/package/ingvar-kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-FFDA1A.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-green?style=flat-square&logo=node.js)](https://nodejs.org)
 [![IKEA Design](https://img.shields.io/badge/IKEA-Ingka_Skapa-0051BA?style=flat-square&logo=ikea)](https://github.com/leopagotto/ingvar-kit)
-
-![Ingvar Kit](docs/assets/ingvar_kit_logo.png)
 
 [Quick Start](#-quick-start) • [Features](#-features) • [IKEA Design System](#-ikea-ingka-design-system) • [Spark Generator](docs/SPARK.md) • [Documentation](docs/README.md)
 
