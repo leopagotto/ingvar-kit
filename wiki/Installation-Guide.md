@@ -1,8 +1,8 @@
 # Installation Guide
 
-> **Get Ingvar Kit v6.8.0 up and running in < 30 seconds**
+> **Get Ingvar Kit v6.8.5 up and running in < 30 seconds**
 
-> **✨ NEW in v6.8.0:** Component system strategy clarified! Clear documentation for when to use official @ingka/\* packages vs local templates.
+> **✨ NEW in v6.8.5:** Critical Spark bug fixed! All v6.8.4 features now working correctly. Complete rebranding from "leo" to "ingvar".
 
 ## 🎯 Prerequisites
 
@@ -26,17 +26,18 @@ Before installing Ingvar Kit, ensure you have:
 
 ### Method 1: Automatic Installation (Recommended)
 
-**One command - complete setup with v6.8.0 features!**
+**One command - complete setup with v6.8.5 features!**
 
 ```bash
-INGVAR_AUTO_INIT=true npm install -g ingvar-kit@6.8.0
+INGVAR_AUTO_INIT=true npm install -g ingvar-kit@6.8.5
 ```
 
 **What this does:**
 
-- ✅ Installs Ingvar Kit v6.8.0
-- ✅ Automatically initializes your project
-- ✅ **Component System Strategy** ✨ (NEW in v6.8.0!)
+- ✅ Installs Ingvar Kit v6.8.5
+- ✅ Auto-configures GitHub integration
+- ✅ **Component System Strategy** ✨ (v6.8.0)
+- ✅ **Critical Spark Bug Fix** 🐛 (v6.8.5)
 - ✅ **Comprehensive Design Guidelines** ✨
 - ✅ **Consistent CLI commands** ✨
 - ✅ **Enables all 6 agents by default** ✨
@@ -65,14 +66,14 @@ INGVAR_AUTO_INIT=true npm install -g ingvar-kit@6.8.0
 Install Ingvar globally to use across all projects:
 
 ```bash
-npm install -g ingvar-kit@6.8.0
+npm install -g ingvar-kit@6.8.5
 ```
 
 **Verify installation:**
 
 ```bash
 ingvar --version
-# Should show: 6.8.0 (or later)
+# Should show: 6.8.5 (or later)
 
 ingvar --help
 # Shows all available commands

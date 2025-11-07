@@ -16,9 +16,17 @@ Ingvar Kit is a powerful CLI tool that revolutionizes software development proje
 - **📊 Intelligent Project Management**: Auto-sync with GitHub Projects with smart status updates
 - **⚡ Zero Configuration**: Works out-of-the-box - literally just `npm install`
 
-**Current Version:** 6.8.0 🎉
-**Latest Stable:** 6.8.0
-**Release Date:** November 6, 2025
+**Current Version:** 6.8.5 🎉
+**Latest Stable:** 6.8.5
+**Release Date:** November 7, 2025
+
+**What's New in 6.8.5:** 🐛 CRITICAL SPARK BUG FIX + COMPLETE REBRANDING
+
+- 🐛 **Critical Fix**: All v6.8.4 fixes now in correct file (`spark.js` not unused `spark-generator.js`)
+- ✅ **Removed**: Duplicate file causing execution issues
+- 🏷️ **Rebranded**: All "leo" → "ingvar" command references throughout codebase
+- 📝 **Workflow Updated**: "LEO workflow" → "INGVAR workflow" in AI instructions
+- 🎯 **GitHub #18 Closed**: IngkaExample.tsx, INGKA_README.md, icon migration guide all working
 
 **What's New in 6.8.0:** 🎯 COMPONENT SYSTEM STRATEGY CLARIFIED
 

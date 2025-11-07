@@ -17,6 +17,31 @@
 
 ---
 
+## 🚀 Recent Updates
+
+### 🎉 **v6.8.5** - Critical Spark Bug Fix & Complete Rebranding! 🎊
+
+**Released:** November 7, 2025
+
+**Critical Fixes:**
+
+- 🐛 **Fixed**: Spark execution bug - all v6.8.4 fixes now in correct file (`spark.js`)
+- ✅ **Removed**: Duplicate `spark-generator.js` file causing confusion
+- 🏷️ **Rebranded**: All "leo" command references → "ingvar" throughout codebase
+- 📝 **Updated**: "LEO workflow" → "INGVAR workflow" in all AI instructions
+
+**What Works Now:**
+
+- ✅ IngkaExample.tsx generation with working components
+- ✅ INGKA_README.md comprehensive documentation
+- ✅ INGKA_ICON_MIGRATION.md with icon path mappings
+- ✅ Auto-install logic reading `.ingvarrc.json`
+- ✅ Uses `@ingka/ssr-icon` (not deprecated `@ingka/icon`)
+
+**Closes:** GitHub issue #18
+
+---
+
 ### 🎉 **v6.8.2** - INGVAR Rebranding & Unified Component Installer! 🎊
 
 🎯 **INGVAR Workflow** • 📦 **One Component Path** • 🔧 **CWDS Deprecated** • ✨ **Streamlined Init**
