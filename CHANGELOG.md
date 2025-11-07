@@ -5,11 +5,38 @@ All notable changes to Ingvar Kit will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# Changelog
+
+## [6.8.5] - 2025-11-07
+
+### 🔧 Critical Fixes
+- **Fixed Spark Command Execution:** Removed duplicate `spark-generator.js` file
+  - All v6.8.4 fixes now properly integrated into `spark.js` (actual executed file)
+  - Added IngkaExample.tsx generation with working component examples
+  - Added INGKA_README.md with comprehensive documentation
+  - Added INGKA_ICON_MIGRATION.md with icon path mappings
+  - Fixed @ingka/icon → @ingka/ssr-icon migration throughout
+  - Auto-install logic now working correctly
+
+### 🎨 Branding Update
+- **Replaced all "leo" command references with "ingvar"**
+  - Fixed `leo issue` → `ingvar issue` throughout codebase
+  - Fixed `leo config` → `ingvar config` throughout codebase
+  - Fixed `leo init` → `ingvar init` in documentation
+  - Updated "LEO workflow" → "INGVAR workflow" in all instructions
+  - Updated "LEO multi-agent" → "INGVAR multi-agent" references
+
+### 📝 Code Cleanup
+- Removed duplicate spark-generator.js file to prevent confusion
+- Consolidated Spark generation logic into single spark.js file
+- Improved long-term maintainability
+
 ## [6.8.4] - 2025-11-07
 
 ### 🔥 Critical Fixes (GitHub Issue #18)
 
 - **Auto-Install Packages:** Fixed `install-components: true` in `.ingvarrc.json` not actually installing packages
+
   - Now reads `.ingvarrc.json` configuration during scaffold generation
   - Automatically installs all critical Skapa packages: `@ingka/ssr-icon`, `@ingka/button`, `@ingka/list`, `@ingka/badge`, `@ingka/skeleton`, `@ingka/card`
   - Respects config setting (defaults to true if not specified)
@@ -23,12 +50,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### ✨ Improved
 
 - **Working Component Examples:** Complete rewrite of `IngkaExample.tsx` with real, working code
+
   - Removed non-existent components (`Text`, `Card.Content`)
   - Added real examples: Button (with ssrIcon), List (with CSS resets), Badge, Card, Icon
   - All examples work out of the box with proper imports
   - Inline comments explaining requirements and best practices
 
 - **Icon Migration Guide:** Created comprehensive `INGKA_ICON_MIGRATION.md`
+
   - Icon path mappings: `reload` → `arrow-clockwise`, `search` → `magnifying-glass`, etc.
   - Complete table of old/new paths with notes
   - Automated migration script examples
@@ -43,6 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 📝 Documentation
 
 - **List Component CSS Reset:** Documented required CSS resets for `@ingka/list`
+
   - Clear explanation: `list-style: none`, `margin: 0`, `padding: 0` are required
   - Example code in scaffold with proper resets applied
   - Common issues section explaining styling problems
@@ -67,7 +97,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Successfully resolves GitHub Issue #18 test case:
 
 ```bash
-leo init test-project --style ingka
+ingvar init test-project --style ingka
 cd test-project
 npm run dev  # ✅ NOW WORKS (previously failed)
 ```

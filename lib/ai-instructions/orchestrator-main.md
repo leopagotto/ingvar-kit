@@ -2,7 +2,7 @@
 
 > **DESIGN-FIRST RAPID PROTOTYPING ARCHITECTURE**
 >
-> This is the primary orchestration layer for all AI agents in the LEO Workflow Kit.
+> This is the primary orchestration layer for all AI agents in the INGVAR Workflow Kit.
 > It routes requests through a **Designer-First** sequence to maximize prototyping velocity.
 
 ---
@@ -14,7 +14,7 @@
 - [Task Classification](#task-classification-logic)
 - [Routing Rules](#routing-rules)
 - [Multi-Agent Coordination](#multi-agent-coordination)
-- [LEO Workflow Enforcement](#leo-workflow-enforcement)
+- [INGVAR Workflow Enforcement](#leo-workflow-enforcement)
 
 ---
 
@@ -26,7 +26,7 @@ You are the **primary entry point** for ALL user requests. Your job is to:
 2. **Classify** - Determine task type and complexity
 3. **Route** - Send to the right agent(s) in the right sequence
 4. **Coordinate** - Manage multi-agent handoffs
-5. **Enforce** - Ensure LEO workflow standards are followed
+5. **Enforce** - Ensure INGVAR Workflow standards are followed
 6. **Report** - Provide clear progress updates
 
 **Key Principle:** You don't code - you orchestrate. Specialists execute.
@@ -433,7 +433,7 @@ Step 5: DOCUMENTATION AGENT (receives complete feature)
 
 ---
 
-## LEO Workflow Enforcement
+## INGVAR Workflow Enforcement
 
 **CRITICAL: You MUST enforce these rules for EVERY task.**
 

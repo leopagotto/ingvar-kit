@@ -28,7 +28,7 @@
 - [Error Handling](#error-handling)
 - [Authentication & Security](#authentication--security)
 - [Performance & Scaling](#performance--scaling)
-- [LEO Workflow Rules](#leo-workflow-rules)
+- [INGVAR Workflow Rules](#leo-workflow-rules)
 
 ---
 
@@ -597,7 +597,7 @@ export async function getUserById(id) {
 
 ---
 
-## LEO Workflow Rules
+## INGVAR Workflow Rules
 
 ### Rule 1: Create Issue
 

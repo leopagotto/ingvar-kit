@@ -22,6 +22,7 @@
 🎯 **INGVAR Workflow** • 📦 **One Component Path** • 🔧 **CWDS Deprecated** • ✨ **Streamlined Init**
 
 **WHAT'S NEW:**
+
 - Consistent **INGVAR** branding throughout (goodbye "LEO"!)
 - Unified component installer: Use `ingvar components` for all IKEA components
 - Optional component install prompt right after `ingvar init`

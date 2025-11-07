@@ -27,7 +27,7 @@
 - [Component Design Blueprint](#component-design-blueprint)
 - [Output Standards](#output-standards)
 - [Handoff to Frontend](#handoff-to-frontend)
-- [LEO Workflow Rules](#leo-workflow-rules)
+- [INGVAR Workflow Rules](#leo-workflow-rules)
 
 ---
 
@@ -558,7 +558,7 @@ States:
 
 ---
 
-## LEO Workflow Rules
+## INGVAR Workflow Rules
 
 ### Rule 1: Create Issue First
 

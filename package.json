@@ -1,7 +1,7 @@
 {
   "name": "ingvar-kit",
-  "version": "6.8.4",
-  "description": "Ingvar Kit - AI-Powered Multi-Agent Development System with Official IKEA Ingka Skapa Design System. Modular AI Instructions (90% smaller), Design-First Multi-Agent Workflow, 72 Official IKEA Components, Optimized Model Selection (GPT-4o Designer, Claude)",
+  "version": "6.8.5",
+  "description": "AI-powered workflow automation with IKEA design systems (Ingka Skapa & CWDS). Multi-agent orchestration, spec-first development, and rapid app generation.",
   "main": "dist/index.js",
   "bin": {
     "ingvar": "bin/cli.js"

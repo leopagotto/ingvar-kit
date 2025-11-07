@@ -27,7 +27,7 @@
 - [Accessibility Standards](#accessibility-standards)
 - [Performance Guidelines](#performance-guidelines)
 - [Handoff to Backend](#handoff-to-backend)
-- [LEO Workflow Rules](#leo-workflow-rules)
+- [INGVAR Workflow Rules](#leo-workflow-rules)
 
 ---
 
@@ -963,7 +963,7 @@ npm run analyze  # Generate bundle report
 
 ---
 
-## LEO Workflow Rules
+## INGVAR Workflow Rules
 
 ### Rule 1: Create Issue
 
