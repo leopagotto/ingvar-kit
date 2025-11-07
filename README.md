@@ -14,6 +14,9 @@
 
 ---
 
+</div>
+<div align="left">
+
 ## What is INGVAR-KIT?
 
 **Ingvar Kit** is an AI-powered CLI that combines multi-agent orchestration, rapid app generation with IKEA design system, spec-driven development, and GitHub Projects automation—all in one powerful tool.
@@ -21,8 +24,6 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
 
 
 ---
-</div>
-<div align="left">
    
 ### 🎯 Core Capabilities
 
