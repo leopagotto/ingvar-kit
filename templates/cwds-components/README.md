@@ -176,7 +176,7 @@ If you need to add these templates to an existing project:
 cp -r templates/cwds-components/* src/components/cwds/
 
 # Install required @ingka/* dependencies
-npm install @ingka/button @ingka/card @ingka/input @ingka/icon @ingka/avatar @ingka/modal
+npm install @ingka/button @ingka/card @ingka/input @ingka/ssr-icon @ingka/avatar @ingka/modal
 ```
 
 ## Design System Compliance
@@ -224,7 +224,7 @@ import "./components/cwds/styles/cwds-tokens.css";
 
 These templates provide a base implementation matching the CWDS specification. You can customize them for your specific needs:
 
-1. **Replace placeholder icons** with actual `@ingka/icon` components when available
+1. **Replace placeholder icons** with actual `@ingka/ssr-icon` components (note: icon paths changed in v11.1.0)
 2. **Add real `@ingka/*` components** instead of styled divs/buttons
 3. **Adjust colors and spacing** to match your brand requirements
 4. **Add additional props** for your use cases

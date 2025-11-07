@@ -113,7 +113,7 @@
     "@ingka/grid": "^8.0.1",
     "@ingka/helper-text": "^0.5.4",
     "@ingka/hyperlink": "^9.0.2",
-    "@ingka/icon": "^2.0.20",
+    "@ingka/ssr-icon": "^11.1.0",
     "@ingka/image": "^7.0.2",
     "@ingka/inline-message": "^12.0.4",
     "@ingka/input-field": "^23.0.4",

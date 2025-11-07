@@ -6,7 +6,7 @@ import React from "react";
  * Displays IKEA Skapa icons from the Icons directory.
  * 600+ official IKEA design system icons available.
  *
- * @see https://npm.m2.blue.cdtapps.com/@ingka/icon
+ * @see https://npm.m2.blue.cdtapps.com/@ingka/ssr-icon
  */
 
 export interface IconProps {

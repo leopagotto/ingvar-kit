@@ -113,7 +113,7 @@ export { default as Tooltip } from '@ingka/tooltip';
 // ============================================================================
 
 // export { default as Grid } from '@ingka/grid'; // CSS-only package, no TS exports
-export { default as Icon } from '@ingka/icon';
+export { default as Icon } from '@ingka/ssr-icon';
 
 // ============================================================================
 // TYPE EXPORTS
