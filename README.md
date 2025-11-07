@@ -1,5 +1,4 @@
 <div align="center">
-<h3>AI-Powered Workflow Automation with IKEA Ingka Design System</h3>
 
 ![Ingvar Kit](docs/assets/ingvar_kit_logo.png)
 
@@ -10,6 +9,7 @@
 
 [Quick Start](#-quick-start) • [Features](#-features) • [IKEA Design System](#-ikea-ingka-design-system) • [Spark Generator](docs/SPARK.md) • [Documentation](docs/README.md)
 
+<h3>AI-Powered Workflow Automation with IKEA Ingka Design System</h3>
 **Transform your development with multi-agent AI, rapid app generation, spec-first development, and the official IKEA design system—all from your terminal.**
 
 ---
@@ -23,6 +23,7 @@ Named after IKEA founder **Ingvar Kamprad**, this toolkit brings professional de
 ---
 </div>
 <div align="left">
+   
 ### 🎯 Core Capabilities
 
 1. **🇸🇪 IKEA Design System Integration**
